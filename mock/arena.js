@@ -78,10 +78,12 @@
   let hots = []; // 継続回復（リジェネなど）: { e（かけた相手）, frac, until, next, name }
   // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）: { kind, x, y, r, until（試合の時刻）, frac, next, dying, endAt, ringAt, pops（弾けた鈴の花の時刻）}
   let zones = [], simNow = 0;
+  // 召喚士のペット: base（いつもいる: カーバンクル）と temp（しばらく出る: エギ・デミ召喚）。kind は今見えているもの
+  const pet = { kind: null, base: null, temp: null, until: 0, x: 0, y: 0, z: 0, face: 0, born: 0, act: -1 };
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -174,6 +176,8 @@
     Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
     hots = []; zones = []; target = 'boss';
+    Object.assign(pet, { base: opts.job === 'SMN' ? 'carbuncle' : null, temp: null, until: 0, born: -9, act: -1 });
+    pet.kind = pet.base; if (pet.kind) { const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z; }
     for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; e.marks = []; }
     placeTank(true);
     if (!bossHasTank()) boss.face = Math.PI / 2;
@@ -265,6 +269,7 @@
     hots = hots.filter((h) => h.next <= h.until);
     player.hurt = Math.max(0, player.hurt - vdt * 2.5);
     player.trail = player.trail.filter((t) => (t.life -= vdt) > 0);
+    updatePet(vdt);
 
     // 敵とタンク
     if (boss.goal) {
@@ -845,6 +850,53 @@
     player.x = z.x; player.y = z.y;
     return true;
   }
+  // ---- 召喚士のペット ----
+  const DEMIS = new Set(['bahamut', 'phoenix', 'solar']);
+  // ペットの居場所: カーバンクルは自分の右後ろ、エギは自分と敵の間、デミ召喚は自分の後ろの空中
+  function petGoal() {
+    const k = pet.temp ?? pet.base;
+    if (DEMIS.has(k)) { const a = player.face + Math.PI * 0.75; return { x: player.x + Math.cos(a) * 2, y: player.y + Math.sin(a) * 2, z: 2.3 + Math.sin(clock * 1.6) * 0.15 }; } // 自分の右後ろの上空
+    if (k === 'ifrit' || k === 'titan' || k === 'garuda') {
+      const d = dist(player, boss) || 1, ux = (boss.x - player.x) / d, uy = (boss.y - player.y) / d, f = Math.min(2.4, d * 0.5);
+      return { x: player.x + ux * f - uy * 1.2, y: player.y + uy * f + ux * 1.2, z: k === 'garuda' ? 0.7 : 0 };
+    }
+    const a = player.face + Math.PI * 0.72;
+    return { x: player.x + Math.cos(a) * 1.4, y: player.y + Math.sin(a) * 1.4, z: 0 };
+  }
+  // kind: 出すペット。sec > 0 ならその秒数だけ出て、元（カーバンクル）に戻る。'act' は今のペットの攻撃の動き
+  function petSet(kind, sec) {
+    if (kind === 'act') { pet.act = clock; return; }
+    if (sec > 0) { pet.temp = kind; pet.until = clock + sec; } else { pet.base = kind; pet.temp = null; }
+    const k = pet.temp ?? pet.base;
+    if (k !== pet.kind) {
+      pet.kind = k; pet.born = clock; pet.act = clock;
+      const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z;
+      if (k) {
+        const c = k === 'ifrit' || k === 'phoenix' ? '#ff9a52' : k === 'titan' ? '#ffd84a' : k === 'garuda' ? '#c8f070' : k === 'solar' ? '#eef4ff' : '#8ae8ff';
+        fx.push({ type: 'flash', at: { x: pet.x, y: pet.y, z: pet.z + 1 }, col: [c, c], t: 0, dur: 500, power: DEMIS.has(k) ? 1.6 : 1 });
+        for (let i = 0; i < 24; i++) { const a = rand(0, Math.PI * 2), r = rand(0.2, 1.6); spark({ x: pet.x + Math.cos(a) * r, y: pet.y + Math.sin(a) * r, z: rand(0, 1.5) + pet.z, vz: rand(0.6, 2), g: 0, drag: 0.8, life: rand(0.5, 1), max: 1, col: c, size: 1, shape: 2, rot: rand(0, 6.28), spin: rand(-3, 3) }); }
+      }
+    }
+  }
+  function updatePet(vdt) {
+    if (pet.temp && clock >= pet.until) petSet(pet.base, 0);
+    if (!pet.kind) return;
+    const q = petGoal(), k = Math.min(1, vdt * 4);
+    pet.x += (q.x - pet.x) * k; pet.y += (q.y - pet.y) * k; pet.z += (q.z - pet.z) * k;
+    pet.face = Math.atan2(boss.y - pet.y, boss.x - pet.x);
+  }
+  // ペットのコマと見え方（出てくるときに濃くなる。しばらく出るものは帰る前に薄くなる）
+  function petPose(yaw) {
+    if (!pet.kind) return null;
+    const name = `pet_${pet.kind}`, set = SPR?.[name];
+    if (!set) return null;
+    const dir = dirOf(pet.face - yaw - Math.PI / 2);
+    const acting = pet.act >= 0 && clock - pet.act < window.MockSprites.duration(set, 'spell');
+    const fr = window.MockSprites.frame(set, acting ? 'spell' : 'idle', dir, acting ? clock - pet.act : clock);
+    let alpha = Math.min(1, (clock - pet.born) / 0.35);
+    if (pet.temp) alpha *= Math.min(1, (pet.until - clock) / 0.4);
+    return { set, name, fr, alpha: Math.max(0, alpha) };
+  }
   // 残像（移動の前の位置に、薄い自分を残す）
   function trailFrom() { for (let i = 0; i < 4; i++) player.trail.push({ x: player.x, y: player.y, face: player.face, life: 0.25 + i * 0.05, max: 0.45 }); }
 
@@ -1063,7 +1115,7 @@
     get opts() { return opts; }, get telegraphs() { return telegraphs; }, get fx() { return fx; }, get parts() { return parts; },
     get castGlow() { return castGlow; }, get guideNeed() { return guideNeed; }, get clock() { return clock; }, get SPR() { return SPR; },
     get zones() { return zones; }, BELL_H, get aim() { return aim; }, get target() { return target; },
-    poseOf, inside, angDiff, hasNpc, setName,
+    poseOf, inside, angDiff, hasNpc, setName, pet, petPose,
   };
 
   // ---------------- 2D（真上から。ドット絵を 2 倍で描く）----------------
@@ -1138,14 +1190,14 @@
       drawTargetRing();
 
       // 影と人物（奥から順に）
-      const ents = [{ kind: 'boss', y: boss.y }, ...(hasNpc() ? [{ kind: 'tank', y: tank.y }] : []), { kind: 'player', y: player.y }].sort((a, b) => a.y - b.y);
-      for (const e of ents) drawShadow(e.kind);
+      const ents = [{ kind: 'boss', y: boss.y }, ...(hasNpc() ? [{ kind: 'tank', y: tank.y }] : []), { kind: 'player', y: player.y }, ...(pet.kind ? [{ kind: 'pet', y: pet.y }] : [])].sort((a, b) => a.y - b.y);
+      for (const e of ents) if (e.kind !== 'pet') drawShadow(e.kind); else drawPetShadow();
       const ps = SPR[setName('player')];
       for (const t of player.trail) {
         const fr = window.MockSprites.frame(ps, 'run', dirOf(t.face), 0.1);
         drawFrame(ps, fr, t.x, t.y, 0, (t.life / t.max) * 0.5);
       }
-      for (const e of ents) drawChar(e.kind);
+      for (const e of ents) if (e.kind === 'pet') drawPet(); else drawChar(e.kind);
       for (const z of zones) if (z.kind === 'bell') drawBell(z);
 
       // 演出（加算）
@@ -1239,6 +1291,18 @@
         g.globalAlpha = 1; g.fillStyle = m.color; g.fillText(m.id, x, y + 1);
       }
       g.restore();
+    }
+    function drawPet() {
+      const P = petPose(CAM0.yaw);
+      if (!P || P.alpha <= 0) return;
+      drawFrame(P.set, P.fr, pet.x, pet.y, pet.z, P.alpha, P.set.atlas);
+    }
+    function drawPetShadow() {
+      const P = petPose(CAM0.yaw);
+      if (!P) return;
+      const big = DEMIS.has(pet.kind), w = big ? 20 : 8, h = big ? 6 : 3;
+      g.fillStyle = `rgba(0,0,0,${0.3 * P.alpha})`;
+      g.beginPath(); g.ellipse(Math.round(sx(pet.x)), Math.round(sy(pet.y)), w, h, 0, 0, Math.PI * 2); g.fill();
     }
     function drawShadow(kind) {
       const e = kind === 'boss' ? boss : kind === 'tank' ? tank : player;
@@ -1394,7 +1458,7 @@
   window.MockArena = {
     init, resize, reset, setInput, jump, update, render, setView,
     view: () => (view3d() ? '3d' : '2d'), error3d: () => r3err, camera,
-    edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, bossCast,
+    edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, bossCast, pet: petSet, petKind: () => pet.kind,
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
     tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
     hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,

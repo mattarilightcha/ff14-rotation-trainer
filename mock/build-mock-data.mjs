@@ -25,7 +25,7 @@ const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -199,18 +199,31 @@ function buildJob(JOB, LEVEL) {
     }
   }
   if (JOB === 'SAM') for (const a of actions) if (a.id === 25782) (replaceGroups[25781] ??= []).push(a.id); // 奥義波切「このアクションを実行すると「返し波切」に変化する」
+  // 召喚士: サモン・フェニックス（25831）・サモン・ソルバハムート（36992）は抽出データでは「プレイヤーのアクション」ではないが、
+  // 説明文「発動条件を満たすとサモン・バハムートがサモン・フェニックス（ソルバハムート）に変化する」のとおりサモン・バハムートのボタンが変わる
+  if (JOB === 'SMN') for (const id of [25831, 36992]) if (byId.get(id)?.level <= LEVEL) (replaceGroups[7427] ??= []).push(id);
+  // アストラルフレア・煉獄の炎・アンブラルフレアは、データではアウトバースト（16511）の変化先。Lv74 でアウトバーストはトライディザスターに
+  // なるので（説明文「発動条件を満たすとトライディザスターがアストラルフレアに変化する」）、トライディザスターの変化先にする
+  if (JOB === 'SMN') for (const id of [25821, 16515, 36995]) if (byId.get(id)?.level <= LEVEL) (replaceGroups[25826] ??= []).push(id);
 
   // ゲーム内のアクション一覧にあるのにホットバーに置かれていないもの（INPUT_HUD §5.3「未配置」）
   const unplaced = job.actionIds
     .map((id) => byId.get(id))
-    .filter((a) => a && a.inActionList && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id] && !used.has(a.id))
+    .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id] && !used.has(a.id))
     .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
     .map((a) => a.id);
   for (const id of unplaced) used.add(id);
+  // 召喚士: サンプルの HOTBAR.DAT は古い配置（今はないアクション）で、主な技が未配置になる。1 本目のバーの空きに未配置の技を順に置く
+  if (JOB === 'SMN' && bars.hb1?.job) {
+    const cells = bars.hb1.job;
+    for (let i = 0; i < cells.length && unplaced.length; i++) if (!cells[i]) cells[i] = { kind: 'action', id: unplaced.shift() };
+  }
+  // 召喚士のペット（デミ・バハムートなど）が自動で使う技: ボタンにはしないが、威力・効果を説明文から読むためにデータへ入れる
+  if (JOB === 'SMN') for (const id of [7428, 16519, 36993, 16517]) used.add(id);
   // このジョブのボタンになりうるアクション全部（読み込んだホットバーに無いものを「未配置」に出すため）
   const buttonsAll = job.actionIds
     .map((id) => byId.get(id))
-    .filter((a) => a && a.inActionList && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id])
+    .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id])
     .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
     .map((a) => a.id);
   // このジョブが使えるロールアクション（読み込んだホットバーに置かれていても表示できるように）

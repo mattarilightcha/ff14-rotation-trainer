@@ -715,6 +715,9 @@
     };
     ENT.boss.mesh.material.uniforms.uEmit.value = 1.8;
     const trails = Array.from({ length: 6 }, () => spriteMesh(TEX.player));
+    // 召喚士のペット（カーバンクル・エギ・デミ召喚）: 板を 1 枚。出ているペットの絵に差し替える
+    const PET = { mesh: spriteMesh(TEX.pet_carbuncle ?? TEX.player), tex: null, shadow: shadowMesh(0.6) };
+    PET.mesh.material.uniforms.uEmit.value = 0.9;
 
     // ---- 敵の足元の輪 ----
     const ringMat = new T.ShaderMaterial({
@@ -974,6 +977,26 @@
         m.position.set(t.x, 0, t.y);
         u.uOpacity.value = (t.life / t.max) * 0.45; u.uFlash.value.set(0.6, 0.85, 1, 0.6); u.uTint.value.setRGB(1, 1, 1);
       });
+
+      // 召喚士のペット
+      {
+        const P = S.petPose(yaw), pe = S.pet, u = PET.mesh.material.uniforms;
+        const show = !!P && P.alpha > 0.01;
+        PET.mesh.visible = show; PET.shadow.visible = show;
+        if (show) {
+          const tx = TEX[P.name];
+          if (PET.tex !== tx) { PET.tex = tx; u.map.value = tx.map; u.emap.value = tx.emap; u.texSize.value = tx.size; }
+          setFrame(PET.mesh, tx.size, P.fr, P.set);
+          PET.mesh.position.set(pe.x, pe.z, pe.y);
+          u.uOpacity.value = P.alpha; u.uRot.value = 0; u.uFlash.value.set(1, 1, 1, 0);
+          tintAt(pe.x, pe.y, u.uTint.value);
+          const big = P.fr.w > 64;
+          PET.shadow.position.set(pe.x, 0.012, pe.y);
+          const ss = (big ? 3 : 1) * (1 - Math.min(0.5, pe.z * 0.2));
+          PET.shadow.scale.set(ss, ss, ss);
+          PET.shadow.material.opacity = P.alpha * 0.8;
+        }
+      }
 
       // 設置型の技
       zonePool.begin(); domePool.begin(); heartPool.begin(); flowerPool.begin(); bubblePool.begin(); starPool.begin();

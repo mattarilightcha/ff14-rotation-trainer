@@ -1242,5 +1242,268 @@
     },
   };
 
-  window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD };
+  // ---------------- 召喚士 ----------------
+  // 説明文から:
+  //   サモン・バハムート（Lv100 はソルバハムートと、デミ・バハムート / デミ・フェニックスを交互に）: 15 秒顕現し、自身が「トランス」状態。
+  //     ルビー・トパーズ・エメラルドの神秘を付与。トランス中はルインガ・トライディザスター・アストラルフロウ・エンキンドルが変化する
+  //   サモン・イフリートII / タイタンII / ガルーダII: 神秘を使って召喚。威力 800。エーテル（火 2・土 4・風 4 スタック、30 秒）を付与。
+  //     イフリート: クリムゾンサイクロン実行可（→ クリムゾンストライク実行可）、ガルーダ: スリップストリーム実行可。他のサモン系で解除
+  //   ジェムシャイン・ジェムブリリアンス: エーテルに応じてリチュアル・カタストロフィに変化（エーテルを 1 つ使う）。トパーズはマウンテンバスター実行可
+  //   エナジードレイン / サイフォン: エーテルフロー 2＋ルインジャ実行可（60 秒）。ミアズマノヴァ・ペインフレアでエーテルフローを 1 つ使う
+  //   シアリングライト: 与ダメージ 5%（20 秒）＋シアリングスパーク実行可（30 秒）。サモン・ソルバハムート: ルクス・ソラリス実行可（30 秒）
+  //   サモン・フェニックス: デミ・フェニックスが不死鳥の翼（周囲のパーティメンバーの HP を継続回復。回復力 100・21 秒）
+  // 仮（説明文に書き方がない: GAME-71）: 最初のデミ召喚はソルバハムート。デミの攻撃（ウィルムウェーブ・火焔・光芒）は自分の GCD ごとに 1 回。
+  //   エンキンドルの大技はすぐ当たる。デミが出ている間はエギを召喚できない。エギの姿は 4 秒で帰る。戦闘前にカーバンクルは召喚済み。
+  //   MP の自然回復（3 秒ごとに 200）、ルーシッドドリームは 3 秒ごとに 550。再生の炎の継続回復はすぐ始まる。スリップストリームの範囲は敵に当たり続ける
+  const SMN = {
+    abbr: 'SMN',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        RUIN3: 3579, IMPULSE: 25820, FOUNTAIN: 16514, UIMPULSE: 36994, TRI: 25826, AFLARE: 25821, BRAND: 16515, UFLARE: 36995, RUIN4: 7426,
+        BAHAMUT: 7427, PHOENIX: 25831, SOLAR: 36992, ENK: 7429, ENK_P: 16516, ENK_S: 36998, FLOW: 25822, DEATHFLARE: 3582, REKINDLE: 25830, SUNFLARE: 36996,
+        CYCLONE: 25835, STRIKE: 25885, MBUSTER: 25836, SLIP: 25837, IFRIT: 25838, TITAN: 25839, GARUDA: 25840,
+        GEM: 25883, BRILL: 25884, RRITE: 25823, TRITE: 25824, ERITE: 25825, RCAT: 25832, TCAT: 25833, ECAT: 25834,
+        DRAIN: 16508, SIPHON: 16510, NECRO: 36990, PAINFLARE: 3578, SEARING: 25801, SFLASH: 36991, AEGIS: 25799, CARBY: 25798, PHYSICK: 16230, LUX: 36997,
+        SWIFT: 7561, LUCID: 7562, RESURRECT: 173, WYRMWAVE: 7428, SCARLET: 16519, LUXWAVE: 36993, EFLIGHT: 16517,
+      };
+      const STATUS = {
+        tranceB: { name: 'トランス・バハムート' },
+        tranceP: { name: 'トランス・フェニックス' },
+        tranceS: { name: 'トランス・ソルバハムート' },
+        ruin4: { name: 'ルインジャ実行可' },
+        searing: { name: 'シアリングライト', tracked: true },
+        sflash: { name: 'シアリングスパーク実行可' },
+        cyclone: { name: 'クリムゾンサイクロン実行可' },
+        strike: { name: 'クリムゾンストライク実行可' },
+        slipReady: { name: 'スリップストリーム実行可' },
+        mbuster: { name: 'マウンテンバスター実行可' },
+        lux: { name: 'ルクス・ソラリス実行可' },
+        slip: { name: 'スリップストリーム', target: true },
+        aegis: { name: '守りの光' },
+        swift: { name: '迅速魔' },
+        lucid: { name: 'ルーシッドドリーム' },
+        surecast: { name: '堅実魔' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const MP_MAX = 10000;
+      const isSpell = (a) => a.category === 2;
+      // デミ召喚: 種類 → ボタン・トランスのステータス・デミの攻撃（自分の GCD ごと）・エンキンドル・アストラルフロウ・ルインガ・トライディザスターの変化先
+      const DEMI = {
+        bahamut: { summon: ID.BAHAMUT, st: 'tranceB', atk: ID.WYRMWAVE, enk: ID.ENK, flow: ID.DEATHFLARE, ruin: ID.IMPULSE, tri: ID.AFLARE, name: 'デミ・バハムート' },
+        phoenix: { summon: ID.PHOENIX, st: 'tranceP', atk: ID.SCARLET, enk: ID.ENK_P, flow: ID.REKINDLE, ruin: ID.FOUNTAIN, tri: ID.BRAND, name: 'デミ・フェニックス' },
+        solar: { summon: ID.SOLAR, st: 'tranceS', atk: ID.LUXWAVE, enk: ID.ENK_S, flow: ID.SUNFLARE, ruin: ID.UIMPULSE, tri: ID.UFLARE, name: 'ソルバハムート' },
+      };
+      const DEMI_OF = Object.fromEntries(Object.entries(DEMI).map(([k, v]) => [v.summon, k]));
+      // エギ: ボタン → 神秘・エーテル（スタック数）・実行可
+      const PRIMAL = {
+        [ID.IFRIT]: { el: 'fire', favor: 'ruby', n: 2, ready: 'cyclone', pet: 'ifrit', name: 'イフリート' },
+        [ID.TITAN]: { el: 'earth', favor: 'topaz', n: 4, ready: null, pet: 'titan', name: 'タイタン' },
+        [ID.GARUDA]: { el: 'wind', favor: 'emerald', n: 4, ready: 'slipReady', pet: 'garuda', name: 'ガルーダ' },
+      };
+      const RITE = { fire: ID.RRITE, earth: ID.TRITE, wind: ID.ERITE };
+      const CAT = { fire: ID.RCAT, earth: ID.TCAT, wind: ID.ECAT };
+      const ATT_USE = new Set([ID.RRITE, ID.TRITE, ID.ERITE, ID.RCAT, ID.TCAT, ID.ECAT]);
+      const EL_JA = { fire: 'ファイアエーテル', earth: 'アースエーテル', wind: 'ウィンドエーテル' };
+      const FAVOR_JA = { ruby: 'ルビーの神秘', topaz: 'トパーズの神秘', emerald: 'エメラルドの神秘' };
+      // 他のサモン系アクションを実行すると解除される効果（説明文）
+      const clearReadies = () => { for (const k of ['cyclone', 'strike', 'slipReady', 'mbuster']) R.remove(k); };
+      const demiOn = () => { const s = S(); return s.demi && s.demi.until > s.t ? s.demi : null; };
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // 守りの光「最大チャージ数：2」
+        prepull: new Set([ID.RUIN3, ID.CARBY, ID.SWIFT, ID.AEGIS, ID.PHYSICK]),
+        comboStarters: new Set(),
+        procStatus: {},
+        dot: { key: 'slip' },
+        ownDots: true, // スリップストリームの範囲は自分で持つ
+        initState(s) {
+          s.mp = MP_MAX; s.mpTick = 0; s.flow = 0; s.carby = true; s.demi = null; s.nextDemi = 'solar'; s.lastDemi = null;
+          s.favor = { ruby: false, topaz: false, emerald: false }; s.att = null; s.dots = {};
+          s.stats.flowLost = 0; s.stats.demis = 0; s.stats.primals = 0; s.stats.attLost = 0; s.stats.favorLost = 0; s.stats.demiHits = 0;
+        },
+        gaugeCols: [['MP', (s) => Math.floor(s.mp)], ['エーテルフロー', (s) => s.flow], ['デミ', (s) => (demiOn() ? DEMI[s.demi.kind].name : '')], ['神秘', (s) => Object.entries(s.favor).filter(([, v]) => v).map(([k]) => k).join('/')], ['エーテル', (s) => (s.att ? `${s.att.el}${s.att.n}` : '')]],
+        tracked: [['シアリングライト', 'searing', '#ffd0a0', '120 秒ごと。デミ召喚と合わせる']],
+        speed: () => 1,
+        comboFree: () => false,
+        resolve(id) {
+          const s = S(), d = demiOn();
+          if (id === ID.RUIN3 && d) return DEMI[d.kind].ruin;
+          if (id === ID.TRI && d) return DEMI[d.kind].tri;
+          if (id === ID.ENK) return d ? DEMI[d.kind].enk : DEMI[s.lastDemi ?? 'bahamut'].enk;
+          if (id === ID.BAHAMUT) return d ? DEMI[d.kind].summon : DEMI[s.nextDemi].summon;
+          if (id === ID.FLOW) {
+            if (d) return DEMI[d.kind].flow;
+            if (has('strike')) return ID.STRIKE;
+            if (has('cyclone')) return ID.CYCLONE;
+            if (has('mbuster')) return ID.MBUSTER;
+            if (has('slipReady')) return ID.SLIP;
+            return id;
+          }
+          if (id === ID.GEM && s.att) return RITE[s.att.el];
+          if (id === ID.BRILL && s.att) return CAT[s.att.el];
+          return id;
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          const t = tooltipBlocked(R, J, a);
+          if (t && !ATT_USE.has(id)) return t;
+          if (PRIMAL[id]) {
+            const p = PRIMAL[id];
+            if (!s.carby) return 'カーバンクルが存在しません';
+            if (demiOn()) return `${DEMI[s.demi.kind].name}の顕現中は召喚できません`;
+            if (!s.favor[p.favor]) return `「${FAVOR_JA[p.favor]}」がありません`;
+          }
+          if (DEMI_OF[id] && !s.carby) return 'カーバンクルが存在しません';
+          if ([ID.ENK, ID.ENK_P, ID.ENK_S].includes(id) && !demiOn()) return 'デミ召喚が顕現していません';
+          if ((id === ID.GEM || id === ID.BRILL) && !s.att) return '「エーテル」がありません（エギを召喚する）';
+          if (ATT_USE.has(id) && !s.att) return '「エーテル」がありません';
+          if (id === ID.FLOW) return 'アストラルフロウに変化する効果がありません';
+          if ((id === ID.NECRO || id === ID.PAINFLARE) && s.flow <= 0) return 'エーテルフローがありません';
+          if (id === ID.AEGIS && !s.carby) return 'カーバンクルが存在しません';
+          if (a && isSpell(a) && (a.mp ?? 0) > 0 && s.mp < a.mp) return `MP が足りません（必要 ${a.mp} / 現在 ${Math.floor(s.mp)}）`;
+          return null;
+        },
+        // 迅速魔: 次の 1 回の魔法の詠唱時間なし
+        castMs(a, base) { return base && isSpell(a) && has('swift') ? 0 : base; },
+        dmgMult: () => (has('searing') ? 1.05 : 1),
+        effects(id) {
+          const a = A[id], s = S();
+          if (isSpell(a) && a.castMs > 0 && has('swift')) R.remove('swift');
+          if (isSpell(a) && (a.mp ?? 0) > 0) s.mp = Math.max(0, s.mp - a.mp);
+          // デミ召喚（サモン・バハムート / フェニックス / ソルバハムート）
+          if (DEMI_OF[id]) {
+            const k = DEMI_OF[id], dm = DEMI[k];
+            clearReadies();
+            for (const f of Object.keys(s.favor)) if (s.favor[f]) s.stats.favorLost++;
+            s.favor = { ruby: true, topaz: true, emerald: true };
+            s.demi = { kind: k, until: s.t + 15000 }; s.lastDemi = k; s.stats.demis++;
+            R.buff(dm.st, 15000);
+            if (k === 'solar') { s.nextDemi = s.lastNonSolar === 'bahamut' ? 'phoenix' : 'bahamut'; R.buff('lux', 30000); } else { s.lastNonSolar = k; s.nextDemi = 'solar'; }
+            if (k === 'phoenix') R.hot('party', A[ID.EFLIGHT]?.eff?.hot ? A[ID.EFLIGHT].eff.hot.potency * HEAL_K : 100 * HEAL_K, A[ID.EFLIGHT]?.eff?.hot?.sec ?? 21, '不死鳥の翼');
+            R.pet(k, 15);
+            R.addLog('ok', `${dm.name}を顕現（15 秒）`);
+            Au()?.surge();
+          }
+          // エギ
+          if (PRIMAL[id]) {
+            const p = PRIMAL[id];
+            clearReadies();
+            if (s.att && s.att.n > 0) s.stats.attLost += s.att.n;
+            s.favor[p.favor] = false;
+            s.att = { el: p.el, n: p.n, until: s.t + 30000 };
+            if (p.ready) R.buff(p.ready, 999999);
+            s.stats.primals++;
+            R.pet(p.pet, 4);
+          }
+          if ([ID.ENK, ID.ENK_P, ID.ENK_S].includes(id)) R.pet('act');
+          if (ATT_USE.has(id) && s.att) { s.att.n -= 1; if (s.att.n <= 0) s.att = null; }
+          if (id === ID.TRITE || id === ID.TCAT) R.buff('mbuster', 999999);
+          if (id === ID.MBUSTER) R.remove('mbuster');
+          if (id === ID.CYCLONE) { R.remove('cyclone'); R.buff('strike', 999999); }
+          if (id === ID.STRIKE) R.remove('strike');
+          if (id === ID.SLIP) {
+            R.remove('slipReady');
+            const m = /威力：(\d+)\s*効果時間：(\d+)秒/.exec(a.desc.replace(/\n/g, ' ').slice(a.desc.indexOf('ダメージエリア')));
+            s.dots.slip = { until: s.t + (m ? Number(m[2]) : 15) * 1000, next: s.t + 3000, potency: m ? Number(m[1]) : 30, mult: R.mult, name: 'スリップストリーム' };
+            R.buff('slip', (m ? Number(m[2]) : 15) * 1000);
+          }
+          // エーテルフロー
+          if (id === ID.DRAIN || id === ID.SIPHON) {
+            if (s.flow > 0) { s.stats.flowLost += s.flow; R.addLog('warn', `エーテルフロー ${s.flow} つを使わずに上書きしました`); }
+            s.flow = 2; R.buff('ruin4', 60000);
+          }
+          if (id === ID.NECRO || id === ID.PAINFLARE) s.flow = Math.max(0, s.flow - 1);
+          if (id === ID.RUIN4) R.remove('ruin4');
+          if (id === ID.SEARING) { R.buff('searing', 20000); R.buff('sflash', 30000); }
+          if (id === ID.SFLASH) R.remove('sflash');
+          if (id === ID.LUX) { support(R, a); R.remove('lux'); }
+          if (id === ID.REKINDLE) { support(R, a); R.hot(R.who ?? 'low', 200 * HEAL_K, 15, '再生の炎'); }
+          if (id === ID.PHYSICK) support(R, a);
+          if (id === ID.AEGIS) { R.shieldSelf(0.2, 30, '守りの光'); R.buff('aegis', 30000); }
+          if (id === ID.CARBY) { s.carby = true; if (!demiOn()) R.pet('carbuncle', 0); }
+          if (id === ID.SWIFT) R.buff('swift', 10000);
+          if (id === ID.LUCID) R.buff('lucid', 21000);
+          if (id === ID.RESURRECT && R.npcDown()) R.raise();
+          // デミの攻撃: 自分の GCD ごとに 1 回（仮 GAME-71）
+          const d = demiOn();
+          if (d && a.isGcd && !DEMI_OF[id]) { const atk = A[DEMI[d.kind].atk]; if (atk?.pot?.base) { R.hit(atk.pot.base, atk.name); s.stats.demiHits++; R.pet('act'); } }
+        },
+        tick(dt) {
+          const s = S();
+          // デミ召喚の帰還
+          if (s.demi && s.demi.until <= s.t) {
+            R.addLog('sys', `${DEMI[s.demi.kind].name}が帰還しました`);
+            s.demi = null;
+            if (s.carby) R.pet('carbuncle', 0);
+          }
+          if (s.att && s.att.until <= s.t) { s.stats.attLost += s.att.n; R.addLog('warn', `${EL_JA[s.att.el]}が ${s.att.n} つ残ったまま切れました`); s.att = null; }
+          // スリップストリームの範囲（3 秒ごと）
+          for (const k of Object.keys(s.dots)) {
+            const dd = s.dots[k];
+            while (dd.next <= s.t && dd.next <= dd.until) { dd.next += 3000; if (s.phase === 'combat') R.dotTick(dd.potency, dd.mult, dd.name); }
+            if (dd.until < s.t) delete s.dots[k];
+          }
+          if (s.phase !== 'combat' && s.phase !== 'countdown') return;
+          // MP の回復（3 秒ごと。仮 GAME-71）
+          s.mpTick += dt;
+          while (s.mpTick >= 3000) { s.mpTick -= 3000; s.mp = Math.min(MP_MAX, s.mp + 200 + (has('lucid') ? 550 : 0)); }
+        },
+        highlightOk: () => true,
+        glow(id) {
+          const s = S(), d = demiOn();
+          if (id === ID.RUIN4) return has('ruin4');
+          if (id === ID.NECRO || id === ID.PAINFLARE) return s.flow > 0;
+          if (id === ID.SFLASH) return has('sflash');
+          if (id === ID.LUX) return has('lux');
+          if (PRIMAL[id]) return !d && s.favor[PRIMAL[id].favor];
+          if ([ID.ENK, ID.ENK_P, ID.ENK_S, ID.DEATHFLARE, ID.SUNFLARE, ID.REKINDLE].includes(id)) return !!d;
+          if ([ID.CYCLONE, ID.STRIKE, ID.MBUSTER, ID.SLIP].includes(id)) return true;
+          if (DEMI_OF[id]) return s.carby && !d;
+          return false;
+        },
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => {
+          const s = S(), d = demiOn();
+          if (id === ID.RRITE || id === ID.RCAT || id === ID.CYCLONE || id === ID.STRIKE || id === ID.IFRIT || id === ID.FOUNTAIN || id === ID.BRAND) return 'kenki';
+          if (id === ID.TRITE || id === ID.TCAT || id === ID.MBUSTER || id === ID.TITAN) return 'iai';
+          if (id === ID.ERITE || id === ID.ECAT || id === ID.SLIP || id === ID.GARUDA) return 'setsu';
+          if (d?.kind === 'solar' || id === ID.SFLASH) return 'holy';
+          void s;
+          return 'getsu';
+        },
+        fxPower: (id) => ([ID.ENK, ID.ENK_P, ID.ENK_S, ID.SFLASH, ID.IFRIT, ID.TITAN, ID.GARUDA].includes(id) ? 1.5 : 1),
+        fxCount: () => 1,
+        castColor: (id) => (id === ID.RRITE || id === ID.RCAT ? 'kenki' : id === ID.SLIP ? 'setsu' : 'getsu'),
+        castPower: 0.5,
+        gcdColor: (id) => (id === ID.RRITE || id === ID.RCAT ? '#ff9a6a' : id === ID.TRITE || id === ID.TCAT ? '#ffe08a' : id === ID.ERITE || id === ID.ECAT ? '#9af0b0' : null),
+        hotOgcd: (id) => [ID.ENK, ID.ENK_P, ID.ENK_S, ID.DEATHFLARE, ID.SUNFLARE, ID.SEARING].includes(id),
+        sfx(id, info, Au) {
+          if (info.kind === 'buff') { if (DEMI_OF[id] || id === ID.SEARING) Au.surge(); else Au.buff(); return; }
+          Au.finisher(id === ID.RRITE || id === ID.RCAT || id === ID.CYCLONE ? 'ka' : id === ID.ERITE || id === ID.SLIP ? 'setsu' : 'getsu'); Au.hit(info.power);
+        },
+        tipCost: (id) => (A[id] && (A[id].mp ?? 0) > 0 ? ['MP', A[id].mp] : [ID.NECRO, ID.PAINFLARE].includes(id) ? ['エーテルフロー', 1] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.flowLost) issues.push({ loss: s.stats.flowLost * 3, rate: 'bad', title: `エーテルフローの上書き ${s.stats.flowLost}`, advice: 'エナジードレインの前に、ミアズマノヴァでエーテルフローを使い切る' });
+          if (s.stats.attLost) issues.push({ loss: s.stats.attLost * 2, rate: s.stats.attLost > 2 ? 'bad' : 'ok', title: `使わずに消えたエーテル ${s.stats.attLost}`, advice: 'エギを召喚したら、次のエギの前にジェムシャインでエーテルを使い切る' });
+          if (s.stats.favorLost) issues.push({ loss: s.stats.favorLost * 4, rate: 'bad', title: `使わなかった神秘 ${s.stats.favorLost}`, advice: 'デミ召喚が帰ったら、次のデミ召喚までにイフリート・タイタン・ガルーダの 3 体を召喚する' });
+          metrics.push({ label: 'デミ召喚', value: `${s.stats.demis} 回`, rate: Math.min(100, s.stats.demis * 50) });
+          metrics.push({ label: 'エギの召喚', value: `${s.stats.primals} 回`, rate: Math.min(100, s.stats.primals * 17) });
+          if (!s.stats.flowLost && s.stats.gcds > 10) goods.push('エーテルフローの上書きなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.flowLost * 10 - s.stats.attLost * 5), posAdvice: '', comboAdvice: '光っている技（エンキンドル・アストラルフロウ・召喚できるエギ）を', castAdvice: 'ルインガ・ルビー・リチュアル・スリップストリームの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときはトパーズ・エメラルド・ルインジャ', rangeAdvice: '魔法の射程（25m）の中にいる。クリムゾンストライクは敵の目の前（3m）で' };
+        },
+        howto: '召喚士: サモン・バハムート（ソルバハムート・バハムート・フェニックスの順に変わる）の 15 秒間はルインガとエンキンドル・アストラルフロウを使う。帰ったらイフリート・タイタン・ガルーダを召喚し、ジェムシャインでエーテルを使い切る（イフリートのあとはクリムゾンサイクロン → ストライク、タイタンのあとはマウンテンバスター、ガルーダのあとはスリップストリーム）。エナジードレインのあとはミアズマノヴァ 2 回とルインジャ。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'SMN'),
+        gaugeDefault: { JobHudSMN0: { x: 70, y: 62, anchor: 4, scale: 1 }, JobHudSMN1: { x: 78, y: 62, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
 })();

@@ -31,7 +31,10 @@
     countdownMs: 3000,
     weaveWarn: 3, // GCD 間のアビリティがこの数に達したら警告（DESIGN-01）
     padTrigger: 0.5,
-    slideMs: 500, // 詠唱の残りがこの時間を切ったら、動いても中断しない（滑り撃ち）。効果もこの時点で決まる（GAME-55）
+    // 滑り撃ち: 詠唱の残りがこの時間を切ったら、動いても中断しない。効果もこの時点で決まる（GAME-55）
+    // 実測（Lodestone の検証。利用者提供）: 詠唱 1.39〜3.55 秒は残り 0.66 秒以下で成功、詠唱 0.98 秒は 0.54 秒以下で確実。
+    // 残り 0.44 秒で失敗した例もあるため、設定で「安全側 0.5 秒」も選べる
+    slideMs: 500, slideLongMs: 660, slideShortMs: 540, slideLongFrom: 1390,
   };
   const COMBO_HAS_NEXT = new Set(Object.values(A).flatMap((a) => a.comboFrom));
   const POS_JA = { rear: '背面', flank: '側面', front: '正面' };
@@ -63,6 +66,8 @@
     get who() { return actWho; }, hpOf: (who) => Arena.hpOf(who),
     // 継続ダメージを自分で持つジョブ（吟遊詩人の 2 つの毒）: 1 回分。mult は付けたときの与ダメージ上昇
     get mult() { return dmgMult(); },
+    // ペット（召喚士のカーバンクル・エギ・デミ召喚）を練習場に出す。kind: carbuncle / ifrit / titan / garuda / bahamut / phoenix / solar、sec: 出ている時間
+    pet: (kind, sec) => Arena.pet?.(kind, sec),
     dotTick(potency, mult, name) {
       const dmg = dealDamage(potency, mult);
       Arena.dotTick(dmg); Au?.dot();
@@ -120,6 +125,7 @@
     camSpeed: 1, // カメラを回す速さ（マウス・キー・右スティック共通の倍率）
     camInvX: false, camInvY: false, // カメラの左右・上下の反転
     job: JOB, // 練習するジョブ（切り替えるとページを読み直す）
+    slide: 'measured', // 滑り撃ちの猶予: measured 実測（詠唱の長さで 0.66 / 0.54 秒） / safe 安全側（0.5 秒）
     latency: 50, // 応答の遅れ（ms）。詠唱のない技の硬直に足す（実機の硬直は 0.6 秒＋応答の遅れ: GAME-04）
   };
 
@@ -218,8 +224,9 @@
   const has = (k) => S.st[k] && S.st[k].until > S.t;
   // 詠唱時間とリキャスト（ジョブの決まりの倍率: 侍の風花、白魔道士の神速魔。詠唱時間無しの効果: ナイトの神聖魔法効果アップ・レクイエスカット、迅速魔）
   const castTimeOf = (a) => { const base = Math.round(a.castMs * J.speed(a)); return J.castMs ? J.castMs(a, base) : base; };
-  const gcdRecast = (a) => Math.round(a.recastMs * J.speed(a));
   const ownCd = (a) => (a.cooldownGroup !== 58 && a.cooldownGroup ? a.cooldownGroup : null);
+  // 固有のリキャストタイマーを持つ GCD（召喚士のサモン・バハムート: 60 秒）も、共通の GCD は 2.5 秒（説明文「この魔法は固有のリキャストタイマーを持つ」）
+  const gcdRecast = (a) => Math.round((a.isGcd && ownCd(a) != null ? 2500 : a.recastMs) * J.speed(a));
   const maxCh = (a) => J.charges[a.id] ?? Math.max(1, a.maxCharges);
 
   function charges(a) {
@@ -246,6 +253,9 @@
     return r;
   }
   // 詠唱のない技の硬直: 0.6 秒（ジョブの決まりで長い技: 侍の必殺剣・夜天 0.8 秒）＋応答の遅れ（GAME-04 仮）
+  // 滑り撃ちの猶予（ms）。c: 詠唱中の S.cast（無ければ一般的な長さの詠唱として）
+  const slideOf = (c) => (OPT.slide === 'safe' ? POLICY.slideMs : c && c.end - c.start < POLICY.slideLongFrom ? POLICY.slideShortMs : POLICY.slideLongMs);
+  const slideText = () => (OPT.slide === 'safe' ? `残り ${POLICY.slideMs / 1000} 秒` : `残り ${POLICY.slideLongMs / 1000} 秒（詠唱 ${POLICY.slideLongFrom / 1000} 秒未満は ${POLICY.slideShortMs / 1000} 秒）`);
   const animLockOf = (a) => (J.animLockMs?.[a.id] ?? POLICY.animLockMs) + (OPT.latency ?? 0);
 
   // ボタン（ホットバーに入っている ID）→ 今実行されるアクション（置き換え。ジョブの決まり: GAME-15 をツールチップから）
@@ -624,10 +634,10 @@
     const t0 = S.t;
     const t1 = S.t + dt;
     if (S.phase === 'countdown') { const b = Math.ceil(-t0 / 1000), af = Math.ceil(-t1 / 1000); if (af !== b && af > 0) Au?.tick(); }
-    // 移動・ジャンプによる詠唱の中断（詠唱の残りが POLICY.slideMs より長いときだけ。短ければ滑り撃ちで完了する）
-    if (S.cast && (Arena.isMoving() || Arena.isJumping()) && S.cast.end - t0 > POLICY.slideMs) interruptCast(S.cast.moving ? '移動中に詠唱を始めた' : Arena.isJumping() ? 'ジャンプした' : '移動した');
+    // 移動・ジャンプによる詠唱の中断（詠唱の残りが 滑り撃ちの猶予（slideOf）より長いときだけ。短ければ滑り撃ちで完了する）
+    if (S.cast && (Arena.isMoving() || Arena.isJumping()) && S.cast.end - t0 > slideOf(S.cast)) interruptCast(S.cast.moving ? '移動中に詠唱を始めた' : Arena.isJumping() ? 'ジャンプした' : '移動した');
     // 滑り撃ちの時点: 効果（与ダメージ上昇）がここで決まり、以後は動いても倒れても詠唱は完了する
-    if (S.cast && !S.cast.snap && t1 >= S.cast.end - POLICY.slideMs) { S.t = Math.max(t0, S.cast.end - POLICY.slideMs); S.cast.snap = { mult: dmgMult() }; S.t = t0; }
+    if (S.cast && !S.cast.snap && t1 >= S.cast.end - slideOf(S.cast)) { S.t = Math.max(t0, S.cast.end - slideOf(S.cast)); S.cast.snap = { mult: dmgMult() }; S.t = t0; }
     // 詠唱完了（予定時刻で処理）
     if (S.cast && S.cast.end <= t1) {
       const c = S.cast; S.cast = null;
@@ -717,7 +727,7 @@
     if (!S) return;
     S.stats.downs++;
     ev('ミス', { action: name, result: '戦闘不能' });
-    if (S.cast && S.cast.end - S.t > POLICY.slideMs) interruptCast('戦闘不能'); // 滑り撃ちの時点を過ぎていれば完了する
+    if (S.cast && S.cast.end - S.t > slideOf(S.cast)) interruptCast('戦闘不能'); // 滑り撃ちの時点を過ぎていれば完了する
     S.queue = null;
     addLog('ng', `戦闘不能: ${name}（3 秒後に起き上がります）`);
   });
@@ -797,7 +807,7 @@
     }
     for (const it of JR.issues) issues.push(it);
     if (st.comboBreaks) add(Math.min(100, st.comboBreaks * 10) * 0.1, st.comboBreaks > 2 ? 'bad' : 'ok', `コンボ切れ ${st.comboBreaks} 回`, JR.comboAdvice ?? '光っている技を順に');
-    if (st.interrupts) add(st.interrupts * 3, 'ok', `詠唱の中断 ${st.interrupts} 回`, `${JR.castAdvice}（残り ${POLICY.slideMs / 1000} 秒からは動いても完了。仮）`);
+    if (st.interrupts) add(st.interrupts * 3, 'ok', `詠唱の中断 ${st.interrupts} 回`, `${JR.castAdvice}（${slideText()}からは動いても完了）`);
     if (st.outRangeMs > 3000) add(pct(st.outRangeMs) * 0.3, pct(st.outRangeMs) > 10 ? 'bad' : 'ok', `射程外にいた時間 ${sec(st.outRangeMs)}`, JR.rangeAdvice);
     if (st.whiffs) add(st.whiffs * 2, 'ok', `空振り ${st.whiffs} 回`, '自分中心の範囲技は、敵の輪に届く距離で');
     if (ROLE === 'healer' && st.tankDowns) add(st.tankDowns * 40 * 0.15, 'bad', `タンクの戦闘不能 ${st.tankDowns} 回`, 'タンクの HP が半分を切ったら回復。リリー（ハート・オブ・ソラス）やテトラグラマトンなど詠唱のない回復は、動きながらでも使える');
@@ -1420,7 +1430,7 @@
       const p = (S.t - S.cast.start) / (S.cast.end - S.cast.start);
       $('castFill').style.width = `${Math.min(100, p * 100)}%`;
       $('castTime').textContent = ((S.cast.end - S.t) / 1000).toFixed(2);
-      cb.classList.toggle('slide', S.cast.end - S.t <= POLICY.slideMs);
+      cb.classList.toggle('slide', S.cast.end - S.t <= slideOf(S.cast));
     } else cb.hidden = true;
 
     // ターゲット情報: 選んでいる相手（敵・相方・自分）の名前と HP。ターゲットがなければ出さない
@@ -1913,7 +1923,8 @@
     if (u.searchParams.has('job')) u.searchParams.set('job', abbr);
     location.replace(u.toString());
   }
-  const jobChoice = (k) => k.choice(MD.jobList.map((j) => [j.abbr, j.name]), JOB, (v) => switchJob(v));
+  // ジョブが多いので、幅が足りなければ折り返す（ボタンの中の文字は折り返さない）
+  const jobChoice = (k) => { const el = k.choice(MD.jobList.map((j) => [j.abbr, j.name]), JOB, (v) => switchJob(v)); el.classList.add('job-choice'); return el; };
   // 相方の設定（近接はタンクの出し入れ、回復役は相方のタンクの腕前、タンクは固定の相方）
   function npcRows(row, k, full) {
     if (ROLE === 'melee') {
@@ -1947,9 +1958,10 @@
     const seedIn = k.number(OPT.seed, 1, 99999, (v) => { OPT.seed = v; applyPractice(); });
     k.row(s1, '技の並び（種）', [seedIn, k.button('ランダム', () => { OPT.seed = 1 + Math.floor(Math.random() * 99999); seedIn.value = OPT.seed; applyPractice(); })], '同じ種なら毎回同じ順番・同じ時間に技が来ます');
     const s2 = k.section(pane, '判定に使う仮の値', 'ゲームデータにない値です。実機で確かめて直します（docs/SPEC.md §10 GAME-04・05・50〜55）。');
+    k.row(s2, '滑り撃ちの猶予', k.choice([['measured', '実測'], ['safe', '安全側']], OPT.slide ?? 'measured', (v) => { OPT.slide = v; save(); }), '実測: 詠唱 1.39 秒以上は残り 0.66 秒、それより短い詠唱は 0.54 秒から動いても完了します（Lodestone の検証）。残り 0.44 秒で失敗した例もあるため、安全側は 0.5 秒です');
     k.row(s2, '応答の遅れ', k.choice([[0, '0ms'], [50, '50ms'], [100, '100ms'], [150, '150ms']], OPT.latency ?? 50, (v) => { OPT.latency = Number(v); save(); }), '詠唱のない技の硬直は「0.6 秒＋応答の遅れ（サーバーまでの往復と処理）」です。大きいほどアビリティを挟みにくくなります');
     const P = Arena.POL;
-    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程（射程 -1 の技）', `敵の当たり判定の外側から ${P.melee} m`], ['敵の当たり判定の半径', `${P.hitbox} m`], ['方向指定の角度', `背面 = 真後ろから ±${180 - P.rearDeg}°、正面 = ±${P.frontDeg}°、その間が側面`], ['詠唱の終わりの猶予（滑り撃ち）', `残り ${POLICY.slideMs / 1000} 秒からは動いても中断しない。効果もこの時点で決まる`], ['先行入力', `そのアクションのリキャストの残りが ${POLICY.queueMs / 1000} 秒以下なら受け付け、使えるようになった瞬間に出す。入れておけるのは 1 つで、先に押したものが優先`], ['硬直', `詠唱のない技 ${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 4%（ケアル 20%・ケアルラ 32%。DESIGN-06）'], ['敵の通常攻撃', `2.8 秒ごと。${ROLE === 'tank' ? 'あなた' : 'タンク'}の HP を ${ROLE === 'tank' ? 4 : 6}% 減らす`]] : [])]) k.row(s2, label, k.text(v));
+    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程（射程 -1 の技）', `敵の当たり判定の外側から ${P.melee} m`], ['敵の当たり判定の半径', `${P.hitbox} m`], ['方向指定の角度', `背面 = 真後ろから ±${180 - P.rearDeg}°、正面 = ±${P.frontDeg}°、その間が側面`], ['詠唱の終わりの猶予（滑り撃ち）', `${slideText()}からは動いても中断しない。効果もこの時点で決まる`], ['先行入力', `そのアクションのリキャストの残りが ${POLICY.queueMs / 1000} 秒以下なら受け付け、使えるようになった瞬間に出す。入れておけるのは 1 つで、先に押したものが優先`], ['硬直', `詠唱のない技 ${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 4%（ケアル 20%・ケアルラ 32%。DESIGN-06）'], ['敵の通常攻撃', `2.8 秒ごと。${ROLE === 'tank' ? 'あなた' : 'タンク'}の HP を ${ROLE === 'tank' ? 4 : 6}% 減らす`]] : [])]) k.row(s2, label, k.text(v));
   });
 
   UI.tab('control', '操作', (pane, k) => {
@@ -2088,7 +2100,7 @@
       `移動は ${keyLabel(MOVE.up)}${keyLabel(MOVE.left)}${keyLabel(MOVE.down)}${keyLabel(MOVE.right)}（読み込んだ KEYBIND.DAT）・パッドは左スティック。攻撃は射程内で（近接は敵の輪の外側から ${Arena.POL.melee}m・仮）。`,
       'カメラはマウスのドラッグで回し、ホイールで近づけます。左右のボタンを同時に押すと前へ進みます。キーボードは KEYBIND.DAT のカメラ操作、パッドは右スティックです。',
       J.howto,
-      `敵の範囲攻撃は、橙色の予兆が満ちると発動します。詠唱中に動くと中断します（残り ${POLICY.slideMs / 1000} 秒を切っていれば、動いても完了します: 滑り撃ち）。`,
+      `敵の範囲攻撃は、橙色の予兆が満ちると発動します。詠唱中に動くと中断します（${slideText()}を切っていれば、動いても完了します: 滑り撃ち）。`,
       'ホットバーの中身・キー・配置・ジョブゲージの位置は、あなたの設定ファイル（サンプル）のとおりです。「設定」で差し替えられます。',
     ];
     $('howto').innerHTML = '';

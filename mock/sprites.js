@@ -1,4 +1,4 @@
-// ドット絵の素材（高画質版）: 侍・タンク（ナイト）・白魔道士・からくり木人。画像ファイルは使わず、図形（楕円・太線・多角形）を組み合わせて描く。
+// ドット絵の素材（高画質版）: 侍・タンク（ナイト）・白魔道士ほかのジョブ・召喚士のペット・からくり木人。画像ファイルは使わず、図形（楕円・太線・多角形）を組み合わせて描く。
 // 部品ごとに「光が左上から当たる」として陰影を自動で付け、部品の重なりには線、外側には輪郭を付ける。
 // 1 コマは等倍のドット（侍・タンク・白魔道士 64×64、木人 96×96）。2D の画面でも 3D の画面でも、同じアトラス（全コマを並べた画像）を使う。
 (function () {
@@ -35,9 +35,16 @@
     fire: ['#ffffff', '#ffe0b0', '#ff9a52', '#e8502c', '#a0261a'], // 黒魔道士の杖の玉
     brdCoat: ['#c8e8a8', '#7eb05a', '#557f3c', '#3a5a2a', '#22361a'], // 吟遊詩人の緑のコート
     feather: ['#ffffff', '#ffe0e0', '#ff9a8a', '#d0504a', '#7a2230'], // 帽子の赤い羽根
+    smnRobe: ['#e87a70', '#a83a3a', '#7a2430', '#521826', '#300e18'], // 召喚士の赤いローブ
+    carby: ['#ffffff', '#d8fff4', '#8aeed6', '#3cb89c', '#1a6452'], // カーバンクル（淡い緑に光る）
+    topaz: ['#ffffff', '#fff4b0', '#ffd84a', '#d8a020', '#7a5410'], // タイタン・トパーズ
+    wind: ['#ffffff', '#f4ffd0', '#d0f070', '#88c040', '#3a7020'], // ガルーダ・エメラルド（黄緑の光）
+    demi: ['#ffffff', '#c8f4ff', '#6ad0f0', '#2a88b8', '#123e60'], // デミ・バハムートの光る翼
+    solar: ['#f4f8ff', '#c8d4ec', '#94a4c8', '#5e6c96', '#323c62'], // ソルバハムートの白銀
+    ruby: ['#ffffff', '#ffd0d0', '#ff5a6a', '#c82040', '#6a1024'], // 額の宝石
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -629,6 +636,7 @@
   function staff(F, h, dir, up, down, o = {}, st = ROBE_STYLE.whm) {
     if (st.item === 'globe') { globe(F, h, dir, o, st); return; }
     if (st.item === 'bow') { bow(F, h, dir, o); return; }
+    if (st.item === 'book') { book(F, h, dir, o, st); return; }
     const b = add(h, dir, -down), t = add(h, dir, up), head = add(t, dir, 2.6);
     F.fill('wood', (m) => m.capsule(b.x, b.y, t.x, t.y, 0.9, 1.0), { k: 1.1 });
     const r = 1.9 + (o.orb ?? 0) * 0.8;
@@ -653,12 +661,22 @@
     F.fill('white', (m) => m.line(top.x, top.y, bot.x, bot.y), { k: 1, line: false, flat: true });
     if ((o.orb ?? 0) > 0.6) F.fill('smear', (m) => m.ellipse(h.x + n.x * -3, h.y + n.y * -3, 1.2 + o.orb * 0.5, 1.2 + o.orb * 0.5), { flat: true, line: false, k: 1 });
   }
+  // 召喚士の魔導書: 手の先に開いた本と、その上に浮かぶ光の紋
+  function book(F, h, dir, o, st) {
+    const c = add(h, dir, 3), n = perp(dir);
+    F.fill('leather', (m) => m.poly([c.x - n.x * 4.5 - dir.x * 2, c.y - n.y * 4.5 - dir.y * 2, c.x + n.x * 4.5 - dir.x * 2, c.y + n.y * 4.5 - dir.y * 2, c.x + n.x * 4.5 + dir.x * 2.5, c.y + n.y * 4.5 + dir.y * 2.5, c.x - n.x * 4.5 + dir.x * 2.5, c.y - n.y * 4.5 + dir.y * 2.5]), { k: 1.2 });
+    const bk = F.last;
+    F.deco('white', 1, (m) => { m.line(c.x - n.x * 3.8, c.y - n.y * 3.8, c.x - n.x * 0.6, c.y - n.y * 0.6); m.line(c.x + n.x * 0.6, c.y + n.y * 0.6, c.x + n.x * 3.8, c.y + n.y * 3.8); }, { only: bk });
+    const g = add(c, dir, 5 + (o.orb ?? 0) * 1.5), r = 1.4 + (o.orb ?? 0) * 1.1;
+    if ((o.orb ?? 0) > 0.1) F.fill(st.orb, (m) => { m.ellipse(g.x, g.y, r, r); m.cut().ellipse(g.x, g.y, r * 0.5, r * 0.5).add(); }, { flat: true, line: false, k: 1 });
+  }
   // ジョブごとの見た目: robe 服・trim 縁（袖口・裾・フードの縁）・head（hood フード / hat とんがり帽子 / hair 髪と額飾り）・item（staff 杖 / globe 天球儀）・orb 杖の玉の光
   const ROBE_STYLE = {
     whm: { robe: 'white', trim: 'red', head: 'hood', item: 'staff', orb: 'aura' },
     ast: { robe: 'astRobe', trim: 'gold', head: 'hair', item: 'globe', orb: 'star' },
     blm: { robe: 'blmRobe', trim: 'gold', head: 'hat', item: 'staff', orb: 'fire' },
     brd: { robe: 'brdCoat', trim: 'gold', head: 'cap', item: 'bow', orb: 'smear' },
+    smn: { robe: 'smnRobe', trim: 'gold', head: 'hair', item: 'book', orb: 'demi' },
   };
   // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
   function robeArm(F, s, h, bend, o = {}, st = ROBE_STYLE.whm) {
@@ -871,6 +889,124 @@
     buff: { fps: 8, loop: false, poses: [{ staff: 'up', free: 'up', orb: 1 }, { staff: 'up', free: 'up', orb: 1.8, bob: -1 }] },
     hurt: { fps: 1, loop: false, poses: [{ staff: 'hurt', headDy: -1, bob: -1, tail: -1 }] },
     jump: { fps: 1, loop: false, poses: [{ jump: 3, fl: 3, fr: 3, la: 3, lb: 3, fa: 3, fb: -3, tail: -1.5, free: 'up' }, { jump: 1, fl: 1, fr: 2, la: 1, lb: 2, tail: -0.5 }] },
+  };
+
+  // ---------------- 召喚士のペット（カーバンクル・エギ・デミ召喚）----------------
+  // view: down 正面 / up 背面 / right 横向き。p: { bob（上下）, wing（翼の開き 0〜1）, glow（光の強さ）, tail }
+  // カーバンクル（64×64、足元 y=59。小さな獣: 長い耳・巻いた尾・額の赤い宝石）
+  function carbuncle(F, p, view) {
+    const cx = 32, b = p.bob ?? 0, side = view === 'right', back = view === 'up', t = p.tail ?? 0;
+    if (side) {
+      F.fill('carby', (m) => { m.capsule(cx - 7, 51 - b, cx - 11 - t, 42 - b, 2.2, 1.4); m.ellipse(cx - 9 - t, 40 - b, 3, 2.4); }, { k: 1.4 });
+      F.fill('carby', (m) => { m.ellipse(cx - 3, 57, 1.6, 1.3); m.ellipse(cx + 3, 57, 1.6, 1.3); }, { k: 1.2, dark: 1 });
+      F.fill('carby', (m) => m.ellipse(cx - 1, 52 - b, 7, 4.2), { k: 1.6 });
+      F.fill('carby', (m) => { m.capsule(cx + 4, 44 - b, cx - 6, 36 - b + t * 0.5, 1.6, 0.6); m.capsule(cx + 5, 44 - b, cx - 3, 34 - b + t * 0.5, 1.6, 0.6); }, { k: 1.3 });
+      F.fill('carby', (m) => m.ellipse(cx + 6, 46.5 - b, 4.4, 3.8), { k: 1.7 });
+      F.fill('ruby', (m) => m.ellipse(cx + 8, 43.5 - b, 1, 1), { flat: true, line: false, k: 1 });
+      F.deco('black', 4, (m) => m.rect(cx + 8, 46 - b, 1, 1.5));
+      return;
+    }
+    if (back) F.fill('carby', (m) => { m.capsule(cx + 2, 51 - b, cx + 8 + t, 40 - b, 2.2, 1.4); m.ellipse(cx + 6 + t, 38 - b, 3, 2.4); }, { k: 1.4 });
+    F.fill('carby', (m) => { m.ellipse(cx - 3, 57, 1.6, 1.3); m.ellipse(cx + 3, 57, 1.6, 1.3); }, { k: 1.2, dark: 1 });
+    F.fill('carby', (m) => m.ellipse(cx, 52 - b, 6, 4.4), { k: 1.6 });
+    if (!back) F.fill('carby', (m) => { m.capsule(cx + 4, 51 - b, cx + 9 + t, 41 - b, 1.8, 1.2); }, { k: 1.4, dark: 1 });
+    F.fill('carby', (m) => { m.capsule(cx - 3, 43 - b, cx - 9, 34 - b + t * 0.5, 1.6, 0.6); m.capsule(cx + 3, 43 - b, cx + 9, 34 - b + t * 0.5, 1.6, 0.6); }, { k: 1.3 });
+    F.fill('carby', (m) => m.ellipse(cx, 45.5 - b, 5, 4.2), { k: 1.7 });
+    if (!back) {
+      F.fill('ruby', (m) => m.ellipse(cx, 42.5 - b, 1.1, 1.1), { flat: true, line: false, k: 1 });
+      F.deco('black', 4, (m) => { m.rect(cx - 2.5, 45.5 - b, 1, 1.5); m.rect(cx + 1.5, 45.5 - b, 1, 1.5); });
+    }
+  }
+  // イフリート（64×64。炎の獣人: 大きな角・鉤爪・燃える体）
+  function ifrit(F, p, view) {
+    const b = p.bob ?? 0, side = view === 'right', back = view === 'up', g = p.glow ?? 0;
+    const cx = 32, hx = side ? cx + 6 : cx;
+    F.fill('fire', (m) => { for (let i = 0; i < 7; i++) { const a = i * 0.9 + g; m.ellipse(cx + Math.cos(a) * 10, 34 - b + Math.sin(a * 1.3) * 10, 2.6 + (i % 3), 3.4 + (i % 2)); } }, { flat: true, line: false, k: 1 });
+    const legs = side ? [[-3, 1], [3, 0]] : [[-5, 0], [5, 0]];
+    for (const [dx, dk] of legs) F.fill('red', (m) => { m.capsule(cx + dx, 40 - b, cx + dx * 1.4 + (side ? 3 : 0), 50, 2.8, 2); m.capsule(cx + dx * 1.4 + (side ? 3 : 0), 50, cx + dx, 57, 2, 1.6); }, { k: 1.4, dark: dk });
+    F.fill('red', (m) => { m.ellipse(cx, 34 - b, side ? 7 : 8.5, 9.5); m.ellipse(cx + (side ? 2 : 0), 27 - b, side ? 6 : 9, 5); }, { k: 1.7 });
+    const body = F.last;
+    F.deco('fire', 1, (m) => { m.line(cx - 4, 30 - b, cx + 1, 40 - b); m.line(cx + 4, 29 - b, cx, 38 - b); m.ellipse(cx, 33 - b, 2, 2); }, { only: body });
+    const arms = side ? [[1, 0]] : [[-1, 0], [1, 0]];
+    for (const [s, dk] of arms) F.fill('red', (m) => { m.capsule(cx + s * (side ? 2 : 8), 27 - b, cx + s * (side ? 10 : 13), 39 - b - g * 6, 2.6, 2); m.poly([cx + s * (side ? 9 : 12), 38 - b - g * 6, cx + s * (side ? 14 : 16), 42 - b - g * 6, cx + s * (side ? 11 : 13), 43 - b - g * 6]); }, { k: 1.4, dark: dk });
+    F.fill('red', (m) => m.ellipse(hx, 20 - b, 4.6, 4.8), { k: 1.7 });
+    F.fill('black', (m) => {
+      if (side) m.poly([hx - 2, 17 - b, hx + 1, 17 - b, hx - 7, 6 - b, hx - 9, 7 - b]);
+      else { m.poly([hx - 4, 18 - b, hx - 2, 16 - b, hx - 8, 5 - b, hx - 10, 7 - b]); m.poly([hx + 4, 18 - b, hx + 2, 16 - b, hx + 8, 5 - b, hx + 10, 7 - b]); }
+    }, { k: 1.3 });
+    if (!back) F.fill('glow', (m) => { if (side) m.ellipse(hx + 3, 20 - b, 1, 0.8); else { m.ellipse(hx - 2, 20 - b, 1, 0.8); m.ellipse(hx + 2, 20 - b, 1, 0.8); } }, { flat: true, line: false, k: 1 });
+  }
+  // タイタン（64×64。金色の岩の巨体: 大きな肩の岩・小さな頭と白い角・浮かぶ岩）
+  function titan(F, p, view) {
+    const b = p.bob ?? 0, side = view === 'right', back = view === 'up', cx = 32, g = p.glow ?? 0;
+    F.fill('topaz', (m) => { for (const [x, y, r] of [[-20, 30, 3], [19, 24, 2.6], [-16, 50, 2.4], [21, 46, 3], [0, 8, 2]]) m.ellipse(cx + x * (side ? 0.6 : 1), y - b * 1.5 + Math.sin(x + g) * 1.5, r, r * 0.9); }, { k: 1.5 });
+    F.fill('topaz', (m) => { m.ellipse(cx - 6, 55, 5, 3.5); m.ellipse(cx + 6, 55, 5, 3.5); }, { k: 1.4, dark: 1 });
+    F.fill('topaz', (m) => m.ellipse(cx, 40 - b, side ? 10 : 13, 13), { k: 1.9 });
+    const body = F.last;
+    F.deco('topaz', 3, (m) => { m.line(cx - 8, 34 - b, cx - 2, 46 - b); m.line(cx + 6, 32 - b, cx + 9, 44 - b); m.line(cx - 3, 30 - b, cx + 4, 36 - b); }, { only: body });
+    if (!back) F.fill('glow', (m) => m.ellipse(cx, 40 - b, 2.4 + g, 2.4 + g), { flat: true, line: false, k: 1 });
+    for (const s of side ? [1] : [-1, 1]) F.fill('topaz', (m) => { m.ellipse(cx + s * (side ? 4 : 14), 28 - b, 7, 6.5); m.ellipse(cx + s * (side ? 7 : 17), 40 - b - g * 3, 4.5, 5); }, { k: 1.8 });
+    F.fill('topaz', (m) => m.ellipse(cx + (side ? 4 : 0), 23 - b, 4, 3.8), { k: 1.6, dark: 1 });
+    F.fill('white', (m) => m.poly(side ? [cx + 2, 20 - b, cx + 5, 20 - b, cx - 3, 9 - b] : [cx - 1.5, 20 - b, cx + 1.5, 20 - b, cx + 5, 9 - b]), { k: 1.2 });
+  }
+  // ガルーダ（64×64。黄緑に光る細い体と、三日月の大きな翼）
+  function garuda(F, p, view) {
+    const b = p.bob ?? 0, side = view === 'right', w = p.wing ?? 0.5, cx = 32;
+    const span = side ? 12 : 29;
+    for (const s of side ? [-1] : [-1, 1]) F.fill('wind', (m) => {
+      m.poly([cx + s * 2, 25 - b, cx + s * span * 0.6, 14 - b - w * 6, cx + s * span, 8 - b - w * 8, cx + s * span * 0.85, 16 - b - w * 4, cx + s * span * 0.55, 26 - b, cx + s * span * 0.9, 40 - b + w * 3, cx + s * 4, 32 - b]);
+      m.cut().ellipse(cx + s * span * 0.55, 22 - b - w * 2, span * 0.18, 5).add();
+    }, { k: 1.2 });
+    F.fill('wind', (m) => { m.capsule(cx, 22 - b, cx + (side ? 1 : 0), 44 - b, 2.4, 1.2); m.poly([cx - 3, 42 - b, cx + 3, 42 - b, cx + 1, 57 - b, cx - 1, 57 - b]); }, { k: 1.5 });
+    F.fill('wind', (m) => { m.ellipse(cx + (side ? 2 : 0), 17 - b, 2.8, 3.3); m.poly([cx - 1, 15 - b, cx + 1, 15 - b, cx + (side ? -3 : 0), 5 - b]); }, { k: 1.4 });
+  }
+  // 大きなデミ召喚（96×96、足元 y=90）: 体・頭・翼。kind: bahamut（黒い体に青く光る翼）/ phoenix（炎の鳥）/ solar（白銀の体と剣の翼）
+  function demi(F, p, view, kind) {
+    const b = p.bob ?? 0, side = view === 'right', back = view === 'up', w = p.wing ?? 0.5, g = p.glow ?? 0, cx = 48;
+    const body = kind === 'bahamut' ? 'black' : kind === 'phoenix' ? 'fire' : 'solar';
+    const wingM = kind === 'bahamut' ? 'demi' : kind === 'phoenix' ? 'glow' : 'solar';
+    const span = side ? 18 : 44, sh = 44 - b;
+    // 翼
+    for (const s of side ? [-1] : [-1, 1]) {
+      if (kind === 'solar') {
+        // 剣の翼: 肩から放射状に伸びる刃
+        for (let i = 0; i < 5; i++) {
+          const a = (-0.95 + i * 0.32 - w * 0.2), len = span * (0.75 + (i % 2) * 0.25);
+          const tx = cx + s * (6 + Math.cos(a) * len), ty = sh + Math.sin(a) * len * 0.85;
+          F.fill('solar', (m) => m.capsule(cx + s * 6, sh, tx, ty, 2.2, 1), { k: 1.3 });
+          F.fill('star', (m) => m.ellipse(tx, ty, 1.4 + g, 1.4 + g), { flat: true, line: false, k: 1 });
+        }
+        continue;
+      }
+      F.fill(wingM, (m) => {
+        const tip = [cx + s * span, sh - 30 - w * 10], mid = [cx + s * span * 0.9, sh + 2], low = [cx + s * span * 0.55, sh + 14 + w * 3];
+        m.poly([cx + s * 5, sh - 4, cx + s * span * 0.5, sh - 20 - w * 8, tip[0], tip[1], mid[0], mid[1], cx + s * span * 0.75, sh + 6, low[0], low[1], cx + s * span * 0.35, sh + 8, cx + s * 6, sh + 8]);
+      }, { k: 1.1, flat: kind !== 'phoenix' });
+      if (kind === 'bahamut') F.fill('iron', (m) => { m.capsule(cx + s * 5, sh - 4, cx + s * span * 0.5, sh - 20 - w * 8, 1.4, 1); m.capsule(cx + s * span * 0.5, sh - 20 - w * 8, cx + s * span, sh - 30 - w * 10, 1, 0.6); m.capsule(cx + s * span * 0.5, sh - 20 - w * 8, cx + s * span * 0.9, sh + 2, 0.8, 0.5); m.capsule(cx + s * span * 0.5, sh - 20 - w * 8, cx + s * span * 0.55, sh + 14 + w * 3, 0.8, 0.5); }, { k: 1.2 });
+    }
+    // 尾
+    if (kind === 'phoenix') F.fill('fire', (m) => { m.poly([cx - 4, sh + 14, cx + 4, sh + 14, cx + 10 + g * 2, 88 - b, cx, 80 - b, cx - 10 - g * 2, 88 - b]); }, { k: 1.1, flat: true });
+    else F.fill(body, (m) => m.capsule(cx + (side ? -4 : 0), sh + 16, cx + (side ? -16 : 6), 84 - b, 3.4, 1.2), { k: 1.4, dark: 1 });
+    // 脚（鳥は無し）
+    if (kind !== 'phoenix') for (const s of side ? [1] : [-1, 1]) F.fill(body, (m) => m.capsule(cx + s * 5, sh + 14, cx + s * 7, sh + 30, 2.8, 1.8), { k: 1.4, dark: 1 });
+    // 胴
+    F.fill(body, (m) => { m.ellipse(cx + (side ? 2 : 0), sh + 6, side ? 7 : 8.5, 13); }, { k: 1.8 });
+    const torso = F.last;
+    if (kind === 'bahamut') F.deco('demi', 2, (m) => { m.line(cx - 3, sh - 2, cx - 1, sh + 14); m.line(cx + 3, sh - 2, cx + 1, sh + 14); }, { only: torso });
+    if (kind === 'solar') F.deco('star', 1, (m) => m.ellipse(cx, sh + 2, 2 + g, 2 + g), { only: torso });
+    // 頭と角（鳥は冠羽）
+    const hx = cx + (side ? 9 : 0), hy = sh - 12;
+    F.fill(body, (m) => { m.ellipse(hx, hy, side ? 5.5 : 5, 5); if (side) m.poly([hx + 3, hy - 2, hx + 11, hy + 1, hx + 3, hy + 3]); }, { k: 1.7 });
+    if (kind === 'phoenix') F.fill('glow', (m) => { m.poly([hx - 2, hy - 3, hx + 2, hy - 3, hx + (side ? -6 : 0), hy - 16 - g * 2]); m.poly([hx - 3, hy - 2, hx - 1, hy - 3, hx - 9, hy - 11]); m.poly([hx + 3, hy - 2, hx + 1, hy - 3, hx + 9, hy - 11]); }, { flat: true, line: false, k: 1 });
+    else F.fill(kind === 'solar' ? 'solar' : 'iron', (m) => {
+      if (side) m.poly([hx - 1, hy - 3, hx + 2, hy - 4, hx - 8, hy - 14]);
+      else { m.poly([hx - 3, hy - 3, hx - 1, hy - 4, hx - 8, hy - 15]); m.poly([hx + 3, hy - 3, hx + 1, hy - 4, hx + 8, hy - 15]); m.poly([hx - 1, hy - 4, hx + 1, hy - 4, hx, hy - 13]); }
+    }, { k: 1.3 });
+    if (!back) F.fill(kind === 'bahamut' ? 'demi' : kind === 'phoenix' ? 'glow' : 'star', (m) => { if (side) m.ellipse(hx + 3, hy, 1, 0.8); else { m.ellipse(hx - 2, hy, 1, 0.8); m.ellipse(hx + 2, hy, 1, 0.8); } }, { flat: true, line: false, k: 1 });
+  }
+  const PET_ANIMS = {
+    idle: { fps: 5, loop: true, poses: [{ bob: 0, wing: 0.2, tail: 0 }, { bob: 1, wing: 0.5, tail: 1, glow: 0.3 }, { bob: 2, wing: 0.9, tail: 1.5, glow: 0.6 }, { bob: 1, wing: 0.5, tail: 1, glow: 0.3 }] },
+    spell: { fps: 10, loop: false, poses: [{ bob: -1, wing: 1, glow: 1 }, { bob: -2, wing: 1.2, glow: 1.6 }, { bob: 0, wing: 0.6, glow: 0.8 }] },
   };
 
   // ---------------- からくり木人（96×96、足元 y=90）----------------
@@ -1189,6 +1325,15 @@
       ast: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
       brd: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
       blm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
+      smn: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
+      // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
+      pet_carbuncle: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
+      pet_ifrit: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),
+      pet_titan: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.065, draw: titan, anims: PET_ANIMS }),
+      pet_garuda: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: garuda, anims: PET_ANIMS }),
+      pet_bahamut: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'bahamut'), anims: PET_ANIMS }),
+      pet_phoenix: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'phoenix'), anims: PET_ANIMS }),
+      pet_solar: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
       boss: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),
       props: buildProps(),
       vfx: { lilyHeart: lilyHeartCanvas(), lilyFlower: lilyFlowerCanvas(), lilyBubble: lilyBubbleCanvas(), glint: glintCanvas(), star: starCanvas(), LILY },

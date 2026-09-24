@@ -388,6 +388,117 @@
     };
   }
 
-  const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm, BRD: brd };
+  // ---------------- 召喚士: エーテルフローシンボル（JobHudSMN0）とトランスゲージ（JobHudSMN1）----------------
+  // ゲーム内の画面（依頼主の画像）とアトラスの絵から:
+  //   エーテルフロー: #8・#9（部品 1001。紫の菱形 #6 と光 #5）が 1 つずつ点く。#10 は枠（空の暗い菱形）。シンプル表示は #11（#12・#13）
+  //   トランスゲージ（通常 #2）:
+  //     左の頭: 最初はカーバンクル（#10）。デミ召喚をすると、その絵の組（#23 = デミ・バハムート / デミ・フェニックス、#46 = ソルバハムート）に替わり、
+  //       顕現中は色付き（バハムート = パーツ 4 の青い竜・フェニックス = 17 の炎の鳥・ソルバハムート = #81 の白銀）、帰ると灰色（2 / 21 / #80）。
+  //       輪の中の数字（文字 #12・#24・#47）は顕現の残り秒
+  //     神秘の宝石（#3 の #7 ルビー・#8 トパーズ・#9 エメラルド。部品 1006 / 1004 / 1008）: 神秘があれば宝石（#15）を明るく、なければ暗く（ULD の乗算色）。
+  //       エーテルがあればその宝石のエギの影（#10）と光（#9・#12・#2・#13）を出し、下の数字（#4 の文字）にスタック数。右の数字（#4）はエーテルの残り秒
+  //   シンプル表示（#82）: #83 アイコン・#87〜#89 小さな宝石（#3 が明るい絵）・#85 エーテルのエギのアイコン（#6 火・#4 土・#8 風）・#86 スタック数・
+  //     #92 棒（顕現の残り）・#91 数字（顕現中はその残り秒、ほかはエーテルの残り秒）
+  const SMN_GEM = { ruby: 7, topaz: 8, emerald: 9 };
+  const SMN_EL_GEM = { fire: 'ruby', earth: 'topaz', wind: 'emerald' };
+  const SMN_SGEM = { ruby: 87, topaz: 88, emerald: 89 };
+  const SMN_SICON = { fire: 6, earth: 4, wind: 8 };
+  const SMN_BAR = { bahamut: 'sepia(1) saturate(6) hue-rotate(150deg) brightness(1.1)', phoenix: 'sepia(1) saturate(6) hue-rotate(-20deg) brightness(1.1)', solar: 'sepia(1) saturate(2) hue-rotate(170deg) brightness(1.5)' };
+  function smn(G) {
+    const L0 = G.layouts.JobHudSMN0, L1 = G.layouts.JobHudSMN1;
+    const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
+    const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    const P3 = partsOf(L1, 3), tex = G.textures.JobHudSMN1;
+    let simple = false, prev = {};
+    // エーテルフロー: 光の演出（#3・#7・部品の #2・#3）は隠す
+    for (const id of [3, 7]) set(k(id), { opacity: 0 });
+    for (const q of [8, 9]) for (const c of [2, 3]) set(k(`${q}/${c}`), { opacity: 0 });
+    for (const q of [12, 13]) set(k(`${q}/2`), { opacity: 0 });
+    k(11).hidden = true;
+    // トランスゲージ: 演出用の光は最初は隠す
+    for (const g of Object.values(SMN_GEM)) for (const c of [2, 5, 7, 8, 9, 10, 12, 13, 14]) set(k1(`${g}/${c}`), { opacity: 0 });
+    for (const id of [11, 14, 15, 16, 20, 21, 41, 43, 45, 48, 74, 76, 77, 78, 79]) set(k1(id), { opacity: 0 });
+    for (const id of [5, 6]) set(k1(id), { opacity: 0.8 });
+    const headB = K1.img('44'), gemImg = Object.fromEntries(Object.entries(SMN_GEM).map(([g, n]) => [g, K1.img(`${n}/15`)]));
+    const numOf = { carby: k1(12), bp: k1(24), solar: k1(47) };
+    for (const n of Object.values(numOf)) if (n) { n.classList.add('g2-num'); n.style.width = '40px'; n.style.marginLeft = '-19px'; n.style.textAlign = 'center'; n.style.height = '20px'; }
+    k1(`${4}/2`)?.classList.add('g2-num');
+    for (const g of Object.values(SMN_GEM)) k1(`${g}/4/2`)?.classList.add('g2-snum');
+    k1(`86/2`)?.classList.add('g2-snum'); k1(`91/2`)?.classList.add('g2-num');
+    for (const g of Object.values(SMN_SGEM)) k1(`${g}/2/2`)?.classList.add('g2-snum');
+    k1(82).hidden = true;
+    const SBAR_W = 160;
+    function apply(st, instant) {
+      const t = st.t ?? 0;
+      // エーテルフロー
+      const flow = st.flow ?? 0;
+      if (instant || flow !== prev.flow) {
+        [8, 9].forEach((q, i) => { set(k(q), { opacity: i < flow ? 1 : 0 }); set(k(`${[12, 13][i]}/2`), { opacity: i < flow ? 1 : 0 }); if (!instant && i === flow - 1 && flow > (prev.flow ?? 0)) anim(k(q), [{ transform: 'scale(1.3)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 400 }); });
+      }
+      // デミ召喚
+      const d = st.demi && st.demi.until > t ? st.demi : null;
+      const grp = d ? d.kind : st.lastDemi ?? null, on = !!d;
+      const left = d ? Math.ceil((d.until - t) / 1000) : null;
+      if (instant || grp !== prev.grp || on !== prev.on) {
+        k1(10).hidden = !!grp; k1(23).hidden = !(grp === 'bahamut' || grp === 'phoenix'); k1(46).hidden = grp !== 'solar';
+        if (grp === 'bahamut' || grp === 'phoenix') {
+          usePart(headB, tex, P3[grp === 'bahamut' ? (on ? 4 : 2) : (on ? 17 : 21)]);
+          for (const id of [28, 29, 30]) set(k1(id), { opacity: grp === 'bahamut' ? (on ? 0.95 : 0.5) : 0 });
+          set(k1(31), { opacity: grp === 'phoenix' ? 1 : 0, filter: on ? 'none' : 'brightness(0.45) saturate(0.3)' });
+          set(k1(37), { opacity: grp === 'phoenix' && !on ? 0.4 : 0 });
+          set(k1(25), { opacity: on ? 0.75 : 0 });
+        }
+        if (grp === 'solar') {
+          set(k1(81), { opacity: on ? 1 : 0 });
+          set(k1(61), { opacity: on ? 1 : 0.35 }); set(k1(68), { opacity: on ? 0 : 1 });
+          set(k1(48), { opacity: on ? 0.75 : 0 });
+        }
+        if (!instant && on) anim(k1(grp === 'solar' ? 46 : 23), [{ filter: 'brightness(2.2)' }, { filter: 'none' }], { duration: 500 });
+      }
+      const sec = left != null ? String(left) : '';
+      if (sec !== prev.sec) for (const n of Object.values(numOf)) if (n) n.textContent = sec;
+      // 神秘とエーテル
+      const fav = st.favor ?? {}, att = st.att && st.att.until > t ? st.att : null;
+      const ag = att ? SMN_EL_GEM[att.el] : null, an = att ? att.n : 0;
+      const fk = ['ruby', 'topaz', 'emerald'].map((g) => (fav[g] ? 1 : 0)).join('') + (ag ?? '') + an + on;
+      if (instant || fk !== prev.fk) {
+        for (const [g, n] of Object.entries(SMN_GEM)) {
+          const lit = !!fav[g] && !on, at = ag === g; // 顕現中は神秘があっても暗い（まだエギを召喚できない。ゲーム内の画面）
+          if (gemImg[g]) gemImg[g].style.filter = lit || at ? 'none' : 'brightness(0.32)';
+          for (const c of [9, 10, 12]) set(k1(`${n}/${c}`), { opacity: at ? (c === 12 ? 0.8 : 1) : 0 });
+          set(k1(`${n}/13`), { opacity: lit ? 0.45 : 0 });
+          set(k1(`${n}/14`), { opacity: at ? 0.7 : 0 });
+          const sn = k1(`${n}/4`); if (sn) { sn.style.visibility = at ? 'visible' : 'hidden'; const tx = k1(`${n}/4/2`); if (tx) tx.textContent = at ? String(an) : ''; }
+          const s = SMN_SGEM[g];
+          set(k1(`${s}/3`), { opacity: lit || at ? 1 : 0 });
+          const ss = k1(`${s}/2`); if (ss) { ss.style.visibility = at ? 'visible' : 'hidden'; const tx = k1(`${s}/2/2`); if (tx) tx.textContent = at ? String(an) : ''; }
+          if (!instant && at && prev.ag !== g) anim(k1(n), [{ transform: 'scale(1.25)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 450 });
+        }
+        set(k1(85), { opacity: att ? 1 : 0 });
+        for (const [el, c] of Object.entries(SMN_SICON)) set(k1(`85/${c - 1}`), { opacity: att && att.el === el ? 1 : 0 });
+        const sn = k1('86/2'); if (sn) sn.textContent = att ? String(an) : '';
+        set(k1(86), { opacity: att ? 1 : 0 });
+      }
+      const asec = att ? String(Math.ceil((att.until - t) / 1000)) : '';
+      if (asec !== prev.asec) { const n4 = k1('4/2'); if (n4) n4.textContent = asec; set(k1(4), { opacity: att ? 1 : 0 }); }
+      // シンプル表示: 棒は顕現の残り、数字は顕現中ならその残り秒・ほかはエーテルの残り秒
+      const w = d ? Math.round(SBAR_W * Math.max(0, d.until - t) / 15000) : 0;
+      set(k1('92/3'), { clipPath: clipW(w, SBAR_W), filter: d ? SMN_BAR[d.kind] : 'none' });
+      const snum = d ? sec : asec;
+      if (snum !== prev.snum) { const n = k1('91/2'); if (n) n.textContent = snum; }
+      prev = { flow, grp, on, sec, fk, ag, asec, snum };
+    }
+    function setSimple(v) { simple = !!v; k(2).hidden = simple; k(11).hidden = !simple; k1(2).hidden = simple; k1(82).hidden = !simple; }
+    apply({ t: 0 }, true);
+    return {
+      windows: [
+        { name: 'JobHudSMN0', label: 'エーテルフロー', el: K.el, w: K.w, h: K.h },
+        { name: 'JobHudSMN1', label: 'トランスゲージ', el: K1.el, w: K1.w, h: K1.h },
+      ],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm, BRD: brd, SMN: smn };
   window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
 })();
