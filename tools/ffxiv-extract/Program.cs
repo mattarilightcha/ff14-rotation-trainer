@@ -319,14 +319,19 @@ if (opt.Icons)
 
     var gauges = new JobGaugeExporter(gd);
     gaugeResult = gauges.ExportAll(Path.Combine(pub, "job-gauges"), jobs.Where(j => j.IsJob).Select(j => j.Abbreviation.En));
-    var gaugePages = gaugeResult.ByJob.Values.Sum(l => l.Count);
-    Console.WriteLine($"gauges : {gaugeResult.ByJob.Count} ジョブ（{gaugePages} 枚）、見つからない {gaugeResult.Missing.Count}（{string.Join(",", gaugeResult.Missing)}）");
+    Console.WriteLine($"gauges : {gaugeResult.Jobs.Count} ジョブ・ULD {gaugeResult.Layouts.Count}・画像 {gaugeResult.Textures.Count} 枚、" +
+        $"ゲージ無し {string.Join(",", gaugeResult.NoGauge)}、対応表に無い ULD {string.Join(",", gaugeResult.Unassigned)}");
+    foreach (var m in gaugeResult.MissingTextures) Console.WriteLine($"  missing texture: {m}");
+    foreach (var (k, l) in gaugeResult.Layouts.Where(l => l.Value.ParseError != null)) Console.WriteLine($"  ULD を読めず .tex だけ拾った: {k}（{l.ParseError}）");
+    WriteJson("job-gauges.json", new
+    {
+        gaugeResult.Jobs,
+        gaugeResult.NoGauge,
+        gaugeResult.Unassigned,
+        gaugeResult.Layouts,
+        gaugeResult.Textures,
+    });
 }
-WriteJson("job-gauges.json", new
-{
-    Jobs = gaugeResult?.ByJob ?? new Dictionary<string, List<JobGaugeExporter.PageOut>>(),
-    NotFound = gaugeResult?.Missing ?? new List<string>(),
-});
 
 var meta = new
 {
@@ -339,7 +344,7 @@ var meta = new
         LuminaExcel = typeof(Action).Assembly.GetName().Version?.ToString(),
     },
     DescriptionLevel = maxLevel,
-    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.ByJob.Count ?? 0 },
+    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.Jobs.Count ?? 0, JobGaugeTextures = gaugeResult?.Textures.Count ?? 0 },
     UnknownDescriptionMacros = descStats.UnknownMacros.OrderBy(k => k.Key).ToDictionary(k => k.Key, k => k.Value),
     UnknownDescriptionParams = descStats.UnknownParams.OrderBy(k => k.Key).ToDictionary(k => k.Key.ToString(), k => k.Value),
 };
