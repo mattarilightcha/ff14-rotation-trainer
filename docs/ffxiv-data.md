@@ -55,10 +55,12 @@ node tools/ffxiv-extract/verify.mjs
 | `src/data/ffxiv/meta.json` | ゲームの版（ffxiv・ex1〜ex5）、抽出日時、Lumina の版、件数 | |
 | `src/data/ffxiv/jobs.json` | 戦闘クラス・ジョブ（ロール、親クラス、LB、使えるアクションの id 一覧） | 32 |
 | `src/data/ffxiv/actions.json` | PvE のプレイヤーアクション（ロールアクション・LB・コンボ派生・忍術などの置き換え先を含む） | 1,055 |
-| `src/data/ffxiv/statuses.json` | アクションが自分に付与するステータス | 184 |
+| `src/data/ffxiv/statuses.json` | アクションが自分に付与するステータス（＝バフ/デバフのアイコン一覧） | 184 |
+| `src/data/ffxiv/job-gauges.json` | ジョブゲージの UI 画像（ジョブごとのページ一覧） | 17 ジョブ・26 枚 |
 | `public/icons/actions/<アイコン番号6桁>.png` | アクションのアイコン（HD 版 80×80） | 1,014 |
-| `public/icons/statuses/<アイコン番号6桁>.png` | ステータスのアイコン | 176 |
+| `public/icons/statuses/<アイコン番号6桁>.png` | ステータス（バフ/デバフ）のアイコン | 176 |
 | `public/icons/jobs/<略称>.png` | ジョブのアイコン（`062100 + ClassJob id`） | 32 |
+| `public/icons/job-gauges/<略称>/<ページ番号>.png` | ジョブゲージの UI 画像（`ui/uld/JobHud<略称>*.tex`） | 17 ジョブ・26 枚 |
 
 JSON のアイコンの場所（`iconPath`）は `/icons/...` から始まるので、Vite の `public/` 配下としてそのまま `<img src>` に使える。
 名前・説明文は `{ ja, en }` の両方を持つ。
@@ -88,6 +90,28 @@ JSON のアイコンの場所（`iconPath`）は `/icons/...` から始まるの
 
 練習 UI でジョブのアクションを並べるときは、`jobs.json` の `actionIds` から `inActionList || isRoleAction` のものを使うと、
 ゲーム内の一覧と同じ顔ぶれになる（今は使えない旧アクションが Action シートに残っている場合もこれで除ける。例: 応急戦術）。
+
+### バフ/デバフアイコンの範囲について
+
+`statuses.json`（＝バフアイコン）は、Action シートの `StatusGainSelf`（自分に付与するステータス）と、
+二次コストがステータスを指すもの（一部のジョブゲージ条件）だけを拾っている。これは「自分のロテーションで
+自分に付くバフ」を機械的に集めたもので、ロテーション練習用途としては妥当な範囲。
+
+一方、敵に付ける DoT・デバフ（例: バイオ、コンバスト、疾風脚など）は Action シート自体に「対象に付与する
+ステータス」の列が無く（`StatusGainSelf` は自分向けのみ）、アクションのエフェクト定義（Excel シートでは
+表現されないバイナリのタイムライン）を別途解析しないと機械的には拾えない。今回は見送っているので、
+対象へのデバフのアイコンが要る場合は別途 `statuses.json` に無い ID を個別に足す必要がある。
+
+### job-gauges.json（ジョブゲージ UI）の範囲について
+
+`ui/uld/JobHud<略称>*.tex`（ページが無いジョブは `JobHud<略称>.tex` 単体、複数ページのジョブは
+`JobHud<略称>0.tex` `JobHud<略称>1.tex` …）という命名で、23 ジョブ中 17 ジョブ分が見つかった。
+
+見つからなかった 6 ジョブ（賢者 SGE・リーパー RPR・ヴァイパー VPR・獣使い BST・ピクトマンサー PCT・
+青魔道士 BLU）は、`JobHud` 以外の命名・番号の付け方を何十通りか試しても見つからなかった。これらは
+2026-09 時点でいずれも比較的新しいジョブで、ゲージ UI が個別テクスチャではなく共有パーツを組み立てる
+別方式になっている可能性がある（未調査）。追加調査が要るときは `tools/ffxiv-extract/JobGaugeExporter.cs`
+のコメントと、命名の探り方は git 履歴のこのコミットの前後を参照。
 
 ## 点検
 

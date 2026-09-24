@@ -8,7 +8,9 @@
 //   src/data/ffxiv/jobs.json       戦闘クラス・ジョブ
 //   src/data/ffxiv/actions.json    PvE のプレイヤーアクション（ロールアクション・LB を含む）
 //   src/data/ffxiv/statuses.json   アクションが付与・参照するステータス
+//   src/data/ffxiv/job-gauges.json ジョブゲージの UI 画像（ジョブごとのページ一覧）
 //   public/icons/actions/<icon>.png, public/icons/statuses/<icon>.png, public/icons/jobs/<ABBR>.png
+//   public/icons/job-gauges/<ABBR>/<page>.png
 
 using System.Text.Encodings.Web;
 using System.Text.Json;
@@ -304,6 +306,7 @@ WriteJson("actions.json", actions);
 WriteJson("statuses.json", statuses);
 
 var iconStats = new IconExporter.Result();
+JobGaugeExporter.Result? gaugeResult = null;
 if (opt.Icons)
 {
     var icons = new IconExporter(gd);
@@ -313,7 +316,17 @@ if (opt.Icons)
     iconStats.Add(icons.ExportAll(Path.Combine(pub, "jobs"), jobs.Select(j => (j.Icon, j.Abbreviation.En))));
     Console.WriteLine($"icons  : {iconStats.Written} 枚（HD {iconStats.Hd} / 通常 {iconStats.Written - iconStats.Hd}）、見つからない {iconStats.Missing.Count}");
     foreach (var m in iconStats.Missing) Console.WriteLine($"  missing icon: {m}");
+
+    var gauges = new JobGaugeExporter(gd);
+    gaugeResult = gauges.ExportAll(Path.Combine(pub, "job-gauges"), jobs.Where(j => j.IsJob).Select(j => j.Abbreviation.En));
+    var gaugePages = gaugeResult.ByJob.Values.Sum(l => l.Count);
+    Console.WriteLine($"gauges : {gaugeResult.ByJob.Count} ジョブ（{gaugePages} 枚）、見つからない {gaugeResult.Missing.Count}（{string.Join(",", gaugeResult.Missing)}）");
 }
+WriteJson("job-gauges.json", new
+{
+    Jobs = gaugeResult?.ByJob ?? new Dictionary<string, List<JobGaugeExporter.PageOut>>(),
+    NotFound = gaugeResult?.Missing ?? new List<string>(),
+});
 
 var meta = new
 {
@@ -326,7 +339,7 @@ var meta = new
         LuminaExcel = typeof(Action).Assembly.GetName().Version?.ToString(),
     },
     DescriptionLevel = maxLevel,
-    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written },
+    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.ByJob.Count ?? 0 },
     UnknownDescriptionMacros = descStats.UnknownMacros.OrderBy(k => k.Key).ToDictionary(k => k.Key, k => k.Value),
     UnknownDescriptionParams = descStats.UnknownParams.OrderBy(k => k.Key).ToDictionary(k => k.Key.ToString(), k => k.Value),
 };

@@ -1,0 +1,202 @@
+{
+  "jobs": {
+    "PLD": [
+      {
+        "index": 0,
+        "width": 904,
+        "height": 840,
+        "iconPath": "/icons/job-gauges/PLD/0.png"
+      }
+    ],
+    "WAR": [
+      {
+        "index": 0,
+        "width": 724,
+        "height": 672,
+        "iconPath": "/icons/job-gauges/WAR/0.png"
+      }
+    ],
+    "DRK": [
+      {
+        "index": 0,
+        "width": 760,
+        "height": 592,
+        "iconPath": "/icons/job-gauges/DRK/0.png"
+      },
+      {
+        "index": 1,
+        "width": 504,
+        "height": 536,
+        "iconPath": "/icons/job-gauges/DRK/1.png"
+      }
+    ],
+    "GNB": [
+      {
+        "index": 0,
+        "width": 696,
+        "height": 664,
+        "iconPath": "/icons/job-gauges/GNB/0.png"
+      }
+    ],
+    "WHM": [
+      {
+        "index": 0,
+        "width": 488,
+        "height": 936,
+        "iconPath": "/icons/job-gauges/WHM/0.png"
+      }
+    ],
+    "SCH": [
+      {
+        "index": 0,
+        "width": 304,
+        "height": 256,
+        "iconPath": "/icons/job-gauges/SCH/0.png"
+      },
+      {
+        "index": 1,
+        "width": 640,
+        "height": 760,
+        "iconPath": "/icons/job-gauges/SCH/1.png"
+      }
+    ],
+    "AST": [
+      {
+        "index": 0,
+        "width": 1000,
+        "height": 1172,
+        "iconPath": "/icons/job-gauges/AST/0.png"
+      }
+    ],
+    "MNK": [
+      {
+        "index": 0,
+        "width": 824,
+        "height": 452,
+        "iconPath": "/icons/job-gauges/MNK/0.png"
+      },
+      {
+        "index": 1,
+        "width": 504,
+        "height": 440,
+        "iconPath": "/icons/job-gauges/MNK/1.png"
+      }
+    ],
+    "DRG": [
+      {
+        "index": 0,
+        "width": 856,
+        "height": 904,
+        "iconPath": "/icons/job-gauges/DRG/0.png"
+      }
+    ],
+    "NIN": [
+      {
+        "index": 0,
+        "width": 640,
+        "height": 576,
+        "iconPath": "/icons/job-gauges/NIN/0.png"
+      },
+      {
+        "index": 1,
+        "width": 344,
+        "height": 672,
+        "iconPath": "/icons/job-gauges/NIN/1.png"
+      }
+    ],
+    "SAM": [
+      {
+        "index": 0,
+        "width": 788,
+        "height": 476,
+        "iconPath": "/icons/job-gauges/SAM/0.png"
+      },
+      {
+        "index": 1,
+        "width": 744,
+        "height": 800,
+        "iconPath": "/icons/job-gauges/SAM/1.png"
+      }
+    ],
+    "BRD": [
+      {
+        "index": 0,
+        "width": 1024,
+        "height": 960,
+        "iconPath": "/icons/job-gauges/BRD/0.png"
+      }
+    ],
+    "MCH": [
+      {
+        "index": 0,
+        "width": 676,
+        "height": 816,
+        "iconPath": "/icons/job-gauges/MCH/0.png"
+      },
+      {
+        "index": 1,
+        "width": 312,
+        "height": 232,
+        "iconPath": "/icons/job-gauges/MCH/1.png"
+      }
+    ],
+    "DNC": [
+      {
+        "index": 0,
+        "width": 640,
+        "height": 600,
+        "iconPath": "/icons/job-gauges/DNC/0.png"
+      },
+      {
+        "index": 1,
+        "width": 600,
+        "height": 520,
+        "iconPath": "/icons/job-gauges/DNC/1.png"
+      }
+    ],
+    "BLM": [
+      {
+        "index": 0,
+        "width": 784,
+        "height": 728,
+        "iconPath": "/icons/job-gauges/BLM/0.png"
+      },
+      {
+        "index": 1,
+        "width": 288,
+        "height": 384,
+        "iconPath": "/icons/job-gauges/BLM/1.png"
+      }
+    ],
+    "SMN": [
+      {
+        "index": 0,
+        "width": 388,
+        "height": 304,
+        "iconPath": "/icons/job-gauges/SMN/0.png"
+      },
+      {
+        "index": 1,
+        "width": 1512,
+        "height": 1392,
+        "iconPath": "/icons/job-gauges/SMN/1.png"
+      }
+    ],
+    "RDM": [
+      {
+        "index": 0,
+        "width": 536,
+        "height": 760,
+        "iconPath": "/icons/job-gauges/RDM/0.png"
+      }
+    ]
+  },
+  "notFound": [
+    "SGE",
+    "RPR",
+    "VPR",
+    "BST",
+    "PCT",
+    "BLU"
+  ]
+}
