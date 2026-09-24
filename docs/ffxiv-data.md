@@ -83,7 +83,8 @@ JSON のアイコンの場所（`iconPath`）は `/icons/...` から始まるの
 | `replacesAction` | ActionIndirection | 条件を満たすとボタンがこれに変わる元（例: ロイエ → ゲベート） |
 | `inActionList` | ClassJobActionUI に載っているか | ゲーム内のジョブのアクション一覧に出るもの。ロールアクションと青魔道士は別枠なので false |
 | `primaryCost` / `secondaryCost` | Primary/SecondaryCostType・Value | `type` 3 が MP。ほかはジョブゲージ・条件（ステータス要求など）でジョブごとに意味が違うので生の値のまま |
-| `statusGainSelf` / `actionProcStatus` | | 自分に付くステータス（statuses.json の id） |
+| `statusGainSelf` | StatusGainSelf | 自分に付くステータス（statuses.json の id） |
+| `actionProcStatus` / `actionProcStatusId` | ActionProcStatus / その StatusId | **このステータスが付いている間、アクションが光る**（ホットバーのハイライト）。前者はシートの行番号、後者は行が指すステータス（statuses.json の id。2026-09-24 の抽出には未反映。再抽出で出力される） |
 | `range` / `effectRange` / `castType` / `xAxisModifier` | | 射程・効果範囲・範囲の形 |
 
 練習 UI でジョブのアクションを並べるときは、`jobs.json` の `actionIds` から `inActionList || isRoleAction` のものを使うと、

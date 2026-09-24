@@ -25,7 +25,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 4,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "7479": {
    "id": 7479,
@@ -43,7 +50,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 18,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "7480": {
    "id": 7480,
@@ -61,7 +75,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 50,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "7481": {
    "id": 7481,
@@ -78,7 +99,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 30,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "7482": {
    "id": 7482,
@@ -95,7 +123,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 40,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "7484": {
    "id": 7484,
@@ -113,7 +148,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 35,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "7485": {
    "id": 7485,
@@ -131,7 +173,14 @@ window.MOCK_DATA = {
    ],
    "preservesCombo": false,
    "level": 45,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "7486": {
    "id": 7486,
@@ -146,7 +195,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 15,
-   "forJob": true
+   "forJob": true,
+   "proc": 14,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 20,
+   "crit": false,
+   "category": 3
   },
   "7487": {
    "id": 7487,
@@ -161,7 +217,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 50,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 6,
+   "crit": true,
+   "category": 3
   },
   "7488": {
    "id": 7488,
@@ -176,7 +239,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 40,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "7489": {
    "id": 7489,
@@ -191,7 +261,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 30,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 6,
+   "crit": false,
+   "category": 3
   },
   "7490": {
    "id": 7490,
@@ -206,7 +283,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 52,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 4
   },
   "7491": {
    "id": 7491,
@@ -221,7 +305,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 62,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7492": {
    "id": 7492,
@@ -236,7 +327,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 54,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 20,
+   "crit": false,
+   "category": 4
   },
   "7493": {
    "id": 7493,
@@ -251,7 +349,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 56,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 5,
+   "crit": false,
+   "category": 4
   },
   "7495": {
    "id": 7495,
@@ -266,7 +371,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 68,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7496": {
    "id": 7496,
@@ -281,7 +393,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 70,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 4,
+   "hostile": true,
+   "range": 10,
+   "crit": false,
+   "category": 4
   },
   "7497": {
    "id": 7497,
@@ -296,7 +415,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 60,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7499": {
    "id": 7499,
@@ -311,7 +437,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 50,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7541": {
    "id": 7541,
@@ -326,7 +459,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 8,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7542": {
    "id": 7542,
@@ -341,7 +481,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 12,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7546": {
    "id": 7546,
@@ -356,7 +503,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 50,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7548": {
    "id": 7548,
@@ -371,7 +525,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 32,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7549": {
    "id": 7549,
@@ -386,7 +547,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 22,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 10,
+   "crit": false,
+   "category": 4
   },
   "7559": {
    "id": 7559,
@@ -401,7 +569,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 44,
-   "forJob": false
+   "forJob": false,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7561": {
    "id": 7561,
@@ -416,7 +591,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 18,
-   "forJob": false
+   "forJob": false,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "7571": {
    "id": 7571,
@@ -431,7 +613,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 48,
-   "forJob": false
+   "forJob": false,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 30,
+   "crit": false,
+   "category": 4
   },
   "7863": {
    "id": 7863,
@@ -446,7 +635,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 10,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 4
   },
   "7867": {
    "id": 7867,
@@ -461,7 +657,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 30,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "16472": {
    "id": 16472,
@@ -476,7 +679,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 80,
-   "forJob": false
+   "forJob": false,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "16481": {
    "id": 16481,
@@ -491,7 +701,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 72,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 4
   },
   "16482": {
    "id": 16482,
@@ -506,7 +723,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 68,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "16483": {
    "id": 16483,
@@ -521,7 +745,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 74,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "16485": {
    "id": 16485,
@@ -536,7 +767,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 74,
-   "forJob": true
+   "forJob": true,
+   "proc": 222,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "16486": {
    "id": 16486,
@@ -551,7 +789,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 74,
-   "forJob": true
+   "forJob": true,
+   "proc": 223,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 6,
+   "crit": true,
+   "category": 3
   },
   "16487": {
    "id": 16487,
@@ -566,7 +811,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 80,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 4,
+   "hostile": true,
+   "range": 10,
+   "crit": false,
+   "category": 4
   },
   "25757": {
    "id": 25757,
@@ -581,7 +833,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 90,
-   "forJob": false
+   "forJob": false,
+   "proc": null,
+   "procStatus": null,
+   "shape": 4,
+   "hostile": true,
+   "range": 10,
+   "crit": false,
+   "category": 4
   },
   "25780": {
    "id": 25780,
@@ -596,7 +855,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": false,
    "level": 86,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "25781": {
    "id": 25781,
@@ -611,7 +877,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 90,
-   "forJob": true
+   "forJob": true,
+   "proc": 72,
+   "procStatus": null,
+   "shape": 3,
+   "hostile": true,
+   "range": 8,
+   "crit": true,
+   "category": 3
   },
   "25782": {
    "id": 25782,
@@ -626,7 +899,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 90,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 3,
+   "hostile": true,
+   "range": 8,
+   "crit": true,
+   "category": 3
   },
   "36962": {
    "id": 36962,
@@ -641,7 +921,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 82,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 4
   },
   "36963": {
    "id": 36963,
@@ -656,7 +943,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": false,
    "level": 92,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": -1,
+   "crit": false,
+   "category": 3
   },
   "36964": {
    "id": 36964,
@@ -671,7 +965,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 96,
-   "forJob": true
+   "forJob": true,
+   "proc": 166,
+   "procStatus": null,
+   "shape": 3,
+   "hostile": true,
+   "range": 8,
+   "crit": false,
+   "category": 4
   },
   "36965": {
    "id": 36965,
@@ -686,7 +987,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 100,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "36966": {
    "id": 36966,
@@ -701,7 +1009,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 100,
-   "forJob": true
+   "forJob": true,
+   "proc": null,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 6,
+   "crit": true,
+   "category": 3
   },
   "36967": {
    "id": 36967,
@@ -716,7 +1031,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 100,
-   "forJob": true
+   "forJob": true,
+   "proc": 224,
+   "procStatus": null,
+   "shape": 2,
+   "hostile": false,
+   "range": 0,
+   "crit": false,
+   "category": 3
   },
   "36968": {
    "id": 36968,
@@ -731,7 +1053,14 @@ window.MOCK_DATA = {
    "comboFrom": [],
    "preservesCombo": true,
    "level": 100,
-   "forJob": true
+   "forJob": true,
+   "proc": 225,
+   "procStatus": null,
+   "shape": 1,
+   "hostile": true,
+   "range": 6,
+   "crit": true,
+   "category": 3
   }
  },
  "statuses": {

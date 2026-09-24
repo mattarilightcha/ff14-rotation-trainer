@@ -9,10 +9,216 @@
 <body>
 <div id="viewport">
   <div id="stage">
-    <!-- 背景（木人のいる床） -->
-    <div class="floor"></div>
-    <div class="dummy" aria-hidden="true"><div class="dummy-body"></div><div class="dummy-shadow"></div></div>
+    <!-- ==================== 場面（背景・木人・演出）。揺れるのはここだけで、HUD は揺らさない ==================== -->
+    <div id="scene" aria-hidden="true">
+      <svg class="bg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="bgSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#070b16"/>
+            <stop offset=".32" stop-color="#16203a"/>
+            <stop offset=".5" stop-color="#2d2b4a"/>
+            <stop offset=".6" stop-color="#6a4a5e"/>
+            <stop offset=".66" stop-color="#b9745f"/>
+            <stop offset=".7" stop-color="#e0a070"/>
+          </linearGradient>
+          <radialGradient id="bgMoonGlow">
+            <stop offset="0" stop-color="#fff3d8" stop-opacity=".55"/>
+            <stop offset=".35" stop-color="#ffd9a8" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bgMoon" cx=".42" cy=".4">
+            <stop offset="0" stop-color="#fffaf0"/>
+            <stop offset=".8" stop-color="#f4e2bf"/>
+            <stop offset="1" stop-color="#e3c99a"/>
+          </radialGradient>
+          <linearGradient id="bgMist" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c8a0a8" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#c8a0a8" stop-opacity=".22"/>
+            <stop offset="1" stop-color="#c8a0a8" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="bgGround" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2c3222"/>
+            <stop offset=".4" stop-color="#1b2016"/>
+            <stop offset="1" stop-color="#0b0d09"/>
+          </linearGradient>
+          <radialGradient id="bgArena">
+            <stop offset="0" stop-color="#8a7353" stop-opacity=".62"/>
+            <stop offset=".55" stop-color="#5a4a35" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#3a3326" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="bgLamp">
+            <stop offset="0" stop-color="#ffc27a" stop-opacity=".6"/>
+            <stop offset="1" stop-color="#ffc27a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="bgPost" x1="0" x2="1">
+            <stop offset="0" stop-color="#3a2616"/><stop offset=".5" stop-color="#5a3d24"/><stop offset="1" stop-color="#26180d"/>
+          </linearGradient>
+        </defs>
+        <rect width="1280" height="720" fill="url(#bgSky)"/>
+        <g fill="#fff" opacity=".7">
+          <circle cx="120" cy="60" r="1.1"/><circle cx="260" cy="120" r=".8"/><circle cx="410" cy="50" r="1.2"/><circle cx="560" cy="96" r=".7"/>
+          <circle cx="690" cy="40" r="1"/><circle cx="780" cy="130" r=".8"/><circle cx="860" cy="70" r="1.1"/><circle cx="1180" cy="54" r=".9"/>
+          <circle cx="1240" cy="150" r=".7"/><circle cx="330" cy="200" r=".6"/><circle cx="60" cy="180" r=".8"/><circle cx="1130" cy="220" r=".6"/>
+        </g>
+        <circle cx="1010" cy="130" r="170" fill="url(#bgMoonGlow)"/>
+        <circle cx="1010" cy="130" r="40" fill="url(#bgMoon)"/>
+        <g fill="#d8c29a" opacity=".35"><circle cx="998" cy="120" r="7"/><circle cx="1022" cy="142" r="5"/><circle cx="1016" cy="112" r="3"/></g>
+        <!-- 遠い山 -->
+        <path d="M0 400 L70 356 L130 374 L220 318 L300 352 L370 330 L450 368 L540 334 L620 360 L700 326 L790 352 L880 314 L960 350 L1050 330 L1140 364 L1220 336 L1280 352 L1280 470 L0 470Z" fill="#2a2a44"/>
+        <path d="M0 430 L90 392 L160 410 L250 380 L340 414 L430 392 L510 420 L600 396 L690 418 L780 390 L870 416 L960 394 L1050 420 L1150 398 L1280 418 L1280 480 L0 480Z" fill="#1c1d2f"/>
+        <rect y="390" width="1280" height="90" fill="url(#bgMist)"/>
+        <!-- 鳥居（遠景） -->
+        <g fill="#12131d" transform="translate(196 404)">
+          <rect x="-34" y="-2" width="68" height="5" rx="1"/><rect x="-28" y="6" width="56" height="3"/>
+          <rect x="-22" y="-2" width="4" height="42"/><rect x="18" y="-2" width="4" height="42"/>
+          <path d="M-40 -2 Q0 -9 40 -2 L40 -5 Q0 -12 -40 -5Z"/>
+        </g>
+        <!-- 松並木 -->
+        <path fill="#10131a" d="M0 462 L14 430 L28 462 L40 438 L56 462 L66 424 L82 462 L96 440 L110 462 L126 428 L142 462 L150 446 L162 462 L1100 462 L1112 440 L1126 462 L1140 426 L1156 462 L1168 436 L1184 462 L1200 422 L1216 462 L1230 442 L1246 462 L1262 432 L1280 462 L1280 480 L0 480Z"/>
+        <!-- 地面と稽古場 -->
+        <rect y="456" width="1280" height="264" fill="url(#bgGround)"/>
+        <ellipse cx="640" cy="468" rx="470" ry="96" fill="url(#bgArena)"/>
+        <g fill="#6b6457" opacity=".55">
+          <ellipse cx="236" cy="488" rx="9" ry="3.5"/><ellipse cx="300" cy="512" rx="6" ry="2.5"/><ellipse cx="1004" cy="500" rx="8" ry="3"/>
+          <ellipse cx="930" cy="530" rx="5" ry="2"/><ellipse cx="400" cy="540" rx="7" ry="2.6"/><ellipse cx="860" cy="478" rx="6" ry="2.2"/>
+        </g>
+        <!-- 柵 -->
+        <g>
+          <rect x="40" y="444" width="330" height="5" fill="#2e1f13"/><rect x="40" y="462" width="330" height="4" fill="#26190f"/>
+          <rect x="52" y="430" width="9" height="46" fill="url(#bgPost)"/><rect x="150" y="434" width="9" height="42" fill="url(#bgPost)"/>
+          <rect x="250" y="436" width="9" height="40" fill="url(#bgPost)"/><rect x="350" y="438" width="9" height="38" fill="url(#bgPost)"/>
+          <rect x="910" y="444" width="330" height="5" fill="#2e1f13"/><rect x="910" y="462" width="330" height="4" fill="#26190f"/>
+          <rect x="920" y="438" width="9" height="38" fill="url(#bgPost)"/><rect x="1020" y="436" width="9" height="40" fill="url(#bgPost)"/>
+          <rect x="1120" y="434" width="9" height="42" fill="url(#bgPost)"/><rect x="1220" y="430" width="9" height="46" fill="url(#bgPost)"/>
+        </g>
+        <!-- 石灯籠 -->
+        <g transform="translate(1080 470)">
+          <circle cx="0" cy="-58" r="70" fill="url(#bgLamp)"/>
+          <rect x="-16" y="-8" width="32" height="10" rx="2" fill="#4b4d52"/>
+          <rect x="-6" y="-38" width="12" height="32" fill="#56585d"/>
+          <rect x="-18" y="-52" width="36" height="14" rx="2" fill="#5d6065"/>
+          <rect x="-11" y="-49" width="22" height="9" fill="#ffcf8a"/>
+          <path d="M-26 -52 L0 -70 L26 -52Z" fill="#62656b"/>
+        </g>
+        <!-- 手前の草 -->
+        <g stroke="#2e3a24" stroke-width="2" stroke-linecap="round" opacity=".8">
+          <path d="M30 700 Q34 676 28 660"/><path d="M40 704 Q42 684 50 668"/><path d="M1240 700 Q1236 676 1246 662"/><path d="M1252 704 Q1254 684 1262 672"/>
+          <path d="M160 640 Q162 626 156 614"/><path d="M1120 646 Q1118 630 1126 620"/>
+        </g>
+      </svg>
 
+      <!-- 木人（打撃木人） -->
+      <div class="dummy" id="dummy">
+        <div class="nameplate"><span class="cursor">▼</span>打撃木人</div>
+        <svg class="dummy-svg" viewBox="0 0 240 330">
+          <defs>
+            <linearGradient id="dWood" x1="0" x2="1">
+              <stop offset="0" stop-color="#3e2512"/><stop offset=".35" stop-color="#8e5f33"/><stop offset=".55" stop-color="#a8773f"/><stop offset="1" stop-color="#3a2210"/>
+            </linearGradient>
+            <linearGradient id="dLog" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#b17b43"/><stop offset=".45" stop-color="#7c5028"/><stop offset="1" stop-color="#3e2612"/>
+            </linearGradient>
+            <linearGradient id="dStraw" x1="0" x2="1">
+              <stop offset="0" stop-color="#6b4c20"/><stop offset=".28" stop-color="#c49a54"/><stop offset=".48" stop-color="#e2be78"/><stop offset=".75" stop-color="#b48a45"/><stop offset="1" stop-color="#5a3f18"/>
+            </linearGradient>
+            <pattern id="dStrawTex" width="7" height="46" patternUnits="userSpaceOnUse">
+              <path d="M1.2 0 L2 46" stroke="#f6d98f" stroke-opacity=".4" stroke-width=".9"/>
+              <path d="M4.6 0 L3.8 46" stroke="#4a3312" stroke-opacity=".35" stroke-width=".9"/>
+              <path d="M6.2 4 L6.6 30" stroke="#fff0c0" stroke-opacity=".2" stroke-width=".6"/>
+            </pattern>
+            <pattern id="dRope" width="7" height="9" patternUnits="userSpaceOnUse" patternTransform="skewX(-38)">
+              <rect width="7" height="9" fill="#7a5a30"/><rect width="3.4" height="9" fill="#c5a26a"/><rect x="3.4" width=".8" height="9" fill="#4d3818"/>
+            </pattern>
+            <linearGradient id="dSack" x1="0" x2="1">
+              <stop offset="0" stop-color="#5e4630"/><stop offset=".38" stop-color="#b3936a"/><stop offset=".58" stop-color="#c9ab80"/><stop offset="1" stop-color="#4f3a26"/>
+            </linearGradient>
+            <pattern id="dBurlap" width="4" height="4" patternUnits="userSpaceOnUse">
+              <path d="M0 2H4M2 0V4" stroke="#3d2b18" stroke-opacity=".28" stroke-width=".7"/>
+            </pattern>
+            <linearGradient id="dShade" x1="0" x2="1">
+              <stop offset="0" stop-color="#fff2d0" stop-opacity=".16"/><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+            </linearGradient>
+            <linearGradient id="dStone" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#9aa0a7"/><stop offset="1" stop-color="#3f4449"/>
+            </linearGradient>
+            <radialGradient id="dShadow">
+              <stop offset="0" stop-color="#000" stop-opacity=".6"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="dAO" cx=".5" cy=".5">
+              <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/>
+            </radialGradient>
+          </defs>
+          <!-- 影とターゲットサークル（動かない） -->
+          <ellipse cx="120" cy="306" rx="104" ry="20" fill="url(#dShadow)"/>
+          <g class="target-ring">
+            <ellipse cx="120" cy="304" rx="94" ry="21" fill="none" stroke="#ff5a3c" stroke-width="2.4" stroke-opacity=".9"/>
+            <ellipse cx="120" cy="304" rx="88" ry="19" fill="none" stroke="#ff9a6c" stroke-width="1" stroke-opacity=".35"/>
+            <path d="M113 322 L120 331 L127 322Z" fill="#ff5a3c"/>
+          </g>
+          <!-- 台座 -->
+          <path d="M72 294 Q120 306 168 294 L168 302 Q120 316 72 302Z" fill="url(#dStone)"/>
+          <ellipse cx="120" cy="294" rx="48" ry="11" fill="#a9afb5"/>
+          <ellipse cx="120" cy="294" rx="48" ry="11" fill="url(#dAO)"/>
+          <ellipse cx="120" cy="293" rx="13" ry="4" fill="#2a1a0c"/>
+          <!-- 支柱 -->
+          <rect x="110" y="196" width="20" height="98" fill="url(#dWood)"/>
+          <path d="M112 220 L113 290 M126 206 L127 286" stroke="#2a180a" stroke-opacity=".35" stroke-width="1"/>
+          <!-- 揺れる部分 -->
+          <g id="dummyBody" class="dummy-body">
+            <!-- 腕（横木） -->
+            <rect x="22" y="134" width="196" height="22" rx="11" fill="url(#dLog)"/>
+            <path d="M40 140 H200 M44 150 H196" stroke="#3a2210" stroke-opacity=".3" stroke-width="1"/>
+            <ellipse cx="25" cy="145" rx="7" ry="11" fill="#c89c63"/>
+            <ellipse cx="25" cy="145" rx="4" ry="6.5" fill="none" stroke="#8a6238" stroke-width="1"/>
+            <ellipse cx="25" cy="145" rx="1.5" ry="2.5" fill="#8a6238"/>
+            <ellipse cx="215" cy="145" rx="7" ry="11" fill="#a47744"/>
+            <ellipse cx="215" cy="145" rx="4" ry="6.5" fill="none" stroke="#6e4a26" stroke-width="1"/>
+            <rect x="40" y="132" width="10" height="26" rx="2" fill="url(#dRope)"/>
+            <rect x="190" y="132" width="10" height="26" rx="2" fill="url(#dRope)"/>
+            <!-- 胴（わら） -->
+            <path id="dTorso" d="M82 110 Q74 172 82 240 Q120 252 158 240 Q166 172 158 110 Q120 98 82 110Z" fill="url(#dStraw)"/>
+            <path d="M82 110 Q74 172 82 240 Q120 252 158 240 Q166 172 158 110 Q120 98 82 110Z" fill="url(#dStrawTex)"/>
+            <path d="M82 110 Q74 172 82 240 Q120 252 158 240 Q166 172 158 110 Q120 98 82 110Z" fill="url(#dShade)"/>
+            <!-- はみ出したわら -->
+            <path d="M84 238 L78 252 M92 242 L88 256 M150 242 L156 255 M158 238 L166 250 M120 246 L119 258" stroke="#d8b46c" stroke-width="1.6" stroke-linecap="round"/>
+            <!-- 的 -->
+            <g opacity=".92">
+              <ellipse cx="120" cy="184" rx="23" ry="24" fill="#e6d8b8"/>
+              <ellipse cx="120" cy="184" rx="17" ry="17.5" fill="#b3372a"/>
+              <ellipse cx="120" cy="184" rx="10.5" ry="11" fill="#e6d8b8"/>
+              <ellipse cx="120" cy="184" rx="4.5" ry="4.8" fill="#b3372a"/>
+              <path d="M101 170 Q120 160 139 170" stroke="#fff" stroke-opacity=".25" stroke-width="2" fill="none"/>
+            </g>
+            <!-- 縄 -->
+            <path d="M80 124 Q120 134 160 124 L160 134 Q120 144 80 134Z" fill="url(#dRope)"/>
+            <path d="M80 134 Q120 144 160 134" stroke="#2a1a0a" stroke-opacity=".45" stroke-width="1.4" fill="none"/>
+            <path d="M79 214 Q120 224 161 214 L161 223 Q120 233 79 223Z" fill="url(#dRope)"/>
+            <path d="M79 223 Q120 233 161 223" stroke="#2a1a0a" stroke-opacity=".45" stroke-width="1.4" fill="none"/>
+            <path d="M130 225 Q134 238 128 246 M134 225 Q140 236 138 244" stroke="#b8955e" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- 首 -->
+            <ellipse cx="120" cy="106" rx="20" ry="6" fill="url(#dRope)"/>
+            <!-- 頭（麻袋） -->
+            <path d="M90 70 Q86 34 120 30 Q154 34 150 70 Q148 100 120 104 Q92 100 90 70Z" fill="url(#dSack)"/>
+            <path d="M90 70 Q86 34 120 30 Q154 34 150 70 Q148 100 120 104 Q92 100 90 70Z" fill="url(#dBurlap)"/>
+            <path d="M90 70 Q86 34 120 30 Q154 34 150 70 Q148 100 120 104 Q92 100 90 70Z" fill="url(#dShade)"/>
+            <path d="M100 38 Q120 30 140 38" stroke="#6a4f33" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+            <!-- 顔（縫い目） -->
+            <g stroke="#3a2614" stroke-width="2.2" stroke-linecap="round">
+              <path d="M104 62 L112 70 M112 62 L104 70"/>
+              <path d="M128 62 L136 70 M136 62 L128 70"/>
+            </g>
+            <path d="M106 84 H134" stroke="#3a2614" stroke-width="1.6" stroke-dasharray="3 2.5"/>
+            <!-- 頭のわら -->
+            <path d="M112 32 L106 18 M118 30 L117 14 M124 31 L130 17 M128 33 L138 22" stroke="#e0bb72" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <canvas id="fx"></canvas>
+      <div id="flyLayer"></div>
+    </div>
+
+    <!-- ==================== HUD ==================== -->
     <!-- ターゲット情報 -->
     <section class="win target" aria-label="ターゲット">
       <div class="target-name"><span class="lv">Lv100</span> 打撃木人</div>
@@ -32,27 +238,31 @@
 
     <!-- キャストバー -->
     <div class="castbar" id="castbar" hidden>
-      <div class="cast-name" id="castName"></div>
-      <div class="cast-track"><div class="cast-fill" id="castFill"></div></div>
-      <div class="cast-time" id="castTime"></div>
+      <img class="cast-icon" id="castIcon" alt="">
+      <div class="cast-main">
+        <div class="cast-name" id="castName"></div>
+        <div class="cast-track"><div class="cast-fill" id="castFill"></div></div>
+        <div class="cast-time" id="castTime"></div>
+      </div>
     </div>
 
     <!-- ジョブゲージ -->
     <section class="win gauge" aria-label="ジョブゲージ">
       <div class="win-title"><img class="job-icon" id="jobIcon" alt=""> 剣気・閃・剣圧</div>
       <div class="kenki">
-        <div class="kenki-track"><div class="kenki-fill" id="kenkiFill"></div></div>
+        <div class="tsuba" aria-hidden="true"></div>
+        <div class="kenki-track"><div class="kenki-fill" id="kenkiFill"></div><div class="kenki-shine"></div></div>
         <div class="kenki-num" id="kenkiNum">0</div>
       </div>
       <div class="sen-row">
-        <div class="sen setsu" id="senSetsu" title="雪の閃">雪</div>
-        <div class="sen getsu" id="senGetsu" title="月の閃">月</div>
-        <div class="sen ka" id="senKa" title="花の閃">花</div>
+        <div class="sen setsu" id="senSetsu" title="雪の閃"><span>雪</span></div>
+        <div class="sen getsu" id="senGetsu" title="月の閃"><span>月</span></div>
+        <div class="sen ka" id="senKa" title="花の閃"><span>花</span></div>
         <div class="meditation" id="meditation" title="剣圧"><i></i><i></i><i></i></div>
       </div>
     </section>
 
-    <!-- お手本・ログ（ゲームにない部品。チャットログ風） -->
+    <!-- 判定ログ（ゲームにない部品。チャットログ風） -->
     <section class="win log" aria-label="ログ">
       <div class="tabs"><span class="tab on">判定ログ</span><span class="tab">お手本</span></div>
       <ol id="log" aria-live="polite"></ol>
@@ -69,10 +279,13 @@
     <div class="controls">
       <button id="btnStart" type="button">開始 <kbd>Space</kbd></button>
       <button id="btnReset" type="button">リセット <kbd>Esc</kbd></button>
+      <button id="btnGame" type="button">ゲームモード</button>
       <button id="btnMode" type="button">表示: キーボード</button>
       <button id="btnImport" type="button">設定ファイルを読み込む…</button>
       <button id="btnSettings" type="button">アクションの変化…</button>
+      <button id="btnSound" type="button">音: 入</button>
     </div>
+    <div class="game-badge" id="gameBadge" hidden></div>
 
     <section class="win settings" id="settings" hidden aria-label="設定"></section>
 
@@ -91,6 +304,23 @@
       <div class="res">ゲームの HUD の大きさ <select id="uiScale"><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option><option value="3">300%</option></select>
         <span class="note">FFXIV.cfg の UiHighScale から読み取り（対応は推定）</span></div>
       <div class="res">微調整 <input id="hudScale" type="range" min="0.5" max="2" step="0.05"> <span id="hudScaleNum"></span></div>
+      <div class="win-title" style="margin-top:10px">音</div>
+      <div class="res">音量 <input id="volume" type="range" min="0" max="1" step="0.05"> <span id="volumeNum"></span></div>
+    </section>
+
+    <!-- 開始画面 -->
+    <section class="win start" id="startOverlay" aria-label="開始">
+      <div class="start-title"><img class="job-icon" id="startJobIcon" alt="">侍 Lv100 木人練習<span>UI モック</span></div>
+      <div class="start-buttons">
+        <button type="button" id="btnGameStart" class="primary">ゲームモードで開始</button>
+        <button type="button" id="btnPlainStart">このまま開始 <kbd>Space</kbd></button>
+      </div>
+      <p class="note" id="gameNote"></p>
+      <ul class="howto">
+        <li>ホットバーの中身・キー・配置は、あなたの設定ファイル（サンプル）を読み込んだ状態です。左上の「設定ファイルを読み込む…」で差し替えられます。</li>
+        <li>光る枠は、ゲームデータ（コンボ条件と「〜実行可」のステータス）に基づきます。</li>
+        <li>120 秒で終了し、結果とタイムラインを表示します。</li>
+      </ul>
     </section>
 
     <!-- 結果 -->
@@ -104,6 +334,9 @@
 </div>
 <script src="cfg-parse.js"></script>
 <script src="mock-data.js"></script>
+<script src="audio.js"></script>
+<script src="fx.js"></script>
+<script src="gamemode.js"></script>
 <script src="mock.js"></script>
 </body>
 </html>

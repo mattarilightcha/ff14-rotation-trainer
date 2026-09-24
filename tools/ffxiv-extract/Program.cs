@@ -171,6 +171,9 @@ foreach (var id in included)
 
     var gcd = a.CooldownGroup == 58 || a.AdditionalCooldownGroup == 58;
     if (a.StatusGainSelf.RowId != 0) statusIds.Add(a.StatusGainSelf.RowId);
+    // ActionProcStatus: このステータスが付いている間、アクションが光る（ハイライト）。行が指すステータスも出力する
+    uint? procStatusId = a.ActionProcStatus.RowId != 0 && a.ActionProcStatus.ValueNullable is { } aps && aps.StatusId.RowId != 0 ? aps.StatusId.RowId : null;
+    if (procStatusId is { } psid) statusIds.Add(psid);
     var lb = limitBreakOf.TryGetValue(id, out var lbv) ? new LimitBreakOut(lbv.job, lbv.tier) : null;
 
     actions.Add(new ActionOut
@@ -207,6 +210,7 @@ foreach (var id in included)
         SecondaryCost = a.SecondaryCostType != 0 ? new CostOut(a.SecondaryCostType, a.SecondaryCostValue.RowId) : null,
         StatusGainSelf = a.StatusGainSelf.RowId != 0 ? a.StatusGainSelf.RowId : null,
         ActionProcStatus = a.ActionProcStatus.RowId != 0 ? a.ActionProcStatus.RowId : null,
+        ActionProcStatusId = procStatusId,
         Range = a.Range,
         EffectRange = a.EffectRange,
         CastType = a.CastType,

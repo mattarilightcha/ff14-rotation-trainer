@@ -49,7 +49,10 @@ public class ActionOut
     public CostOut? PrimaryCost { get; init; }
     public CostOut? SecondaryCost { get; init; }
     public uint? StatusGainSelf { get; init; }
+    /// <summary>ActionProcStatus シートの行番号。</summary>
     public uint? ActionProcStatus { get; init; }
+    /// <summary>ActionProcStatus の行が指すステータス（statuses.json の id）。このステータス中にアクションが光る。</summary>
+    public uint? ActionProcStatusId { get; init; }
     public sbyte Range { get; init; }
     public byte EffectRange { get; init; }
     public byte CastType { get; init; }

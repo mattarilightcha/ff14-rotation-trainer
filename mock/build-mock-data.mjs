@@ -106,6 +106,15 @@ const pick = (a) => ({
   preservesCombo: a.preservesCombo,
   level: a.level,
   forJob: a.jobs?.includes(JOB) ?? false, // 他ジョブのアクション（共有バーに残っているもの）は使えない
+  // 光る条件: ActionProcStatus（このステータス中に光る）。行番号と、行が指すステータス ID（再抽出後に入る）
+  proc: a.actionProcStatus ?? null,
+  procStatus: a.actionProcStatusId ?? null,
+  // 演出用: 範囲の形（castType 1 単体 / 2 自分の周囲 / 3 前方扇 / 4 前方直線。説明文の「前方扇範囲」などと一致を確認済み）
+  shape: a.castType,
+  hostile: a.canTargetHostile,
+  range: a.range,
+  crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
+  category: a.category,
 });
 
 const out = {

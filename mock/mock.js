@@ -59,10 +59,23 @@
   // バーごとに「ジョブ専用 / 共有」のどちらを使うか（CFG-08 未解読のため既定は推定。画面で切り替え可）
   let barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
 
+  // 光る条件（ハイライト）: ゲームデータ ActionProcStatus の行 → モックのステータス。
+  // 行が指すステータス ID は再抽出で確定する（DATA-04）。対応づけは各アクションの説明文の「発動条件」から。
+  const PROC_STATUS = { 14: 'enpi', 72: 'namikiriReady', 166: 'zanshinReady', 222: 'tsubame', 223: 'tsubame', 224: 'tsubame', 225: 'tsubame' };
+  // 演出の色（見た目だけ。ゲームの値ではない）
+  const FX_COLOR = {
+    [ID.YUKIKAZE]: 'setsu', [ID.GEKKO]: 'getsu', [ID.KASHA]: 'ka', [ID.MANGETSU]: 'getsu', [ID.OKA]: 'ka', [ID.HIGAN]: 'blood',
+    [ID.TENKA]: 'iai', [ID.MIDARE]: 'iai', [ID.TENDO_GOKEN]: 'iai', [ID.TENDO_SETSU]: 'iai',
+    [ID.K_GOKEN]: 'iai', [ID.K_SETSU]: 'iai', [ID.TK_GOKEN]: 'iai', [ID.TK_SETSU]: 'iai',
+    [ID.NAMIKIRI]: 'namikiri', [ID.K_NAMI]: 'namikiri', [ID.SHOHA]: 'shoha', [ID.MEIKYO]: 'water', [ID.IKISHOTEN]: 'kenki',
+  };
+  const TRIPLE = new Set([ID.MIDARE, ID.TENDO_SETSU, ID.K_SETSU, ID.TK_SETSU]);
+  const Fx = window.MockFx, Au = window.MockAudio, GM = window.MockGameMode;
+
   const STATUS = {
-    fugetsu: { name: '風月', tracked: true },
-    fuka: { name: '風花', tracked: true },
-    meikyo: { name: '明鏡止水' },
+    fugetsu: { name: '風月', tracked: true, cls: 'fu' },
+    fuka: { name: '風花', tracked: true, cls: 'fu' },
+    meikyo: { name: '明鏡止水', cls: 'mk' },
     tendo: { name: '天道', sid: 3856 },
     tsubame: { name: '燕返し実行可' },
     namikiriReady: { name: '奥義波切実行可', sid: 2959 },
@@ -85,10 +98,15 @@
       kenki: 0, sen: { setsu: 0, getsu: 0, ka: 0 }, med: 0, st: {},
       lastIai: null, lastIaiTendo: false, kaeshiNami: false, queue: null,
       stats: { gcds: 0, idleMs: 0, clipMs: 0, comboBreaks: 0, kenkiOver: 0, rejected: 0, uptime: { fugetsu: 0, fuka: 0, higanbana: 0 } },
+      // 結果画面のタイムライン用の記録
+      tl: { gcd: [], ogcd: [], gaps: [], buffs: { fugetsu: [], fuka: [], higanbana: [] } },
+      dotNext: null,
     };
     $('log').innerHTML = '';
     $('result').hidden = true;
-    addLog('sys', 'Space（パッドは Start）で開始。1〜0,-,= / Shift / Alt + 数字でホットバー 1〜3');
+    Fx?.castEnd();
+    $('startOverlay') && ($('startOverlay').hidden = false);
+    addLog('sys', 'Space（パッドは Start）で開始。キーは読み込んだ KEYBIND.DAT のとおり');
   }
 
   const fmt = (ms) => {
@@ -187,6 +205,9 @@
     S.med = Math.min(3, S.med + 1);
   }
   function buff(k, ms, stacks) {
+    const iv = S.tl.buffs[k];
+    if (iv) { const last = iv[iv.length - 1]; if (!last || last.to != null) iv.push({ from: Math.max(0, S.t), to: null }); }
+    if (k === 'higanbana') S.dotNext = S.t + 3000;
     const cur = S.st[k];
     if (cur && cur.until > S.t && STATUS[k].tracked) {
       const left = cur.until - S.t;
@@ -274,16 +295,21 @@
           const clip = S.lastOgcdLockEnd != null ? Math.max(0, Math.min(at, S.lastOgcdLockEnd) - S.gcdEnd) : 0;
           const idle = gap - clip;
           S.stats.clipMs += clip; S.stats.idleMs += idle;
+          if (clip > 20) S.tl.gaps.push({ from: S.gcdEnd, to: S.gcdEnd + clip, kind: 'clip' });
+          if (idle > 20) S.tl.gaps.push({ from: S.gcdEnd + clip, to: at, kind: 'idle' });
           if (clip > 20) addLog('warn', `アビリティの挟みすぎで GCD が ${(clip / 1000).toFixed(2)} 秒遅れました`);
           if (idle > 100) addLog('warn', `GCD が ${(idle / 1000).toFixed(2)} 秒止まりました`);
         }
       } else if (at > 0 && S.phase === 'combat') {
         S.stats.idleMs += at;
+        S.tl.gaps.push({ from: 0, to: at, kind: 'idle' });
       }
       S.gcdStart = at; S.gcdEnd = at + gcdRecast();
+      S.tl.gcd.push({ t: at, id, end: S.gcdEnd });
       S.weaves = 0; S.lastOgcdLockEnd = null; S.stats.gcds++;
       ok = combo(a, at);
     } else {
+      S.tl.ogcd.push({ t: at, id });
       S.weaves++;
       if (S.weaves === POLICY.weaveWarn) addLog('warn', `GCD の間に ${S.weaves} つ目のアビリティ（クリップしやすい）`);
     }
@@ -293,32 +319,37 @@
       S.cast = { id, start: at, end: at + ct, ok };
       S.lockUntil = at + ct + POLICY.castLockAfterMs;
       addLog('ok', `${a.name} の詠唱開始`);
+      Fx?.castStart(FX_COLOR[id] ?? 'iai', ct); Au?.cast(ct);
     } else {
       S.lockUntil = at + POLICY.animLockMs;
       if (!a.isGcd) S.lastOgcdLockEnd = S.lockUntil;
       effects(id, ok);
       addLog('ok', `${a.name}${ok && a.comboFrom.length ? '（コンボ）' : ''}`);
-      hitFx();
+      playFx(id, ok);
     }
     S.t = Math.max(prevT, at);
   }
 
   function press(baseId, source) {
-    if (S.phase === 'idle' || S.phase === 'ended') { addLog('sys', 'Space で開始してください'); return; }
+    if (S.phase === 'idle' || S.phase === 'ended') {
+      // 開始前・終了後の入力は案内を 1 回だけ出す
+      if (!S.hinted) { S.hinted = true; addLog('sys', 'Space（または「開始」）で練習を始めてください'); }
+      return;
+    }
     let id;
     if (TARGET_BASE[baseId]) {
       // 変化先のボタン（「変化させない」設定で別ボタンになったもの）
       id = baseId;
-      if (!TARGET_BASE[baseId].some((b) => resolve(b) === id)) { S.stats.rejected++; addLog('ng', `${A[id].name}の発動条件を満たしていません`); return; }
+      if (!TARGET_BASE[baseId].some((b) => resolve(b) === id)) { S.stats.rejected++; Au?.error(); addLog('ng', `${A[id].name}の発動条件を満たしていません`); return; }
     } else id = resolve(baseId);
     const a = A[id];
     const why = blocked(id);
-    if (why) { S.stats.rejected++; addLog('ng', why); return; }
+    if (why) { S.stats.rejected++; Au?.error(); addLog('ng', why); return; }
     const ra = readyAt(a);
     if (ra <= S.t) execute(id, S.t);
     else if (ra - S.t <= POLICY.queueMs) S.queue = { baseId, source };
     else {
-      S.stats.rejected++;
+      S.stats.rejected++; Au?.error();
       const inGcd = a.isGcd && S.gcdEnd != null && S.gcdEnd > S.t;
       addLog('ng', inGcd ? `GCD のリキャスト中（残り ${((S.gcdEnd - S.t) / 1000).toFixed(1)} 秒）` : 'アニメーション硬直・詠唱中です');
     }
@@ -329,10 +360,11 @@
     if (S.phase !== 'countdown' && S.phase !== 'combat') return;
     const t0 = S.t;
     const t1 = S.t + dt;
+    if (S.phase === 'countdown') { const b = Math.ceil(-t0 / 1000), af = Math.ceil(-t1 / 1000); if (af !== b && af > 0) Au?.tick(); }
     // 詠唱完了（予定時刻で処理）
     if (S.cast && S.cast.end <= t1) {
       const c = S.cast; S.cast = null;
-      S.t = c.end; effects(c.id, c.ok); addLog('ok', `${A[c.id].name}`); hitFx();
+      S.t = c.end; effects(c.id, c.ok); addLog('ok', `${A[c.id].name}`); Fx?.castEnd(); playFx(c.id, c.ok);
     }
     // 先行入力の実行（実行可能になった時刻で処理）
     if (S.queue) {
@@ -344,10 +376,13 @@
     S.t = t1;
     // 稼働時間の集計
     if (S.phase === 'combat') for (const k of Object.keys(S.stats.uptime)) if (has(k)) S.stats.uptime[k] += dt;
+    // 継続ダメージの演出（3 秒ごと。見た目だけ）
+    if (S.dotNext != null && has('higanbana') && S.t >= S.dotNext) { S.dotNext += 3000; Fx?.dotTick(); Au?.dot(); }
     // ステータスの期限切れ
     for (const [k, v] of Object.entries(S.st)) {
       if (v.until <= S.t) {
         delete S.st[k];
+        const iv = S.tl.buffs[k]; if (iv?.length && iv[iv.length - 1].to == null) iv[iv.length - 1].to = v.until;
         if (STATUS[k].tracked && S.phase === 'combat') addLog('ng', `${STATUS[k].name}が切れました`);
         if (k === 'tsubame') S.lastIai = null;
       }
@@ -355,32 +390,89 @@
     // コンボ期限切れ
     if (S.combo != null && S.t > S.comboUntil) { S.combo = null; S.stats.comboBreaks++; addLog('ng', 'コンボの受付時間が切れました'); }
     // フェーズ
-    if (S.phase === 'countdown' && S.t >= 0) { S.phase = 'combat'; addLog('sys', '戦闘開始'); }
+    if (S.phase === 'countdown' && S.t >= 0) { S.phase = 'combat'; addLog('sys', '戦闘開始'); Au?.go(); }
     if (S.phase === 'combat' && S.t >= POLICY.durationMs) finish();
   }
 
   function finish() {
     S.t = POLICY.durationMs;
     S.phase = 'ended';
-    S.cast = null; S.queue = null;
-    if (S.gcdEnd != null && S.gcdEnd < S.t) S.stats.idleMs += S.t - S.gcdEnd;
+    S.cast = null; S.queue = null; Fx?.castEnd();
+    if (S.gcdEnd != null && S.gcdEnd < S.t) { S.stats.idleMs += S.t - S.gcdEnd; S.tl.gaps.push({ from: S.gcdEnd, to: S.t, kind: 'idle' }); }
     if (S.gcdEnd == null) S.stats.idleMs = S.t;
-    const st = S.stats;
-    const pct = (ms) => `${((ms / POLICY.durationMs) * 100).toFixed(1)}%`;
-    const uptime = 1 - (st.idleMs + st.clipMs) / POLICY.durationMs;
+    for (const iv of Object.values(S.tl.buffs)) if (iv.length && iv[iv.length - 1].to == null) iv[iv.length - 1].to = S.t;
+    const st = S.stats, dur = POLICY.durationMs;
+    const pct = (ms) => (ms / dur) * 100;
+    const gcdPct = Math.max(0, (1 - (st.idleMs + st.clipMs) / dur) * 100);
+    const buffPct = (pct(st.uptime.fugetsu) + pct(st.uptime.fuka) + pct(st.uptime.higanbana)) / 3;
+    const comboPct = Math.max(0, 100 - st.comboBreaks * 10);
+    const overPct = Math.max(0, 100 - st.kenkiOver * 2);
+    // モックの採点（重みは仮。本実装は docs/SPEC.md §7）
+    const score = Math.round(gcdPct * 0.5 + buffPct * 0.2 + comboPct * 0.15 + overPct * 0.15);
+    const grade = score >= 95 ? 'S' : score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : 'D';
+    const metric = (label, text, p) => `<div class="metric"><div class="row"><span>${label}</span><span class="v">${text}</span></div><div class="bar-bg"><div class="bar-fg ${p >= 90 ? '' : p >= 70 ? 'mid' : 'low'}" style="width:${Math.max(2, Math.min(100, p))}%"></div></div></div>`;
+    const uses = {};
+    for (const e of [...S.tl.gcd, ...S.tl.ogcd]) uses[e.id] = (uses[e.id] ?? 0) + 1;
+    const useHtml = Object.entries(uses).sort((a, b) => b[1] - a[1]).map(([id, n]) => `<span class="use" title="${A[id].name}"><img src="${A[id].icon}" alt="">×${n}</span>`).join('');
     const r = $('result');
-    r.innerHTML = `<h2>結果（モック）</h2><table>
-      <tr><td>GCD 稼働率</td><td>${(Math.max(0, uptime) * 100).toFixed(1)}%</td></tr>
-      <tr><td>GCD 回数</td><td>${st.gcds}</td></tr>
-      <tr><td>GCD 停止（合計）</td><td>${(st.idleMs / 1000).toFixed(2)} 秒</td></tr>
-      <tr><td>クリップ（合計）</td><td>${(st.clipMs / 1000).toFixed(2)} 秒</td></tr>
-      <tr><td>コンボ切れ</td><td>${st.comboBreaks} 回</td></tr>
-      <tr><td>剣気のあふれ</td><td>${st.kenkiOver}</td></tr>
-      <tr><td>風月 / 風花 / 彼岸花 の維持</td><td>${pct(st.uptime.fugetsu)} / ${pct(st.uptime.fuka)} / ${pct(st.uptime.higanbana)}</td></tr>
-      <tr><td>受け付けなかった入力</td><td>${st.rejected} 回</td></tr>
-    </table><div class="note">採点の重み付けと、お手本との比較は未実装です。Space でリトライ。</div>`;
+    r.innerHTML = `
+      <div class="result-head"><div class="grade g-${grade}">${grade}</div>
+        <div><h2>結果（モック採点）</h2><div class="score">総合 ${score} 点 ・ GCD ${st.gcds} 回 ・ 受け付けなかった入力 ${st.rejected} 回</div></div></div>
+      <div class="metrics">
+        ${metric('GCD 稼働率', `${gcdPct.toFixed(1)}%`, gcdPct)}
+        ${metric('クリップ / GCD 停止', `${(st.clipMs / 1000).toFixed(2)} / ${(st.idleMs / 1000).toFixed(2)} 秒`, 100 - pct(st.clipMs + st.idleMs) * 4)}
+        ${metric('風月の維持', `${pct(st.uptime.fugetsu).toFixed(1)}%`, pct(st.uptime.fugetsu))}
+        ${metric('風花の維持', `${pct(st.uptime.fuka).toFixed(1)}%`, pct(st.uptime.fuka))}
+        ${metric('彼岸花の維持', `${pct(st.uptime.higanbana).toFixed(1)}%`, pct(st.uptime.higanbana))}
+        ${metric('コンボ切れ', `${st.comboBreaks} 回`, comboPct)}
+        ${metric('剣気のあふれ', `${st.kenkiOver}`, overPct)}
+      </div>
+      <canvas class="timeline" id="tlCanvas"></canvas>
+      <div class="uses">${useHtml}</div>
+      <div class="note">採点の重みは仮です（GCD 50% / バフ・DoT 20% / コンボ 15% / あふれ 15%）。お手本との比較は未実装です。</div>
+      <div class="actions"><button type="button" id="btnRetry">リトライ <kbd>Space</kbd></button><button type="button" id="btnCloseResult">閉じる</button></div>`;
     r.hidden = false;
+    $('btnRetry').addEventListener('click', start);
+    $('btnCloseResult').addEventListener('click', () => { r.hidden = true; });
+    drawTimeline($('tlCanvas'));
     addLog('sys', '戦闘終了');
+  }
+
+  // 結果のタイムライン: GCD（技の色）・止まり（赤）・クリップ（橙）・アビリティ・バフと DoT の維持
+  function drawTimeline(cv) {
+    const w = cv.clientWidth || 640, h = cv.clientHeight || 150, dpr = window.devicePixelRatio || 1;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    const c = cv.getContext('2d');
+    c.scale(dpr, dpr);
+    const L = 52, R = w - 10, dur = POLICY.durationMs;
+    const X = (t) => L + (Math.max(0, Math.min(dur, t)) / dur) * (R - L);
+    const lanes = [['GCD', 10, 20], ['アビリティ', 38, 12], ['風月', 60, 9], ['風花', 76, 9], ['彼岸花', 92, 9]];
+    c.font = '10px sans-serif'; c.textBaseline = 'middle';
+    for (const [name, y, hh] of lanes) {
+      c.fillStyle = 'rgba(255,255,255,.04)'; c.fillRect(L, y, R - L, hh);
+      c.fillStyle = '#a9a293'; c.fillText(name, 6, y + hh / 2);
+    }
+    const color = (id) => ({ setsu: '#6fd3ff', getsu: '#8d86ff', ka: '#ff86c0', iai: '#ffc640', blood: '#ff5a4a', namikiri: '#4fe3ff' }[FX_COLOR[id]] ?? '#8aa4c8');
+    for (const g of S.tl.gcd) { c.fillStyle = color(g.id); c.fillRect(X(g.t) + 0.5, 10, Math.max(1, X(g.end) - X(g.t) - 1), 20); }
+    for (const g of S.tl.gaps) { c.fillStyle = g.kind === 'clip' ? '#ffa53a' : '#ff4a4a'; c.fillRect(X(g.from), 30, Math.max(1.5, X(g.to) - X(g.from)), 4); }
+    for (const o of S.tl.ogcd) {
+      const x = X(o.t); c.fillStyle = KENKI_COST[o.id] ? '#ff7a5a' : '#ffe29a';
+      c.beginPath(); c.moveTo(x, 38); c.lineTo(x + 4, 44); c.lineTo(x, 50); c.lineTo(x - 4, 44); c.closePath(); c.fill();
+    }
+    [['fugetsu', 60, '#7fe0a0'], ['fuka', 76, '#9ff0c0'], ['higanbana', 92, '#ff6a5a']].forEach(([k, y, col]) => {
+      c.fillStyle = col;
+      for (const iv of S.tl.buffs[k]) c.fillRect(X(iv.from), y, Math.max(1, X(iv.to ?? dur) - X(iv.from)), 9);
+    });
+    c.strokeStyle = 'rgba(255,255,255,.15)'; c.fillStyle = '#a9a293'; c.textAlign = 'center';
+    for (let s = 0; s <= dur / 1000; s += 10) {
+      const x = X(s * 1000);
+      c.beginPath(); c.moveTo(x, 106); c.lineTo(x, 112); c.stroke();
+      c.fillText(`${s}`, x, 120);
+    }
+    c.textAlign = 'left'; c.fillStyle = '#a9a293';
+    c.fillText('■ 止まり', L, 138); c.fillStyle = '#ff4a4a'; c.fillRect(L - 8, 134, 6, 6);
+    c.fillStyle = '#a9a293'; c.fillText('■ クリップ', L + 70, 138); c.fillStyle = '#ffa53a'; c.fillRect(L + 62, 134, 6, 6);
+    c.fillStyle = '#a9a293'; c.fillText('◆ アビリティ（赤は剣気を使うもの）', L + 150, 138);
   }
 
   // ---------------- 描画 ----------------
@@ -570,29 +662,38 @@
 
   function statusEl(k, v, debuff) {
     const meta = STATUS[k];
-    const icon = meta.sid && D.statuses[meta.sid] ? `<img src="${D.statuses[meta.sid].icon}" alt="">` : meta.name.slice(0, 2);
+    const img = meta.sid && D.statuses[meta.sid];
+    const icon = img ? `<img src="${img.icon}" alt="">` : meta.name.slice(0, 2);
     const left = Math.ceil((v.until - S.t) / 1000);
-    return `<div class="st${debuff ? ' debuff' : ''}${left <= 5 ? ' low' : ''}" title="${meta.name}"><div class="ic${meta.sid ? '' : ' txt'}">${icon}</div>${v.stacks ? `<div class="stk">${v.stacks}</div>` : ''}<div class="t">${left}</div></div>`;
+    return `<div class="st${debuff ? ' debuff' : ''}${left <= 5 ? ' low' : ''}" title="${meta.name}"><div class="ic${img ? '' : ` txt ${meta.cls ?? ''}`}">${icon}${v.stacks ? `<span class="stk">${v.stacks}</span>` : ''}</div><div class="t">${left}</div></div>`;
   }
 
+  // 光る条件（ゲームデータに基づく）
+  // 1. コンボ（ActionCombo）: 直前のコンボ技を受付時間内に使っていれば、その次の技が光る
+  // 2. ActionProcStatus: 指定のステータスが付いている間光る（燕飛・返し技・奥義波切・残心）。燕返しの 4 種は実際に出せる 1 つだけ
+  // 居合術の変化先・照破・明鏡止水中の技には、この 2 つの指定がないので光らせない
   function highlight(id) {
-    if (A[id].comboFrom.length && (has('meikyo') || (S.combo != null && A[id].comboFrom.includes(S.combo)))) return true;
-    if ([ID.HIGAN, ID.TENKA, ID.MIDARE, ID.TENDO_GOKEN, ID.TENDO_SETSU, ID.K_GOKEN, ID.K_SETSU, ID.TK_GOKEN, ID.TK_SETSU, ID.K_NAMI].includes(id)) return true;
-    if (id === ID.NAMIKIRI && has('namikiriReady')) return true;
-    if (id === ID.ZANSHIN && has('zanshinReady') && S.kenki >= 50) return true;
-    if (id === ID.SHOHA && S.med >= 3) return true;
-    if (id === ID.ENPI && has('enpi')) return true;
+    const a = A[id];
+    if (!a || !a.forJob) return false;
+    if (a.comboFrom.length && S.combo != null && S.t <= S.comboUntil && a.comboFrom.includes(S.combo)) return true;
+    const st = PROC_STATUS[a.proc];
+    if (st && has(st)) return st !== 'tsubame' || !!TARGET_BASE[id]?.some((b) => resolve(b) === id);
     return false;
   }
 
   let lastStatusHtml = '';
+  let lastCd = null;
   function render() {
     const active = S.phase === 'countdown' || S.phase === 'combat';
     $('timer').innerHTML = `${fmt(Math.max(0, Math.min(S.t, POLICY.durationMs)))} <span class="dim">/ ${fmt(POLICY.durationMs)}</span>`;
     const cd = $('countdown');
-    if (S.phase === 'countdown') { cd.hidden = false; cd.className = 'countdown'; cd.textContent = Math.ceil(-S.t / 1000); }
-    else if (S.phase === 'combat' && S.t < 800) { cd.hidden = false; cd.className = 'countdown go'; cd.textContent = '戦闘開始！'; }
-    else cd.hidden = true;
+    const cdText = S.phase === 'countdown' ? String(Math.ceil(-S.t / 1000)) : S.phase === 'combat' && S.t < 900 ? '戦闘開始！' : '';
+    if (cdText !== lastCd) {
+      lastCd = cdText;
+      cd.hidden = !cdText;
+      if (cdText) { cd.textContent = cdText; cd.className = ''; void cd.offsetWidth; cd.className = `countdown${S.phase === 'combat' ? ' go' : ''}`; }
+    }
+    $('startOverlay').hidden = S.phase !== 'idle';
 
     for (const r of slotEls) {
       const isTarget = !!TARGET_BASE[r.base];
@@ -614,17 +715,22 @@
       }
       r.cd.style.background = frac > 0 ? `conic-gradient(transparent 0 ${(1 - frac) * 360}deg, rgba(0,0,0,.62) 0)` : 'none';
       r.num.textContent = num;
-      if (r.wasCd && frac === 0) { r.el.classList.remove('ready-flash'); void r.el.offsetWidth; r.el.classList.add('ready-flash'); }
-      r.wasCd = frac > 0;
+      // 固有のリキャストが明けたときだけ光らせる（GCD の回復では光らせない）
+      const ownFrac = ownCd(a) != null && charges(a) === 0 ? 1 : 0;
+      if (r.wasCd && !ownFrac) { r.el.classList.remove('ready-flash'); void r.el.offsetWidth; r.el.classList.add('ready-flash'); }
+      r.wasCd = !!ownFrac;
       const useId = isTarget ? r.base : live;
       const unusable = !A[useId].forJob || (active && ((isTarget && !live) || (blocked(useId) != null && !(ownCd(A[useId]) != null && charges(A[useId]) === 0))));
       r.el.classList.toggle('unusable', unusable);
-      r.el.classList.toggle('hl', active && !unusable && highlight(useId));
+      // 「変化させない」設定の元ボタンは、変化先ではなく元のアクションとして光るかを見る
+      r.el.classList.toggle('hl', active && highlight(split[r.base] ? r.base : useId));
+      r.el.classList.toggle('queued', !!S.queue && S.queue.baseId === r.base);
     }
 
     // ゲージ
     $('kenkiFill').style.width = `${(S.kenki / POLICY.kenkiMax) * 100}%`;
     $('kenkiNum').textContent = S.kenki;
+    document.querySelector('.gauge').classList.toggle('full', S.kenki >= POLICY.kenkiMax);
     $('senSetsu').classList.toggle('on', !!S.sen.setsu);
     $('senGetsu').classList.toggle('on', !!S.sen.getsu);
     $('senKa').classList.toggle('on', !!S.sen.ka);
@@ -641,6 +747,7 @@
     if (S.cast) {
       cb.hidden = false;
       $('castName').textContent = A[S.cast.id].name;
+      if ($('castIcon').dataset.id !== String(S.cast.id)) { $('castIcon').src = A[S.cast.id].icon; $('castIcon').dataset.id = String(S.cast.id); }
       const p = (S.t - S.cast.start) / (S.cast.end - S.cast.start);
       $('castFill').style.width = `${Math.min(100, p * 100)}%`;
       $('castTime').textContent = ((S.cast.end - S.t) / 1000).toFixed(2);
@@ -652,25 +759,47 @@
   }
 
   // ---------------- 演出・ツールチップ ----------------
-  function hitFx() {
-    const d = document.querySelector('.dummy');
-    d.classList.remove('hit'); void d.offsetWidth; d.classList.add('hit');
+  // 範囲の形はゲームデータ（castType: 1 単体 / 2 自分の周囲 / 3 前方扇 / 4 前方直線）、敵に使えるか（canTargetHostile）から決める
+  function fxFor(id, ok) {
+    const a = A[id];
+    // 自分にかけるもの: 敵を対象にできず、範囲でもない（自分の周囲の範囲攻撃も敵を対象にしないため、形で見分ける）
+    if (!a.hostile && a.shape <= 1) return { kind: 'buff', color: FX_COLOR[id] ?? 'buff', name: a.name };
+    const color = FX_COLOR[id] ?? (KENKI_COST[id] ? 'kenki' : 'steel');
+    const kind = a.shape === 2 ? 'circle' : a.shape === 3 ? 'cone' : a.shape === 4 ? 'line'
+      : a.range >= 15 ? (/急接近/.test(a.desc) ? 'dash' : 'projectile') : 'slash';
+    const power = a.crit ? 1.5 : KENKI_COST[id] ? 1.25 : ok && a.comboFrom.length ? 1.15 : 1;
+    return { kind, color, crit: a.crit, power, count: TRIPLE.has(id) ? 3 : 1, name: a.name, combo: ok && a.comboFrom.length > 0 };
+  }
+  function playFx(id, ok) {
+    const info = fxFor(id, ok);
+    Fx?.play(info);
+    if (!Au) return;
+    if (info.kind === 'buff') { Au.buff(); return; }
+    if (info.kind === 'circle' || info.kind === 'cone' || info.kind === 'line') Au.wave();
+    else for (let i = 0; i < info.count; i++) setTimeout(() => Au.slash(info.power), i * 95);
+    if (info.crit) Au.crit(); else Au.hit(info.power);
   }
   function pressFx(el) { el.classList.add('pressed'); setTimeout(() => el.classList.remove('pressed'), 90); }
   function showTip(el, id) {
     const a = A[id];
+    if (!a) return;
     const tip = $('tooltip');
     const kind = a.isGcd ? 'ウェポンスキル' : 'アビリティ';
-    tip.innerHTML = '';
-    const b = document.createElement('b'); b.textContent = a.name;
-    const meta = document.createElement('div'); meta.className = 'meta';
-    meta.textContent = `${kind} / 詠唱 ${a.castMs ? (a.castMs / 1000).toFixed(1) + '秒' : '即時'} / リキャスト ${(a.recastMs / 1000).toFixed(1)}秒${maxCh(a) > 1 ? ` / チャージ ${maxCh(a)}` : ''}`;
-    const body = document.createElement('div'); body.textContent = a.desc;
-    tip.append(b, meta, body);
+    const sec = (ms) => (ms ? `${(ms / 1000).toFixed(2)}秒` : '即時');
+    tip.innerHTML = `<div class="tt-head"><img alt=""><div><b></b><div class="kind"></div></div></div><div class="meta"></div><div class="body"></div><div class="hl-note"></div>`;
+    tip.querySelector('img').src = a.icon;
+    tip.querySelector('b').textContent = a.name;
+    tip.querySelector('.kind').textContent = kind + (a.forJob ? '' : '（このジョブでは使えません）');
+    tip.querySelector('.meta').innerHTML = `<span>詠唱時間<b>${sec(a.castMs)}</b></span><span>リキャスト<b>${sec(a.recastMs)}</b></span>${maxCh(a) > 1 ? `<span>チャージ<b>${maxCh(a)}</b></span>` : ''}${KENKI_COST[id] ? `<span>剣気<b>${KENKI_COST[id]}</b></span>` : ''}`;
+    tip.querySelector('.body').textContent = a.desc;
+    const notes = [];
+    if (a.comboFrom.length) notes.push(`光る: ${a.comboFrom.map((c) => A[c]?.name ?? D.known[c]?.[0]).filter(Boolean).join(' / ')} の直後（コンボ）`);
+    if (PROC_STATUS[a.proc]) notes.push(`光る: 「${STATUS[PROC_STATUS[a.proc]].name}」の間`);
+    tip.querySelector('.hl-note').textContent = notes.join('\n');
     tip.hidden = false;
-    const sr = stage.getBoundingClientRect(), er = el.getBoundingClientRect(), sc = sr.width / 1280;
+    const sr = stage.getBoundingClientRect(), er = el.getBoundingClientRect(), sc = sr.width / STAGE.w;
     const x = (er.left - sr.left) / sc, y = (er.top - sr.top) / sc;
-    tip.style.left = `${Math.min(1280 - 310, Math.max(10, x - 130))}px`;
+    tip.style.left = `${Math.min(STAGE.w - 330, Math.max(10, x - 140))}px`;
     tip.style.top = '0px';
     tip.style.top = `${Math.max(10, y - tip.offsetHeight - 10)}px`;
   }
@@ -680,9 +809,16 @@
   function start() {
     reset();
     S.phase = 'countdown';
+    $('startOverlay').hidden = true;
+    Au?.tick();
     addLog('sys', 'カウントダウン開始');
   }
+  window.addEventListener('pointerdown', () => Au?.unlock(), { once: true });
   window.addEventListener('keydown', (e) => {
+    Au?.unlock();
+    GM?.guardKey(e);
+    const tag = e.target?.tagName;
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
     if (e.code === 'Space') { e.preventDefault(); if (!e.repeat) start(); return; }
     if (e.code === 'Escape') { reset(); return; }
     const hit = keymap.get(keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey }));
@@ -707,6 +843,38 @@
   }
   $('btnMode').addEventListener('click', () => setMode({ hud: 'keyboard', keyboard: 'pad', pad: 'hud' }[mode]));
   $('btnSettings').addEventListener('click', () => { $('settings').hidden = !$('settings').hidden; });
+
+  // ゲームモード（全画面＋キーボードロック）
+  async function enterGame() {
+    const r = await GM.enter();
+    if (!r.ok) addLog('warn', r.reason);
+    else addLog('sys', r.locked ? 'ゲームモード: ブラウザのショートカットもゲーム側で受け取ります（Esc 長押しで解除）' : 'ゲームモード: 全画面にしました（このブラウザはキーボードロック非対応のため、一部のキーはブラウザが受け取ります）');
+    return r.ok;
+  }
+  GM?.setBusyCheck(() => S.phase === 'countdown' || S.phase === 'combat');
+  GM?.onChange((st) => {
+    $('btnGame').textContent = st.active ? 'ゲームモード: 入' : 'ゲームモード';
+    $('btnGame').classList.toggle('on', st.active);
+    $('gameBadge').hidden = !st.active;
+    $('gameBadge').textContent = st.locked ? 'ゲームモード中 ・ Esc 長押しで解除' : 'ゲームモード中（全画面のみ）・ Esc で解除';
+  });
+  $('btnGame').addEventListener('click', () => (GM.isActive() ? GM.exit() : enterGame()));
+  $('btnGameStart').addEventListener('click', async () => { await enterGame(); start(); });
+  $('btnPlainStart').addEventListener('click', start);
+  $('gameNote').textContent = GM?.canLock
+    ? 'ゲームモードは全画面にして、Ctrl+W・Ctrl+数字・F5・Alt などのキーもゲーム側で受け取ります（Chrome / Edge）。解除は Esc の長押し。'
+    : GM?.canFull ? 'このブラウザはキーボードロックに対応していないため、ゲームモードは全画面表示のみです（Ctrl+数字などはブラウザが先に受け取ります）。Chrome / Edge を推奨します。'
+    : 'このブラウザは全画面表示に対応していません。';
+
+  // 音
+  const syncSound = () => {
+    $('btnSound').textContent = `音: ${Au?.isEnabled() ? '入' : '切'}`;
+    $('volume').value = String(Au?.getVolume() ?? 0.45);
+    $('volumeNum').textContent = `${Math.round((Au?.getVolume() ?? 0) * 100)}%`;
+  };
+  $('btnSound').addEventListener('click', () => { Au?.setEnabled(!Au.isEnabled()); syncSound(); if (Au?.isEnabled()) Au.buff(); });
+  $('volume').addEventListener('input', () => { Au?.setVolume(Number($('volume').value)); syncSound(); });
+  syncSound();
 
   // ゲームパッド（Gamepad API をフレームごとに読む。INPUT_HUD §4）
   let padPrev = [];
@@ -864,6 +1032,12 @@
     stage.style.height = `${STAGE.h}px`;
     const s = Math.min(innerWidth / STAGE.w, innerHeight / STAGE.h);
     stage.style.transform = `scale(${s})`;
+    if (Fx) {
+      Fx.resize(STAGE.w, STAGE.h, s * (window.devicePixelRatio || 1));
+      const dw = $('dummy');
+      const top = dw.offsetTop;
+      Fx.setAnchors({ dummy: { x: dw.offsetLeft + 120, y: top + 180, top: top + 16, ground: top + 304 }, player: { x: STAGE.w / 2, y: top + 400 } });
+    }
     const info = $('resInfo');
     if (info) info.textContent = `PC の画面 ${screen.width}×${screen.height}（拡大率 ${devicePixelRatio}）/ ブラウザの表示 ${innerWidth}×${innerHeight} / 表示倍率 ${(s * 100).toFixed(0)}%`;
   }
@@ -872,17 +1046,22 @@
     if (document.hidden && (S.phase === 'combat' || S.phase === 'countdown')) addLog('sys', 'タブが非表示になりました（モックでは一時停止は未実装）');
   });
 
+  // 動作確認用: ?speed=10 のように付けると時間を速める（通常は 1）
+  const SPEED = Math.max(0.1, Math.min(50, Number(new URLSearchParams(location.search).get('speed')) || 1));
   let last = performance.now();
   function loop(now) {
-    const dt = Math.min(100, now - last);
+    const dt = Math.min(100, now - last) * SPEED;
     last = now;
     pollPad();
     step(Math.round(dt));
     render();
+    Fx?.frame(dt);
     requestAnimationFrame(loop);
   }
 
   $('jobIcon').src = D.job.icon;
+  $('startJobIcon').src = D.job.icon;
+  Fx?.init({ canvas: $('fx'), scene: $('scene'), flyLayer: $('flyLayer'), dummyBody: $('dummyBody'), dummyWrap: $('dummy') });
   reset();
   loadSaved();
   buildSettings();
