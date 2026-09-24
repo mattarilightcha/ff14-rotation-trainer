@@ -178,7 +178,11 @@ button { font: inherit; }
 .bar.small .slot .num { font-size: 12px; }
 .bar.small .slot::after { font-size: 11px; }
 .bar.unplaced .bar-label { color: var(--warn); }
-.hotbars.in-hud { left: auto; right: 290px; bottom: 36px; transform: none; }
+/* HUD 再現のときは、ゲームの HUD と重ならないよう左上（操作ボタンの下）に小さく並べる */
+.hotbars.in-hud { left: 16px; right: auto; top: 64px; bottom: auto; transform: none; max-width: min(560px, 40vw); }
+.hotbars.in-hud .bar { flex-wrap: wrap; }
+.hotbars.in-hud .bar .slot { --slot: 34px; width: 34px; height: 34px; border-radius: 5px; }
+.hotbars.in-hud .bar-label { width: auto; flex-basis: 100%; text-align: left; margin: 0 0 1px; }
 
 .slot {
   position: relative; width: var(--slot); height: var(--slot); border-radius: 8px;
