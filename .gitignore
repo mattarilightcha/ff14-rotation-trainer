@@ -37,3 +37,7 @@ coverage/
 .idea/
 .DS_Store
 Thumbs.db
+
+# .NET (tools/ffxiv-extract)
+bin/
+obj/
