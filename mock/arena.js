@@ -544,8 +544,7 @@
   // ---------------- 回復（白魔道士の回復・相方の回復役）----------------
   // who: 'party'（自分と相方）/ 'low'（HP の低い方）/ 'self'。frac は最大 HP に対する割合
   function healNow(who, frac, quiet) {
-    const targets = who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : [lowest()];
-    for (const e of targets) healOne(e, frac, quiet);
+    for (const e of partyOf(who)) healOne(e, frac, quiet);
   }
   // 被ダメージ軽減（アクアヴェール・テンパランスなど）とバリア（ディヴァインベニゾンなど）を通したダメージ
   function soak(e, frac) {
@@ -558,7 +557,8 @@
     }
     return frac;
   }
-  const partyOf = (who) => (who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : [lowest()]);
+  // 相手: 'party' 全員 / 'self' 自分 / 'npc' 相方（マクロの <2> など）/ それ以外 HP の低い方
+  function partyOf(who) { return who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : who === 'npc' ? (hasNpc() ? [tank] : [player]) : [lowest()]; }
   function shieldOn(who, frac, sec) {
     for (const e of partyOf(who)) {
       if (!e || (e === tank && tank.down > 0)) continue;

@@ -202,6 +202,8 @@ button { font: inherit; }
 .hud-bar .slot.far::after { border-radius: 12%; }
 .slot.other::after { content: "—"; position: absolute; inset: 0; display: grid; place-items: center; color: #555; font-size: 14px; }
 .slot.missing::after { content: "旧"; position: absolute; inset: 0; display: grid; place-items: center; color: #777; font-size: 13px; }
+.slot .mk { position: absolute; left: 3px; top: 2px; font: 700 9px/1 Cinzel, sans-serif; color: #fff; background: rgba(80,120,200,.85); border-radius: 3px; padding: 1px 3px; pointer-events: none; }
+.slot.macro-off::after { content: 'M'; position: absolute; inset: 0; display: grid; place-items: center; color: #6f84a8; font-size: 1.1em; }
 .slot.foreign::after { content: attr(data-ch); position: absolute; inset: 0; display: grid; place-items: center; color: #777; font-size: 1.2em; }
 /* ファンキットのアイコン（枠・光沢・影が絵に含まれる）: モックの枠は付けず、暗転・射程外の赤は枠の内側（絵の部分）に収める */
 .slot.framed { background: none; box-shadow: none; }

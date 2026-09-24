@@ -18,6 +18,83 @@
     return out;
   }
 
+  // ---- MACRO.DAT（キャラクターのマクロ）/ MACROSYS.DAT（共有マクロ）----
+  // 形式（コミュニティの解析。docs/CONFIG_FORMAT.md §8）: 16 バイトのヘッダーの後、XOR 0x73。マクロ 100 個が並び、
+  // 1 個は「種類 1 文字・長さ u16・中身（UTF-8、終わりに 0）」の組: T 題名 / I アイコン / K キー / L 行（15 行）。
+  // 個人情報（チャットの文・人の名前）が入りうるので、返すのは /ac（/action）と /micon で名指しされたアクションの ID と、
+  // 対象の指定（<me> <2> <t> <mo> など）だけ。題名や行の文字列は返さない。nameToId: アクション名 → ID（知らない名前は null）
+  // ---- MACRO.DAT / MACROSYS.DAT ----
+  // 形式（実物 1 つで確認済み）: 17 バイトのヘッダーのあと、全体を XOR 0x73。
+  // 記録は [種類 1 文字][長さ u16][UTF-8 の文字列 + \0]。1 個のマクロは T（題名）・I（アイコン）・K（キー）・L×15（行）の 18 記録で、100 個並ぶ。
+  // 他の人のファイルでも止まらないように: ヘッダーの長さは決め打ちせず「T I K L…」と並ぶ位置を探す。
+  // 1 個が壊れていたら、そこから先は読まない（読めた分は使う）。
+  // 返すのはアクションの ID・対象・待ち時間と、読めなかった行の数だけ。題名や文の中身は返さない（他の人の名前やチャットが入りうるため）。
+  const MACRO_TYPES = 'TIK' + 'L'.repeat(15);
+  function parseMacro(buf, nameToId) {
+    const b = u8(buf);
+    if (b.length < 64) throw new Error('ファイルが短すぎます');
+    const dec = new TextDecoder('utf-8');
+    const rec = (o) => (o + 3 <= b.length ? { type: String.fromCharCode(b[o] ^ 0x73), len: (b[o + 1] ^ 0x73) | ((b[o + 2] ^ 0x73) << 8) } : null);
+    // マクロ 1 個分（18 記録）が正しく並んでいれば、次のマクロの位置を返す
+    const macroEnd = (o) => {
+      for (const t of MACRO_TYPES) {
+        const r = rec(o);
+        if (!r || r.type !== t || r.len < 1 || o + 3 + r.len > b.length || (b[o + 2 + r.len] ^ 0x73) !== 0) return -1;
+        o += 3 + r.len;
+      }
+      return o;
+    };
+    let start = -1;
+    for (let off = 0; off <= 64 && start < 0; off++) if (macroEnd(off) > 0) start = off;
+    if (start < 0) throw new Error('マクロの形式が見つかりません（別の種類のファイルか、形式が変わった可能性があります）');
+    const stat = { lines: 0, used: 0, unknownName: 0, otherMode: 0 };
+    // 行の読み方。/ac と /action（通常のアクション）。/blueaction・/pvpaction は青魔道士・PvP 用なので数えるだけ
+    const cmdRe = /^\/(ac|action|blueaction|pvpaction|pvpac)\s+(?:"([^"]+)"|(.+?))(?:\s+(<[^>]+>))?\s*$/i;
+    const iconRe = /^\/(?:micon|macroicon)\s+(?:"([^"]+)"|(\S+))/i;
+    const waitRe = /<wait\.(\d+(?:\.\d+)?)>/i;
+    const waitCmdRe = /^\/wait\s+(\d+(?:\.\d+)?)\s*$/i;
+    const WAIT_MAX = 60; // 仮: 待ちは 1 回 60 秒まで（GAME-66）
+    const macros = [];
+    let o = start;
+    while (macros.length < 100) {
+      const end = macroEnd(o);
+      if (end < 0) break;
+      const m = { icon: null, cmds: [] };
+      let at = 0; // マクロを始めてから、この行を実行するまでの秒数
+      for (let k = 0; k < MACRO_TYPES.length; k++) {
+        const r = rec(o);
+        o += 3;
+        if (r.type === 'L' && r.len > 1) {
+          const bytes = new Uint8Array(r.len - 1);
+          for (let i = 0; i < bytes.length; i++) bytes[i] = b[o + i] ^ 0x73;
+          let line = dec.decode(bytes).trim();
+          stat.lines++;
+          let wait = 0, w;
+          if ((w = waitRe.exec(line))) wait = Math.min(WAIT_MAX, Number(w[1]));
+          line = line.replace(/<(?:wait|se)\.[\d.]+>/gi, '').trim();
+          let c;
+          if ((w = waitCmdRe.exec(line))) {
+            at += Math.min(WAIT_MAX, Number(w[1]));
+          } else if ((c = cmdRe.exec(line))) {
+            if (/^(ac|action)$/i.test(c[1])) {
+              const id = nameToId((c[2] ?? c[3]).trim());
+              if (id != null) { m.cmds.push({ id, target: (c[4] ?? '').toLowerCase() || null, at }); stat.used++; } else stat.unknownName++;
+            } else stat.otherMode++;
+          } else if ((c = iconRe.exec(line))) {
+            const id = nameToId((c[1] ?? c[2]).trim());
+            if (id != null) m.icon = id;
+          }
+          at += wait;
+        }
+        o += r.len;
+      }
+      macros.push(m.cmds.length ? m : null);
+    }
+    if (!macros.length) throw new Error('マクロが見つかりません');
+    while (macros.length < 100) macros.push(null);
+    return { macros, stat };
+  }
+
   // ---- HOTBAR.DAT（XOR 0x31、8 バイトのレコード: ID u32 / セット u8 / バー u8 / スロット u8 / 種類 u8）----
   const BAR_NAMES = [...Array(10)].map((_, i) => `hb${i + 1}`).concat([...Array(8)].map((_, i) => `xhb${i + 1}`));
   function parseHotbar(buf, setIds) {
@@ -233,7 +310,7 @@
     return { width, height, mode, uiScale, uiHighScale: found.UiHighScale, uiBaseScale: found.UiBaseScale, deadArea: found.DeadArea ?? null, pad, found };
   }
 
-  const api = { parseHotbar, parseKeybind, parseAddon, findGauges, hudElements, jobGaugeElements, parseCfg, vkToCode, BAR_NAMES, LAYOUTS, HUD_KINDS, JOB_GAUGE_KINDS };
+  const api = { parseHotbar, parseMacro, parseKeybind, parseAddon, findGauges, hudElements, jobGaugeElements, parseCfg, vkToCode, BAR_NAMES, LAYOUTS, HUD_KINDS, JOB_GAUGE_KINDS };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CfgParse = api;
 })(typeof window !== 'undefined' ? window : globalThis);

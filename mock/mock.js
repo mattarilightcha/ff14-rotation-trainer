@@ -49,12 +49,15 @@
     get S() { return S; }, A, D, get OPT() { return OPT; },
     has: (k) => has(k), buff: (k, ms, stacks) => buff(k, ms, stacks), remove: (k) => remove(k),
     addLog: (c, t) => addLog(c, t), ev: (k, o) => ev(k, o), TARGET_BASE,
-    heal: (who, frac) => Arena.heal(who, frac), hot: (who, frac, sec) => Arena.hot(who, frac, sec),
-    shield: (who, frac, sec) => Arena.shield(who, frac, sec), mitigate: (who, pct, sec) => Arena.mitigate(who, pct, sec),
+    // マクロで対象を決めたとき（<me> <2> など）は、「対象」の回復・バリア・軽減をその相手にする
+    heal: (who, frac) => Arena.heal(aimWho(who), frac), hot: (who, frac, sec) => Arena.hot(aimWho(who), frac, sec),
+    shield: (who, frac, sec) => Arena.shield(aimWho(who), frac, sec), mitigate: (who, pct, sec) => Arena.mitigate(aimWho(who), pct, sec),
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
   };
+  let forcedWho = null; // マクロの対象（'self' / 'npc'）。実行している間だけ
+  const aimWho = (who) => (forcedWho && who === 'low' ? forcedWho : who);
   const J = window.MockJobs[JOB].create(R);
   const STATUS = J.STATUS;
   const TRACKED = J.tracked.map(([, k]) => k); // 維持率を見るステータス（結果のタイムラインにも出す）
@@ -94,7 +97,7 @@
     S = {
       phase: 'idle', t: -POLICY.countdownMs,
       gcdStart: null, gcdEnd: null, lockUntil: -Infinity, lastOgcdLockEnd: null, weaves: 0,
-      cast: null, cds: {}, combo: null, comboUntil: 0, chain: null, chainUntil: 0, st: {}, queue: null,
+      cast: null, cds: {}, combo: null, comboUntil: 0, chain: null, chainUntil: 0, st: {}, queue: null, macro: null,
       stats: {
         gcds: 0, idleMs: 0, clipMs: 0, cutMs: 0, comboBreaks: 0, rejected: 0,
         uptime: Object.fromEntries(TRACKED.map((k) => [k, 0])),
@@ -402,7 +405,10 @@
     Au?.error();
   }
 
+  let rejectQuiet = false, lastReject = null; // マクロの途中の行は、失敗しても出さない（最後の行の失敗だけ出す）
   function reject(msg, kind) {
+    lastReject = { msg, kind };
+    if (rejectQuiet) return;
     S.stats.rejected++;
     if (kind === 'range') S.stats.outOfRange++;
     ev('受け付けず', { result: kind === 'range' ? '射程外' : kind === 'early' ? '早すぎ' : kind === 'down' ? '戦闘不能' : '', note: msg });
@@ -435,7 +441,43 @@
     placeAt = { x: q.x, y: q.y };
     try { press(cur.baseId, 'place'); } finally { placeAt = null; }
   }
-  function press(baseId, src) {
+  // マクロ（HOTBAR.DAT の種類 7。中身は MACRO.DAT / MACROSYS.DAT）: 上の行から順にアクションを試し、最初に使えたところで終わる。
+  // マクロのアクションは先行入力されない（ゲームと同じ）。対象: <me> <1> = 自分、<2>〜<8> = 相方、それ以外は通常と同じ
+  // マクロの実行: 行は上から順に。待ち（/wait・<wait.N>）のない行は同時に試し、最初に使えたもので決まる（残りは硬直で失敗するのと同じ）。
+  // 待ちのある行は、その時間が来てから試す。実行中に別のマクロを押すと前のマクロは止まる（仮: GAME-66）
+  function runMacro(m) {
+    if (!live()) { press(m.cmds[0].id); return; }
+    S.macro = { cmds: m.cmds, i: 0, t0: S.t };
+    stepMacro();
+  }
+  function stepMacro() {
+    const run = S.macro;
+    if (!run) return;
+    const due = run.t0 + run.cmds[run.i].at * 1000;
+    if (S.t < due) return;
+    // 同じ時刻の行をまとめて試す
+    let j = run.i;
+    while (j < run.cmds.length && run.cmds[j].at === run.cmds[run.i].at) j++;
+    for (let i = run.i; i < j; i++) {
+      const c = run.cmds[i];
+      rejectQuiet = i < j - 1;
+      lastReject = null;
+      let r;
+      try { r = press(c.id, 'macro', c.target); } finally { rejectQuiet = false; }
+      if (r !== false) break;
+    }
+    run.i = j;
+    if (run.i >= run.cmds.length) S.macro = null;
+  }
+  // <mo> はパーティリストのマウスを乗せている行（自分 / 相方）。乗せていなければ通常の対象
+  let hoverWho = null;
+  for (const [sel, who] of [['#ptSelf', 'self'], ['#ptTank', 'npc']]) {
+    const el = document.querySelector(sel);
+    el?.addEventListener('pointerenter', () => { hoverWho = who; });
+    el?.addEventListener('pointerleave', () => { if (hoverWho === who) hoverWho = null; });
+  }
+  const whoOfTarget = (t) => (t === '<me>' || t === '<1>' ? 'self' : /^<[2-8]>$/.test(t ?? '') ? 'npc' : t === '<mo>' ? hoverWho : null);
+  function press(baseId, src, target) {
     if (!live()) {
       // 開始前・終了後の入力は案内を 1 回だけ出す
       if (!S.hinted) { S.hinted = true; addLog('sys', 'Space（または「開始」）で練習を始めてください'); }
@@ -458,9 +500,21 @@
       return;
     }
     const why = blocked(id);
-    if (why) { reject(why); return; }
+    if (why) { reject(why); return false; }
     const pb = placeBlock(a);
-    if (pb) { reject(pb.msg, pb.kind); return; }
+    if (pb) { reject(pb.msg, pb.kind); return false; }
+    if (a.ground && src === 'macro' && target) {
+      // マクロの地面指定: <me> = 自分の足元、<t> = 敵の足元、<mo> <gtoff> = マウスの位置（ターゲットサークルは出さない）
+      const p = Arena.debug().player, bs = Arena.debug().boss;
+      const at = target === '<me>' || target === '<1>' ? p : target === '<t>' ? bs : (target === '<mo>' || target === '<gtoff>') && mousePos ? Arena.groundAt(mousePos.x, mousePos.y) : null;
+      if (at) {
+        if (Math.hypot(at.x - p.x, at.y - p.y) > (a.range > 0 ? a.range : 30)) { reject(`${a.name}: 射程外です`, 'range'); return false; }
+        if (readyAt(a) > S.t) { reject(`${a.name}はまだ使用できません（マクロのアクションは先行入力されません）`, 'early'); return false; }
+        placeAt = { x: at.x, y: at.y };
+        try { execute(id, S.t); } finally { placeAt = null; }
+        return true;
+      }
+    }
     if (a.ground && src !== 'pad' && src !== 'place') {
       if (aiming && aiming.baseId === baseId) { confirmAim(); return; }
       aiming = { baseId, id, r: aimRadius(a), range: a.range > 0 ? a.range : 30 };
@@ -469,14 +523,20 @@
       return;
     }
     const ra = readyAt(a);
-    if (ra <= S.t) { execute(id, S.t); return; }
+    if (ra <= S.t) {
+      forcedWho = src === 'macro' ? whoOfTarget(target) : null;
+      try { execute(id, S.t); } finally { forcedWho = null; }
+      return true;
+    }
+    const rc = recastLeft(a);
+    if (src === 'macro') { reject(`${a.name}はまだ使用できません（マクロのアクションは先行入力されません）`, 'early'); return false; }
     // 先行入力: そのアクション自身のリキャストの残りが 0.5 秒以下なら入れておき、使えるようになった瞬間に出す。
     // 硬直や詠唱の残りは問わない（その間に押したアビリティは、終わった瞬間に出る）。地面指定のアクションは入らない
-    const rc = recastLeft(a);
-    if (a.ground) { reject(`${a.name}: 地面指定のアクションは先行入力できません（使えるようになってから押す）`); return; }
-    if (rc <= POLICY.queueMs) { S.queue = { baseId, at: S.t }; return; }
+    if (a.ground) { reject(`${a.name}: 地面指定のアクションは先行入力できません（使えるようになってから押す）`); return false; }
+    if (rc <= POLICY.queueMs) { S.queue = { baseId, at: S.t }; return true; }
     const left = `GCD の残り ${(rc / 1000).toFixed(2)} 秒。先行入力は残り ${POLICY.queueMs / 1000} 秒から`;
     reject(S.cast ? `詠唱中のため使用できません（${left}）` : `このアクションはまだ使用できません（${left}）`, 'early');
+    return false;
   }
 
   // ---------------- 時間の進行 ----------------
@@ -505,6 +565,11 @@
         const why = blocked(id), pb = placeBlock(A[id]);
         if (!why && !pb) execute(id, S.t); else reject(why ?? pb.msg, pb?.kind);
       }
+    }
+    // マクロの待ちのあとの行（待ちが明けた時刻で処理）
+    if (S.macro) {
+      const due = S.macro.t0 + S.macro.cmds[S.macro.i].at * 1000;
+      if (due <= t1) { S.t = Math.max(t0, due); stepMacro(); }
     }
     S.t = t1;
     if (S.phase === 'combat') {
@@ -763,6 +828,24 @@
     el.className = 'slot';
     if (!cell) { el.classList.add('empty'); return el; }
     if (cell.kind === 'other') { el.classList.add('empty', 'other'); el.title = `アクション以外（種類 ${cell.type}）`; return el; }
+    if (cell.kind === 'macro') {
+      const m = macroOf(cell);
+      if (!m) {
+        el.classList.add('empty', 'macro-off'); el.dataset.ch = 'M';
+        el.title = IMPORTED?.macros ? 'マクロ（このジョブのアクションを使う /ac の行がない）' : 'マクロ（設定 → 設定ファイルで MACRO.DAT を読み込むと使えます）';
+        if (keyLabel) el.insertAdjacentHTML('beforeend', `<div class="key">${keyLabel}</div>`);
+        return el;
+      }
+      const base = macroIcon(m);
+      el.classList.add('macro');
+      el.innerHTML = `<img alt=""><div class="cd"></div><div class="frame"></div><div class="num"></div><div class="chg"></div><div class="mk">M</div>${keyLabel ? `<div class="key">${keyLabel}</div>` : ''}`;
+      const rec = { el, base, img: el.querySelector('img'), cd: el.querySelector('.cd'), num: el.querySelector('.num'), chg: el.querySelector('.chg'), shown: null, wasCd: false };
+      el.addEventListener('pointerdown', (e) => { e.preventDefault(); pressFx(el); runMacro(m); });
+      el.addEventListener('pointerenter', () => showTip(el, resolve(base), m));
+      el.addEventListener('pointerleave', hideTip);
+      slotEls.push(rec);
+      return el;
+    }
     if (cell.kind === 'missing') { el.classList.add('empty', 'missing'); el.title = `今は存在しないアクション（ID ${cell.id}）`; return el; }
     if (cell.kind === 'foreign') { el.classList.add('empty', 'foreign'); el.dataset.ch = cell.name.slice(0, 1); el.title = `${cell.name}（このジョブでは使えないアクション）`; if (keyLabel) el.insertAdjacentHTML('beforeend', `<div class="key">${keyLabel}</div>`); return el; }
     el.innerHTML = `<img alt=""><div class="cd"></div><div class="frame"></div><div class="num"></div><div class="chg"></div>${keyLabel ? `<div class="key">${keyLabel}</div>` : ''}`;
@@ -791,6 +874,8 @@
   function bindSlot(bar, i, cell) {
     const keys = keysOf(bar, i);
     if (cell && cell.kind === 'action') for (const k of keys) keymap.set(keyId(k), { base: cell.id, el: null });
+    const m = cell?.kind === 'macro' ? macroOf(cell) : null;
+    if (m) for (const k of keys) keymap.set(keyId(k), { base: macroIcon(m), el: null, macro: m });
     return keys;
   }
 
@@ -798,7 +883,7 @@
   let xhbSet = 'xhb1';
 
   function placeKeys(el, keys, cell) {
-    for (const k of keys) { const m = keymap.get(keyId(k)); if (m && cell?.kind === 'action' && m.base === cell.id) m.el = el; }
+    for (const k of keys) { const m = keymap.get(keyId(k)); if (m && ((cell?.kind === 'action' && m.base === cell.id) || (cell?.kind === 'macro' && m.macro))) m.el = el; }
     const label = keys.map((k) => k.label).join('/');
     if (label && !el.classList.contains('foreign')) el.insertAdjacentHTML('beforeend', `<div class="key${label.length > 3 ? ' long' : ''}">${label}</div>`);
   }
@@ -872,6 +957,8 @@
           const lab = `${half ? 'R' : 'L'}${q ? ['△', '○', '×', '□'][k] : ['↑', '→', '↓', '←'][k]}`;
           cross.appendChild(makeSlot(cells[idx], lab));
           if (cells[idx]?.kind === 'action') padMap.set(`${half}|${q}|${k}`, { base: cells[idx].id, el: cross.lastChild });
+          const pm = cells[idx]?.kind === 'macro' ? macroOf(cells[idx]) : null;
+          if (pm) padMap.set(`${half}|${q}|${k}`, { base: macroIcon(pm), el: cross.lastChild, macro: pm });
         }
         g.appendChild(cross);
       }
@@ -1170,7 +1257,7 @@
     J.sfx(id, info, Au); // 効果音はジョブごと（侍: 居合術は抜刀、剣気の技は赤い閃光、閃の締めは色ごとの鈴）
   }
   function pressFx(el) { el.classList.add('pressed'); setTimeout(() => el.classList.remove('pressed'), 90); }
-  function showTip(el, id) {
+  function showTip(el, id, macro) {
     const a = A[id];
     if (!a) return;
     const tip = $('tooltip');
@@ -1189,6 +1276,7 @@
     if (a.comboFrom.length) notes.push(`光る: ${a.comboFrom.map((c) => A[c]?.name ?? D.known[c]?.[0]).filter(Boolean).join(' / ')} の直後（コンボ）`);
     if (J.procStatus[a.proc]) notes.push(`光る: 「${STATUS[J.procStatus[a.proc]].name}」の間`);
     if (a.positional) notes.push(`方向指定: ${POS_JA[a.positional]}（トゥルーノース中は不要）`);
+    if (macro) notes.unshift(`マクロ: ${macro.cmds.map((c) => `${c.at ? `（${c.at} 秒後）` : ''}${A[c.id].name}${c.target ? ` ${c.target}` : ''}`).join(' → ')}（同じ時刻の行は上から順に試し、最初に使えたもの。先行入力されない）`);
     tip.querySelector('.hl-note').textContent = notes.join('\n');
     tip.hidden = false;
     const sr = stage.getBoundingClientRect(), er = el.getBoundingClientRect(), sc = sr.width / STAGE.w;
@@ -1261,7 +1349,7 @@
       e.preventDefault();
       if (e.repeat) return; // 押しっぱなしでは連打にならない（実機に合わせる: GAME-05 不確か）
       if (hit.el) pressFx(hit.el);
-      press(hit.base);
+      if (hit.macro) runMacro(hit.macro); else press(hit.base);
     }
   });
   window.addEventListener('keyup', (e) => { held.delete(e.code); camHeld.delete(e.code); });
@@ -1403,7 +1491,7 @@
   }
   function padPress(half, q, k) {
     const hit = padMap.get(`${half}|${q}|${k}`);
-    if (hit) { pressFx(hit.el); press(hit.base, 'pad'); }
+    if (hit) { pressFx(hit.el); if (hit.macro) runMacro(hit.macro); else press(hit.base, 'pad'); }
   }
 
   // ---------------- 設定ファイルの読み込み（INPUT_HUD §5）----------------
@@ -1421,6 +1509,7 @@
 
   function toCell(s) {
     if (!s) return null;
+    if (s.type === 7) return { kind: 'macro', no: s.id }; // マクロ（番号 0〜99 = キャラクター、256〜 = 共有）
     if (s.type !== 1) return { kind: 'other', type: s.type };
     const known = D.known[s.id];
     if (!known) return { kind: 'missing', id: s.id };
@@ -1429,6 +1518,17 @@
     if (!A[id]) return { kind: 'foreign', id, name: (D.known[id] ?? known)[0] };
     return { kind: 'action', id };
   }
+  // マクロの中身（読み込んだ MACRO.DAT / MACROSYS.DAT から。このジョブで使えるアクションだけ）
+  function macroOf(cell) {
+    const src = cell.no >= 256 ? IMPORTED?.macros?.sys : IMPORTED?.macros?.chr;
+    const raw = src?.[cell.no >= 256 ? cell.no - 256 : cell.no];
+    if (!raw) return null;
+    const up = (id) => { while (D.upgrade[id]) id = D.upgrade[id]; return id; };
+    const cmds = raw.cmds.map((c) => ({ ...c, id: up(c.id), at: c.at ?? 0 })).filter((c) => A[c.id]?.forJob);
+    if (!cmds.length) return null;
+    return { icon: raw.icon != null && A[up(raw.icon)] ? up(raw.icon) : null, cmds };
+  }
+  const macroIcon = (m) => m.icon ?? m.cmds[0].id;
   function barsFromSets(sets) {
     const job = sets[D.jobSet] ?? {}, shared = sets[0] ?? {};
     const out = {};
@@ -1444,7 +1544,8 @@
     D.hud = IMPORTED?.hud ?? SAMPLE.hud;
     if (IMPORTED?.move) Object.assign(MOVE, { up: IMPORTED.move.fore ?? [], down: IMPORTED.move.back ?? [], left: [...(IMPORTED.move.left ?? []), ...(IMPORTED.move.strafeL ?? [])], right: [...(IMPORTED.move.right ?? []), ...(IMPORTED.move.strafeR ?? [])] });
     barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
-    const onBars = new Set(Object.values(D.bars).flatMap((v) => [...(v.job ?? []), ...(v.shared ?? [])]).filter((c) => c?.kind === 'action').map((c) => c.id));
+    const cellsAll = Object.values(D.bars).flatMap((v) => [...(v.job ?? []), ...(v.shared ?? [])]);
+    const onBars = new Set([...cellsAll.filter((c) => c?.kind === 'action').map((c) => c.id), ...cellsAll.filter((c) => c?.kind === 'macro').flatMap((c) => macroOf(c)?.cmds.map((x) => x.id) ?? [])]);
     D.unplaced = D.buttonsAll.filter((id) => !onBars.has(id));
     const xs = Object.keys(D.bars).filter((b) => b.startsWith('xhb'));
     if (!xs.includes(xhbSet)) xhbSet = xs[0] ?? 'xhb1';
@@ -1487,6 +1588,19 @@
             elements: window.CfgParse.hudElements(a.records),
           };
           next.files['ADDON.DAT'] = `ホットバー ${Object.keys(a.hotbars).length} 本・ジョブゲージ ${Object.keys(next.hud.gauges).length} 個・HUD の部品 ${Object.keys(next.hud.elements).length} 個の配置`;
+        } else if (name === 'MACRO.DAT' || name === 'MACROSYS.DAT') {
+          // マクロ: /ac と /micon の行のアクション（ID）と対象だけを取り出す。題名や文の中身は読まない・残さない
+          const byName = new Map();
+          for (const [id, v] of Object.entries(D.known)) if (!byName.has(v[0])) byName.set(v[0], Number(id));
+          for (const [jb] of MD.jobList.map((j) => [j.abbr])) for (const a of Object.values(MD.jobs[jb].actions)) byName.set(a.name, a.id);
+          const { macros: list, stat } = window.CfgParse.parseMacro(buf, (n) => byName.get(n) ?? null);
+          next.macros = { ...(next.macros ?? {}), [name === 'MACRO.DAT' ? 'chr' : 'sys']: list };
+          const notes = [];
+          // 1 行も分からないときは、言語の違い（英語などのクライアント）を疑う
+          if (stat.unknownName && !stat.used) notes.push(`アクション名が 1 つも分かりませんでした（日本語クライアントのマクロだけ読めます）`);
+          else if (stat.unknownName) notes.push(`このツールにないアクションの行 ${stat.unknownName} 行は使いません`);
+          if (stat.otherMode) notes.push(`青魔道士・PvP の行 ${stat.otherMode} 行は使いません`);
+          next.files[name] = `アクションを使うマクロ ${list.filter(Boolean).length} 個。アクションの行だけ読み、文の中身は残しません${notes.length ? `。${notes.join('。')}` : ''}`;
         } else if (name === 'FFXIV.CFG') {
           const c = window.CfgParse.parseCfg(buf);
           if (c.width && c.height) { VIEW.gameW = c.width; VIEW.gameH = c.height; }
@@ -1494,7 +1608,7 @@
           if (c.deadArea != null) OPT.deadzone = Math.min(0.9, Math.max(0.05, c.deadArea));
           next.files['FFXIV.cfg'] = c.width ? `解像度 ${c.width}×${c.height}・HUD の大きさ ${c.uiScale ? c.uiScale * 100 + '%' : '不明'}・スティックの遊び ${c.deadArea ?? '不明'}` : '解像度の項目が見つかりません';
         } else {
-          results.push(`${f.name} − 読みません（対象は HOTBAR.DAT / KEYBIND.DAT / ADDON.DAT / FFXIV.cfg）`);
+          results.push(`${f.name} − 読みません（対象は HOTBAR.DAT / KEYBIND.DAT / ADDON.DAT / MACRO.DAT / MACROSYS.DAT / FFXIV.cfg）`);
           continue;
         }
         results.push(`${f.name} ✓`);
@@ -1627,7 +1741,7 @@
     drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); importFiles([...e.dataTransfer.files]); });
     s1.appendChild(drop);
     const files = [
-      ['HOTBAR.DAT', 'ホットバーの中身'], ['KEYBIND.DAT', 'キー（ホットバー・移動）'], ['ADDON.DAT', 'HUD の配置（ホットバー・ジョブゲージ）'], ['FFXIV.cfg', '解像度・HUD の大きさ・パッド'],
+      ['HOTBAR.DAT', 'ホットバーの中身'], ['KEYBIND.DAT', 'キー（ホットバー・移動）'], ['ADDON.DAT', 'HUD の配置（ホットバー・ジョブゲージ）'], ['MACRO.DAT', 'マクロ（/ac の行のアクションだけ）'], ['MACROSYS.DAT', '共有マクロ（1 つ上のフォルダ）'], ['FFXIV.cfg', '解像度・HUD の大きさ・パッド'],
     ];
     const cards = k.el('div', 'cfg-files');
     for (const [name, what] of files) {
