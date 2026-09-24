@@ -13,6 +13,10 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
 const actions = read('src/data/ffxiv/actions.json');
 const statuses = read('src/data/ffxiv/statuses.json');
+// 全件（敵へのデバフ・食事なども入る）。説明文の「」の名前が statuses.json にないとき（燕飛効果アップなど）に引く
+const statusesAll = read('src/data/ffxiv/statuses-all.json');
+// モックのジョブの決まり（mock/jobs.js の STATUS）に書いたステータスの名前。説明文に「」で出てこないもの（ケアルラ効果アップなど）もアイコンを引けるように
+const MOCK_STATUS_NAMES = new Set([...readFileSync(new URL('./jobs.js', import.meta.url), 'utf8').matchAll(/\{ name: '([^']+)'/g)].map((m) => m[1]));
 const jobs = read('src/data/ffxiv/jobs.json');
 const meta = read('src/data/ffxiv/meta.json');
 const jobGauges = read('src/data/ffxiv/job-gauges.json');
@@ -231,6 +235,8 @@ function buildJob(JOB, LEVEL) {
     // 演出用: 範囲の形（castType 1 単体 / 2 自分の周囲 / 3 前方扇 / 4 前方直線。説明文の「前方扇範囲」などと一致を確認済み）
     shape: a.castType,
     hostile: a.canTargetHostile,
+    // 対象にできるもの（自分・味方）。ターゲットの決め方に使う（敵にしか使えない技は敵のターゲットが要る）
+    toSelf: !!a.canTargetSelf, toParty: !!a.canTargetParty,
     range: a.range,
     crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
     effectRange: a.effectRange, // 範囲の大きさ（m）。自分の周囲の範囲なら半径
@@ -267,13 +273,22 @@ function buildJob(JOB, LEVEL) {
         if (a.primaryCost && a.primaryCost.type === 10) ref.add(a.primaryCost.value);
         for (const m of a.description.ja.matchAll(/「([^」]+)」/g)) names.add(m[1]);
       }
+      // ステータスのジョブ（statuses.json の jobs。抽出ツールがアクション・ClassJobCategory・同名のアクションから付ける）も使う。
+      // 同じ名前が複数あるとき（PvP 用など）は、アクションが参照するもの → ID の小さいもの を選ぶ
       const out = {};
+      const rank = (st) => (ref.has(st.id) ? 0 : 1) * 1e6 + st.id;
       for (const st of statuses) {
-        if (!st.iconPath || !(ref.has(st.id) || names.has(st.name.ja))) continue;
+        if (!st.iconPath || /^PvP/.test(st.name.ja)) continue;
+        if (!(ref.has(st.id) || names.has(st.name.ja) || st.jobs?.includes(JOB))) continue;
         const name = st.name.ja;
-        if (!out[name] || (ref.has(st.id) && !out[name].ref)) out[name] = { icon: `../public${st.iconPath}`, id: st.id, ref: ref.has(st.id) };
+        if (!out[name] || rank(st) < rank(out[name].st)) out[name] = { st };
       }
-      return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, v.icon]));
+      for (const st of statusesAll) {
+        const name = st.name?.ja;
+        if (!name || out[name] || !(names.has(name) || MOCK_STATUS_NAMES.has(name)) || !st.iconPath || /^PvP/.test(name)) continue;
+        out[name] = { st };
+      }
+      return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, v.st.maxStacks > 1 ? { icon: `../public${v.st.iconPath}`, max: v.st.maxStacks, base: v.st.icon } : `../public${v.st.iconPath}`]));
     })(),
     bars,
     gauges: { ...CfgParse.findGauges(addon.records, gauge.sizes), ...CfgParse.jobGaugeElements(addon.records, JOB, gauge.sizes) },
@@ -304,6 +319,7 @@ const out = {
   keybind: keybind.hotbar,
   move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
   camera: keybind.camera, // カメラ操作のキー（KEYBIND.DAT。修飾キー付き）
+  target: keybind.target, // ターゲットのキー（KEYBIND.DAT。パーティの 1〜8 人目・次の敵など）
   hud: {
     hotbars: addon.hotbars,
     // HUD レイアウトで動かせる部品（キャストバー・ターゲット情報・パラメーターバー・ステータス情報・パーティリストなど）

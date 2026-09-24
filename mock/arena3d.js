@@ -870,6 +870,18 @@
       ray.setFromCamera(ndc, camera);
       return ray.ray.intersectPlane(floorPlane, hit) ? { x: hit.x, y: hit.z } : null;
     }
+    // 画面の位置の人物（クリックでターゲットにする）: 足元から頭までの縦長の枠で当たりを見る。重なっていれば手前
+    function pick(px, py) {
+      let best = null;
+      for (const kind of ['player', 'boss', ...(S.hasNpc() ? ['tank'] : [])]) {
+        const e = S[kind], h = S.HEAD[kind], a = project(e.x, e.y, 0), b = project(e.x, e.y, h);
+        const w = Math.max(18, Math.abs(a.y - b.y) * (kind === 'boss' ? 0.42 : 0.3));
+        if (px < a.x - w || px > a.x + w || py < b.y - 10 || py > a.y + 10) continue;
+        const d = camera.position.distanceTo(v3.set(e.x, 0, e.y));
+        if (!best || d < best.d) best = { kind, d };
+      }
+      return best?.kind ?? null;
+    }
     function project(x, y, z = 0) {
       camUp.setFromMatrixColumn(camera.matrixWorld, 1);
       v3.set(x, 0, y).addScaledVector(camUp, z).project(camera);
@@ -1132,9 +1144,22 @@
       tsH.uniforms.uFocus.value = tsV.uniforms.uFocus.value = Math.max(0.15, Math.min(0.85, (ya + yb) / 2));
       tsH.uniforms.uBand.value = tsV.uniforms.uBand.value = Math.min(0.45, 0.2 + Math.abs(ya - yb) / 2);
 
+      placeTgtRing();
       if (quality === 'low') renderer.render(scene, camera);
       else composer.render();
     }
+
+    // 味方をターゲットしたときの足元の輪（敵は当たり判定の輪がそのまま目印）
+    const tgtRing = new T.Mesh(new T.RingGeometry(0.78, 1, 48), new T.MeshBasicMaterial({ color: 0x7fd4ff, transparent: true, opacity: 0.85, depthWrite: false, side: T.DoubleSide, blending: T.AdditiveBlending }));
+    tgtRing.rotation.x = -Math.PI / 2; tgtRing.renderOrder = 3; tgtRing.visible = false;
+    scene.add(tgtRing);
+    const placeTgtRing = () => {
+      const k = S.target;
+      tgtRing.visible = k === 'player' || (k === 'tank' && S.hasNpc());
+      if (!tgtRing.visible) return;
+      const e = S[k], pulse = 1 + Math.sin(time * 4) * 0.05;
+      tgtRing.position.set(e.x, 0.03, e.y); tgtRing.scale.setScalar(1.25 * pulse);
+    };
 
     buildStage(S.stage);
     setQuality('high');
@@ -1150,7 +1175,7 @@
       }
     }).catch(() => {});
     return {
-      render, resize, project, ground, setQuality, setStage: buildStage,
+      render, resize, project, ground, pick, setQuality, setStage: buildStage,
       debug: () => ({ stage: STG.id, calls: renderer.info.render.calls, tris: renderer.info.render.triangles, quality, cam: camera.position.toArray().map((v) => +v.toFixed(2)) }),
     };
   }

@@ -146,14 +146,17 @@
     const MOVE_CMDS = { MOVE_FORE: 'fore', MOVE_BACK: 'back', MOVE_LEFT: 'left', MOVE_RIGHT: 'right', MOVE_STRIFE_L: 'strafeL', MOVE_STRIFE_R: 'strafeR', JUMP: 'jump' };
     // カメラ（左右に回す・上下に傾ける・近づける / 離す・元に戻す）。修飾キー付きで持つ（サンプルは Ctrl+↑↓ で傾ける）
     const CAM_CMDS = { CAMERA_LEFT: 'left', CAMERA_RIGHT: 'right', CAM_TILT_UP: 'up', CAM_TILT_DOWN: 'down', CAMERA_ZOOMIN: 'zoomIn', CAMERA_ZOOMOUT: 'zoomOut', CAMERA_RESET: 'reset' };
+    // ターゲット（パーティの 1〜8 人目・次 / 前の敵・近くの敵・ターゲット解除相当なし）
+    const TARGET_CMDS = { TARGET_P1: 'p1', TARGET_P2: 'p2', TARGET_P3: 'p3', TARGET_P4: 'p4', TARGET_P5: 'p5', TARGET_P6: 'p6', TARGET_P7: 'p7', TARGET_P8: 'p8', TARGET_NEXT: 'next', TARGET_PREV: 'prev', TARGET_CLOSEST_ENEMY: 'closest', TARGET_LASTENEMY: 'lastEnemy', TARGET_TTOT: 'tot' };
+    const target = {};
     for (const m of text.matchAll(re)) {
-      if (CAM_CMDS[m[1]]) {
+      if (CAM_CMDS[m[1]] || TARGET_CMDS[m[1]]) {
         const keys = m[2].split(',').filter(Boolean).map((p) => {
           const [k, mod] = p.split('.').map((x) => parseInt(x, 16));
           const code = k ? vkToCode(k) : null;
           return code ? { code, shift: !!(mod & 1), ctrl: !!(mod & 2), alt: !!(mod & 4) } : null;
         }).filter(Boolean);
-        if (keys.length) camera[CAM_CMDS[m[1]]] = keys;
+        if (keys.length) (CAM_CMDS[m[1]] ? camera : target)[CAM_CMDS[m[1]] ?? TARGET_CMDS[m[1]]] = keys;
         continue;
       }
       if (MOVE_CMDS[m[1]]) {
@@ -177,7 +180,7 @@
       }).filter(Boolean);
       if (binds.length) (hotbar[bar] ??= Array(12).fill(null))[slot] = binds;
     }
-    return { hotbar, move, camera };
+    return { hotbar, move, camera, target };
   }
 
   // ---- ADDON.DAT（XOR なし。"ADDN" の後、32 バイトのレコード: 名前のハッシュ / X% / Y% / 倍率 / 識別 / 幅 / 高さ / 基準点と表示）----

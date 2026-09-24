@@ -50,19 +50,26 @@
     has: (k) => has(k), buff: (k, ms, stacks) => buff(k, ms, stacks), remove: (k) => remove(k),
     addLog: (c, t) => addLog(c, t), ev: (k, o) => ev(k, o), TARGET_BASE,
     // マクロで対象を決めたとき（<me> <2> など）は、「対象」の回復・バリア・軽減をその相手にする
-    heal: (who, frac) => Arena.heal(aimWho(who), frac), hot: (who, frac, sec) => Arena.hot(aimWho(who), frac, sec),
-    shield: (who, frac, sec) => Arena.shield(aimWho(who), frac, sec), mitigate: (who, pct, sec) => Arena.mitigate(aimWho(who), pct, sec),
+    heal: (who, frac) => Arena.heal(aimWho(who), frac), hot: (who, frac, sec, name) => Arena.hot(aimWho(who), frac, sec, name),
+    shield: (who, frac, sec, name) => Arena.shield(aimWho(who), frac, sec, name), mitigate: (who, pct, sec, name) => Arena.mitigate(aimWho(who), pct, sec, name),
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
   };
-  let forcedWho = null; // マクロの対象（'self' / 'npc'）。実行している間だけ
-  const aimWho = (who) => (forcedWho && who === 'low' ? forcedWho : who);
+  let actWho = null; // 使っている技の味方の対象（'self' / 'npc'）。効果が出る間だけ（詠唱のある技は詠唱の終わり）
+  const aimWho = (who) => (actWho && who === 'low' ? actWho : who);
   const J = window.MockJobs[JOB].create(R);
   const STATUS = J.STATUS;
   const TRACKED = J.tracked.map(([, k]) => k); // 維持率を見るステータス（結果のタイムラインにも出す）
   // アイコン: 抽出データのステータスを名前で引く（再抽出で風月などが入れば自動で画像になる。なければ文字の札）
-  const statusIcon = (meta) => D.statusIcons?.[meta.name] ?? (meta.sid ? D.statuses[meta.sid]?.icon : null) ?? null;
+  // ステータスのアイコン: 抽出データのステータス（名前で引く）→ sid → 同じ名前のアクションのアイコン。
+  // 重ねがけ（スタック）のあるものは、スタック数 n のアイコンが「元のアイコン番号 + n − 1」に並んでいる
+  const actionIconByName = (n) => Object.values(A).find((a) => a.name === n)?.icon ?? null;
+  function statusIcon(meta, stacks) {
+    const v = D.statusIcons?.[meta.name];
+    if (v && typeof v === 'object') return stacks > 1 ? v.icon.replace(/\d{6}\.png$/, `${String(v.base + Math.min(stacks, v.max) - 1).padStart(6, '0')}.png`) : v.icon;
+    return v ?? (meta.sid ? D.statuses[meta.sid]?.icon : null) ?? actionIconByName(meta.name) ?? null;
+  }
 
   const $ = (id) => document.getElementById(id);
   const stage = $('stage');
@@ -233,9 +240,9 @@
   const rangeOf = (a) => (!a.hostile || a.shape === 2 ? null : a.range === -1 ? Arena.POL.melee : a.range > 0 ? a.range : null);
   // 位置の条件（戦闘不能・射程）。kind は集計用。
   // 移動中に詠唱のある技を押すと、詠唱は始まり、すぐに中断される（実機でエラーの文言が見つからず、中断されるという記述があるため: GAME-55 仮）
-  function placeBlock(a) {
+  function placeBlock(a, who) {
     if (Arena.isDown()) return { msg: '戦闘不能中です', kind: 'down' };
-    const r = rangeOf(a);
+    const r = who === 'npc' || who === 'self' ? null : rangeOf(a);
     if (r != null) {
       const d = Arena.edgeDistance();
       if (d > r + 0.001) return { msg: `ターゲットが射程外です（${a.name}: 射程 ${r}m、あと ${(d - r).toFixed(1)}m）`, kind: 'range' };
@@ -332,7 +339,8 @@
     playFx(id, ok, pos, true, dmg);
   }
 
-  function execute(id, at) {
+  // who: 味方の対象（'self' / 'npc'）。回復などの「対象」はここへ（詠唱のある技は詠唱が終わるまで持っておく）
+  function execute(id, at, who = null) {
     const a = A[id];
     const free = !!J.freeUse?.(id); // リキャストを待たずに使える使い方（リタージー・オブ・ベルの再使用）: リキャストも始めない
     const prevT = S.t;
@@ -371,7 +379,7 @@
     if (ownCd(a) != null && !free) S.cds[ownCd(a)] = Math.max(S.cds[ownCd(a)] ?? -Infinity, at) + a.recastMs;
     const ct = castTimeOf(a);
     if (ct > 0) {
-      S.cast = { id, start: at, end: at + ct, ok, moving: Arena.isMoving() || Arena.isJumping(), snap: null };
+      S.cast = { id, start: at, end: at + ct, ok, moving: Arena.isMoving() || Arena.isJumping(), snap: null, who };
       S.lockUntil = at + ct + POLICY.castLockAfterMs;
       addLog('ok', `${a.name} の詠唱開始`);
       ev('詠唱開始', { action: a.name });
@@ -379,7 +387,8 @@
     } else {
       S.lockUntil = at + animLockOf(a);
       if (!a.isGcd) { S.lastOgcdLockEnd = S.lockUntil; S.lastOgcdAt = at; }
-      land(id, ok);
+      actWho = who === 'boss' ? null : who;
+      try { land(id, ok); } finally { actWho = null; }
     }
     S.t = Math.max(prevT, at);
   }
@@ -469,14 +478,49 @@
     run.i = j;
     if (run.i >= run.cmds.length) S.macro = null;
   }
-  // <mo> はパーティリストのマウスを乗せている行（自分 / 相方）。乗せていなければ通常の対象
-  let hoverWho = null;
-  for (const [sel, who] of [['#ptSelf', 'self'], ['#ptTank', 'npc']]) {
+  // ---------------- ターゲット ----------------
+  // 練習場の人物・パーティリストの行をクリックするとターゲットになる（'boss' / 'player' / 'tank'）。
+  // <mo> はマウスを乗せている人物（パーティリストの行・練習場の人物）
+  let hoverKind = null, hover3d = null;
+  for (const [sel, kind] of [['#ptSelf', 'player'], ['#ptTank', 'tank']]) {
     const el = document.querySelector(sel);
-    el?.addEventListener('pointerenter', () => { hoverWho = who; });
-    el?.addEventListener('pointerleave', () => { if (hoverWho === who) hoverWho = null; });
+    el?.addEventListener('pointerenter', () => { hoverKind = kind; });
+    el?.addEventListener('pointerleave', () => { if (hoverKind === kind) hoverKind = null; });
+    el?.addEventListener('pointerdown', (e) => { e.preventDefault(); setTarget(kind); });
   }
-  const whoOfTarget = (t) => (t === '<me>' || t === '<1>' ? 'self' : /^<[2-8]>$/.test(t ?? '') ? 'npc' : t === '<mo>' ? hoverWho : null);
+  function setTarget(k) {
+    if (k === 'tank' && !Arena.hasNpc()) return;
+    Arena.setTarget(k);
+  }
+  const KIND_WHO = { player: 'self', tank: 'npc' };
+  // 技の対象を決める（ゲームの決まり。抽出データの canTargetSelf / canTargetParty / canTargetHostile）:
+  //  敵にしか使えない技 → 敵のターゲットが要る / 味方に使える技 → ターゲットの味方。敵・ターゲットなしのときは自分（自分に使えるもの）
+  //  味方にしか使えない技（レイズ・救出）→ 味方のターゲットが要る。マクロの <me> <2> <mo> <t> はその相手
+  // 戻り値: { who: 'self' | 'npc' | 'boss' | null } か { err }
+  function targetFor(a, src, mt) {
+    let t = Arena.target();
+    if (src === 'macro' && mt) {
+      if (mt === '<me>' || mt === '<1>') t = 'player';
+      else if (mt === '<2>') { if (!Arena.hasNpc()) return { err: 'パーティメンバーがいません' }; t = 'tank'; }
+      else if (/^<[3-8]>$/.test(mt)) return { err: 'パーティメンバーがいません' };
+      else if (mt === '<mo>') { t = hoverKind ?? hover3d; if (!t) return { err: 'マウスオーバーの対象がいません' }; }
+      else if (mt === '<tt>') t = Arena.target() === 'boss' ? (Arena.hasNpc() && !Arena.isNpcDown() && ROLE !== 'tank' ? 'tank' : 'player') : Arena.target() ? 'boss' : null;
+    }
+    if (a.ground) return { who: null };
+    if (a.hostile && !a.toParty && !a.toSelf) {
+      if (t === 'boss') return { who: 'boss' };
+      return { err: t ? `${a.name}: ターゲットが正しくありません（敵をターゲットしてください）` : `${a.name}: ターゲットがいません（敵をターゲットしてください）` };
+    }
+    if (a.toParty || a.toSelf) {
+      if (t === 'tank' && a.toParty) {
+        if (Arena.distTo('tank') > (a.range > 0 ? a.range : 30)) return { err: `${a.name}: 対象が射程外です` };
+        return { who: 'npc' };
+      }
+      if (a.toSelf) return { who: 'self' };
+      return { err: `${a.name}: ターゲットが正しくありません（味方をターゲットしてください）` };
+    }
+    return { who: null };
+  }
   function press(baseId, src, target) {
     if (!live()) {
       // 開始前・終了後の入力は案内を 1 回だけ出す
@@ -501,7 +545,9 @@
     }
     const why = blocked(id);
     if (why) { reject(why); return false; }
-    const pb = placeBlock(a);
+    const tf = targetFor(a, src, target);
+    if (tf.err) { reject(tf.err, 'target'); return false; }
+    const pb = placeBlock(a, tf.who);
     if (pb) { reject(pb.msg, pb.kind); return false; }
     if (a.ground && src === 'macro' && target) {
       // マクロの地面指定: <me> = 自分の足元、<t> = 敵の足元、<mo> <gtoff> = マウスの位置（ターゲットサークルは出さない）
@@ -515,7 +561,8 @@
         return true;
       }
     }
-    if (a.ground && src !== 'pad' && src !== 'place') {
+    // 置いたあとにもう一度押すもの（リタージー・オブ・ベルの 2 回目 = 残りをまとめて回復）は、置き場所を選ばずにすぐ出す
+    if (a.ground && src !== 'pad' && src !== 'place' && !J.instantNow?.(id)) {
       if (aiming && aiming.baseId === baseId) { confirmAim(); return; }
       aiming = { baseId, id, r: aimRadius(a), range: a.range > 0 ? a.range : 30 };
       updateAim();
@@ -524,16 +571,15 @@
     }
     const ra = readyAt(a);
     if (ra <= S.t) {
-      forcedWho = src === 'macro' ? whoOfTarget(target) : null;
-      try { execute(id, S.t); } finally { forcedWho = null; }
+      execute(id, S.t, tf.who);
       return true;
     }
     const rc = recastLeft(a);
     if (src === 'macro') { reject(`${a.name}はまだ使用できません（マクロのアクションは先行入力されません）`, 'early'); return false; }
     // 先行入力: そのアクション自身のリキャストの残りが 0.5 秒以下なら入れておき、使えるようになった瞬間に出す。
     // 硬直や詠唱の残りは問わない（その間に押したアビリティは、終わった瞬間に出る）。地面指定のアクションは入らない
-    if (a.ground) { reject(`${a.name}: 地面指定のアクションは先行入力できません（使えるようになってから押す）`); return false; }
-    if (rc <= POLICY.queueMs) { S.queue = { baseId, at: S.t }; return true; }
+    if (a.ground && !J.instantNow?.(id)) { reject(`${a.name}: 地面指定のアクションは先行入力できません（使えるようになってから押す）`); return false; }
+    if (rc <= POLICY.queueMs) { S.queue = { baseId, at: S.t, who: tf.who }; return true; }
     const left = `GCD の残り ${(rc / 1000).toFixed(2)} 秒。先行入力は残り ${POLICY.queueMs / 1000} 秒から`;
     reject(S.cast ? `詠唱中のため使用できません（${left}）` : `このアクションはまだ使用できません（${left}）`, 'early');
     return false;
@@ -553,7 +599,9 @@
     // 詠唱完了（予定時刻で処理）
     if (S.cast && S.cast.end <= t1) {
       const c = S.cast; S.cast = null;
-      S.t = c.end; Arena.castEnd(); land(c.id, c.ok, c.snap);
+      S.t = c.end; Arena.castEnd();
+      actWho = c.who === 'boss' ? null : c.who;
+      try { land(c.id, c.ok, c.snap); } finally { actWho = null; }
     }
     // 先行入力の実行（実行可能になった時刻で処理）
     if (S.queue) {
@@ -561,9 +609,10 @@
       const id = resolve(S.queue.baseId);
       const ra = readyAt(A[id]);
       if (ra <= t1) {
+        const q = S.queue;
         S.queue = null; S.t = Math.max(t0, ra);
-        const why = blocked(id), pb = placeBlock(A[id]);
-        if (!why && !pb) execute(id, S.t); else reject(why ?? pb.msg, pb?.kind);
+        const why = blocked(id), pb = placeBlock(A[id], q.who);
+        if (!why && !pb) execute(id, S.t, q.who); else reject(why ?? pb.msg, pb?.kind);
       }
     }
     // マクロの待ちのあとの行（待ちが明けた時刻で処理）
@@ -1082,37 +1131,65 @@
   }
 
   // ---- ステータス（要素を作り置きし、残り秒だけ書き換える。毎秒作り直すと点滅して見えるため）----
-  const stEls = new Map();
-  function clearStatuses() { for (const r of stEls.values()) r.el.remove(); stEls.clear(); }
-  function makeStatus(k) {
-    const meta = STATUS[k];
-    const icon = statusIcon(meta);
+  // 置き場所ごとに要素を持つ: 自分のステータス・ターゲット・パーティリストの自分の行・相方の行
+  const stLists = new Map(); // 置き場所の要素 → Map(key → 表示)
+  function clearStatuses() { for (const m of stLists.values()) for (const r of m.values()) r.el.remove(); stLists.clear(); }
+  function makeStatus(meta, stacks) {
+    const icon = statusIcon(meta, stacks);
     const el = document.createElement('div');
     el.className = `st${meta.target ? ' debuff' : ''}`;
     el.title = meta.name;
     const ic = document.createElement('div');
     ic.className = icon ? 'ic' : `ic txt ${meta.cls ?? ''}`;
-    if (icon) { const img = document.createElement('img'); img.src = icon; img.alt = ''; ic.appendChild(img); } else ic.textContent = meta.name.slice(0, 2);
+    let img = null;
+    if (icon) { img = document.createElement('img'); img.src = icon; img.alt = ''; ic.appendChild(img); } else ic.textContent = meta.name.slice(0, 2);
     const stk = document.createElement('span'); stk.className = 'stk';
     ic.appendChild(stk);
     const t = document.createElement('div'); t.className = 't';
     el.append(ic, t);
-    return { el, t, stk, left: null, stacks: null };
+    return { el, t, stk, img, meta, left: null, stacks: null };
+  }
+  // items: [{ key, meta: { name, target?, cls?, sid? }, left（残り秒）, stacks? }]
+  function syncStatuses(host, items) {
+    if (!host) return;
+    let m = stLists.get(host);
+    if (!m) { m = new Map(); stLists.set(host, m); }
+    const alive = new Set();
+    for (const it of items) {
+      if (!(it.left > 0)) continue;
+      alive.add(it.key);
+      let r = m.get(it.key);
+      if (!r) { r = makeStatus(it.meta, it.stacks); m.set(it.key, r); host.appendChild(r.el); }
+      const left = Math.ceil(it.left);
+      if (left !== r.left) { r.left = left; r.t.textContent = left; r.el.classList.toggle('low', left <= 5); }
+      const stacks = it.stacks ?? '';
+      if (stacks !== r.stacks) {
+        r.stacks = stacks;
+        // スタック数ごとのアイコンがあれば差し替え（数字はアイコンに描いてある）。なければ右下に数字
+        const src = r.img && statusIcon(it.meta, stacks || 1);
+        const perStack = src && typeof D.statusIcons?.[it.meta.name] === 'object';
+        if (perStack) r.img.src = src;
+        r.stk.textContent = perStack ? '' : stacks;
+      }
+    }
+    for (const [k, r] of m) if (!alive.has(k)) { r.el.remove(); m.delete(k); }
   }
   function renderStatuses() {
-    const alive = new Set();
+    const self = [], target = [];
     for (const [k, v] of Object.entries(S.st)) {
       if (v.until <= S.t) continue;
-      alive.add(k);
-      let r = stEls.get(k);
-      if (!r) { r = makeStatus(k); stEls.set(k, r); (STATUS[k].target ? $('targetStatus') : $('selfStatus')).appendChild(r.el); }
-      const left = Math.ceil((v.until - S.t) / 1000);
-      if (left !== r.left) { r.left = left; r.t.textContent = left; r.el.classList.toggle('low', left <= 5); }
-      const stacks = v.stacks ?? '';
-      if (stacks !== r.stacks) { r.stacks = stacks; r.stk.textContent = stacks; }
+      (STATUS[k].target ? target : self).push({ key: k, meta: STATUS[k], left: (v.until - S.t) / 1000, stacks: v.stacks });
     }
-    for (const [k, r] of stEls) if (!alive.has(k)) { r.el.remove(); stEls.delete(k); }
+    // 回復役の効果（リジェネ・バリア・軽減）: かかっている人の行に出す
+    const party = (which) => (Arena.partyStatus?.(which) ?? []).map((x) => ({ key: `${x.kind}:${x.name}`, meta: { name: x.name, cls: x.kind === 'hot' ? 'fu' : 'mk' }, left: x.left }));
+    const mine = party('self');
+    syncStatuses($('selfStatus'), [...self, ...mine]);
+    const tk = Arena.target();
+    syncStatuses($('targetStatus'), tk === 'boss' ? target : tk === 'player' ? [...self, ...mine] : tk === 'tank' ? party('npc') : []);
+    syncStatuses($('ptSelfSt'), [...self, ...mine]);
+    syncStatuses($('ptTankSt'), hasNpcRow() ? party('npc') : []);
   }
+  const hasNpcRow = () => !$('ptTank')?.hidden;
 
   // 光る条件（ゲームデータに基づく）
   // 1. コンボ（ActionCombo）: 直前のコンボ技を受付時間内に使っていれば、その次の技が光る
@@ -1199,12 +1276,26 @@
       cb.classList.toggle('slide', S.cast.end - S.t <= POLICY.slideMs);
     } else cb.hidden = true;
 
-    // 敵の体力
-    const hpFrac = S.hpMax > 0 ? S.hp / S.hpMax : 1;
-    $('bossHpFill').style.width = `${hpFrac * 100}%`;
-    $('bossHpText').textContent = S.hpMax > 0 ? `${Math.ceil(S.hp).toLocaleString('ja-JP')}（${(hpFrac * 100).toFixed(1)}%）` : S.dmg > 0 ? `与ダメージ ${S.dmg.toLocaleString('ja-JP')}` : '100%';
-    // 敵の詠唱
-    const bc = S.phase === 'combat' ? Arena.bossCast(S.t) : null;
+    // ターゲット情報: 選んでいる相手（敵・相方・自分）の名前と HP。ターゲットがなければ出さない
+    const tk = Arena.target();
+    const tw = document.querySelector('.win.target');
+    tw.classList.toggle('none', !tk);
+    tw.classList.toggle('ally', tk === 'player' || tk === 'tank');
+    if (tk === 'boss') {
+      const hpFrac = S.hpMax > 0 ? S.hp / S.hpMax : 1;
+      $('targetName').textContent = 'からくり木人';
+      $('bossHpFill').style.width = `${hpFrac * 100}%`;
+      $('bossHpText').textContent = S.hpMax > 0 ? `${Math.ceil(S.hp).toLocaleString('ja-JP')}（${(hpFrac * 100).toFixed(1)}%）` : S.dmg > 0 ? `与ダメージ ${S.dmg.toLocaleString('ja-JP')}` : '100%';
+    } else if (tk) {
+      const h = tk === 'tank' ? Arena.tankHp() : Arena.hp();
+      $('targetName').textContent = tk === 'tank' ? (ROLE === 'tank' ? 'ヒーラー' : 'タンク') : 'あなた';
+      $('bossHpFill').style.width = `${h * 100}%`;
+      $('bossHpText').textContent = `${Math.round(h * 100)}%`;
+    }
+    $('ptSelf').classList.toggle('targeted', tk === 'player');
+    $('ptTank').classList.toggle('targeted', tk === 'tank');
+    // 敵の詠唱（敵をターゲットしているときだけ。ゲームと同じ）
+    const bc = S.phase === 'combat' && tk === 'boss' ? Arena.bossCast(S.t) : null;
     $('bossCast').hidden = !bc;
     if (bc) { $('bossCastName').textContent = bc.name; $('bossCastFill').style.width = `${bc.p * 100}%`; }
     const mech = S.mech && S.t < S.mech.until && OPT.hints ? S.mech : null;
@@ -1331,6 +1422,17 @@
     const tag = e.target?.tagName;
     if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
     const kid = keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey });
+    // ターゲットのキー（KEYBIND.DAT の TARGET_P1〜P8・TARGET_NEXT など）
+    const tgAct = !keymap.has(kid) && keyActOf(e, targetBinds());
+    if (tgAct) {
+      e.preventDefault();
+      if (!e.repeat) {
+        const tk = Arena.target();
+        const k = tgAct === 'p1' ? 'player' : tgAct === 'p2' ? 'tank' : /^p[3-8]$/.test(tgAct) ? null : tgAct === 'tot' ? (tk === 'boss' ? (Arena.hasNpc() && ROLE !== 'tank' ? 'tank' : 'player') : tk ? 'boss' : null) : 'boss';
+        if (k) setTarget(k);
+      }
+      return;
+    }
     const camAct = !keymap.has(kid) && camKeyOf(e);
     if (camAct) {
       e.preventDefault();
@@ -1360,6 +1462,11 @@
   // キーボード: KEYBIND.DAT のカメラ操作（サンプルは ←→ で左右、Ctrl+↑↓ で上下、Ctrl+Shift+End で自分の後ろへ）。パッド: 右スティック
   const CAM_RATE = { yaw: 2.4, pitch: 45, zoom: 1.9 }; // キー・スティックでの速さ（ラジアン/秒・度/秒・倍/秒）
   const camBinds = () => IMPORTED?.camera ?? D.camera ?? {};
+  const targetBinds = () => IMPORTED?.targetKeys ?? D.target ?? {};
+  function keyActOf(e, binds) {
+    for (const [act, bs] of Object.entries(binds)) if (bs.some((b) => b.code === e.code && b.shift === e.shiftKey && b.ctrl === e.ctrlKey && b.alt === e.altKey)) return act;
+    return null;
+  }
   const camCodes = () => new Set(Object.values(camBinds()).flat().filter((b) => !b.shift && !b.ctrl && !b.alt).map((b) => b.code));
   function camKeyOf(e) {
     for (const [act, binds] of Object.entries(camBinds())) {
@@ -1388,11 +1495,25 @@
     const r = stage.getBoundingClientRect();
     mousePos = { x: ((e.clientX - r.left) / r.width) * STAGE.w, y: ((e.clientY - r.top) / r.height) * STAGE.h };
   });
+  // 練習場の人物をクリック（動かさずに離す）でターゲット。マウスを乗せている人物は <mo> の相手
+  let downAt = null;
   for (const cv of [$('arena'), $('arena3d')]) {
+    const stagePos = (e) => { const r = stage.getBoundingClientRect(); return { x: ((e.clientX - r.left) / r.width) * STAGE.w, y: ((e.clientY - r.top) / r.height) * STAGE.h }; };
+    cv.addEventListener('pointermove', (e) => { const q = stagePos(e); hover3d = Arena.pickAt(q.x, q.y); cv.classList.toggle('hover-pick', !!hover3d); });
+    cv.addEventListener('pointerleave', () => { hover3d = null; });
+    cv.addEventListener('pointerup', (e) => {
+      if (e.button !== 0 || !downAt || aiming) return;
+      const moved = Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y);
+      downAt = null;
+      if (moved > 5) return;
+      const q = stagePos(e), k = Arena.pickAt(q.x, q.y);
+      if (k) setTarget(k);
+    });
     cv.addEventListener('pointerdown', (e) => {
       if (e.pointerType !== 'mouse') return;
       Au?.unlock();
       if (aiming) { e.preventDefault(); if (e.button === 0) confirmAim(); else cancelAim('置くのをやめました'); return; }
+      if (e.button === 0) downAt = { x: e.clientX, y: e.clientY };
       mouse.buttons = e.buttons;
       cv.setPointerCapture(e.pointerId);
       cv.classList.add('dragging');
@@ -1577,7 +1698,7 @@
           next.files['HOTBAR.DAT'] = `${MD.jobList.map((j) => `${j.name} ${Object.keys(next.hotbarSets[MD.jobs[j.abbr].jobSet] ?? {}).length}`).join('・')} 本・共有 ${Object.keys(next.hotbarSets[0] ?? {}).length} 本`;
         } else if (name === 'KEYBIND.DAT') {
           const kb = window.CfgParse.parseKeybind(buf);
-          next.keybind = kb.hotbar; next.move = kb.move;
+          next.keybind = kb.hotbar; next.move = kb.move; next.camera = kb.camera; next.targetKeys = kb.target;
           next.files['KEYBIND.DAT'] = `ホットバー ${Object.keys(kb.hotbar).length} 本分のキー・移動キー ${['fore', 'left', 'back', 'right'].map((k) => keyLabel(kb.move?.[k])).join('')}`;
         } else if (name === 'ADDON.DAT') {
           const a = window.CfgParse.parseAddon(buf);

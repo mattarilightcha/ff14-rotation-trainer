@@ -21,7 +21,7 @@
     <!-- ==================== HUD ==================== -->
     <!-- ターゲット情報（敵の詠唱バーを含む） -->
     <section class="win target" aria-label="ターゲット">
-      <div class="target-name"><span class="lv">Lv100</span> からくり木人</div>
+      <div class="target-name"><span class="lv">Lv100</span> <span id="targetName">からくり木人</span></div>
       <div class="hp"><div class="hp-fill" id="bossHpFill"></div><span class="hp-text" id="bossHpText">100%</span></div>
       <div class="boss-cast" id="bossCast" hidden>
         <div class="bc-name" id="bossCastName"></div>
@@ -38,11 +38,13 @@
         <img class="pt-job" id="ptSelfIcon" alt="">
         <div class="pt-main"><div class="pt-name"><span class="pt-lv">Lv100</span>あなた</div><div class="pt-hp"><div class="pt-fill" id="ptSelfHp"></div></div></div>
         <div class="pt-num" id="ptSelfNum">100</div>
+        <div class="pt-st status-row" id="ptSelfSt"></div>
       </div>
       <div class="pt-row" id="ptTank">
         <img class="pt-job" id="ptTankIcon" alt="">
         <div class="pt-main"><div class="pt-name"><span class="pt-lv">Lv100</span>タンク</div><div class="pt-hp"><div class="pt-fill" id="ptTankHp"></div></div></div>
         <div class="pt-num" id="ptTankNum">100</div>
+        <div class="pt-st status-row" id="ptTankSt"></div>
       </div>
     </section>
 

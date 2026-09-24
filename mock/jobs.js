@@ -82,18 +82,18 @@
       const i = d.search(/ＨＰを(全)?回復/);
       R.heal(supportWho(d, i, e.party), e.heal === 'full' ? 1 : e.heal * HEAL_K * up);
     }
-    if (e.hot && !o.skipHot) R.hot(supportWho(d, d.indexOf('継続回復'), e.party), e.hot.potency * HEAL_K * up, e.hot.sec);
+    if (e.hot && !o.skipHot) R.hot(supportWho(d, d.indexOf('継続回復'), e.party), e.hot.potency * HEAL_K * up, e.hot.sec, a.name);
     // バリア:「回復力N相当のダメージを軽減」「最大ＨＰのN％分のダメージを軽減」
     let m = /回復力(\d+)相当のダメージを軽減/.exec(d);
-    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) * HEAL_K * up, secAfter(d, m.index));
+    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) * HEAL_K * up, secAfter(d, m.index), a.name);
     m = /最大ＨＰの(\d+)％分のダメージを軽減/.exec(d);
-    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) / 100, secAfter(d, m.index));
+    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) / 100, secAfter(d, m.index), a.name);
     // 被ダメージ軽減（ステータスの付与はそのまま。練習場の被ダメージを減らす）
     const re = /被ダメージを(\d+)％軽減/g;
     let r;
     while ((r = re.exec(d))) {
       if (/効果：対象の被ダメージ/.test(d.slice(Math.max(0, r.index - 12), r.index + 4))) continue; // 別のステータスの説明（ナイトの堅守など）
-      R.mitigate(supportWho(d, r.index, false), Number(r[1]) / 100, secAfter(d, r.index));
+      R.mitigate(supportWho(d, r.index, false), Number(r[1]) / 100, secAfter(d, r.index), a.name);
     }
   }
 
@@ -433,7 +433,7 @@
         caressReady: { name: 'ディヴァインカレス実行可' },
         lilybell: { name: 'リタージー・オブ・ベル' },
         surecast: { name: '堅実魔' },
-        freecure: { name: '迅速ケアルラ' },
+        freecure: { name: 'ケアルラ効果アップ' }, // ゲーム内の名前（英語 Freecure）
         plenary: { name: 'インドゥルゲンティア' },
         thinAir: { name: 'シンエアー' },
       };
@@ -461,11 +461,12 @@
         charges: descCharges(A), // テトラグラマトン・ディヴァインベニゾン・シンエアー「最大チャージ数：2」
         prepull: new Set([ID.SWIFT]),
         comboStarters: new Set(),
-        procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（迅速ケアルラの間光る）
+        procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（ケアルラ効果アップの間光る）
         dot: { key: 'dia' },
         initState(s) { s.lily = 0; s.blood = 0; s.lilyT = 0; s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
         // リタージー・オブ・ベルの効果時間中の再使用（残りのスタックで回復して消える）は、リキャストを待たずに使える（説明文「効果時間中に再使用すると」）
         freeUse: (id) => id === ID.LILYBELL && S().bell > 0,
+        instantNow: (id) => id === ID.LILYBELL && S().bell > 0,
         gaugeCols: [['リリー', (s) => s.lily], ['ブラッドリリー', (s) => s.blood]],
         tracked: [['ディア', 'dia', '#9ad8ff', '切れる前（残り 3 秒ほど）に付け直す'], ['神速魔', 'pom', '#fff0a8', '120 秒ごとに。グレアジャ 3 回をこの中に']],
         // 神速魔: 魔法のキャストタイムとリキャストタイムを 20% 短縮（説明文）
@@ -497,7 +498,7 @@
           if (id === ID.TEMPERANCE) R.buff('temperance', 20000);
           if (id === ID.PLENARY) R.buff('plenary', 10000);
           if (id === ID.THIN) R.buff('thinAir', 12000);
-          if (id === ID.CURE && Math.random() < 0.15) { R.buff('freecure', 15000); R.addLog('ok', '迅速ケアルラ（次のケアルラの消費 MP が 0）'); } // 発動確率15％
+          if (id === ID.CURE && Math.random() < 0.15) { R.buff('freecure', 15000); R.addLog('ok', 'ケアルラ効果アップ（次のケアルラの消費 MP が 0）'); } // 発動確率15％
           if (id === ID.CURE2) R.remove('freecure');
           if (id === ID.ASYLUM) {
             // アサイラム: 地面に回復の範囲を置く（範囲は抽出データの effectRange。3 秒ごとに中の味方を回復）

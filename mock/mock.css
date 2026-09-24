@@ -52,6 +52,10 @@ button { font: inherit; }
 .wname { position: absolute; transform: translate(-50%, -100%); white-space: nowrap; font-size: 14px; font-weight: 700; letter-spacing: .05em; text-shadow: var(--outline), 0 0 6px rgba(0,0,0,.8); }
 .wname.boss { color: #ffb48a; }
 .wname.tank { color: #a9d8ff; font-size: 12px; font-weight: 600; }
+.wname .cursor { visibility: hidden; }
+.wname.tgt .cursor { visibility: visible; }
+.wname.self { color: #d8f0ff; font-size: 12px; font-weight: 600; }
+.wname.self .cursor, .wname.tank .cursor { color: #7fd4ff; }
 .wname .cursor { display: block; text-align: center; font-size: 12px; color: #ff6a3c; line-height: 1; margin-bottom: 1px; animation: bob 1.1s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-3px); } }
 
@@ -89,6 +93,15 @@ button { font: inherit; }
 .target { left: 50%; top: 14px; transform: translateX(-50%); width: 440px; padding: 7px 12px 6px; }
 .target-name { font-size: 15px; text-shadow: var(--outline); display: flex; align-items: baseline; gap: 6px; }
 .target-name .lv { color: var(--gold); font-size: 12px; }
+.target.none { visibility: hidden; }
+/* ターゲット情報は押す物がないので、クリックを下の練習場へ通す（人物をクリックしてターゲットにできるように） */
+.win.target { pointer-events: none; }
+.target.ally .hp-fill { background: linear-gradient(#f0ffd8, #b6ec7e 30%, #6cc446 65%, #2f7a24); box-shadow: 0 0 6px rgba(120, 220, 90, .5); }
+.target.ally .target-name { color: #bfe6ff; }
+/* パーティリストのターゲット中の行（ゲームと同じく明るい帯） */
+.pt-row { cursor: pointer; }
+.pt-row.targeted::before { content: ""; position: absolute; inset: 0 -6px; border-radius: 4px; background: linear-gradient(90deg, rgba(255, 214, 120, .28), rgba(255, 214, 120, .05)); box-shadow: inset 0 0 0 1px rgba(255, 220, 140, .55); pointer-events: none; }
+#arena3d.hover-pick, #arena.hover-pick { cursor: pointer; }
 .hp { position: relative; height: 10px; margin: 5px 0 7px; border-radius: 999px; background: linear-gradient(#050505, #1e1e1e); box-shadow: 0 0 0 1px #000, 0 0 0 2px rgba(214, 186, 128, .35), inset 0 1px 2px rgba(0, 0, 0, .9); }
 .hp-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: 999px; background: linear-gradient(#ffe2d6, #ff9a7a 30%, #e8553a 65%, #9a2410); box-shadow: 0 0 6px rgba(255, 110, 70, .6); transition: width .25s; }
 .hp-text { position: absolute; right: 2px; top: -18px; font-size: 13px; font-weight: 700; color: #fff; text-shadow: var(--edge); font-variant-numeric: tabular-nums; }
@@ -104,7 +117,11 @@ button { font: inherit; }
 @keyframes mech-in { from { opacity: 0; transform: translateY(-3px); } }
 /* パーティリスト */
 .party { left: 16px; top: 50px; width: 208px; padding: 5px 8px; }
-.pt-row { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+.pt-row { position: relative; display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+/* パーティリストのステータス（ゲームと同じく行の右に並べる。アイコンの下に残り秒） */
+.pt-st.status-row { position: absolute; left: calc(100% + 4px); top: 50%; transform: translateY(-50%); min-height: 0; gap: 2px; flex-wrap: nowrap; }
+.pt-st .st { width: 26px; font-size: 11px; }
+.pt-st .st .ic, .pt-st .st .ic img { width: 20px; height: 26px; }
 .pt-job { width: 24px; height: 24px; flex: none; filter: drop-shadow(0 1px 1px #000); }
 .pt-main { flex: 1; min-width: 0; }
 .pt-name { font-size: 12px; text-shadow: var(--outline); white-space: nowrap; }
@@ -127,6 +144,8 @@ button { font: inherit; }
 .st .ic.txt.mk { background: linear-gradient(160deg, #a7e8ff, #3f86b0 55%, #1d3e57); }
 .st.debuff .ic.txt { background: linear-gradient(160deg, #ff9a8a, #b33a2e 55%, #5a1712); }
 .st.low .t { color: var(--warn); }
+.fly.heal { color: #c4ffc8; --glow: #34c865; }
+.fly.heal.hot { font-size: 14px; opacity: .92; animation-duration: .9s; }
 .st .stk { position: absolute; right: -4px; bottom: -3px; font-size: 12px; font-weight: 800; color: #fff; text-shadow: var(--outline); writing-mode: horizontal-tb; }
 .buffs { right: 16px; top: 58px; width: 262px; }
 

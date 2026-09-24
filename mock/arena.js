@@ -74,7 +74,7 @@
   const TANK_ANGLE = -Math.PI / 2 - 0.55;
   const tank = { x: 0, y: -6.2, angle: TANK_ANGLE, face: Math.PI / 2, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null };
   let opts = { tank: true, mech: 'normal', guide: true, seed: 1, durationMs: 120000, tankSkill: 'good', stage: 'dojo', markers: null, role: 'melee', job: 'SAM' };
-  let hots = []; // 継続回復（リジェネなど）: { who, frac, until, next }
+  let hots = []; // 継続回復（リジェネなど）: { e（かけた相手）, frac, until, next, name }
   // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）: { kind, x, y, r, until（試合の時刻）, frac, next, dying, endAt, ringAt, pops（弾けた鈴の花の時刻）}
   let zones = [], simNow = 0;
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
@@ -92,7 +92,9 @@
   const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
   let SPR = null;
-  let overlay = null, bossName = null, tankName = null;
+  let overlay = null, bossName = null, tankName = null, selfName = null;
+  // ターゲット: 'boss'（敵）/ 'player'（自分）/ 'tank'（相方）/ null。名前の上の ▼ と、味方なら足元の輪で示す
+  let target = 'boss';
   let view = '3d', quality = 'high', R3 = null, r3err = null, canvas2d = null, canvas3d = null;
   let stageW = 1280, stageH = 720, pixelRatio = 1;
 
@@ -102,8 +104,9 @@
     SPR = window.MockSprites.build();
     R2D.init(canvas2d);
     bossName = document.createElement('div'); bossName.className = 'wname boss'; bossName.innerHTML = '<span class="cursor">▼</span>からくり木人';
-    tankName = document.createElement('div'); tankName.className = 'wname tank'; tankName.textContent = 'タンク';
-    overlay.append(bossName, tankName);
+    tankName = document.createElement('div'); tankName.className = 'wname tank'; tankName.innerHTML = '<span class="cursor">▼</span><span class="nm">タンク</span>';
+    selfName = document.createElement('div'); selfName.className = 'wname self'; selfName.innerHTML = '<span class="cursor">▼</span><span class="nm">あなた</span>';
+    overlay.append(bossName, tankName, selfName);
     setView(o.view ?? view, o.quality ?? quality);
   }
 
@@ -169,11 +172,11 @@
     Object.assign(boss, { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null, dead: 0, act: null, casting: false, atkT: 0 });
     Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
-    hots = []; zones = [];
+    hots = []; zones = []; target = 'boss';
     for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; }
     placeTank(true);
     if (!bossHasTank()) boss.face = Math.PI / 2;
-    tankName.textContent = npcHealer() ? 'ヒーラー' : 'タンク';
+    tankName.querySelector('.nm').textContent = npcHealer() ? 'ヒーラー' : 'タンク';
     cam.x = player.x; cam.y = player.y - 2; cam.shake = 0;
     schedule = buildSchedule(); telegraphs = []; fx = []; parts = []; castGlow = null;
     for (const f of flies) f.el.remove();
@@ -247,7 +250,15 @@
     if (player.down > 0) { player.down -= dtMs; if (player.down <= 0) { player.hp = 0.6; emit('revive'); } }
     else if (live && opts.role === 'melee') player.hp = Math.min(1, player.hp + POL.regen * dt); // 近接: ヒーラーの回復の代わりに少しずつ戻る
     // 継続回復（リジェネなど。3 秒ごと）
-    for (const h of hots) while (h.next <= clock && h.next <= h.until) { h.next += 3; healNow(h.who, h.frac, true); }
+    // かけた相手に固定（かけた後で HP の低い方に移ったりしない）。回復のたびに小さく「+N%」を出す
+    for (const h of hots) {
+      while (h.next <= clock && h.next <= h.until) { h.next += 3; healOne(h.e, h.frac, 'tick'); }
+      // かかっている間、足元から緑の粒がときどき昇る（リジェネがかかっていると分かるように）
+      if (h.until > clock && Math.random() < vdt * 6) {
+        const a = rand(0, Math.PI * 2), r = rand(0.3, 0.9);
+        spark({ x: h.e.x + Math.cos(a) * r, y: h.e.y + Math.sin(a) * r, z: rand(0, 0.4), vz: rand(0.8, 1.6), g: 0, drag: 0.6, life: rand(0.7, 1.1), max: 1.1, col: Math.random() < 0.5 ? '#b9ffc8' : '#5fe08a', size: 1, shape: 2, rot: rand(0, 6.28), spin: rand(-2, 2) });
+      }
+    }
     simNow = simT;
     updateZones(simT, live, vdt);
     hots = hots.filter((h) => h.next <= h.until);
@@ -559,20 +570,41 @@
   }
   // 相手: 'party' 全員 / 'self' 自分 / 'npc' 相方（マクロの <2> など）/ それ以外 HP の低い方
   function partyOf(who) { return who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : who === 'npc' ? (hasNpc() ? [tank] : [player]) : [lowest()]; }
-  function shieldOn(who, frac, sec) {
+  // name: ステータスの名前（パーティリストのアイコン表示に使う）
+  function shieldOn(who, frac, sec, name = 'バリア') {
     for (const e of partyOf(who)) {
       if (!e || (e === tank && tank.down > 0)) continue;
-      e.shield = Math.max(e.shield > 0 && e.shieldUntil > clock ? e.shield : 0, frac); e.shieldUntil = clock + sec;
+      e.shield = Math.max(e.shield > 0 && e.shieldUntil > clock ? e.shield : 0, frac); e.shieldUntil = clock + sec; e.shieldName = name;
       fx.push({ type: 'ring', at: e, col: ['#f4fbff', '#8fd0ff'], t: 0, dur: 600, r0: 0.4, r1: 1.8, thick: true });
       flyText('バリア', 'buff', e, 0.2);
     }
   }
-  function mitigateOn(who, pct, sec) {
+  function mitigateOn(who, pct, sec, name = '被ダメージ軽減') {
     for (const e of partyOf(who)) {
       if (!e || (e === tank && tank.down > 0)) continue;
-      (e.mits ??= []).push({ pct, until: clock + sec });
+      e.mits = (e.mits ?? []).filter((m) => m.until > clock && m.name !== name); // 同じ効果はかけ直し
+      e.mits.push({ pct, until: clock + sec, name });
       fx.push({ type: 'ring', at: e, col: ['#fffbe8', '#b8e0ff'], t: 0, dur: 520, r0: 0.3, r1: 1.4 });
     }
+  }
+  // quiet: true = 表示なし、'tick' = 継続回復の 1 回（小さい数字と粒）
+  function hotOn(who, frac, sec, name = '継続回復') {
+    for (const e of partyOf(who)) {
+      if (!e || (e === tank && (tank.hp <= 0 || tank.down > 0))) continue;
+      hots = hots.filter((h) => !(h.e === e && h.name === name)); // かけ直しは上書き
+      hots.push({ e, frac, until: clock + sec, next: clock + 3, name });
+      fx.push({ type: 'ring', at: e, col: COLORS.heal, t: 0, dur: 600, r0: 0.3, r1: 1.6 });
+      flyText(name, 'buff', e, 0.2);
+    }
+  }
+  // パーティリストに出す、相方・自分に付いている回復役の効果（継続回復・バリア・軽減）。until は秒（練習場の時計）
+  function partyStatus(which) {
+    const e = which === 'npc' ? tank : player;
+    const out = [];
+    for (const h of hots) if (h.e === e && h.until > clock) out.push({ name: h.name, left: h.until - clock, kind: 'hot' });
+    if (e.shield > 0.001 && e.shieldUntil > clock) out.push({ name: e.shieldName ?? 'バリア', left: e.shieldUntil - clock, kind: 'shield' });
+    for (const m of e.mits ?? []) if (m.until > clock) out.push({ name: m.name, left: m.until - clock, kind: 'mit' });
+    return out;
   }
   function healOne(e, frac, quiet) {
     if (!e || (e === player && player.down > 0) || (e === tank && (tank.hp <= 0 || tank.down > 0))) return false;
@@ -581,6 +613,7 @@
     const before = e.hp;
     e.hp = Math.min(1, e.hp + frac);
     healFx(e, quiet);
+    if (quiet === 'tick' && e.hp - before > 0.0005) flyText(`+${Math.round((e.hp - before) * 1000) / 10}%`, 'heal hot', e, 0.05);
     if (!quiet) { flyText(`+${Math.round((e.hp - before) * 100)}%`, 'heal', e, 0.1); fx.push({ type: 'pillar', at: e, col: COLORS.heal, t: 0, dur: 650 }); }
     return true;
   }
@@ -955,6 +988,9 @@
     bossName.hidden = boss.dead >= 2;
     placeName(tankName, tank, HEAD.tank + 0.35);
     tankName.hidden = !hasNpc();
+    placeName(selfName, player, HEAD.player + 0.35 + player.z);
+    selfName.hidden = target !== 'player';
+    bossName.classList.toggle('tgt', target === 'boss'); tankName.classList.toggle('tgt', target === 'tank'); selfName.classList.toggle('tgt', target === 'player');
     for (const f of flies) placeFly(f);
     void phase;
   }
@@ -965,7 +1001,7 @@
     get stage() { return STG; }, get markers() { return opts.markers ?? STG.markers; },
     get opts() { return opts; }, get telegraphs() { return telegraphs; }, get fx() { return fx; }, get parts() { return parts; },
     get castGlow() { return castGlow; }, get guideNeed() { return guideNeed; }, get clock() { return clock; }, get SPR() { return SPR; },
-    get zones() { return zones; }, BELL_H, get aim() { return aim; },
+    get zones() { return zones; }, BELL_H, get aim() { return aim; }, get target() { return target; },
     poseOf, inside, angDiff, hasNpc, setName,
   };
 
@@ -1301,7 +1337,12 @@
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
     tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
     hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,
-    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: (who, frac, sec) => { hots.push({ who, frac, until: clock + sec, next: clock + 3 }); },
+    // ターゲット（'boss' / 'player' / 'tank' / null）。pickAt: 画面の位置の人物
+    setTarget: (k) => { target = k === 'tank' && !hasNpc() ? null : k; }, target: () => target,
+    pickAt: (px, py) => (view3d() ? R3.pick(px, py) : null),
+    screenOf: (k) => { const e = { player, tank, boss }[k]; return project(e.x, e.y, HEAD[k] * 0.25); }, // 動作確認用: 人物の腰の画面位置（舞台の px）
+    distTo: (k) => (k === 'tank' ? dist(player, tank) : k === 'boss' ? Math.max(0, dist(player, boss) - POL.hitbox) : 0),
+    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, partyStatus,
     placeZone, zoneHeal, endZone, setAim: (o) => { aim = o; },
     // 画面の位置（舞台の px）→ 床の位置（m）
     groundAt: (px, py) => (view3d() ? R3.ground(px, py) : R2D.ground(px, py)), zones: () => zones.filter((z) => !z.dying).map((z) => ({ kind: z.kind, x: z.x, y: z.y, r: z.r })),
