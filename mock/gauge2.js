@@ -302,6 +302,80 @@
     };
   }
 
-  const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm };
+  // ---------------- 吟遊詩人: 詩歌ゲージ（JobHudBRD0）----------------
+  // ゲーム内の画面（歌ごと・歌なし）を見て合わせた:
+  //   五線譜（#73 金の五線）: 歌の経過時間の分だけ、左から五線が歌の色に染まる（#71 に五線の絵を歌の色で重ねる）。残り秒は #4
+  //   左の竪琴（#74 の子 #75）: メヌエット = 翼の竪琴（パーツ 2）・バラード = 月の竪琴（0）・パイオン = 一角獣の竪琴（1）。歌がないときは #72（合わせた絵）
+  //   詩心: メヌエットは青白い矢じり 3 つ（#60〜#62。部品 1009 の #5 が点いた絵）、パイオンは金の音符 4 つ（#55〜#58。部品 1008 の #6）
+  //   コーダ（#7 の S 字の枠）: #18 バラード・#19 パイオン・#20 メヌエット。付いていればパーツリスト 4 の 3〜5（ピンク・橙・緑の宝石）
+  //   ソウルボイス（#30 の塗り #3・#4 を 124px で切る。数字 #24）
+  const SONG_COLOR = { wm: 'sepia(1) saturate(5) hue-rotate(55deg) brightness(1.05)', mb: 'sepia(1) saturate(4) hue-rotate(235deg) brightness(1.15)', ap: 'sepia(1) saturate(7) hue-rotate(-12deg) brightness(1.15)' };
+  const LYRE = { wm: 2, mb: 0, ap: 1 };
+  const CODA = { mb: { node: 18, lit: 3, dark: 22 }, ap: { node: 19, lit: 4, dark: 23 }, wm: { node: 20, lit: 5, dark: 24 } };
+  const RN = { normal: 2, simple: 77, fill: 71, staff: 73, num: 4, wmMarks: [60, 61, 62], apMarks: [55, 56, 57, 58], sv: 30, svNum: 24 };
+  const SONG_W = 160, SV_W = 124;
+  function brd(G) {
+    const L = G.layouts.JobHudBRD0;
+    const K = U.build(L, G.textures);
+    const k = (id) => K.get(id);
+    const P1 = partsOf(L, 1), P4 = partsOf(L, 4), tex = G.textures.JobHudBRD0;
+    const fillImg = K.img(String(RN.fill)), lyreImg = K.img('75');
+    let simple = false, prev = {};
+    // 演出用の光・線は隠し、形の部品だけ見せる
+    // #32（五線の上の白い音符）は歌い始めの演出の部品なので隠す
+    for (const id of [3, 5, 6, 31, 32, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 59, 63, 65, 76, 9, 10, 11, 12, 13, 14]) set(k(id), { opacity: 0 });
+    for (const id of [64, 41, 74]) set(k(id), { opacity: 1 });
+    set(k(RN.staff), { opacity: 1 });
+    for (const n of RN.wmMarks) for (const c of [2, 3, 4, 6]) set(k(`${n}/${c}`), { opacity: 0 });
+    for (const n of RN.apMarks) for (const c of [2, 3, 4, 5, 7]) set(k(`${n}/${c}`), { opacity: 0 });
+    for (const c of Object.values(CODA)) { const f = c.node - 3; for (const q of [3, 4, 5, 6]) set(k(`${f}/${q}`), { opacity: 0 }); }
+    usePart(fillImg, tex, P1[6]);
+    const num = k(RN.num); if (num) { set(num, { opacity: 1 }); num.classList.add('g2-num'); }
+    k(RN.simple).hidden = true;
+    function apply(st, instant) {
+      const song = st.song?.k ?? null, left = song ? Math.max(0, st.song.until - st.t) : 0, el = song ? Math.min(1, 1 - left / 45000) : 0;
+      set(k(RN.fill), { clipPath: clipW(Math.round(SONG_W * el), SONG_W), opacity: song ? 1 : 0, filter: song ? `${SONG_COLOR[song]} drop-shadow(0 0 2px rgba(255,255,255,.6))` : 'none' });
+      const sec = song ? String(Math.ceil(left / 1000)) : '';
+      if (sec !== prev.sec && num) num.textContent = sec;
+      if (instant || song !== prev.song) {
+        if (song) usePart(lyreImg, tex, P1[LYRE[song]]);
+        set(k(75), { opacity: song ? 1 : 0 }); set(k(72), { opacity: song ? 0 : 1 });
+        if (!instant && song) anim(k(75), [{ transform: 'scale(1.12)', filter: 'brightness(1.8)' }, { transform: 'none', filter: 'none' }], { duration: 500 });
+      }
+      const rep = st.rep ?? 0;
+      if (instant || rep !== prev.rep || song !== prev.song) {
+        RN.wmMarks.forEach((n, i) => { set(k(n), { opacity: song === 'wm' ? 1 : 0 }); set(k(`${n}/5`), { opacity: i < rep ? 1 : 0 }); set(k(`${n}/7`), { opacity: 1 }); });
+        RN.apMarks.forEach((n, i) => { set(k(n), { opacity: song === 'ap' ? 1 : 0 }); set(k(`${n}/6`), { opacity: i < rep ? 1 : 0 }); set(k(`${n}/8`), { opacity: 1 }); });
+      }
+      const sv = Math.max(0, Math.min(100, st.sv ?? 0));
+      if (instant || sv !== prev.sv) {
+        const w = Math.round((SV_W * sv) / 100);
+        for (const c of [3, 4]) set(k(`${RN.sv}/${c}`), { clipPath: clipW(w, SV_W) });
+        set(k(`${RN.sv}/2`), { opacity: 0 });
+        const n2 = k(`${RN.svNum}/2`); if (n2) n2.textContent = String(sv);
+        if (!instant && sv > (prev.sv ?? 0)) anim(k(`${RN.sv}/3`), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 350 });
+      }
+      const codas = st.codas ?? {};
+      const ck = ['wm', 'mb', 'ap'].map((c) => (codas[c] ? 1 : 0)).join('');
+      if (instant || ck !== prev.ck) {
+        for (const [c, d] of Object.entries(CODA)) {
+          const img = K.img(String(d.node)), on = !!codas[c];
+          usePart(img, tex, on ? P4[d.lit] : P1[d.dark]);
+          if (img) { img.style.left = on ? '3px' : '0'; img.style.top = on ? '3px' : '0'; img.style.position = 'absolute'; }
+          set(k(d.node), { opacity: on ? 1 : 0.45 });
+          if (!instant && on && !(prev.codas ?? {})[c]) anim(k(d.node), [{ transform: 'scale(1.6)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 450 });
+        }
+      }
+      prev = { song, rep, sv, ck, sec, codas: { ...codas } };
+    }
+    function setSimple(v) { simple = !!v; }
+    apply({ t: 0 }, true);
+    return {
+      windows: [{ name: 'JobHudBRD0', label: '詩歌ゲージ', el: K.el, w: K.w, h: K.h }],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm, BRD: brd };
   window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
 })();

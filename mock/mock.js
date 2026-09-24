@@ -61,6 +61,16 @@
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
     get who() { return actWho; }, hpOf: (who) => Arena.hpOf(who),
+    // 継続ダメージを自分で持つジョブ（吟遊詩人の 2 つの毒）: 1 回分。mult は付けたときの与ダメージ上昇
+    get mult() { return dmgMult(); },
+    dotTick(potency, mult, name) {
+      const dmg = dealDamage(potency, mult);
+      Arena.dotTick(dmg); Au?.dot();
+      ev('継続ダメージ', { action: name, potency, dmg });
+      return dmg;
+    },
+    // リキャストを縮める（吟遊詩人の賢人のバラードの詩心: ハートブレイクショットのリキャスト −7.5 秒）
+    cdShift(id, ms) { const a = A[id], g = a && ownCd(a); if (g != null && S.cds[g] != null) S.cds[g] -= ms; },
     // ジョブの決まりが出すダメージ（アーサリースターの爆発など）。威力 → ダメージ（与ダメージ上昇込み）
     hit(potency, name) {
       if (!(potency > 0)) return 0;
@@ -182,7 +192,9 @@
   // 威力: 通常・コンボ時・背面／側面（方向指定が成功したとき）・「〜時威力」（そのステータス中）
   function potencyOf(a, ok, pos) {
     const p = a.pot;
-    if (!p || p.base == null || J.noHit?.(a.id)) return 0; // 使ったときには攻撃しない技（アーサリースターは爆発のときに攻撃する）
+    if (J.noHit?.(a.id)) return 0;
+    const ov0 = J.potOverride?.(a); if (ov0 != null) return ov0 * (J.potMult?.(a) ?? 1); // 状態で威力が変わる技（吟遊詩人のピッチパーフェクト・エイペックスアローなど）
+    if (!p || p.base == null) return 0; // 使ったときには攻撃しない技（アーサリースターは爆発のときに攻撃する）
     const combo = ok && a.comboFrom.length > 0;
     let v = combo && p.combo != null ? p.combo : p.base;
     if (pos?.ok && pos.need === 'rear') v = combo ? p.comboRear ?? v : p.rear ?? v;
@@ -253,7 +265,8 @@
   }
 
   // 射程（抽出データ: range -1 は近接＝仮の値 POL.melee、正の値は m。自分中心の範囲技は射程なし）
-  const rangeOf = (a) => (!a.hostile || a.shape === 2 ? null : a.range === -1 ? Arena.POL.melee : a.range > 0 ? a.range : null);
+  // 射程 -1 はオートアタックの射程: 近接は当たり判定の外側から数 m、遠隔（吟遊詩人など）は 25m
+  const rangeOf = (a) => (!a.hostile || a.shape === 2 ? null : a.range === -1 ? (ROLE === 'ranged' ? 25 : Arena.POL.melee) : a.range > 0 ? a.range : null);
   // 位置の条件（戦闘不能・射程）。kind は集計用。
   // 移動中に詠唱のある技を押すと、詠唱は始まり、すぐに中断される（実機でエラーの文言が見つからず、中断されるという記述があるため: GAME-55 仮）
   function placeBlock(a, who) {
@@ -345,7 +358,7 @@
     const potency = potencyOf(a, ok, pos);
     const mult = snap?.mult ?? dmgMult();
     const dmg = potency > 0 ? dealDamage(potency, mult) : 0;
-    if (a.pot?.dot) S.dot = { next: S.t + 3000, until: S.t + a.pot.dot.sec * 1000, potency: a.pot.dot.potency, mult, name: a.name };
+    if (a.pot?.dot && !J.ownDots) S.dot = { next: S.t + 3000, until: S.t + a.pot.dot.sec * 1000, potency: a.pot.dot.potency, mult, name: a.name };
     J.effects(id, ok);
     const combo = ok && a.comboFrom.length > 0;
     addLog('ok', `${a.name}${combo ? '（コンボ）' : ''}${dmg ? `  ${dmg.toLocaleString('ja-JP')}` : ''}`);
@@ -647,7 +660,7 @@
         if (mv) S.tl.move.push({ from: S.t, to: null });
         else { const m = S.tl.move[S.tl.move.length - 1]; if (m && m.to == null) m.to = S.t; }
       }
-      if (!Arena.isDown() && Arena.edgeDistance() > Arena.POL.melee) S.stats.outRangeMs += dt;
+      if (!Arena.isDown() && Arena.edgeDistance() > (ROLE === 'melee' ? Arena.POL.melee : 25)) S.stats.outRangeMs += dt;
     }
     // 継続ダメージ（3 秒ごと。間隔は仮 GAME-56。付けたときのバフで計算）
     if (S.dot && S.t >= S.dot.next && S.dot.next <= S.dot.until && S.phase === 'combat') {
@@ -1660,7 +1673,8 @@
   }
   // マクロの中身（読み込んだ MACRO.DAT / MACROSYS.DAT から。このジョブで使えるアクションだけ）
   function macroOf(cell) {
-    const src = cell.no >= 256 ? IMPORTED?.macros?.sys : IMPORTED?.macros?.chr;
+    const mac = IMPORTED?.macros ?? D.macros; // 読み込んだ MACRO.DAT がなければサンプルのマクロ
+    const src = cell.no >= 256 ? mac?.sys : mac?.chr;
     const raw = src?.[cell.no >= 256 ? cell.no - 256 : cell.no];
     if (!raw) return null;
     const up = (id) => { while (D.upgrade[id]) id = D.upgrade[id]; return id; };

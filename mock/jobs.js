@@ -1028,5 +1028,200 @@
     },
   };
 
-  window.MockJobs = { SAM, PLD, WHM, AST, BLM };
+  // ---------------- 吟遊詩人 ----------------
+  // 説明文から:
+  //   歌（旅神のメヌエット・賢人のバラード・軍神のパイオン）: 45 秒。歌っている間「詩心」が継続的に付く（発動確率 80%）。歌うと「〜のコーダ」
+  //     メヌエットの詩心: ピッチパーフェクト（詩心 1/2/3 で威力 100/220/360。最大 3）
+  //     バラードの詩心: ハートブレイクショット（レイン・オブ・デス）のリキャスト −7.5 秒
+  //     パイオンの詩心: ウェポンスキルのリキャスト 4% 短縮（最大 4）
+  //   エンピリアルアロー: 歌っていれば詩心が付く。エイペックスアロー: ソウルボイス 20 以上。威力 140〜700（消費量が多いほど）、80 以上でブラストアロー実行可
+  //   ホークアイ（バーストショット・コースティックバイト・ストームバイト・アイアンジョー 35%）でリフルジェントアロー。
+  //   乱れ撃ち: リフルジェントアローが 3 回分のダメージ＋レゾナンスアロー実行可。アイアンジョー: 2 つの継続ダメージを付け直す
+  //   光神のフィナーレ: コーダの種類 1/2/3 で与ダメージ 2/4/6%（20 秒）＋光神のアンコール実行可（威力 700/800/1100）
+  // 仮（説明文に数値がない: GAME-69）: 詩心の判定は 3 秒ごと。詩心 1 回でソウルボイス +5（最大 100）。継続ダメージは 3 秒ごと。
+  //   ダイレクトヒット・クリティカル（バトルボイス・旅神のメヌエット・軍神のパイオンの発動率）は計算しない
+  const BRD = {
+    abbr: 'BRD',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        BURST: 16495, REFULGENT: 7409, CAUSTIC: 7406, STORM: 7407, IRONJAWS: 3560, APEX: 16496, BLAST: 25784, WM: 3559, MB: 114, AP: 116,
+        PITCH: 7404, EMPYREAL: 3558, SIDEWINDER: 3562, HEARTBREAK: 36975, RAIN: 117, RAGING: 101, BARRAGE: 107, BV: 118, FINALE: 25785,
+        RESONANT: 36976, ENCORE: 36977, LADON: 25783, SHADOWBITE: 16494, TROUBADOUR: 7405, MINNE: 7408,
+      };
+      const SONGS = { [ID.WM]: 'wm', [ID.MB]: 'mb', [ID.AP]: 'ap' };
+      const SONG_NAME = { wm: '旅神のメヌエット', mb: '賢人のバラード', ap: '軍神のパイオン' };
+      const DOTS = { [ID.CAUSTIC]: 'caustic', [ID.STORM]: 'storm' };
+      const STATUS = {
+        caustic: { name: 'コースティックバイト', target: true, tracked: true },
+        storm: { name: 'ストームバイト', target: true, tracked: true },
+        hawk: { name: 'ホークアイ' },
+        raging: { name: '猛者の撃', tracked: true },
+        barrage: { name: '乱れ撃ち' },
+        bv: { name: 'バトルボイス' },
+        finale: { name: '光神のフィナーレ' },
+        resonantReady: { name: 'レゾナンスアロー実行可' },
+        encoreReady: { name: '光神のアンコール実行可' },
+        blastReady: { name: 'ブラストアロー実行可' },
+        wm: { name: '旅神のメヌエット' },
+        mb: { name: '賢人のバラード' },
+        ap: { name: '軍神のパイオン' },
+        troubadour: { name: 'トルバドゥール' },
+        minne: { name: '地神のミンネ' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const SONG_MS = 45000, TICK = 3000;
+      const hawkProc = (id) => (id === ID.BURST || id === ID.CAUSTIC || id === ID.STORM || id === ID.IRONJAWS || id === ID.LADON ? 0.35 : 0);
+      // 詩心（歌の継続的な効果・エンピリアルアロー）
+      function repertoire(why) {
+        const s = S(), song = s.song?.k;
+        if (!song) return;
+        if (s.sv >= 100) s.stats.svOver += 5;
+        s.sv = Math.min(100, s.sv + 5);
+        if (song === 'wm') { if (s.rep >= 3) { s.stats.repOver++; R.addLog('warn', '詩心があふれました（ピッチパーフェクトを 3 で撃つ）'); } s.rep = Math.min(3, s.rep + 1); }
+        if (song === 'ap') s.rep = Math.min(4, s.rep + 1);
+        if (song === 'mb') R.cdShift(ID.HEARTBREAK, 7500);
+        void why;
+      }
+      function endSong() {
+        const s = S();
+        if (!s.song) return;
+        R.remove(s.song.k); s.song = null; s.rep = 0;
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // ハートブレイクショット「最大チャージ数：3」
+        prepull: new Set([ID.RAGING, ID.BV]),
+        comboStarters: new Set(),
+        procStatus: {},
+        dot: { key: 'caustic' },
+        ownDots: true, // 継続ダメージが 2 つ（コースティックバイト・ストームバイト）なので自分で持つ
+        initState(s) { s.song = null; s.rep = 0; s.sv = 0; s.codas = { wm: false, mb: false, ap: false }; s.encore = 0; s.dots = {}; s.songT = 0; s.stats.repOver = 0; s.stats.svOver = 0; s.stats.hawkLost = 0; },
+        gaugeCols: [['歌', (s) => s.song?.k ?? ''], ['詩心', (s) => s.rep], ['ソウルボイス', (s) => s.sv], ['コーダ', (s) => Object.entries(s.codas).filter(([, v]) => v).map(([k]) => k).join('/')]],
+        tracked: [['コースティックバイト', 'caustic', '#c8f0a0', 'アイアンジョーで 2 つまとめて付け直す'], ['ストームバイト', 'storm', '#a0e0ff', ''], ['猛者の撃', 'raging', '#ffb080', '120 秒ごと']],
+        // 軍神のパイオンの詩心: ウェポンスキルのリキャスト 4% × 詩心
+        speed: (a) => (a && a.isGcd && S().song?.k === 'ap' ? 1 - 0.04 * S().rep : 1),
+        comboFree: () => false,
+        // 旅神のメヌエットを歌っている間は、メヌエットのボタンがピッチパーフェクトに変わる
+        resolve: (id) => (id === ID.WM && S().song?.k === 'wm' ? ID.PITCH : tooltipResolve(R, J, id)),
+        blocked(id) {
+          const s = S();
+          if ((id === ID.REFULGENT || id === ID.SHADOWBITE) && !has('hawk') && !has('barrage')) return '「ホークアイ」か「乱れ撃ち」の効果中ではありません';
+          if (id === ID.PITCH && (s.song?.k !== 'wm' || s.rep < 1)) return '旅神のメヌエットの詩心がありません';
+          if (id === ID.APEX && s.sv < 20) return `ソウルボイスが足りません（必要 20 / 現在 ${s.sv}）`;
+          if (id === ID.BLAST && !has('blastReady')) return '「ブラストアロー実行可」の効果中ではありません';
+          if (id === ID.RESONANT && !has('resonantReady')) return '「レゾナンスアロー実行可」の効果中ではありません';
+          if (id === ID.ENCORE && !has('encoreReady')) return '「光神のアンコール実行可」の効果中ではありません';
+          if (id === ID.FINALE && !Object.values(s.codas).some(Boolean)) return 'コーダシンボルがありません（歌うと付く）';
+          if (SONGS[id] && s.phase !== 'combat') return '戦闘中ではありません';
+          return null;
+        },
+        castMs: () => 0,
+        // 威力が状態で変わる技（説明文）
+        potOverride(a) {
+          const s = S();
+          if (a.id === ID.PITCH) return [0, 100, 220, 360][s.rep] ?? 0;
+          if (a.id === ID.APEX) return Math.round(140 + (Math.max(20, s.sv) - 20) / 80 * 560);
+          if (a.id === ID.ENCORE) return [0, 700, 800, 1100][s.encore] ?? 700;
+          if (a.id === ID.REFULGENT && has('barrage')) return (a.pot?.base ?? 280) * 3; // 乱れ撃ち: 3 回分のダメージ
+          if (a.id === ID.SHADOWBITE && has('barrage')) return 300;
+          return null;
+        },
+        dmgMult: () => (has('finale') ? 1 + S().finalePct / 100 : 1),
+        effects(id) {
+          const a = A[id], s = S();
+          tooltipEffects(R, J, a, true, {});
+          // ホークアイ（リフルジェントアロー・シャドウバイトは、ホークアイがあれば使い、なければ乱れ撃ちを使う）
+          if (id === ID.REFULGENT || id === ID.SHADOWBITE) { if (has('barrage')) R.remove('barrage'); else R.remove('hawk'); }
+          const pr = hawkProc(id);
+          if (pr && Math.random() < pr) { if (has('hawk')) s.stats.hawkLost++; R.buff('hawk', 30000); }
+          // 継続ダメージ（付けたときの与ダメージ上昇で計算）
+          if (DOTS[id]) { const k = DOTS[id]; s.dots[k] = { until: s.t + a.pot.dot.sec * 1000, next: s.t + TICK, potency: a.pot.dot.potency, mult: R.mult, name: a.name }; R.buff(k, a.pot.dot.sec * 1000); }
+          if (id === ID.IRONJAWS) for (const k of ['caustic', 'storm']) if (s.dots[k] && s.dots[k].until > s.t) { const d = A[k === 'caustic' ? ID.CAUSTIC : ID.STORM].pot.dot; s.dots[k].until = s.t + d.sec * 1000; s.dots[k].mult = R.mult; R.buff(k, d.sec * 1000); }
+          // 歌
+          if (SONGS[id]) {
+            endSong();
+            const k = SONGS[id];
+            s.song = { k, until: s.t + SONG_MS }; s.songT = 0; s.codas[k] = true; s.rep = 0;
+            R.buff(k, SONG_MS);
+            Au()?.surge();
+          }
+          if (id === ID.EMPYREAL) repertoire('エンピリアルアロー');
+          if (id === ID.PITCH) s.rep = 0;
+          if (id === ID.APEX) { if (s.sv >= 80) R.buff('blastReady', 10000); s.sv = 0; }
+          if (id === ID.BLAST) R.remove('blastReady');
+          if (id === ID.BARRAGE) { R.buff('barrage', 10000); R.buff('resonantReady', 30000); }
+          if (id === ID.RESONANT) R.remove('resonantReady');
+          if (id === ID.FINALE) {
+            const n = Object.values(s.codas).filter(Boolean).length;
+            s.finalePct = [0, 2, 4, 6][n]; s.encore = n; s.codas = { wm: false, mb: false, ap: false };
+            R.buff('finale', 20000); R.buff('encoreReady', 30000);
+            R.addLog('ok', `光神のフィナーレ: コーダ ${n} 種類（与ダメージ ${s.finalePct}%）`);
+          }
+          if (id === ID.ENCORE) R.remove('encoreReady');
+          if (id === ID.BV) R.buff('bv', 20000);
+          if (id === ID.TROUBADOUR) { R.mitigate('party', 0.15, 15, a.name); R.buff('troubadour', 15000); }
+          if (id === ID.MINNE) { R.mark('party', a.name, 15, { healUp: 0.15 }); R.buff('minne', 15000); }
+        },
+        tick(dt) {
+          const s = S();
+          // 継続ダメージ
+          for (const k of Object.keys(s.dots)) {
+            const d = s.dots[k];
+            while (d.next <= s.t && d.next <= d.until) { d.next += TICK; if (s.phase === 'combat') R.dotTick(d.potency, d.mult, d.name); }
+            if (d.until < s.t) delete s.dots[k];
+          }
+          // 歌の終わりと詩心（3 秒ごとに 80%）
+          if (s.song) {
+            if (s.t >= s.song.until) { R.addLog('sys', `${SONG_NAME[s.song.k]}が終わりました`); endSong(); return; }
+            s.songT += dt;
+            while (s.songT >= TICK) { s.songT -= TICK; if (Math.random() < 0.8) repertoire('歌'); }
+          }
+        },
+        highlightOk: () => true,
+        glow(id) {
+          const s = S();
+          if (id === ID.REFULGENT || id === ID.SHADOWBITE) return has('hawk') || has('barrage');
+          if (id === ID.PITCH) return s.song?.k === 'wm' && s.rep >= 3;
+          if (id === ID.APEX) return s.sv >= 80;
+          if (id === ID.BLAST) return has('blastReady');
+          if (id === ID.RESONANT) return has('resonantReady');
+          if (id === ID.ENCORE) return has('encoreReady');
+          if (id === ID.IRONJAWS) return ['caustic', 'storm'].some((k) => s.dots[k] && s.dots[k].until - s.t < 6000);
+          return false;
+        },
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => (id === ID.APEX || id === ID.BLAST ? 'namikiri' : id === ID.CAUSTIC ? 'shoha' : id === ID.STORM ? 'setsu' : id === ID.ENCORE || id === ID.FINALE ? 'holy' : id === ID.REFULGENT || id === ID.RESONANT ? 'iai' : 'steel'),
+        fxPower: (id) => (id === ID.BLAST || id === ID.ENCORE || id === ID.RESONANT ? 1.5 : 1),
+        fxCount: () => 1,
+        castColor: () => 'steel',
+        castPower: 0.4,
+        gcdColor: (id) => (id === ID.REFULGENT ? '#ffe08a' : id === ID.APEX || id === ID.BLAST ? '#8ff0ff' : id === ID.IRONJAWS ? '#c8f0a0' : null),
+        hotOgcd: (id) => id === ID.PITCH || id === ID.EMPYREAL || id === ID.HEARTBREAK || id === ID.SIDEWINDER,
+        sfx(id, info, Au) {
+          if (info.kind === 'buff') { if (SONGS[id] || id === ID.FINALE) Au.surge(); else Au.buff(); return; }
+          Au.finisher(id === ID.APEX || id === ID.BLAST ? 'setsu' : 'getsu'); Au.hit(info.power);
+        },
+        tipCost: (id) => (id === ID.APEX ? ['ソウルボイス', 20] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.repOver) issues.push({ loss: s.stats.repOver * 2, rate: s.stats.repOver > 2 ? 'bad' : 'ok', title: `詩心のあふれ ${s.stats.repOver} 回`, advice: 'メヌエット中は詩心 3 でピッチパーフェクトを撃つ' });
+          if (s.stats.svOver) issues.push({ loss: Math.round(s.stats.svOver / 5), rate: s.stats.svOver > 20 ? 'bad' : 'ok', title: `ソウルボイスのあふれ ${s.stats.svOver}`, advice: '100 になる前にエイペックスアロー（80 以上ならブラストアローも）' });
+          if (s.stats.hawkLost) issues.push({ loss: s.stats.hawkLost * 2, rate: 'ok', title: `ホークアイの上書き ${s.stats.hawkLost} 回`, advice: 'ホークアイが付いたら、次の GCD でリフルジェントアロー' });
+          metrics.push({ label: '詩心のあふれ', value: `${s.stats.repOver} 回`, rate: Math.max(0, 100 - s.stats.repOver * 20) });
+          if (!s.stats.repOver && s.stats.gcds > 10) goods.push('詩心のあふれなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.repOver * 10 - s.stats.svOver), posAdvice: '', comboAdvice: '光っている技（リフルジェントアロー・ピッチパーフェクト 3・アイアンジョー）を', castAdvice: '', rangeAdvice: '射程（25m）の中にいる' };
+        },
+        howto: '吟遊詩人: 旅神のメヌエット → 賢人のバラード → 軍神のパイオンの順に歌う。バーストショットを撃ち、ホークアイ（光る）でリフルジェントアロー。2 つの毒はアイアンジョーでまとめて付け直す。メヌエットの詩心 3 でピッチパーフェクト、ソウルボイス 80 以上でエイペックスアロー → ブラストアロー。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'BRD'),
+        gaugeDefault: { JobHudBRD0: { x: 70, y: 66, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD };
 })();

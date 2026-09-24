@@ -3,7 +3,7 @@
 // mock/mock-data.js（file:// でも読めるよう window に載せる形）を書き出す。
 // ジョブごとの分は MOCK_DATA.jobs[略称]、共通の分（キー・HUD の配置・画面）は MOCK_DATA の直下に置く。
 // 実行: node mock/build-mock-data.mjs
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
@@ -25,7 +25,7 @@ const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -119,9 +119,19 @@ function buildJob(JOB, LEVEL) {
   const jobIds = new Set(job.actionIds);
 
   // 下位版 → 上位版（対象レベルで使えるもの）
+  // upgradesFrom は系統の元の技を指す（サンダガもハイサンダーも「サンダー」）。同じ元を持つ技はまとめて、
+  // 対象レベルで使える一番レベルの高い技に変える（サンダー・サンダガ → ハイサンダー）
   const upgrade = {};
+  const lines = new Map();
   for (const a of actions) {
-    if (a.upgradesFrom && jobIds.has(a.id) && a.level <= LEVEL) upgrade[a.upgradesFrom] = a.id;
+    if (!a.upgradesFrom || !jobIds.has(a.id) || a.level > LEVEL) continue;
+    if (!lines.has(a.upgradesFrom)) lines.set(a.upgradesFrom, []);
+    lines.get(a.upgradesFrom).push(a);
+  }
+  for (const [base, list] of lines) {
+    const top = list.reduce((m, a) => (a.level > m.level ? a : m));
+    upgrade[base] = top.id;
+    for (const a of list) if (a.id !== top.id) upgrade[a.id] = top.id;
   }
   const resolve = (id) => {
     let cur = id;
@@ -133,6 +143,7 @@ function buildJob(JOB, LEVEL) {
   const used = new Set();
   const toCell = (s) => {
     if (!s) return null;
+    if (s.type === 7) return { kind: 'macro', no: s.id }; // マクロ（中身はサンプルの MACRO.DAT から。下の macros）
     if (s.type !== 1) return { kind: 'other', type: s.type };
     if (!byId.has(s.id)) return { kind: 'missing', id: s.id };
     const id = resolve(s.id);
@@ -319,6 +330,14 @@ const out = {
   // 練習場の相方（見た目とパーティリスト）: 自分がタンクでなければナイト、タンクなら白魔道士
   npc: { tank: jobInfo('PLD'), healer: jobInfo('WHM') },
   keybind: keybind.hotbar,
+  // サンプルのマクロ（samples/hotbar-hud/MACRO.DAT）。/ac の行のアクション ID・対象・待ち時間だけ（題名や文は入れない）
+  macros: (() => {
+    if (!existsSync(join(root, 'samples/hotbar-hud/MACRO.DAT'))) return null;
+    const jobIdSet = new Set(JOBS.flatMap(([abbr]) => jobs.find((j) => j.abbreviation.en === abbr).actionIds));
+    const byName = new Map();
+    for (const a of actions) if (a.name?.ja && (!byName.has(a.name.ja) || jobIdSet.has(a.id))) byName.set(a.name.ja, a.id);
+    return { chr: CfgParse.parseMacro(sample('MACRO.DAT'), (n) => byName.get(n) ?? null).macros };
+  })(),
   move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
   camera: keybind.camera, // カメラ操作のキー（KEYBIND.DAT。修飾キー付き）
   target: keybind.target, // ターゲットのキー（KEYBIND.DAT。パーティの 1〜8 人目・次の敵など）
