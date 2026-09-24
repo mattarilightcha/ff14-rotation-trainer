@@ -992,6 +992,11 @@
           du.uTime.value = time; du.uAlpha.value = fade; du.uPulse.value = pulse;
           continue;
         }
+        if (z.kind === 'ley') {
+          // 黒魔紋: 足元の紫の輪（範囲の輪の描き方）
+          u.uC0.value.copy(col('#f2e8ff')); u.uC1.value.copy(col('#8a5cff'));
+          continue;
+        }
         if (z.kind === 'star') {
           // アーサリースター: 床に範囲の輪、上に星図の玉が浮かんでゆっくり回る。巨星は金で大きく、脈打つ
           const giant = !!z.giant, gk = giant ? Math.min(1, (S.clock - (z.giantAt ?? S.clock)) / 0.6) : 0;

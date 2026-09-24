@@ -652,10 +652,10 @@
     for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; } // 置き直すと前のものは消える
     // リタージー・オブ・ベルは自分の横（自分が攻撃を受けると鳴り、20m 以内を回復するため）。アサイラムは自分と相方の間
     // o.at: クリックで選んだ場所（なければ自動: パッドなど）
-    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : zonePlace(r);
+    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : kind === 'ley' ? { x: player.x, y: player.y } : zonePlace(r);
     const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [] };
     zones.push(z);
-    const col = kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : COLORS.dome;
+    const col = kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : kind === 'ley' ? COLORS.getsu : COLORS.dome;
     fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col, t: 0, dur: 750, r0: 0.5, r1: kind === 'bell' ? 4 : r, thick: true });
     if (kind === 'bell') {
       // すずらんが生える: 足元から水色の光の粒が噴き上がる
@@ -724,6 +724,13 @@
         for (let i = 0; i < n; i++) {
           const a = rand(0, Math.PI * 2), rr = Math.sqrt(Math.random()) * z.r * 0.95;
           spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.05, vz: rand(0.5, 1.4), g: 0, drag: 0.2, life: rand(1.2, 2), max: 2, col: i % 3 ? '#b8ffd0' : '#ffffff', size: 1, sway: 0.4, rot: rand(0, 6.28) });
+        }
+      } else if (z.kind === 'ley') {
+        // 黒魔紋: 紫の光の粒が紋の縁からゆっくり昇る
+        const n = Math.round(vdt * 8 + Math.random() * 0.6);
+        for (let i = 0; i < n; i++) {
+          const a = rand(0, Math.PI * 2), rr = z.r * rand(0.85, 1);
+          spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.05, vz: rand(0.4, 1.1), g: 0, drag: 0.2, life: rand(1, 1.6), max: 1.6, col: i % 3 ? '#b890ff' : '#ffffff', size: 1, rot: rand(0, 6.28) });
         }
       } else if (z.kind === 'star') {
         // 星のまわりを回る光の粒（巨星は金）
@@ -1375,6 +1382,7 @@
     heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
     // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
     zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
+    inZone: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(player.x - z.x, player.y - z.y) <= z.r; },
     zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },
     // ジョブの決まりが出すダメージ（アーサリースターの爆発など）: 敵の上に技名とダメージ
     hitText: (name, dmg) => flyText(name, '', boss, 0.1, null, dmg),

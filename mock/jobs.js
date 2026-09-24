@@ -811,5 +811,222 @@
     },
   };
 
-  window.MockJobs = { SAM, PLD, WHM, AST };
+  // ---------------- 黒魔道士 ----------------
+  // 説明文から: アストラルファイア（AF）とアンブラルブリザード（UB）の入れ替え（ファイア系で AF、ブリザド系で UB。逆の属性は解除）、
+  //   ファイガ・ハイファイラ・フレア・デスペアは AF を最大に、ブリザガ・ハイブリザラは UB を最大に。トランスは逆の 1 段階目に。
+  //   アンブラルハート（ブリザジャ・フリーズ・マナフォントで 3 つ）: ファイア系の AF による消費 MP の増加を防ぐ。フレアは全部使って消費 MP 2/3
+  //   サンダー系魔法実行可: AF / UB が無い状態でどちらかになったとき、またはもう一方に変わったとき。ファイア（40%）とパラドックス（AF 時）でファイガ効果アップ
+  //   ファイジャで アストラルソウル +1、フレアで +3。最大（6）でフレアスター。AF が切れるとなくなる
+  //   パラドックス: パラドックスシンボルが必要。UB 時は消費 MP 0。マナフォントで付く。ファイアとブリザドがパラドックスに変わる
+  //   黒魔紋: 自身の足元に。魔法のキャストタイムとリキャストタイムを 15% 短縮（中にいる間）。三連魔: 3 回まで詠唱なし
+  // 仮（説明文に数値がない。特性・ステータスの効果量は未抽出: GAME-68）:
+  //   威力の倍率 AF1/2/3: 火 1.4/1.6/1.8・氷 0.9/0.8/0.7、UB1/2/3: 火 0.9/0.8/0.7
+  //   消費 MP: AF 中の火 ×2（アンブラルハートがあれば 1 つ使って ×1）・AF 中の氷 ×0.5/0.25/0、UB 中の火 ×0.5/0.25/0
+  //   MP の回復: 3 秒ごとに 200（AF 中は 0）。UB1/2/3 は さらに 3000/4500/6000
+  //   ポリグロット: AF か UB の間 30 秒ごとに 1 つ（最大 3）。パラドックスシンボル: AF3 と UB3（ハート 3 つ）の入れ替えで付く
+  const BLM = {
+    abbr: 'BLM',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        FIRE: 141, BLIZZ: 142, TRANSPOSE: 149, THUNDER: 36986, THUNDER2: 36987, FIRE3: 152, BLIZZ3: 154, FIRE4: 3577, BLIZZ4: 3576, FREEZE: 159, FLARE: 162,
+        HFIRE2: 25794, HBLIZZ2: 25795, DESPAIR: 16505, FLARESTAR: 36989, PARADOX: 25797, FOUL: 7422, XENO: 16507, USOUL: 16506, MANAFONT: 158, AMPLIFIER: 25796,
+        LEY: 3573, BTL: 7419, RETRACE: 36988, TRIPLE: 7421, SWIFT: 7561, MANAWARD: 157, SCATHE: 156, AETHERIAL: 155,
+      };
+      const FIRE_SET = new Set([ID.FIRE, 147, ID.FIRE3, ID.FIRE4, ID.HFIRE2, ID.FLARE, ID.DESPAIR, ID.FLARESTAR]);
+      const ICE_SET = new Set([ID.BLIZZ, 25793, ID.BLIZZ3, ID.BLIZZ4, ID.HBLIZZ2, ID.FREEZE]);
+      const STATUS = {
+        thunderhead: { name: 'サンダー系魔法実行可' },
+        firestarter: { name: 'ファイガ効果アップ' },
+        thunderDot: { name: 'ハイサンダー', target: true, tracked: true },
+        triple: { name: '三連魔' },
+        swift: { name: '迅速魔' },
+        ley: { name: '黒魔紋', tracked: true },
+        manaward: { name: 'マバリア' },
+        surecast: { name: '堅実魔' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const MP_MAX = 10000;
+      const isSpell = (a) => a.category === 2;
+      // 仮の倍率（GAME-68）
+      const FIRE_UP = [1, 1.4, 1.6, 1.8], ICE_IN_AF = [1, 0.9, 0.8, 0.7], FIRE_IN_UB = [1, 0.9, 0.8, 0.7];
+      const COST_IN_OPP = [1, 0.5, 0.25, 0];
+      const UB_REGEN = [0, 3000, 4500, 6000];
+      function mpCost(a) {
+        const s = S();
+        if (a.id === ID.PARADOX && s.ub > 0) return 0; // 説明文「アンブラルブリザード時: この魔法の消費ＭＰが0」
+        if (a.id === ID.FIRE3 && has('firestarter')) return 0; // ファイガ効果アップ
+        if (a.mp === -1) return a.id === ID.FLARE && s.hearts > 0 ? Math.floor((s.mp * 2) / 3) : s.mp; // フレア・デスペア: MP 全部（フレアはハートで 2/3）
+        let c = a.mp ?? 0;
+        if (FIRE_SET.has(a.id)) { if (s.af > 0 && s.hearts <= 0) c *= 2; if (s.ub > 0) c *= COST_IN_OPP[s.ub]; }
+        if (ICE_SET.has(a.id) && s.af > 0) c *= COST_IN_OPP[s.af];
+        return Math.round(c);
+      }
+      const minMp = (a) => (a.mp === -1 ? 800 : mpCost(a)); // デスペア・フレアは 800 以上ないと使えない（仮）
+      function setAF(n) { const s = S(), was = s.af > 0 ? 'af' : s.ub > 0 ? 'ub' : null; if (was !== 'af') onSwap(was, 'af'); s.af = n; s.ub = 0; }
+      function setUB(n) {
+        const s = S(), was = s.af > 0 ? 'af' : s.ub > 0 ? 'ub' : null;
+        if (was !== 'ub') onSwap(was, 'ub');
+        s.ub = n; if (s.af) { s.af = 0; } s.soul = 0;
+      }
+      // 属性が変わった: サンダー系魔法実行可（説明文）。AF3 ↔ UB3 の入れ替えでパラドックスシンボル（仮）
+      function onSwap(from, to) {
+        const s = S();
+        R.buff('thunderhead', 999999);
+        if ((from === 'ub' && s.ub >= 3 && s.hearts >= 3) || (from === 'af' && s.af >= 3)) s.paradox = true;
+        if (to === 'ub') s.soul = 0;
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // 黒魔紋・三連魔「最大チャージ数：2」
+        prepull: new Set([ID.FIRE3, ID.BLIZZ3, ID.USOUL, ID.LEY, ID.SWIFT, ID.TRIPLE, ID.MANAWARD, ID.TRANSPOSE]),
+        comboStarters: new Set(),
+        procStatus: {},
+        dot: { key: 'thunderDot' },
+        initState(s) { s.mp = MP_MAX; s.af = 0; s.ub = 0; s.hearts = 0; s.poly = 0; s.polyT = 0; s.soul = 0; s.paradox = false; s.mpTick = 0; s.stats.polyOver = 0; s.stats.flareStar = 0; s.stats.f4 = 0; },
+        // 黒魔紋は自分の足元に置く（地面を選ばない）
+        instantNow: (id) => id === ID.LEY || id === ID.RETRACE,
+        gaugeCols: [['MP', (s) => Math.floor(s.mp)], ['AF', (s) => s.af], ['UB', (s) => s.ub], ['ハート', (s) => s.hearts], ['ポリグロット', (s) => s.poly], ['ソウル', (s) => s.soul]],
+        tracked: [['ハイサンダー', 'thunderDot', '#c8a8ff', '切れる前に、サンダー系魔法実行可で付け直す'], ['黒魔紋', 'ley', '#b890ff', '120 秒ごと。中に立って詠唱する']],
+        potMult(a) {
+          const s = S();
+          if (FIRE_SET.has(a.id)) return s.af > 0 ? FIRE_UP[s.af] : s.ub > 0 ? FIRE_IN_UB[s.ub] : 1;
+          if (ICE_SET.has(a.id)) return s.af > 0 ? ICE_IN_AF[s.af] : 1;
+          return 1;
+        },
+        // 黒魔紋の中: 魔法のキャストタイムとリキャストタイム 15% 短縮（説明文）
+        speed: (a) => (a && isSpell(a) && has('ley') && R.inZone('ley') ? 0.85 : 1),
+        comboFree: () => false,
+        resolve(id) {
+          const s = S();
+          if ((id === ID.FIRE || id === ID.BLIZZ) && s.paradox && (s.af > 0 || s.ub > 0)) return ID.PARADOX;
+          if (id === ID.LEY && has('ley')) return ID.RETRACE;
+          return tooltipResolve(R, J, id);
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if ([ID.FIRE4, ID.FLARE, ID.DESPAIR, ID.MANAFONT].includes(id) && s.af <= 0) return '「アストラルファイア」の効果中ではありません';
+          if ([ID.BLIZZ4, ID.FREEZE, ID.USOUL].includes(id) && s.ub <= 0) return '「アンブラルブリザード」の効果中ではありません';
+          if (id === ID.FLARESTAR && s.soul < 6) return `アストラルソウルが足りません（${s.soul} / 6）`;
+          if ((id === ID.XENO || id === ID.FOUL) && s.poly <= 0) return 'ポリグロットがありません';
+          if (id === ID.PARADOX && !s.paradox) return '「パラドックスシンボル」がありません';
+          if (id === ID.AMPLIFIER && s.af <= 0 && s.ub <= 0) return '「アストラルファイア」か「アンブラルブリザード」の効果中ではありません';
+          if (id === ID.TRANSPOSE && s.af <= 0 && s.ub <= 0) return '「アストラルファイア」か「アンブラルブリザード」の効果中ではありません';
+          if ((id === ID.THUNDER || id === ID.THUNDER2) && !has('thunderhead')) return '「サンダー系魔法実行可」の効果中ではありません';
+          if (id === ID.RETRACE && !has('ley')) return '「黒魔紋」の効果中ではありません';
+          if (id === ID.BTL && !has('ley')) return '「黒魔紋」の効果中ではありません';
+          if (a && isSpell(a) && (a.mp ?? 0) !== 0 && s.mp < minMp(a)) { return `MP が足りません（必要 ${minMp(a)} / 現在 ${Math.floor(s.mp)}）`; }
+          return null;
+        },
+        // 詠唱時間: 迅速魔・三連魔・ファイガ効果アップ（ファイガ）は無し。AF3 の氷・UB3 の火は半分（説明文）
+        castMs(a, base) {
+          if (!base) return 0;
+          const s = S();
+          if (isSpell(a) && (has('swift') || has('triple'))) return 0;
+          if (a.id === ID.FIRE3 && has('firestarter')) return 0;
+          if (ICE_SET.has(a.id) && s.af >= 3) return base / 2;
+          if (FIRE_SET.has(a.id) && s.ub >= 3) return base / 2;
+          return base;
+        },
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // 詠唱なしの消費: 三連魔（1 回）→ 迅速魔の順（詠唱のある魔法だけ）
+          if (isSpell(a) && a.castMs > 0 && !(id === ID.FIRE3 && has('firestarter'))) {
+            if (has('triple')) { const t = s.st.triple; if (t.stacks > 1) t.stacks -= 1; else R.remove('triple'); }
+            else if (has('swift')) R.remove('swift');
+          }
+          // MP
+          const cost = isSpell(a) ? mpCost(a) : 0;
+          if (cost) s.mp = Math.max(0, s.mp - cost);
+          if (FIRE_SET.has(id) && s.af > 0 && s.hearts > 0 && id !== ID.FLARE && id !== ID.DESPAIR && id !== ID.FLARESTAR && !(id === ID.FIRE3 && has('firestarter'))) s.hearts -= 1;
+          if (id === ID.FIRE3 && has('firestarter')) R.remove('firestarter');
+          // 属性
+          if (id === ID.FIRE) { if (s.ub > 0) { s.ub = 0; } else setAF(Math.min(3, s.af + 1)); if (Math.random() < 0.4) R.buff('firestarter', 999999); }
+          if (id === ID.BLIZZ) { if (s.af > 0) { s.af = 0; s.soul = 0; } else setUB(Math.min(3, s.ub + 1)); }
+          if (id === ID.FIRE3 || id === ID.HFIRE2 || id === ID.DESPAIR) setAF(3);
+          if (id === ID.BLIZZ3 || id === ID.HBLIZZ2) setUB(3);
+          if (id === ID.FLARE) { setAF(3); s.hearts = 0; s.soul = Math.min(6, s.soul + 3); }
+          if (id === ID.FIRE4) { s.soul = Math.min(6, s.soul + 1); s.stats.f4++; }
+          if (id === ID.BLIZZ4 || id === ID.FREEZE) s.hearts = 3;
+          if (id === ID.FLARESTAR) { s.soul = 0; s.stats.flareStar++; }
+          if (id === ID.PARADOX) { s.paradox = false; if (s.af > 0) R.buff('firestarter', 999999); }
+          if (id === ID.TRANSPOSE) { if (s.af > 0) setUB(1); else if (s.ub > 0) setAF(1); }
+          if (id === ID.USOUL) { setUB(Math.min(3, s.ub + 1)); s.hearts = Math.min(3, s.hearts + 1); }
+          if (id === ID.MANAFONT) { s.mp = MP_MAX; setAF(3); R.buff('thunderhead', 999999); s.hearts = 3; s.paradox = true; }
+          if (id === ID.AMPLIFIER) { if (s.poly >= 3) { s.stats.polyOver++; R.addLog('warn', 'ポリグロットがあふれました（3 つのまま）'); } s.poly = Math.min(3, s.poly + 1); }
+          if (id === ID.XENO || id === ID.FOUL) s.poly -= 1;
+          if (id === ID.THUNDER || id === ID.THUNDER2) { R.remove('thunderhead'); if (a.pot?.dot) R.buff('thunderDot', a.pot.dot.sec * 1000); }
+          if (id === ID.TRIPLE) R.buff('triple', 15000, 3);
+          if (id === ID.SWIFT) R.buff('swift', 10000);
+          if (id === ID.MANAWARD) { R.shieldSelf(0.3, 20, 'マバリア'); R.buff('manaward', 20000); }
+          if (id === ID.LEY) { R.buff('ley', 20000); R.zone('ley', { r: 3, sec: 20, at: null }); Au()?.buff(); }
+          if (id === ID.RETRACE) { R.zoneEnd('ley'); R.zone('ley', { r: 3, sec: (s.st.ley.until - s.t) / 1000, at: null }); }
+          if (id === ID.BTL) R.addLog('sys', 'ラインズステップ: 黒魔紋の中心へ移動（練習場の移動は未対応）');
+          if (id === ID.AETHERIAL) R.addLog('sys', 'エーテリアルステップ: 味方の前へ移動（練習場の移動は未対応）');
+        },
+        tick(dt) {
+          const s = S();
+          if (!has('ley')) R.zoneEnd('ley');
+          if (s.phase !== 'combat' && s.phase !== 'countdown') return;
+          // MP の回復（3 秒ごと。仮 GAME-68）
+          s.mpTick += dt;
+          while (s.mpTick >= 3000) {
+            s.mpTick -= 3000;
+            if (s.af <= 0) s.mp = Math.min(MP_MAX, s.mp + 200 + UB_REGEN[s.ub]);
+          }
+          // ポリグロット（AF / UB の間 30 秒ごと。仮 GAME-68）
+          if (s.phase === 'combat' && (s.af > 0 || s.ub > 0)) {
+            s.polyT += dt;
+            while (s.polyT >= 30000) {
+              s.polyT -= 30000;
+              if (s.poly >= 3) { s.stats.polyOver++; R.addLog('warn', 'ポリグロットがあふれました（3 つのまま）'); R.ev('ミス', { result: 'あふれ', note: 'ポリグロットが 3 つのまま' }); }
+              s.poly = Math.min(3, s.poly + 1);
+            }
+          }
+        },
+        highlightOk: () => true,
+        // 光る: ファイガ効果アップ中のファイガ、実行可のサンダー、パラドックス、フレアスター（ソウル 6）、ゼノグロシー（ポリグロットがある）、デスペア（MP が 800 以上で残り少ない）
+        glow(id) {
+          const s = S();
+          if (id === ID.FIRE3) return has('firestarter');
+          if (id === ID.THUNDER || id === ID.THUNDER2) return has('thunderhead');
+          if (id === ID.PARADOX) return s.paradox;
+          if (id === ID.FLARESTAR) return s.soul >= 6;
+          if (id === ID.XENO || id === ID.FOUL) return s.poly > 0;
+          if (id === ID.DESPAIR) return s.af > 0 && s.mp >= 800 && s.mp < 1600 + 800;
+          return false;
+        },
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => (FIRE_SET.has(id) ? 'kenki' : ICE_SET.has(id) ? 'setsu' : id === ID.THUNDER || id === ID.THUNDER2 ? 'getsu' : id === ID.XENO || id === ID.FOUL ? 'shoha' : id === ID.PARADOX ? 'holy' : 'getsu'),
+        fxPower: (id) => (id === ID.FLARESTAR || id === ID.XENO || id === ID.DESPAIR ? 1.5 : 1),
+        fxCount: () => 1,
+        castColor: (id) => (ICE_SET.has(id) ? 'setsu' : FIRE_SET.has(id) ? 'kenki' : 'getsu'),
+        castPower: 0.5,
+        gcdColor: (id) => (FIRE_SET.has(id) ? '#ff9a6a' : ICE_SET.has(id) ? '#9ad8ff' : id === ID.XENO ? '#c8a8ff' : id === ID.PARADOX ? '#fff0a8' : null),
+        hotOgcd: (id) => id === ID.MANAFONT || id === ID.AMPLIFIER,
+        sfx(id, info, Au) {
+          if (info.kind === 'buff') { if (id === ID.LEY) Au.surge(); else Au.buff(); return; }
+          Au.finisher(FIRE_SET.has(id) ? 'ka' : ICE_SET.has(id) ? 'setsu' : 'getsu'); Au.hit(info.power);
+        },
+        tipCost: (id) => (A[id] && (A[id].mp ?? 0) !== 0 ? ['MP', A[id].mp === -1 ? '全部' : mpCost(A[id])] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.polyOver) issues.push({ loss: s.stats.polyOver * 4, rate: s.stats.polyOver > 1 ? 'bad' : 'ok', title: `ポリグロットのあふれ ${s.stats.polyOver} 回`, advice: '3 つたまる前にゼノグロシーを撃つ（移動のときにも便利）' });
+          metrics.push({ label: 'フレアスター', value: `${s.stats.flareStar} 回`, rate: Math.min(100, s.stats.flareStar * 30) });
+          metrics.push({ label: 'ファイジャ', value: `${s.stats.f4} 回`, rate: Math.min(100, s.stats.f4 * 5) });
+          if (!s.stats.polyOver && s.stats.gcds > 10) goods.push('ポリグロットのあふれなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.polyOver * 20), posAdvice: '', comboAdvice: '光っている技（パラドックス・フレアスター・ファイガ効果アップ）を', castAdvice: '詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときは三連魔・迅速魔・ゼノグロシー・パラドックス・サンダー', rangeAdvice: '魔法の射程（25m）の中にいる。黒魔紋の中で詠唱する' };
+        },
+        howto: '黒魔道士: ファイガでアストラルファイア、ファイジャを撃ち、MP がなくなる前にデスペア → フレアスター。ブリザガでアンブラルブリザード、ブリザジャでハート 3 つ、パラドックスのあと ファイガで戻る。ハイサンダーを切らさず、ポリグロットはゼノグロシーで。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'BLM'),
+        gaugeDefault: { JobHudBLM0: { x: 70, y: 62, anchor: 4, scale: 1 }, JobHudBLM1: { x: 78, y: 62, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  window.MockJobs = { SAM, PLD, WHM, AST, BLM };
 })();

@@ -221,6 +221,87 @@
     };
   }
 
-  const JOBS = { PLD: pld, WHM: whm, AST: ast };
+  // ---------------- 黒魔道士: エレメンタルゲージ（JobHudBLM0）とアストラルソウル（JobHudBLM1）----------------
+  // BLM0 #2 = 通常表示: #13 中央の玉（黒 = なし。パーツ 1 青 = UB、2 赤 = AF に差し替え）、#15〜#17 段階の結晶
+  //   （部品 1009: #2 の子 = AF の橙、#7 の子 = UB の水色）、#19〜#21 アンブラルハート（部品 1006: #4 青い針）、
+  //   #6〜#8 ポリグロット（部品 1001: #3/#5 紫の宝石）、#29 ポリグロットが増えるまでの紫の弧、#10/#11 残り秒
+  // BLM0 #33 = シンプル表示: #39〜#41 段階、#43〜#45 ハート、#50〜#52 ポリグロット（部品 1008: #3 が点いた印）、#47 残り秒
+  // BLM1 #2 = アストラルソウルの六芒星: #8〜#13 の玉（部品 1002: #4 点いた玉・#2 赤い光）、#3・#4 は 6 つそろったときの炎
+  // BLM1 #15 = シンプル表示: #16〜#21（部品 1001: #3 が点いた印）
+  const BN = { normal: 2, simple: 33, orb: 13, crystals: [15, 16, 17], hearts: [19, 20, 21], poly: [6, 7, 8], arc: 29, num: 11,
+    sStacks: [39, 40, 41], sHearts: [43, 44, 45], sPoly: [50, 51, 52], sNum: 47,
+    souls: [8, 9, 10, 11, 12, 13], soulFx: [3, 4, 5, 6], sSouls: [16, 17, 18, 19, 20, 21], lance: 23 };
+  function blm(G) {
+    const L0 = G.layouts.JobHudBLM0, L1 = G.layouts.JobHudBLM1;
+    const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
+    const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    const P1 = partsOf(L0, 1), tex = G.textures.JobHudBLM0;
+    const orbImg = K.img(String(BN.orb)), orbBlack = P1[24];
+    let simple = false, prev = {};
+    set(k(27), { opacity: 0 });
+    for (const c of BN.crystals) for (const n of [4, 5, 6, 9, 10, 11]) set(k(`${c}/${n}`), { opacity: 0 });
+    for (const h of BN.hearts) set(k(`${h}/3`), { opacity: 0 });
+    for (const q of BN.poly) set(k(`${q}/4`), { opacity: 0 });
+    for (const q of BN.soulFx) set(k1(q), { opacity: 0 });
+    k(BN.simple).hidden = true; k1(15).hidden = true;
+    // ポリグロットの弧: 絵の左上が円の中心（ノードは -90° 回っている）。画面の上から時計回りに伸ばす
+    const arcEl = k(`${BN.arc}/3`);
+    // パラドックスの槍（#23。部品 1007）: 絵を灰色（パーツ 26）と色付き（27）で切り替え、光（#8）と火花（#2〜#7）はパラドックスのときだけ
+    const lanceImgs = [K.img(`${BN.lance}/10`), K.img(`${BN.lance}/12`)];
+    function apply(st, instant) {
+      const af = st.af ?? 0, ub = st.ub ?? 0, hearts = st.hearts ?? 0, poly = st.poly ?? 0, soul = st.soul ?? 0;
+      const aspect = af > 0 ? 'af' : ub > 0 ? 'ub' : null, stage = af || ub;
+      if (instant || aspect !== prev.aspect) {
+        usePart(orbImg, tex, aspect === 'af' ? P1[2] : aspect === 'ub' ? P1[1] : orbBlack);
+        if (!instant && aspect) anim(k(BN.orb), [{ filter: 'brightness(2.2)', transform: 'scale(1.15)' }, { filter: 'brightness(1)', transform: 'none' }], { duration: 400 });
+      }
+      if (instant || aspect !== prev.aspect || stage !== prev.stage) {
+        BN.crystals.forEach((c, i) => {
+          const on = i < stage;
+          set(k(`${c}/6`), { opacity: on && aspect === 'af' ? 1 : 0 }); set(k(`${c}/5`), { opacity: on && aspect === 'af' ? 0.6 : 0 });
+          set(k(`${c}/11`), { opacity: on && aspect === 'ub' ? 1 : 0 }); set(k(`${c}/10`), { opacity: on && aspect === 'ub' ? 0.6 : 0 });
+        });
+        BN.sStacks.forEach((c, i) => { set(k(`${c}/3`), { opacity: i < stage ? 1 : 0, filter: aspect === 'ub' ? 'hue-rotate(190deg)' : 'none' }); });
+      }
+      if (instant || hearts !== prev.hearts) {
+        BN.hearts.forEach((h, i) => set(k(`${h}/4`), { opacity: i < hearts ? 1 : 0.18 }));
+        BN.sHearts.forEach((h, i) => set(k(`${h}/3`), { opacity: i < hearts ? 1 : 0, filter: 'hue-rotate(190deg)' }));
+      }
+      if (instant || poly !== prev.poly) {
+        BN.poly.forEach((q, i) => { set(k(`${q}/5`), { opacity: i < poly ? 1 : 0.15 }); if (!instant && i === poly - 1 && poly > (prev.poly ?? 0)) anim(k(`${q}/4`), [{ opacity: 1, transform: 'scale(1.4)' }, { opacity: 0, transform: 'none' }], { duration: 500 }); });
+        BN.sPoly.forEach((q, i) => set(k(`${q}/3`), { opacity: i < poly ? 1 : 0, filter: 'hue-rotate(250deg)' }));
+      }
+      // ポリグロットの時間（AF / UB の間だけ進む）
+      const p = aspect ? Math.min(1, (st.polyT ?? 0) / 30000) : 0;
+      if (arcEl) arcEl.style.webkitMask = arcEl.style.mask = `conic-gradient(from 90deg at 0% 0%, #000 ${p * 90}deg, transparent ${p * 90}deg)`;
+      const sec = aspect ? String(Math.ceil((30000 - (st.polyT ?? 0)) / 1000)) : '';
+      if (sec !== prev.sec) { const n = k(BN.num); if (n) n.textContent = sec; const sn = k(BN.sNum); if (sn) sn.textContent = sec; }
+      if (instant || soul !== prev.soul) {
+        BN.souls.forEach((q, i) => { set(k1(`${q}/4`), { opacity: i < soul ? 1 : 0 }); set(k1(`${q}/2`), { opacity: i < soul ? 0.5 : 0 }); });
+        BN.sSouls.forEach((q, i) => set(k1(`${q}/3`), { opacity: i < soul ? 1 : 0 }));
+        for (const f of BN.soulFx) set(k1(f), { opacity: soul >= 6 ? (f === 6 ? 0.8 : 0.45) : 0 });
+        if (!instant && soul >= 6 && (prev.soul ?? 0) < 6) anim(k1(3), [{ opacity: 0, transform: 'scale(0.7)' }, { opacity: 0.9, offset: 0.3 }, { opacity: 0.55, transform: 'none' }], { duration: 600 });
+      }
+      const px = !!st.paradox;
+      if (instant || px !== prev.px) {
+        for (const im of lanceImgs) usePart(im, tex, P1[px ? 27 : 26]);
+        set(k(`${BN.lance}/8`), { opacity: px ? 0.7 : 0 });
+        for (const n of [2, 3, 4, 5, 6, 7]) set(k(`${BN.lance}/${n}`), { opacity: px ? 0.8 : 0 });
+        if (!instant && px) anim(k(`${BN.lance}/8`), [{ opacity: 1, filter: 'brightness(2)' }, { opacity: 0.7, filter: 'none' }], { duration: 500 });
+      }
+      prev = { aspect, stage, hearts, poly, soul, sec, px };
+    }
+    function setSimple(v) { simple = !!v; k(BN.normal).hidden = simple; k(BN.simple).hidden = !simple; k1(2).hidden = simple; k1(15).hidden = !simple; }
+    apply({}, true);
+    return {
+      windows: [
+        { name: 'JobHudBLM0', label: 'エレメンタルゲージ', el: K.el, w: K.w, h: K.h },
+        { name: 'JobHudBLM1', label: 'アストラルソウル', el: K1.el, w: K1.w, h: K1.h },
+      ],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm };
   window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
 })();

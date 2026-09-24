@@ -25,7 +25,7 @@ const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -237,6 +237,8 @@ function buildJob(JOB, LEVEL) {
     hostile: a.canTargetHostile,
     // 対象にできるもの（自分・味方）。ターゲットの決め方に使う（敵にしか使えない技は敵のターゲットが要る）
     toSelf: !!a.canTargetSelf, toParty: !!a.canTargetParty,
+    // 消費 MP（Action の一次コスト。型 3 と 76 は値 × 100、型 4 は「MP 全部」= -1。黒魔道士の MP の計算に使う）
+    mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0,
     range: a.range,
     crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
     effectRange: a.effectRange, // 範囲の大きさ（m）。自分の周囲の範囲なら半径

@@ -53,6 +53,7 @@
     heal: (who, frac) => Arena.heal(aimWho(who), frac), hot: (who, frac, sec, name) => Arena.hot(aimWho(who), frac, sec, name),
     shield: (who, frac, sec, name) => Arena.shield(aimWho(who), frac, sec, name), mitigate: (who, pct, sec, name) => Arena.mitigate(aimWho(who), pct, sec, name),
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
+    inZone: (kind) => Arena.inZone(kind), shieldSelf: (frac, sec, name) => Arena.shield('self', frac, sec, name),
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
     zoneSet: (kind, o) => Arena.zoneSet(kind, o), zoneHitsBoss: (kind) => Arena.zoneHitsBoss(kind),
@@ -186,6 +187,7 @@
     let v = combo && p.combo != null ? p.combo : p.base;
     if (pos?.ok && pos.need === 'rear') v = combo ? p.comboRear ?? v : p.rear ?? v;
     if (pos?.ok && pos.need === 'flank') v = combo ? p.comboFlank ?? v : p.flank ?? v;
+    v *= J.potMult?.(a) ?? 1; // ジョブの決まりの威力の倍率（黒魔道士のアストラルファイア・アンブラルブリザード）
     // 「〜時威力」は説明文に先に書かれたものを優先（ホーリースピリット「両方が付与されている場合は、神聖魔法効果アップの効果が優先」）
     for (const c of p.cond ?? []) { const k = statusByName[c.status]; if (k && has(k)) { v = c.potency; break; } }
     return v;
@@ -1175,7 +1177,7 @@
       let r = m.get(it.key);
       if (!r) { r = makeStatus(it.meta, it.stacks); m.set(it.key, r); host.appendChild(r.el); }
       const left = Math.ceil(it.left);
-      if (left !== r.left) { r.left = left; r.t.textContent = left; r.el.classList.toggle('low', left <= 5); }
+      if (left !== r.left) { r.left = left; r.t.textContent = left > 600 ? '' : left; r.el.classList.toggle('low', left <= 5); } // 永続（黒魔道士のサンダー系魔法実行可など）は秒を出さない
       const stacks = it.stacks ?? '';
       if (stacks !== r.stacks) {
         r.stacks = stacks;
@@ -1319,6 +1321,9 @@
     // パーティリスト・HP バー
     const hp = Arena.hp(), down = Arena.isDown();
     $('pmHp').style.width = `${hp * 100}%`;
+    // MP（黒魔道士だけ増減する。ほかのジョブは 10000 のまま: MP は未実装）
+    const mp = S.mp ?? 10000;
+    $('pmMp').style.width = `${mp / 100}%`; $('pmMpV').textContent = String(Math.floor(mp));
     $('pmHpV').textContent = down ? '戦闘不能' : `${Math.round(hp * 100)}%`;
     $('param').classList.toggle('low', hp < 0.35);
     $('ptSelfHp').style.width = `${hp * 100}%`;
