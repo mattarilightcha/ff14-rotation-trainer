@@ -33,18 +33,35 @@ const resolve = (id) => {
 };
 
 // ホットバーのスロット → 表示するアクション
-const bars = {};
 const used = new Set();
-for (const [bar, slots] of Object.entries(hotbar.bars)) {
-  bars[bar] = slots.map((s) => {
-    if (!s) return null;
-    if (s.type !== 1) return { kind: 'other', type: s.type };
-    if (!byId.has(s.id)) return { kind: 'missing', id: s.id };
-    const id = resolve(s.id);
-    used.add(id);
-    return { kind: 'action', id, from: id !== s.id ? s.id : undefined };
-  });
+const toCell = (s) => {
+  if (!s) return null;
+  if (s.type !== 1) return { kind: 'other', type: s.type };
+  if (!byId.has(s.id)) return { kind: 'missing', id: s.id };
+  const id = resolve(s.id);
+  used.add(id);
+  return { kind: 'action', id, from: id !== s.id ? s.id : undefined };
+};
+const BAR_NAMES = [...Array(10)].map((_, i) => `hb${i + 1}`).concat([...Array(8)].map((_, i) => `xhb${i + 1}`));
+// バーごとに「ジョブ専用」と「共有（セット 0）」の両方を持つ。どちらを使うかの設定は未解読（CFG-08）なので、
+// 既定は「ジョブ専用のバーに中身があればジョブ専用、なければ共有」とし、モックの画面で切り替えられるようにする
+const bars = {};
+for (const bar of BAR_NAMES) {
+  const job = hotbar.job[bar]?.map(toCell) ?? null;
+  const shared = hotbar.shared[bar]?.map(toCell) ?? null;
+  if (!job && !shared) continue;
+  bars[bar] = { job, shared, defaultSource: job ? 'job' : 'shared' };
 }
+
+// アクションの変化（ボタン置き換え）のグループ。「変化させない」設定（CFG-11）のときは、変化先を別のボタンにする
+const replaceGroups = {};
+for (const a of actions) {
+  for (const base of a.replacesAction ?? []) {
+    if (!jobIds.has(base) || a.level > LEVEL) continue;
+    (replaceGroups[base] ??= []).push(a.id);
+  }
+}
+for (const a of actions) if (a.id === 25782) (replaceGroups[25781] ??= []).push(a.id); // 奥義波切「このアクションを実行すると「返し波切」に変化する」
 
 // ゲーム内のアクション一覧にあるのにホットバーに置かれていないもの（INPUT_HUD §5.3「未配置」）
 const unplaced = job.actionIds
@@ -55,9 +72,7 @@ const unplaced = job.actionIds
 for (const id of unplaced) used.add(id);
 
 // 置き換え先も含めて、モックで使うアクションを集める
-for (const a of actions) {
-  for (const base of a.replacesAction ?? []) if (used.has(base) && a.level <= LEVEL) used.add(a.id);
-}
+for (const [base, targets] of Object.entries(replaceGroups)) if (used.has(Number(base))) targets.forEach((id) => used.add(id));
 
 const pick = (a) => ({
   id: a.id,
@@ -72,6 +87,7 @@ const pick = (a) => ({
   comboFrom: a.comboFrom ? [a.comboFrom, upgrade[a.comboFrom]].filter(Boolean) : [],
   preservesCombo: a.preservesCombo,
   level: a.level,
+  forJob: a.jobs?.includes(JOB) ?? false, // 他ジョブのアクション（共有バーに残っているもの）は使えない
 });
 
 const out = {
@@ -86,10 +102,16 @@ const out = {
   ),
   bars,
   unplaced,
+  replaceGroups: Object.fromEntries(Object.entries(replaceGroups).filter(([b]) => used.has(Number(b)))),
+  // 変化先（本来ホットバーに登録できないアクション）がホットバーに直接置かれていたら、そのグループは「変化させない」設定と推定する（INPUT_HUD §5.4）
+  splitDetected: Object.keys(replaceGroups).filter((base) =>
+    Object.values(bars).some((v) => [...(v.job ?? []), ...(v.shared ?? [])].some((c) => c?.kind === 'action' && c.id !== Number(base) && replaceGroups[base].includes(c.id))),
+  ),
 };
 
 writeFileSync(
   join(root, 'mock/mock-data.js'),
   `// 自動生成: node mock/build-mock-data.mjs（手で編集しない）\nwindow.MOCK_DATA = ${JSON.stringify(out, null, 1)};\n`,
 );
-console.log(`actions: ${Object.keys(out.actions).length}, bars: ${Object.keys(bars).join(', ')}`);
+console.log(`actions: ${Object.keys(out.actions).length}, bars: ${Object.entries(bars).map(([k, v]) => `${k}(${v.defaultSource})`).join(', ')}`);
+console.log('replaceGroups:', out.replaceGroups, 'splitDetected:', out.splitDetected);

@@ -132,7 +132,19 @@ button { font: inherit; }
 /* ホットバー */
 .hotbars { position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); display: flex; flex-direction: column; gap: 4px; }
 .bar { display: flex; align-items: center; gap: 2px; }
-.bar-label { width: 34px; font-size: 10px; color: var(--dim); text-align: right; margin-right: 4px; }
+.bar-label { width: 44px; font-size: 10px; color: var(--dim); text-align: right; margin-right: 4px; background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; }
+.bar-label:disabled { cursor: default; }
+.sidebars { position: absolute; left: 16px; top: 110px; display: flex; flex-direction: column; gap: 3px; }
+.bar.small .slot { --slot: 32px; width: 32px; height: 32px; border-radius: 5px; }
+.bar.small .slot .num { font-size: 12px; }
+.bar.small .slot::after { font-size: 11px; }
+.xtabs { display: flex; gap: 4px; justify-content: center; margin-bottom: 6px; }
+.xtab { font-size: 11px; padding: 2px 8px; border-radius: 4px; border: 1px solid #000; background: rgba(255,255,255,.06); color: var(--dim); cursor: pointer; }
+.xtab.on { color: var(--gold); background: rgba(232,199,122,.15); }
+.xhb { flex-direction: column; align-items: center; gap: 0; }
+.settings { right: 20px; top: 210px; width: 330px; font-size: 12px; z-index: 5; background: rgba(12,12,16,.92); }
+.settings label { display: block; margin: 4px 0; cursor: pointer; }
+.settings .note { font-size: 11px; color: var(--dim); margin-top: 6px; }
 .bar.unplaced .bar-label { color: var(--warn); }
 .slot {
   position: relative; width: var(--slot); height: var(--slot); border-radius: 7px;

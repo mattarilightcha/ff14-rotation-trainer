@@ -1,6 +1,6 @@
 {
- "_note": "samples/hotbar-hud/HOTBAR.DAT のセット34（侍）から、アクション ID と種類だけを取り出したもの（docs/CONFIG_FORMAT.md §2）",
- "bars": {
+ "_note": "samples/hotbar-hud/HOTBAR.DAT から、侍のセット（34）と共有セット（0）のアクション ID と種類だけを取り出したもの（docs/CONFIG_FORMAT.md §2）",
+ "job": {
   "hb1": [
    {
     "type": 1,
@@ -334,6 +334,511 @@
    {
     "type": 1,
     "id": 7496
+   }
+  ]
+ },
+ "shared": {
+  "hb4": [
+   {
+    "type": 1,
+    "id": 7571
+   },
+   null,
+   {
+    "type": 16,
+    "id": 2
+   },
+   {
+    "type": 1,
+    "id": 7561
+   },
+   null,
+   {
+    "type": 16,
+    "id": 3
+   },
+   {
+    "type": 1,
+    "id": 7559
+   },
+   null,
+   null,
+   {
+    "type": 2,
+    "id": 4555
+   },
+   null,
+   {
+    "type": 10,
+    "id": 4
+   }
+  ],
+  "hb5": [
+   null,
+   null,
+   null,
+   null,
+   {
+    "type": 1,
+    "id": 16472
+   },
+   {
+    "type": 1,
+    "id": 25757
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "hb6": [
+   null,
+   null,
+   null,
+   null,
+   {
+    "type": 7,
+    "id": 346
+   },
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "hb7": [
+   {
+    "type": 6,
+    "id": 245
+   },
+   {
+    "type": 6,
+    "id": 313
+   },
+   null,
+   {
+    "type": 6,
+    "id": 309
+   },
+   {
+    "type": 6,
+    "id": 288
+   },
+   {
+    "type": 6,
+    "id": 312
+   },
+   {
+    "type": 6,
+    "id": 246
+   },
+   {
+    "type": 7,
+    "id": 259
+   },
+   {
+    "type": 10,
+    "id": 5
+   },
+   {
+    "type": 10,
+    "id": 13
+   },
+   {
+    "type": 10,
+    "id": 20
+   },
+   {
+    "type": 30,
+    "id": 4
+   }
+  ],
+  "hb8": [
+   {
+    "type": 7,
+    "id": 296
+   },
+   {
+    "type": 7,
+    "id": 297
+   },
+   {
+    "type": 12,
+    "id": 87
+   },
+   {
+    "type": 6,
+    "id": 292
+   },
+   {
+    "type": 4,
+    "id": 2002023
+   },
+   {
+    "type": 7,
+    "id": 307
+   },
+   {
+    "type": 4,
+    "id": 2003510
+   },
+   {
+    "type": 7,
+    "id": 259
+   },
+   {
+    "type": 7,
+    "id": 309
+   },
+   {
+    "type": 7,
+    "id": 310
+   },
+   {
+    "type": 7,
+    "id": 298
+   },
+   {
+    "type": 7,
+    "id": 299
+   }
+  ],
+  "hb9": [
+   {
+    "type": 12,
+    "id": 42
+   },
+   {
+    "type": 2,
+    "id": 4868
+   },
+   {
+    "type": 11,
+    "id": 2
+   },
+   {
+    "type": 2,
+    "id": 7894
+   },
+   {
+    "type": 12,
+    "id": 5
+   },
+   {
+    "type": 10,
+    "id": 6
+   },
+   {
+    "type": 6,
+    "id": 22
+   },
+   {
+    "type": 7,
+    "id": 258
+   },
+   {
+    "type": 12,
+    "id": 80
+   },
+   {
+    "type": 12,
+    "id": 58
+   },
+   {
+    "type": 12,
+    "id": 89
+   },
+   {
+    "type": 12,
+    "id": 56
+   }
+  ],
+  "hb10": [
+   {
+    "type": 12,
+    "id": 57
+   },
+   {
+    "type": 12,
+    "id": 33
+   },
+   {
+    "type": 12,
+    "id": 17
+   },
+   {
+    "type": 12,
+    "id": 12
+   },
+   {
+    "type": 2,
+    "id": 8575
+   },
+   {
+    "type": 7,
+    "id": 257
+   },
+   {
+    "type": 7,
+    "id": 256
+   },
+   {
+    "type": 12,
+    "id": 13
+   },
+   {
+    "type": 12,
+    "id": 44
+   },
+   {
+    "type": 12,
+    "id": 73
+   },
+   {
+    "type": 12,
+    "id": 59
+   },
+   {
+    "type": 12,
+    "id": 27
+   }
+  ],
+  "xhb1": [
+   null,
+   null,
+   null,
+   null,
+   {
+    "type": 10,
+    "id": 20
+   },
+   {
+    "type": 12,
+    "id": 59
+   },
+   {
+    "type": 12,
+    "id": 73
+   },
+   {
+    "type": 4,
+    "id": 2002664
+   },
+   {
+    "type": 18,
+    "id": 4
+   },
+   {
+    "type": 18,
+    "id": 1
+   },
+   {
+    "type": 18,
+    "id": 2
+   },
+   {
+    "type": 18,
+    "id": 3
+   },
+   {
+    "type": 8,
+    "id": 9
+   },
+   {
+    "type": 8,
+    "id": 1
+   },
+   {
+    "type": 4,
+    "id": 2002023
+   },
+   {
+    "type": 8,
+    "id": 12
+   }
+  ],
+  "xhb2": [
+   {
+    "type": 15,
+    "id": 24
+   },
+   {
+    "type": 15,
+    "id": 26
+   },
+   {
+    "type": 15,
+    "id": 30
+   },
+   {
+    "type": 15,
+    "id": 28
+   },
+   {
+    "type": 15,
+    "id": 32
+   },
+   {
+    "type": 15,
+    "id": 34
+   },
+   {
+    "type": 15,
+    "id": 36
+   },
+   {
+    "type": 15,
+    "id": 38
+   },
+   {
+    "type": 15,
+    "id": 40
+   },
+   {
+    "type": 15,
+    "id": 11
+   },
+   null,
+   {
+    "type": 15,
+    "id": 42
+   },
+   {
+    "type": 15,
+    "id": 17
+   },
+   {
+    "type": 15,
+    "id": 18
+   },
+   {
+    "type": 15,
+    "id": 20
+   },
+   {
+    "type": 15,
+    "id": 21
+   }
+  ],
+  "xhb3": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   {
+    "type": 4,
+    "id": 2002664
+   },
+   {
+    "type": 8,
+    "id": 1
+   },
+   {
+    "type": 4,
+    "id": 2002023
+   },
+   {
+    "type": 8,
+    "id": 9
+   }
+  ],
+  "xhb7": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   {
+    "type": 24,
+    "id": 1
+   },
+   null
+  ],
+  "xhb8": [
+   {
+    "type": 15,
+    "id": 0
+   },
+   {
+    "type": 15,
+    "id": 1
+   },
+   {
+    "type": 15,
+    "id": 2
+   },
+   {
+    "type": 15,
+    "id": 3
+   },
+   {
+    "type": 15,
+    "id": 5
+   },
+   {
+    "type": 15,
+    "id": 4
+   },
+   {
+    "type": 15,
+    "id": 6
+   },
+   {
+    "type": 15,
+    "id": 7
+   },
+   {
+    "type": 15,
+    "id": 9
+   },
+   {
+    "type": 15,
+    "id": 8
+   },
+   {
+    "type": 15,
+    "id": 12
+   },
+   {
+    "type": 15,
+    "id": 10
+   },
+   {
+    "type": 15,
+    "id": 14
+   },
+   {
+    "type": 15,
+    "id": 15
+   },
+   {
+    "type": 15,
+    "id": 16
+   },
+   {
+    "type": 15,
+    "id": 19
    }
   ]
  }

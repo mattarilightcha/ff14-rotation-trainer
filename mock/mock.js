@@ -51,6 +51,14 @@
   // カウントダウン中に使ってよいもの（GAME-30 未確認のため、自己バフのみ仮で許可）
   const PREPULL = new Set([ID.MEIKYO, ID.TN]);
 
+  // アクションの変化（置き換え）: 元のボタン → 変化先。split[base] が true なら「変化させない（別ボタン）」（CFG-11）
+  const GROUPS = D.replaceGroups;
+  const TARGET_BASE = {};
+  for (const [base, ts] of Object.entries(GROUPS)) for (const t of ts) (TARGET_BASE[t] ??= []).push(Number(base));
+  const split = Object.fromEntries((D.splitDetected ?? []).map((b) => [b, true]));
+  // バーごとに「ジョブ専用 / 共有」のどちらを使うか（CFG-08 未解読のため既定は推定。画面で切り替え可）
+  const barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
+
   const STATUS = {
     fugetsu: { name: '風月', tracked: true },
     fuka: { name: '風花', tracked: true },
@@ -136,12 +144,14 @@
       if (S.lastIai === 'goken') return S.lastIaiTendo ? ID.TK_GOKEN : ID.K_GOKEN;
       if (S.lastIai === 'setsu') return S.lastIaiTendo ? ID.TK_SETSU : ID.K_SETSU;
     }
-    if (id === ID.NAMIKIRI && S.kaeshiNami) return ID.K_NAMI;
+    if (id === ID.TSUBAME && S.kaeshiNami) return ID.K_NAMI; // 返し波切の replacesAction は燕返し（抽出データ）
+    if (id === ID.NAMIKIRI && S.kaeshiNami) return ID.K_NAMI; // 奥義波切「実行すると「返し波切」に変化する」
     return id;
   }
 
   // 使用条件（満たさなければ理由を返す）
   function blocked(id) {
+    if (!A[id].forJob) return `${A[id].name}は侍では使えません（共有バーに残っているアクション）`;
     if (S.phase === 'countdown' && !PREPULL.has(id)) return 'カウントダウン中は使えません（プリプルの条件は未確認）';
     if (id === ID.IAI) return '閃がありません';
     if (id === ID.TSUBAME) return '「燕返し実行可」の効果中ではありません';
@@ -295,7 +305,12 @@
 
   function press(baseId, source) {
     if (S.phase === 'idle' || S.phase === 'ended') { addLog('sys', 'Space で開始してください'); return; }
-    const id = resolve(baseId);
+    let id;
+    if (TARGET_BASE[baseId]) {
+      // 変化先のボタン（「変化させない」設定で別ボタンになったもの）
+      id = baseId;
+      if (!TARGET_BASE[baseId].some((b) => resolve(b) === id)) { S.stats.rejected++; addLog('ng', `${A[id].name}の発動条件を満たしていません`); return; }
+    } else id = resolve(baseId);
     const a = A[id];
     const why = blocked(id);
     if (why) { S.stats.rejected++; addLog('ng', why); return; }
@@ -370,6 +385,7 @@
 
   // ---------------- 描画 ----------------
   const slotEls = [];
+  const padMap = new Map();
   const iconOf = (id) => A[id]?.icon;
 
   function makeSlot(cell, keyLabel) {
@@ -393,58 +409,109 @@
   const BAR_MODS = { hb1: '', hb2: 's', hb3: 'a' };
   const keymap = new Map();
 
-  function buildBars() {
-    const wrap = $('hotbars');
-    for (const bar of ['hb1', 'hb2', 'hb3', 'hb4']) {
-      const cells = D.bars[bar] ?? [];
-      const row = document.createElement('div');
-      row.className = 'bar';
-      row.innerHTML = `<span class="bar-label">${bar.toUpperCase()}</span>`;
-      cells.forEach((cell, i) => {
-        const mod = BAR_MODS[bar];
-        const label = mod == null ? '' : `${mod}${KEY_LABELS[i]}`;
-        row.appendChild(makeSlot(cell, label));
-        if (mod != null && cell && cell.kind === 'action') keymap.set(`${mod}|${KEY_CODES[i]}`, { base: cell.id, el: row.lastChild });
-      });
+  const barCells = (bar) => D.bars[bar]?.[barSource[bar]] ?? D.bars[bar]?.job ?? D.bars[bar]?.shared ?? [];
+  let xhbSet = 'xhb1';
+
+  function barRow(bar, cells, mod, small) {
+    const row = document.createElement('div');
+    row.className = `bar${small ? ' small' : ''}`;
+    const info = D.bars[bar];
+    const lab = document.createElement('button');
+    lab.type = 'button';
+    lab.className = 'bar-label';
+    lab.textContent = `${bar.toUpperCase()}${barSource[bar] === 'shared' ? ' 共' : ''}`;
+    lab.title = info?.job && info?.shared ? 'クリックでジョブ専用 / 共有を切り替え' : barSource[bar] === 'shared' ? '共有のバー' : 'ジョブ専用のバー';
+    lab.addEventListener('click', () => {
+      if (!(info?.job && info?.shared) && !(info && confirm('このバーは片方にしか中身がありません。切り替えますか？'))) return;
+      barSource[bar] = barSource[bar] === 'job' ? 'shared' : 'job';
+      rebuild();
+    });
+    row.appendChild(lab);
+    cells.forEach((cell, i) => {
+      const label = mod == null ? '' : `${mod}${KEY_LABELS[i]}`;
+      row.appendChild(makeSlot(cell, label));
+      if (mod != null && cell && cell.kind === 'action') keymap.set(`${mod}|${KEY_CODES[i]}`, { base: cell.id, el: row.lastChild });
+    });
+    return row;
+  }
+
+  function rebuild() {
+    slotEls.length = 0; keymap.clear(); padMap.clear();
+    const wrap = $('hotbars'); wrap.innerHTML = '';
+    const side = $('sidebars'); side.innerHTML = '';
+    for (const bar of ['hb1', 'hb2', 'hb3', 'hb4']) wrap.appendChild(barRow(bar, barCells(bar), BAR_MODS[bar], false));
+    // 変化先を別ボタンにしたグループ
+    const splitIds = Object.entries(GROUPS).filter(([b]) => split[b]).flatMap(([, ts]) => ts).filter((v, i, a) => a.indexOf(v) === i);
+    if (splitIds.length) {
+      const row = barRow('split', splitIds.map((id) => ({ kind: 'action', id })), null, false);
+      row.classList.add('unplaced');
+      row.firstChild.textContent = '変化先'; row.firstChild.disabled = true;
       wrap.appendChild(row);
     }
     if (D.unplaced.length) {
-      const row = document.createElement('div');
-      row.className = 'bar unplaced';
-      row.innerHTML = '<span class="bar-label" title="ホットバーに置かれていないアクション">未配置</span>';
-      D.unplaced.forEach((id) => row.appendChild(makeSlot({ kind: 'action', id }, '')));
+      const row = barRow('unplaced', D.unplaced.map((id) => ({ kind: 'action', id })), null, false);
+      row.classList.add('unplaced');
+      row.firstChild.textContent = '未配置'; row.firstChild.disabled = true;
       wrap.appendChild(row);
     }
+    // ホットバー 5〜10（キー割り当ては KEYBIND.DAT 未解読のためなし。クリックで使用）
+    for (const bar of ['hb5', 'hb6', 'hb7', 'hb8', 'hb9', 'hb10']) if (D.bars[bar]) side.appendChild(barRow(bar, barCells(bar), null, true));
+
     // クロスホットバー（スロット順とボタンの対応は仮: 0-3 十字キー上右下左、4-7 △○×□。CFG 未確認）
-    const x = $('xhb');
-    ['xhb1'].forEach((bar, n) => {
-      const cells = D.bars[bar] ?? [];
-      const set = document.createElement('div');
-      set.className = `xset${n ? ' dim' : ''}`;
-      set.dataset.bar = bar;
-      set.innerHTML = `<div class="x-title">クロスホットバー ${n + 1}${n ? '（表示のみ）' : ''}</div>`;
-      const pair = document.createElement('div');
-      pair.className = 'xpair';
-      for (const half of [0, 1]) {
-        const g = document.createElement('div');
-        g.className = 'xpair';
-        g.style.gap = '6px';
-        for (const q of [0, 1]) {
-          const cross = document.createElement('div');
-          cross.className = 'cross';
-          for (let k = 0; k < 4; k++) {
-            const idx = half * 8 + q * 4 + k;
-            const lab = n ? '' : `${half ? 'R' : 'L'}${q ? ['△', '○', '×', '□'][k] : ['↑', '→', '↓', '←'][k]}`;
-            cross.appendChild(makeSlot(cells[idx], lab));
-            if (!n && cells[idx]?.kind === 'action') padMap.set(`${half}|${q}|${k}`, { base: cells[idx].id, el: cross.lastChild });
-          }
-          g.appendChild(cross);
+    const x = $('xhb'); x.innerHTML = '';
+    const sets = Object.keys(D.bars).filter((b) => b.startsWith('xhb'));
+    const tabs = document.createElement('div');
+    tabs.className = 'xtabs';
+    for (const b of sets) {
+      const t = document.createElement('button');
+      t.type = 'button';
+      t.className = `xtab${b === xhbSet ? ' on' : ''}`;
+      t.textContent = `セット${b.slice(3)}${barSource[b] === 'shared' ? '（共）' : ''}`;
+      t.addEventListener('click', () => { xhbSet = b; rebuild(); });
+      tabs.appendChild(t);
+    }
+    const set = document.createElement('div');
+    set.className = 'xset';
+    const cells = barCells(xhbSet);
+    const pair = document.createElement('div');
+    pair.className = 'xpair';
+    for (const half of [0, 1]) {
+      const g = document.createElement('div');
+      g.className = 'xpair';
+      g.style.gap = '6px';
+      for (const q of [0, 1]) {
+        const cross = document.createElement('div');
+        cross.className = 'cross';
+        for (let k = 0; k < 4; k++) {
+          const idx = half * 8 + q * 4 + k;
+          const lab = `${half ? 'R' : 'L'}${q ? ['△', '○', '×', '□'][k] : ['↑', '→', '↓', '←'][k]}`;
+          cross.appendChild(makeSlot(cells[idx], lab));
+          if (cells[idx]?.kind === 'action') padMap.set(`${half}|${q}|${k}`, { base: cells[idx].id, el: cross.lastChild });
         }
-        pair.appendChild(g);
+        g.appendChild(cross);
       }
-      set.appendChild(pair);
-      x.appendChild(set);
-    });
+      pair.appendChild(g);
+    }
+    set.appendChild(pair);
+    x.append(tabs, set);
+  }
+
+  function buildSettings() {
+    const box = $('settings');
+    box.innerHTML = '<div class="win-title">アクションの変化（ゲームの設定に合わせる）</div>';
+    for (const base of Object.keys(GROUPS)) {
+      const lab = document.createElement('label');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = !!split[base];
+      cb.addEventListener('change', () => { split[base] = cb.checked; rebuild(); });
+      lab.append(cb, ` ${A[base].name}: 変化させない（別ボタン）`);
+      box.appendChild(lab);
+    }
+    const note = document.createElement('div');
+    note.className = 'note';
+    note.textContent = `ホットバーに変化先が直接置かれていれば「変化させない」と自動で判定します（今回のサンプル: ${D.splitDetected?.length ? '該当あり' : '該当なし'}）。設定ファイル上の保存場所は未解読（CFG-11）。「変化させない」ときの元ボタンの動きは仮です。`;
+    box.appendChild(note);
   }
 
   function statusEl(k, v, debuff) {
@@ -474,7 +541,9 @@
     else cd.hidden = true;
 
     for (const r of slotEls) {
-      const id = resolve(r.base);
+      const isTarget = !!TARGET_BASE[r.base];
+      const id = isTarget ? r.base : split[r.base] ? r.base : resolve(r.base);
+      const live = isTarget ? TARGET_BASE[r.base].some((b) => resolve(b) === r.base) : resolve(r.base);
       const a = A[id];
       if (r.shown !== id) { r.img.src = iconOf(id); r.shown = id; }
       let frac = 0, num = '';
@@ -493,9 +562,10 @@
       r.num.textContent = num;
       if (r.wasCd && frac === 0) { r.el.classList.remove('ready-flash'); void r.el.offsetWidth; r.el.classList.add('ready-flash'); }
       r.wasCd = frac > 0;
-      const unusable = active && blocked(id) != null && !(ownCd(a) != null && charges(a) === 0);
+      const useId = isTarget ? r.base : live;
+      const unusable = !A[useId].forJob || (active && ((isTarget && !live) || (blocked(useId) != null && !(ownCd(A[useId]) != null && charges(A[useId]) === 0))));
       r.el.classList.toggle('unusable', unusable);
-      r.el.classList.toggle('hl', active && !unusable && highlight(id));
+      r.el.classList.toggle('hl', active && !unusable && highlight(useId));
     }
 
     // ゲージ
@@ -575,13 +645,14 @@
   function setMode(m) {
     mode = m;
     $('hotbars').hidden = m !== 'keyboard';
+    $('sidebars').hidden = m !== 'keyboard';
     $('xhb').hidden = m !== 'pad';
     $('btnMode').textContent = `表示: ${m === 'pad' ? 'パッド（クロスホットバー）' : 'キーボード'}`;
   }
   $('btnMode').addEventListener('click', () => setMode(mode === 'pad' ? 'keyboard' : 'pad'));
+  $('btnSettings').addEventListener('click', () => { $('settings').hidden = !$('settings').hidden; });
 
   // ゲームパッド（Gamepad API をフレームごとに読む。INPUT_HUD §4）
-  const padMap = new Map();
   let padPrev = [];
   window.addEventListener('gamepadconnected', (e) => { addLog('sys', `パッドを検出: ${e.gamepad.id}`); setMode('pad'); });
   function pollPad() {
@@ -590,6 +661,7 @@
     const down = gp.buttons.map((b) => b.pressed || b.value > POLICY.padTrigger);
     const edge = (i) => down[i] && !padPrev[i];
     if (edge(9)) start();
+    if (edge(5)) { const sets = Object.keys(D.bars).filter((b) => b.startsWith('xhb')); xhbSet = sets[(sets.indexOf(xhbSet) + 1) % sets.length]; rebuild(); } // RB でセット切り替え（仮）
     const lt = down[6], rt = down[7];
     const half = lt && !rt ? 0 : rt && !lt ? 1 : lt && rt ? (padLast === 7 ? 1 : 0) : null;
     if (edge(6)) padLast = 6;
@@ -631,7 +703,8 @@
 
   $('jobIcon').src = D.job.icon;
   reset();
-  buildBars();
+  rebuild();
+  buildSettings();
   setMode('keyboard');
   fit();
   requestAnimationFrame(loop);

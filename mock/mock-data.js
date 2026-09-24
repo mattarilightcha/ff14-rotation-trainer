@@ -24,7 +24,8 @@ window.MOCK_DATA = {
     36963
    ],
    "preservesCombo": false,
-   "level": 4
+   "level": 4,
+   "forJob": true
   },
   "7479": {
    "id": 7479,
@@ -41,7 +42,8 @@ window.MOCK_DATA = {
     36963
    ],
    "preservesCombo": false,
-   "level": 18
+   "level": 18,
+   "forJob": true
   },
   "7480": {
    "id": 7480,
@@ -58,7 +60,8 @@ window.MOCK_DATA = {
     36963
    ],
    "preservesCombo": false,
-   "level": 50
+   "level": 50,
+   "forJob": true
   },
   "7481": {
    "id": 7481,
@@ -74,7 +77,8 @@ window.MOCK_DATA = {
     7478
    ],
    "preservesCombo": false,
-   "level": 30
+   "level": 30,
+   "forJob": true
   },
   "7482": {
    "id": 7482,
@@ -90,7 +94,8 @@ window.MOCK_DATA = {
     7479
    ],
    "preservesCombo": false,
-   "level": 40
+   "level": 40,
+   "forJob": true
   },
   "7484": {
    "id": 7484,
@@ -107,7 +112,8 @@ window.MOCK_DATA = {
     25780
    ],
    "preservesCombo": false,
-   "level": 35
+   "level": 35,
+   "forJob": true
   },
   "7485": {
    "id": 7485,
@@ -124,7 +130,8 @@ window.MOCK_DATA = {
     25780
    ],
    "preservesCombo": false,
-   "level": 45
+   "level": 45,
+   "forJob": true
   },
   "7486": {
    "id": 7486,
@@ -138,7 +145,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 15
+   "level": 15,
+   "forJob": true
   },
   "7487": {
    "id": 7487,
@@ -152,7 +160,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 50
+   "level": 50,
+   "forJob": true
   },
   "7488": {
    "id": 7488,
@@ -166,7 +175,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 40
+   "level": 40,
+   "forJob": true
   },
   "7489": {
    "id": 7489,
@@ -180,7 +190,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 30
+   "level": 30,
+   "forJob": true
   },
   "7490": {
    "id": 7490,
@@ -194,7 +205,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 52
+   "level": 52,
+   "forJob": true
   },
   "7491": {
    "id": 7491,
@@ -208,7 +220,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 62
+   "level": 62,
+   "forJob": true
   },
   "7492": {
    "id": 7492,
@@ -222,7 +235,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 54
+   "level": 54,
+   "forJob": true
   },
   "7493": {
    "id": 7493,
@@ -236,7 +250,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 56
+   "level": 56,
+   "forJob": true
   },
   "7495": {
    "id": 7495,
@@ -250,7 +265,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 68
+   "level": 68,
+   "forJob": true
   },
   "7496": {
    "id": 7496,
@@ -264,7 +280,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 70
+   "level": 70,
+   "forJob": true
   },
   "7497": {
    "id": 7497,
@@ -278,7 +295,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 60
+   "level": 60,
+   "forJob": true
   },
   "7499": {
    "id": 7499,
@@ -292,7 +310,8 @@ window.MOCK_DATA = {
    "maxCharges": 1,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 50
+   "level": 50,
+   "forJob": true
   },
   "7541": {
    "id": 7541,
@@ -306,7 +325,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 8
+   "level": 8,
+   "forJob": true
   },
   "7542": {
    "id": 7542,
@@ -320,7 +340,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 12
+   "level": 12,
+   "forJob": true
   },
   "7546": {
    "id": 7546,
@@ -334,7 +355,8 @@ window.MOCK_DATA = {
    "maxCharges": 2,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 50
+   "level": 50,
+   "forJob": true
   },
   "7548": {
    "id": 7548,
@@ -348,7 +370,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 32
+   "level": 32,
+   "forJob": true
   },
   "7549": {
    "id": 7549,
@@ -362,7 +385,53 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 22
+   "level": 22,
+   "forJob": true
+  },
+  "7559": {
+   "id": 7559,
+   "name": "堅実魔",
+   "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
+   "icon": "../public/icons/actions/000869.png",
+   "isGcd": false,
+   "castMs": 0,
+   "recastMs": 120000,
+   "cooldownGroup": 49,
+   "maxCharges": 0,
+   "comboFrom": [],
+   "preservesCombo": true,
+   "level": 44,
+   "forJob": false
+  },
+  "7561": {
+   "id": 7561,
+   "name": "迅速魔",
+   "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
+   "icon": "../public/icons/actions/000866.png",
+   "isGcd": false,
+   "castMs": 0,
+   "recastMs": 60000,
+   "cooldownGroup": 44,
+   "maxCharges": 0,
+   "comboFrom": [],
+   "preservesCombo": true,
+   "level": 18,
+   "forJob": false
+  },
+  "7571": {
+   "id": 7571,
+   "name": "救出",
+   "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+   "icon": "../public/icons/actions/000890.png",
+   "isGcd": false,
+   "castMs": 0,
+   "recastMs": 120000,
+   "cooldownGroup": 50,
+   "maxCharges": 0,
+   "comboFrom": [],
+   "preservesCombo": true,
+   "level": 48,
+   "forJob": false
   },
   "7863": {
    "id": 7863,
@@ -376,7 +445,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 10
+   "level": 10,
+   "forJob": true
   },
   "7867": {
    "id": 7867,
@@ -390,7 +460,23 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 30
+   "level": 30,
+   "forJob": true
+  },
+  "16472": {
+   "id": 16472,
+   "name": "影身具現",
+   "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+   "icon": "../public/icons/actions/003088.png",
+   "isGcd": false,
+   "castMs": 0,
+   "recastMs": 120000,
+   "cooldownGroup": 22,
+   "maxCharges": 0,
+   "comboFrom": [],
+   "preservesCombo": true,
+   "level": 80,
+   "forJob": false
   },
   "16481": {
    "id": 16481,
@@ -404,7 +490,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 72
+   "level": 72,
+   "forJob": true
   },
   "16482": {
    "id": 16482,
@@ -418,7 +505,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 68
+   "level": 68,
+   "forJob": true
   },
   "16483": {
    "id": 16483,
@@ -432,7 +520,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 74
+   "level": 74,
+   "forJob": true
   },
   "16485": {
    "id": 16485,
@@ -446,7 +535,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 74
+   "level": 74,
+   "forJob": true
   },
   "16486": {
    "id": 16486,
@@ -460,7 +550,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 74
+   "level": 74,
+   "forJob": true
   },
   "16487": {
    "id": 16487,
@@ -474,7 +565,23 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 80
+   "level": 80,
+   "forJob": true
+  },
+  "25757": {
+   "id": 25757,
+   "name": "シャドウブリンガー",
+   "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+   "icon": "../public/icons/actions/003091.png",
+   "isGcd": false,
+   "castMs": 0,
+   "recastMs": 60000,
+   "cooldownGroup": 23,
+   "maxCharges": 2,
+   "comboFrom": [],
+   "preservesCombo": true,
+   "level": 90,
+   "forJob": false
   },
   "25780": {
    "id": 25780,
@@ -488,7 +595,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": false,
-   "level": 86
+   "level": 86,
+   "forJob": true
   },
   "25781": {
    "id": 25781,
@@ -502,7 +610,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 90
+   "level": 90,
+   "forJob": true
   },
   "25782": {
    "id": 25782,
@@ -516,7 +625,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 90
+   "level": 90,
+   "forJob": true
   },
   "36962": {
    "id": 36962,
@@ -530,7 +640,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 82
+   "level": 82,
+   "forJob": true
   },
   "36963": {
    "id": 36963,
@@ -544,7 +655,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": false,
-   "level": 92
+   "level": 92,
+   "forJob": true
   },
   "36964": {
    "id": 36964,
@@ -558,7 +670,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 96
+   "level": 96,
+   "forJob": true
   },
   "36965": {
    "id": 36965,
@@ -572,7 +685,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 100
+   "level": 100,
+   "forJob": true
   },
   "36966": {
    "id": 36966,
@@ -586,7 +700,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 100
+   "level": 100,
+   "forJob": true
   },
   "36967": {
    "id": 36967,
@@ -600,7 +715,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 100
+   "level": 100,
+   "forJob": true
   },
   "36968": {
    "id": 36968,
@@ -614,7 +730,8 @@ window.MOCK_DATA = {
    "maxCharges": 0,
    "comboFrom": [],
    "preservesCombo": true,
-   "level": 100
+   "level": 100,
+   "forJob": true
   }
  },
  "statuses": {
@@ -635,349 +752,928 @@ window.MOCK_DATA = {
   }
  },
  "bars": {
-  "hb1": [
-   {
-    "kind": "action",
-    "id": 36963,
-    "from": 7477
-   },
-   {
-    "kind": "action",
-    "id": 7478
-   },
-   {
-    "kind": "action",
-    "id": 7479
-   },
-   {
-    "kind": "action",
-    "id": 7480
-   },
-   {
-    "kind": "action",
-    "id": 7486
-   },
-   {
-    "kind": "action",
-    "id": 7490
-   },
-   {
-    "kind": "action",
-    "id": 7499
-   },
-   {
-    "kind": "action",
-    "id": 7497
-   },
-   {
-    "kind": "action",
-    "id": 7495
-   },
-   {
-    "kind": "action",
-    "id": 16481
-   },
-   {
-    "kind": "action",
-    "id": 7867
-   },
-   {
-    "kind": "action",
-    "id": 16487
-   }
-  ],
-  "hb2": [
-   {
-    "kind": "action",
-    "id": 25780,
-    "from": 7483
-   },
-   {
-    "kind": "action",
-    "id": 7484
-   },
-   {
-    "kind": "action",
-    "id": 7485
-   },
-   {
-    "kind": "action",
-    "id": 7491
-   },
-   null,
-   null,
-   {
-    "kind": "action",
-    "id": 7548
-   },
-   null,
-   null,
-   {
-    "kind": "action",
-    "id": 7496
-   },
-   {
-    "kind": "action",
-    "id": 16483
-   },
-   {
-    "kind": "action",
-    "id": 7492
-   }
-  ],
-  "hb3": [
-   {
-    "kind": "action",
-    "id": 25781
-   },
-   {
-    "kind": "action",
-    "id": 7481
-   },
-   {
-    "kind": "action",
-    "id": 7482
-   },
-   {
-    "kind": "other",
-    "type": 2
-   },
-   null,
-   null,
-   {
-    "kind": "action",
-    "id": 7867
-   },
-   {
-    "kind": "action",
-    "id": 16482
-   },
-   {
-    "kind": "other",
-    "type": 2
-   },
-   null,
-   null,
-   null
-  ],
-  "hb4": [
-   {
-    "kind": "action",
-    "id": 7542
-   },
-   {
-    "kind": "action",
-    "id": 7863
-   },
-   {
-    "kind": "action",
-    "id": 7549
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   {
-    "kind": "action",
-    "id": 7493
-   },
-   null,
-   {
-    "kind": "action",
-    "id": 7546
-   },
-   {
-    "kind": "action",
-    "id": 36962,
-    "from": 7498
-   },
-   {
-    "kind": "action",
-    "id": 7541
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   null,
-   {
-    "kind": "other",
-    "type": 17
-   }
-  ],
-  "xhb1": [
-   {
-    "kind": "action",
-    "id": 7481
-   },
-   {
-    "kind": "action",
-    "id": 7867
-   },
-   {
-    "kind": "action",
-    "id": 7549
-   },
-   {
-    "kind": "action",
-    "id": 25780,
-    "from": 7483
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   {
-    "kind": "other",
-    "type": 10
-   },
-   {
-    "kind": "action",
-    "id": 7486
-   },
-   {
-    "kind": "action",
-    "id": 7479
-   },
-   {
-    "kind": "action",
-    "id": 7863
-   },
-   {
-    "kind": "action",
-    "id": 7542
-   },
-   {
-    "kind": "action",
-    "id": 36962,
-    "from": 7498
-   },
-   {
-    "kind": "action",
-    "id": 7541
-   },
-   {
-    "kind": "action",
-    "id": 36963,
-    "from": 7477
-   },
-   {
-    "kind": "action",
-    "id": 7478
-   }
-  ],
-  "xhb2": [
-   {
-    "kind": "missing",
-    "id": 7501
-   },
-   {
-    "kind": "action",
-    "id": 7495
-   },
-   {
-    "kind": "action",
-    "id": 7490
-   },
-   {
-    "kind": "action",
-    "id": 7491
-   },
-   {
-    "kind": "missing",
-    "id": 7502
-   },
-   {
-    "kind": "action",
-    "id": 7497
-   },
-   {
-    "kind": "action",
-    "id": 7492
-   },
-   {
-    "kind": "action",
-    "id": 7493
-   },
-   {
-    "kind": "action",
-    "id": 7546
-   },
-   {
-    "kind": "missing",
-    "id": 7494
-   },
-   {
-    "kind": "action",
-    "id": 7480
-   },
-   {
-    "kind": "action",
-    "id": 7499
-   },
-   {
-    "kind": "action",
-    "id": 7482
-   },
-   {
-    "kind": "action",
-    "id": 7485
-   },
-   {
-    "kind": "action",
-    "id": 7548
-   },
-   {
-    "kind": "action",
-    "id": 7484
-   }
-  ],
-  "xhb3": [
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   null,
-   {
-    "kind": "action",
-    "id": 16487
-   },
-   {
-    "kind": "action",
-    "id": 25781
-   },
-   {
-    "kind": "action",
-    "id": 16481
-   },
-   {
-    "kind": "action",
-    "id": 16483
-   },
-   {
-    "kind": "action",
-    "id": 16482
-   },
-   {
-    "kind": "action",
-    "id": 7496
-   }
-  ]
+  "hb1": {
+   "job": [
+    {
+     "kind": "action",
+     "id": 36963,
+     "from": 7477
+    },
+    {
+     "kind": "action",
+     "id": 7478
+    },
+    {
+     "kind": "action",
+     "id": 7479
+    },
+    {
+     "kind": "action",
+     "id": 7480
+    },
+    {
+     "kind": "action",
+     "id": 7486
+    },
+    {
+     "kind": "action",
+     "id": 7490
+    },
+    {
+     "kind": "action",
+     "id": 7499
+    },
+    {
+     "kind": "action",
+     "id": 7497
+    },
+    {
+     "kind": "action",
+     "id": 7495
+    },
+    {
+     "kind": "action",
+     "id": 16481
+    },
+    {
+     "kind": "action",
+     "id": 7867
+    },
+    {
+     "kind": "action",
+     "id": 16487
+    }
+   ],
+   "shared": null,
+   "defaultSource": "job"
+  },
+  "hb2": {
+   "job": [
+    {
+     "kind": "action",
+     "id": 25780,
+     "from": 7483
+    },
+    {
+     "kind": "action",
+     "id": 7484
+    },
+    {
+     "kind": "action",
+     "id": 7485
+    },
+    {
+     "kind": "action",
+     "id": 7491
+    },
+    null,
+    null,
+    {
+     "kind": "action",
+     "id": 7548
+    },
+    null,
+    null,
+    {
+     "kind": "action",
+     "id": 7496
+    },
+    {
+     "kind": "action",
+     "id": 16483
+    },
+    {
+     "kind": "action",
+     "id": 7492
+    }
+   ],
+   "shared": null,
+   "defaultSource": "job"
+  },
+  "hb3": {
+   "job": [
+    {
+     "kind": "action",
+     "id": 25781
+    },
+    {
+     "kind": "action",
+     "id": 7481
+    },
+    {
+     "kind": "action",
+     "id": 7482
+    },
+    {
+     "kind": "other",
+     "type": 2
+    },
+    null,
+    null,
+    {
+     "kind": "action",
+     "id": 7867
+    },
+    {
+     "kind": "action",
+     "id": 16482
+    },
+    {
+     "kind": "other",
+     "type": 2
+    },
+    null,
+    null,
+    null
+   ],
+   "shared": null,
+   "defaultSource": "job"
+  },
+  "hb4": {
+   "job": [
+    {
+     "kind": "action",
+     "id": 7542
+    },
+    {
+     "kind": "action",
+     "id": 7863
+    },
+    {
+     "kind": "action",
+     "id": 7549
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "action",
+     "id": 7493
+    },
+    null,
+    {
+     "kind": "action",
+     "id": 7546
+    },
+    {
+     "kind": "action",
+     "id": 36962,
+     "from": 7498
+    },
+    {
+     "kind": "action",
+     "id": 7541
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 17
+    }
+   ],
+   "shared": [
+    {
+     "kind": "action",
+     "id": 7571
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 16
+    },
+    {
+     "kind": "action",
+     "id": 7561
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 16
+    },
+    {
+     "kind": "action",
+     "id": 7559
+    },
+    null,
+    null,
+    {
+     "kind": "other",
+     "type": 2
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 10
+    }
+   ],
+   "defaultSource": "job"
+  },
+  "hb5": {
+   "job": null,
+   "shared": [
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "action",
+     "id": 16472
+    },
+    {
+     "kind": "action",
+     "id": 25757
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "defaultSource": "shared"
+  },
+  "hb6": {
+   "job": null,
+   "shared": [
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "other",
+     "type": 7
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "defaultSource": "shared"
+  },
+  "hb7": {
+   "job": null,
+   "shared": [
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 30
+    }
+   ],
+   "defaultSource": "shared"
+  },
+  "hb8": {
+   "job": null,
+   "shared": [
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    }
+   ],
+   "defaultSource": "shared"
+  },
+  "hb9": {
+   "job": null,
+   "shared": [
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 2
+    },
+    {
+     "kind": "other",
+     "type": 11
+    },
+    {
+     "kind": "other",
+     "type": 2
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 6
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    }
+   ],
+   "defaultSource": "shared"
+  },
+  "hb10": {
+   "job": null,
+   "shared": [
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 2
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 7
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    }
+   ],
+   "defaultSource": "shared"
+  },
+  "xhb1": {
+   "job": [
+    {
+     "kind": "action",
+     "id": 7481
+    },
+    {
+     "kind": "action",
+     "id": 7867
+    },
+    {
+     "kind": "action",
+     "id": 7549
+    },
+    {
+     "kind": "action",
+     "id": 25780,
+     "from": 7483
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "action",
+     "id": 7486
+    },
+    {
+     "kind": "action",
+     "id": 7479
+    },
+    {
+     "kind": "action",
+     "id": 7863
+    },
+    {
+     "kind": "action",
+     "id": 7542
+    },
+    {
+     "kind": "action",
+     "id": 36962,
+     "from": 7498
+    },
+    {
+     "kind": "action",
+     "id": 7541
+    },
+    {
+     "kind": "action",
+     "id": 36963,
+     "from": 7477
+    },
+    {
+     "kind": "action",
+     "id": 7478
+    }
+   ],
+   "shared": [
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "other",
+     "type": 10
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 12
+    },
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 18
+    },
+    {
+     "kind": "other",
+     "type": 18
+    },
+    {
+     "kind": "other",
+     "type": 18
+    },
+    {
+     "kind": "other",
+     "type": 18
+    },
+    {
+     "kind": "other",
+     "type": 8
+    },
+    {
+     "kind": "other",
+     "type": 8
+    },
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 8
+    }
+   ],
+   "defaultSource": "job"
+  },
+  "xhb2": {
+   "job": [
+    {
+     "kind": "missing",
+     "id": 7501
+    },
+    {
+     "kind": "action",
+     "id": 7495
+    },
+    {
+     "kind": "action",
+     "id": 7490
+    },
+    {
+     "kind": "action",
+     "id": 7491
+    },
+    {
+     "kind": "missing",
+     "id": 7502
+    },
+    {
+     "kind": "action",
+     "id": 7497
+    },
+    {
+     "kind": "action",
+     "id": 7492
+    },
+    {
+     "kind": "action",
+     "id": 7493
+    },
+    {
+     "kind": "action",
+     "id": 7546
+    },
+    {
+     "kind": "missing",
+     "id": 7494
+    },
+    {
+     "kind": "action",
+     "id": 7480
+    },
+    {
+     "kind": "action",
+     "id": 7499
+    },
+    {
+     "kind": "action",
+     "id": 7482
+    },
+    {
+     "kind": "action",
+     "id": 7485
+    },
+    {
+     "kind": "action",
+     "id": 7548
+    },
+    {
+     "kind": "action",
+     "id": 7484
+    }
+   ],
+   "shared": [
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    null,
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    }
+   ],
+   "defaultSource": "job"
+  },
+  "xhb3": {
+   "job": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "action",
+     "id": 16487
+    },
+    {
+     "kind": "action",
+     "id": 25781
+    },
+    {
+     "kind": "action",
+     "id": 16481
+    },
+    {
+     "kind": "action",
+     "id": 16483
+    },
+    {
+     "kind": "action",
+     "id": 16482
+    },
+    {
+     "kind": "action",
+     "id": 7496
+    }
+   ],
+   "shared": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 8
+    },
+    {
+     "kind": "other",
+     "type": 4
+    },
+    {
+     "kind": "other",
+     "type": 8
+    }
+   ],
+   "defaultSource": "job"
+  },
+  "xhb7": {
+   "job": null,
+   "shared": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "kind": "other",
+     "type": 24
+    },
+    null
+   ],
+   "defaultSource": "shared"
+  },
+  "xhb8": {
+   "job": null,
+   "shared": [
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    },
+    {
+     "kind": "other",
+     "type": 15
+    }
+   ],
+   "defaultSource": "shared"
+  }
  },
  "unplaced": [
   36964
- ]
+ ],
+ "replaceGroups": {
+  "7867": [
+   7487,
+   7488,
+   7489,
+   36965,
+   36966
+  ],
+  "16483": [
+   16485,
+   16486,
+   25782,
+   36967,
+   36968
+  ],
+  "25781": [
+   25782
+  ]
+ },
+ "splitDetected": []
 };
