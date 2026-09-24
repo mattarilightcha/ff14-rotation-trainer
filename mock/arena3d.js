@@ -175,6 +175,88 @@
       gl_FragColor = vec4(col * 1.4, a);
       #include <colorspace_fragment>
     }`;
+  // 設置型の技の床（加算）: 0 アサイラムの床（ドームの縁の明るい輪・うっすら青い内側・氷のような模様）/
+  // 1 リタージー・オブ・ベル（届く 20m の流れる点線の輪、足元の水色の光の輪。鳴ると内側が光る）
+  const ZONE_FS = `
+    uniform int uKind; uniform vec2 uC; uniform float uR; uniform float uTime; uniform float uAlpha; uniform float uPulse; uniform vec3 uC0; uniform vec3 uC1;
+    varying vec2 vW;
+    float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+    float noise(vec2 p) {
+      vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+      return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+    }
+    void main() {
+      vec2 d = vW - uC; float r = length(d), a = atan(d.y, d.x);
+      if (r > uR + 0.8) discard;
+      float x = r / uR;
+      float edge = 1.0 - smoothstep(0.0, 0.22, abs(r - uR + 0.05));
+      vec3 col; float al;
+      if (uKind == 0) {
+        float ice = smoothstep(0.66, 0.82, noise(vW * 0.55 + 4.0)) * 0.18 + smoothstep(0.7, 0.9, noise(vW * 1.4)) * 0.1;
+        float halo = smoothstep(0.7, 1.0, x) * 0.16;
+        al = 0.05 + halo + ice * (1.0 - x * 0.4) + edge * (0.85 + 0.15 * sin(uTime * 1.6));
+        al += uPulse * (1.0 - smoothstep(0.0, 0.16, abs(x - (1.0 - uPulse)))) * 0.35;
+        col = mix(uC1, uC0, clamp(edge + ice, 0.0, 1.0));
+      } else {
+        float dash = step(0.5, fract((a + uTime * 0.05) / 6.2832 * 72.0));
+        float base = (1.0 - smoothstep(0.0, 2.3, r)) * 0.32;
+        float rings = (1.0 - smoothstep(0.0, 0.07, abs(r - 1.1 - 0.12 * sin(uTime * 2.0)))) * 0.55 + (1.0 - smoothstep(0.0, 0.06, abs(r - 1.85))) * 0.35;
+        al = edge * dash * 0.4 + smoothstep(0.8, 1.0, x) * 0.03 + base + rings;
+        al += uPulse * 0.22 * (1.0 - x * 0.8);
+        col = mix(uC1, uC0, clamp(edge + rings, 0.0, 1.0));
+      }
+      al *= uAlpha;
+      if (al < 0.004) discard;
+      gl_FragColor = vec4(col * 1.3, al);
+      #include <colorspace_fragment>
+    }`;
+  // アサイラムのドーム（加算。半球を平たくしたもの）: 縁ほど明るいガラス（フレネル）、氷のような面の模様、上の方に青から橙へ揺らめく炎、床との境の光
+  const DOME_VS = `
+    uniform float uFlat;
+    varying vec3 vN; varying vec3 vV; varying vec3 vL;
+    void main() {
+      vL = position;
+      vec4 w = modelMatrix * vec4(position, 1.0);
+      vN = normalize(vec3(position.x, position.y / uFlat, position.z));
+      vV = cameraPosition - w.xyz;
+      gl_Position = projectionMatrix * viewMatrix * w;
+    }`;
+  const DOME_FS = `
+    uniform float uTime; uniform float uAlpha; uniform float uPulse;
+    varying vec3 vN; varying vec3 vV; varying vec3 vL;
+    float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+    float noise(vec2 p) {
+      vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+      return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+    }
+    void main() {
+      vec3 n = normalize(vN), v = normalize(vV);
+      float fres = pow(1.0 - abs(dot(n, v)), 3.0);
+      float h = clamp(vL.y, 0.0, 1.0);
+      // 面の模様は、ドームの上の位置（xz）で取る（上から見ても放射状の筋にならない）
+      float facets = smoothstep(0.64, 0.8, noise(vL.xz * 6.0 + h * 3.0 + 11.0)) * 0.16;
+      float fl = noise(vL.xz * 2.6 + vec2(sin(uTime * 0.3) * 0.6, uTime * 0.22));
+      float wisp = smoothstep(0.6, 0.83, fl) * smoothstep(0.3, 0.8, h);
+      vec3 blue = vec3(0.4, 0.64, 1.0), white = vec3(0.9, 0.96, 1.0), orange = vec3(1.0, 0.6, 0.26);
+      vec3 col = mix(blue, white, fres * 0.8);
+      col = mix(col, mix(vec3(0.5, 0.8, 1.0), orange, smoothstep(0.45, 0.9, fl)), wisp);
+      float base = (1.0 - smoothstep(0.0, 0.05, h)) * 0.45;
+      float a = 0.022 + fres * 0.28 + facets * (0.3 + fres) + wisp * 0.3 + base;
+      a *= uAlpha * (1.0 + uPulse * 0.6);
+      gl_FragColor = vec4(col * 1.1, a);
+      #include <colorspace_fragment>
+    }`;
+  // 光の絵の板（加算。いつもカメラの方を向く。SPRITE_VS と組み合わせる）
+  const BILL_FS = `
+    uniform sampler2D map; uniform float uOpacity; uniform vec3 uColor;
+    varying vec2 vUv;
+    void main() {
+      vec4 c = texture2D(map, vUv);
+      float a = c.a * uOpacity;
+      if (a < 0.004) discard;
+      gl_FragColor = vec4(c.rgb * uColor, a);
+      #include <colorspace_fragment>
+    }`;
   // 斬撃の弧（加算）: u = 弧に沿った位置、v = 幅の向き
   const ARC_VS = `
     uniform float uA0; uniform float uSpan; uniform float uR; uniform float uW;
@@ -464,7 +546,8 @@
     // ---- ドット絵の板 ----
     const SPR = S.SPR;
     const setTex = (set) => ({ map: texOf(set.atlas, 'sprite'), emap: texOf(set.emit, 'sprite'), size: new T.Vector2(set.atlas.width, set.atlas.height) });
-    const TEX = { player: setTex(SPR.player), tank: setTex(SPR.tank), boss: setTex(SPR.boss), props: setTex(SPR.props) };
+    // 人物の組（侍・タンク・白魔道士・木人）と小物。自分と相方の見た目はジョブで変わるので、組ごとに作っておく
+    const TEX = Object.fromEntries(Object.entries(SPR).filter(([, v]) => v?.atlas).map(([k, v]) => [k, setTex(v)]));
     const quad = new T.PlaneGeometry(1, 1);
     function spriteMesh(tex, parent = scene) {
       const uniforms = Object.assign(T.UniformsUtils.clone(T.UniformsLib.fog), {
@@ -694,6 +777,38 @@
       s.renderOrder = 3; scene.add(s);
       return s;
     });
+    // 設置型の技（アサイラムの床・ベルの届く範囲・ベルの足元の花・鐘）
+    const zonePool = pool(() => {
+      const m = new T.Mesh(new T.PlaneGeometry(1, 1), new T.ShaderMaterial({
+        uniforms: { uKind: { value: 0 }, uC: { value: new T.Vector2() }, uR: { value: 1 }, uTime: { value: 0 }, uAlpha: { value: 1 }, uPulse: { value: 0 }, uC0: { value: new T.Color() }, uC1: { value: new T.Color() } },
+        vertexShader: DECAL_VS, fragmentShader: ZONE_FS, transparent: true, depthWrite: false, blending: T.AdditiveBlending,
+      }));
+      m.rotation.x = -Math.PI / 2; m.position.y = 0.025; m.renderOrder = 1; m.frustumCulled = false; scene.add(m);
+      return m;
+    });
+    const DOME_FLAT = 0.55; // ドームの高さ（半径に対して）
+    const domeGeo = new T.SphereGeometry(1, 56, 20, 0, Math.PI * 2, 0, Math.PI / 2);
+    const domePool = pool(() => {
+      const m = new T.Mesh(domeGeo, new T.ShaderMaterial({
+        uniforms: { uTime: { value: 0 }, uAlpha: { value: 1 }, uPulse: { value: 0 }, uFlat: { value: DOME_FLAT } },
+        vertexShader: DOME_VS, fragmentShader: DOME_FS, transparent: true, depthWrite: false, blending: T.AdditiveBlending, side: T.DoubleSide,
+      }));
+      m.renderOrder = 5; m.frustumCulled = false; scene.add(m);
+      return m;
+    });
+    // リタージー・オブ・ベルの光の絵（sprites.js の vfx）
+    const VFX = SPR.vfx, vfxTex = { heart: texOf(VFX.lilyHeart), flower: texOf(VFX.lilyFlower), bubble: texOf(VFX.lilyBubble) };
+    function billMesh(tex) {
+      const uniforms = {
+        map: { value: tex }, uRect: { value: new T.Vector4(0, 0, 1, 1) }, uSize: { value: new T.Vector2(1, 1) }, uAnchor: { value: new T.Vector2(0.5, 0.5) },
+        uFlip: { value: 0 }, uRot: { value: 0 }, uOpacity: { value: 1 }, uColor: { value: new T.Color(1, 1, 1) },
+      };
+      const m = new T.Mesh(quad, new T.ShaderMaterial({ uniforms, vertexShader: SPRITE_VS, fragmentShader: BILL_FS, transparent: true, depthWrite: false, blending: T.AdditiveBlending }));
+      m.frustumCulled = false; m.renderOrder = 4; scene.add(m);
+      return m;
+    }
+    const heartPool = pool(() => billMesh(vfxTex.heart)), flowerPool = pool(() => billMesh(vfxTex.flower)), bubblePool = pool(() => billMesh(vfxTex.bubble));
+    const camRight = new T.Vector3(), camUp2 = new T.Vector3();
     // 詠唱の陣
     const sigil = new T.Mesh(new T.PlaneGeometry(4.4, 4.4), new T.MeshBasicMaterial({ map: texOf(sigilCanvas()), transparent: true, blending: T.AdditiveBlending, depthWrite: false, color: 0xffc640 }));
     sigil.rotation.x = -Math.PI / 2; sigil.position.y = 0.05; sigil.renderOrder = 3; sigil.visible = false; scene.add(sigil);
@@ -791,10 +906,12 @@
       };
       for (const kind of ['boss', 'tank', 'player']) {
         const E = ENT[kind], e = S[kind], m = E.mesh, u = m.material.uniforms;
-        const show = kind !== 'tank' || S.opts.tank;
+        const show = kind !== 'tank' || S.hasNpc();
         m.visible = show; E.shadow.visible = show;
         if (!show) continue;
         const P = S.poseOf(kind, yaw);
+        // 見た目の組が変わったら（ジョブの切り替え）、貼る絵を差し替える
+        if (E.tex !== TEX[P.name]) { E.tex = TEX[P.name]; u.map.value = E.tex.map; u.emap.value = E.tex.emap; u.texSize.value = E.tex.size; }
         setFrame(m, E.tex.size, P.fr, P.set);
         u.uRot.value = P.rot;
         let z = e.z ?? 0, op = 1;
@@ -816,22 +933,64 @@
       }
       // 自分が手前の人物（敵・タンク）に隠れたら、隠している方を薄くする（背面を取りに敵の後ろへ回ったとき）
       const rect = (kind) => { const e = S[kind], h = S.HEAD[kind], a = project(e.x, e.y, 0), b = project(e.x, e.y, h), w = Math.abs(a.y - b.y) * (kind === 'boss' ? 0.42 : 0.26); return { x0: a.x - w, x1: a.x + w, y0: b.y, y1: a.y, d: camera.position.distanceTo(v3.set(e.x, 0, e.y)) }; };
-      const rb = rect('boss'), rp = rect('player'), rt = S.opts.tank ? rect('tank') : null;
+      const rb = rect('boss'), rp = rect('player'), rt = S.hasNpc() ? rect('tank') : null;
       const covers = (f, b) => b && f && f.d < b.d && f.x0 < b.x1 && f.x1 > b.x0 && f.y0 < b.y1 && f.y1 > b.y0;
       ENT.boss.hide = covers(rb, rp);
       ENT.tank.hide = covers(rt, rp);
       // 残像
+      const pn = S.setName('player'), pset = S.SPR[pn], ptex = TEX[pn];
       trails.forEach((m, i) => {
         const t = player.trail[i];
         m.visible = !!t;
         if (!t) return;
-        const fr = window.MockSprites.frame(S.SPR.player, 'run', null, 0.1);
         const dir = ['right', 'down', 'left', 'up'][Math.round((((t.face - yaw - Math.PI / 2) % (Math.PI * 2)) + Math.PI * 4) % (Math.PI * 2) / (Math.PI / 2)) % 4];
-        setFrame(m, TEX.player.size, window.MockSprites.frame(S.SPR.player, 'run', dir, 0.1) ?? fr, S.SPR.player);
-        m.position.set(t.x, 0, t.y);
         const u = m.material.uniforms;
+        if (u.map.value !== ptex.map) { u.map.value = ptex.map; u.emap.value = ptex.emap; u.texSize.value = ptex.size; }
+        setFrame(m, ptex.size, window.MockSprites.frame(pset, 'run', dir, 0.1), pset);
+        m.position.set(t.x, 0, t.y);
         u.uOpacity.value = (t.life / t.max) * 0.45; u.uFlash.value.set(0.6, 0.85, 1, 0.6); u.uTint.value.setRGB(1, 1, 1);
       });
+
+      // 設置型の技
+      zonePool.begin(); domePool.begin(); heartPool.begin(); flowerPool.begin(); bubblePool.begin();
+      camRight.setFromMatrixColumn(camera.matrixWorld, 0); camUp2.setFromMatrixColumn(camera.matrixWorld, 1);
+      for (const z of S.zones) {
+        const fade = (z.dying ? Math.max(0, 1 - (S.clock - z.endAt) / 0.7) : 1) * Math.min(1, (S.clock - z.born) / 0.4);
+        const pulse = Math.max(0, 1 - (S.clock - z.ringAt) / 0.7);
+        const d = zonePool.take(), u = d.material.uniforms;
+        d.position.x = z.x; d.position.z = z.y; d.scale.set(z.r * 2 + 1.8, z.r * 2 + 1.8, 1);
+        u.uKind.value = z.kind === 'asylum' ? 0 : 1; u.uC.value.set(z.x, z.y); u.uR.value = z.r; u.uTime.value = time; u.uAlpha.value = fade; u.uPulse.value = pulse;
+        if (z.kind === 'asylum') {
+          u.uC0.value.copy(col('#f0f8ff')); u.uC1.value.copy(col('#6aa8ff'));
+          // 透明なドーム（立ち上がるときは下から伸びる）
+          const dm = domePool.take(), du = dm.material.uniforms, rise = Math.min(1, (S.clock - z.born) / 0.6);
+          dm.position.set(z.x, 0, z.y); dm.scale.set(z.r, z.r * DOME_FLAT * (1 - Math.pow(1 - rise, 3)), z.r);
+          du.uTime.value = time; du.uAlpha.value = fade; du.uPulse.value = pulse;
+          continue;
+        }
+        u.uC0.value.copy(col('#f0ffff')); u.uC1.value.copy(col('#50d8d0'));
+        // リタージー・オブ・ベル: 伸びて少し行き過ぎて戻るように生え、中央の花が脈打ち、鈴の花（ガラス玉）が揺れる
+        const L = VFX.LILY, grow = Math.min(1, (S.clock - z.born) / 0.5), k = grow < 1 ? 1 - Math.pow(1 - grow, 3) * (1 - grow * 1.6) : 1;
+        const place = (m, dx, dy, w, h, ax, ay, op) => {
+          const mu = m.material.uniforms;
+          m.position.set(z.x, 0, z.y).addScaledVector(camRight, dx).addScaledVector(camUp2, dy);
+          mu.uSize.value.set(w, h); mu.uAnchor.value.set(ax, ay); mu.uOpacity.value = op;
+        };
+        place(heartPool.take(), 0, 0, L.w * k, L.h * k, 0.5, 0, fade);
+        const [fx0, fy0, fs0] = L.flower, fsz = fs0 * k * (1 + pulse * 0.25);
+        place(flowerPool.take(), fx0 * k, fy0 * k, fsz, fsz, 0.5, 0.5, fade * (0.85 + 0.15 * Math.sin(time * 3)));
+        const left = S.bellStacks?.() ?? 0;
+        L.bubbles.forEach(([x, y, sz], i) => {
+          const pop = z.pops[i] != null ? (S.clock - z.pops[i]) / 0.45 : null;
+          if (i >= left && (pop == null || pop >= 1)) return;
+          const appear = Math.min(1, Math.max(0, (S.clock - z.born - 0.3 - i * 0.08) / 0.25));
+          const sc = (pop != null ? 1 + pop * 0.8 : appear) * sz * k, a = pop != null ? 1 - pop : appear;
+          const bm = bubblePool.take();
+          place(bm, x * k, (y + Math.sin(S.clock * 2 + i * 1.3) * 0.06) * k, sc, sc, 0.5, 0.5, fade * a);
+          bm.material.uniforms.uColor.value.setRGB(1.5, 1.65, 1.75); // ガラス玉は少し明るく（小さくても見えるように）
+        });
+      }
+      zonePool.end(); domePool.end(); heartPool.end(); flowerPool.end(); bubblePool.end();
 
       // 敵の足元の輪
       ring.visible = !boss.dead;
@@ -854,7 +1013,7 @@
         u.uTime.value = time; u.uBoomT.value = boom;
         u.uArena.value = STG.size; u.uSq.value = STG.shape === 'square' ? 1 : 0;
       };
-      for (const tg of S.telegraphs) if (!tg.done && simT >= tg.start && (!tg.follow || tg.placed)) teleOf(tg, -1);
+      for (const tg of S.telegraphs) if (!tg.done && tg.kind !== 'raid' && simT >= tg.start && (!tg.follow || tg.placed)) teleOf(tg, -1);
       for (const e of S.fx) if (e.type === 'boom' && e.t >= 0) teleOf(e.tg, Math.min(1, e.t / e.dur));
       telePool.end();
 
@@ -902,6 +1061,12 @@
           s.position.set(e.at.x, e.at.z ?? 2, e.at.y); const sc = (2.5 + p * 3) * (e.power ?? 1); s.scale.set(sc, sc, 1);
           s.material.color.copy(col(e.col[0])); s.material.opacity = (1 - p) * 0.7;
         }
+      }
+      // リタージー・オブ・ベル: ハートの中の青い光のもや
+      for (const z of S.zones) {
+        if (z.kind !== 'bell' || z.dying) continue;
+        const s3 = glowPool.take(), pl = 0.8 + 0.2 * Math.sin(time * 3);
+        s3.position.set(z.x, S.BELL_H, z.y); s3.scale.set(3.6 * pl, 3.6 * pl, 1); s3.material.color.copy(col('#5fd0ff')); s3.material.opacity = 0.32;
       }
       // 敵の詠唱中: 胸の芯が脈打って光る
       if (boss.casting && !boss.dead) {

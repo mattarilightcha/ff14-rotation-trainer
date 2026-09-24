@@ -261,10 +261,12 @@
     lines.push(['項目', '値'].join(','));
     for (const [k, v] of R.summary) lines.push([cell(k), cell(v)].join(','));
     lines.push('');
-    const cols = ['時刻(秒)', '種類', 'アクション', '結果', '威力', 'ダメージ', '敵のHP', '剣気', '閃', '剣圧', '敵から見た位置', '敵との距離(m)', 'メモ'];
-    lines.push(cols.join(','));
+    // ゲージの列はジョブごと（侍: 剣気・閃・剣圧、ナイト: オウス、白魔道士: リリー・ブラッドリリー）
+    const gauge = R.gaugeCols ?? [];
+    const cols = ['時刻(秒)', '種類', 'アクション', '結果', '威力', 'ダメージ', '敵のHP', ...gauge, '敵から見た位置', '敵との距離(m)', 'メモ'];
+    lines.push(cols.map(cell).join(','));
     for (const e of R.events) {
-      lines.push([(e.t / 1000).toFixed(2), e.kind, e.action ?? '', e.result ?? '', e.potency ?? '', e.dmg ?? '', e.hp ?? '', e.kenki, e.sen, e.med, e.pos ?? '', e.dist ?? '', e.note ?? ''].map(cell).join(','));
+      lines.push([(e.t / 1000).toFixed(2), e.kind, e.action ?? '', e.result ?? '', e.potency ?? '', e.dmg ?? '', e.hp ?? '', ...gauge.map((_, i) => e.gauge?.[i] ?? ''), e.pos ?? '', e.dist ?? '', e.note ?? ''].map(cell).join(','));
     }
     return lines.join('\r\n') + '\r\n';
   }

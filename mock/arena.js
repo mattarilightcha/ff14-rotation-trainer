@@ -28,6 +28,8 @@
     steel: ['#ffffff', '#9fd4ff'], setsu: ['#f0fdff', '#62d2ff'], getsu: ['#f3efff', '#8f7dff'], ka: ['#fff2f8', '#ff78b6'],
     kenki: ['#fff3ea', '#ff5a36'], iai: ['#fffbe9', '#ffc640'], namikiri: ['#f2ffff', '#4fe3ff'], shoha: ['#f6efff', '#b070ff'],
     buff: ['#fffbe3', '#ffd46b'], blood: ['#ffecec', '#ff3b3b'], water: ['#f0fbff', '#7fd8ff'],
+    holy: ['#fffbe8', '#ffe08a'], heal: ['#f0fff4', '#6fe89a'],
+    lily: ['#f4ffff', '#6fe6e0'], dome: ['#eef8ff', '#7ab8ff'], // リタージー・オブ・ベル（水色のガラス）・アサイラム（青白いドーム）
   };
   const MECH = {
     circle: { name: '大旋風', hint: '敵の周囲に円形範囲。離れる' },
@@ -36,11 +38,15 @@
     puddle: { name: '地裂き', hint: '足元に続けて円。動き続ける' },
     line: { name: '一閃', hint: 'あなたへ向けた直線範囲。横へよける' },
     half: { name: '半月斬', hint: '敵の左右どちらか半面。反対側へ' },
+    raid: { name: '全体攻撃', hint: 'よけられない全体への攻撃。HP を戻しておく（リタージー・オブ・ベルが鳴る）' },
     turn: { name: '（タンクが敵の向きを変える）' },
     relocate: { name: '（タンクが敵を移動させる）' },
   };
   // 頭の高さ（m。名前とフライテキストの位置）
   const HEAD = { player: 2.7, tank: 2.8, boss: 4.6 };
+  // 役割（自分のジョブのロール）: melee（侍）/ tank（ナイト。敵はあなたを狙い、相方は回復役）/ healer（白魔道士。相方のタンクを回復する）。
+  // 相方（npc）の見た目: タンクならナイト、回復役なら白魔道士。数値は練習用の仮（DESIGN-06）
+  const ROLE_POL = { bossHit: 0.04, npcHeal: 0.08, tankHit: 0.035 }; // 敵の通常攻撃で減る HP・相方の回復量（最大 HP に対して）
 
   const rand = (a, b) => a + Math.random() * (b - a);
   const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -63,11 +69,20 @@
 
   // ---------------- 状態 ----------------
   const player = { x: 0, y: 3.8, z: 0, face: -Math.PI / 2, mx: 0, my: 0, moving: false, walkT: 0, hp: 1, down: 0, jumpT: -1, hurt: 0, trail: [], act: null };
-  const boss = { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null, dead: 0, act: null, casting: false };
+  const boss = { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null, dead: 0, act: null, casting: false, atkT: 0 };
   // タンクは敵の斜め前（真上だと敵の体に隠れて見えないため、少し左に寄せる）
   const TANK_ANGLE = -Math.PI / 2 - 0.55;
-  const tank = { x: 0, y: -6.2, angle: TANK_ANGLE, face: Math.PI / 2, walkT: 0, moving: false, atkT: 0, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, act: null };
-  let opts = { tank: true, mech: 'normal', guide: true, seed: 1, durationMs: 120000, tankSkill: 'good', stage: 'dojo', markers: null };
+  const tank = { x: 0, y: -6.2, angle: TANK_ANGLE, face: Math.PI / 2, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null };
+  let opts = { tank: true, mech: 'normal', guide: true, seed: 1, durationMs: 120000, tankSkill: 'good', stage: 'dojo', markers: null, role: 'melee', job: 'SAM' };
+  let hots = []; // 継続回復（リジェネなど）: { who, frac, until, next }
+  // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）: { kind, x, y, r, until（試合の時刻）, frac, next, dying, endAt, ringAt, pops（弾けた鈴の花の時刻）}
+  let zones = [], simNow = 0;
+  const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
+  // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm' };
+  const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
+  const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
+  const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
   let rndTank = Math.random;
   let schedule = [], telegraphs = [], fx = [], parts = [];
   let castGlow = null, guideNeed = null, clock = 0;
@@ -130,7 +145,11 @@
       last = kind;
       out.push({ t, kind, cast: cfg.cast, side: rnd() < 0.5 ? 'left' : 'right', r1: rnd(), r2: rnd() });
     }
-    if (opts.tank) {
+    if (opts.role === 'healer') {
+      // 回復役の練習: よけられない全体攻撃（練習用に作ったもの。DESIGN-02）。ほかの技の並びは変えない（乱数は最後に使う）
+      for (let t = 15000; t < opts.durationMs - 6000; t += 23000 + Math.floor(rnd() * 6000)) out.push({ t, kind: 'raid', cast: 3000 });
+    }
+    if (bossHasTank()) {
       // タンクが敵の向きを変える・移動させる（腕前が「上手」ならしない。方向指定の取り直しの練習）
       const frac = (TANK_SKILL[opts.tankSkill] ?? TANK_SKILL.good).events;
       frac.forEach((f, i) => out.push({ t: Math.round(opts.durationMs * f), kind: i % 2 ? 'relocate' : 'turn', r1: rnd(), r2: rnd() }));
@@ -146,18 +165,30 @@
       R3?.setStage?.(STG);
     }
     Object.assign(player, { x: 0, y: 3.8, z: 0, face: -Math.PI / 2, mx: 0, my: 0, moving: false, walkT: 0, hp: 1, down: 0, jumpT: -1, hurt: 0, trail: [], act: null });
-    Object.assign(boss, { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null, dead: 0, act: null, casting: false });
-    Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, atkT: 0, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, act: null });
+    Object.assign(boss, { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null, dead: 0, act: null, casting: false, atkT: 0 });
+    Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
+    hots = []; zones = [];
     placeTank(true);
-    if (!opts.tank) boss.face = Math.PI / 2;
+    if (!bossHasTank()) boss.face = Math.PI / 2;
+    tankName.textContent = npcHealer() ? 'ヒーラー' : 'タンク';
     cam.x = player.x; cam.y = player.y - 2; cam.shake = 0;
     schedule = buildSchedule(); telegraphs = []; fx = []; parts = []; castGlow = null;
     for (const f of flies) f.el.remove();
     flies = [];
   }
 
+  // 敵を引きつける相方がいるか（相方がタンクのとき）
+  const bossHasTank = () => hasNpc() && !npcHealer() && !(tank.down > 0);
   function placeTank(snap) {
+    if (npcHealer()) {
+      // 回復役の相方: 自分（タンク）の後ろ、敵から 11m ほどの所に立つ
+      const a = Math.atan2(player.y - boss.y, player.x - boss.x), r = Math.max(9, Math.hypot(player.x - boss.x, player.y - boss.y) + 6);
+      const g = { x: boss.x + Math.cos(a + 0.5) * r, y: boss.y + Math.sin(a + 0.5) * r };
+      ST.clamp(STG, g, 1.5);
+      if (snap) { tank.x = g.x; tank.y = g.y; }
+      return g;
+    }
     const gx = boss.x + Math.cos(tank.angle) * (POL.hitbox + POL.tankGap), gy = boss.y + Math.sin(tank.angle) * (POL.hitbox + POL.tankGap);
     if (snap) { tank.x = gx; tank.y = gy; }
     return { x: gx, y: gy };
@@ -212,7 +243,12 @@
     if (player.jumpT >= 0) { player.jumpT += dt / 0.5; if (player.jumpT >= 1) player.jumpT = -1; }
     player.z = player.jumpT >= 0 ? Math.sin(Math.PI * player.jumpT) * 1.1 : 0;
     if (player.down > 0) { player.down -= dtMs; if (player.down <= 0) { player.hp = 0.6; emit('revive'); } }
-    else if (live) player.hp = Math.min(1, player.hp + POL.regen * dt);
+    else if (live && opts.role === 'melee') player.hp = Math.min(1, player.hp + POL.regen * dt); // 近接: ヒーラーの回復の代わりに少しずつ戻る
+    // 継続回復（リジェネなど。3 秒ごと）
+    for (const h of hots) while (h.next <= clock && h.next <= h.until) { h.next += 3; healNow(h.who, h.frac, true); }
+    simNow = simT;
+    updateZones(simT, live, vdt);
+    hots = hots.filter((h) => h.next <= h.until);
     player.hurt = Math.max(0, player.hurt - vdt * 2.5);
     player.trail = player.trail.filter((t) => (t.life -= vdt) > 0);
 
@@ -221,15 +257,15 @@
       const d = dist(boss, boss.goal);
       if (d < 0.1) boss.goal = null;
       else { const s = Math.min(d, POL.bossSpeed * dt); boss.x += ((boss.goal.x - boss.x) / d) * s; boss.y += ((boss.goal.y - boss.y) / d) * s; }
-    } else if (!opts.tank && live && player.down <= 0) {
-      // タンクがいないときは、敵が自分を追いかける
+    } else if (!bossHasTank() && live && player.down <= 0) {
+      // タンクがいないとき（自分がタンクのときも）は、敵が自分を追いかける
       const d = dist(boss, player);
       if (d > POL.hitbox + 1.8) { const s = Math.min(d - POL.hitbox - 1.8, POL.bossSpeed * dt); boss.x += ((player.x - boss.x) / d) * s; boss.y += ((player.y - boss.y) / d) * s; }
     }
     // 向きのある技（扇・直線・半面）を詠唱している間は、敵はその向きのまま
     const lock = telegraphs.find((tg) => !tg.done && tg.lockFace && simT >= tg.start);
     boss.casting = telegraphs.some((tg) => !tg.done && !tg.puddle && simT >= tg.start);
-    if (opts.tank) {
+    if (bossHasTank()) {
       const skill = TANK_SKILL[opts.tankSkill] ?? TANK_SKILL.good;
       // 下手なタンクは、敵の向きがふらつく
       if (skill.wander && live && phase === 'combat') {
@@ -240,22 +276,14 @@
       // 範囲攻撃をよける: 立ち位置が、まだ発動していない予兆の中なら、近くの安全な所へ（近接の距離と敵の向きはなるべく保つ）
       const threat = telegraphs.find((tg) => !tg.done && !tg.tankMiss && simT >= tg.start + skill.react && (!tg.follow || tg.placed) && inside(tg, goal));
       if (threat) goal = safeSpot(goal) ?? goal;
-      const d = dist(tank, goal);
-      tank.moving = d > 0.15 && dt > 0;
-      if (d > 0.15) { const s = Math.min(d, POL.run * dt); tank.x += ((goal.x - tank.x) / d) * s; tank.y += ((goal.y - tank.y) / d) * s; tank.walkT += dt; }
+      walkTo(tank, goal, 0.15, dt);
       tank.face = Math.atan2(boss.y - tank.y, boss.x - tank.x);
       if (lock) turnBossTo(lock.dir, dt);
       else turnBossTo(Math.atan2(tank.y - boss.y, tank.x - boss.x), dt);
-      if (live) tank.hp = Math.min(1, tank.hp + POL.regen * 1.5 * dt);
+      // タンクの HP: 回復役があなたなら自然には戻らない（あなたの回復が要る）。それ以外は少しずつ戻る
+      if (live && opts.role !== 'healer') tank.hp = Math.min(1, tank.hp + POL.regen * 1.5 * dt);
+      // タンクの攻撃（見た目だけ）
       if (live && phase === 'combat' && !boss.dead) {
-        // 敵の通常攻撃（見た目だけ）: 敵が腕を振り下ろし、タンクが盾で受ける
-        tank.atkT -= dt;
-        if (tank.atkT <= 0) {
-          tank.atkT = 2.8;
-          if (!boss.casting) act(boss, 'slam');
-          setTimeout(() => { tank.flash = 1; act(tank, 'hurt', 0.25); addArc(tank, COLORS.kenki, 0.6, 1.2, 1.4); }, 180);
-        }
-        // タンクの攻撃（見た目だけ）
         tank.hitT -= dt;
         if (tank.hitT <= 0) { tank.hitT = 2.5; act(tank, 'slash'); setTimeout(() => sparks(boss, COLORS.steel, 5, 0.7), 170); }
       }
@@ -263,6 +291,31 @@
       turnBossTo(lock.dir, dt);
     } else {
       turnBossTo(Math.atan2(player.y - boss.y, player.x - boss.x), dt);
+    }
+    if (npcHealer()) {
+      // 回復役の相方: 自分の後ろについて歩き、範囲攻撃をよけ、ときどき回復してくれる
+      let goal = placeTank(false);
+      if (telegraphs.some((tg) => !tg.done && simT >= tg.start + 600 && (!tg.follow || tg.placed) && (inside(tg, goal) || inside(tg, tank)))) goal = safeNear(goal) ?? goal;
+      walkTo(tank, goal, 0.3, dt);
+      tank.face = Math.atan2(player.y - tank.y, player.x - tank.x);
+      if (live && phase === 'combat' && !boss.dead) {
+        tank.hitT -= dt;
+        if (tank.hitT <= 0) { tank.hitT = 3; if (player.hp < 0.9 && player.down <= 0) { act(tank, 'spell'); setTimeout(() => healNow('self', ROLE_POL.npcHeal), 300); } }
+      }
+    }
+    // 相方のタンクが倒れている（回復が間に合わなかった）: レイズで起こせる。起こさなくても 20 秒で起き上がる（練習を続けるための仮の動き）
+    if (tank.down > 0) { tank.down -= dtMs; if (tank.down <= 0) { tank.hp = 0.5; flyText('復帰', 'buff', tank, 0.2); emit('tankrevive', 'self'); } }
+    // 敵の通常攻撃: 敵が腕を振り下ろす。相手はタンク（相方）か、自分がタンクのとき・相方のタンクが倒れているときは自分
+    if (live && phase === 'combat' && !boss.dead) {
+      boss.atkT -= dt;
+      if (boss.atkT <= 0) {
+        boss.atkT = 2.8;
+        const target = bossHasTank() ? tank : npcHealer() || tank.down > 0 ? player : null;
+        if (target) {
+          if (!boss.casting) act(boss, 'slam');
+          setTimeout(() => autoHit(target), 180);
+        }
+      }
     }
     tank.hurt = Math.max(0, tank.hurt - vdt * 2.5);
     tank.flash = Math.max(0, tank.flash - vdt * 4);
@@ -331,6 +384,44 @@
     return best;
   }
 
+  // 回復役の相方がよける先: 今の立ち位置の近くで、予兆の外
+  function safeNear(home) {
+    let best = null, bestScore = Infinity;
+    for (const r of [0, 2, 4, 6, 8, 11, 14]) {
+      for (let k = 0; k < (r ? 16 : 1); k++) {
+        const a = (k / 16) * Math.PI * 2, q = { x: home.x + Math.cos(a) * r, y: home.y + Math.sin(a) * r };
+        if (!ST.inside(STG, q.x, q.y, 1)) continue;
+        if (telegraphs.some((tg) => !tg.done && (!tg.follow || tg.placed) && inside(tg, q))) continue;
+        const score = r + dist(q, tank) * 0.5;
+        if (score < bestScore) { bestScore = score; best = q; }
+      }
+    }
+    return best;
+  }
+  function walkTo(e, goal, eps, dt) {
+    const d = dist(e, goal);
+    e.moving = d > eps && dt > 0 && !(e.down > 0);
+    if (!e.moving) return;
+    const s = Math.min(d, POL.run * dt);
+    e.x += ((goal.x - e.x) / d) * s; e.y += ((goal.y - e.y) / d) * s; e.walkT += dt;
+  }
+  // 敵の通常攻撃が当たる（相方のタンクは盾で受ける。回復役があなたなら HP が減る）
+  function autoHit(target) {
+    if (target === tank) {
+      if (tank.down > 0) return;
+      tank.flash = 1; act(tank, 'hurt', 0.25); addArc(tank, COLORS.kenki, 0.6, 1.2, 1.4);
+      if (opts.role === 'healer') {
+        tank.hp = Math.max(0, tank.hp - ROLE_POL.tankHit);
+        if (tank.hp <= 0) { tank.down = 20000; tank.deaths++; flyText('戦闘不能', 'hurt tank', tank, 0.4); emit('tankdown'); }
+      }
+      return;
+    }
+    if (player.down > 0) return;
+    hurtPlayer(ROLE_POL.bossHit, '通常攻撃', null, 0.05, false);
+    player.hurt = 0.5;
+    addArc(player, COLORS.kenki, 0.6, 1.2, 1.4);
+  }
+
   function turnBossTo(target, dt) {
     const d = angDiff(target, boss.face);
     const s = Math.min(Math.abs(d), POL.turn * dt);
@@ -350,6 +441,7 @@
         break;
       }
       case 'half': Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir: boss.face, side: m.side, lockFace: true }); break;
+      case 'raid': Object.assign(tg, { c: { x: boss.x, y: boss.y } }); break; // 床に予兆は出ない（敵の詠唱バーだけ）
       case 'puddle': {
         // 足元に 3 回。1 つ目はすぐ、以降は 1.2 秒ごとに、その時点の自分の位置へ
         for (let i = 0; i < 3; i++) {
@@ -391,6 +483,7 @@
         const side = dx * -Math.sin(tg.dir) + dy * Math.cos(tg.dir); // 正 = 敵から見て右
         return tg.side === 'right' ? side > 0 : side < 0;
       }
+      case 'raid': return true;
       default: return false;
     }
   }
@@ -399,17 +492,177 @@
     tg.done = true;
     emit('boom', tg.kind);
     if (!tg.puddle) act(boss, 'slam');
+    if (tg.kind === 'raid') {
+      // 全体攻撃: 全員が受ける（被弾の数には入れない）
+      raidFx();
+      hurtNpc(0.14);
+      hurtPlayer(0.16, tg.name, `-${16}%`);
+      emit('raid', tg.name);
+      return;
+    }
     boomFx(tg);
-    if (opts.tank && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - (tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; act(tank, 'hurt', 0.4); flyText('被弾', 'hurt tank', tank, 0.2); }
+    if (hasNpc() && tank.hp > 0 && !(tank.down > 0) && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - (tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; act(tank, 'hurt', 0.4); flyText('被弾', 'hurt tank', tank, 0.2); }
     if (player.down > 0 || !inside(tg, player)) return;
-    const dmg = tg.puddle ? 0.3 : 0.45;
-    player.hp -= dmg; player.hurt = 1;
-    act(player, 'hurt', 0.45);
     if (!reduce) cam.shake = 5;
-    flyText('被弾', 'hurt', player, 0.2);
-    if (player.hp <= 0) { player.hp = 0; player.down = 3000; flyText('戦闘不能', 'hurt', player, 0.6); emit('down', tg.name); }
+    hurtPlayer(tg.puddle ? 0.3 : 0.45, tg.name, '被弾');
     emit('hit', tg.name);
     void simT;
+  }
+  // 自分が攻撃を受ける（範囲攻撃・全体攻撃・敵の通常攻撃）。'hurt' を出す（リタージー・オブ・ベルが鳴る）
+  function hurtPlayer(frac, name, text, floor = 0, anim = true) {
+    if (player.down > 0) return;
+    player.hp = Math.max(floor, player.hp - frac); player.hurt = 1;
+    if (anim) act(player, 'hurt', 0.45);
+    if (text) flyText(text, 'hurt', player, 0.2);
+    emit('hurt', frac);
+    if (player.hp <= 0) { player.hp = 0; player.down = 3000; flyText('戦闘不能', 'hurt', player, 0.6); emit('down', name); }
+  }
+  // 相方が攻撃を受ける（全体攻撃）。回復役の練習では、相方のタンクが倒れることがある
+  function hurtNpc(frac) {
+    if (!hasNpc() || tank.down > 0 || tank.hp <= 0) return;
+    tank.hp = Math.max(opts.role === 'healer' ? 0 : 0.1, tank.hp - frac); tank.hurt = 1; act(tank, 'hurt', 0.4);
+    flyText(`-${Math.round(frac * 100)}%`, 'hurt tank', tank, 0.2);
+    if (tank.hp <= 0) { tank.down = 20000; tank.deaths++; flyText('戦闘不能', 'hurt tank', tank, 0.4); emit('tankdown'); }
+  }
+  // 全体攻撃の演出: 敵から赤い衝撃の輪が練習場の端まで広がる
+  function raidFx() {
+    const c = { x: boss.x, y: boss.y };
+    fx.push({ type: 'flash', at: { x: c.x, y: c.y, z: 2.4 }, col: ['#ffe6d6', '#ff5a3a'], t: 0, dur: 700, power: 2.2 });
+    for (let i = 0; i < 3; i++) fx.push({ type: 'ring', at: c, col: ['#ffd9c0', '#ff4a2a'], t: -i * 140, dur: 950, r0: 2, r1: STG.size * 1.45, thick: true });
+    fx.push({ type: 'pillar', at: c, col: ['#fff0e6', '#ff5a3a'], t: 0, dur: 700, big: true });
+    for (let i = 0; i < 70; i++) {
+      const a = rand(0, Math.PI * 2), sp = rand(6, 16);
+      spark({ x: c.x + Math.cos(a) * 2, y: c.y + Math.sin(a) * 2, z: rand(0.3, 2.5), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, vz: rand(0, 3), g: 4, drag: 1.4, life: rand(0.5, 1.1), max: 1.1, col: i % 3 ? '#ff7a4a' : '#ffe0c8', size: i % 5 ? 1 : 2 });
+    }
+    if (!reduce) cam.shake = Math.max(cam.shake, 4);
+  }
+
+  // ---------------- 回復（白魔道士の回復・相方の回復役）----------------
+  // who: 'party'（自分と相方）/ 'low'（HP の低い方）/ 'self'。frac は最大 HP に対する割合
+  function healNow(who, frac, quiet) {
+    const targets = who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : [lowest()];
+    for (const e of targets) healOne(e, frac, quiet);
+  }
+  function healOne(e, frac, quiet) {
+    if (!e || (e === player && player.down > 0) || (e === tank && (tank.hp <= 0 || tank.down > 0))) return false;
+    // アサイラムの中にいると、受ける回復が 10% 上がる（説明文「受けるＨＰ回復効果が10％上昇する」）
+    if (zones.some((z) => z.kind === 'asylum' && !z.dying && Math.hypot(e.x - z.x, e.y - z.y) <= z.r)) frac *= 1.1;
+    const before = e.hp;
+    e.hp = Math.min(1, e.hp + frac);
+    healFx(e, quiet);
+    if (!quiet) flyText(`+${Math.round((e.hp - before) * 100)}%`, 'heal', e, 0.1);
+    return true;
+  }
+  const lowest = () => (hasNpc() && tank.hp > 0 && !(tank.down > 0) && tank.hp < player.hp ? tank : player);
+  // ---------------- 設置型の技 ----------------
+  // 置き場所: ゲームでは地面を選ぶ。モックは、自分と相方の両方が入る所（2 人の間。遠ければ相方寄り）に置く
+  function zonePlace(r) {
+    if (hasNpc() && !(tank.down > 0)) {
+      const d = dist(player, tank);
+      if (d / 2 <= r * 0.8) return ST.clamp(STG, { x: (player.x + tank.x) / 2, y: (player.y + tank.y) / 2 }, 1);
+      const k = (r * 0.8) / d;
+      return ST.clamp(STG, { x: tank.x + (player.x - tank.x) * k, y: tank.y + (player.y - tank.y) * k }, 1);
+    }
+    return { x: player.x, y: player.y };
+  }
+  // 自分の横（敵の方を向いて左）に d m
+  function besidePlayer(d) {
+    const a = Math.atan2(boss.y - player.y, boss.x - player.x);
+    return ST.clamp(STG, { x: player.x + Math.cos(a - Math.PI / 2) * d, y: player.y + Math.sin(a - Math.PI / 2) * d }, 1);
+  }
+  // o: { r（範囲 m）, sec（効果時間）, frac（アサイラムの 1 回の回復。最大 HP に対して）}
+  function placeZone(kind, o = {}) {
+    for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; } // 置き直すと前のものは消える
+    // リタージー・オブ・ベルは自分の横（自分が攻撃を受けると鳴り、20m 以内を回復するため）。アサイラムは自分と相方の間
+    const r = o.r ?? 10, at = kind === 'bell' ? besidePlayer(2.6) : zonePlace(r);
+    const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [] };
+    zones.push(z);
+    const col = kind === 'bell' ? COLORS.lily : COLORS.dome;
+    fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col, t: 0, dur: 750, r0: 0.5, r1: kind === 'bell' ? 4 : r, thick: true });
+    if (kind === 'bell') {
+      // すずらんが生える: 足元から水色の光の粒が噴き上がる
+      fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: BELL_H }, col, t: 0, dur: 600, power: 1.4 });
+      for (let i = 0; i < 48; i++) {
+        const a = rand(0, Math.PI * 2), rr = rand(0, 1.4);
+        spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.1, vx: Math.cos(a) * rand(0, 1), vy: Math.sin(a) * rand(0, 1), vz: rand(2, 5.5), g: 1.2, drag: 1.4, life: rand(0.7, 1.3), max: 1.3, col: i % 3 ? '#9ff6ff' : '#ffffff', size: i % 4 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-4, 4) });
+      }
+    } else {
+      // ドームが立ち上がる: 縁から光の粒が昇る
+      for (let i = 0; i < 60; i++) {
+        const a = rand(0, Math.PI * 2);
+        spark({ x: z.x + Math.cos(a) * r, y: z.y + Math.sin(a) * r, z: 0.1, vz: rand(1.5, 4), g: 0, drag: 1, life: rand(0.6, 1.2), max: 1.2, col: i % 2 ? '#dff4ff' : '#8fc8ff', size: i % 4 ? 1 : 2 });
+      }
+    }
+    return z;
+  }
+  // 範囲の中の味方を回復する。style: 'tick'（アサイラムの毎回・静か）/ 'ring'（ベルが鳴る）/ 'burst'（ベルの最後）
+  function zoneHeal(kind, frac, style) {
+    const z = zones.find((q) => q.kind === kind && !q.dying);
+    if (!z) return 0;
+    let n = 0;
+    for (const e of [player, ...(hasNpc() ? [tank] : [])]) if (Math.hypot(e.x - z.x, e.y - z.y) <= z.r && healOne(e, frac, style === 'tick')) n++;
+    if (kind === 'bell') {
+      // 鈴の花（ガラス玉）が鳴って弾け、澄んだ光の輪が 20m まで広がる。最後はいくつも一度に
+      z.ringAt = clock;
+      const big = style === 'burst', left = STATE.bellStacks?.() ?? 0;
+      const popped = big ? [0, 1, 2, 3, 4].filter((i) => z.pops[i] == null) : [left];
+      for (const i of popped) z.pops[i] = clock;
+      fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col: COLORS.lily, t: 0, dur: big ? 1100 : 850, r0: 1, r1: z.r, thick: true });
+      if (big) fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col: COLORS.heal, t: -160, dur: 1100, r0: 1, r1: z.r, thick: true });
+      fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: BELL_H }, col: COLORS.lily, t: 0, dur: big ? 700 : 450, power: big ? 2 : 1.2 });
+      for (let i = 0; i < (big ? 60 : 26); i++) {
+        const a = rand(0, Math.PI * 2), sp = rand(2, 6);
+        spark({ x: z.x, y: z.y, z: BELL_H + rand(-0.6, 1.2), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, vz: rand(-1, 2.5), g: 1.2, drag: 1.5, life: rand(0.6, 1.2), max: 1.2, col: i % 2 ? '#ffffff' : '#9ff6ff', size: i % 3 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-6, 6) });
+      }
+    } else if (style === 'tick') {
+      z.ringAt = clock;
+    }
+    return n;
+  }
+  function endZone(kind) {
+    for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; }
+  }
+  // 毎フレーム: アサイラムは 3 秒ごとに回復し、時間が来たら消える。光の粒を出す
+  function updateZones(simT, live, vdt) {
+    for (const z of zones) {
+      if (z.dying) continue;
+      if (z.kind === 'asylum') {
+        while (live && z.next <= simT && z.next <= z.until) { z.next += 3000; zoneHeal('asylum', z.frac, 'tick'); }
+        if (simT >= z.until) { z.dying = true; z.endAt = clock; continue; }
+      }
+      if (vdt <= 0) continue;
+      if (z.kind === 'asylum') {
+        const n = Math.round(vdt * 16 + Math.random() * 0.6);
+        for (let i = 0; i < n; i++) {
+          const a = rand(0, Math.PI * 2), rr = Math.sqrt(Math.random()) * z.r * 0.95;
+          spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.05, vz: rand(0.5, 1.4), g: 0, drag: 0.2, life: rand(1.2, 2), max: 2, col: i % 3 ? '#b8ffd0' : '#ffffff', size: 1, sway: 0.4, rot: rand(0, 6.28) });
+        }
+      } else {
+        // すずらんのまわりのきらめき（水色と白。ゆっくり漂う）
+        const n = Math.round(vdt * 10 + Math.random() * 0.6);
+        for (let i = 0; i < n; i++) {
+          const a = rand(0, Math.PI * 2), rr = rand(0.2, 1.9);
+          spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: rand(0.3, 3.8), vx: rand(-0.2, 0.2), vy: rand(-0.2, 0.2), vz: rand(0.1, 0.6), g: 0, drag: 0.3, life: rand(0.8, 1.6), max: 1.6, col: i % 3 ? '#a8f4ff' : '#ffffff', size: i % 5 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-2, 2) });
+        }
+      }
+    }
+    zones = zones.filter((z) => !z.dying || clock - z.endAt < 0.7);
+  }
+
+  // 蘇生（白魔道士のレイズ）: 倒れている相方を HP 50% で起こす
+  function raiseNpc() {
+    if (!(tank.down > 0)) return false;
+    tank.down = 0; tank.hp = 0.5;
+    healFx(tank, false); fx.push({ type: 'pillar', at: tank, col: COLORS.holy, t: 0, dur: 700 });
+    flyText('蘇生', 'buff', tank, 0.2); emit('tankrevive', 'raise');
+    return true;
+  }
+  function healFx(e, small) {
+    for (let i = 0; i < (small ? 8 : 22); i++) {
+      const a = rand(0, Math.PI * 2), r = rand(0.2, 1.1);
+      spark({ x: e.x + Math.cos(a) * r, y: e.y + Math.sin(a) * r, z: rand(0.1, 1.6), vz: rand(1.2, 3), g: 0, drag: 1.4, life: rand(0.5, 0.9), max: 0.9, col: i % 2 ? '#e8ffe8' : '#6fe89a', size: i % 4 ? 1 : 2, shape: i % 5 ? 0 : 2 });
+    }
+    if (!small) fx.push({ type: 'ring', at: e, col: COLORS.heal, t: 0, dur: 520, r0: 0.5, r1: 2.2 });
   }
 
   // 発動の演出: 形の中が白く光り、衝撃の前線が広がり、地面から光の柱と火の粉が噴き出す。焦げ跡がしばらく残る
@@ -478,7 +731,7 @@
   // ---------------- 演出 ----------------
   // 動作（ドット絵のアニメーション）: 1 回だけの動き。hold は最後のコマで止めておく時間（秒）
   function act(e, name, hold = 0.12) {
-    const set = e === player ? SPR?.player : e === tank ? SPR?.tank : SPR?.boss;
+    const set = SPR?.[setName(e === player ? 'player' : e === tank ? 'tank' : 'boss')];
     const d = set ? window.MockSprites.duration(set, name) : 0.3;
     e.act = { name, t: 0, dur: d + hold };
   }
@@ -505,6 +758,7 @@
   // info: { kind, color, crit, power, count, name, combo, pos: { need, ok }, dmg, range }
   function play(info) {
     const col = COLORS[info.color] ?? COLORS.steel;
+    if (info.kind === 'place') { act(player, 'spell'); flyText(info.name, 'buff', player, 0.2); return; } // 置いたものの演出は placeZone が出す
     if (info.kind !== 'buff') faceTarget();
     const draw = info.color === 'iai' || info.color === 'blood' || info.color === 'namikiri';
     switch (info.kind) {
@@ -523,6 +777,20 @@
       case 'line': fx.push({ type: 'line', col, t: 0, dur: 380, len: (info.range ?? 10) + POL.hitbox }); break;
       case 'projectile': fx.push({ type: 'proj', col, t: 0, dur: 180 }); break;
       default: break;
+    }
+    if (info.kind === 'heal') { act(player, 'spell'); return; } // 回復の光は healNow が出す
+    if (info.kind === 'spell') {
+      // 魔法: 敵の頭上から光が落ちる
+      act(player, 'spell');
+      setTimeout(() => {
+        boss.flash = 1;
+        fx.push({ type: 'pillar', at: boss, col, t: 0, dur: 520, big: true });
+        fx.push({ type: 'ring', at: boss, col, t: 0, dur: 520, r0: 1.5, r1: POL.hitbox + 2.5, thick: true });
+        fx.push({ type: 'flash', at: { x: boss.x, y: boss.y, z: 2.4 }, col, t: 0, dur: 300, power: info.power ?? 1 });
+        sparks(boss, col, 16, 1);
+        if (info.name) flyText(info.name, info.crit ? 'crit' : '', boss, 0.2, col, info.dmg);
+      }, 120);
+      return;
     }
     act(player, draw ? 'iai' : 'slash');
     finisherFx(info.color, info.count ?? 1, info.crit);
@@ -628,7 +896,7 @@
   // 人物のコマ: 動作 → ジャンプ → 詠唱 → 走り → 待機 の順に決める。yaw はカメラの向き（画面に対する向きでコマを選ぶ）
   function poseOf(kind, yaw) {
     const e = kind === 'boss' ? boss : kind === 'tank' ? tank : player;
-    const set = SPR[kind];
+    const name = setName(kind), set = SPR[name];
     const dir = dirOf(e.face - yaw - Math.PI / 2);
     let anim = 'idle', t = clock + (kind === 'tank' ? 0.37 : kind === 'boss' ? 0.71 : 0), rot = 0;
     if (kind === 'player') {
@@ -638,11 +906,12 @@
       else if (castGlow) { anim = 'cast'; t = castGlow.t / 1000; }
       else if (player.moving) { anim = 'run'; t = player.walkT; }
     } else if (kind === 'tank') {
-      if (tank.act) { anim = tank.act.name; t = tank.act.t; }
+      if (tank.down > 0) { anim = 'hurt'; t = 0; rot = Math.PI / 2; }
+      else if (tank.act) { anim = tank.act.name; t = tank.act.t; }
       else if (tank.moving) { anim = 'run'; t = tank.walkT; }
     } else if (boss.act) { anim = boss.act.name; t = boss.act.t; }
     else if (boss.casting) { anim = 'cast'; t = clock; }
-    return { set, fr: window.MockSprites.frame(set, anim, dir, t), rot, dir };
+    return { set, name, fr: window.MockSprites.frame(set, anim, dir, t), rot, dir };
   }
 
   function render(simT, phase) {
@@ -652,7 +921,7 @@
     placeName(bossName, boss, HEAD.boss + 0.7);
     bossName.hidden = boss.dead >= 2;
     placeName(tankName, tank, HEAD.tank + 0.35);
-    tankName.hidden = !opts.tank;
+    tankName.hidden = !hasNpc();
     for (const f of flies) placeFly(f);
     void phase;
   }
@@ -663,7 +932,8 @@
     get stage() { return STG; }, get markers() { return opts.markers ?? STG.markers; },
     get opts() { return opts; }, get telegraphs() { return telegraphs; }, get fx() { return fx; }, get parts() { return parts; },
     get castGlow() { return castGlow; }, get guideNeed() { return guideNeed; }, get clock() { return clock; }, get SPR() { return SPR; },
-    poseOf, inside, angDiff,
+    get zones() { return zones; }, BELL_H,
+    poseOf, inside, angDiff, hasNpc, setName,
   };
 
   // ---------------- 2D（真上から。ドット絵を 2 倍で描く）----------------
@@ -730,18 +1000,21 @@
       g.drawImage(floorImg, Math.round(ox - floorImg.width / 2), Math.round(oy - floorImg.height / 2));
 
       if (STATE.markers) drawMarkers();
+      for (const z of zones) drawZoneFloor(z);
       for (const tg of telegraphs) drawTelegraph(tg, simT);
       for (const e of fx) if (e.type === 'boom' && e.t >= 0) drawBoom(e);
       drawTargetRing();
 
       // 影と人物（奥から順に）
-      const ents = [{ kind: 'boss', y: boss.y }, ...(opts.tank ? [{ kind: 'tank', y: tank.y }] : []), { kind: 'player', y: player.y }].sort((a, b) => a.y - b.y);
+      const ents = [{ kind: 'boss', y: boss.y }, ...(hasNpc() ? [{ kind: 'tank', y: tank.y }] : []), { kind: 'player', y: player.y }].sort((a, b) => a.y - b.y);
       for (const e of ents) drawShadow(e.kind);
+      const ps = SPR[setName('player')];
       for (const t of player.trail) {
-        const fr = window.MockSprites.frame(SPR.player, 'run', dirOf(t.face), 0.1);
-        drawFrame(SPR.player, fr, t.x, t.y, 0, (t.life / t.max) * 0.5);
+        const fr = window.MockSprites.frame(ps, 'run', dirOf(t.face), 0.1);
+        drawFrame(ps, fr, t.x, t.y, 0, (t.life / t.max) * 0.5);
       }
       for (const e of ents) drawChar(e.kind);
+      for (const z of zones) if (z.kind === 'bell') drawBell(z);
 
       // 演出（加算）
       g.globalCompositeOperation = 'lighter';
@@ -754,6 +1027,59 @@
         g.fillRect(Math.round(sx(q.x) - s / 2), Math.round(sy(q.y) - q.z * PPY * Z2 - s / 2), s, s);
       }
       g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1;
+    }
+
+    // 設置型の技（真上から）: アサイラム = 青白い透明なドーム（縁が明るい円）、ベル = 届く範囲の点線と、立っているガラスのすずらん
+    function zoneFade(z) { const k = z.dying ? Math.max(0, 1 - (clock - z.endAt) / 0.7) : 1; return k * Math.min(1, (clock - z.born) / 0.4); }
+    function drawZoneFloor(z) {
+      const cx = sx(z.x), cy = sy(z.y), R = z.r * PPY, f = zoneFade(z);
+      const pulse = Math.max(0, 1 - (clock - z.ringAt) / 0.6);
+      g.save();
+      if (z.kind === 'asylum') {
+        const gr = g.createRadialGradient(cx, cy, R * 0.2, cx, cy, R);
+        gr.addColorStop(0, `rgba(140,190,255,${0.05 * f})`); gr.addColorStop(0.8, `rgba(150,200,255,${(0.12 + pulse * 0.08) * f})`); gr.addColorStop(1, `rgba(220,240,255,${0.35 * f})`);
+        g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); g.fill();
+        g.globalAlpha = f; g.strokeStyle = 'rgba(230,245,255,.9)'; g.lineWidth = 2; g.stroke();
+        // ドームの丸み（上から見た光の映り込み）
+        g.strokeStyle = 'rgba(200,230,255,.35)'; g.lineWidth = 3;
+        g.beginPath(); g.arc(cx - R * 0.18, cy - R * 0.2, R * 0.62, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
+      } else {
+        g.globalAlpha = f * 0.8;
+        g.setLineDash([6, 6]); g.lineDashOffset = -clock * 6;
+        g.strokeStyle = `rgba(160,245,240,${0.4 + pulse * 0.45})`; g.lineWidth = 1.5;
+        g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); g.stroke();
+        g.setLineDash([]);
+        const gr = g.createRadialGradient(cx, cy, 0, cx, cy, 22);
+        gr.addColorStop(0, `rgba(170,255,240,${0.5 * f})`); gr.addColorStop(1, 'rgba(120,230,220,0)');
+        g.fillStyle = gr; g.fillRect(cx - 22, cy - 22, 44, 44);
+      }
+      g.restore();
+    }
+    // リタージー・オブ・ベル（sprites.js の vfx）: ハート・中央の花・鈴の花のガラス玉（残りのスタックの数）を加算で重ねる。1m = 20 画素（人物と同じ縮尺）
+    function drawBell(z) {
+      const V = SPR.vfx, L = V.LILY, M = 20, f = zoneFade(z);
+      const grow = Math.min(1, (clock - z.born) / 0.5), k = grow < 1 ? 1 - Math.pow(1 - grow, 3) * (1 - grow * 1.6) : 1; // 伸びて少し行き過ぎて戻る
+      const bx = sx(z.x), by = sy(z.y), pulse = Math.max(0, 1 - (clock - z.ringAt) / 0.5);
+      g.save();
+      g.imageSmoothingEnabled = true;
+      g.globalCompositeOperation = 'lighter';
+      g.globalAlpha = f;
+      const w = L.w * M * k, h = L.h * M * k;
+      g.drawImage(V.lilyHeart, bx - w / 2, by - h, w, h);
+      const [, fy, fs] = L.flower, fsz = fs * M * k * (1 + pulse * 0.25);
+      g.globalAlpha = f * (0.85 + 0.15 * Math.sin(clock * 3));
+      g.drawImage(V.lilyFlower, bx - fsz / 2, by - fy * M * k - fsz / 2, fsz, fsz);
+      const left = STATE.bellStacks?.() ?? 0;
+      L.bubbles.forEach(([x, y, s], i) => {
+        const pop = z.pops[i] != null ? (clock - z.pops[i]) / 0.45 : null;
+        if (i >= left && (pop == null || pop >= 1)) return;
+        const appear = Math.min(1, Math.max(0, (clock - z.born - 0.3 - i * 0.08) / 0.25));
+        const sc = (pop != null ? 1 + pop * 0.8 : appear) * s * M * k, a = pop != null ? 1 - pop : appear;
+        const yy = y + Math.sin(clock * 2 + i * 1.3) * 0.06;
+        g.globalAlpha = f * a;
+        g.drawImage(V.lilyBubble, bx + x * M * k - sc / 2, by - yy * M * k - sc / 2, sc, sc);
+      });
+      g.restore();
     }
 
     // フィールドマーカー（丸は A〜D、四角は 1〜4）
@@ -832,7 +1158,7 @@
       }
     }
     function drawTelegraph(tg, simT) {
-      if (simT < tg.start || tg.done) return;
+      if (simT < tg.start || tg.done || tg.kind === 'raid') return;
       if (tg.follow && !tg.placed) return;
       const p = Math.min(1, (simT - tg.start) / (tg.end - tg.start));
       g.save();
@@ -926,8 +1252,12 @@
     init, resize, reset, setInput, jump, update, render, setView,
     view: () => (view3d() ? '3d' : '2d'), error3d: () => r3err, camera,
     edgeDistance, positional, faceTarget, dashToTarget, backstep, bossCast,
-    isMoving: () => player.moving, isDown: () => player.down > 0, hp: () => player.hp,
-    tankHp: () => (opts.tank ? Math.max(0, tank.hp - tank.flash * 0.04) : 0), // タンクの HP（範囲攻撃で減り、少しずつ戻る。通常攻撃で少し揺れる）
+    isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
+    tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
+    hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,
+    heal: (who, frac) => healNow(who, frac), hot: (who, frac, sec) => { hots.push({ who, frac, until: clock + sec, next: clock + 3 }); },
+    placeZone, zoneHeal, endZone, zones: () => zones.filter((z) => !z.dying).map((z) => ({ kind: z.kind, x: z.x, y: z.y, r: z.r })),
+    setBellStacks: (fn) => { STATE.bellStacks = fn; }, // ベルの残りスタック（光の玉の数）を教える関数
     setGuide: (need) => { guideNeed = need; },
     play, castStart, castEnd, dotTick, kill, flyText: (t, cls) => flyText(t, cls, player, 0.2),
     on: (ev, fn) => { handlers[ev] = fn; },
@@ -935,6 +1265,6 @@
     // 動作確認用
     stage: () => STG, stages: () => ST.list,
     testMech: (kind, simT, cast = 3000) => startMech({ kind, cast, side: 'left', r1: 0.3, r2: 0.5 }, simT), // 動作確認用: 敵の技をすぐ出す
-    debug: () => ({ stage: STG.id, tankHits: tank.hits, tank: { x: tank.x, y: tank.y }, boss: { x: boss.x, y: boss.y, face: boss.face }, player: { x: player.x, y: player.y, face: player.face }, telegraphs: telegraphs.length, view: view3d() ? '3d' : '2d', cam: { ...cam }, r3: R3?.debug?.() ?? null }),
+    debug: () => ({ stage: STG.id, tankHits: tank.hits, tankDeaths: tank.deaths, tankHp: tank.hp, tank: { x: tank.x, y: tank.y }, boss: { x: boss.x, y: boss.y, face: boss.face }, player: { x: player.x, y: player.y, face: player.face }, telegraphs: telegraphs.length, view: view3d() ? '3d' : '2d', cam: { ...cam }, r3: R3?.debug?.() ?? null }),
   };
 })();

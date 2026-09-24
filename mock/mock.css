@@ -384,6 +384,14 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .k-num { font: 700 21px/1 "Trebuchet MS", "Segoe UI", Arial, sans-serif; color: #fff; letter-spacing: .02em; font-variant-numeric: tabular-nums;
   text-shadow: 0 0 2px #000, 0 0 2px #000, 0 1px 3px #000, 0 0 8px rgba(255, 70, 40, .55); }
 .uld-c1005 .uld-text { font: 700 17px/1 "Trebuchet MS", Arial, sans-serif; color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000; }
+/* ナイト・白魔道士のゲージ（gauge2.js）の数字 */
+.g2-num { font: 700 19px/1 "Trebuchet MS", "Segoe UI", Arial, sans-serif; color: #fff; letter-spacing: .02em; font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 2px #000, 0 0 2px #000, 0 1px 3px #000, 0 0 8px rgba(80, 160, 255, .6); }
+.g2-snum { font: 700 17px/1 "Trebuchet MS", Arial, sans-serif; color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000; }
+/* オウスが満タン: 棒の明るい層がゆっくり脈打つ */
+.o-full [data-node="11/4"] { animation: k-full 1.4s ease-in-out infinite; clip-path: none !important; }
+/* ブラッドリリーが満開: 赤い光がゆっくり明滅する */
+.b-full [data-node="11"] { animation: s-breath 2.2s ease-in-out infinite; }
 .k-fill { transition: width .24s cubic-bezier(.25, .8, .35, 1); }
 .k-tip { transition: left .24s cubic-bezier(.25, .8, .35, 1); }
 /* マスク（パーツの形）の内側だけに出す光 */

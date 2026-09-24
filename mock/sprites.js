@@ -1,6 +1,6 @@
-// ドット絵の素材（高画質版）: 侍・タンク・からくり木人。画像ファイルは使わず、図形（楕円・太線・多角形）を組み合わせて描く。
+// ドット絵の素材（高画質版）: 侍・タンク（ナイト）・白魔道士・からくり木人。画像ファイルは使わず、図形（楕円・太線・多角形）を組み合わせて描く。
 // 部品ごとに「光が左上から当たる」として陰影を自動で付け、部品の重なりには線、外側には輪郭を付ける。
-// 1 コマは等倍のドット（侍・タンク 64×64、木人 96×96）。2D の画面でも 3D の画面でも、同じアトラス（全コマを並べた画像）を使う。
+// 1 コマは等倍のドット（侍・タンク・白魔道士 64×64、木人 96×96）。2D の画面でも 3D の画面でも、同じアトラス（全コマを並べた画像）を使う。
 (function () {
   'use strict';
 
@@ -27,9 +27,10 @@
     pine: ['#7fbf72', '#4c8a52', '#336a42', '#22492f', '#132b1d'],
     marble: ['#fffdf6', '#efe6d4', '#cfc2a8', '#a09078', '#6a5c4a'],
     grassY: ['#eee49a', '#c2b862', '#949040', '#64642c', '#3a3a1a'],
+    aura: ['#ffffff', '#f0fff6', '#c4f7d6', '#7fe0a2', '#3fae72'], // 白魔道士の杖の玉
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear']);
+  const EMIT = new Set(['glow', 'smear', 'aura']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -147,19 +148,21 @@
       draw(m);
       const s = shade(m, o);
       const id = this.np++;
+      this.last = id;
       this.lines[id] = o.line !== false;
       const mi = MID[mat];
       if (mi == null) throw new Error(`色がない: ${mat}`);
       for (let i = 0; i < m.a.length; i++) if (m.a[i]) { this.part[i] = id; this.mat[i] = mi; this.sh[i] = s[i]; }
       return this;
     }
-    // 模様（陰影を付けず、指定の段で塗る。すでに塗った所だけ）
+    // 模様（陰影を付けず、指定の段で塗る。すでに塗った所だけ。o.only: その部品の上だけ）
     deco(mat, step, draw, o = {}) {
       const m = new Mask(this.w, this.h);
       draw(m);
       const mi = MID[mat];
       for (let i = 0; i < m.a.length; i++) {
         if (!m.a[i]) continue;
+        if (o.only != null && this.part[i] !== o.only) continue;
         if (this.part[i] < 0) { if (!o.any) continue; this.part[i] = this.np - 1; }
         this.mat[i] = mi; this.sh[i] = step;
       }
@@ -590,6 +593,178 @@
     },
     slash: { fps: 12, loop: false, poses: [{ atk: 1 }, { atk: 2, crouch: 1 }, { atk: 2, crouch: 1 }, { atk: 0 }] },
     hurt: { fps: 1, loop: false, poses: [{ bob: -1, shieldDy: -3, block: true }] },
+    // 自分がナイトのとき: 詠唱（剣を掲げる）・魔法（振り下ろす）・強化（剣と盾を掲げる）・ジャンプ
+    cast: { fps: 6, loop: true, poses: [{ atk: 1, cape: 0.5 }, { atk: 1, bob: 1, cape: 1 }] },
+    spell: { fps: 12, loop: false, poses: [{ atk: 1, crouch: -1 }, { atk: 2, crouch: 1 }, { atk: 2, crouch: 1 }, { atk: 0 }] },
+    buff: { fps: 8, loop: false, poses: [{ atk: 1, shieldDy: -4 }, { atk: 1, shieldDy: -5, bob: -1 }] },
+    jump: { fps: 1, loop: false, poses: [{ fl: 3, fr: 3, la: 3, lb: 3, fa: 3, fb: -3, bob: -1, cape: -2 }, { fl: 1, fr: 2, la: 1, lb: 2, cape: -1 }] },
+  };
+
+  // ---------------- 白魔道士（白いフードのローブと杖。64×64、足元 y=59）----------------
+  // p: { bob, sway, fl, fr, staff, free, orb（杖の玉の光）, tail（フードの先の揺れ）, jump, headDy }
+  // 杖を持つ腕: 手の位置（肩からの相対。正面の向きで書き、背面では左右反転）・杖の向き（手 → 先）・先までの長さ・石突きまでの長さ
+  const WHM_STAFF = {
+    rest: { h: [-3, 12], dir: [0.04, -1], up: 27, down: 17 },
+    raise: { h: [-2, -5], dir: [0.1, -1], up: 14, down: 14 },
+    forward: { h: [-8, 2], dir: [-0.5, -0.87], up: 17, down: 10 },
+    up: { h: [1, -10], dir: [0, -1], up: 12, down: 12 },
+    hurt: { h: [-6, 8], dir: [-0.4, -0.92], up: 22, down: 12 },
+  };
+  const WHM_SIDE = {
+    rest: { h: [3, 11], dir: [0.05, -1], up: 27, down: 17 },
+    raise: { h: [6, -4], dir: [0.25, -0.97], up: 14, down: 12 },
+    forward: { h: [10, 0], dir: [0.8, -0.6], up: 14, down: 8 },
+    up: { h: [2, -9], dir: [0.05, -1], up: 12, down: 12 },
+    hurt: { h: [-4, 8], dir: [-0.4, -0.9], up: 22, down: 12 },
+  };
+  // 杖（手 h、先への向き dir）。先に金の輪と光る玉
+  function staff(F, h, dir, up, down, o = {}) {
+    const b = add(h, dir, -down), t = add(h, dir, up), head = add(t, dir, 2.6);
+    F.fill('wood', (m) => m.capsule(b.x, b.y, t.x, t.y, 0.9, 1.0), { k: 1.1 });
+    const r = 1.9 + (o.orb ?? 0) * 0.8;
+    F.fill('aura', (m) => m.ellipse(head.x, head.y, r, r), { flat: true, line: false, k: 1 });
+    F.fill('gold', (m) => {
+      m.ellipse(head.x, head.y, 3.3, 3.3); m.cut().ellipse(head.x, head.y, 2.0, 2.0).add();
+      m.capsule(t.x, t.y, head.x - dir.x * 2.6, head.y - dir.y * 2.6, 1.1);
+      m.capsule(b.x, b.y, b.x + dir.x * 1.5, b.y + dir.y * 1.5, 1.05);
+    }, { k: 1.3 });
+  }
+  // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
+  function robeArm(F, s, h, bend, o = {}) {
+    const mid = V((s.x + h.x) / 2, (s.y + h.y) / 2), d = unit(h.x - s.x, h.y - s.y), n = perp(d);
+    const e = add(mid, n, bend), c = add(h, d, -1.3);
+    F.fill('white', (m) => { m.capsule(s.x, s.y, e.x, e.y, 2.4, 2.6); m.capsule(e.x, e.y, c.x, c.y, 2.6, 3.2); }, { k: 1.5, dark: o.dark ?? 0 });
+    const id = F.last, q = add(c, d, 0.2);
+    F.deco('red', 2 + (o.dark ?? 0), (m) => m.capsule(q.x - n.x * 4, q.y - n.y * 4, q.x + n.x * 4, q.y + n.y * 4, 0.9), { only: id });
+  }
+  const hand = (F, h, dark = 0) => F.fill('skin', (m) => m.ellipse(h.x, h.y, 1.7, 1.6), { k: 1.3, dark });
+  // 裾の赤い三角模様
+  const hemTri = (m, x0, x1, hem) => { m.rect(x0, hem - 0.6, x1 - x0, 1.2); for (let x = x0 + 1.2; x < x1 - 0.6; x += 2.4) m.poly([x - 1.2, hem + 0.2, x + 1.2, hem + 0.2, x, hem - 2.6]); };
+
+  function whmFB(F, p, back) {
+    const b = p.bob ?? 0, cx = 32, jump = p.jump ?? 0, sway = p.sway ?? 0, tail = p.tail ?? 0;
+    const hipY = 38 - jump, sy = 26 + b - jump, hy = 17 + b + (p.headDy ?? 0) - jump;
+    const armSide = back ? 1 : -1, mir = back ? -1 : 1; // 杖を持つ腕（本人の右手。正面では画面の左）
+    const S = WHM_STAFF[p.staff ?? 'rest'];
+    const ks = V(cx + armSide * 7, sy + 1.5);
+    const hd = V(ks.x + S.h[0] * mir, ks.y + S.h[1]), dir = unit(S.dir[0] * mir, S.dir[1]);
+    // 背面: 杖は体の奥
+    if (back) { staff(F, hd, dir, S.up, S.down, p); }
+    // 靴
+    const footY = 58 - jump * 0.3;
+    F.fill('leather', (m) => { m.ellipse(cx - 4 + sway, footY - (p.fl ?? 0), 2.4, 1.5); m.ellipse(cx + 4 + sway, footY - (p.fr ?? 0), 2.4, 1.5); }, { k: 1.2, dark: 1 });
+    // ローブ（裾が広がる）
+    const hem = 56.5 - jump * 0.3 - Math.max(p.fl ?? 0, p.fr ?? 0) * 0.35;
+    F.fill('white', (m) => m.poly([cx - 7, sy - 0.5, cx + 7, sy - 0.5, cx + 11 + sway, hem, cx - 11 + sway, hem]), { k: 1.2 });
+    const robe = F.last;
+    F.deco('red', 2, (m) => hemTri(m, cx - 11 + sway, cx + 11 + sway, hem - 0.6), { only: robe });
+    if (!back) F.deco('red', 2, (m) => m.line(cx, sy + 7, cx + sway * 0.6, hem - 2), { only: robe });
+    else F.deco('red', 2, (m) => { m.poly([cx - 3.5, sy + 9, cx + 3.5, sy + 9, cx, sy + 14]); }, { only: robe });
+    // 腰の紐（金）
+    F.deco('gold', 1, (m) => { m.line(cx - 7, hipY - 1, cx + 7, hipY - 1); if (!back) { m.line(cx + 2, hipY - 1, cx + 2.5, hipY + 4); m.dot(cx + 2.5, hipY + 5); } }, { only: robe });
+    // 杖を持たない腕（本人の左手）
+    const fs = V(cx - armSide * 7, sy + 1.5);
+    const fh = p.free === 'up' ? V(cx - armSide * 11, sy - 7) : p.free === 'forward' ? V(cx - armSide * 12.5, sy + 1) : p.free === 'chest' ? V(cx - armSide * 2.5, sy + 6) : V(cx - armSide * 9, hipY + 1 + (p.freeDy ?? 0));
+    robeArm(F, fs, fh, -armSide * 1.5);
+    hand(F, fh);
+    // フード（頭の後ろと肩に掛かる部分。先が少しとがる）
+    F.fill('white', (m) => {
+      m.ellipse(cx, hy - 0.5, 8.4, 8.8);
+      m.poly([cx - 8, hy + 1, cx + 8, hy + 1, cx + 9.5, sy + 3, cx - 9.5, sy + 3]);
+      m.poly([cx - 3, hy - 7.5, cx + 3, hy - 7.5, cx + 1.5 + tail * 0.4, hy - 10.5]);
+    }, { k: 1.5 });
+    const hood = F.last;
+    if (!back) {
+      // 顔と前髪
+      F.fill('skin', (m) => m.ellipse(cx, hy + 1.8, 5.4, 5.7), { k: 1.8 });
+      F.fill('leather', (m) => {
+        m.ellipse(cx, hy - 2, 5.7, 3.2); m.cut().rect(0, hy - 0.2, 64, 20).add();
+        m.poly([cx - 5.2, hy - 1, cx - 2, hy - 1, cx - 3.9, hy + 2]);
+        m.poly([cx + 2, hy - 1, cx + 5.2, hy - 1, cx + 3.9, hy + 2]);
+        m.poly([cx - 1.6, hy - 1, cx + 1.6, hy - 1, cx, hy + 0.9]);
+      }, { k: 1.4 });
+      // フードの縁（赤）
+      F.deco('red', 2, (m) => m.band(cx, hy + 1.8, 5.9, 7.3, Math.PI * 0.96, Math.PI * 2.04), { only: hood });
+      F.deco('red', 3, (m) => { m.line(cx - 7.2, hy + 2, cx - 8.6, sy + 2.5); m.line(cx + 7.2, hy + 2, cx + 8.6, sy + 2.5); }, { only: hood });
+      // 目・口・頬
+      F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
+      F.deco('white', 0, (m) => { m.dot(cx - 2, hy + 2); m.dot(cx + 3, hy + 2); });
+      F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.3, cx + 0.5, hy + 5.3));
+      F.deco('red', 0, (m) => { m.dot(cx - 3.8, hy + 4); m.dot(cx + 3.8, hy + 4); });
+    } else {
+      // 背面: フードの先が背中に垂れる（赤の縁取り）
+      F.fill('white', (m) => m.poly([cx - 4.5, hy + 3, cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11, cx - 1 + tail * 0.6, sy + 11]), { k: 1.3 });
+      const flap = F.last;
+      F.deco('red', 2, (m) => { m.line(cx - 4.5, hy + 3, cx - 1 + tail * 0.6, sy + 11); m.line(cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11); m.line(cx - 1 + tail * 0.6, sy + 11, cx + 1 + tail * 0.6, sy + 11); }, { only: flap });
+      F.deco('white', 3, (m) => m.line(cx, hy - 7, cx, hy + 2), { only: hood });
+    }
+    // 杖を持つ腕と杖（正面: 杖は体の手前）
+    robeArm(F, ks, hd, armSide * 1.2);
+    if (!back) staff(F, hd, dir, S.up, S.down, p);
+    hand(F, hd);
+  }
+
+  function whmSide(F, p) {
+    const b = p.bob ?? 0, jump = p.jump ?? 0, lean = p.lean ?? 0, tail = p.tail ?? 0;
+    const cx = 31, ux = cx + lean;
+    const hipY = 38 - jump, sy = 26 + b - jump, hy = 17 + b + (p.headDy ?? 0) - jump;
+    const S = WHM_SIDE[p.staff ?? 'rest'];
+    const ks = V(ux + 0.5, sy + 1.8);
+    const hd = V(ks.x + S.h[0], ks.y + S.h[1]), dir = unit(S.dir[0], S.dir[1]);
+    // 奥の腕（左手）
+    const fsh = V(ux - 1, sy + 1.5);
+    const fh = p.free === 'up' ? V(ux - 1, sy - 8) : p.free === 'forward' ? V(ux + 11, sy + 1) : p.free === 'chest' ? V(ux + 5, sy + 6) : V(ux - 3 + (p.freeSwing ?? 0), hipY + 1);
+    robeArm(F, fsh, fh, -1.2, { dark: 1 });
+    hand(F, fh, 1);
+    // 足（前後に開く）
+    const fA = p.fa ?? 0, fB = p.fb ?? 0, footY = 58 - jump * 0.3;
+    F.fill('leather', (m) => m.ellipse(cx + 1 + fB, footY - (p.lb ?? 0), 2.6, 1.4), { k: 1.2, dark: 2 });
+    F.fill('leather', (m) => m.ellipse(cx + 2 + fA, footY - (p.la ?? 0), 2.6, 1.4), { k: 1.2, dark: 1 });
+    // ローブ（横から。裾は足に合わせて前後に広がる）
+    const hem = 56.5 - jump * 0.3;
+    const x0 = cx - 8 + Math.min(fA, fB, 0) * 0.7, x1 = cx + 8 + Math.max(fA, fB, 0) * 0.7;
+    F.fill('white', (m) => m.poly([ux - 5.5, sy - 0.5, ux + 4.5, sy - 0.5, x1, hem - Math.max(p.la ?? 0, 0) * 0.4, x0, hem - Math.max(p.lb ?? 0, 0) * 0.4]), { k: 1.2 });
+    const robe = F.last;
+    F.deco('red', 2, (m) => hemTri(m, x0, x1, hem - 0.6), { only: robe });
+    F.deco('red', 2, (m) => m.line(ux + 4, sy + 6, x1 - 2, hem - 2), { only: robe });
+    F.deco('gold', 1, (m) => m.line(ux - 5.5, hipY - 1, ux + 5, hipY - 1), { only: robe });
+    // 頭（横顔）とフード
+    F.fill('white', (m) => {
+      m.ellipse(ux - 0.5, hy - 0.3, 7.6, 8.4);
+      m.poly([ux - 6.5, hy - 1, ux - 3, hy + 6, ux - 8.5 - tail * 0.6, hy + 10 + tail * 0.3]);
+      m.poly([ux - 6, hy + 2, ux + 4, hy + 2, ux + 5, sy + 3, ux - 7, sy + 3]);
+      m.poly([ux - 3.5, hy - 7, ux + 1.5, hy - 8, ux - 3 - tail * 0.4, hy - 10]);
+    }, { k: 1.5 });
+    const hood = F.last;
+    F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); }, { k: 1.8 });
+    F.fill('leather', (m) => { m.ellipse(ux + 2.5, hy - 2, 4.6, 2.8); m.cut().rect(0, hy - 0.2, 64, 20).add(); m.poly([ux + 3, hy - 1.5, ux + 6.6, hy - 1.5, ux + 5.3, hy + 1.6]); }, { k: 1.4 });
+    F.deco('red', 2, (m) => m.band(ux + 2.6, hy + 1.8, 5.0, 6.3, Math.PI * 0.55, Math.PI * 1.9), { only: hood });
+    F.deco('white', 3, (m) => m.line(ux - 5, hy + 1, ux - 7.5 - tail * 0.6, hy + 9), { only: hood });
+    F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
+    F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
+    F.deco('red', 0, (m) => m.dot(ux + 3.6, hy + 4.3));
+    // 手前の腕（右手）と杖
+    robeArm(F, ks, hd, 1.2);
+    staff(F, hd, dir, S.up, S.down, p);
+    hand(F, hd);
+  }
+  const WHM_ANIMS = {
+    idle: { fps: 4, loop: true, poses: [{ tail: 0 }, { tail: 0.5, orb: 0.15 }, { bob: 1, tail: 1, orb: 0.3 }, { bob: 1, tail: 0.5, orb: 0.15 }] },
+    run: {
+      fps: 11, loop: true,
+      poses: RUN6.map((i) => {
+        const ph = (i / 6) * Math.PI * 2, s = Math.sin(ph), c2 = Math.cos(ph);
+        return {
+          fb: { fl: Math.max(0, s) * 3.5, fr: Math.max(0, -s) * 3.5, sway: s * 1, bob: Math.abs(c2) > 0.5 ? 1 : 0, tail: 1.5 + s, freeDy: -s * 2 },
+          side: { fa: c2 * 5.5, fb: -c2 * 5.5, la: Math.max(0, s) * 3, lb: Math.max(0, -s) * 3, bob: Math.abs(c2) > 0.5 ? 1 : 0, lean: 1.5, tail: 2 + s, freeSwing: -c2 * 3 },
+        };
+      }),
+    },
+    cast: { fps: 6, loop: true, poses: [{ staff: 'raise', free: 'chest', orb: 0.8, tail: 0.5 }, { staff: 'raise', free: 'chest', orb: 1.4, bob: 1, tail: 1 }] },
+    spell: { fps: 12, loop: false, poses: [{ staff: 'raise', free: 'chest', orb: 1.2 }, { staff: 'forward', free: 'forward', orb: 2, tail: 1.5 }, { staff: 'forward', free: 'forward', orb: 1.2, tail: 1 }, { staff: 'forward', orb: 0.5 }] },
+    buff: { fps: 8, loop: false, poses: [{ staff: 'up', free: 'up', orb: 1 }, { staff: 'up', free: 'up', orb: 1.8, bob: -1 }] },
+    hurt: { fps: 1, loop: false, poses: [{ staff: 'hurt', headDy: -1, bob: -1, tail: -1 }] },
+    jump: { fps: 1, loop: false, poses: [{ jump: 3, fl: 3, fr: 3, la: 3, lb: 3, fa: 3, fb: -3, tail: -1.5, free: 'up' }, { jump: 1, fl: 1, fr: 2, la: 1, lb: 2, tail: -0.5 }] },
   };
 
   // ---------------- からくり木人（96×96、足元 y=90）----------------
@@ -790,6 +965,77 @@
     return { atlas, emit, frames };
   }
 
+  // ---------------- 演出の絵（canvas。ドット絵ではなく光の演出として描く。2D と 3D で同じ絵を使う）----------------
+  // リタージー・オブ・ベル（ゲーム内の見た目に合わせる）: 緑がかった水色のガラスの線でできた大きなハート（下で 2 本が交差する）、
+  // 中に白く光る大きな花、まわりにガラス玉のような鈴の花。アイコン（002649）の絵柄とも同じ
+  const LILY = { w: 4.6, h: 5.3, flower: [0, 2.7, 1.8], bubbles: [[-1.38, 4.0, 0.62], [1.35, 4.05, 0.6], [-1.05, 2.75, 0.52], [1.08, 2.82, 0.54], [0.03, 4.32, 0.46]] }; // m（左右・高さ・大きさ）
+  function lilyHeartCanvas() {
+    const W = 256, H = 294, c = canvas(W, H), g = c.getContext('2d'), cx = W / 2;
+    // 片側の葉の線（下の交差から外へふくらみ、上の山を回って中央のくぼみへ）
+    const path = (side, k = 1) => {
+      g.beginPath();
+      g.moveTo(cx - side * 30, 290);
+      g.bezierCurveTo(cx + side * 12 * k, 236, cx + side * 122 * k, 170, cx + side * 108 * k, 74);
+      g.bezierCurveTo(cx + side * 98 * k, 18, cx + side * 22, 20, cx + side * 3, 82);
+    };
+    for (const side of [-1, 1]) {
+      g.save(); g.shadowColor = 'rgba(70,235,215,0.95)'; g.shadowBlur = 16;
+      path(side); g.strokeStyle = 'rgba(60,190,185,0.5)'; g.lineWidth = 10; g.stroke(); g.restore();
+      path(side); g.strokeStyle = 'rgba(140,255,230,0.85)'; g.lineWidth = 4; g.stroke();
+      path(side); g.strokeStyle = 'rgba(255,255,255,0.95)'; g.lineWidth = 1.6; g.stroke();
+      // 内側の細い線（ガラスの葉の厚み）
+      g.save(); g.translate(cx, 150); g.scale(0.86, 0.88); g.translate(-cx, -150);
+      path(side, 0.97); g.strokeStyle = 'rgba(150,255,240,0.45)'; g.lineWidth = 2; g.stroke(); g.restore();
+    }
+    // 葉の中の、波のような模様（下の方）
+    g.strokeStyle = 'rgba(120,220,255,0.35)'; g.lineWidth = 1.2;
+    for (let i = 0; i < 7; i++) {
+      const y = 170 + i * 13, w = 60 - i * 7;
+      for (const side of [-1, 1]) { g.beginPath(); for (let x = 0; x <= w; x += 4) g.lineTo(cx + side * (18 + x), y + Math.sin(x * 0.35 + i) * 2.2 - x * 0.35); g.stroke(); }
+    }
+    return c;
+  }
+  // 中央の大きな花（白く光る。花びら 6 枚、芯は淡い紫）
+  function lilyFlowerCanvas() {
+    const N = 160, c = canvas(N, N), g = c.getContext('2d'), m = N / 2;
+    const gr = g.createRadialGradient(m, m, 0, m, m, m);
+    gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.25, 'rgba(225,240,255,0.8)'); gr.addColorStop(0.6, 'rgba(140,200,255,0.25)'); gr.addColorStop(1, 'rgba(120,180,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, N, N);
+    for (let i = 0; i < 6; i++) {
+      const a = (i / 6) * Math.PI * 2 - Math.PI / 2;
+      g.save(); g.translate(m + Math.cos(a) * 20, m + Math.sin(a) * 20); g.rotate(a);
+      const pg = g.createLinearGradient(-22, 0, 22, 0);
+      pg.addColorStop(0, 'rgba(255,255,255,0.95)'); pg.addColorStop(1, 'rgba(200,225,255,0.35)');
+      g.fillStyle = pg; g.beginPath(); g.ellipse(0, 0, 24, 13, 0, 0, Math.PI * 2); g.fill();
+      g.restore();
+    }
+    const core = g.createRadialGradient(m, m, 0, m, m, 16);
+    core.addColorStop(0, 'rgba(255,255,255,1)'); core.addColorStop(0.5, 'rgba(235,205,255,0.9)'); core.addColorStop(1, 'rgba(200,170,255,0)');
+    g.fillStyle = core; g.fillRect(m - 16, m - 16, 32, 32);
+    return c;
+  }
+  // 鈴の花（ガラス玉。縁と映り込みが光り、中は透ける。上に小さな柄）
+  function lilyBubbleCanvas() {
+    const N = 64, c = canvas(N, N), g = c.getContext('2d'), m = N / 2, r = 24;
+    const fill = g.createRadialGradient(m - 6, m - 8, 2, m, m, r);
+    fill.addColorStop(0, 'rgba(230,255,255,0.35)'); fill.addColorStop(0.7, 'rgba(120,210,255,0.12)'); fill.addColorStop(1, 'rgba(160,240,255,0.5)');
+    g.fillStyle = fill; g.beginPath(); g.arc(m, m + 2, r, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = 'rgba(210,255,255,0.85)'; g.lineWidth = 2; g.stroke();
+    g.fillStyle = 'rgba(255,255,255,0.95)'; g.beginPath(); g.ellipse(m - 9, m - 8, 6, 3.5, -0.6, 0, Math.PI * 2); g.fill();
+    g.fillStyle = 'rgba(255,255,255,0.6)'; g.beginPath(); g.arc(m + 10, m + 12, 2.5, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = 'rgba(170,255,230,0.8)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(m, m - r + 2); g.quadraticCurveTo(m + 3, m - r - 5, m - 1, 1); g.stroke();
+    return c;
+  }
+  // きらめき（十字の光）
+  function glintCanvas() {
+    const N = 32, c = canvas(N, N), g = c.getContext('2d'), m = N / 2;
+    const gr = g.createRadialGradient(m, m, 0, m, m, m);
+    gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.2, 'rgba(255,255,255,0.5)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, N, N);
+    g.fillStyle = 'rgba(255,255,255,0.9)'; g.fillRect(m - 0.75, 0, 1.5, N); g.fillRect(0, m - 0.75, N, 1.5);
+    return c;
+  }
+
   let cache = null;
   function build() {
     if (cache) return cache;
@@ -797,8 +1043,10 @@
     cache = {
       player: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
       tank: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
+      whm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
       boss: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),
       props: buildProps(),
+      vfx: { lilyHeart: lilyHeartCanvas(), lilyFlower: lilyFlowerCanvas(), lilyBubble: lilyBubbleCanvas(), glint: glintCanvas(), LILY },
     };
     cache.ms = Math.round(performance.now() - t0);
     return cache;

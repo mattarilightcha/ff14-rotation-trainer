@@ -27,7 +27,11 @@ for (const rel of icons) {
 data = data.replaceAll('"../public/icons/', '"icons/').replaceAll('"../public/fankit/', '"fankit/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
-for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'stages.js', 'pixel.js', 'sprites.js', 'arena.js', 'arena3d.js', 'uld.js', 'gauge.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'stages.js', 'pixel.js', 'sprites.js', 'arena.js', 'arena3d.js', 'uld.js', 'gauge.js', 'gauge2.js', 'jobs.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+// index.html が読むスクリプトが全部コピーされているか確かめる（足し忘れ防止）
+for (const [, f] of readFileSync(join(root, 'mock/index.html'), 'utf8').matchAll(/<script src="([\w./-]+\.js)"/g)) {
+  if (!f.startsWith('vendor/')) readFileSync(join(out, f));
+}
 // フォント（mock/fonts。使う文字だけに絞った WOFF2 とライセンス）。足りない文字があれば警告する
 mkdirSync(join(out, 'fonts'), { recursive: true });
 for (const f of readdirSync(join(root, 'mock/fonts'))) if (/\.(woff2|txt)$/.test(f) && f !== 'chars.txt') copyFileSync(join(root, 'mock/fonts', f), join(out, 'fonts', f));
