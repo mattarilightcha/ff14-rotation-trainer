@@ -37,3 +37,24 @@ FF14 の HUD に寄せた見た目と操作感を試すための、単独で動�
 - ホットバー 5〜10 はキー割り当てが未解読（KEYBIND.DAT）のため、クリックでのみ使える。
 - 採点は一部の項目だけ。お手本（開幕回し）と一時停止は未実装。
 - 判定は `requestAnimationFrame` の中で行っており、本実装の「決定的なエンジン」（STATE_MACHINE.md）ではない。
+
+## サーバー（nettoge.com）に仮で置く
+
+`.github/workflows/deploy-mock.yml` が、`mock/` などを変更して push したとき（または Actions 画面で「Run workflow」を押したとき）に動きます。
+
+1. **必ず作られるもの:** Actions の実行結果ページの下にある成果物 **`mock-site`**（zip）。中身をサーバーの好きな場所にアップロードすれば、そのまま動きます（`index.html` を開くだけ。サーバー側の設定は不要）。
+2. **自動でサーバーへ送る場合:** GitHub のリポジトリ設定 → **Settings → Environments → New environment** で `mock` を作り、次を登録します（値はチャットやコードに書かないでください）。
+
+| 種類 | 名前 | 内容 |
+|------|------|------|
+| Secret | `DEPLOY_HOST` | サーバーのホスト名または IP |
+| Secret | `DEPLOY_PORT` | SSH のポート（22 なら省略可） |
+| Secret | `DEPLOY_USER` | アップロード用のユーザー |
+| Secret | `DEPLOY_SSH_KEY` | そのユーザーの秘密鍵（アップロード専用に作った鍵を推奨） |
+| Secret | `DEPLOY_KNOWN_HOSTS` | `ssh-keyscan -p <ポート> <ホスト>` の出力（指紋を確認したもの） |
+| Variable | `DEPLOY_MOCK_PATH` | 置き場所のフォルダ（例 `/var/www/html/tools/ff14-rotation-trainer-mock`）。**中身は毎回入れ替わる**ので専用のフォルダにする |
+| Variable | `MOCK_URL` | 公開 URL（例 `https://nettoge.com/tools/ff14-rotation-trainer-mock/`）。送信後の確認に使う（省略可） |
+
+- Secrets が未登録のときは、送信を省略して警告を出すだけです（zip は作られます）。
+- 仮の公開なので、`noindex` と `robots.txt` で検索エンジンに載らないようにしています。
+- SSH を特定の IP に制限している場合、GitHub Actions からは接続できないことがあります（docs/DEPLOY.md §4.3）。そのときは zip を手でアップロードしてください。

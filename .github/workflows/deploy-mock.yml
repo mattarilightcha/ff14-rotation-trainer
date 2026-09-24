@@ -1,0 +1,84 @@
+# UI モックを nettoge.com のサーバーに仮で置く（docs/DEPLOY.md の簡易版）
+# - mock/ か抽出データが変わって push されたとき、または Actions 画面から手動で実行したときに動く
+# - 毎回 zip（mock-site）を成果物として残す。SSH で送れない場合は、これを手でアップロードする
+# - Secrets が登録されていれば SSH + rsync でサーバーへ送る
+name: deploy-mock
+
+on:
+  push:
+    branches: [main, claude/kind-mayer-h4vdph]
+    paths:
+      - 'mock/**'
+      - 'src/data/ffxiv/**'
+      - 'public/icons/**'
+      - '.github/workflows/deploy-mock.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-mock
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Package mock
+        run: node mock/package.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mock-site
+          path: dist-mock/
+          retention-days: 14
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: mock
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+      DEPLOY_MOCK_PATH: ${{ vars.DEPLOY_MOCK_PATH }}
+      MOCK_URL: ${{ vars.MOCK_URL }}
+    steps:
+      - name: Check settings
+        id: check
+        run: |
+          if [ -z "$DEPLOY_HOST" ] || [ -z "$DEPLOY_USER" ] || [ -z "$DEPLOY_MOCK_PATH" ]; then
+            echo "::warning::Secrets / Variables が未登録のため、サーバーへの送信を省略しました。成果物 mock-site を手でアップロードしてください（mock/README.md）。"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/download-artifact@v4
+        if: steps.check.outputs.skip != 'true'
+        with:
+          name: mock-site
+          path: dist-mock
+      - name: Set up SSH
+        if: steps.check.outputs.skip != 'true'
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+      - name: Upload with rsync
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          rsync -rlptz --delete \
+            -e "ssh -i ~/.ssh/id_deploy -p ${DEPLOY_PORT:-22} -o StrictHostKeyChecking=yes" \
+            dist-mock/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_MOCK_PATH%/}/"
+      - name: Smoke check
+        if: steps.check.outputs.skip != 'true' && env.MOCK_URL != ''
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$MOCK_URL")
+          echo "GET $MOCK_URL -> $code"
+          test "$code" = "200"
