@@ -171,6 +171,8 @@
   const AN = { normal: 2, simple: 23, slots: [6, 7, 8, 9], sSlots: [25, 26, 27, 28], rings: [17, 18, 19] };
   const CARD_PART = { balance: 0, bole: 1, arrow: 2, spear: 3, spire: 4, ewer: 5, lady: 6, lord: 7 };
   const SLOTS = ['p1', 'p2', 'p3', 'minor'];
+  // 枠の色（ゲーム内の画面）: アストラルドローのカード = 水色、アンブラルドローのカード = ピンク（ULD の枠の色のまま）
+  const ASTRAL_CARDS = new Set(['balance', 'arrow', 'spire', 'lord']);
   function ast(G) {
     const L = G.layouts.JobHudAST0;
     const K = U.build(L, G.textures);
@@ -187,7 +189,9 @@
         if (c) usePart(img, tex, P2[CARD_PART[c]]);
         // 絵の置き場（#3）は枠より 10px 上にあるので、枠の真ん中へ下げる（通常表示）
         set(k(`${node}/3`), { opacity: c ? 1 : 0, translate: simple2 ? '0 0' : '0 10px', scale: simple2 ? '1' : '0.86' });
-        if (!simple2) set(k(`${node}/5`), { opacity: c ? 0.35 : 0.7 });
+        const cyan = c && ASTRAL_CARDS.has(c);
+        set(k(`${node}/5`), { opacity: c ? 1 : 0.7, filter: cyan ? 'hue-rotate(-122deg) saturate(1.3) brightness(1.15)' : 'none' });
+        if (simple2) set(k(`${node}/6`), { filter: cyan ? 'hue-rotate(-122deg) saturate(1.3)' : 'none' });
       }
       if (instant || !c) return;
       // 引いた: カードが表を向いて現れ、きらめきが散る
@@ -244,8 +248,15 @@
     for (const q of BN.poly) set(k(`${q}/4`), { opacity: 0 });
     for (const q of BN.soulFx) set(k1(q), { opacity: 0 });
     k(BN.simple).hidden = true; k1(15).hidden = true;
-    // ポリグロットの弧: 絵の左上が円の中心（ノードは -90° 回っている）。画面の上から時計回りに伸ばす
+    // ポリグロットの弧: 絵の左上が円の中心。ULD には −90° の回転が入っているが、回すとゲーム内の画面（蜘蛛の巣の右側）より上にずれるので回さない。
+    // 右（3 時）から時計回りに下へ伸ばす
     const arcEl = k(`${BN.arc}/3`);
+    if (arcEl) arcEl.style.transform = 'none';
+    set(k(10), { opacity: 0 }); // 通常表示の数字の枠（ゲーム内の画面では出ていない。時間は針で見せる）
+    // ポリグロットの針（#3。玉から右に伸びる黒い針）: 時計の針のように玉の中心（#3 から見て 14, 8）を軸に
+    // 右から真下まで 30 秒で 90° 回る。回りきるとポリグロットが 1 つたまり、右に戻る（依頼主の説明とゲーム内の画面から）
+    const hand = k(3);
+    if (hand) hand.style.transformOrigin = '14px 8px';
     // パラドックスの槍（#23。部品 1007）: 絵を灰色（パーツ 26）と色付き（27）で切り替え、光（#8）と火花（#2〜#7）はパラドックスのときだけ
     const lanceImgs = [K.img(`${BN.lance}/10`), K.img(`${BN.lance}/12`)];
     function apply(st, instant) {
@@ -264,7 +275,7 @@
         BN.sStacks.forEach((c, i) => { set(k(`${c}/3`), { opacity: i < stage ? 1 : 0, filter: aspect === 'ub' ? 'hue-rotate(190deg)' : 'none' }); });
       }
       if (instant || hearts !== prev.hearts) {
-        BN.hearts.forEach((h, i) => set(k(`${h}/4`), { opacity: i < hearts ? 1 : 0.18 }));
+        BN.hearts.forEach((h, i) => set(k(`${h}/4`), { opacity: i < hearts ? 1 : 0 })); // ないときは出さない（ゲーム内の画面）
         BN.sHearts.forEach((h, i) => set(k(`${h}/3`), { opacity: i < hearts ? 1 : 0, filter: 'hue-rotate(190deg)' }));
       }
       if (instant || poly !== prev.poly) {
@@ -274,6 +285,7 @@
       // ポリグロットの時間（AF / UB の間だけ進む）
       const p = aspect ? Math.min(1, (st.polyT ?? 0) / 30000) : 0;
       if (arcEl) arcEl.style.webkitMask = arcEl.style.mask = `conic-gradient(from 90deg at 0% 0%, #000 ${p * 90}deg, transparent ${p * 90}deg)`;
+      if (hand) hand.style.transform = `rotate(${p * 90}deg)`; // 針の色はそのまま（紫になるのは後ろの弧）
       const sec = aspect ? String(Math.ceil((30000 - (st.polyT ?? 0)) / 1000)) : '';
       if (sec !== prev.sec) { const n = k(BN.num); if (n) n.textContent = sec; const sn = k(BN.sNum); if (sn) sn.textContent = sec; }
       if (instant || soul !== prev.soul) {

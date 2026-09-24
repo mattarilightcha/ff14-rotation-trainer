@@ -819,11 +819,13 @@
   //   ファイジャで アストラルソウル +1、フレアで +3。最大（6）でフレアスター。AF が切れるとなくなる
   //   パラドックス: パラドックスシンボルが必要。UB 時は消費 MP 0。マナフォントで付く。ファイアとブリザドがパラドックスに変わる
   //   黒魔紋: 自身の足元に。魔法のキャストタイムとリキャストタイムを 15% 短縮（中にいる間）。三連魔: 3 回まで詠唱なし
-  // 仮（説明文に数値がない。特性・ステータスの効果量は未抽出: GAME-68）:
-  //   威力の倍率 AF1/2/3: 火 1.4/1.6/1.8・氷 0.9/0.8/0.7、UB1/2/3: 火 0.9/0.8/0.7
-  //   消費 MP: AF 中の火 ×2（アンブラルハートがあれば 1 つ使って ×1）・AF 中の氷 ×0.5/0.25/0、UB 中の火 ×0.5/0.25/0
-  //   MP の回復: 3 秒ごとに 200（AF 中は 0）。UB1/2/3 は さらに 3000/4500/6000
-  //   ポリグロット: AF か UB の間 30 秒ごとに 1 つ（最大 3）。パラドックスシンボル: AF3 と UB3（ハート 3 つ）の入れ替えで付く
+  // 特性の説明（公式ジョブガイド。特性のシートは未抽出: DATA-05）から:
+  //   極性マスタリー: AF1/2/3 = 火の威力 +40/60/80%・氷の威力 −10/20/30%・火の消費 MP ×2・氷の消費 MP 0・MP の自然回復 0
+  //     UB1/2/3 = 火の威力 −10/20/30%・火と氷の消費 MP 0・氷の命中で MP +2500/5000/10000。AF3 で氷、UB3 で火の詠唱時間が半分
+  //   エノキアン: AF か UB の間、与魔法ダメージ +27%。30 秒続くごとにポリグロット（最大 3）
+  //   極性マスタリー V: AF か UB が最大で、アンブラルハートも最大の状態で反対の属性に変わるとパラドックスシンボル（属性が消えると消える）
+  //   アストラルファイア効果アップ: デスペアは詠唱時間なし
+  // 仮（GAME-68）: AF・UB の外の MP の自然回復は 3 秒ごとに 200
   const BLM = {
     abbr: 'BLM',
     create(R) {
@@ -852,16 +854,16 @@
       const isSpell = (a) => a.category === 2;
       // 仮の倍率（GAME-68）
       const FIRE_UP = [1, 1.4, 1.6, 1.8], ICE_IN_AF = [1, 0.9, 0.8, 0.7], FIRE_IN_UB = [1, 0.9, 0.8, 0.7];
-      const COST_IN_OPP = [1, 0.5, 0.25, 0];
-      const UB_REGEN = [0, 3000, 4500, 6000];
+      const UB_MP_ON_ICE = [0, 2500, 5000, 10000]; // 氷の命中で回復する MP（UB1/2/3）
+      const ENOCHIAN = 1.27;
       function mpCost(a) {
         const s = S();
         if (a.id === ID.PARADOX && s.ub > 0) return 0; // 説明文「アンブラルブリザード時: この魔法の消費ＭＰが0」
         if (a.id === ID.FIRE3 && has('firestarter')) return 0; // ファイガ効果アップ
         if (a.mp === -1) return a.id === ID.FLARE && s.hearts > 0 ? Math.floor((s.mp * 2) / 3) : s.mp; // フレア・デスペア: MP 全部（フレアはハートで 2/3）
         let c = a.mp ?? 0;
-        if (FIRE_SET.has(a.id)) { if (s.af > 0 && s.hearts <= 0) c *= 2; if (s.ub > 0) c *= COST_IN_OPP[s.ub]; }
-        if (ICE_SET.has(a.id) && s.af > 0) c *= COST_IN_OPP[s.af];
+        if (FIRE_SET.has(a.id)) { if (s.af > 0 && s.hearts <= 0) c *= 2; if (s.ub > 0) c = 0; }
+        if (ICE_SET.has(a.id) && (s.af > 0 || s.ub > 0)) c = 0; // 氷は AF でも UB でも消費 MP 0
         return Math.round(c);
       }
       const minMp = (a) => (a.mp === -1 ? 800 : mpCost(a)); // デスペア・フレアは 800 以上ないと使えない（仮）
@@ -875,7 +877,8 @@
       function onSwap(from, to) {
         const s = S();
         R.buff('thunderhead', 999999);
-        if ((from === 'ub' && s.ub >= 3 && s.hearts >= 3) || (from === 'af' && s.af >= 3)) s.paradox = true;
+        if (((from === 'ub' && s.ub >= 3) || (from === 'af' && s.af >= 3)) && s.hearts >= 3) s.paradox = true;
+        if (!from) s.paradox = false;
         if (to === 'ub') s.soul = 0;
       }
       const J = {
@@ -892,9 +895,10 @@
         tracked: [['ハイサンダー', 'thunderDot', '#c8a8ff', '切れる前に、サンダー系魔法実行可で付け直す'], ['黒魔紋', 'ley', '#b890ff', '120 秒ごと。中に立って詠唱する']],
         potMult(a) {
           const s = S();
-          if (FIRE_SET.has(a.id)) return s.af > 0 ? FIRE_UP[s.af] : s.ub > 0 ? FIRE_IN_UB[s.ub] : 1;
-          if (ICE_SET.has(a.id)) return s.af > 0 ? ICE_IN_AF[s.af] : 1;
-          return 1;
+          const en = isSpell(a) && (s.af > 0 || s.ub > 0) ? ENOCHIAN : 1; // エノキアン（与魔法ダメージ）
+          if (FIRE_SET.has(a.id)) return en * (s.af > 0 ? FIRE_UP[s.af] : s.ub > 0 ? FIRE_IN_UB[s.ub] : 1);
+          if (ICE_SET.has(a.id)) return en * (s.af > 0 ? ICE_IN_AF[s.af] : 1);
+          return en;
         },
         // 黒魔紋の中: 魔法のキャストタイムとリキャストタイム 15% 短縮（説明文）
         speed: (a) => (a && isSpell(a) && has('ley') && R.inZone('ley') ? 0.85 : 1),
@@ -926,6 +930,7 @@
           const s = S();
           if (isSpell(a) && (has('swift') || has('triple'))) return 0;
           if (a.id === ID.FIRE3 && has('firestarter')) return 0;
+          if (a.id === ID.DESPAIR) return 0; // アストラルファイア効果アップ: デスペアは詠唱時間なし
           if (ICE_SET.has(a.id) && s.af >= 3) return base / 2;
           if (FIRE_SET.has(a.id) && s.ub >= 3) return base / 2;
           return base;
@@ -950,9 +955,12 @@
           if (id === ID.FLARE) { setAF(3); s.hearts = 0; s.soul = Math.min(6, s.soul + 3); }
           if (id === ID.FIRE4) { s.soul = Math.min(6, s.soul + 1); s.stats.f4++; }
           if (id === ID.BLIZZ4 || id === ID.FREEZE) s.hearts = 3;
+          // UB 中の氷の命中: MP 回復（付いた後の段階で）
+          if (ICE_SET.has(id) && s.ub > 0) s.mp = Math.min(MP_MAX, s.mp + UB_MP_ON_ICE[s.ub]);
           if (id === ID.FLARESTAR) { s.soul = 0; s.stats.flareStar++; }
           if (id === ID.PARADOX) { s.paradox = false; if (s.af > 0) R.buff('firestarter', 999999); }
           if (id === ID.TRANSPOSE) { if (s.af > 0) setUB(1); else if (s.ub > 0) setAF(1); }
+          if (s.af <= 0 && s.ub <= 0) { s.paradox = false; s.soul = 0; } // 属性が消えるとパラドックスシンボル・アストラルソウルも消える
           if (id === ID.USOUL) { setUB(Math.min(3, s.ub + 1)); s.hearts = Math.min(3, s.hearts + 1); }
           if (id === ID.MANAFONT) { s.mp = MP_MAX; setAF(3); R.buff('thunderhead', 999999); s.hearts = 3; s.paradox = true; }
           if (id === ID.AMPLIFIER) { if (s.poly >= 3) { s.stats.polyOver++; R.addLog('warn', 'ポリグロットがあふれました（3 つのまま）'); } s.poly = Math.min(3, s.poly + 1); }
@@ -974,7 +982,7 @@
           s.mpTick += dt;
           while (s.mpTick >= 3000) {
             s.mpTick -= 3000;
-            if (s.af <= 0) s.mp = Math.min(MP_MAX, s.mp + 200 + UB_REGEN[s.ub]);
+            if (s.af <= 0) s.mp = Math.min(MP_MAX, s.mp + 200); // 仮（GAME-68）
           }
           // ポリグロット（AF / UB の間 30 秒ごと。仮 GAME-68）
           if (s.phase === 'combat' && (s.af > 0 || s.ub > 0)) {
@@ -1068,6 +1076,8 @@
         ap: { name: '軍神のパイオン' },
         troubadour: { name: 'トルバドゥール' },
         minne: { name: '地神のミンネ' },
+        ethos: { name: '軍神の加護' },
+        muse: { name: '軍神の契約' },
       };
       const S = () => R.S;
       const has = R.has;
@@ -1085,9 +1095,17 @@
         if (song === 'mb') R.cdShift(ID.HEARTBREAK, 7500);
         void why;
       }
-      function endSong() {
+      // 軍神のパイオン効果アップ（特性）: 詩心 1/2/3/4 で 1/2/4/12% のヘイスト
+      const ETHOS = [0, 1, 2, 4, 12];
+      // 歌の終わり。next: 次に歌う歌（時間切れなら null）
+      function endSong(next) {
         const s = S();
         if (!s.song) return;
+        // パイオン中（詩心あり）に別の歌を歌う → 軍神の加護（10 秒）。歌わずに時間切れ → 軍神の契約（30 秒。次の歌で加護）
+        if (s.song.k === 'ap' && s.rep > 0) {
+          s.ethosPct = ETHOS[Math.min(4, s.rep)];
+          if (next) R.buff('ethos', 10000); else R.buff('muse', 30000);
+        }
         R.remove(s.song.k); s.song = null; s.rep = 0;
       }
       const J = {
@@ -1102,7 +1120,7 @@
         gaugeCols: [['歌', (s) => s.song?.k ?? ''], ['詩心', (s) => s.rep], ['ソウルボイス', (s) => s.sv], ['コーダ', (s) => Object.entries(s.codas).filter(([, v]) => v).map(([k]) => k).join('/')]],
         tracked: [['コースティックバイト', 'caustic', '#c8f0a0', 'アイアンジョーで 2 つまとめて付け直す'], ['ストームバイト', 'storm', '#a0e0ff', ''], ['猛者の撃', 'raging', '#ffb080', '120 秒ごと']],
         // 軍神のパイオンの詩心: ウェポンスキルのリキャスト 4% × 詩心
-        speed: (a) => (a && a.isGcd && S().song?.k === 'ap' ? 1 - 0.04 * S().rep : 1),
+        speed: (a) => (a && a.isGcd ? (S().song?.k === 'ap' ? 1 - 0.04 * S().rep : 1) * (has('ethos') ? 1 - (S().ethosPct ?? 0) / 100 : 1) : 1),
         comboFree: () => false,
         // 旅神のメヌエットを歌っている間は、メヌエットのボタンがピッチパーフェクトに変わる
         resolve: (id) => (id === ID.WM && S().song?.k === 'wm' ? ID.PITCH : tooltipResolve(R, J, id)),
@@ -1142,7 +1160,8 @@
           if (id === ID.IRONJAWS) for (const k of ['caustic', 'storm']) if (s.dots[k] && s.dots[k].until > s.t) { const d = A[k === 'caustic' ? ID.CAUSTIC : ID.STORM].pot.dot; s.dots[k].until = s.t + d.sec * 1000; s.dots[k].mult = R.mult; R.buff(k, d.sec * 1000); }
           // 歌
           if (SONGS[id]) {
-            endSong();
+            endSong(SONGS[id]);
+            if (has('muse')) { R.remove('muse'); R.buff('ethos', 10000); }
             const k = SONGS[id];
             s.song = { k, until: s.t + SONG_MS }; s.songT = 0; s.codas[k] = true; s.rep = 0;
             R.buff(k, SONG_MS);
@@ -1175,7 +1194,7 @@
           }
           // 歌の終わりと詩心（3 秒ごとに 80%）
           if (s.song) {
-            if (s.t >= s.song.until) { R.addLog('sys', `${SONG_NAME[s.song.k]}が終わりました`); endSong(); return; }
+            if (s.t >= s.song.until) { R.addLog('sys', `${SONG_NAME[s.song.k]}が終わりました`); endSong(null); return; }
             s.songT += dt;
             while (s.songT >= TICK) { s.songT -= TICK; if (Math.random() < 0.8) repertoire('歌'); }
           }
