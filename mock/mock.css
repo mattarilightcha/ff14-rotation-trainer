@@ -213,3 +213,25 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; }
 .tooltip .meta { color: var(--dim); font-size: 11px; margin-bottom: 4px; }
 
 .notice { position: absolute; left: 0; right: 0; bottom: 4px; text-align: center; font-size: 10px; color: rgba(255,255,255,.35); }
+
+/* HUD 再現（ADDON.DAT の配置） */
+.hud { position: absolute; inset: 0; pointer-events: none; }
+.hud-bar { position: absolute; display: grid; align-content: center; justify-content: center; gap: 0; pointer-events: auto; }
+.hud-bar .slot { width: var(--slot); height: var(--slot); border-radius: 12%; }
+.hud-bar .slot img, .hud-bar .slot .cd { border-radius: 12%; }
+.hud-bar .slot .num { font-size: 1.6em; bottom: 4%; }
+.hud-bar .slot .key { font-size: 0.95em; }
+.hud-bar .slot .chg { font-size: 1.2em; }
+.hud-label { position: absolute; left: -1.9em; top: 0; font-size: 0.9em; color: var(--dim); background: none; border: 0; cursor: pointer; padding: 0; font-family: inherit; }
+.hotbars.in-hud { left: auto; right: 290px; bottom: 36px; transform: none; }
+.slot.foreign::after { content: attr(data-ch); position: absolute; inset: 0; display: grid; place-items: center; color: #777; font-size: 1.2em; }
+#stage { transition: none; }
+.import { top: 60px; right: 200px; width: 440px; }
+.import .state { color: var(--gold); margin-bottom: 6px; }
+.import .file { display: block; margin: 6px 0; }
+.import pre { white-space: pre-wrap; font-size: 11px; margin: 6px 0; color: var(--text); font-family: inherit; }
+.import .res { margin: 4px 0; }
+.import input[type=number] { width: 70px; background: #111; color: var(--text); border: 1px solid #444; border-radius: 3px; padding: 1px 4px; }
+.import button { background: linear-gradient(#3a3f49, #22262d); color: var(--text); border: 1px solid #000; border-radius: 4px; padding: 2px 8px; font-size: 11px; cursor: pointer; }
+.slot .key.long { font-size: 0.72em; letter-spacing: -0.03em; }
+.hud-bar .slot .key.long { font-size: 0.7em; }

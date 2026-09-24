@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -13,7 +14,8 @@ const actions = read('src/data/ffxiv/actions.json');
 const statuses = read('src/data/ffxiv/statuses.json');
 const jobs = read('src/data/ffxiv/jobs.json');
 const meta = read('src/data/ffxiv/meta.json');
-const hotbar = read('mock/sam-hotbar-sample.json');
+const CfgParse = createRequire(import.meta.url)('./cfg-parse.js');
+const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 
 const JOB = 'SAM';
 const LEVEL = 100;
@@ -45,6 +47,13 @@ const toCell = (s) => {
 const BAR_NAMES = [...Array(10)].map((_, i) => `hb${i + 1}`).concat([...Array(8)].map((_, i) => `xhb${i + 1}`));
 // バーごとに「ジョブ専用」と「共有（セット 0）」の両方を持つ。どちらを使うかの設定は未解読（CFG-08）なので、
 // 既定は「ジョブ専用のバーに中身があればジョブ専用、なければ共有」とし、モックの画面で切り替えられるようにする
+// サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
+const JOB_SET = job.id; // HOTBAR.DAT のセット番号 = ClassJob の ID（CONFIG_FORMAT §2.2）
+const parsedHotbar = CfgParse.parseHotbar(sample('HOTBAR.DAT'), [0, JOB_SET]);
+const hotbar = { job: parsedHotbar[JOB_SET] ?? {}, shared: parsedHotbar[0] ?? {} };
+const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
+const addon = CfgParse.parseAddon(sample('ADDON.DAT'));
+
 const bars = {};
 for (const bar of BAR_NAMES) {
   const job = hotbar.job[bar]?.map(toCell) ?? null;
@@ -70,6 +79,14 @@ const unplaced = job.actionIds
   .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
   .map((a) => a.id);
 for (const id of unplaced) used.add(id);
+// このジョブのボタンになりうるアクション全部（読み込んだホットバーに無いものを「未配置」に出すため）
+const buttonsAll = job.actionIds
+  .map((id) => byId.get(id))
+  .filter((a) => a && a.inActionList && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id])
+  .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
+  .map((a) => a.id);
+// このジョブが使えるロールアクション（読み込んだホットバーに置かれていても表示できるように）
+for (const a of actions) if (a.isRoleAction && a.jobs?.includes(JOB) && a.level <= LEVEL && !upgrade[a.id]) used.add(a.id);
 
 // 置き換え先も含めて、モックで使うアクションを集める
 for (const [base, targets] of Object.entries(replaceGroups)) if (used.has(Number(base))) targets.forEach((id) => used.add(id));
@@ -101,6 +118,13 @@ const out = {
       .map((s) => [s.id, { id: s.id, name: s.name.ja, icon: `../public${s.iconPath}` }]),
   ),
   bars,
+  keybind: keybind.hotbar,
+  hud: { hotbars: addon.hotbars },
+  // ブラウザで別の設定ファイルを読み込んだときに使う: アクション ID → 名前・このジョブで使えるか・上位版
+  known: Object.fromEntries(actions.filter((a) => a.isPlayerAction !== false).map((a) => [a.id, [a.name.ja, a.jobs?.includes(JOB) ? 1 : 0]])),
+  upgrade,
+  jobSet: JOB_SET,
+  buttonsAll,
   unplaced,
   replaceGroups: Object.fromEntries(Object.entries(replaceGroups).filter(([b]) => used.has(Number(b)))),
   // 変化先（本来ホットバーに登録できないアクション）がホットバーに直接置かれていたら、そのグループは「変化させない」設定と推定する（INPUT_HUD §5.4）

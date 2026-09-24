@@ -26,14 +26,15 @@ for (const rel of icons) {
 data = data.replaceAll('"../public/icons/', '"icons/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
-for (const f of ['mock.js', 'mock.css']) copyFileSync(join(root, 'mock', f), join(out, f));
+for (const f of ['mock.js', 'mock.css', 'cfg-parse.js']) copyFileSync(join(root, 'mock', f), join(out, f));
 
 const commit = process.env.GITHUB_SHA?.slice(0, 7) ?? 'local';
 const html = readFileSync(join(root, 'mock/index.html'), 'utf8')
   .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">')
   .replace('<link rel="stylesheet" href="mock.css">', `<link rel="stylesheet" href="mock.css?v=${commit}">`)
   .replace('<script src="mock-data.js"></script>', `<script src="mock-data.js?v=${commit}"></script>`)
-  .replace('<script src="mock.js"></script>', `<script src="mock.js?v=${commit}"></script>`);
+  .replace('<script src="mock.js"></script>', `<script src="mock.js?v=${commit}"></script>`)
+  .replace('<script src="cfg-parse.js"></script>', `<script src="cfg-parse.js?v=${commit}"></script>`);
 writeFileSync(join(out, 'index.html'), html);
 writeFileSync(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 

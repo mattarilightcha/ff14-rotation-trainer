@@ -57,7 +57,7 @@
   for (const [base, ts] of Object.entries(GROUPS)) for (const t of ts) (TARGET_BASE[t] ??= []).push(Number(base));
   const split = Object.fromEntries((D.splitDetected ?? []).map((b) => [b, true]));
   // バーごとに「ジョブ専用 / 共有」のどちらを使うか（CFG-08 未解読のため既定は推定。画面で切り替え可）
-  const barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
+  let barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
 
   const STATUS = {
     fugetsu: { name: '風月', tracked: true },
@@ -384,6 +384,7 @@
   }
 
   // ---------------- 描画 ----------------
+  let mode = 'hud';
   const slotEls = [];
   const padMap = new Map();
   const iconOf = (id) => A[id]?.icon;
@@ -394,6 +395,7 @@
     if (!cell) { el.classList.add('empty'); return el; }
     if (cell.kind === 'other') { el.classList.add('empty', 'other'); el.title = `アクション以外（種類 ${cell.type}）`; return el; }
     if (cell.kind === 'missing') { el.classList.add('empty', 'missing'); el.title = `今は存在しないアクション（ID ${cell.id}）`; return el; }
+    if (cell.kind === 'foreign') { el.classList.add('empty', 'foreign'); el.dataset.ch = cell.name.slice(0, 1); el.title = `${cell.name}（このジョブでは使えないアクション）`; if (keyLabel) el.insertAdjacentHTML('beforeend', `<div class="key">${keyLabel}</div>`); return el; }
     el.innerHTML = `<img alt=""><div class="cd"></div><div class="frame"></div><div class="num"></div><div class="chg"></div>${keyLabel ? `<div class="key">${keyLabel}</div>` : ''}`;
     const rec = { el, base: cell.id, img: el.querySelector('img'), cd: el.querySelector('.cd'), num: el.querySelector('.num'), chg: el.querySelector('.chg'), shown: null, wasCd: false };
     el.addEventListener('pointerdown', (e) => { e.preventDefault(); pressFx(el); press(cell.id, 'pointer'); });
@@ -408,6 +410,20 @@
   // ホットバー → 修飾キー（Ctrl+数字はブラウザのタブ切り替えと衝突するため使わない。INPUT_HUD §3）
   const BAR_MODS = { hb1: '', hb2: 's', hb3: 'a' };
   const keymap = new Map();
+  const keyId = (k) => `${k.shift ? 1 : 0}${k.ctrl ? 1 : 0}${k.alt ? 1 : 0}|${k.code}`;
+  // スロットのキー: 読み込んだ KEYBIND.DAT があればそれ、なければ既定（1〜= / Shift / Alt）
+  function keysOf(bar, i) {
+    const kb = D.keybind?.[bar]?.[i];
+    if (kb) return kb.filter((k) => k.code);
+    const mod = BAR_MODS[bar];
+    if (mod == null || D.keybind) return [];
+    return [{ code: KEY_CODES[i], shift: mod === 's', ctrl: false, alt: mod === 'a', label: `${mod}${KEY_LABELS[i]}` }];
+  }
+  function bindSlot(bar, i, cell, el) {
+    const keys = keysOf(bar, i);
+    if (cell && cell.kind === 'action') for (const k of keys) keymap.set(keyId(k), { base: cell.id, el });
+    return keys.map((k) => k.label).join('/');
+  }
 
   const barCells = (bar) => D.bars[bar]?.[barSource[bar]] ?? D.bars[bar]?.job ?? D.bars[bar]?.shared ?? [];
   let xhbSet = 'xhb1';
@@ -428,9 +444,10 @@
     });
     row.appendChild(lab);
     cells.forEach((cell, i) => {
-      const label = mod == null ? '' : `${mod}${KEY_LABELS[i]}`;
-      row.appendChild(makeSlot(cell, label));
-      if (mod != null && cell && cell.kind === 'action') keymap.set(`${mod}|${KEY_CODES[i]}`, { base: cell.id, el: row.lastChild });
+      const el = makeSlot(cell, '');
+      const label = mod === false ? '' : bindSlot(bar, i, cell, el);
+      if (label && !el.classList.contains('foreign')) el.insertAdjacentHTML('beforeend', `<div class="key${label.length > 3 ? ' long' : ''}">${label}</div>`);
+      row.appendChild(el);
     });
     return row;
   }
@@ -439,23 +456,26 @@
     slotEls.length = 0; keymap.clear(); padMap.clear();
     const wrap = $('hotbars'); wrap.innerHTML = '';
     const side = $('sidebars'); side.innerHTML = '';
-    for (const bar of ['hb1', 'hb2', 'hb3', 'hb4']) wrap.appendChild(barRow(bar, barCells(bar), BAR_MODS[bar], false));
+    const hud = $('hud'); hud.innerHTML = '';
+    if (mode === 'hud' && D.hud) buildHud(hud);
+    else for (const bar of ['hb1', 'hb2', 'hb3', 'hb4']) wrap.appendChild(barRow(bar, barCells(bar), true, false));
     // 変化先を別ボタンにしたグループ
     const splitIds = Object.entries(GROUPS).filter(([b]) => split[b]).flatMap(([, ts]) => ts).filter((v, i, a) => a.indexOf(v) === i);
     if (splitIds.length) {
-      const row = barRow('split', splitIds.map((id) => ({ kind: 'action', id })), null, false);
+      const row = barRow('split', splitIds.map((id) => ({ kind: 'action', id })), false, false);
       row.classList.add('unplaced');
       row.firstChild.textContent = '変化先'; row.firstChild.disabled = true;
       wrap.appendChild(row);
     }
     if (D.unplaced.length) {
-      const row = barRow('unplaced', D.unplaced.map((id) => ({ kind: 'action', id })), null, false);
+      const row = barRow('unplaced', D.unplaced.map((id) => ({ kind: 'action', id })), false, false);
       row.classList.add('unplaced');
       row.firstChild.textContent = '未配置'; row.firstChild.disabled = true;
       wrap.appendChild(row);
     }
     // ホットバー 5〜10（キー割り当ては KEYBIND.DAT 未解読のためなし。クリックで使用）
-    for (const bar of ['hb5', 'hb6', 'hb7', 'hb8', 'hb9', 'hb10']) if (D.bars[bar]) side.appendChild(barRow(bar, barCells(bar), null, true));
+    if (mode !== 'hud') for (const bar of ['hb5', 'hb6', 'hb7', 'hb8', 'hb9', 'hb10']) if (D.bars[bar]) side.appendChild(barRow(bar, barCells(bar), true, true));
+    $('hotbars').classList.toggle('in-hud', mode === 'hud');
 
     // クロスホットバー（スロット順とボタンの対応は仮: 0-3 十字キー上右下左、4-7 △○×□。CFG 未確認）
     const x = $('xhb'); x.innerHTML = '';
@@ -494,6 +514,39 @@
     }
     set.appendChild(pair);
     x.append(tabs, set);
+  }
+
+  // ADDON.DAT のとおりにホットバーを置く（INPUT_HUD §6）。座標は画面に対する %、大きさは 1080 を基準とした px × 倍率
+  const ANCHOR = (a) => [a % 3, Math.floor(a / 3)]; // 0 左上 1 上 2 右上 3 左 4 中央 5 右 6 左下 7 下 8 右下
+  function buildHud(hud) {
+    const W = STAGE.w, H = STAGE.h, k = (H / 1080) * VIEW.hudScale;
+    for (const [bar, h] of Object.entries(D.hud.hotbars)) {
+      if (!h.visible || !D.bars[bar]) continue;
+      const bw = h.w * h.scale * k, bh = h.h * h.scale * k;
+      const [ax, ay] = ANCHOR(h.anchor);
+      const box = document.createElement('div');
+      box.className = 'hud-bar';
+      box.style.left = `${(h.x / 100) * W - (bw * ax) / 2}px`;
+      box.style.top = `${(h.y / 100) * H - (bh * ay) / 2}px`;
+      box.style.width = `${bw}px`; box.style.height = `${bh}px`;
+      const size = Math.min(bw / h.cols, bh / h.rows) * 0.9;
+      box.style.setProperty('--slot', `${size}px`);
+      box.style.gridTemplateColumns = `repeat(${h.cols}, ${size}px)`;
+      box.style.fontSize = `${Math.max(7, size * 0.24)}px`;
+      const lab = document.createElement('button');
+      lab.type = 'button'; lab.className = 'hud-label';
+      lab.textContent = `${bar.slice(2)}${barSource[bar] === 'shared' ? '共' : ''}`;
+      lab.title = `ホットバー ${bar.slice(2)}（${barSource[bar] === 'shared' ? '共有' : 'ジョブ専用'}）。クリックで切り替え`;
+      lab.addEventListener('click', () => { barSource[bar] = barSource[bar] === 'job' ? 'shared' : 'job'; rebuild(); });
+      box.appendChild(lab);
+      barCells(bar).forEach((cell, i) => {
+        const el = makeSlot(cell, '');
+        const label = bindSlot(bar, i, cell, el);
+        if (label && !el.classList.contains('foreign')) el.insertAdjacentHTML('beforeend', `<div class="key${label.length > 3 ? ' long' : ''}">${label}</div>`);
+        box.appendChild(el);
+      });
+      hud.appendChild(box);
+    }
   }
 
   function buildSettings() {
@@ -631,8 +684,7 @@
   window.addEventListener('keydown', (e) => {
     if (e.code === 'Space') { e.preventDefault(); if (!e.repeat) start(); return; }
     if (e.code === 'Escape') { reset(); return; }
-    const mod = e.shiftKey ? 's' : e.altKey ? 'a' : '';
-    const hit = keymap.get(`${mod}|${e.code}`);
+    const hit = keymap.get(keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey }));
     if (hit) {
       e.preventDefault();
       if (!e.repeat) pressFx(hit.el);
@@ -641,15 +693,18 @@
   });
   $('btnStart').addEventListener('click', start);
   $('btnReset').addEventListener('click', reset);
-  let mode = 'keyboard';
+  const MODES = { hud: 'HUD 再現', keyboard: '一覧', pad: 'パッド（クロスホットバー）' };
   function setMode(m) {
+    if (m === 'hud' && !D.hud) m = 'keyboard';
     mode = m;
-    $('hotbars').hidden = m !== 'keyboard';
+    $('hotbars').hidden = m === 'pad';
     $('sidebars').hidden = m !== 'keyboard';
     $('xhb').hidden = m !== 'pad';
-    $('btnMode').textContent = `表示: ${m === 'pad' ? 'パッド（クロスホットバー）' : 'キーボード'}`;
+    $('hud').hidden = m !== 'hud';
+    $('btnMode').textContent = `表示: ${MODES[m]}`;
+    rebuild();
   }
-  $('btnMode').addEventListener('click', () => setMode(mode === 'pad' ? 'keyboard' : 'pad'));
+  $('btnMode').addEventListener('click', () => setMode({ hud: 'keyboard', keyboard: 'pad', pad: 'hud' }[mode]));
   $('btnSettings').addEventListener('click', () => { $('settings').hidden = !$('settings').hidden; });
 
   // ゲームパッド（Gamepad API をフレームごとに読む。INPUT_HUD §4）
@@ -681,10 +736,130 @@
     if (hit) { pressFx(hit.el); press(hit.base, 'gamepad'); }
   }
 
+  // ---------------- 設定ファイルの読み込み（INPUT_HUD §5）----------------
+  // ファイルはブラウザの中だけで解析し、送信しない。保存するのは解析結果（アクション ID・キー・座標）だけ
+  const STORE = 'ff14rt:mock:v1';
+  const VIEW = { gameW: 1920, gameH: 1080, hudScale: 1, source: 'sample' };
+  const SAMPLE = { bars: D.bars, keybind: D.keybind, hud: D.hud };
+  const save = () => {
+    try { localStorage.setItem(STORE, JSON.stringify({ VIEW, imported: IMPORTED })); } catch { /* 保存できなくても動作は続ける */ }
+  };
+  let IMPORTED = null; // { hotbarSets, keybind, hud }
+
+  function toCell(s) {
+    if (!s) return null;
+    if (s.type !== 1) return { kind: 'other', type: s.type };
+    const known = D.known[s.id];
+    if (!known) return { kind: 'missing', id: s.id };
+    let id = s.id;
+    while (D.upgrade[id]) id = D.upgrade[id];
+    if (!A[id]) return { kind: 'foreign', id, name: (D.known[id] ?? known)[0] };
+    return { kind: 'action', id };
+  }
+  function barsFromSets(sets) {
+    const job = sets[D.jobSet] ?? {}, shared = sets[0] ?? {};
+    const out = {};
+    for (const bar of window.CfgParse.BAR_NAMES) {
+      const j = job[bar]?.map(toCell) ?? null, sh = shared[bar]?.map(toCell) ?? null;
+      if (j || sh) out[bar] = { job: j, shared: sh, defaultSource: j ? 'job' : 'shared' };
+    }
+    return out;
+  }
+  function applyData() {
+    D.bars = IMPORTED?.hotbarSets ? barsFromSets(IMPORTED.hotbarSets) : SAMPLE.bars;
+    D.keybind = IMPORTED?.keybind ?? SAMPLE.keybind;
+    D.hud = IMPORTED?.hud ?? SAMPLE.hud;
+    barSource = Object.fromEntries(Object.entries(D.bars).map(([k, v]) => [k, v.defaultSource]));
+    const onBars = new Set(Object.values(D.bars).flatMap((v) => [...(v.job ?? []), ...(v.shared ?? [])]).filter((c) => c?.kind === 'action').map((c) => c.id));
+    D.unplaced = D.buttonsAll.filter((id) => !onBars.has(id));
+    const xs = Object.keys(D.bars).filter((b) => b.startsWith('xhb'));
+    if (!xs.includes(xhbSet)) xhbSet = xs[0] ?? 'xhb1';
+  }
+  function loadSaved() {
+    try {
+      const v = JSON.parse(localStorage.getItem(STORE) ?? 'null');
+      if (v?.VIEW) Object.assign(VIEW, v.VIEW);
+      if (v?.imported) IMPORTED = v.imported;
+    } catch { /* 壊れていたら使わない */ }
+    applyData();
+  }
+
+  async function importFiles(files) {
+    const results = [];
+    const next = { ...(IMPORTED ?? {}) };
+    for (const f of files) {
+      const name = f.name.toUpperCase();
+      try {
+        if (f.size > 4 * 1024 * 1024) throw new Error('大きすぎます');
+        const buf = new Uint8Array(await f.arrayBuffer());
+        if (name === 'HOTBAR.DAT') {
+          next.hotbarSets = window.CfgParse.parseHotbar(buf, [0, D.jobSet]);
+          results.push(`HOTBAR.DAT ✓ 侍のバー ${Object.keys(next.hotbarSets[D.jobSet] ?? {}).length} 本・共有 ${Object.keys(next.hotbarSets[0] ?? {}).length} 本`);
+        } else if (name === 'KEYBIND.DAT') {
+          next.keybind = window.CfgParse.parseKeybind(buf).hotbar;
+          results.push(`KEYBIND.DAT ✓ ホットバー ${Object.keys(next.keybind).length} 本分のキー`);
+        } else if (name === 'ADDON.DAT') {
+          const a = window.CfgParse.parseAddon(buf);
+          next.hud = { hotbars: a.hotbars };
+          results.push(`ADDON.DAT ✓ ホットバー ${Object.keys(a.hotbars).length} 本の配置`);
+        } else if (name === 'FFXIV.CFG') {
+          const c = window.CfgParse.parseCfg(buf);
+          if (c.width && c.height) { VIEW.gameW = c.width; VIEW.gameH = c.height; results.push(`FFXIV.cfg ✓ 解像度 ${c.width}×${c.height}`); }
+          else results.push(`FFXIV.cfg ？ 解像度の項目が見つかりません（候補: ${Object.keys(c.found).join(', ') || 'なし'}）`);
+        } else {
+          results.push(`${f.name} − 読みません（対象は HOTBAR.DAT / KEYBIND.DAT / ADDON.DAT / FFXIV.cfg）`);
+        }
+      } catch (err) {
+        results.push(`${f.name} ✕ ${err.message}`);
+      }
+    }
+    IMPORTED = next;
+    VIEW.source = 'imported';
+    applyData(); save(); syncResInputs(); fit(); setMode(mode);
+    $('importResult').textContent = results.join('\n');
+    addLog('sys', '設定ファイルを読み込みました');
+  }
+
+  function syncResInputs() {
+    $('gameW').value = VIEW.gameW; $('gameH').value = VIEW.gameH;
+    $('hudScale').value = VIEW.hudScale; $('hudScaleNum').textContent = `${Math.round(VIEW.hudScale * 100)}%`;
+    $('importState').textContent = IMPORTED ? '読み込んだ設定を使用中' : 'サンプル（あなたの設定ファイル）を読み込み済みの状態';
+  }
+  function buildImport() {
+    $('btnImport').addEventListener('click', () => { $('importPanel').hidden = !$('importPanel').hidden; });
+    $('fileInput').addEventListener('change', (e) => importFiles([...e.target.files]));
+    stage.addEventListener('dragover', (e) => e.preventDefault());
+    stage.addEventListener('drop', (e) => { e.preventDefault(); importFiles([...e.dataTransfer.files]); });
+    $('btnSample').addEventListener('click', () => {
+      IMPORTED = null; VIEW.source = 'sample';
+      applyData(); save(); syncResInputs(); setMode(mode);
+      $('importResult').textContent = 'サンプルに戻しました';
+    });
+    const onRes = () => {
+      const w = Number($('gameW').value), h = Number($('gameH').value);
+      if (w >= 640 && h >= 360) { VIEW.gameW = w; VIEW.gameH = h; }
+      VIEW.hudScale = Number($('hudScale').value);
+      $('hudScaleNum').textContent = `${Math.round(VIEW.hudScale * 100)}%`;
+      save(); fit(); rebuild();
+    };
+    ['gameW', 'gameH', 'hudScale'].forEach((id) => $(id).addEventListener('input', onRes));
+    $('btnScreenRes').addEventListener('click', () => {
+      VIEW.gameW = Math.round(screen.width * devicePixelRatio); VIEW.gameH = Math.round(screen.height * devicePixelRatio);
+      syncResInputs(); save(); fit(); rebuild();
+    });
+    syncResInputs();
+  }
+
   // ---------------- ループと拡大縮小 ----------------
+  // 画面の大きさ: ゲームの解像度（設定または FFXIV.cfg）の縦横比で舞台を作り、ブラウザの表示領域に合わせて拡大縮小する
+  const STAGE = { w: 1280, h: 720 };
   function fit() {
-    const s = Math.min(innerWidth / 1280, innerHeight / 720);
+    STAGE.h = Math.round((1280 * VIEW.gameH) / VIEW.gameW);
+    stage.style.height = `${STAGE.h}px`;
+    const s = Math.min(innerWidth / STAGE.w, innerHeight / STAGE.h);
     stage.style.transform = `scale(${s})`;
+    const info = $('resInfo');
+    if (info) info.textContent = `PC の画面 ${screen.width}×${screen.height}（拡大率 ${devicePixelRatio}）/ ブラウザの表示 ${innerWidth}×${innerHeight} / 表示倍率 ${(s * 100).toFixed(0)}%`;
   }
   window.addEventListener('resize', fit);
   document.addEventListener('visibilitychange', () => {
@@ -703,9 +878,10 @@
 
   $('jobIcon').src = D.job.icon;
   reset();
-  rebuild();
+  loadSaved();
   buildSettings();
-  setMode('keyboard');
+  buildImport();
   fit();
+  setMode('hud');
   requestAnimationFrame(loop);
 })();

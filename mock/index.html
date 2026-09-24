@@ -61,6 +61,7 @@
     <!-- ホットバー -->
     <section class="hotbars" id="hotbars" aria-label="ホットバー"></section>
     <section class="sidebars" id="sidebars" aria-label="ホットバー 5〜10"></section>
+    <section class="hud" id="hud" aria-label="ホットバー（HUD 再現）"></section>
     <section class="xhb" id="xhb" aria-label="クロスホットバー" hidden></section>
     <div class="gcd-strip" id="gcdStrip" title="GCD"><div id="gcdFill"></div></div>
 
@@ -69,10 +70,27 @@
       <button id="btnStart" type="button">開始 <kbd>Space</kbd></button>
       <button id="btnReset" type="button">リセット <kbd>Esc</kbd></button>
       <button id="btnMode" type="button">表示: キーボード</button>
+      <button id="btnImport" type="button">設定ファイルを読み込む…</button>
       <button id="btnSettings" type="button">アクションの変化…</button>
     </div>
 
     <section class="win settings" id="settings" hidden aria-label="設定"></section>
+
+    <!-- 設定ファイルの読み込みと画面の大きさ -->
+    <section class="win settings import" id="importPanel" hidden aria-label="設定ファイルの読み込み">
+      <div class="win-title">設定ファイルの読み込み</div>
+      <div id="importState" class="state"></div>
+      <label class="file">ファイルを選ぶ（複数可）<input type="file" id="fileInput" multiple accept=".dat,.DAT,.cfg"></label>
+      <div class="note">対象: <b>HOTBAR.DAT</b>（ホットバーの中身）・<b>KEYBIND.DAT</b>（キー）・<b>ADDON.DAT</b>（HUD の配置）・<b>FFXIV.cfg</b>（解像度）。画面にドラッグしても読み込めます。<br>場所: ドキュメント\My Games\FINAL FANTASY XIV - A Realm Reborn\FFXIV_CHR…<br>ファイルはこのブラウザの中だけで読み取り、どこにも送信しません。</div>
+      <pre id="importResult"></pre>
+      <button type="button" id="btnSample">サンプルに戻す</button>
+      <div class="win-title" style="margin-top:10px">画面の大きさ</div>
+      <div id="resInfo" class="note"></div>
+      <div class="res">ゲームの解像度 <input id="gameW" type="number" min="640" step="1"> × <input id="gameH" type="number" min="360" step="1">
+        <button type="button" id="btnScreenRes">この PC の画面に合わせる</button></div>
+      <div class="res">HUD の大きさ <input id="hudScale" type="range" min="0.5" max="2" step="0.05"> <span id="hudScaleNum"></span></div>
+      <div class="note">ゲーム内の「HUD の大きさ」設定に合わせて調整してください（ゲーム側の設定値の読み取りは未対応）。</div>
+    </section>
 
     <!-- 結果 -->
     <section class="win result" id="result" hidden aria-label="結果"></section>
@@ -83,6 +101,7 @@
     <footer class="notice">UI モック（判定は簡易・一部の値は仮） / 非公式ファンツール / (C) SQUARE ENIX CO., LTD. All Rights Reserved.</footer>
   </div>
 </div>
+<script src="cfg-parse.js"></script>
 <script src="mock-data.js"></script>
 <script src="mock.js"></script>
 </body>
