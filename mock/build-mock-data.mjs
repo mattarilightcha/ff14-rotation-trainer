@@ -232,7 +232,13 @@ const out = {
   bars,
   keybind: keybind.hotbar,
   move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
-  hud: { hotbars: addon.hotbars, gauges: CfgParse.findGauges(addon.records, gauge.sizes) },
+  hud: {
+    hotbars: addon.hotbars,
+    // ジョブゲージ: 識別値で見つけ、ULD の大きさでどのゲージか決める（見つからなければ大きさだけで探す）
+    gauges: { ...CfgParse.findGauges(addon.records, gauge.sizes), ...CfgParse.jobGaugeElements(addon.records, JOB, gauge.sizes) },
+    // HUD レイアウトで動かせる部品（キャストバー・ターゲット情報・パラメーターバー・ステータス情報・パーティリストなど）
+    elements: CfgParse.hudElements(addon.records),
+  },
   gauge,
   // 与ダメージ上昇のステータス（名前 → %）。説明文から
   dmgUp: parseDamageUp(actions.filter((a) => a.jobs?.includes(JOB))),

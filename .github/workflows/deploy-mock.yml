@@ -11,6 +11,7 @@ on:
       - 'mock/**'
       - 'src/data/ffxiv/**'
       - 'public/icons/**'
+      - 'public/fankit/**'
       - '.github/workflows/deploy-mock.yml'
   workflow_dispatch:
 

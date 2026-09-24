@@ -17,6 +17,13 @@
     tankGap: 1.2, bossSpeed: 4, turn: Math.PI * 2.5,
     regen: 0.05, // 被弾後の回復（毎秒、最大 HP に対して。ヒーラーの回復の代わり）
   };
+  // タンクの腕前（練習用の設定。ゲームの値ではない）: react = 予兆が出てから動き出すまで（ms）、miss = よけ損ねる確率、
+  // wander = 敵の向きがふらつく幅（度）
+  const TANK_SKILL = {
+    good: { react: 250, miss: 0, wander: 0, events: [] },
+    normal: { react: 900, miss: 0.1, wander: 0, events: [0.45, 0.75] },
+    bad: { react: 1700, miss: 0.35, wander: 25, events: [0.2, 0.35, 0.5, 0.62, 0.78, 0.9] },
+  };
   const COLORS = {
     steel: ['#ffffff', '#9fd4ff'], setsu: ['#f0fdff', '#62d2ff'], getsu: ['#f3efff', '#8f7dff'], ka: ['#fff2f8', '#ff78b6'],
     kenki: ['#fff3ea', '#ff5a36'], iai: ['#fffbe9', '#ffc640'], namikiri: ['#f2ffff', '#4fe3ff'], shoha: ['#f6efff', '#b070ff'],
@@ -53,8 +60,9 @@
   const boss = { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null };
   // タンクは敵の斜め前（真上だと敵の体に隠れて見えないため、少し左に寄せる）
   const TANK_ANGLE = -Math.PI / 2 - 0.55;
-  const tank = { x: 0, y: -6.2, angle: TANK_ANGLE, face: Math.PI / 2, walkT: 0, moving: false, atkT: 0, flash: 0 };
-  let opts = { tank: true, mech: 'normal', guide: true, seed: 1, durationMs: 120000 };
+  const tank = { x: 0, y: -6.2, angle: TANK_ANGLE, face: Math.PI / 2, walkT: 0, moving: false, atkT: 0, flash: 0, hp: 1, hurt: 0, wanderT: 0 };
+  let opts = { tank: true, mech: 'normal', guide: true, seed: 1, durationMs: 120000, tankSkill: 'good' };
+  let rndTank = Math.random;
   let schedule = [], telegraphs = [], fx = [], parts = [];
   let castGlow = null, shake = 0, guideNeed = null;
   const handlers = {};
@@ -95,8 +103,8 @@
       out.push({ t, kind, cast: cfg.cast, side: rnd() < 0.5 ? 'left' : 'right', r1: rnd(), r2: rnd() });
     }
     if (opts.tank) {
-      // タンクが敵の向きを変える・移動させる（方向指定の取り直しの練習）
-      const frac = opts.mech === 'easy' ? [0.5] : [0.33, 0.52, 0.72, 0.88];
+      // タンクが敵の向きを変える・移動させる（腕前が「上手」ならしない。方向指定の取り直しの練習）
+      const frac = (TANK_SKILL[opts.tankSkill] ?? TANK_SKILL.good).events;
       frac.forEach((f, i) => out.push({ t: Math.round(opts.durationMs * f), kind: i % 2 ? 'relocate' : 'turn', r1: rnd(), r2: rnd() }));
     }
     return out.sort((a, b) => a.t - b.t);
@@ -106,7 +114,9 @@
     Object.assign(opts, o ?? {});
     Object.assign(player, { x: 0, y: 3.8, face: -Math.PI / 2, mx: 0, my: 0, moving: false, walkT: 0, hp: 1, down: 0, jumpT: -1, hurt: 0, trail: [] });
     Object.assign(boss, { x: 0, y: -2, face: -Math.PI / 2, flash: 0, goal: null });
-    Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, atkT: 0, flash: 0 });
+    Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, atkT: 0, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0 });
+    boss.dead = 0;
+    rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
     placeTank(true);
     if (!opts.tank) boss.face = Math.PI / 2;
     cam.x = player.x; cam.y = player.y - 2;
@@ -160,18 +170,34 @@
       const d = dist(boss, player);
       if (d > POL.hitbox + 1.8) { const s = Math.min(d - POL.hitbox - 1.8, POL.bossSpeed * dt); boss.x += ((player.x - boss.x) / d) * s; boss.y += ((player.y - boss.y) / d) * s; }
     }
+    // 向きのある技（扇・直線・半面）を詠唱している間は、敵はその向きのまま
+    const lock = telegraphs.find((tg) => !tg.done && tg.lockFace && simT >= tg.start);
     if (opts.tank) {
-      const goal = placeTank(false);
+      const skill = TANK_SKILL[opts.tankSkill] ?? TANK_SKILL.good;
+      // 下手なタンクは、敵の向きがふらつく
+      if (skill.wander && live && phase === 'combat') {
+        tank.wanderT -= dt;
+        if (tank.wanderT <= 0) { tank.wanderT = 3 + rndTank() * 4; tank.angle += ((rndTank() * 2 - 1) * skill.wander * Math.PI) / 180; }
+      }
+      let goal = placeTank(false);
+      // 範囲攻撃をよける: 立ち位置が、まだ発動していない予兆の中なら、近くの安全な所へ（近接の距離と敵の向きはなるべく保つ）
+      const threat = telegraphs.find((tg) => !tg.done && !tg.tankMiss && simT >= tg.start + skill.react && (!tg.follow || tg.placed) && inside(tg, goal));
+      if (threat) goal = safeSpot(goal) ?? goal;
       const d = dist(tank, goal);
       tank.moving = d > 0.15;
       if (tank.moving) { const s = Math.min(d, POL.run * dt); tank.x += ((goal.x - tank.x) / d) * s; tank.y += ((goal.y - tank.y) / d) * s; tank.walkT += dt; }
       tank.face = Math.atan2(boss.y - tank.y, boss.x - tank.x);
-      turnBossTo(Math.atan2(tank.y - boss.y, tank.x - boss.x), dt);
+      if (lock) turnBossTo(lock.dir, dt);
+      else turnBossTo(Math.atan2(tank.y - boss.y, tank.x - boss.x), dt);
+      if (live) tank.hp = Math.min(1, tank.hp + POL.regen * 1.5 * dt);
       // 敵の通常攻撃（見た目だけ）
-      if (live && phase === 'combat') { tank.atkT -= dt; if (tank.atkT <= 0) { tank.atkT = 2.8; tank.flash = 1; addArc(tank, COLORS.kenki, 0.6, 5); } }
+      if (live && phase === 'combat' && !boss.dead) { tank.atkT -= dt; if (tank.atkT <= 0) { tank.atkT = 2.8; tank.flash = 1; addArc(tank, COLORS.kenki, 0.6, 5); } }
+    } else if (lock) {
+      turnBossTo(lock.dir, dt);
     } else {
       turnBossTo(Math.atan2(player.y - boss.y, player.x - boss.x), dt);
     }
+    tank.hurt = Math.max(0, tank.hurt - dt * 2.5);
     tank.flash = Math.max(0, tank.flash - dt * 4);
     boss.flash = Math.max(0, boss.flash - dt * 5);
 
@@ -192,6 +218,25 @@
     shake = Math.max(0, shake - dt * 18);
   }
 
+  // タンクがよける先: 敵のまわりの輪の上から、予兆の外で、今の立ち位置に近く、敵の向きが変わりにくく、自分（侍）の方へ敵を向けない所
+  function safeSpot(home) {
+    const homeAng = Math.atan2(home.y - boss.y, home.x - boss.x);
+    const pAng = Math.atan2(player.y - boss.y, player.x - boss.x);
+    let best = null, bestScore = Infinity;
+    for (const r of [POL.hitbox + 0.9, POL.hitbox + 1.6, POL.hitbox + 2.6, 7, 9, 11, 13.5]) {
+      for (let k = -12; k <= 12; k++) {
+        const a = homeAng + (k * Math.PI) / 12;
+        const q = { x: boss.x + Math.cos(a) * r, y: boss.y + Math.sin(a) * r };
+        if (Math.hypot(q.x, q.y) > ARENA_R - 1) continue;
+        if (telegraphs.some((tg) => !tg.done && (!tg.follow || tg.placed) && inside(tg, q))) continue;
+        const faceP = Math.abs(angDiff(a, pAng)) < Math.PI / 3 ? 6 : 0; // 敵を自分の方へ向けない
+        const score = dist(q, tank) + (r > POL.hitbox + 3 ? 3 : 0) + Math.abs(angDiff(a, homeAng)) * 2.2 + faceP;
+        if (score < bestScore) { bestScore = score; best = q; }
+      }
+    }
+    return best;
+  }
+
   function turnBossTo(target, dt) {
     const d = angDiff(target, boss.face);
     const s = Math.min(Math.abs(d), POL.turn * dt);
@@ -204,13 +249,13 @@
     switch (m.kind) {
       case 'circle': Object.assign(tg, { c: { x: boss.x, y: boss.y }, r: POL.hitbox + 7 }); break;
       case 'donut': Object.assign(tg, { c: { x: boss.x, y: boss.y }, inner: POL.hitbox + 2.2, outer: 34 }); break;
-      case 'cleave': Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir: boss.face, half: Math.PI / 3, r: 24 }); break;
+      case 'cleave': Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir: boss.face, half: Math.PI / 3, r: 24, lockFace: true }); break;
       case 'line': {
         const dir = Math.atan2(player.y - boss.y, player.x - boss.x);
-        Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir, w: 6, len: 44, back: 4 });
+        Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir, w: 6, len: 44, back: 4, lockFace: true });
         break;
       }
-      case 'half': Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir: boss.face, side: m.side }); break;
+      case 'half': Object.assign(tg, { c: { x: boss.x, y: boss.y }, dir: boss.face, side: m.side, lockFace: true }); break;
       case 'puddle': {
         // 足元に 3 回。1 つ目はすぐ、以降は 1.2 秒ごとに、その時点の自分の位置へ
         for (let i = 0; i < 3; i++) {
@@ -233,6 +278,7 @@
       }
       default: return;
     }
+    tg.tankMiss = rndTank() < (TANK_SKILL[opts.tankSkill] ?? TANK_SKILL.good).miss;
     telegraphs.push(tg);
     emit('mech', tg.name, MECH[m.kind].hint, cast);
   }
@@ -257,11 +303,13 @@
 
   function resolve(tg, simT) {
     tg.done = true;
+    emit('boom', tg.kind);
     // 見た目: はじける
     for (let i = 0; i < 26; i++) {
       const p = samplePoint(tg);
       if (p) parts.push({ x: p.x, y: p.y, vx: rand(-2, 2), vy: rand(-5, -1), life: rand(0.25, 0.6), max: 0.6, col: i % 3 ? '#ffb46a' : '#fff1c9', size: 1 });
     }
+    if (opts.tank && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - (tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; flyText('被弾', 'hurt tank', tank, 18); }
     if (player.down > 0 || !inside(tg, player)) return;
     const dmg = tg.puddle ? 0.3 : 0.45;
     player.hp -= dmg; player.hurt = 1;
@@ -338,7 +386,7 @@
         parts.push({ x: boss.x + rand(-0.8, 0.8), y: boss.y - 1.6 + rand(-0.8, 0.6), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp * 0.7, life: rand(0.2, 0.45), max: 0.45, col: i % 3 ? col[1] : col[0], size: info.crit ? 2 : 1, drag: 5 });
       }
       if (!reduce && (info.crit || (info.power ?? 1) > 1.3)) shake = Math.max(shake, info.crit ? 4 : 2.5);
-      if (info.name) flyText(info.name, info.crit ? 'crit' : info.combo ? 'combo' : '', boss, 40, col);
+      if (info.name) flyText(info.name, info.crit ? 'crit' : info.combo ? 'combo' : '', boss, 40, col, info.dmg);
       if (info.pos) flyText(info.pos.ok ? `${info.pos.need === 'rear' ? '背面' : '側面'} ○` : '方向指定ミス', info.pos.ok ? 'pos-ok' : 'pos-ng', boss, 24);
     }, delay);
   }
@@ -350,18 +398,40 @@
 
   function castStart(color, ms) { castGlow = { col: COLORS[color] ?? COLORS.iai, t: 0, dur: ms }; }
   function castEnd() { castGlow = null; }
-  function dotTick() {
+  function dotTick(dmg) {
     for (let i = 0; i < 5; i++) parts.push({ x: boss.x + rand(-1, 1), y: boss.y - rand(0.5, 3), vx: rand(-1, 1), vy: rand(-3, -1), life: 0.4, max: 0.4, col: '#ff4a3c', size: 1 });
+    if (dmg) flyText('', 'dot', boss, 26, null, dmg);
+  }
+  // 撃破: 敵が崩れて消える
+  function kill() {
+    if (boss.dead) return;
+    boss.dead = 1;
+    for (let i = 0; i < 60; i++) {
+      const a = rand(0, Math.PI * 2), sp = rand(2, 9);
+      parts.push({ x: boss.x + rand(-1.2, 1.2), y: boss.y - rand(0, 4), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp * 0.7 - 2, life: rand(0.5, 1.2), max: 1.2, col: i % 3 ? '#ffd28a' : '#fff4d8', size: i % 4 ? 1 : 2, drag: 2 });
+    }
+    flyText('撃破', 'kill', boss, 44);
+    telegraphs = []; schedule = [];
   }
 
-  function flyText(text, cls, at, lift = 30, col) {
+  let flyStack = [];
+  function flyText(text, cls, at, lift = 30, col, dmg) {
     if (!overlay) return;
     const s = toStage(at.x, at.y);
     const el = document.createElement('div');
     el.className = `fly ${cls}`;
-    el.textContent = text;
-    el.style.left = `${s.x + rand(-18, 18)}px`;
-    el.style.top = `${s.y - lift * PX * 0.6 - 40}px`;
+    if (dmg) {
+      // 技名とダメージを 1 行に（ゲームのフライテキストと同じ並び）
+      if (text) { const n = document.createElement('span'); n.className = 'fn'; n.textContent = text; el.appendChild(n); }
+      const d = document.createElement('span'); d.className = 'fd'; d.textContent = Math.round(dmg).toLocaleString('ja-JP'); el.appendChild(d);
+    } else el.textContent = text;
+    // 同じ場所に続けて出るときは、前の文字の上に積む（ゲームのフライテキストと同じ）
+    const now = performance.now();
+    flyStack = flyStack.filter((f) => now - f.t < 650 && f.el.isConnected);
+    const same = flyStack.filter((f) => f.at === at).length;
+    el.style.left = `${s.x + (at === boss ? 54 : 0) + rand(-6, 6)}px`;
+    el.style.top = `${s.y - lift * PX * 0.6 - 40 - same * 26}px`;
+    flyStack.push({ el, at, t: now });
     if (col) el.style.setProperty('--glow', col[1]);
     el.addEventListener('animationend', () => el.remove());
     overlay.appendChild(el);
@@ -395,7 +465,7 @@
     for (const t of player.trail) drawSprite(SPR.player[t.dir][0], player.x, player.y, 0, t.life * 2.4);
     for (const e of ents) {
       if (e.kind === 'boss') drawBoss();
-      else if (e.kind === 'tank') drawChar(SPR.tank, tank, tank.moving, tank.walkT, 0, tank.flash * 0.6, 0);
+      else if (e.kind === 'tank') drawChar(SPR.tank, tank, tank.moving, tank.walkT, 0, tank.flash * 0.6, tank.hurt);
       else drawChar(SPR.player, player, player.moving, player.walkT, jumpOffset(), 0, player.hurt, player.down > 0);
     }
 
@@ -461,6 +531,14 @@
 
   function drawBoss() {
     const dir = dirOf(boss.face);
+    if (boss.dead) {
+      boss.dead = Math.min(2, boss.dead + frameDt / 900);
+      const k = boss.dead - 1;
+      if (k >= 1) return;
+      drawSprite(SPR.boss[dir], boss.x, boss.y, -k * 10, 1 - k);
+      drawSprite(SPR.boss.flash[dir], boss.x, boss.y, -k * 10, (1 - k) * 0.8);
+      return;
+    }
     drawSprite(SPR.boss[dir], boss.x, boss.y, 0);
     if (boss.flash > 0.02) drawSprite(SPR.boss.flash[dir], boss.x, boss.y, 0, boss.flash * 0.85);
   }
@@ -594,10 +672,12 @@
     init, resize, reset, setInput, jump, update, render,
     edgeDistance, positional, faceTarget, dashToTarget, backstep, bossCast,
     isMoving: () => player.moving, isDown: () => player.down > 0, hp: () => player.hp,
-    tankHp: () => (opts.tank ? 1 - tank.flash * 0.06 : 0), // タンクの HP（見た目だけ。敵の通常攻撃で少し揺れる）
+    tankHp: () => (opts.tank ? Math.max(0, tank.hp - tank.flash * 0.04) : 0), // タンクの HP（範囲攻撃で減り、少しずつ戻る。通常攻撃で少し揺れる）
     setGuide: (need) => { guideNeed = need; },
-    play, castStart, castEnd, dotTick, flyText: (t, cls) => flyText(t, cls, player, 22),
+    play, castStart, castEnd, dotTick, kill, flyText: (t, cls) => flyText(t, cls, player, 22),
     on: (ev, fn) => { handlers[ev] = fn; },
     options: () => ({ ...opts }), POL, MECH,
+    // 動作確認用
+    debug: () => ({ tankHits: tank.hits, tank: { x: tank.x, y: tank.y }, boss: { x: boss.x, y: boss.y, face: boss.face }, telegraphs: telegraphs.length }),
   };
 })();

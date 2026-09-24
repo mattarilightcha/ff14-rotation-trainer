@@ -103,6 +103,11 @@
     arrows: true, // 矢印キーでも移動
     deadzone: Math.min(0.9, Math.max(0.05, D.display?.deadArea ?? 0.25)), // パッドのスティックの遊び（FFXIV.cfg の DeadArea）
     gaugeSimple: false, // ジョブゲージのシンプル表示
+    hpMode: 'inf', // 敵の体力: inf 無限（木人） / set 決めた値 / last 前回の与ダメージと同じ
+    hp: 60000, // hpMode が set のときの体力（ダメージの単位）
+    dmgScale: 1, // ダメージ = 威力 × この値（1 なら威力そのまま）
+    lastDamage: 0, // 前回の与ダメージ（hpMode が last のとき使う）
+    tankSkill: 'good', // タンクの腕前: good 上手 / normal ふつう / bad 下手
   };
 
   // ---------------- 状態 ----------------
@@ -122,8 +127,12 @@
       },
       // 結果画面のタイムライン用の記録
       tl: { gcd: [], ogcd: [], gaps: [], buffs: { fugetsu: [], fuka: [], higanbana: [] }, move: [], hits: [], pos: [] },
-      dotNext: null, hinted: false, moving: false, mech: null,
+      hinted: false, moving: false, mech: null,
+      // ダメージと敵の体力（ダメージ = 説明文の威力 × 与ダメージ上昇 × OPT.dmgScale）
+      events: [], dmg: 0, pot: 0, dot: null, killT: null,
+      hpMax: OPT.hpMode === 'set' ? OPT.hp : OPT.hpMode === 'last' ? OPT.lastDamage : 0,
     };
+    S.hp = S.hpMax;
     $('log').innerHTML = '';
     $('result').hidden = true;
     Arena.reset(arenaOpts());
@@ -133,7 +142,7 @@
     $('startOverlay').hidden = false;
     addLog('sys', `Space（パッドは Start）で開始。移動 ${keyLabel(D.move?.fore)}${keyLabel(D.move?.left)}${keyLabel(D.move?.back)}${keyLabel(D.move?.right)}・ジャンプ ${keyLabel(D.move?.jump) || 'なし'}`);
   }
-  const arenaOpts = () => ({ tank: OPT.tank, mech: OPT.mech, guide: OPT.guide, seed: OPT.seed, durationMs: OPT.durationMs });
+  const arenaOpts = () => ({ tank: OPT.tank, mech: OPT.mech, guide: OPT.guide, seed: OPT.seed, durationMs: OPT.durationMs, tankSkill: OPT.tankSkill });
   const live = () => S.phase === 'countdown' || S.phase === 'combat';
 
   const fmt = (ms) => {
@@ -150,6 +159,41 @@
     const log = $('log');
     log.prepend(li);
     while (log.children.length > 60) log.lastChild.remove();
+  }
+
+  // ---------------- 行動の記録（結果の CSV・ミスの一覧に使う）----------------
+  const senStr = () => (S.sen.setsu ? '雪' : '') + (S.sen.getsu ? '月' : '') + (S.sen.ka ? '花' : '') || '-';
+  function ev(kind, o = {}) {
+    S.events.push({ t: S.t, kind, kenki: S.kenki, sen: senStr(), med: S.med, hp: S.hpMax ? Math.round(S.hp) : '', pos: POS_JA[Arena.positional()], dist: +Arena.edgeDistance().toFixed(1), ...o });
+  }
+
+  // ---------------- ダメージ（説明文の威力。クリティカル・ダイレクトヒットは入れない）----------------
+  const statusByName = Object.fromEntries(Object.entries(STATUS).map(([k, v]) => [v.name, k]));
+  const DMG_UP = Object.entries(D.dmgUp ?? {}); // [ステータス名, %]（例: 風月 13）
+  function dmgMult() {
+    let m = 1;
+    for (const [name, pctUp] of DMG_UP) { const k = statusByName[name]; if (k && has(k)) m *= 1 + pctUp / 100; }
+    return m;
+  }
+  // 威力: 通常・コンボ時・背面／側面（方向指定が成功したとき）・「〜時威力」（そのステータス中）
+  function potencyOf(a, ok, pos) {
+    const p = a.pot;
+    if (!p || p.base == null) return 0;
+    const combo = ok && a.comboFrom.length > 0;
+    let v = combo && p.combo != null ? p.combo : p.base;
+    if (pos?.ok && pos.need === 'rear') v = combo ? p.comboRear ?? v : p.rear ?? v;
+    if (pos?.ok && pos.need === 'flank') v = combo ? p.comboFlank ?? v : p.flank ?? v;
+    for (const c of p.cond ?? []) { const k = statusByName[c.status]; if (k && has(k)) v = c.potency; }
+    return v;
+  }
+  function dealDamage(potency, mult = dmgMult()) {
+    const dmg = Math.round(potency * mult * OPT.dmgScale);
+    S.pot += potency; S.dmg += dmg;
+    if (S.hpMax > 0 && S.killT == null) {
+      S.hp = Math.max(0, S.hp - dmg);
+      if (S.hp <= 0) S.killT = S.t;
+    }
+    return dmg;
   }
 
   // ---------------- ルール ----------------
@@ -240,6 +284,7 @@
       const over = v - POLICY.kenkiMax;
       S.stats.kenkiOver += over;
       addLog('warn', `剣気が ${over} あふれました`);
+      ev('ミス', { result: 'あふれ', note: `剣気が ${over} あふれた` });
     }
     S.kenki = Math.max(0, Math.min(POLICY.kenkiMax, v));
   }
@@ -269,18 +314,18 @@
     const meikyo = has('meikyo');
     if (a.comboFrom.length) {
       const ok = meikyo || (S.combo != null && a.comboFrom.includes(S.combo) && at <= S.comboUntil);
-      if (!ok) { S.stats.comboBreaks++; addLog('ng', `コンボ切れ: ${a.name}の前段がありません`); }
+      if (!ok) { S.stats.comboBreaks++; addLog('ng', `コンボ切れ: ${a.name}の前段がありません`); ev('ミス', { action: a.name, result: 'コンボ切れ', note: '前段がない' }); }
       S.combo = ok && COMBO_HAS_NEXT.has(a.id) ? a.id : null;
       S.comboUntil = at + POLICY.comboWindowMs;
       return ok;
     }
     if (COMBO_STARTERS.has(a.id)) {
-      if (S.combo != null) { S.stats.comboBreaks++; addLog('ng', 'コンボ切れ: 途中で始動技を使いました'); }
+      if (S.combo != null) { S.stats.comboBreaks++; addLog('ng', 'コンボ切れ: 途中で始動技を使いました'); ev('ミス', { action: a.name, result: 'コンボ切れ', note: '途中で始動技' }); }
       S.combo = a.id; S.comboUntil = at + POLICY.comboWindowMs;
       return true;
     }
     if (!a.preservesCombo && S.combo != null) {
-      S.stats.comboBreaks++; addLog('ng', `コンボ切れ: ${a.name}でコンボが途切れました`);
+      S.stats.comboBreaks++; addLog('ng', `コンボ切れ: ${a.name}でコンボが途切れました`); ev('ミス', { action: a.name, result: 'コンボ切れ', note: 'コンボ以外のウェポンスキル' });
       S.combo = null;
     }
     return false;
@@ -342,24 +387,33 @@
     const st = S.stats.pos[a.positional];
     st.n++; if (ok) st.ok++;
     S.tl.pos.push({ t: S.t, ok });
+    if (!ok) ev('ミス', { action: a.name, result: '方向指定ミス', note: `${POS_JA[a.positional]}から（今は${POS_JA[got]}）` });
     addLog(ok ? 'ok' : 'ng', ok ? `方向指定 ○ ${a.name}（${tn ? 'トゥルーノース' : POS_JA[got]}）` : `方向指定ミス: ${a.name}は${POS_JA[a.positional]}から（今は${POS_JA[got]}）`);
     return { need: a.positional, ok };
   }
   function whiff(a) {
     S.stats.whiffs++;
+    ev('使用', { action: a.name, result: '空振り', note: `範囲 ${a.effectRange}m に敵がいない` });
     if (a.isGcd && S.combo != null && !a.preservesCombo) S.combo = null;
     addLog('ng', `${a.name}: 範囲内に敵がいません（空振り。範囲 ${a.effectRange}m）`);
   }
   // 当たったあとの共通処理（効果・方向指定・移動技・演出）
   function land(id, ok) {
     const a = A[id];
-    if (!reaches(a)) { whiff(a); playFx(id, false, null, false); return; }
-    effects(id, ok);
+    if (!reaches(a)) { whiff(a); playFx(id, false, null, false, 0); return; }
     const pos = positionalOf(a);
-    addLog('ok', `${a.name}${ok && a.comboFrom.length ? '（コンボ）' : ''}`);
+    // ダメージは効果（バフの付与・消費）の前に計算する（燕飛効果アップは使うと消える、風月は付いてから効く）
+    const potency = potencyOf(a, ok, pos);
+    const mult = dmgMult();
+    const dmg = potency > 0 ? dealDamage(potency, mult) : 0;
+    if (a.pot?.dot) S.dot = { next: S.t + 3000, until: S.t + a.pot.dot.sec * 1000, potency: a.pot.dot.potency, mult, name: a.name };
+    effects(id, ok);
+    const combo = ok && a.comboFrom.length > 0;
+    addLog('ok', `${a.name}${combo ? '（コンボ）' : ''}${dmg ? `  ${dmg.toLocaleString('ja-JP')}` : ''}`);
+    ev('使用', { action: a.name, result: [a.isGcd ? 'GCD' : 'アビリティ', combo ? 'コンボ' : '', pos ? (pos.ok ? '方向指定○' : '方向指定×') : ''].filter(Boolean).join('・'), potency: potency || '', dmg: dmg || '' });
     if (a.dash) { Arena.dashToTarget(); Au?.whoosh(); }
     if (a.backstep) { Arena.backstep(a.backstep); Au?.whoosh(); }
-    playFx(id, ok, pos, true);
+    playFx(id, ok, pos, true, dmg);
   }
 
   function execute(id, at) {
@@ -378,6 +432,8 @@
           if (idle > 20) S.tl.gaps.push({ from: S.gcdEnd + clip, to: at, kind: 'idle' });
           if (clip > 20) addLog('warn', `アビリティの挟みすぎで GCD が ${(clip / 1000).toFixed(2)} 秒遅れました`);
           if (idle > 100) addLog('warn', `GCD が ${(idle / 1000).toFixed(2)} 秒止まりました`);
+          if (clip > 20) ev('ミス', { result: 'クリップ', note: `${(clip / 1000).toFixed(2)} 秒`, gapMs: clip });
+          if (idle > 100) ev('ミス', { result: '止まり', note: `${(idle / 1000).toFixed(2)} 秒`, gapMs: idle });
         }
       } else if (at > 0 && S.phase === 'combat') {
         S.stats.idleMs += at;
@@ -398,6 +454,7 @@
       S.cast = { id, start: at, end: at + ct, ok };
       S.lockUntil = at + ct + POLICY.castLockAfterMs;
       addLog('ok', `${a.name} の詠唱開始`);
+      ev('詠唱開始', { action: a.name });
       Arena.castStart(FX_COLOR[id] ?? 'iai', ct); Au?.cast(ct);
     } else {
       S.lockUntil = at + POLICY.animLockMs;
@@ -424,12 +481,14 @@
     }
     S.stats.interrupts++;
     addLog('ng', `${a.name}の詠唱が中断されました（${why}）`);
+    ev('ミス', { action: a.name, result: '詠唱中断', note: why });
     Au?.error();
   }
 
   function reject(msg, kind) {
     S.stats.rejected++;
     if (kind === 'range') S.stats.outOfRange++;
+    ev('受け付けず', { result: kind === 'range' ? '射程外' : kind === 'moving' ? '移動中' : kind === 'down' ? '戦闘不能' : '', note: msg });
     Au?.error();
     addLog('ng', msg);
   }
@@ -498,14 +557,19 @@
       }
       if (!Arena.isDown() && Arena.edgeDistance() > Arena.POL.melee) S.stats.outRangeMs += dt;
     }
-    // 継続ダメージの演出（3 秒ごと。見た目だけ）
-    if (S.dotNext != null && has('higanbana') && S.t >= S.dotNext) { S.dotNext += 3000; Arena.dotTick(); Au?.dot(); }
+    // 継続ダメージ（3 秒ごと。間隔は仮 GAME-56。付けたときのバフで計算）
+    if (S.dot && S.t >= S.dot.next && S.dot.next <= S.dot.until && S.phase === 'combat') {
+      const dmg = dealDamage(S.dot.potency, S.dot.mult);
+      S.dot.next += 3000;
+      Arena.dotTick(dmg); Au?.dot();
+      ev('継続ダメージ', { action: S.dot.name, potency: S.dot.potency, dmg });
+    }
     // ステータスの期限切れ
     for (const [k, v] of Object.entries(S.st)) {
       if (v.until <= S.t) {
         delete S.st[k];
         const iv = S.tl.buffs[k]; if (iv?.length && iv[iv.length - 1].to == null) iv[iv.length - 1].to = v.until;
-        if (STATUS[k].tracked && S.phase === 'combat') addLog('ng', `${STATUS[k].name}が切れました`);
+        if (STATUS[k].tracked && S.phase === 'combat') { addLog('ng', `${STATUS[k].name}が切れました`); ev('ミス', { result: '効果切れ', note: `${STATUS[k].name}が切れた` }); }
         if (k === 'tsubame') S.lastIai = null;
       }
     }
@@ -513,7 +577,8 @@
     if (S.combo != null && S.t > S.comboUntil) { S.combo = null; S.stats.comboBreaks++; addLog('ng', 'コンボの受付時間が切れました'); }
     // フェーズ
     if (S.phase === 'countdown' && S.t >= 0) { S.phase = 'combat'; addLog('sys', '戦闘開始'); Au?.go(); }
-    if (S.phase === 'combat' && S.t >= OPT.durationMs) finish();
+    if (S.phase === 'combat' && S.killT != null) { Arena.kill(); Au?.kill?.(); finish(true); }
+    else if (S.phase === 'combat' && S.t >= OPT.durationMs) finish(false);
   }
 
   // 敵の技・被弾（arena.js から）
@@ -521,35 +586,55 @@
     if (!S || S.phase !== 'combat') return;
     S.mech = { name, hint, until: S.t + Math.max(castMs, 2600) };
     addLog('warn', `敵の技: ${name}${OPT.hints && hint ? `（${hint}）` : ''}`);
+    ev('敵の技', { action: name, note: hint ?? '' });
     if (castMs > 0) Au?.warn();
   });
   Arena.on('hit', (name) => {
     if (!S) return;
     S.stats.hits++; S.tl.hits.push(S.t);
     addLog('ng', `被弾: ${name}`);
+    ev('ミス', { action: name, result: '被弾' });
     Au?.hurt();
   });
   Arena.on('down', (name) => {
     if (!S) return;
     S.stats.downs++;
+    ev('ミス', { action: name, result: '戦闘不能' });
     if (S.cast) interruptCast('戦闘不能');
     S.queue = null;
     addLog('ng', `戦闘不能: ${name}（3 秒後に起き上がります）`);
   });
   Arena.on('revive', () => { if (S && live()) addLog('sys', '起き上がりました（HP 60%）'); });
+  Arena.on('boom', () => Au?.boom(0.8)); // 敵の範囲攻撃の発動
 
   // ---------------- 結果 ----------------
-  function finish() {
-    S.t = OPT.durationMs;
+  const GCD_COLOR = { setsu: '#7fd6ff', getsu: '#9c90ff', ka: '#ff8fc4', iai: '#ffc640', blood: '#ff7a6a', namikiri: '#4fe3ff' };
+  function finish(killed) {
+    if (S.phase === 'ended') return;
+    const endT = killed ? S.killT : OPT.durationMs;
+    S.t = endT;
     S.phase = 'ended';
     S.cast = null; S.queue = null; Arena.castEnd();
     if (S.gcdEnd != null && S.gcdEnd < S.t) { S.stats.idleMs += S.t - S.gcdEnd; S.tl.gaps.push({ from: S.gcdEnd, to: S.t, kind: 'idle' }); }
     if (S.gcdEnd == null) S.stats.idleMs = S.t;
     for (const iv of [...Object.values(S.tl.buffs), S.tl.move]) if (iv.length && iv[iv.length - 1].to == null) iv[iv.length - 1].to = S.t;
-    const st = S.stats, dur = OPT.durationMs;
+    if (killed) ev('撃破', { note: `撃破時間 ${fmt(endT)}` });
+    OPT.lastDamage = S.dmg;
+    save();
+    const R = buildReport(killed, endT);
+    window.MockResult.show($('result'), R, { onRetry: start, onClose: () => { $('result').hidden = true; }, scale: stageScale });
+    addLog('sys', killed ? `撃破（${fmt(endT)}）` : '戦闘終了');
+  }
+
+  function buildReport(killed, endT) {
+    const st = S.stats, dur = Math.max(1, endT);
     const pct = (ms) => (ms / dur) * 100;
-    const gcdPct = Math.max(0, (1 - (st.idleMs + st.clipMs + st.cutMs) / dur) * 100);
-    const buffPct = (pct(st.uptime.fugetsu) + pct(st.uptime.fuka) + pct(st.uptime.higanbana)) / 3;
+    const sec = (ms) => `${(ms / 1000).toFixed(1)} 秒`;
+    const num = (v) => Math.round(v).toLocaleString('ja-JP');
+    const lossMs = st.idleMs + st.clipMs + st.cutMs;
+    const gcdPct = Math.max(0, (1 - lossMs / dur) * 100);
+    const up = (k) => Math.min(100, pct(st.uptime[k]));
+    const buffPct = (up('fugetsu') + up('fuka') + up('higanbana')) / 3;
     const comboPct = Math.max(0, 100 - st.comboBreaks * 10);
     const overPct = Math.max(0, 100 - st.kenkiOver * 2);
     const posN = st.pos.rear.n + st.pos.flank.n, posOk = st.pos.rear.ok + st.pos.flank.ok;
@@ -559,84 +644,120 @@
     // モックの採点（重みは仮。本実装は docs/SPEC.md §7）
     const score = Math.round(gcdPct * 0.4 + buffPct * 0.15 + comboPct * 0.1 + posPct * 0.15 + dodgePct * 0.1 + overPct * 0.1);
     const grade = score >= 95 ? 'S' : score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : 'D';
-    const metric = (label, text, p) => `<div class="metric"><div class="row"><span>${label}</span><span class="v">${text}</span></div><div class="bar-bg"><div class="bar-fg ${p >= 90 ? '' : p >= 70 ? 'mid' : 'low'}" style="width:${Math.max(2, Math.min(100, p))}%"></div></div></div>`;
     const frac = (o) => (o.n ? `${o.ok}/${o.n}` : '—');
-    const uses = {};
-    for (const e of [...S.tl.gcd, ...S.tl.ogcd]) uses[e.id] = (uses[e.id] ?? 0) + 1;
-    const useHtml = Object.entries(uses).sort((a, b) => b[1] - a[1]).map(([id, n]) => `<span class="use" title="${A[id].name}"><img src="${A[id].icon}" alt="">×${n}</span>`).join('');
-    const r = $('result');
-    r.innerHTML = `
-      <div class="result-head"><div class="grade g-${grade}">${grade}</div>
-        <div><h2>結果（モック採点）</h2><div class="score">総合 ${score} 点 ・ GCD ${st.gcds} 回 ・ 受け付けなかった入力 ${st.rejected} 回（うち射程外 ${st.outOfRange}）</div></div></div>
-      <div class="metrics">
-        ${metric('GCD 稼働率', `${gcdPct.toFixed(1)}%`, gcdPct)}
-        ${metric('クリップ / 止まり / 詠唱中断', `${(st.clipMs / 1000).toFixed(1)} / ${(st.idleMs / 1000).toFixed(1)} / ${(st.cutMs / 1000).toFixed(1)} 秒`, 100 - pct(st.clipMs + st.idleMs + st.cutMs) * 4)}
-        ${metric('方向指定（背面 / 側面）', `${frac(st.pos.rear)} ・ ${frac(st.pos.flank)}`, posPct)}
-        ${metric('移動中の GCD 稼働率', moveGcdPct == null ? 'ほぼ移動なし' : `${moveGcdPct.toFixed(1)}%（移動 ${(st.movingMs / 1000).toFixed(1)} 秒）`, moveGcdPct ?? 100)}
-        ${metric('被弾 / 戦闘不能', OPT.mech === 'off' ? '敵の攻撃なし' : `${st.hits} 回 / ${st.downs} 回`, dodgePct)}
-        ${metric('射程外にいた時間', `${(st.outRangeMs / 1000).toFixed(1)} 秒`, 100 - pct(st.outRangeMs) * 3)}
-        ${metric('風月の維持', `${pct(st.uptime.fugetsu).toFixed(1)}%`, pct(st.uptime.fugetsu))}
-        ${metric('風花の維持', `${pct(st.uptime.fuka).toFixed(1)}%`, pct(st.uptime.fuka))}
-        ${metric('彼岸花の維持', `${pct(st.uptime.higanbana).toFixed(1)}%`, pct(st.uptime.higanbana))}
-        ${metric('コンボ切れ / 空振り', `${st.comboBreaks} 回 / ${st.whiffs} 回`, comboPct)}
-        ${metric('剣気のあふれ', `${st.kenkiOver}`, overPct)}
-        ${metric('詠唱の中断', `${st.interrupts} 回`, 100 - st.interrupts * 20)}
-      </div>
-      <canvas class="timeline" id="tlCanvas"></canvas>
-      <div class="uses">${useHtml}</div>
-      <div class="note">採点の重みは仮です（GCD 40% / バフ・DoT 15% / 方向指定 15% / コンボ 10% / 回避 10% / あふれ 10%）。移動速度・射程・方向指定の角度などは仮の値です（設定 → 練習）。</div>
-      <div class="actions"><button type="button" id="btnRetry">リトライ <kbd>Space</kbd></button><button type="button" id="btnCloseResult">閉じる</button></div>`;
-    r.hidden = false;
-    $('btnRetry').addEventListener('click', start);
-    $('btnCloseResult').addEventListener('click', () => { r.hidden = true; });
-    drawTimeline($('tlCanvas'));
-    addLog('sys', '戦闘終了');
-  }
+    const dps = S.dmg / (dur / 1000), pps = S.pot / (dur / 1000);
 
-  // 結果のタイムライン: GCD（技の色）・止まり（赤）・クリップ（橙）・詠唱中断（紫）・アビリティ・方向指定・バフと DoT・移動・被弾
-  function drawTimeline(cv) {
-    const w = cv.clientWidth || 640, h = cv.clientHeight || 190, dpr = window.devicePixelRatio || 1;
-    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-    const c = cv.getContext('2d');
-    c.scale(dpr, dpr);
-    const L = 60, R = w - 10, dur = OPT.durationMs;
-    const X = (t) => L + (Math.max(0, Math.min(dur, t)) / dur) * (R - L);
-    const lanes = [['GCD', 8, 18], ['アビリティ', 34, 12], ['方向指定', 50, 10], ['風月', 66, 8], ['風花', 78, 8], ['彼岸花', 90, 8], ['移動', 104, 8], ['被弾', 116, 10]];
-    c.font = '10px sans-serif'; c.textBaseline = 'middle';
-    for (const [name, y, hh] of lanes) {
-      c.fillStyle = 'rgba(255,255,255,.04)'; c.fillRect(L, y, R - L, hh);
-      c.fillStyle = '#a9a293'; c.fillText(name, 6, y + hh / 2);
+    // 直すと良いところ（点数への影響が大きい順）
+    const issues = [];
+    const add = (loss, r, title, advice) => issues.push({ loss, rate: r, title, advice });
+    if (gcdPct < 98) add((100 - gcdPct) * 0.4, gcdPct < 90 ? 'bad' : 'ok', `GCD が合計 ${sec(lossMs)} 止まった`, `止まり ${sec(st.idleMs)}・クリップ ${sec(st.clipMs)}・詠唱中断 ${sec(st.cutMs)}。GCD が戻ったらすぐ次のウェポンスキル、アビリティは GCD の間に 2 つまで`);
+    if (posN && posOk < posN) add((100 - posPct) * 0.15, posPct < 80 ? 'bad' : 'ok', `方向指定ミス ${posN - posOk} 回`, `背面 ${frac(st.pos.rear)}・側面 ${frac(st.pos.flank)}。月光は背面、花車は側面。足元の色を見て先に回り込む。間に合わないときはトゥルーノース`);
+    if (st.hits) add(Math.min(100, st.hits * 15 + st.downs * 25) * 0.1, st.downs ? 'bad' : 'ok', `被弾 ${st.hits} 回${st.downs ? `（戦闘不能 ${st.downs} 回）` : ''}`, '予兆が出たらすぐ範囲の外へ。ウェポンスキルを押した直後に動くと GCD が止まりにくい');
+    for (const [k, name, advice] of [['fugetsu', '風月', '残り 10 秒を切ったら陣風コンボで更新'], ['fuka', '風花', '残り 10 秒を切ったら士風コンボで更新'], ['higanbana', '彼岸花', '切れたら閃 1 つの居合術（彼岸花）で付け直す']]) {
+      const u = up(k);
+      if (u < 90) add(((100 - u) / 3) * 0.15, u < 75 ? 'bad' : 'ok', `${name}の維持 ${u.toFixed(1)}%`, advice);
     }
-    const color = (id) => ({ setsu: '#6fd3ff', getsu: '#8d86ff', ka: '#ff86c0', iai: '#ffc640', blood: '#ff5a4a', namikiri: '#4fe3ff' }[FX_COLOR[id]] ?? '#8aa4c8');
-    for (const g of S.tl.gcd) { c.fillStyle = color(g.id); c.globalAlpha = g.cut ? 0.35 : 1; c.fillRect(X(g.t) + 0.5, 8, Math.max(1, X(g.end) - X(g.t) - 1), 18); }
-    c.globalAlpha = 1;
-    const gapCol = { clip: '#ffa53a', idle: '#ff4a4a', cut: '#c070ff' };
-    for (const g of S.tl.gaps) { c.fillStyle = gapCol[g.kind]; c.fillRect(X(g.from), 26, Math.max(1.5, X(g.to) - X(g.from)), 4); }
-    for (const o of S.tl.ogcd) {
-      const x = X(o.t); c.fillStyle = KENKI_COST[o.id] ? '#ff7a5a' : '#ffe29a';
-      c.beginPath(); c.moveTo(x, 34); c.lineTo(x + 4, 40); c.lineTo(x, 46); c.lineTo(x - 4, 40); c.closePath(); c.fill();
+    if (st.kenkiOver) add(Math.min(100, st.kenkiOver * 2) * 0.1, st.kenkiOver > 30 ? 'bad' : 'ok', `剣気が ${st.kenkiOver} あふれた`, '剣気が 50 を超えたら必殺剣・震天で使う');
+    if (st.comboBreaks) add(Math.min(100, st.comboBreaks * 10) * 0.1, st.comboBreaks > 2 ? 'bad' : 'ok', `コンボ切れ ${st.comboBreaks} 回`, '光っている技を順に。居合術やアビリティはコンボを切らない');
+    if (st.interrupts) add(st.interrupts * 3, 'ok', `詠唱の中断 ${st.interrupts} 回`, `居合術の詠唱中は動かない（残り ${POLICY.slideMs / 1000} 秒からは動いても完了。仮）`);
+    if (st.outRangeMs > 3000) add(pct(st.outRangeMs) * 0.3, pct(st.outRangeMs) > 10 ? 'bad' : 'ok', `射程外にいた時間 ${sec(st.outRangeMs)}`, '敵が動いたらすぐ追いかける。離れたら燕飛や必殺剣・暁天');
+    if (st.whiffs) add(st.whiffs * 2, 'ok', `空振り ${st.whiffs} 回`, '自分中心の範囲技は、敵の輪に届く距離で');
+    issues.sort((x, y) => y.loss - x.loss);
+    const goods = [];
+    if (gcdPct >= 97) goods.push(`GCD 稼働率 ${gcdPct.toFixed(1)}%`);
+    if (posN && posPct === 100) goods.push(`方向指定 ${posN} 回すべて成功`);
+    if (OPT.mech !== 'off' && !st.hits) goods.push('敵の範囲攻撃をすべてよけた');
+    if (moveGcdPct != null && moveGcdPct >= 95) goods.push(`移動中も GCD を ${moveGcdPct.toFixed(1)}% 維持`);
+    if (!st.kenkiOver && S.stats.gcds > 5) goods.push('剣気のあふれなし');
+    if (killed) goods.unshift(`${fmt(endT)} で撃破`);
+
+    // 大事な数字 4 つ
+    const big = [
+      { label: 'GCD 稼働率', value: `${gcdPct.toFixed(1)}%`, rate: gcdPct, sub: `止まった時間 ${sec(lossMs)}` },
+      { label: '方向指定', value: posN ? `${posOk}/${posN}` : '—', rate: posN ? posPct : null, sub: `背面 ${frac(st.pos.rear)}・側面 ${frac(st.pos.flank)}` },
+      { label: '被弾', value: OPT.mech === 'off' ? '—' : `${st.hits} 回`, rate: OPT.mech === 'off' ? null : dodgePct, sub: OPT.mech === 'off' ? '敵の攻撃なし' : `戦闘不能 ${st.downs} 回` },
+      S.hpMax > 0
+        ? { label: killed ? '撃破時間' : '敵の残り HP', value: killed ? fmt(endT).replace(/^0/, '') : `${((S.hp / S.hpMax) * 100).toFixed(1)}%`, rate: killed ? 100 : 100 - (S.hp / S.hpMax) * 100, sub: `与ダメージ ${num(S.dmg)}・毎秒 ${num(dps)}` }
+        : { label: '与ダメージ', value: num(S.dmg), rate: null, sub: `毎秒 ${num(dps)}（威力 ${num(pps)}/秒）` },
+    ];
+    const metrics = [
+      { label: 'GCD 稼働率', value: `${gcdPct.toFixed(1)}%`, rate: gcdPct },
+      { label: 'ウェポンスキルの回数', value: `${st.gcds} 回`, rate: null },
+      { label: '止まり / クリップ / 詠唱中断', value: `${sec(st.idleMs)} / ${sec(st.clipMs)} / ${sec(st.cutMs)}`, rate: 100 - pct(lossMs) * 4 },
+      { label: '方向指定（背面）', value: frac(st.pos.rear), rate: st.pos.rear.n ? (st.pos.rear.ok / st.pos.rear.n) * 100 : null },
+      { label: '方向指定（側面）', value: frac(st.pos.flank), rate: st.pos.flank.n ? (st.pos.flank.ok / st.pos.flank.n) * 100 : null },
+      { label: '風月の維持', value: `${up('fugetsu').toFixed(1)}%`, rate: up('fugetsu') },
+      { label: '風花の維持', value: `${up('fuka').toFixed(1)}%`, rate: up('fuka') },
+      { label: '彼岸花の維持', value: `${up('higanbana').toFixed(1)}%`, rate: up('higanbana') },
+      { label: 'コンボ切れ', value: `${st.comboBreaks} 回`, rate: comboPct },
+      { label: '剣気のあふれ', value: `${st.kenkiOver}`, rate: overPct },
+      { label: '被弾 / 戦闘不能', value: OPT.mech === 'off' ? '敵の攻撃なし' : `${st.hits} 回 / ${st.downs} 回`, rate: OPT.mech === 'off' ? null : dodgePct },
+      { label: '移動中の GCD 稼働率', value: moveGcdPct == null ? 'ほぼ移動なし' : `${moveGcdPct.toFixed(1)}%（移動 ${sec(st.movingMs)}）`, rate: moveGcdPct },
+      { label: '射程外にいた時間', value: sec(st.outRangeMs), rate: 100 - pct(st.outRangeMs) * 3 },
+      { label: '詠唱の中断', value: `${st.interrupts} 回`, rate: 100 - st.interrupts * 20 },
+      { label: '空振り', value: `${st.whiffs} 回`, rate: st.whiffs ? 80 : 100 },
+      { label: '受け付けなかった入力', value: `${st.rejected} 回（うち射程外 ${st.outOfRange}）`, rate: null },
+      { label: '与ダメージ', value: `${num(S.dmg)}（威力の合計 ${num(S.pot)}）`, rate: null },
+      { label: '毎秒のダメージ / 威力', value: `${num(dps)} / ${num(pps)}`, rate: null },
+    ];
+    if (S.hpMax > 0) metrics.push({ label: '敵の体力', value: killed ? `${num(S.hpMax)}（${fmt(endT)} で撃破）` : `${num(S.hp)} / ${num(S.hpMax)} 残り`, rate: killed ? 100 : null });
+
+    // 使ったアクション（回数・与ダメージ）
+    const uses = new Map();
+    for (const e of S.events) {
+      if (e.kind !== '使用' && e.kind !== '継続ダメージ') continue;
+      const id = Object.values(A).find((x) => x.name === e.action)?.id;
+      if (!id) continue;
+      const u = uses.get(id) ?? { id, name: A[id].name, icon: A[id].icon, n: 0, dmg: 0 };
+      if (e.kind === '使用') u.n++;
+      u.dmg += Number(e.dmg) || 0;
+      uses.set(id, u);
     }
-    for (const p of S.tl.pos) { c.fillStyle = p.ok ? '#7fe0a0' : '#ff5a4a'; c.beginPath(); c.arc(X(p.t), 55, 3.5, 0, Math.PI * 2); c.fill(); }
-    [['fugetsu', 66, '#7fe0a0'], ['fuka', 78, '#9ff0c0'], ['higanbana', 90, '#ff6a5a']].forEach(([k, y, col]) => {
-      c.fillStyle = col;
-      for (const iv of S.tl.buffs[k]) c.fillRect(X(iv.from), y, Math.max(1, X(iv.to ?? dur) - X(iv.from)), 8);
-    });
-    c.fillStyle = '#8fb8ff';
-    for (const m of S.tl.move) c.fillRect(X(m.from), 104, Math.max(1, X(m.to ?? dur) - X(m.from)), 8);
-    c.fillStyle = '#ff4a4a';
-    for (const t of S.tl.hits) { const x = X(t); c.beginPath(); c.moveTo(x, 116); c.lineTo(x + 4, 126); c.lineTo(x - 4, 126); c.closePath(); c.fill(); }
-    c.strokeStyle = 'rgba(255,255,255,.15)'; c.fillStyle = '#a9a293'; c.textAlign = 'center';
-    const stepS = dur > 180000 ? 30 : 10;
-    for (let s = 0; s <= dur / 1000; s += stepS) {
-      const x = X(s * 1000);
-      c.beginPath(); c.moveTo(x, 130); c.lineTo(x, 136); c.stroke();
-      c.fillText(`${s}`, x, 144);
+    // ミスの一覧とタイムラインの印
+    const KIND = { 止まり: 'idle', クリップ: 'clip', 詠唱中断: 'cut', 方向指定ミス: 'pos', 被弾: 'hit', 戦闘不能: 'hit', コンボ切れ: 'combo', あふれ: 'over', 効果切れ: 'buff', 射程外: 'range' };
+    const misses = [];
+    for (const e of S.events) {
+      // 小さな止まり・クリップ（0.5 秒・0.2 秒未満）は一覧に出さない（合計には含む）
+      if (e.gapMs != null && e.gapMs < (e.result === '止まり' ? 500 : 200)) continue;
+      if (e.kind === 'ミス' || (e.kind === '受け付けず' && e.result === '射程外')) {
+        misses.push({ t: e.t, kind: KIND[e.result] ?? 'other', label: e.result || e.kind, text: [e.action, e.note].filter(Boolean).join(' — ') });
+      }
     }
-    c.textAlign = 'left';
-    const legend = [['#ff4a4a', '止まり'], ['#ffa53a', 'クリップ'], ['#c070ff', '詠唱中断'], ['#7fe0a0', '方向指定 ○'], ['#ff5a4a', '× / 被弾'], ['#8fb8ff', '移動']];
-    let lx = L;
-    for (const [col, text] of legend) { c.fillStyle = col; c.fillRect(lx, 160, 7, 7); c.fillStyle = '#a9a293'; c.fillText(text, lx + 10, 164); lx += c.measureText(text).width + 26; }
-    c.fillText('◆ アビリティ（赤は剣気を使うもの）', L, 180);
+    const markColor = { pos: '#ff6a5a', hit: '#ff4a6a', combo: '#ffb05a', over: '#ff9a5a', buff: '#e8c77a', range: '#9ab0ff', cut: '#b77cff' };
+    const tl = {
+      dur,
+      gcd: S.tl.gcd.map((g) => ({ t: g.t, end: Math.min(g.end, dur), cut: !!g.cut, color: GCD_COLOR[FX_COLOR[g.id]] ?? '#7d9bc9' })),
+      gaps: S.tl.gaps.filter((g) => g.to - g.from > 20),
+      ogcd: S.tl.ogcd.map((o) => ({ t: o.t, hot: !!KENKI_COST[o.id] })),
+      buffs: [['風月', 'fugetsu', '#6fd49a'], ['風花', 'fuka', '#a8e8b8'], ['彼岸花', 'higanbana', '#ff7a6a']].map(([name, k, color]) => ({ name, color, iv: S.tl.buffs[k].map((iv) => ({ from: iv.from, to: iv.to ?? dur })) })),
+      marks: misses.filter((m) => !['idle', 'clip'].includes(m.kind)).map((m) => ({ t: m.t, color: markColor[m.kind] })),
+      all: [
+        ...S.events.filter((e) => e.kind === '使用').map((e) => ({ t: e.t, kind: 'use', text: `${e.action}${e.dmg ? `  ${Number(e.dmg).toLocaleString('ja-JP')}` : ''}` })),
+        ...misses.map((m) => ({ t: m.t, kind: 'miss', text: `${m.label}: ${m.text}` })),
+      ].sort((x, y) => x.t - y.t),
+    };
+
+    const now = new Date();
+    const stamp = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}-${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}`;
+    const MECH_JA2 = { off: 'なし', easy: '少なめ', normal: 'ふつう', hard: '多め' };
+    const TANK_JA = { good: '上手', normal: 'ふつう', bad: '下手' };
+    const settings = [
+      ['時間', `${OPT.durationMs / 1000} 秒`], ['敵の範囲攻撃', MECH_JA2[OPT.mech]], ['タンク', OPT.tank ? `いる（${TANK_JA[OPT.tankSkill] ?? ''}）` : 'いない'],
+      ['敵の体力', S.hpMax > 0 ? num(S.hpMax) : '無限（木人）'], ['技の並び（種）', OPT.seed],
+    ];
+    const summary = [
+      ['ジョブ', `${D.job.name} Lv${D.job.level}`], ['日時', now.toLocaleString('ja-JP')], ...settings,
+      ['総合点', score], ['ランク', grade], ['終了', killed ? `撃破 ${fmt(endT)}` : `時間切れ ${fmt(endT)}`],
+      ...metrics.map((m) => [m.label, m.value]),
+    ];
+    return {
+      jobIcon: D.job.icon,
+      subtitle: `${D.job.name} Lv${D.job.level}・${settings.map(([k, v]) => `${k} ${v}`).join('・')}`,
+      grade, score, endLabel: killed ? `${fmt(endT)} で撃破` : `${fmt(endT)} まで`,
+      big, issues, goods, metrics, uses: [...uses.values()].sort((x, y) => y.n - x.n || y.dmg - x.dmg), misses, tl,
+      events: S.events, summary, fileName: `ff14-rotation-${D.job.abbr}-${stamp}.csv`,
+      note: '採点の重みは仮です（GCD 40% / バフ・DoT 15% / 方向指定 15% / コンボ 10% / 回避 10% / あふれ 10%）。ダメージは説明文の威力 × 与ダメージ上昇 × 係数で、クリティカルなどは入れていません。移動速度・射程・方向指定の角度などは仮の値です（設定 → 練習）。',
+    };
   }
 
   // ---------------- 描画 ----------------
@@ -824,6 +945,63 @@
     Gauge.setSimple(OPT.gaugeSimple);
   }
 
+  // ---- HUD の部品を ADDON.DAT の位置に置く（部品は識別値で特定: cfg-parse.js の HUD_KINDS）----
+  // 各部品はゲームと同じ等倍の大きさ（1080p・HUD 100% の px）で組み、倍率は zoom で掛ける（小さくしても文字がぼやけない）
+  const hudEls = () => D.hud?.elements ?? SAMPLE.hud.elements ?? {};
+  const HUD_PLACES = () => {
+    const split = (VIEW.targetMode ?? 'split') === 'split';
+    return [
+      { el: document.querySelector('.buffs'), kind: (VIEW.statusMode ?? 'split') === 'split' ? 'statusEnh' : 'statusAll' },
+      { el: $('castbar'), kind: 'castBar' },
+      { el: $('param'), kind: 'parameterBar' },
+      { el: document.querySelector('.target'), kind: split ? 'targetHp' : 'targetBar' },
+      { el: $('bossCastBox'), kind: split ? 'targetCast' : null },
+      { el: $('targetStatusBox'), kind: split ? 'targetStatus' : null },
+      { el: document.querySelector('.party'), kind: 'partyList' },
+    ];
+  };
+  function hudRectOf(p) {
+    const W = STAGE.w, H = STAGE.h, k = hudK();
+    const bw = p.w * p.scale * k, bh = p.h * p.scale * k;
+    const [ax, ay] = ANCHOR(p.anchor);
+    return { x: (p.x / 100) * W - (bw * ax) / 2, y: (p.y / 100) * H - (bh * ay) / 2, w: bw, h: bh, s: p.scale * k };
+  }
+  function placeHudParts() {
+    // ターゲット情報: 分割なら、キャストバーとステータスをそれぞれの置き場所へ。まとめるなら窓の中へ戻す
+    const split = (VIEW.targetMode ?? 'split') === 'split';
+    const target = document.querySelector('.target');
+    if (split) { $('bossCastBox').appendChild($('bossCast')); $('targetStatusBox').appendChild($('targetStatus')); }
+    else { target.insertBefore($('bossCast'), $('mechAlert')); target.appendChild($('targetStatus')); }
+    const els = hudEls();
+    for (const { el, kind } of HUD_PLACES()) {
+      const p = kind ? els[kind] : null;
+      el.classList.toggle('placed', !!p);
+      el.style.cssText = '';
+      if (!p) continue;
+      const r = hudRectOf(p);
+      // zoom を掛けた要素の left / top も zoom 倍されるので、倍率で割っておく
+      Object.assign(el.style, { zoom: String(r.s), left: `${r.x / r.s}px`, top: `${r.y / r.s}px`, width: `${p.w}px`, height: `${p.h}px` });
+      el.dataset.kind = kind;
+    }
+    // 枠の表示（どの部品がどこか確かめる用）
+    const fr = $('hudFrames');
+    fr.hidden = !VIEW.showHudFrames;
+    fr.innerHTML = '';
+    if (VIEW.showHudFrames) {
+      const used = new Set(HUD_PLACES().map((x) => x.kind).filter(Boolean));
+      const all = [...Object.entries(els), ...Object.entries(D.hud?.gauges ?? {}).map(([k, v]) => [k, { ...v, visible: true }])];
+      for (const [kind, rec] of all) {
+        if (!rec.visible && !used.has(kind)) continue;
+        const r = hudRectOf(rec);
+        const d = document.createElement('div');
+        d.className = `hud-frame${used.has(kind) ? ' used' : ''}`;
+        Object.assign(d.style, { left: `${r.x}px`, top: `${r.y}px`, width: `${r.w}px`, height: `${r.h}px` });
+        d.textContent = rec.name ?? kind;
+        fr.appendChild(d);
+      }
+    }
+  }
+
   // ---- ステータス（要素を作り置きし、残り秒だけ書き換える。毎秒作り直すと点滅して見えるため）----
   const stEls = new Map();
   function clearStatuses() { for (const r of stEls.values()) r.el.remove(); stEls.clear(); }
@@ -942,6 +1120,10 @@
       cb.classList.toggle('slide', S.cast.end - S.t <= POLICY.slideMs);
     } else cb.hidden = true;
 
+    // 敵の体力
+    const hpFrac = S.hpMax > 0 ? S.hp / S.hpMax : 1;
+    $('bossHpFill').style.width = `${hpFrac * 100}%`;
+    $('bossHpText').textContent = S.hpMax > 0 ? `${Math.ceil(S.hp).toLocaleString('ja-JP')}（${(hpFrac * 100).toFixed(1)}%）` : S.dmg > 0 ? `与ダメージ ${S.dmg.toLocaleString('ja-JP')}` : '100%';
     // 敵の詠唱
     const bc = S.phase === 'combat' ? Arena.bossCast(S.t) : null;
     $('bossCast').hidden = !bc;
@@ -950,8 +1132,11 @@
     $('mechAlert').hidden = !mech;
     if (mech) { $('mechName').textContent = mech.name; $('mechHint').textContent = mech.hint ?? ''; }
 
-    // パーティリスト
+    // パーティリスト・HP バー
     const hp = Arena.hp(), down = Arena.isDown();
+    $('pmHp').style.width = `${hp * 100}%`;
+    $('pmHpV').textContent = down ? '戦闘不能' : `${Math.round(hp * 100)}%`;
+    $('param').classList.toggle('low', hp < 0.35);
     $('ptSelfHp').style.width = `${hp * 100}%`;
     $('ptSelfNum').textContent = down ? '戦闘不能' : String(Math.round(hp * 100));
     $('ptSelf').classList.toggle('low', hp < 0.35);
@@ -976,16 +1161,24 @@
     const power = a.crit ? 1.5 : KENKI_COST[id] ? 1.25 : ok && a.comboFrom.length ? 1.15 : 1;
     return { kind, color, crit: a.crit, power, count: TRIPLE.has(id) ? 3 : 1, name: a.name, combo: ok && a.comboFrom.length > 0, range: a.effectRange || a.range };
   }
-  function playFx(id, ok, pos, hit) {
+  function playFx(id, ok, pos, hit, dmg) {
     const info = fxFor(id, ok);
     if (!hit) { Arena.flyText('空振り', 'miss'); Au?.slash(0.6); return; }
     if (pos) info.pos = pos;
+    if (dmg) info.dmg = dmg;
     Arena.play(info);
     if (!Au) return;
-    if (info.kind === 'buff') { Au.buff(); return; }
-    if (info.kind === 'circle' || info.kind === 'cone' || info.kind === 'line') Au.wave();
+    // 効果音: 技の種類ごとに（居合術は抜刀、剣気の技は赤い閃光、閃の締めは色ごとの鈴）
+    if (info.kind === 'buff') { if (id === ID.MEIKYO) Au.water(); else if (id === ID.IKISHOTEN) Au.surge(); else Au.buff(); return; }
+    const color = FX_COLOR[id];
+    const draw = color === 'iai' || color === 'blood' || color === 'namikiri';
+    if (draw) Au.iai(info.count);
+    else if (KENKI_COST[id]) { Au.kenki(); Au.slash(info.power); }
+    else if (info.kind === 'circle' || info.kind === 'cone' || info.kind === 'line') Au.wave();
     else for (let i = 0; i < info.count; i++) setTimeout(() => Au.slash(info.power), i * 95);
-    if (info.crit) Au.crit(); else Au.hit(info.power);
+    if (color === 'setsu' || color === 'getsu' || color === 'ka') Au.finisher(color);
+    if (info.crit) Au.crit();
+    else if (!draw) Au.hit(info.power);
   }
   function pressFx(el) { el.classList.add('pressed'); setTimeout(() => el.classList.remove('pressed'), 90); }
   function showTip(el, id) {
@@ -1222,8 +1415,12 @@
           next.files['KEYBIND.DAT'] = `ホットバー ${Object.keys(kb.hotbar).length} 本分のキー・移動キー ${['fore', 'left', 'back', 'right'].map((k) => keyLabel(kb.move?.[k])).join('')}`;
         } else if (name === 'ADDON.DAT') {
           const a = window.CfgParse.parseAddon(buf);
-          next.hud = { hotbars: a.hotbars, gauges: window.CfgParse.findGauges(a.records, D.gauge.sizes) };
-          next.files['ADDON.DAT'] = `ホットバー ${Object.keys(a.hotbars).length} 本・ジョブゲージ ${Object.keys(next.hud.gauges).length} 個の配置`;
+          next.hud = {
+            hotbars: a.hotbars,
+            gauges: { ...window.CfgParse.findGauges(a.records, D.gauge.sizes), ...window.CfgParse.jobGaugeElements(a.records, D.job.abbr, D.gauge.sizes) },
+            elements: window.CfgParse.hudElements(a.records),
+          };
+          next.files['ADDON.DAT'] = `ホットバー ${Object.keys(a.hotbars).length} 本・ジョブゲージ ${Object.keys(next.hud.gauges).length} 個・HUD の部品 ${Object.keys(next.hud.elements).length} 個の配置`;
         } else if (name === 'FFXIV.CFG') {
           const c = window.CfgParse.parseCfg(buf);
           if (c.width && c.height) { VIEW.gameW = c.width; VIEW.gameH = c.height; }
@@ -1259,7 +1456,12 @@
     const s1 = k.section(pane, '練習の内容');
     k.row(s1, '時間', k.choice([[60000, '60 秒'], [120000, '120 秒'], [180000, '180 秒'], [300000, '300 秒']], OPT.durationMs, (v) => { OPT.durationMs = v; applyPractice(); }));
     k.row(s1, '敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }), '予兆（橙色の範囲）が満ちたら発動。範囲の中にいると被弾');
-    k.row(s1, 'タンク', k.toggle(OPT.tank, (v) => { OPT.tank = v; applyPractice(); }, ['いる', 'いない']), 'いると敵はタンクの方を向く（途中で向きや位置を変えます）。いないと敵があなたを追いかけ、正面を向けてきます');
+    k.row(s1, 'タンク', k.toggle(OPT.tank, (v) => { OPT.tank = v; applyPractice(); }, ['いる', 'いない']), 'いると敵はタンクの方を向く。いないと敵があなたを追いかけ、正面を向けてきます');
+    k.row(s1, 'タンクの腕前', k.choice([['good', '上手'], ['normal', 'ふつう'], ['bad', '下手']], OPT.tankSkill, (v) => { OPT.tankSkill = v; applyPractice(); }), '上手: 敵の向きをほとんど変えず、範囲攻撃もすぐよける。ふつう: ときどき向きや位置を変える。下手: よく向きを変え、よけるのも遅い（方向指定の取り直しの練習）');
+    const hpIn = k.number(OPT.hp, 1000, 99999999, (v) => { OPT.hp = v; applyPractice(); }, 110);
+    k.row(s1, '敵の体力', [k.choice([['inf', '無限（木人）'], ['set', '決める'], ['last', '前回の与ダメージ']], OPT.hpMode, (v) => { OPT.hpMode = v; applyPractice(); }), hpIn],
+      `0 になると撃破して終わり、結果に撃破時間が出ます。「前回の与ダメージ」は前回 ${OPT.lastDamage ? OPT.lastDamage.toLocaleString('ja-JP') : '（まだなし）'} を体力にします（同じ回しでぴったり倒せる量）`);
+    k.row(s1, 'ダメージの係数', k.number(OPT.dmgScale, 1, 1000, (v) => { OPT.dmgScale = v; applyPractice(); }, 70), 'ダメージ = 説明文の威力 × 与ダメージ上昇（風月など）× この値。1 なら威力そのまま。クリティカル・ダイレクトヒットは入れません');
     k.row(s1, '方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }), '敵の足元に背面（緑）・側面（黄）を色分けし、次に使う方向指定の技の向きを濃くします');
     k.row(s1, '敵の技の予告', k.toggle(OPT.hints, (v) => { OPT.hints = v; save(); }), '技の名前とよけ方を、ターゲット窓の敵の詠唱バーの下に出します（ゲームにはない補助）');
     const seedIn = k.number(OPT.seed, 1, 99999, (v) => { OPT.seed = v; applyPractice(); });
@@ -1293,6 +1495,10 @@
       if (info.job && info.shared) k.row(s2, label, k.choice([['job', 'ジョブ専用'], ['shared', '共有']], barSource[bar], (v) => { barSource[bar] = v; rebuild(); }));
       else k.row(s2, label, k.text(info.job ? 'ジョブ専用のみ' : '共有のみ'));
     }
+    const s4 = k.section(pane, 'HUD の部品（ADDON.DAT）', `HUD レイアウトで動かせる部品（ゲームの HUD シートの 112 種）のうち、この設定ファイルで見つかったもの ${Object.keys(hudEls()).length} 個を、識別値で特定して置いています。ステータス情報とターゲット情報は、ゲームで分割表示にしているかどうかが設定ファイルから分からないため、ここで選んでください。`);
+    k.row(s4, 'ステータス情報（自分のバフ）', k.choice([['split', '分割（強化・弱体…）'], ['all', 'まとめる']], VIEW.statusMode ?? 'split', (v) => { VIEW.statusMode = v; save(); placeHudParts(); }), '分割なら「ステータス情報（強化）」の位置、まとめるなら「ステータス情報」の位置');
+    k.row(s4, 'ターゲット情報', k.choice([['split', '分割（HP・キャストバー・ステータス）'], ['all', 'まとめる']], VIEW.targetMode ?? 'split', (v) => { VIEW.targetMode = v; save(); placeHudParts(); }));
+    k.row(s4, '枠を表示', k.toggle(!!VIEW.showHudFrames, (v) => { VIEW.showHudFrames = v; save(); placeHudParts(); }), '設定を閉じると、表示中の HUD の部品の枠と名前が画面に出ます（使っている部品は金色）');
     const s3 = k.section(pane, 'HUD の大きさ');
     k.row(s3, 'ゲームの HUD の大きさ', k.select([[1, '100%'], [1.5, '150%'], [2, '200%'], [3, '300%']], VIEW.uiScale, (v) => { VIEW.uiScale = Number(v); save(); fit(); rebuild(); }), 'FFXIV.cfg の UiHighScale から（対応は推定）');
     k.row(s3, '微調整', k.range(0.5, 2, 0.05, VIEW.hudScale, (v) => { VIEW.hudScale = v; save(); fit(); rebuild(); }, (v) => `${Math.round(v * 100)}%`));
@@ -1356,9 +1562,15 @@
     const s1 = k.section(pane, '効果音', 'FF14 の効果音は使わず、ブラウザでその場で合成しています。');
     k.row(s1, '効果音', k.toggle(Au?.isEnabled() ?? false, (v) => { Au?.setEnabled(v); syncSound(); if (v) Au?.buff(); }));
     k.row(s1, '音量', k.range(0, 1, 0.05, Au?.getVolume() ?? 0.45, (v) => { Au?.setVolume(v); }, (v) => `${Math.round(v * 100)}%`));
-    k.row(s1, '試しに鳴らす', [
-      k.button('斬撃', () => { Au?.slash(1); Au?.hit(1); }), k.button('クリティカル', () => { Au?.slash(1.5); Au?.crit(); }),
-      k.button('詠唱', () => Au?.cast(1500)), k.button('予兆', () => Au?.warn()), k.button('被弾', () => Au?.hurt()),
+    k.row(s1, '試しに鳴らす（技）', [
+      k.button('斬撃', () => { Au?.slash(1); Au?.hit(1); }), k.button('雪', () => { Au?.slash(1.15); Au?.finisher('setsu'); Au?.hit(1.15); }),
+      k.button('月', () => { Au?.slash(1.15); Au?.finisher('getsu'); Au?.hit(1.15); }), k.button('花', () => { Au?.slash(1.15); Au?.finisher('ka'); Au?.hit(1.15); }),
+      k.button('居合術', () => { Au?.cast(1300); setTimeout(() => Au?.iai(3), 1300); }), k.button('剣気', () => { Au?.kenki(); Au?.slash(1.25); Au?.hit(1.25); }),
+      k.button('明鏡止水', () => Au?.water()), k.button('意気衝天', () => Au?.surge()),
+    ]);
+    k.row(s1, '試しに鳴らす（ほか）', [
+      k.button('予兆', () => Au?.warn()), k.button('範囲攻撃', () => Au?.boom(1)), k.button('被弾', () => Au?.hurt()),
+      k.button('開始', () => Au?.go()), k.button('撃破', () => Au?.kill()), k.button('使えない', () => Au?.error()),
     ]);
   });
 
@@ -1395,10 +1607,15 @@
     STAGE.h = Math.round((1280 * VIEW.gameH) / VIEW.gameW);
     stage.style.height = `${STAGE.h}px`;
     const s = Math.min(innerWidth / STAGE.w, innerHeight / STAGE.h);
-    stage.style.transform = `scale(${s})`;
+    // transform で拡大すると、動く文字や canvas が拡大前の画素数で描かれてからぼやけて引き伸ばされる。zoom なら拡大後の画素数で描かれる
+    stage.style.zoom = String(s);
+    stage.style.transform = '';
     Arena.resize(STAGE.w, STAGE.h);
     placeGauges();
+    placeHudParts();
   }
+  // 舞台の 1px が画面の何 px か（zoom の値。canvas を高画質で描くのに使う）
+  const stageScale = () => stage.getBoundingClientRect().width / STAGE.w;
   window.addEventListener('resize', fit);
   // 一時停止: 設定を開いている間と、タブが隠れている間
   let hiddenPause = false;

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>侍 木人練習 UI モック</title>
 <link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- フライテキスト用: 英字・数字は Cinzel、日本語は明朝（Noto Serif JP）。読めないときは端末の明朝 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Serif+JP:wght@700;900&display=swap">
 <link rel="stylesheet" href="mock.css">
 </head>
 <body>
@@ -18,7 +22,7 @@
     <!-- ターゲット情報（敵の詠唱バーを含む） -->
     <section class="win target" aria-label="ターゲット">
       <div class="target-name"><span class="lv">Lv100</span> からくり木人</div>
-      <div class="hp"><div class="hp-fill"></div><span class="hp-text">100%</span></div>
+      <div class="hp"><div class="hp-fill" id="bossHpFill"></div><span class="hp-text" id="bossHpText">100%</span></div>
       <div class="boss-cast" id="bossCast" hidden>
         <div class="bc-name" id="bossCastName"></div>
         <div class="bc-track"><div class="bc-fill" id="bossCastFill"></div></div>
@@ -52,6 +56,19 @@
       <div class="win-title">ステータス</div>
       <div class="status-row" id="selfStatus"></div>
     </section>
+
+    <!-- パラメーターバー（HP・MP。ADDON.DAT のパラメーターバーの位置） -->
+    <section class="param" id="param" aria-label="HP・MP">
+      <div class="pm-row"><span class="pm-l">HP</span><span class="pm-v" id="pmHpV">100%</span><div class="pm-bar"><div class="pm-fill hp" id="pmHp"></div></div></div>
+      <div class="pm-row"><span class="pm-l">MP</span><span class="pm-v">10000</span><div class="pm-bar"><div class="pm-fill mp"></div></div></div>
+    </section>
+
+    <!-- ターゲット情報を分割表示するときの、キャストバーとステータスの置き場所 -->
+    <div class="hud-box" id="bossCastBox"></div>
+    <div class="hud-box" id="targetStatusBox"></div>
+
+    <!-- HUD の部品の枠（設定で「枠を表示」にしたとき） -->
+    <div class="hud-frames" id="hudFrames" hidden></div>
 
     <!-- キャストバー -->
     <div class="castbar" id="castbar" hidden>
@@ -121,6 +138,7 @@
 <script src="uld.js"></script>
 <script src="gauge.js"></script>
 <script src="settings.js"></script>
+<script src="result.js"></script>
 <script src="mock.js"></script>
 </body>
 </html>

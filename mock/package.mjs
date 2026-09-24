@@ -27,7 +27,7 @@ for (const rel of icons) {
 data = data.replaceAll('"../public/icons/', '"icons/').replaceAll('"../public/fankit/', '"fankit/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
-for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'pixel.js', 'arena.js', 'uld.js', 'gauge.js', 'settings.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'pixel.js', 'arena.js', 'uld.js', 'gauge.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
 
 const commit = process.env.GITHUB_SHA?.slice(0, 7) ?? 'local';
 const html = readFileSync(join(root, 'mock/index.html'), 'utf8')

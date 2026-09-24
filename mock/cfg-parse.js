@@ -133,6 +133,59 @@
     return { hotbars, others, records: recs, count: recs.length };
   }
 
+  // ---- HUD レイアウトで動かせる部品（ゲームデータの HUD シートの行 0〜111）----
+  // ADDON.DAT のレコードの +0 はこの識別値（CONFIG_FORMAT §7）。出典: Dalamud のプラグイン HUD Manager（zacharied/FFXIV-Plugin-HudManager）の
+  // ElementKind（値はサンプルのホットバー 1〜10・剣気ゲージ・閃ゲージで一致を確認）。日本語の名前はモックで付けたもの（HUD シートの名前は未抽出）
+  const HUD_KINDS = {
+    0xC48D3605: ['hb1', 'ホットバー1'], 0xFB7B6E1E: ['hb2', 'ホットバー2'], 0xF93DD047: ['hb3', 'ホットバー3'], 0xF8FFBA70: ['hb4', 'ホットバー4'],
+    0xFDB0ACF5: ['hb5', 'ホットバー5'], 0xFC72C6C2: ['hb6', 'ホットバー6'], 0xFE34789B: ['hb7', 'ホットバー7'], 0xFFF612AC: ['hb8', 'ホットバー8'],
+    0xF4AA5591: ['hb9', 'ホットバー9'], 0xF5683FA6: ['hb10', 'ホットバー10'], 0xD8D188FF: ['petHotbar', 'ペットホットバー'],
+    0xBA81E8D1: ['crossHotbar', 'クロスホットバー'], 0x6665735D: ['wxhbL', 'Wクロスホットバー（左）'], 0x70DDFD27: ['wxhbR', 'Wクロスホットバー（右）'],
+    0xECB29811: ['castBar', 'キャストバー'],
+    0x913EC97D: ['targetBar', 'ターゲット情報'], 0xBD128377: ['targetHp', 'ターゲット情報（HP）'], 0xCB54A2EF: ['targetCast', 'ターゲット情報（キャストバー）'], 0x076F596B: ['targetStatus', 'ターゲット情報（ステータス）'],
+    0xC292F05F: ['focusTarget', 'フォーカスターゲット'], 0x3D425039: ['partyList', 'パーティリスト'], 0x2943729A: ['alliance1', 'アライアンスリスト1'], 0x2B05CCC3: ['alliance2', 'アライアンスリスト2'],
+    0xB8BD6685: ['enemyList', 'エネミーリスト'], 0x981EC49E: ['parameterBar', 'パラメーターバー'], 0x21E53CCE: ['expBar', '経験値バー'],
+    0x4A569616: ['statusAll', 'ステータス情報'], 0x1F4230B4: ['statusEnh', 'ステータス情報（強化）'], 0x1D048EED: ['statusCond', 'ステータス情報（条件付き強化）'],
+    0x1E805A83: ['statusEnf', 'ステータス情報（弱体）'], 0x1CC6E4DA: ['statusOther', 'ステータス情報（その他）'],
+    0x7159021B: ['minimap', 'ミニマップ'], 0xDF217364: ['notices', '通知'], 0x8AF95A70: ['mainMenu', 'メインメニュー'], 0xA29100D2: ['dutyList', 'ToDo リスト'],
+    0xCDA89776: ['serverInfo', 'サーバー情報'], 0x43161AA2: ['gil', '所持金'], 0x1C15E20F: ['inventory', '所持品'], 0x42CBE75F: ['itemHelp', 'アイテムヘルプ'],
+    0x4661EACA: ['actionHelp', 'アクションヘルプ'], 0xC79F450A: ['limitGauge', 'リミットゲージ'], 0x81394395: ['dutyGauge', 'コンテンツのゲージ'],
+    0x54B8C68A: ['dutyAction', 'コンテンツアクション'], 0x88EE6357: ['scenarioGuide', 'シナリオガイド'],
+  };
+  // ジョブゲージ（識別値 → [ジョブ略称, 名前]）。どの ULD（JobHud*0 / 1）かは大きさで決める
+  const JOB_GAUGE_KINDS = {
+    0xEFBAFE40: ['PLD', 'オウスゲージ'], 0x7F5D020A: ['WAR', 'ビーストゲージ'], 0xF04E8778: ['DRK', 'ブラッドゲージ'], 0xF18CED4F: ['DRK', 'ダークサイドゲージ'],
+    0xAEC2C0DF: ['GNB', 'パウダーゲージ'], 0x7A3727B2: ['WHM', 'ヒーリングゲージ'], 0xCADD58CB: ['SCH', 'エーテルフローゲージ'], 0xA1A8A487: ['SCH', 'フェイエーテルゲージ'],
+    0x959978B2: ['AST', 'アルカナゲージ'], 0x11D01C49: ['SGE', 'エウクラシアゲージ'], 0x1012767E: ['SGE', 'アダーガルゲージ'],
+    0x7393C604: ['MNK', 'チャクラゲージ'], 0x7251AC33: ['MNK', 'マスターゲージ'], 0xBA9838C0: ['DRG', 'ドラゴンゲージ'], 0x713BF2BF: ['NIN', '忍気ゲージ'], 0x6CD4313E: ['NIN', '風魔ゲージ'],
+    0xECB607D5: ['SAM', '剣気ゲージ'], 0xED746DE2: ['SAM', '閃ゲージ'], 0xA2D9B660: ['RPR', 'ソウルゲージ'], 0xA31BDC57: ['RPR', 'デスゲージ'],
+    0xB7694B56: ['VPR', 'ヴァイパーサイト'], 0xB6AB2161: ['VPR', 'サーペントオファリングゲージ'], 0x7E747433: ['BRD', 'ソングゲージ'], 0x9874C76C: ['MCH', 'ヒートゲージ'],
+    0x90EAD514: ['DNC', 'ステップゲージ'], 0x9128BF23: ['DNC', 'フェザーゲージ'], 0xDCAC125A: ['BLM', 'エレメンタルゲージ'], 0xDD6E786D: ['BLM', 'アストラルゲージ'],
+    0x3BF3453A: ['SMN', 'エーテルフローゲージ'], 0x3A312F0D: ['SMN', 'トランスゲージ'], 0xEF0A5B00: ['RDM', 'ブラックマナ・ホワイトマナゲージ'],
+    0x7A6A6A42: ['PCT', 'キャンバス'], 0x7BA80075: ['PCT', 'パレットゲージ'], 0xC1D18DC6: ['BST', 'TP ゲージ'], 0xC013E7F1: ['BST', 'インナーコンパス'],
+  };
+  // レコード一覧 → 識別できた部品 { key: { index, name, x, y, scale, anchor, w, h, visible } }
+  function hudElements(records) {
+    const out = {};
+    for (const r of records) {
+      const k = HUD_KINDS[r.hash];
+      if (!k || out[k[0]]) continue;
+      out[k[0]] = { index: r.index, name: k[1], x: r.x, y: r.y, scale: r.scale, anchor: r.anchor, w: r.w, h: r.h, visible: r.flags === 0xff };
+    }
+    return out;
+  }
+  // あるジョブのゲージのレコード（識別値で絞り、ULD の大きさで名前を決める）。sizes: { JobHudSAM0: [330, 88], ... }
+  function jobGaugeElements(records, job, sizes) {
+    const out = {};
+    for (const r of records) {
+      const k = JOB_GAUGE_KINDS[r.hash];
+      if (!k || k[0] !== job) continue;
+      const uld = Object.entries(sizes).find(([, [w, h]]) => w === r.w && h === r.h)?.[0];
+      if (uld) out[uld] = { index: r.index, name: k[1], x: r.x, y: r.y, scale: r.scale, anchor: r.anchor, w: r.w, h: r.h };
+    }
+    return out;
+  }
+
   // ジョブゲージの配置: レコードの大きさ（w×h）が ULD の一番外側のノードの大きさと一致するものを探す（CONFIG_FORMAT §5.3）
   // sizes: { JobHudSAM0: [330, 88], ... } → { JobHudSAM0: { x, y, scale, anchor, w, h }, ... }
   function findGauges(records, sizes) {
@@ -167,7 +220,7 @@
     return { width, height, mode, uiScale, uiHighScale: found.UiHighScale, uiBaseScale: found.UiBaseScale, deadArea: found.DeadArea ?? null, pad, found };
   }
 
-  const api = { parseHotbar, parseKeybind, parseAddon, findGauges, parseCfg, vkToCode, BAR_NAMES, LAYOUTS };
+  const api = { parseHotbar, parseKeybind, parseAddon, findGauges, hudElements, jobGaugeElements, parseCfg, vkToCode, BAR_NAMES, LAYOUTS, HUD_KINDS, JOB_GAUGE_KINDS };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CfgParse = api;
 })(typeof window !== 'undefined' ? window : globalThis);
