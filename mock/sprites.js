@@ -28,9 +28,14 @@
     marble: ['#fffdf6', '#efe6d4', '#cfc2a8', '#a09078', '#6a5c4a'],
     grassY: ['#eee49a', '#c2b862', '#949040', '#64642c', '#3a3a1a'],
     aura: ['#ffffff', '#f0fff6', '#c4f7d6', '#7fe0a2', '#3fae72'], // 白魔道士の杖の玉
+    astRobe: ['#b6c6ff', '#5a70d0', '#3a4ea4', '#263474', '#161f48'], // 占星術師の紺のコート
+    blmRobe: ['#7a7898', '#4a4868', '#302e4a', '#1f1e34', '#12111f'], // 黒魔道士の黒いローブ
+    blmHat: ['#9a8a70', '#6a5a44', '#483c2e', '#30271e', '#1c1612'], // 黒魔道士のとんがり帽子
+    star: ['#ffffff', '#eef4ff', '#b4ceff', '#6a92ee', '#3252b0'], // 占星術師の天球儀の光
+    fire: ['#ffffff', '#ffe0b0', '#ff9a52', '#e8502c', '#a0261a'], // 黒魔道士の杖の玉
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -618,30 +623,98 @@
     hurt: { h: [-4, 8], dir: [-0.4, -0.9], up: 22, down: 12 },
   };
   // 杖（手 h、先への向き dir）。先に金の輪と光る玉
-  function staff(F, h, dir, up, down, o = {}) {
+  // st: 見た目（ジョブごとの服の色・持ち物。ROBE_STYLE）
+  function staff(F, h, dir, up, down, o = {}, st = ROBE_STYLE.whm) {
+    if (st.item === 'globe') { globe(F, h, dir, o, st); return; }
     const b = add(h, dir, -down), t = add(h, dir, up), head = add(t, dir, 2.6);
     F.fill('wood', (m) => m.capsule(b.x, b.y, t.x, t.y, 0.9, 1.0), { k: 1.1 });
     const r = 1.9 + (o.orb ?? 0) * 0.8;
-    F.fill('aura', (m) => m.ellipse(head.x, head.y, r, r), { flat: true, line: false, k: 1 });
+    F.fill(st.orb, (m) => m.ellipse(head.x, head.y, r, r), { flat: true, line: false, k: 1 });
     F.fill('gold', (m) => {
       m.ellipse(head.x, head.y, 3.3, 3.3); m.cut().ellipse(head.x, head.y, 2.0, 2.0).add();
       m.capsule(t.x, t.y, head.x - dir.x * 2.6, head.y - dir.y * 2.6, 1.1);
       m.capsule(b.x, b.y, b.x + dir.x * 1.5, b.y + dir.y * 1.5, 1.05);
     }, { k: 1.3 });
   }
+  // 占星術師の天球儀: 杖の代わりに、手の少し先に浮かぶ光の玉と金の輪（星儀）
+  function globe(F, h, dir, o, st) {
+    const c = add(h, dir, 6), r = 3.2 + (o.orb ?? 0) * 0.7;
+    F.fill(st.orb, (m) => m.ellipse(c.x, c.y, r, r), { flat: true, line: false, k: 1 });
+    F.fill('gold', (m) => { m.ellipse(c.x, c.y, r + 2.2, 1.6 + r * 0.25); m.cut().ellipse(c.x, c.y, r + 1.1, 0.8 + r * 0.18).add(); m.ellipse(c.x, c.y - r - 1.4, 0.9, 0.9); }, { k: 1.3 });
+  }
+  // ジョブごとの見た目: robe 服・trim 縁（袖口・裾・フードの縁）・head（hood フード / hat とんがり帽子 / hair 髪と額飾り）・item（staff 杖 / globe 天球儀）・orb 杖の玉の光
+  const ROBE_STYLE = {
+    whm: { robe: 'white', trim: 'red', head: 'hood', item: 'staff', orb: 'aura' },
+    ast: { robe: 'astRobe', trim: 'gold', head: 'hair', item: 'globe', orb: 'star' },
+    blm: { robe: 'blmRobe', trim: 'gold', head: 'hat', item: 'staff', orb: 'fire' },
+  };
   // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
-  function robeArm(F, s, h, bend, o = {}) {
+  function robeArm(F, s, h, bend, o = {}, st = ROBE_STYLE.whm) {
     const mid = V((s.x + h.x) / 2, (s.y + h.y) / 2), d = unit(h.x - s.x, h.y - s.y), n = perp(d);
     const e = add(mid, n, bend), c = add(h, d, -1.3);
-    F.fill('white', (m) => { m.capsule(s.x, s.y, e.x, e.y, 2.4, 2.6); m.capsule(e.x, e.y, c.x, c.y, 2.6, 3.2); }, { k: 1.5, dark: o.dark ?? 0 });
+    F.fill(st.robe, (m) => { m.capsule(s.x, s.y, e.x, e.y, 2.4, 2.6); m.capsule(e.x, e.y, c.x, c.y, 2.6, 3.2); }, { k: 1.5, dark: o.dark ?? 0 });
     const id = F.last, q = add(c, d, 0.2);
-    F.deco('red', 2 + (o.dark ?? 0), (m) => m.capsule(q.x - n.x * 4, q.y - n.y * 4, q.x + n.x * 4, q.y + n.y * 4, 0.9), { only: id });
+    F.deco(st.trim, 2 + (o.dark ?? 0), (m) => m.capsule(q.x - n.x * 4, q.y - n.y * 4, q.x + n.x * 4, q.y + n.y * 4, 0.9), { only: id });
   }
   const hand = (F, h, dark = 0) => F.fill('skin', (m) => m.ellipse(h.x, h.y, 1.7, 1.6), { k: 1.3, dark });
   // 裾の赤い三角模様
   const hemTri = (m, x0, x1, hem) => { m.rect(x0, hem - 0.6, x1 - x0, 1.2); for (let x = x0 + 1.2; x < x1 - 0.6; x += 2.4) m.poly([x - 1.2, hem + 0.2, x + 1.2, hem + 0.2, x, hem - 2.6]); };
 
-  function whmFB(F, p, back) {
+  // ---- 頭（黒魔道士のとんがり帽子・占星術師の髪）。正面・背面（cx 中心）と横向き（ux 中心）----
+  // 黒魔道士: 顔は影で見えず、目だけが黄色く光る。つばの広いとんがり帽子（先が少し垂れる）と高い襟
+  function hatFB(F, cx, hy, sy, back, tail, st) {
+    F.fill(st.robe, (m) => m.poly([cx - 8, hy + 3, cx + 8, hy + 3, cx + 9.5, sy + 3, cx - 9.5, sy + 3]), { k: 1.4 });
+    if (!back) {
+      F.fill('black', (m) => m.ellipse(cx, hy + 2, 5.6, 5.4), { k: 1.2, dark: 2 });
+      F.fill('glow', (m) => { m.ellipse(cx - 2.2, hy + 2.2, 1.1, 0.8); m.ellipse(cx + 2.2, hy + 2.2, 1.1, 0.8); }, { flat: true, line: false, k: 1 });
+    }
+    F.fill(st.hat ?? 'blmHat', (m) => {
+      m.ellipse(cx, hy - 2.5, 12.5, 3.4);
+      m.poly([cx - 6.5, hy - 3.5, cx + 6.5, hy - 3.5, cx + 2.5 + tail * 0.5, hy - 14, cx + 5 + tail, hy - 19, cx - 1 + tail * 0.3, hy - 14.5]);
+    }, { k: 1.5 });
+    const hat = F.last;
+    F.deco(st.trim, 2, (m) => m.band(cx, hy - 2.8, 6.2, 7.2, Math.PI * 1.02, Math.PI * 1.98), { only: hat });
+  }
+  function hatSide(F, ux, hy, sy, tail, st) {
+    F.fill(st.robe, (m) => m.poly([ux - 6, hy + 3, ux + 4, hy + 3, ux + 5, sy + 3, ux - 7, sy + 3]), { k: 1.4 });
+    F.fill('black', (m) => m.ellipse(ux + 2, hy + 2, 4.4, 5.2), { k: 1.2, dark: 2 });
+    F.fill('glow', (m) => m.ellipse(ux + 4.3, hy + 2.2, 1.0, 0.8), { flat: true, line: false, k: 1 });
+    F.fill(st.hat ?? 'blmHat', (m) => {
+      m.ellipse(ux + 0.5, hy - 2.5, 12, 3);
+      m.poly([ux - 5.5, hy - 3.5, ux + 5.5, hy - 3.5, ux - 1 - tail * 0.5, hy - 14, ux - 5 - tail, hy - 18.5, ux - 4 - tail * 0.3, hy - 13.5]);
+    }, { k: 1.5 });
+    const hat = F.last;
+    F.deco(st.trim, 2, (m) => m.line(ux - 5.5, hy - 4.2, ux + 5.5, hy - 4.2), { only: hat });
+  }
+  // 占星術師: 顔を出し、髪（後ろで結ぶ）と金の額飾り（中央に小さな星）。襟は服の色
+  function hairFB(F, cx, hy, sy, back, tail, st) {
+    F.fill(st.robe, (m) => m.poly([cx - 7.5, hy + 4, cx + 7.5, hy + 4, cx + 9, sy + 3, cx - 9, sy + 3]), { k: 1.4 });
+    const collar = F.last;
+    F.deco(st.trim, 2, (m) => { m.line(cx - 7.5, hy + 4.5, cx - 9, sy + 2.5); m.line(cx + 7.5, hy + 4.5, cx + 9, sy + 2.5); }, { only: collar });
+    if (!back) F.fill('skin', (m) => m.ellipse(cx, hy + 1.6, 5.4, 5.8), { k: 1.8 });
+    F.fill('hair', (m) => {
+      m.ellipse(cx, hy - 1.5, 6.6, 5.2);
+      if (back) { m.ellipse(cx, hy + 1, 6.2, 6); m.poly([cx - 2, hy + 4, cx + 2, hy + 4, cx + 1 + tail * 0.6, sy + 6, cx - 1 + tail * 0.6, sy + 6]); }
+      else { m.cut().rect(0, hy - 0.4, 64, 20).add(); m.poly([cx - 6.2, hy - 1, cx - 3.5, hy - 1, cx - 5.4, hy + 5]); m.poly([cx + 3.5, hy - 1, cx + 6.2, hy - 1, cx + 5.4, hy + 5]); }
+    }, { k: 1.4 });
+    F.fill('gold', (m) => { m.band(cx, hy + 2, 6.4, 7.2, Math.PI * 1.15, Math.PI * 1.85); if (!back) m.poly([cx - 1.2, hy - 4.6, cx + 1.2, hy - 4.6, cx, hy - 7]); }, { k: 1.3 });
+    if (!back) {
+      F.fill('star', (m) => m.ellipse(cx, hy - 4.6, 0.9, 0.9), { flat: true, line: false, k: 1 });
+      F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
+      F.deco('white', 0, (m) => { m.dot(cx - 2, hy + 2); m.dot(cx + 3, hy + 2); });
+      F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.3, cx + 0.5, hy + 5.3));
+    }
+  }
+  function hairSide(F, ux, hy, sy, tail, st) {
+    F.fill(st.robe, (m) => m.poly([ux - 6, hy + 4, ux + 4, hy + 4, ux + 5, sy + 3, ux - 7, sy + 3]), { k: 1.4 });
+    F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); }, { k: 1.8 });
+    F.fill('hair', (m) => { m.ellipse(ux - 0.5, hy - 0.5, 6, 6); m.cut().ellipse(ux + 3.5, hy + 2.5, 3.5, 4.5).add(); m.poly([ux - 4, hy + 2, ux - 1, hy + 3, ux - 5 - tail * 0.6, sy + 5]); }, { k: 1.4 });
+    F.fill('gold', (m) => m.line(ux - 4, hy - 3.2, ux + 5.5, hy - 2.2), { k: 1.3 });
+    F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
+    F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
+  }
+
+  function whmFB(F, p, back, st = ROBE_STYLE.whm) {
     const b = p.bob ?? 0, cx = 32, jump = p.jump ?? 0, sway = p.sway ?? 0, tail = p.tail ?? 0;
     const hipY = 38 - jump, sy = 26 + b - jump, hy = 17 + b + (p.headDy ?? 0) - jump;
     const armSide = back ? 1 : -1, mir = back ? -1 : 1; // 杖を持つ腕（本人の右手。正面では画面の左）
@@ -649,62 +722,66 @@
     const ks = V(cx + armSide * 7, sy + 1.5);
     const hd = V(ks.x + S.h[0] * mir, ks.y + S.h[1]), dir = unit(S.dir[0] * mir, S.dir[1]);
     // 背面: 杖は体の奥
-    if (back) { staff(F, hd, dir, S.up, S.down, p); }
+    if (back) { staff(F, hd, dir, S.up, S.down, p, st); }
     // 靴
     const footY = 58 - jump * 0.3;
     F.fill('leather', (m) => { m.ellipse(cx - 4 + sway, footY - (p.fl ?? 0), 2.4, 1.5); m.ellipse(cx + 4 + sway, footY - (p.fr ?? 0), 2.4, 1.5); }, { k: 1.2, dark: 1 });
     // ローブ（裾が広がる）
     const hem = 56.5 - jump * 0.3 - Math.max(p.fl ?? 0, p.fr ?? 0) * 0.35;
-    F.fill('white', (m) => m.poly([cx - 7, sy - 0.5, cx + 7, sy - 0.5, cx + 11 + sway, hem, cx - 11 + sway, hem]), { k: 1.2 });
+    F.fill(st.robe, (m) => m.poly([cx - 7, sy - 0.5, cx + 7, sy - 0.5, cx + 11 + sway, hem, cx - 11 + sway, hem]), { k: 1.2 });
     const robe = F.last;
-    F.deco('red', 2, (m) => hemTri(m, cx - 11 + sway, cx + 11 + sway, hem - 0.6), { only: robe });
-    if (!back) F.deco('red', 2, (m) => m.line(cx, sy + 7, cx + sway * 0.6, hem - 2), { only: robe });
-    else F.deco('red', 2, (m) => { m.poly([cx - 3.5, sy + 9, cx + 3.5, sy + 9, cx, sy + 14]); }, { only: robe });
+    F.deco(st.trim, 2, (m) => hemTri(m, cx - 11 + sway, cx + 11 + sway, hem - 0.6), { only: robe });
+    if (!back) F.deco(st.trim, 2, (m) => m.line(cx, sy + 7, cx + sway * 0.6, hem - 2), { only: robe });
+    else F.deco(st.trim, 2, (m) => { m.poly([cx - 3.5, sy + 9, cx + 3.5, sy + 9, cx, sy + 14]); }, { only: robe });
     // 腰の紐（金）
     F.deco('gold', 1, (m) => { m.line(cx - 7, hipY - 1, cx + 7, hipY - 1); if (!back) { m.line(cx + 2, hipY - 1, cx + 2.5, hipY + 4); m.dot(cx + 2.5, hipY + 5); } }, { only: robe });
     // 杖を持たない腕（本人の左手）
     const fs = V(cx - armSide * 7, sy + 1.5);
     const fh = p.free === 'up' ? V(cx - armSide * 11, sy - 7) : p.free === 'forward' ? V(cx - armSide * 12.5, sy + 1) : p.free === 'chest' ? V(cx - armSide * 2.5, sy + 6) : V(cx - armSide * 9, hipY + 1 + (p.freeDy ?? 0));
-    robeArm(F, fs, fh, -armSide * 1.5);
+    robeArm(F, fs, fh, -armSide * 1.5, {}, st);
     hand(F, fh);
-    // フード（頭の後ろと肩に掛かる部分。先が少しとがる）
-    F.fill('white', (m) => {
-      m.ellipse(cx, hy - 0.5, 8.4, 8.8);
-      m.poly([cx - 8, hy + 1, cx + 8, hy + 1, cx + 9.5, sy + 3, cx - 9.5, sy + 3]);
-      m.poly([cx - 3, hy - 7.5, cx + 3, hy - 7.5, cx + 1.5 + tail * 0.4, hy - 10.5]);
-    }, { k: 1.5 });
-    const hood = F.last;
-    if (!back) {
-      // 顔と前髪
-      F.fill('skin', (m) => m.ellipse(cx, hy + 1.8, 5.4, 5.7), { k: 1.8 });
-      F.fill('leather', (m) => {
-        m.ellipse(cx, hy - 2, 5.7, 3.2); m.cut().rect(0, hy - 0.2, 64, 20).add();
-        m.poly([cx - 5.2, hy - 1, cx - 2, hy - 1, cx - 3.9, hy + 2]);
-        m.poly([cx + 2, hy - 1, cx + 5.2, hy - 1, cx + 3.9, hy + 2]);
-        m.poly([cx - 1.6, hy - 1, cx + 1.6, hy - 1, cx, hy + 0.9]);
-      }, { k: 1.4 });
-      // フードの縁（赤）
-      F.deco('red', 2, (m) => m.band(cx, hy + 1.8, 5.9, 7.3, Math.PI * 0.96, Math.PI * 2.04), { only: hood });
-      F.deco('red', 3, (m) => { m.line(cx - 7.2, hy + 2, cx - 8.6, sy + 2.5); m.line(cx + 7.2, hy + 2, cx + 8.6, sy + 2.5); }, { only: hood });
-      // 目・口・頬
-      F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
-      F.deco('white', 0, (m) => { m.dot(cx - 2, hy + 2); m.dot(cx + 3, hy + 2); });
-      F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.3, cx + 0.5, hy + 5.3));
-      F.deco('red', 0, (m) => { m.dot(cx - 3.8, hy + 4); m.dot(cx + 3.8, hy + 4); });
-    } else {
-      // 背面: フードの先が背中に垂れる（赤の縁取り）
-      F.fill('white', (m) => m.poly([cx - 4.5, hy + 3, cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11, cx - 1 + tail * 0.6, sy + 11]), { k: 1.3 });
-      const flap = F.last;
-      F.deco('red', 2, (m) => { m.line(cx - 4.5, hy + 3, cx - 1 + tail * 0.6, sy + 11); m.line(cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11); m.line(cx - 1 + tail * 0.6, sy + 11, cx + 1 + tail * 0.6, sy + 11); }, { only: flap });
-      F.deco('white', 3, (m) => m.line(cx, hy - 7, cx, hy + 2), { only: hood });
+    if (st.head === 'hat') hatFB(F, cx, hy, sy, back, tail, st);
+    else if (st.head === 'hair') hairFB(F, cx, hy, sy, back, tail, st);
+    else {
+      // フード（頭の後ろと肩に掛かる部分。先が少しとがる）
+      F.fill(st.robe, (m) => {
+        m.ellipse(cx, hy - 0.5, 8.4, 8.8);
+        m.poly([cx - 8, hy + 1, cx + 8, hy + 1, cx + 9.5, sy + 3, cx - 9.5, sy + 3]);
+        m.poly([cx - 3, hy - 7.5, cx + 3, hy - 7.5, cx + 1.5 + tail * 0.4, hy - 10.5]);
+      }, { k: 1.5 });
+      const hood = F.last;
+      if (!back) {
+        // 顔と前髪
+        F.fill('skin', (m) => m.ellipse(cx, hy + 1.8, 5.4, 5.7), { k: 1.8 });
+        F.fill('leather', (m) => {
+          m.ellipse(cx, hy - 2, 5.7, 3.2); m.cut().rect(0, hy - 0.2, 64, 20).add();
+          m.poly([cx - 5.2, hy - 1, cx - 2, hy - 1, cx - 3.9, hy + 2]);
+          m.poly([cx + 2, hy - 1, cx + 5.2, hy - 1, cx + 3.9, hy + 2]);
+          m.poly([cx - 1.6, hy - 1, cx + 1.6, hy - 1, cx, hy + 0.9]);
+        }, { k: 1.4 });
+        // フードの縁（赤）
+        F.deco(st.trim, 2, (m) => m.band(cx, hy + 1.8, 5.9, 7.3, Math.PI * 0.96, Math.PI * 2.04), { only: hood });
+        F.deco(st.trim, 3, (m) => { m.line(cx - 7.2, hy + 2, cx - 8.6, sy + 2.5); m.line(cx + 7.2, hy + 2, cx + 8.6, sy + 2.5); }, { only: hood });
+        // 目・口・頬
+        F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
+        F.deco('white', 0, (m) => { m.dot(cx - 2, hy + 2); m.dot(cx + 3, hy + 2); });
+        F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.3, cx + 0.5, hy + 5.3));
+        F.deco('red', 0, (m) => { m.dot(cx - 3.8, hy + 4); m.dot(cx + 3.8, hy + 4); });
+      } else {
+        // 背面: フードの先が背中に垂れる（赤の縁取り）
+        F.fill(st.robe, (m) => m.poly([cx - 4.5, hy + 3, cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11, cx - 1 + tail * 0.6, sy + 11]), { k: 1.3 });
+        const flap = F.last;
+        F.deco(st.trim, 2, (m) => { m.line(cx - 4.5, hy + 3, cx - 1 + tail * 0.6, sy + 11); m.line(cx + 4.5, hy + 3, cx + 1 + tail * 0.6, sy + 11); m.line(cx - 1 + tail * 0.6, sy + 11, cx + 1 + tail * 0.6, sy + 11); }, { only: flap });
+        F.deco('white', 3, (m) => m.line(cx, hy - 7, cx, hy + 2), { only: hood });
+      }
     }
     // 杖を持つ腕と杖（正面: 杖は体の手前）
-    robeArm(F, ks, hd, armSide * 1.2);
-    if (!back) staff(F, hd, dir, S.up, S.down, p);
+    robeArm(F, ks, hd, armSide * 1.2, {}, st);
+    if (!back) staff(F, hd, dir, S.up, S.down, p, st);
     hand(F, hd);
   }
 
-  function whmSide(F, p) {
+  function whmSide(F, p, st = ROBE_STYLE.whm) {
     const b = p.bob ?? 0, jump = p.jump ?? 0, lean = p.lean ?? 0, tail = p.tail ?? 0;
     const cx = 31, ux = cx + lean;
     const hipY = 38 - jump, sy = 26 + b - jump, hy = 17 + b + (p.headDy ?? 0) - jump;
@@ -714,7 +791,7 @@
     // 奥の腕（左手）
     const fsh = V(ux - 1, sy + 1.5);
     const fh = p.free === 'up' ? V(ux - 1, sy - 8) : p.free === 'forward' ? V(ux + 11, sy + 1) : p.free === 'chest' ? V(ux + 5, sy + 6) : V(ux - 3 + (p.freeSwing ?? 0), hipY + 1);
-    robeArm(F, fsh, fh, -1.2, { dark: 1 });
+    robeArm(F, fsh, fh, -1.2, { dark: 1 }, st);
     hand(F, fh, 1);
     // 足（前後に開く）
     const fA = p.fa ?? 0, fB = p.fb ?? 0, footY = 58 - jump * 0.3;
@@ -723,29 +800,33 @@
     // ローブ（横から。裾は足に合わせて前後に広がる）
     const hem = 56.5 - jump * 0.3;
     const x0 = cx - 8 + Math.min(fA, fB, 0) * 0.7, x1 = cx + 8 + Math.max(fA, fB, 0) * 0.7;
-    F.fill('white', (m) => m.poly([ux - 5.5, sy - 0.5, ux + 4.5, sy - 0.5, x1, hem - Math.max(p.la ?? 0, 0) * 0.4, x0, hem - Math.max(p.lb ?? 0, 0) * 0.4]), { k: 1.2 });
+    F.fill(st.robe, (m) => m.poly([ux - 5.5, sy - 0.5, ux + 4.5, sy - 0.5, x1, hem - Math.max(p.la ?? 0, 0) * 0.4, x0, hem - Math.max(p.lb ?? 0, 0) * 0.4]), { k: 1.2 });
     const robe = F.last;
-    F.deco('red', 2, (m) => hemTri(m, x0, x1, hem - 0.6), { only: robe });
-    F.deco('red', 2, (m) => m.line(ux + 4, sy + 6, x1 - 2, hem - 2), { only: robe });
+    F.deco(st.trim, 2, (m) => hemTri(m, x0, x1, hem - 0.6), { only: robe });
+    F.deco(st.trim, 2, (m) => m.line(ux + 4, sy + 6, x1 - 2, hem - 2), { only: robe });
     F.deco('gold', 1, (m) => m.line(ux - 5.5, hipY - 1, ux + 5, hipY - 1), { only: robe });
-    // 頭（横顔）とフード
-    F.fill('white', (m) => {
-      m.ellipse(ux - 0.5, hy - 0.3, 7.6, 8.4);
-      m.poly([ux - 6.5, hy - 1, ux - 3, hy + 6, ux - 8.5 - tail * 0.6, hy + 10 + tail * 0.3]);
-      m.poly([ux - 6, hy + 2, ux + 4, hy + 2, ux + 5, sy + 3, ux - 7, sy + 3]);
-      m.poly([ux - 3.5, hy - 7, ux + 1.5, hy - 8, ux - 3 - tail * 0.4, hy - 10]);
-    }, { k: 1.5 });
-    const hood = F.last;
-    F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); }, { k: 1.8 });
-    F.fill('leather', (m) => { m.ellipse(ux + 2.5, hy - 2, 4.6, 2.8); m.cut().rect(0, hy - 0.2, 64, 20).add(); m.poly([ux + 3, hy - 1.5, ux + 6.6, hy - 1.5, ux + 5.3, hy + 1.6]); }, { k: 1.4 });
-    F.deco('red', 2, (m) => m.band(ux + 2.6, hy + 1.8, 5.0, 6.3, Math.PI * 0.55, Math.PI * 1.9), { only: hood });
-    F.deco('white', 3, (m) => m.line(ux - 5, hy + 1, ux - 7.5 - tail * 0.6, hy + 9), { only: hood });
-    F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
-    F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
-    F.deco('red', 0, (m) => m.dot(ux + 3.6, hy + 4.3));
+    if (st.head === 'hat') hatSide(F, ux, hy, sy, tail, st);
+    else if (st.head === 'hair') hairSide(F, ux, hy, sy, tail, st);
+    else {
+      // 頭（横顔）とフード
+      F.fill(st.robe, (m) => {
+        m.ellipse(ux - 0.5, hy - 0.3, 7.6, 8.4);
+        m.poly([ux - 6.5, hy - 1, ux - 3, hy + 6, ux - 8.5 - tail * 0.6, hy + 10 + tail * 0.3]);
+        m.poly([ux - 6, hy + 2, ux + 4, hy + 2, ux + 5, sy + 3, ux - 7, sy + 3]);
+        m.poly([ux - 3.5, hy - 7, ux + 1.5, hy - 8, ux - 3 - tail * 0.4, hy - 10]);
+      }, { k: 1.5 });
+      const hood = F.last;
+      F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); }, { k: 1.8 });
+      F.fill('leather', (m) => { m.ellipse(ux + 2.5, hy - 2, 4.6, 2.8); m.cut().rect(0, hy - 0.2, 64, 20).add(); m.poly([ux + 3, hy - 1.5, ux + 6.6, hy - 1.5, ux + 5.3, hy + 1.6]); }, { k: 1.4 });
+      F.deco(st.trim, 2, (m) => m.band(ux + 2.6, hy + 1.8, 5.0, 6.3, Math.PI * 0.55, Math.PI * 1.9), { only: hood });
+      F.deco('white', 3, (m) => m.line(ux - 5, hy + 1, ux - 7.5 - tail * 0.6, hy + 9), { only: hood });
+      F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
+      F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
+      F.deco('red', 0, (m) => m.dot(ux + 3.6, hy + 4.3));
+    }
     // 手前の腕（右手）と杖
-    robeArm(F, ks, hd, 1.2);
-    staff(F, hd, dir, S.up, S.down, p);
+    robeArm(F, ks, hd, 1.2, {}, st);
+    staff(F, hd, dir, S.up, S.down, p, st);
     hand(F, hd);
   }
   const WHM_ANIMS = {
@@ -1026,6 +1107,42 @@
     g.strokeStyle = 'rgba(170,255,230,0.8)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(m, m - r + 2); g.quadraticCurveTo(m + 3, m - r - 5, m - 1, 1); g.stroke();
     return c;
   }
+  // アーサリースター: 星図の玉（青い球に星座の線）と、中心の 8 本の光の星。巨星のときは色を金にして大きく出す
+  function starCanvas() {
+    const N = 192, c = canvas(N, N), g = c.getContext('2d'), m = N / 2;
+    const halo = g.createRadialGradient(m, m, 0, m, m, m);
+    halo.addColorStop(0, 'rgba(255,255,255,0.9)'); halo.addColorStop(0.3, 'rgba(170,200,255,0.45)'); halo.addColorStop(0.7, 'rgba(90,130,255,0.12)'); halo.addColorStop(1, 'rgba(90,130,255,0)');
+    g.fillStyle = halo; g.fillRect(0, 0, N, N);
+    // 星図の球（縁が明るく、中は透ける）
+    const R = 46;
+    const sph = g.createRadialGradient(m - 14, m - 16, 6, m, m, R);
+    sph.addColorStop(0, 'rgba(220,235,255,0.35)'); sph.addColorStop(0.75, 'rgba(90,130,230,0.18)'); sph.addColorStop(1, 'rgba(170,205,255,0.7)');
+    g.fillStyle = sph; g.beginPath(); g.arc(m, m, R, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = 'rgba(210,228,255,0.8)'; g.lineWidth = 2; g.stroke();
+    // 経線・緯線と星座の線
+    g.strokeStyle = 'rgba(200,220,255,0.45)'; g.lineWidth = 1.2;
+    g.beginPath(); g.ellipse(m, m, R, R * 0.35, 0, 0, Math.PI * 2); g.stroke();
+    g.beginPath(); g.ellipse(m, m, R * 0.4, R, 0, 0, Math.PI * 2); g.stroke();
+    const pts = [[-24, -10], [-8, -22], [10, -12], [22, 8], [4, 20], [-16, 14]];
+    g.strokeStyle = 'rgba(255,240,200,0.75)'; g.lineWidth = 1.4; g.beginPath();
+    pts.forEach(([x, y], i) => (i ? g.lineTo(m + x, m + y) : g.moveTo(m + x, m + y))); g.stroke();
+    g.fillStyle = 'rgba(255,250,230,1)';
+    for (const [x, y] of pts) { g.beginPath(); g.arc(m + x, m + y, 2.2, 0, Math.PI * 2); g.fill(); }
+    // 中心の星（8 本の光）
+    g.save(); g.translate(m, m);
+    for (let i = 0; i < 8; i++) {
+      const len = i % 2 ? 24 : 40, w = i % 2 ? 3 : 5;
+      g.rotate(Math.PI / 4);
+      const lg = g.createLinearGradient(0, 0, 0, -len);
+      lg.addColorStop(0, 'rgba(255,255,255,1)'); lg.addColorStop(1, 'rgba(200,220,255,0)');
+      g.fillStyle = lg; g.beginPath(); g.moveTo(-w, 0); g.lineTo(0, -len); g.lineTo(w, 0); g.closePath(); g.fill();
+    }
+    g.restore();
+    const core = g.createRadialGradient(m, m, 0, m, m, 12);
+    core.addColorStop(0, 'rgba(255,255,255,1)'); core.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = core; g.fillRect(m - 12, m - 12, 24, 24);
+    return c;
+  }
   // きらめき（十字の光）
   function glintCanvas() {
     const N = 32, c = canvas(N, N), g = c.getContext('2d'), m = N / 2;
@@ -1044,9 +1161,11 @@
       player: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
       tank: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
       whm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
+      ast: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
+      blm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
       boss: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),
       props: buildProps(),
-      vfx: { lilyHeart: lilyHeartCanvas(), lilyFlower: lilyFlowerCanvas(), lilyBubble: lilyBubbleCanvas(), glint: glintCanvas(), LILY },
+      vfx: { lilyHeart: lilyHeartCanvas(), lilyFlower: lilyFlowerCanvas(), lilyBubble: lilyBubbleCanvas(), glint: glintCanvas(), star: starCanvas(), LILY },
     };
     cache.ms = Math.round(performance.now() - t0);
     return cache;

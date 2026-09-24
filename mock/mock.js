@@ -55,6 +55,20 @@
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
+    zoneSet: (kind, o) => Arena.zoneSet(kind, o), zoneHitsBoss: (kind) => Arena.zoneHitsBoss(kind),
+    // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
+    mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
+    // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
+    get who() { return actWho; }, hpOf: (who) => Arena.hpOf(who),
+    // ジョブの決まりが出すダメージ（アーサリースターの爆発など）。威力 → ダメージ（与ダメージ上昇込み）
+    hit(potency, name) {
+      if (!(potency > 0)) return 0;
+      const dmg = dealDamage(potency, dmgMult());
+      Arena.hitText(name, dmg);
+      addLog('ok', `${name}  ${dmg.toLocaleString('ja-JP')}`);
+      ev('使用', { action: name, result: '追加の攻撃', potency, dmg });
+      return dmg;
+    },
   };
   let actWho = null; // 使っている技の味方の対象（'self' / 'npc'）。効果が出る間だけ（詠唱のある技は詠唱の終わり）
   const aimWho = (who) => (actWho && who === 'low' ? actWho : who);
@@ -162,12 +176,12 @@
   function dmgMult() {
     let m = 1;
     for (const [name, pctUp] of DMG_UP) { const k = statusByName[name]; if (k && has(k)) m *= 1 + pctUp / 100; }
-    return m;
+    return m * (J.dmgMult?.() ?? 1); // ジョブの決まりの与ダメージ上昇（占星術師のディヴィネーション・カードなど）
   }
   // 威力: 通常・コンボ時・背面／側面（方向指定が成功したとき）・「〜時威力」（そのステータス中）
   function potencyOf(a, ok, pos) {
     const p = a.pot;
-    if (!p || p.base == null) return 0;
+    if (!p || p.base == null || J.noHit?.(a.id)) return 0; // 使ったときには攻撃しない技（アーサリースターは爆発のときに攻撃する）
     const combo = ok && a.comboFrom.length > 0;
     let v = combo && p.combo != null ? p.combo : p.base;
     if (pos?.ok && pos.need === 'rear') v = combo ? p.comboRear ?? v : p.rear ?? v;

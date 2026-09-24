@@ -565,5 +565,251 @@
     },
   };
 
-  window.MockJobs = { SAM, PLD, WHM };
+  // ---------------- 占星術師 ----------------
+  // 説明文から:
+  //   アストラルドロー → プレイI〜III・マイナーアルカナがアーゼマの均衡・オシュオンの矢・ビエルゴの塔・クラウンロードに変わる。
+  //   使うとアンブラルドロー（ハルオーネの槍・世界樹の幹・サリャクの水瓶・クラウンレディ）に変わる。リキャストは共有（55 秒）
+  //   アーゼマの均衡: 近接攻撃が主体なら与ダメージ 6%、それ以外 3%（15 秒）/ ハルオーネの槍: 遠隔攻撃が主体なら 6%、それ以外 3%
+  //   ディヴィネーション: 自分と周囲の与ダメージ 6%（20 秒）＋オラクル実行可（30 秒）
+  //   アーサリースター: 置くと星の支配者（10 秒）。時間が過ぎると巨星の支配者（10 秒）。再使用か巨星の時間切れで爆発
+  //   マクロコスモス: 15 秒のあいだ受けたダメージを溜め、終わり（かミクロコスモス）で 回復力 200 ＋ 溜めた分の 50% を回復
+  // 仮（説明文にない）: 占星術師自身は「遠隔攻撃が主体」とみなす（均衡 3%・槍 6%）。相方のタンクは「近接攻撃が主体」。
+  //   運命の輪は、置いた場所に留まる効果を省き、実行時の軽減と継続回復だけ（GAME-67）。ベネフィクの「次のベネフィラが必ずクリティカル」は未対応
+  const AST = {
+    abbr: 'AST',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        MALEFIC: 25871, COMBUST: 16554, GRAVITY: 25872, BENEFIC: 3594, BENEFIC2: 3610, ASPB: 3595, HELIOS: 3600, CHELIOS: 37030, ASCEND: 3603,
+        LIGHTSPEED: 3606, DIGNITY: 3614, SYNASTRY: 3612, COLLECTIVE: 3613, STAR: 7439, DIVINATION: 16552, OPPOSITION: 16553, INTERSECTION: 16556,
+        HOROSCOPE: 16557, NEUTRAL: 16559, EXALT: 25873, MACRO: 25874, MICRO: 25875, ADRAW: 37017, UDRAW: 37018, PLAY1: 37019, PLAY2: 37020, PLAY3: 37021, MINOR: 37022,
+        BALANCE: 37023, ARROW: 37024, SPIRE: 37025, SPEAR: 37026, BOLE: 37027, EWER: 37028, LORD: 7444, LADY: 7445, ORACLE: 37029, SUNSIGN: 37031, SWIFT: 7561,
+      };
+      // カード（ゲージの絵の番号はパーツリスト 2 の並び: 0 均衡・1 幹・2 矢・3 槍・4 塔・5 水瓶・6 レディ・7 ロード）
+      const DRAWS = {
+        astral: { p1: 'balance', p2: 'arrow', p3: 'spire', minor: 'lord' },
+        umbral: { p1: 'spear', p2: 'bole', p3: 'ewer', minor: 'lady' },
+      };
+      const CARD_ID = { balance: ID.BALANCE, arrow: ID.ARROW, spire: ID.SPIRE, spear: ID.SPEAR, bole: ID.BOLE, ewer: ID.EWER, lord: ID.LORD, lady: ID.LADY };
+      const SLOT_OF = { [ID.PLAY1]: 'p1', [ID.PLAY2]: 'p2', [ID.PLAY3]: 'p3', [ID.MINOR]: 'minor' };
+      const CARD_SLOT = Object.fromEntries(Object.entries(DRAWS).flatMap(([, d]) => Object.entries(d).map(([slot, c]) => [CARD_ID[c], slot])));
+      const STATUS = {
+        combust: { name: 'コンバガ', target: true, tracked: true },
+        lightspeed: { name: 'ライトスピード' },
+        divination: { name: 'ディヴィネーション', tracked: true },
+        oracleReady: { name: 'オラクル実行可' },
+        neutral: { name: 'ニュートラルセクト' },
+        sunsignReady: { name: 'サンサイン実行可' },
+        swift: { name: '迅速魔' },
+        surecast: { name: '堅実魔' },
+        lucid: { name: 'ルーシッドドリーム' },
+        earthly: { name: '星の支配者' },
+        giant: { name: '巨星の支配者' },
+        horoscope: { name: 'ホロスコープ' },
+        horoscopeH: { name: 'ホロスコープ・ヘリオス' },
+        macro: { name: 'マクロコスモス' },
+        synastry: { name: 'シナストリー' },
+        balance: { name: 'アーゼマの均衡' },
+        spear: { name: 'ハルオーネの槍' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const isSpell = (a) => a.category === 2;
+      const Au = () => window.MockAudio;
+      const STAR = { r: A[ID.STAR]?.effectRange || 20, dmg: [205, 310], heal: [540, 720], ms: 10000 };
+      // 味方への回復量の倍率: ニュートラルセクト（回復魔法 +20%）
+      const healUp = (a) => (isSpell(a) && has('neutral') ? 1.2 : 1);
+      // アーサリースターの爆発（再使用・巨星の時間切れ）
+      function starBurst(why) {
+        const s = S(), st = s.star;
+        if (!st) return;
+        const g = st.giant ? 1 : 0;
+        s.star = null; R.remove('earthly'); R.remove('giant');
+        R.zoneHeal('star', STAR.heal[g] * HEAL_K, 'burst');
+        if (R.zoneHitsBoss('star')) R.hit(STAR.dmg[g], g ? 'ステラエクスプロージョン' : 'ステラバースト');
+        R.zoneEnd('star');
+        R.addLog('ok', `アーサリースター: ${why}（${g ? 'ステラエクスプロージョン' : 'ステラバースト'}）`);
+        if (!g) { s.stats.starEarly++; }
+        Au()?.finisher(g ? 'ka' : 'setsu');
+      }
+      // ホロスコープの回復（再使用・時間切れ）: ホロスコープ 回復力 200 / ホロスコープ・ヘリオス 400
+      function horoscopeHeal(why, kind) {
+        const hh = kind ? kind === 'hh' : has('horoscopeH');
+        if (!kind && !hh && !has('horoscope')) return;
+        S().horo = null;
+        R.remove('horoscope'); R.remove('horoscopeH');
+        R.heal('party', (hh ? 400 : 200) * HEAL_K);
+        R.addLog('ok', `ホロスコープ: ${why}（回復力 ${hh ? 400 : 200}）`);
+      }
+      function macroEnd(why) {
+        const s = S(), m = s.macroC;
+        if (!m) return;
+        s.macroC = null; R.remove('macro');
+        for (const who of ['self', 'npc']) {
+          const lost = Math.max(0, (m.hp[who] ?? 0) - R.hpOf(who));
+          R.heal(who, 200 * HEAL_K + lost * 0.5);
+        }
+        R.addLog('ok', `マクロコスモス: ${why}（回復力 200 ＋ 受けたダメージの 50%）`);
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // ライトスピード 2・ディグニティ 3・星天交差 2
+        prepull: new Set([ID.ADRAW, ID.UDRAW, ID.SWIFT, ID.LIGHTSPEED, ID.STAR]),
+        comboStarters: new Set(),
+        procStatus: {},
+        dot: { key: 'combust' },
+        initState(s) { s.cards = { p1: null, p2: null, p3: null, minor: null }; s.nextDraw = 'astral'; s.star = null; s.macroC = null; s.exalt = []; s.synastry = null; s.stats.cardsPlayed = 0; s.stats.cardsLost = 0; s.stats.starEarly = 0; s.horo = null; },
+        // 効果時間中の再使用: アーサリースター（爆発）・ホロスコープ（回復）はリキャストを待たない
+        freeUse: (id) => (id === ID.STAR && !!S().star) || (id === ID.HOROSCOPE && (has('horoscope') || has('horoscopeH'))),
+        instantNow: (id) => id === ID.STAR && !!S().star,
+        noHit: (id) => id === ID.STAR, // 置いたとき・再使用のときは攻撃しない（爆発で攻撃する）
+        gaugeCols: [['カード', (s) => Object.values(s.cards).filter(Boolean).join('/')], ['次のドロー', (s) => s.nextDraw]],
+        tracked: [['コンバガ', 'combust', '#ffd88a', '切れる前（残り 3 秒ほど）に付け直す'], ['ディヴィネーション', 'divination', '#b8c8ff', '120 秒ごとに。オラクルも忘れずに']],
+        // 自分の与ダメージ: ディヴィネーション 6%・自分に使ったカード（均衡 3%・槍 6%）
+        dmgMult: () => (has('divination') ? 1.06 : 1) * (has('balance') ? 1.03 : 1) * (has('spear') ? 1.06 : 1),
+        speed: () => 1,
+        comboFree: () => false,
+        resolve(id) {
+          const s = S();
+          if (id === ID.ADRAW || id === ID.UDRAW) return s.nextDraw === 'umbral' ? ID.UDRAW : ID.ADRAW;
+          const slot = SLOT_OF[id];
+          if (slot) return s.cards[slot] ? CARD_ID[s.cards[slot]] : id;
+          if (id === ID.MACRO && s.macroC) return ID.MICRO;
+          return tooltipResolve(R, J, id);
+        },
+        blocked(id) {
+          if (SLOT_OF[id]) return 'カードを引いていません（アストラルドロー / アンブラルドローで引く）';
+          if (CARD_SLOT[id] && !S().cards[CARD_SLOT[id]]) return 'そのカードは引いていません';
+          if (id === ID.MICRO && !S().macroC) return '「マクロコスモス」の効果中ではありません';
+          if (id === ID.ASCEND && !R.npcDown()) return '戦闘不能の味方がいません';
+          return tooltipBlocked(R, J, A[id]);
+        },
+        // 詠唱時間: 迅速魔は無し、ライトスピードは 2.5 秒短縮（説明文）
+        castMs(a, base) {
+          if (!base) return 0;
+          if (isSpell(a) && has('swift')) return 0;
+          if (isSpell(a) && has('lightspeed')) return Math.max(0, base - 2500);
+          return base;
+        },
+        effects(id, ok) {
+          const a = A[id], s = S();
+          if (id === ID.STAR && s.star) { starBurst('再使用'); return; }
+          if (id === ID.HOROSCOPE && (has('horoscope') || has('horoscopeH'))) { horoscopeHeal('再使用'); return; }
+          const swiftUsed = isSpell(a) && a.castMs > 0 && has('swift');
+          tooltipEffects(R, J, a, ok, {});
+          if (swiftUsed) R.remove('swift');
+          if (a.pot?.dot) R.buff('combust', a.pot.dot.sec * 1000);
+          // ドロー: 前のカードは消える（使っていなければ数える）。次は反対のドロー
+          if (id === ID.ADRAW || id === ID.UDRAW) {
+            const lost = Object.values(s.cards).filter(Boolean).length;
+            if (lost) { s.stats.cardsLost += lost; R.addLog('warn', `使っていないカード ${lost} 枚が消えました`); R.ev('ミス', { result: 'カードの使い忘れ', note: `${lost} 枚` }); }
+            const kind = id === ID.ADRAW ? 'astral' : 'umbral';
+            s.cards = { ...DRAWS[kind] }; s.nextDraw = kind === 'astral' ? 'umbral' : 'astral';
+            return;
+          }
+          // カード: 引いた札を使う（与ダメージ・受ける回復・バリア・軽減・継続回復・範囲攻撃・範囲回復）
+          if (CARD_SLOT[id]) {
+            s.cards[CARD_SLOT[id]] = null; s.stats.cardsPlayed++;
+            const who = R.who ?? 'self';
+            if (id === ID.BALANCE || id === ID.SPEAR) {
+              // 近接（相方のタンク）: 均衡 6%・槍 3%。自分（遠隔とみなす・仮）: 均衡 3%・槍 6%
+              const melee = who === 'npc', pct = (id === ID.BALANCE) === melee ? 6 : 3;
+              if (who === 'self') R.buff(id === ID.BALANCE ? 'balance' : 'spear', 15000);
+              else R.mark(who, a.name, 15, { dmgUp: pct / 100 });
+              R.addLog('ok', `${a.name}: ${who === 'npc' ? '相方' : '自分'}の与ダメージ ${pct}%`);
+            } else if (id === ID.ARROW) R.mark(who, a.name, 15, { healUp: 0.1 });
+            else if (id === ID.SPIRE) R.shield(who, 400 * HEAL_K, 30, a.name);
+            else if (id === ID.BOLE) R.mitigate(who, 0.1, 15, a.name);
+            else if (id === ID.EWER) R.hot(who, 200 * HEAL_K, 15, a.name);
+            else if (id === ID.LADY) R.heal('party', 400 * HEAL_K);
+            return; // クラウンロードは威力（説明文）で攻撃する
+          }
+          // 回復・継続回復・バリア・軽減（説明文から）
+          const up = healUp(a);
+          if (id === ID.DIGNITY) {
+            // 対象の残り HP が低いほど回復力が上がる（400〜900、30% 以下で最大）。間は直線とみなす（仮）
+            const hp = R.hpOf(R.who ?? 'self'), k = Math.max(0, Math.min(1, (1 - hp) / 0.7));
+            R.heal('low', (400 + 500 * k) * HEAL_K);
+          } else if (id === ID.INTERSECTION) {
+            R.heal('low', 200 * HEAL_K); R.shield('low', 400 * HEAL_K, 30, a.name); // バリアは回復量の 200%
+          } else if (id === ID.EXALT) {
+            R.mitigate('low', 0.1, 8, a.name); s.exalt.push({ who: R.who ?? 'self', at: s.t + 8000 }); // 終わりに回復力 500
+          } else if (id === ID.COLLECTIVE) {
+            R.mitigate('party', 0.1, 10, a.name); R.hot('party', 100 * HEAL_K, 15, a.name);
+          } else if (id === ID.SUNSIGN) {
+            R.mitigate('party', 0.1, 15, a.name);
+          } else if (id !== ID.MACRO && id !== ID.MICRO) support(R, a, { healUp: up });
+          // ニュートラルセクト中: アスペクト・ベネフィク（回復量の 250%）・コンジャンクション・ヘリオス（125%）にバリア
+          if (has('neutral') && id === ID.ASPB) R.shield('low', 250 * HEAL_K * up * 2.5, 30, 'ニュートラルセクト');
+          if (has('neutral') && id === ID.CHELIOS) R.shield('party', 250 * HEAL_K * up * 1.25, 30, 'ニュートラルセクト');
+          // シナストリー: 単体回復魔法の回復量の 40% を、シナストリーの相手にも
+          if (has('synastry') && s.synastry && isSpell(a) && a.eff?.heal != null && !a.eff.party) R.heal(s.synastry, a.eff.heal * HEAL_K * up * 0.4);
+          if (id === ID.SYNASTRY) { s.synastry = R.who ?? 'npc'; R.buff('synastry', 20000); }
+          if (id === ID.SWIFT) R.buff('swift', 10000);
+          if (id === ID.LIGHTSPEED) R.buff('lightspeed', 15000);
+          if (id === ID.DIVINATION) R.buff('divination', 20000);
+          if (id === ID.NEUTRAL) R.buff('neutral', 20000);
+          if (id === ID.HOROSCOPE) R.buff('horoscope', 10000);
+          if ((id === ID.HELIOS || id === ID.CHELIOS) && (has('horoscope') || has('horoscopeH'))) { R.remove('horoscope'); R.buff('horoscopeH', 30000); }
+          if (id === ID.STAR) {
+            s.star = { at: s.t, giant: false };
+            R.remove('giant'); R.buff('earthly', STAR.ms); // 説明文の付与で両方付くので、巨星は時間が来てから
+            R.zone('star', { r: STAR.r, sec: 20 });
+            Au()?.buff();
+          }
+          if (id === ID.MACRO) { s.macroC = { at: s.t, hp: { self: R.hpOf('self'), npc: R.hpOf('npc') } }; R.buff('macro', 15000); }
+          if (id === ID.MICRO) macroEnd('ミクロコスモス');
+          if (id === ID.ASCEND) R.raise();
+        },
+        tick() {
+          const s = S();
+          // アーサリースター: 10 秒で巨星に、さらに 10 秒で爆発
+          if (s.star && !s.star.giant && s.t >= s.star.at + STAR.ms) {
+            s.star.giant = true; R.remove('earthly'); R.buff('giant', STAR.ms);
+            R.zoneSet('star', { giant: true });
+            R.addLog('ok', 'アーサリースターが巨星になりました（再使用でステラエクスプロージョン）');
+          }
+          if (s.star?.giant && s.t >= s.star.at + STAR.ms * 2) starBurst('時間切れ');
+          // ホロスコープの時間切れ（付いていた種類で回復）
+          if (s.horo && !has('horoscope') && !has('horoscopeH')) horoscopeHeal('時間切れ', s.horo);
+          if (has('horoscopeH')) s.horo = 'hh'; else if (has('horoscope')) s.horo = 'h';
+          if (s.macroC && s.t >= s.macroC.at + 15000) macroEnd('時間切れ');
+          for (const e of s.exalt.filter((x) => s.t >= x.at)) R.heal(e.who, 500 * HEAL_K);
+          s.exalt = s.exalt.filter((x) => s.t < x.at);
+        },
+        highlightOk: () => true,
+        // 光る: 引いたカード（プレイ I〜III・マイナーアルカナ）、オラクル・サンサイン（実行可の間）、巨星のアーサリースター
+        glow: (id) => (CARD_SLOT[id] ? !!S().cards[CARD_SLOT[id]] : id === ID.ORACLE ? has('oracleReady') : id === ID.SUNSIGN ? has('sunsignReady') : id === ID.STAR ? !!S().star?.giant : id === ID.MICRO ? !!S().macroC : false),
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => (A[id]?.eff?.heal != null || A[id]?.eff?.hot || id === ID.LADY ? 'heal' : id === ID.COMBUST ? 'holy' : id === ID.LORD || id === ID.ORACLE ? 'blood' : 'water'),
+        fxPower: (id) => (id === ID.ORACLE || id === ID.LORD ? 1.4 : 1),
+        fxCount: () => 1,
+        castColor: (id) => (A[id]?.eff?.heal != null ? 'heal' : 'water'),
+        castPower: 0.35,
+        gcdColor: (id) => (id === ID.MALEFIC ? '#cfe0ff' : id === ID.COMBUST ? '#ffd88a' : A[id]?.eff?.heal != null ? '#8fe8a8' : null),
+        hotOgcd: (id) => id === ID.ORACLE || id === ID.LORD || id === ID.DIVINATION,
+        sfx(id, info, Au) {
+          if (info.kind === 'buff') { if (id === ID.DIVINATION) Au.surge(); else Au.buff(); return; }
+          if (A[id]?.eff?.heal != null || A[id]?.eff?.hot) { Au.water(); return; }
+          Au.finisher(id === ID.ORACLE || id === ID.LORD ? 'ka' : 'getsu'); Au.hit(info.power);
+        },
+        tipCost: () => null,
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.cardsLost) issues.push({ loss: s.stats.cardsLost * 3, rate: s.stats.cardsLost > 2 ? 'bad' : 'ok', title: `使わずに消えたカード ${s.stats.cardsLost} 枚`, advice: '次のドローの前に、プレイ I〜III とマイナーアルカナを使い切る（均衡・槍は相方に、ロードは敵に）' });
+          if (s.stats.starEarly) issues.push({ loss: s.stats.starEarly * 2, rate: 'ok', title: `アーサリースターを巨星になる前に爆発 ${s.stats.starEarly} 回`, advice: '置いてから 10 秒待つと巨星になり、威力と回復量が上がる' });
+          metrics.push({ label: '使ったカード', value: `${s.stats.cardsPlayed} 枚`, rate: Math.max(0, 100 - s.stats.cardsLost * 20) });
+          if (!s.stats.cardsLost && s.stats.cardsPlayed > 3) goods.push('カードを使い切った');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.cardsLost * 20), posAdvice: '', comboAdvice: '光っている技（引いたカード・オラクル）を使う', castAdvice: 'フォールマレフィクの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときはライトスピード・迅速魔・コンバガ', rangeAdvice: '魔法の射程（25m）の中にいる' };
+        },
+        howto: '占星術師: フォールマレフィクを撃ち続け、コンバガを切らさない。アストラルドロー / アンブラルドローで引いたカードは、アーゼマの均衡を相方に、ハルオーネの槍を自分に、クラウンロードを敵に。ディヴィネーションの後にオラクル。回復は相方をクリック（またはパーティリスト）でターゲットして。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'AST'),
+        gaugeDefault: { JobHudAST0: { x: 70, y: 66, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  window.MockJobs = { SAM, PLD, WHM, AST };
 })();

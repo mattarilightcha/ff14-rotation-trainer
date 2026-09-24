@@ -163,6 +163,64 @@
     };
   }
 
-  const JOBS = { PLD: pld, WHM: whm };
+  // ---------------- 占星術師: アルカナゲージ（プレイ I〜III とマイナーアルカナのカード）----------------
+  // #2 = 通常表示: #6・#7・#8 プレイ I・II・III のカードの枠、#9 マイナーアルカナ（月の上）。
+  //   枠（部品 1001）の中: #3/#4 カードの絵（パーツリスト 2）・#5 枠の地・#8〜#12 きらめき（引いた直後の演出）・#13〜#17 光の演出
+  // #23 = シンプル表示: #25〜#28 に同じ並び（部品 1011。#3/#4 がカードの絵）
+  // 次のドロー（アストラル / アンブラル）は、コンパスの輪の色（#17〜#19）を青 / 金で見せる（仮）
+  const AN = { normal: 2, simple: 23, slots: [6, 7, 8, 9], sSlots: [25, 26, 27, 28], rings: [17, 18, 19] };
+  const CARD_PART = { balance: 0, bole: 1, arrow: 2, spear: 3, spire: 4, ewer: 5, lady: 6, lord: 7 };
+  const SLOTS = ['p1', 'p2', 'p3', 'minor'];
+  function ast(G) {
+    const L = G.layouts.JobHudAST0;
+    const K = U.build(L, G.textures);
+    const k = (id) => K.get(id);
+    const P2 = partsOf(L, 2), tex = G.textures.JobHudAST0;
+    let simple = false, prev = { cards: {}, next: null };
+    for (const sl of AN.slots) for (const c of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]) set(k(`${sl}/${c}`), { opacity: 0 });
+    for (const id of [20, 21, 22]) set(k(id), { opacity: 0 });
+    k(AN.simple).hidden = true;
+    function card(i, c, instant) {
+      const sl = AN.slots[i], ss = AN.sSlots[i];
+      for (const [node, simple2] of [[sl, false], [ss, true]]) {
+        const img = K.img(`${node}/4`);
+        if (c) usePart(img, tex, P2[CARD_PART[c]]);
+        // 絵の置き場（#3）は枠より 10px 上にあるので、枠の真ん中へ下げる（通常表示）
+        set(k(`${node}/3`), { opacity: c ? 1 : 0, translate: simple2 ? '0 0' : '0 10px', scale: simple2 ? '1' : '0.86' });
+        if (!simple2) set(k(`${node}/5`), { opacity: c ? 0.35 : 0.7 });
+      }
+      if (instant || !c) return;
+      // 引いた: カードが表を向いて現れ、きらめきが散る
+      anim(k(`${sl}/3`), [{ opacity: 0, transform: 'scaleX(0.1)' }, { opacity: 1, transform: 'none' }], { duration: 320 });
+      for (const sp of [8, 9, 10, 11, 12]) anim(k(`${sl}/${sp}`), [{ opacity: 0 }, { opacity: 1, offset: 0.3 }, { opacity: 0 }], { duration: 700 + sp * 30 });
+      anim(k(`${sl}/15`), [{ opacity: 0, transform: 'scale(0.6)' }, { opacity: 0.8, offset: 0.3 }, { opacity: 0, transform: 'scale(1.2)' }], { duration: 650 });
+    }
+    function used(i) {
+      const sl = AN.slots[i];
+      anim(k(`${sl}/16`), [{ opacity: 0.9, transform: 'scale(0.8)' }, { opacity: 0, transform: 'scale(1.4)' }], { duration: 500 });
+    }
+    function apply(st, instant) {
+      const cards = st.cards ?? {};
+      SLOTS.forEach((s2, i) => {
+        const c = cards[s2] ?? null, was = prev.cards[s2] ?? null;
+        if (instant || c !== was) { if (!instant && was && !c) used(i); card(i, c, instant); }
+      });
+      const next = st.nextDraw ?? 'astral';
+      if (instant || next !== prev.next) {
+        // 次のドローの色: アストラル = 青、アンブラル = 金（仮）
+        const hue = next === 'umbral' ? 'hue-rotate(200deg) saturate(1.4)' : 'none';
+        for (const r of AN.rings) set(k(r), { filter: hue });
+      }
+      prev = { cards: { ...cards }, next };
+    }
+    function setSimple(v) { simple = !!v; k(AN.normal).hidden = simple; k(AN.simple).hidden = !simple; }
+    apply({ cards: {}, nextDraw: 'astral' }, true);
+    return {
+      windows: [{ name: 'JobHudAST0', label: 'アルカナゲージ', el: K.el, w: K.w, h: K.h }],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  const JOBS = { PLD: pld, WHM: whm, AST: ast };
   window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
 })();

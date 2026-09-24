@@ -30,6 +30,7 @@
     buff: ['#fffbe3', '#ffd46b'], blood: ['#ffecec', '#ff3b3b'], water: ['#f0fbff', '#7fd8ff'],
     holy: ['#fffbe8', '#ffe08a'], heal: ['#f0fff4', '#6fe89a'],
     lily: ['#f4ffff', '#6fe6e0'], dome: ['#eef8ff', '#7ab8ff'], // リタージー・オブ・ベル（水色のガラス）・アサイラム（青白いドーム）
+    star: ['#f4f8ff', '#7aa8ff'], giant: ['#fff8e0', '#ffc86a'], // アーサリースター（青い星 → 巨星は金）
   };
   const MECH = {
     circle: { name: '大旋風', hint: '敵の周囲に円形範囲。離れる' },
@@ -80,7 +81,7 @@
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -173,7 +174,7 @@
     Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
     hots = []; zones = []; target = 'boss';
-    for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; }
+    for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; e.marks = []; }
     placeTank(true);
     if (!bossHasTank()) boss.face = Math.PI / 2;
     tankName.querySelector('.nm').textContent = npcHealer() ? 'ヒーラー' : 'タンク';
@@ -598,9 +599,20 @@
     }
   }
   // パーティリストに出す、相方・自分に付いている回復役の効果（継続回復・バリア・軽減）。until は秒（練習場の時計）
+  // 味方に付けた効果（カードの与ダメージ上昇・受ける回復アップなど）。o.healUp: 受ける回復の割合の上乗せ
+  function markOn(who, name, sec, o = {}) {
+    for (const e of partyOf(who)) {
+      if (!e || (e === tank && tank.down > 0)) continue;
+      e.marks = (e.marks ?? []).filter((m) => m.until > clock && m.name !== name);
+      e.marks.push({ name, until: clock + sec, ...o });
+      fx.push({ type: 'ring', at: e, col: COLORS.buff, t: 0, dur: 600, r0: 0.3, r1: 1.6 });
+      flyText(name, 'buff', e, 0.2);
+    }
+  }
   function partyStatus(which) {
     const e = which === 'npc' ? tank : player;
     const out = [];
+    for (const m of e.marks ?? []) if (m.until > clock) out.push({ name: m.name, left: m.until - clock, kind: 'buff' });
     for (const h of hots) if (h.e === e && h.until > clock) out.push({ name: h.name, left: h.until - clock, kind: 'hot' });
     if (e.shield > 0.001 && e.shieldUntil > clock) out.push({ name: e.shieldName ?? 'バリア', left: e.shieldUntil - clock, kind: 'shield' });
     for (const m of e.mits ?? []) if (m.until > clock) out.push({ name: m.name, left: m.until - clock, kind: 'mit' });
@@ -610,6 +622,7 @@
     if (!e || (e === player && player.down > 0) || (e === tank && (tank.hp <= 0 || tank.down > 0))) return false;
     // アサイラムの中にいると、受ける回復が 10% 上がる（説明文「受けるＨＰ回復効果が10％上昇する」）
     if (zones.some((z) => z.kind === 'asylum' && !z.dying && Math.hypot(e.x - z.x, e.y - z.y) <= z.r)) frac *= 1.1;
+    for (const m of e.marks ?? []) if (m.until > clock && m.healUp) frac *= 1 + m.healUp; // オシュオンの矢（受ける回復 +10%）
     const before = e.hp;
     e.hp = Math.min(1, e.hp + frac);
     healFx(e, quiet);
@@ -639,10 +652,10 @@
     for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; } // 置き直すと前のものは消える
     // リタージー・オブ・ベルは自分の横（自分が攻撃を受けると鳴り、20m 以内を回復するため）。アサイラムは自分と相方の間
     // o.at: クリックで選んだ場所（なければ自動: パッドなど）
-    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : zonePlace(r);
+    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : zonePlace(r);
     const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [] };
     zones.push(z);
-    const col = kind === 'bell' ? COLORS.lily : COLORS.dome;
+    const col = kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : COLORS.dome;
     fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col, t: 0, dur: 750, r0: 0.5, r1: kind === 'bell' ? 4 : r, thick: true });
     if (kind === 'bell') {
       // すずらんが生える: 足元から水色の光の粒が噴き上がる
@@ -679,6 +692,16 @@
         const a = rand(0, Math.PI * 2), sp = rand(2, 6);
         spark({ x: z.x, y: z.y, z: BELL_H + rand(-0.6, 1.2), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, vz: rand(-1, 2.5), g: 1.2, drag: 1.5, life: rand(0.6, 1.2), max: 1.2, col: i % 2 ? '#ffffff' : '#9ff6ff', size: i % 3 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-6, 6) });
       }
+    } else if (kind === 'star') {
+      // アーサリースターの爆発: 星が弾け、光の輪が範囲の端まで広がる（巨星は金で大きく）
+      const c = z.giant ? COLORS.giant : COLORS.star;
+      z.ringAt = clock;
+      fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col: c, t: 0, dur: 1000, r0: 1, r1: z.r, thick: true });
+      fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: c, t: 0, dur: 700, power: z.giant ? 2.4 : 1.6 });
+      for (let i = 0; i < (z.giant ? 80 : 50); i++) {
+        const a = rand(0, Math.PI * 2), sp = rand(2, z.giant ? 8 : 6);
+        spark({ x: z.x, y: z.y, z: 1.6 + rand(-0.4, 0.8), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, vz: rand(-1, 3), g: 1, drag: 1.4, life: rand(0.6, 1.3), max: 1.3, col: i % 2 ? '#ffffff' : c[1], size: i % 3 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-6, 6) });
+      }
     } else if (style === 'tick') {
       z.ringAt = clock;
     }
@@ -701,6 +724,13 @@
         for (let i = 0; i < n; i++) {
           const a = rand(0, Math.PI * 2), rr = Math.sqrt(Math.random()) * z.r * 0.95;
           spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.05, vz: rand(0.5, 1.4), g: 0, drag: 0.2, life: rand(1.2, 2), max: 2, col: i % 3 ? '#b8ffd0' : '#ffffff', size: 1, sway: 0.4, rot: rand(0, 6.28) });
+        }
+      } else if (z.kind === 'star') {
+        // 星のまわりを回る光の粒（巨星は金）
+        const n = Math.round(vdt * (z.giant ? 18 : 10) + Math.random() * 0.6), c = z.giant ? '#ffd88a' : '#9cc4ff';
+        for (let i = 0; i < n; i++) {
+          const a = rand(0, Math.PI * 2), rr = rand(0.6, z.giant ? 2.6 : 1.8);
+          spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: rand(0.6, 2.8), vx: -Math.sin(a) * 1.2, vy: Math.cos(a) * 1.2, vz: rand(-0.2, 0.4), g: 0, drag: 0.4, life: rand(0.7, 1.3), max: 1.3, col: i % 3 ? c : '#ffffff', size: i % 5 ? 1 : 2, shape: 2, rot: rand(0, 6.28), spin: rand(-3, 3) });
         }
       } else {
         // すずらんのまわりのきらめき（水色と白。ゆっくり漂う）
@@ -1342,7 +1372,13 @@
     pickAt: (px, py) => (view3d() ? R3.pick(px, py) : null),
     screenOf: (k) => { const e = { player, tank, boss }[k]; return project(e.x, e.y, HEAD[k] * 0.25); }, // 動作確認用: 人物の腰の画面位置（舞台の px）
     distTo: (k) => (k === 'tank' ? dist(player, tank) : k === 'boss' ? Math.max(0, dist(player, boss) - POL.hitbox) : 0),
-    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, partyStatus,
+    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
+    // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
+    zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
+    zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },
+    // ジョブの決まりが出すダメージ（アーサリースターの爆発など）: 敵の上に技名とダメージ
+    hitText: (name, dmg) => flyText(name, '', boss, 0.1, null, dmg),
+    hpOf: (who) => (who === 'npc' ? (hasNpc() ? tank.hp : 0) : player.hp),
     placeZone, zoneHeal, endZone, setAim: (o) => { aim = o; },
     // 画面の位置（舞台の px）→ 床の位置（m）
     groundAt: (px, py) => (view3d() ? R3.ground(px, py) : R2D.ground(px, py)), zones: () => zones.filter((z) => !z.dying).map((z) => ({ kind: z.kind, x: z.x, y: z.y, r: z.r })),

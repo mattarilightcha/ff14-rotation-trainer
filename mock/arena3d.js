@@ -802,7 +802,7 @@
       return m;
     });
     // リタージー・オブ・ベルの光の絵（sprites.js の vfx）
-    const VFX = SPR.vfx, vfxTex = { heart: texOf(VFX.lilyHeart), flower: texOf(VFX.lilyFlower), bubble: texOf(VFX.lilyBubble) };
+    const VFX = SPR.vfx, vfxTex = { heart: texOf(VFX.lilyHeart), flower: texOf(VFX.lilyFlower), bubble: texOf(VFX.lilyBubble), star: texOf(VFX.star) };
     function billMesh(tex) {
       const uniforms = {
         map: { value: tex }, uRect: { value: new T.Vector4(0, 0, 1, 1) }, uSize: { value: new T.Vector2(1, 1) }, uAnchor: { value: new T.Vector2(0.5, 0.5) },
@@ -812,7 +812,7 @@
       m.frustumCulled = false; m.renderOrder = 4; scene.add(m);
       return m;
     }
-    const heartPool = pool(() => billMesh(vfxTex.heart)), flowerPool = pool(() => billMesh(vfxTex.flower)), bubblePool = pool(() => billMesh(vfxTex.bubble));
+    const heartPool = pool(() => billMesh(vfxTex.heart)), flowerPool = pool(() => billMesh(vfxTex.flower)), bubblePool = pool(() => billMesh(vfxTex.bubble)), starPool = pool(() => billMesh(vfxTex.star));
     const camRight = new T.Vector3(), camUp2 = new T.Vector3();
     // 詠唱の陣
     const sigil = new T.Mesh(new T.PlaneGeometry(4.4, 4.4), new T.MeshBasicMaterial({ map: texOf(sigilCanvas()), transparent: true, blending: T.AdditiveBlending, depthWrite: false, color: 0xffc640 }));
@@ -976,7 +976,7 @@
       });
 
       // 設置型の技
-      zonePool.begin(); domePool.begin(); heartPool.begin(); flowerPool.begin(); bubblePool.begin();
+      zonePool.begin(); domePool.begin(); heartPool.begin(); flowerPool.begin(); bubblePool.begin(); starPool.begin();
       camRight.setFromMatrixColumn(camera.matrixWorld, 0); camUp2.setFromMatrixColumn(camera.matrixWorld, 1);
       for (const z of S.zones) {
         const fade = (z.dying ? Math.max(0, 1 - (S.clock - z.endAt) / 0.7) : 1) * Math.min(1, (S.clock - z.born) / 0.4);
@@ -990,6 +990,17 @@
           const dm = domePool.take(), du = dm.material.uniforms, rise = Math.min(1, (S.clock - z.born) / 0.6);
           dm.position.set(z.x, 0, z.y); dm.scale.set(z.r, z.r * DOME_FLAT * (1 - Math.pow(1 - rise, 3)), z.r);
           du.uTime.value = time; du.uAlpha.value = fade; du.uPulse.value = pulse;
+          continue;
+        }
+        if (z.kind === 'star') {
+          // アーサリースター: 床に範囲の輪、上に星図の玉が浮かんでゆっくり回る。巨星は金で大きく、脈打つ
+          const giant = !!z.giant, gk = giant ? Math.min(1, (S.clock - (z.giantAt ?? S.clock)) / 0.6) : 0;
+          u.uC0.value.copy(col(giant ? '#fff6dc' : '#eef4ff')); u.uC1.value.copy(col(giant ? '#ffb84a' : '#5a8cff'));
+          const grow = Math.min(1, (S.clock - z.born) / 0.5), sz = (2.6 + gk * 1.4) * (1 - Math.pow(1 - grow, 3)) * (1 + Math.sin(time * (giant ? 5 : 2.5)) * 0.04);
+          const sm = starPool.take(), su = sm.material.uniforms;
+          sm.position.set(z.x, 1.6 + Math.sin(time * 1.4) * 0.12, z.y);
+          su.uSize.value.set(sz, sz); su.uAnchor.value.set(0.5, 0.5); su.uOpacity.value = fade * (giant ? 0.75 : 0.8); su.uRot.value = time * 0.4;
+          if (giant) su.uColor.value.setRGB(1.05, 0.8, 0.42); else su.uColor.value.setRGB(0.72, 0.8, 1);
           continue;
         }
         u.uC0.value.copy(col('#f0ffff')); u.uC1.value.copy(col('#50d8d0'));
@@ -1020,7 +1031,7 @@
         au.uKind.value = 2; au.uC.value.set(A2.x, A2.y); au.uR.value = A2.r; au.uTime.value = time; au.uAlpha.value = 1; au.uPulse.value = 0;
         au.uC0.value.copy(col(A2.ok ? '#f4fcff' : '#ffd0c8')); au.uC1.value.copy(col(A2.ok ? '#6ac8ff' : '#ff5a4a'));
       }
-      zonePool.end(); domePool.end(); heartPool.end(); flowerPool.end(); bubblePool.end();
+      zonePool.end(); domePool.end(); heartPool.end(); flowerPool.end(); bubblePool.end(); starPool.end();
 
       // 敵の足元の輪
       ring.visible = !boss.dead;
