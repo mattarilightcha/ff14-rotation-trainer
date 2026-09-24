@@ -37,6 +37,32 @@ for (const j of jobs) {
   for (const id of j.actionIds) if (!byId.has(id)) fail(`${j.abbreviation.en} の actionIds ${id} が無い`);
 }
 
+// ---- ステータス（全件・ジョブとの結びつき） ----
+const statusesAll = load("statuses-all.json");
+// ゲームのデータにアイコンの画像が無いもの（Status 701 戦闘能力低下 の 215049）
+const knownMissingIcons = new Set(["/icons/statuses/215049.png"]);
+for (const s of statusesAll)
+  for (const p of [s.iconPath, ...(s.stackIconPaths ?? [])])
+    if (p && !knownMissingIcons.has(p) && !existsSync(join(root, "public", p))) fail(`status ${s.id} ${s.name.ja} のアイコンが無い ${p}`);
+for (const s of statuses) if (!s.jobs?.length) fail(`statuses.json の ${s.id} ${s.name.ja} にジョブが無い`);
+// 二次コストの値を誤ってステータス番号として拾っていないこと（石化 #1・スタン #2 など）
+for (const id of [1, 2, 3, 218]) if (statusById.has(id)) fail(`statuses.json に無関係のステータス ${id} が入っている`);
+const statusNamesOf = (ab) => new Set(jobs.find((j) => j.abbreviation.en === ab).statusIds.map((id) => statusById.get(id).name.ja));
+const expectedStatuses = {
+  PLD: ["ファイト・オア・フライト", "インビンシブル"], WAR: ["原初の魂", "ホルムギャング"], DRK: ["ブラッドウェポン", "リビングデッド"],
+  GNB: ["ノー・マーシー", "ネビュラ"], WHM: ["ディア", "テンパランス"], SCH: ["鼓舞", "バイオラ"], AST: ["ディヴィネーション"],
+  SGE: ["エウクラシア・ドシス"], MNK: ["踏鳴"], DRG: ["ランスチャージ", "バトルリタニー"], NIN: ["印", "かくれる"],
+  SAM: ["彼岸花", "明鏡止水"], RPR: ["アルケインサークル"], VPR: [], BRD: ["ストームバイト", "コースティックバイト"],
+  MCH: ["ワイルドファイア"], DNC: ["テクニカルステップ", "攻めのタンゴ"], BLM: ["ハイサンダー", "黒魔紋"],
+  // ステータス名はアクション名と違うことがある（サーチングライト → シアリングライト、スターリーミューズ → イマジンスカイ）
+  SMN: ["シアリングライト"], RDM: ["エンボルデン"], PCT: ["イマジンスカイ", "ハンマーコンボ実行可"],
+};
+let statusOk = 0;
+for (const [ab, names] of Object.entries(expectedStatuses)) {
+  const have = statusNamesOf(ab);
+  for (const n of names) have.has(n) ? statusOk++ : fail(`${ab} のステータスに「${n}」が無い`);
+}
+
 // ---- ジョブゲージ ----
 const gauges = load("job-gauges.json");
 for (const j of jobs.filter((j) => j.isJob)) {
@@ -135,6 +161,7 @@ for (const [id, en, exp] of expected) {
 }
 
 console.log(`game ${meta.gameVersion.ffxiv} / jobs ${jobs.length} / actions ${actions.length} / statuses ${statuses.length}`);
+console.log(`statuses-all ${statusesAll.length} / ジョブの代表ステータス ${statusOk} 件一致`);
 console.log(`job gauges ${Object.keys(gauges.jobs).length} / layouts ${liveLayouts.length} / parts ${gaugeParts} / textures ${Object.keys(gauges.textures).length}`);
 console.log(`既知の値 ${ok} 件一致、NG ${errors} 件`);
 process.exit(errors ? 1 : 0);
