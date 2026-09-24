@@ -70,6 +70,16 @@ jobs:
           printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_deploy
           chmod 600 ~/.ssh/id_deploy
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # 改行コード（CRLF）が混ざっていると鍵として読めないので除く
+          sed -i 's/\r$//' ~/.ssh/id_deploy
+          # 鍵の確認: 秘密鍵として読めるか、指紋（秘密ではない）はサーバーの公開鍵と一致するか
+          if ssh-keygen -y -f ~/.ssh/id_deploy > ~/.ssh/id_deploy.pub 2>/dev/null; then
+            echo "登録された秘密鍵の指紋: $(ssh-keygen -lf ~/.ssh/id_deploy.pub)"
+            echo "→ VPS で ssh-keygen -lf ~/.ssh/authorized_keys を実行し、同じ指紋の行があるか確認してください"
+          else
+            echo "::error::DEPLOY_SSH_KEY を秘密鍵として読めません（公開鍵 .pub を貼った / 行が欠けた / パスフレーズ付き のいずれか）"
+            exit 1
+          fi
       - name: Upload with rsync
         if: steps.check.outputs.skip != 'true'
         run: |
@@ -87,7 +97,7 @@ jobs:
           [ -n "$host" ] || { echo "::error::DEPLOY_HOST が空です"; exit 1; }
           echo "接続先: ホスト名 ${#host} 文字 / ポート $port / 置き場所 $dest"
           case "$host" in *.*|*:*) ;; *) echo "::error::DEPLOY_HOST からホスト名を読み取れません。ホスト名か IP だけを登録してください"; exit 1 ;; esac
-          ssh_cmd="ssh -i $HOME/.ssh/id_deploy -p $port -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          ssh_cmd="ssh -i $HOME/.ssh/id_deploy -o IdentitiesOnly=yes -p $port -o StrictHostKeyChecking=yes -o BatchMode=yes"
           $ssh_cmd "$user@$host" "mkdir -p '$dest'"
           rsync -rlptz --delete -e "$ssh_cmd" dist-mock/ "$user@$host:$dest/"
       - name: Smoke check
