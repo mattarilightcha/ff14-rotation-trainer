@@ -41,6 +41,3 @@ Thumbs.db
 # .NET (tools/ffxiv-extract)
 bin/
 obj/
-
-# personal save data - never commit without explicit review
-samples/hotbar-hud/UISAVE.DAT
