@@ -557,3 +557,19 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .hud-frames { position: absolute; inset: 0; pointer-events: none; z-index: 8; }
 .hud-frame { position: absolute; border: 1px dashed rgba(160, 200, 255, .6); color: #d6e6ff; font-size: 11px; padding: 1px 4px; text-shadow: var(--outline); background: rgba(80, 120, 200, .07); overflow: hidden; white-space: nowrap; }
 .hud-frame.used { border: 2px solid #e8c77a; color: #ffe7a8; background: rgba(232, 199, 122, .12); font-weight: 700; }
+
+/* ---------------- HUD の調整 ---------------- */
+.hud-hidden { display: none !important; }
+#stage.hud-edit [data-hud-key] { outline: 1px dashed rgba(255, 214, 120, .75); outline-offset: 1px; cursor: move; pointer-events: auto !important; }
+#stage.hud-edit [data-hud-key].hud-sel { outline: 2px solid #ffd678; box-shadow: 0 0 0 4px rgba(255, 214, 120, .18); }
+#stage.hud-edit [data-hud-key].hud-off { opacity: .35; }
+#stage.hud-edit [data-hud-key] * { pointer-events: none !important; }
+.hud-panel { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); z-index: 30; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 8px 12px; max-width: 640px; font-size: 13px; }
+.hud-panel b { color: var(--gold); }
+.hud-panel .hp-pick { min-width: 190px; font: inherit; font-weight: 700; background: #1b1e25; color: #fff; border: 1px solid #555; border-radius: 4px; padding: 2px 4px; }
+#stage.hud-edit [data-hud-key].hud-sel::after, #stage.hud-edit [data-hud-key]:hover::after { content: attr(data-hud-label); position: absolute; left: 0; top: 0; transform: translateY(-100%); padding: 1px 6px; font-size: 11px; font-weight: 700; color: #1a1408; background: #ffd678; border-radius: 3px 3px 0 0; white-space: nowrap; z-index: 5; pointer-events: none; }
+.hud-panel label { display: inline-flex; align-items: center; gap: 6px; }
+.hud-panel input[type=range] { width: 140px; }
+.hud-panel .hp-pct { width: 3em; font-variant-numeric: tabular-nums; }
+.hud-panel .hp-note { flex-basis: 100%; margin: 0; font-size: 11px; color: var(--dim); }
+.controls button.on { background: linear-gradient(#6a5a2a, #3e3418); border-color: #ffd678; }
