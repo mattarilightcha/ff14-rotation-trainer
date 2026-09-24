@@ -4,7 +4,7 @@
 // - 検索エンジンに載らないよう noindex を付ける（仮の公開のため）
 // 実行: node mock/package.mjs
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,6 +20,13 @@ mkdirSync(out, { recursive: true });
 // ファンキットのファイル名は URL として符号化してあるので、コピーするときは元に戻す
 let data = readFileSync(join(root, 'mock/mock-data.js'), 'utf8');
 const icons = [...new Set([...data.matchAll(/"\.\.\/public\/((?:icons|fankit)\/[^"]+)"/g)].map((m) => decodeURIComponent(m[1])))];
+// 重ねがけのあるステータスは、スタック数 n のアイコン（元の番号 + n − 1）も画面で使うので一緒に入れる
+for (const m of data.matchAll(/\{\s*"icon":\s*"\.\.\/public\/(icons\/statuses\/)\d{6}\.png",\s*"max":\s*(\d+),\s*"base":\s*(\d+)\s*\}/g)) {
+  for (let n = 1; n < Number(m[2]); n++) {
+    const rel = `${m[1]}${String(Number(m[3]) + n).padStart(6, '0')}.png`;
+    if (existsSync(join(root, 'public', rel)) && !icons.includes(rel)) icons.push(rel);
+  }
+}
 for (const rel of icons) {
   mkdirSync(join(out, dirname(rel)), { recursive: true });
   copyFileSync(join(root, 'public', rel), join(out, rel));

@@ -84,6 +84,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140,
       "combo": 300
@@ -134,6 +137,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140,
       "combo": 300
@@ -184,6 +190,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 160,
       "combo": 340
@@ -224,6 +233,9 @@ window.MOCK_DATA = {
      "positional": "rear",
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 160,
       "rear": 210,
@@ -266,6 +278,9 @@ window.MOCK_DATA = {
      "positional": "flank",
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 160,
       "flank": 210,
@@ -309,6 +324,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "combo": 120
@@ -359,6 +377,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "combo": 120
@@ -406,6 +427,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "cond": [
@@ -449,6 +473,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 680
      },
@@ -503,6 +530,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 300
      },
@@ -557,6 +587,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 200,
       "dot": {
@@ -609,6 +642,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 250
      },
@@ -651,6 +687,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -693,6 +732,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": true,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -735,6 +777,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 10,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -785,6 +830,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "cost": {
@@ -825,6 +873,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 400
      },
@@ -867,6 +918,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -902,6 +956,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -946,6 +1003,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 800,
@@ -984,6 +1044,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1019,6 +1082,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1054,6 +1120,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1089,6 +1158,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1124,6 +1196,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1159,6 +1234,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1194,6 +1272,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1229,6 +1310,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1264,6 +1348,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1299,6 +1386,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -1345,6 +1435,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 800
      },
@@ -1387,6 +1480,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -1437,6 +1533,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "requires": "燕返し実行可"
@@ -1474,6 +1573,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 300
      },
@@ -1513,6 +1615,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 680
      },
@@ -1552,6 +1657,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 640
      },
@@ -1594,6 +1702,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -1633,6 +1744,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -1670,6 +1784,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1000
      },
@@ -1717,6 +1834,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1000
      },
@@ -1756,6 +1876,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -1791,6 +1914,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 240
      },
@@ -1828,6 +1954,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 940
      },
@@ -1867,6 +1996,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 410
      },
@@ -1922,6 +2054,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1100
      },
@@ -1977,6 +2112,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 410
      },
@@ -2016,6 +2154,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1100
      },
@@ -5596,6 +5737,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 220
      },
@@ -5635,6 +5779,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 170,
       "combo": 330
@@ -5673,6 +5820,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -5710,6 +5860,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -5758,6 +5911,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -5793,6 +5949,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140,
       "dot": {
@@ -5834,6 +5993,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -5871,6 +6033,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "cost": {
@@ -5911,6 +6076,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -5946,6 +6114,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -5981,6 +6152,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 700
      },
@@ -6022,6 +6196,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 200,
       "combo": 460
@@ -6075,6 +6252,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 400,
@@ -6113,6 +6293,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 1000,
@@ -6151,6 +6334,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 120
      },
@@ -6188,6 +6374,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "cost": {
@@ -6228,6 +6417,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 400,
       "cond": [
@@ -6278,6 +6470,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6313,6 +6508,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6348,6 +6546,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6383,6 +6584,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6418,6 +6622,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6453,6 +6660,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6488,6 +6698,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6523,6 +6736,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6558,6 +6774,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6593,6 +6812,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6628,6 +6850,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -6665,6 +6890,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "combo": 220
@@ -6712,6 +6940,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "cond": [
@@ -6762,6 +6993,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 500,
       "cond": [
@@ -6809,6 +7043,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 460
      },
@@ -6856,6 +7093,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": true,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 150
      },
@@ -6893,6 +7133,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -6939,6 +7182,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -6993,6 +7239,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 450
      },
@@ -7032,6 +7281,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 260,
       "cond": [
@@ -7082,6 +7334,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 380,
       "cond": [
@@ -7132,6 +7387,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 500,
       "cond": [
@@ -7188,6 +7446,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -7227,6 +7488,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 500
      },
@@ -7276,6 +7540,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 540
      },
@@ -7317,6 +7584,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -7352,6 +7622,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 580
      },
@@ -7404,6 +7677,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1000
      },
@@ -9711,6 +9987,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 500,
@@ -9749,6 +10028,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 400,
@@ -9787,6 +10069,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -9822,6 +10107,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 600,
@@ -9860,6 +10148,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 800,
@@ -9898,6 +10189,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -9946,6 +10240,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -9986,6 +10283,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": "full",
@@ -10024,6 +10324,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -10064,6 +10367,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 700,
@@ -10102,6 +10408,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 400
      },
@@ -10142,6 +10451,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10177,6 +10489,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10212,6 +10527,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10247,6 +10565,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10282,6 +10603,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10317,6 +10641,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10352,6 +10679,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10387,6 +10717,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10422,6 +10755,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -10468,6 +10804,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -10518,6 +10857,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 85,
       "dot": {
@@ -10559,6 +10901,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -10609,6 +10954,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 1400
      },
@@ -10651,6 +10999,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -10695,6 +11046,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10730,6 +11084,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -10769,6 +11126,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 350
      },
@@ -10806,6 +11166,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 150
      },
@@ -10843,6 +11206,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10878,6 +11244,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -10922,6 +11291,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 15,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -10957,6 +11329,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 640
      },
@@ -10996,6 +11371,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -11038,6 +11416,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "requires": "ディヴァインカレス実行可",
@@ -13655,6 +14036,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 500,
@@ -13693,6 +14077,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -13735,6 +14122,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 400,
@@ -13773,6 +14163,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -13808,6 +14201,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -13843,6 +14239,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 800,
@@ -13881,6 +14280,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -13916,6 +14318,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -13951,6 +14356,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 400,
@@ -13989,6 +14397,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 205
      },
@@ -14041,6 +14452,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 400
      },
@@ -14080,6 +14494,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 400,
@@ -14120,6 +14537,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14155,6 +14575,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14190,6 +14613,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14225,6 +14651,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14260,6 +14689,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14295,6 +14727,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -14341,6 +14776,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -14385,6 +14823,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -14427,6 +14868,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 70,
       "dot": {
@@ -14468,6 +14912,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 200,
@@ -14506,6 +14953,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14541,6 +14991,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -14585,6 +15038,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14620,6 +15076,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -14659,6 +15118,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 270
      },
@@ -14696,6 +15158,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140
      },
@@ -14733,6 +15198,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 500,
@@ -14771,6 +15239,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 270
      },
@@ -14808,6 +15279,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14843,6 +15317,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14878,6 +15355,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -14915,6 +15395,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14950,6 +15433,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -14985,6 +15471,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -15020,6 +15509,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -15055,6 +15547,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -15092,6 +15587,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -15129,6 +15627,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -15166,6 +15667,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -15203,6 +15707,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": [
@@ -15240,6 +15747,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -15282,6 +15792,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 860
      },
@@ -15321,6 +15834,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "hot": {
@@ -15363,6 +15879,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "requires": "サンサイン実行可"
@@ -19036,6 +19555,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 180
      },
@@ -19082,6 +19604,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 180
      },
@@ -19119,6 +19644,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19154,6 +19682,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 290
      },
@@ -19191,6 +19722,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 290
      },
@@ -19228,6 +19762,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": true,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19263,6 +19800,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -19300,6 +19840,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19335,6 +19878,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -19386,6 +19932,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 120
      },
@@ -19425,6 +19974,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 240
      },
@@ -19472,6 +20024,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "cost": {
@@ -19516,6 +20071,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 300
      },
@@ -19555,6 +20113,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 300
      },
@@ -19602,6 +20163,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": "ley",
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19637,6 +20201,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19672,6 +20239,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -19714,6 +20284,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19749,6 +20322,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19784,6 +20360,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19819,6 +20398,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19854,6 +20436,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -19889,6 +20474,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -19935,6 +20523,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 350
      },
@@ -19974,6 +20565,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "requires": "アンブラルブリザード"
@@ -20011,6 +20605,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 890
      },
@@ -20053,6 +20650,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -20092,6 +20692,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -20129,6 +20732,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -20166,6 +20772,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -20214,6 +20823,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 540
      },
@@ -20266,6 +20878,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -20301,6 +20916,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 150,
       "dot": {
@@ -20344,6 +20962,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "dot": {
@@ -20387,6 +21008,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "requires": "黒魔紋"
@@ -20424,6 +21048,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 500
      },
@@ -25179,6 +25806,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "dmgUp": {
@@ -25219,6 +25849,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -25268,7 +25901,10 @@ window.MOCK_DATA = {
      "ground": false,
      "positional": null,
      "dash": false,
-     "backstep": 0,
+     "backstep": 10,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25304,6 +25940,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25339,6 +25978,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25374,6 +26016,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -25411,6 +26056,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25446,6 +26094,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 260
      },
@@ -25483,6 +26134,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25518,6 +26172,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -25564,6 +26221,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25599,6 +26259,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 400
      },
@@ -25636,6 +26299,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100
      },
@@ -25675,6 +26341,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25710,6 +26379,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 150,
       "dot": {
@@ -25760,6 +26432,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 100,
       "dot": {
@@ -25810,6 +26485,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25845,6 +26523,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 280
      },
@@ -25887,6 +26568,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "heal": 800,
@@ -25925,6 +26609,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25960,6 +26647,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -25995,6 +26685,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26030,6 +26723,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26065,6 +26761,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26100,6 +26799,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26135,6 +26837,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26170,6 +26875,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": null,
      "replaces": []
@@ -26205,6 +26913,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 420
      },
@@ -26251,6 +26962,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 200,
       "cond": [
@@ -26299,6 +27013,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 220
      },
@@ -26345,6 +27062,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140
      },
@@ -26395,6 +27115,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 600
      },
@@ -26434,6 +27157,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 140
      },
@@ -26480,6 +27206,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 700
      },
@@ -26521,6 +27250,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": null,
      "eff": {
       "grant": [
@@ -26565,6 +27297,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 180
      },
@@ -26602,6 +27337,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 640
      },
@@ -26641,6 +27379,9 @@ window.MOCK_DATA = {
      "positional": null,
      "dash": false,
      "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
      "pot": {
       "base": 700
      },

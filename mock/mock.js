@@ -365,6 +365,9 @@
     ev('使用', { action: a.name, result: [a.isGcd ? 'GCD' : 'アビリティ', combo ? 'コンボ' : '', pos ? (pos.ok ? '方向指定○' : '方向指定×') : ''].filter(Boolean).join('・'), potency: potency || '', dmg: dmg || '' });
     if (a.dash) { Arena.dashToTarget(); Au?.whoosh(); }
     if (a.backstep) { Arena.backstep(a.backstep); Au?.whoosh(); }
+    if (a.forward) { Arena.forward(a.forward); Au?.whoosh(); }
+    if (a.toAlly) { if (Arena.dashToAlly(actWho)) Au?.whoosh(); else addLog('warn', `${a.name}: 移動先の味方がいません`); }
+    if (a.toZone) { if (Arena.dashToZone(a.toZone)) Au?.whoosh(); }
     playFx(id, ok, pos, true, dmg);
   }
 

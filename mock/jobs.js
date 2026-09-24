@@ -348,7 +348,7 @@
         comboStarters: new Set([ID.FAST, ID.TOTAL]),
         procStatus: { 36: 'atonement', 149: 'supplication', 150: 'sepulchre', 151: 'honorReady', 209: 'goringReady', 46: 'confiteorReady' },
         dot: { key: 'circleDot' },
-        initState(s) { s.oath = 0; s.oathT = 0; },
+        initState(s) { s.oath = OATH_MAX; s.oathT = 0; }, // 戦闘開始時・全滅後はオウス 100（利用者の調べ: GAME-70）
         gaugeCols: [['オウス', (s) => s.oath]],
         tracked: [['ファイト・オア・フライト', 'fof', '#ffb45a', '60 秒ごとに。ゴアブレード・コンフィテオル以降をこの中に']],
         speed: () => 1,
@@ -463,7 +463,8 @@
         comboStarters: new Set(),
         procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（ケアルラ効果アップの間光る）
         dot: { key: 'dia' },
-        initState(s) { s.lily = 0; s.blood = 0; s.lilyT = 0; s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
+        initState(s) { s.lily = 3; s.blood = 3; s.lilyT = 0; // 7.4 から戦闘開始時にヒーリングリリー 3・ブラッドリリー満タン（利用者の調べ: GAME-70）
+          s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
         // リタージー・オブ・ベルの効果時間中の再使用（残りのスタックで回復して消える）は、リキャストを待たずに使える（説明文「効果時間中に再使用すると」）
         freeUse: (id) => id === ID.LILYBELL && S().bell > 0,
         instantNow: (id) => id === ID.LILYBELL && S().bell > 0,
@@ -658,7 +659,8 @@
         comboStarters: new Set(),
         procStatus: {},
         dot: { key: 'combust' },
-        initState(s) { s.cards = { p1: null, p2: null, p3: null, minor: null }; s.nextDraw = 'astral'; s.star = null; s.macroC = null; s.exalt = []; s.synastry = null; s.stats.cardsPlayed = 0; s.stats.cardsLost = 0; s.stats.starEarly = 0; s.horo = null; },
+        initState(s) { s.cards = { ...DRAWS.astral }; s.nextDraw = 'umbral'; // 戦闘開始時はアストラルドローのカードを持ち、次はアンブラルドロー（利用者の調べ: GAME-70）
+           s.star = null; s.macroC = null; s.exalt = []; s.synastry = null; s.stats.cardsPlayed = 0; s.stats.cardsLost = 0; s.stats.starEarly = 0; s.horo = null; },
         // 効果時間中の再使用: アーサリースター（爆発）・ホロスコープ（回復）はリキャストを待たない
         freeUse: (id) => (id === ID.STAR && !!S().star) || (id === ID.HOROSCOPE && (has('horoscope') || has('horoscopeH'))),
         instantNow: (id) => id === ID.STAR && !!S().star,
@@ -890,7 +892,7 @@
         dot: { key: 'thunderDot' },
         initState(s) { s.mp = MP_MAX; s.af = 0; s.ub = 0; s.hearts = 0; s.poly = 0; s.polyT = 0; s.soul = 0; s.paradox = false; s.mpTick = 0; s.stats.polyOver = 0; s.stats.flareStar = 0; s.stats.f4 = 0; },
         // 黒魔紋は自分の足元に置く（地面を選ばない）
-        instantNow: (id) => id === ID.LEY || id === ID.RETRACE,
+        instantNow: (id) => id === ID.LEY || id === ID.RETRACE || id === ID.BTL, // ラインズステップは黒魔紋の中心へ動くだけ（置く場所は選ばない）
         gaugeCols: [['MP', (s) => Math.floor(s.mp)], ['AF', (s) => s.af], ['UB', (s) => s.ub], ['ハート', (s) => s.hearts], ['ポリグロット', (s) => s.poly], ['ソウル', (s) => s.soul]],
         tracked: [['ハイサンダー', 'thunderDot', '#c8a8ff', '切れる前に、サンダー系魔法実行可で付け直す'], ['黒魔紋', 'ley', '#b890ff', '120 秒ごと。中に立って詠唱する']],
         potMult(a) {
@@ -971,8 +973,6 @@
           if (id === ID.MANAWARD) { R.shieldSelf(0.3, 20, 'マバリア'); R.buff('manaward', 20000); }
           if (id === ID.LEY) { R.buff('ley', 20000); R.zone('ley', { r: 3, sec: 20, at: null }); Au()?.buff(); }
           if (id === ID.RETRACE) { R.zoneEnd('ley'); R.zone('ley', { r: 3, sec: (s.st.ley.until - s.t) / 1000, at: null }); }
-          if (id === ID.BTL) R.addLog('sys', 'ラインズステップ: 黒魔紋の中心へ移動（練習場の移動は未対応）');
-          if (id === ID.AETHERIAL) R.addLog('sys', 'エーテリアルステップ: 味方の前へ移動（練習場の移動は未対応）');
         },
         tick(dt) {
           const s = S();

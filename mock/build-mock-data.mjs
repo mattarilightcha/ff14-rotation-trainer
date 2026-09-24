@@ -256,9 +256,13 @@ function buildJob(JOB, LEVEL) {
     ground: !!a.targetArea, // 地面指定（先行入力されない: docs/SPEC.md GAME-05）
     // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から
     positional: /背面攻撃時/.test(a.description.ja) ? 'rear' : /側面攻撃時/.test(a.description.ja) ? 'flank' : null,
-    // 移動を伴う技: 説明文「対象に急接近」「N m後方へ飛び退く」から
+    // 移動を伴う技: 説明文「対象に急接近」「N m後方へ（に）飛び退く」「自身の N m前方に向かって素早く移動」
+    // 「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
     dash: /対象に急接近/.test(a.description.ja),
-    backstep: Number(/(\d+)m後方へ飛び退く/.exec(a.description.ja)?.[1] ?? 0),
+    backstep: Number(/(\d+)m後方[へに]飛び退く/.exec(a.description.ja)?.[1] ?? 0),
+    forward: Number(/自身の(\d+)m前方に向かって素早く移動/.exec(a.description.ja)?.[1] ?? 0),
+    toAlly: /対象の目前まで素早く移動/.test(a.description.ja),
+    toZone: /黒魔紋の中心へ素早く移動/.test(a.description.ja) ? 'ley' : null,
     pot: parsePotency(a.description.ja),
     eff: parseEffects(a.description.ja),
     replaces: a.replacesAction ?? [],

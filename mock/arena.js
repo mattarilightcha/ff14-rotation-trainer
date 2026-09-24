@@ -821,6 +821,30 @@
     player.x += ((player.x - boss.x) / d) * m; player.y += ((player.y - boss.y) / d) * m;
     ST.clamp(STG, player, 0.6);
   }
+  // 自分の向いている方へ m メートル（エーテリアルシフト）
+  function forward(m) {
+    trailFrom();
+    player.x += Math.cos(player.face) * m; player.y += Math.sin(player.face) * m;
+    ST.clamp(STG, player, 0.6);
+  }
+  // 味方の目前へ（エーテリアルステップ）。相方の 1m 手前で止まる
+  function dashToAlly(who) {
+    const e = who === 'tank' || who === 'npc' ? tank : null;
+    if (!e || !hasNpc()) return false;
+    const d = dist(player, e); if (d <= 1) return true;
+    trailFrom();
+    player.face = Math.atan2(e.y - player.y, e.x - player.x);
+    player.x = e.x - Math.cos(player.face) * 1; player.y = e.y - Math.sin(player.face) * 1;
+    return true;
+  }
+  // 設置したものの中心へ（ラインズステップ → 黒魔紋）
+  function dashToZone(kind) {
+    const z = zones.find((q) => q.kind === kind && !q.dying);
+    if (!z) return false;
+    trailFrom();
+    player.x = z.x; player.y = z.y;
+    return true;
+  }
   // 残像（移動の前の位置に、薄い自分を残す）
   function trailFrom() { for (let i = 0; i < 4; i++) player.trail.push({ x: player.x, y: player.y, face: player.face, life: 0.25 + i * 0.05, max: 0.45 }); }
 
@@ -1370,7 +1394,7 @@
   window.MockArena = {
     init, resize, reset, setInput, jump, update, render, setView,
     view: () => (view3d() ? '3d' : '2d'), error3d: () => r3err, camera,
-    edgeDistance, positional, faceTarget, dashToTarget, backstep, bossCast,
+    edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, bossCast,
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
     tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
     hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,
