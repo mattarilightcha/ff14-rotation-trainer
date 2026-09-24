@@ -71,9 +71,28 @@ public class StatusOut
     public uint Icon { get; init; }
     public string? IconPath { get; init; }
     public byte MaxStacks { get; init; }
-    /// <summary>1 強化 / 2 弱体。</summary>
+    /// <summary>スタック 2〜MaxStacks のアイコン（ゲームは Icon + スタック数 - 1 を出す）。スタックが無いものは null。</summary>
+    public List<string>? StackIconPaths { get; init; }
+    /// <summary>0 どちらでもない / 1 強化 / 2 弱体。</summary>
     public byte Category { get; init; }
     public bool IsPermanent { get; init; }
+    public bool CanDispel { get; init; }
+    public bool CanStatusOff { get; init; }
+    public bool IsFcBuff { get; init; }
+    public bool InflictedByActor { get; init; }
+    public byte PartyListPriority { get; init; }
+    public bool LockMovement { get; init; }
+    public bool LockActions { get; init; }
+    public bool LockControl { get; init; }
+    public bool Transfiguration { get; init; }
+    public bool IsGaze { get; init; }
+    public bool Invisibility { get; init; }
+    /// <summary>このステータスに関わるクラス・ジョブ（求め方は docs/ffxiv-data.md）。ジョブに結びつかないものは null。</summary>
+    public List<string>? Jobs { get; init; }
+    /// <summary>Status.ClassJobCategory の行番号（生の値。1 は全クラス）。</summary>
+    public uint ClassJobCategory { get; init; }
+    /// <summary>アクションの StatusGainSelf・二次コストが直接指している。</summary>
+    public bool UsedByActions { get; init; }
 }
 
 public class JobOut
@@ -94,4 +113,6 @@ public class JobOut
     public required List<uint> LimitBreaks { get; init; }
     /// <summary>このクラス・ジョブで使えるアクション（actions.json の id）。</summary>
     public required List<uint> ActionIds { get; init; }
+    /// <summary>このクラス・ジョブに関わるステータス（statuses.json の id。バフ・敵へのデバフ・PvP 版を含む）。</summary>
+    public required List<uint> StatusIds { get; init; }
 }

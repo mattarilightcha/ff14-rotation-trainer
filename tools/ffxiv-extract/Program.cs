@@ -8,6 +8,7 @@
 //   src/data/ffxiv/jobs.json       戦闘クラス・ジョブ
 //   src/data/ffxiv/actions.json    PvE のプレイヤーアクション（ロールアクション・LB を含む）
 //   src/data/ffxiv/statuses.json   アクションが付与・参照するステータス
+//   src/data/ffxiv/statuses-all.json Status シートの全ステータス（アイコンはスタック別も含めて全部）
 //   src/data/ffxiv/job-gauges.json ジョブゲージの UI 画像（ジョブごとのページ一覧）
 //   public/icons/actions/<icon>.png, public/icons/statuses/<icon>.png, public/icons/jobs/<ABBR>.png
 //   public/icons/job-gauges/<ABBR>/<page>.png
@@ -223,29 +224,76 @@ foreach (var id in included)
     });
 }
 
-// 二次コストの値が Status を指す型（32 など）のステータスも拾う
+// 二次コストの値がステータスを指す型だけ拾う（32 走竜・猛虎・印 / 35 忍隠 / 46 黒魔紋・天道・活殺自在 / 127 死の供物）。
+// ほかの型の値はゲージ量・回数・フラグ（赤魔のマナ 20、1・2・3…）で、ステータス番号と偶然重なるだけ（石化 #1 など）
+var statusCostTypes = new HashSet<byte> { 32, 35, 46, 127 };
 foreach (var a in actions)
-    if (a.SecondaryCost is { Value: var v } && v != 0 && stEn.HasRow(v) && !stEn.GetRow(v).Name.IsEmpty) statusIds.Add(v);
+    if (a.SecondaryCost is { Type: var t, Value: var v } && statusCostTypes.Contains(t) && v != 0 && stEn.HasRow(v) && !stEn.GetRow(v).Name.IsEmpty) statusIds.Add(v);
 
 // ---- ステータス ----
-var statuses = new List<StatusOut>();
-foreach (var sid in statusIds)
+// statuses.json: プレイヤーのアクションが付与・参照するもの（アプリで読む軽い版）
+// statuses-all.json: Status シートの全行（名前かアイコンがあるもの）。敵へのデバフ・食事・薬・FC バフ・ギミックなども入る
+// ステータス → ジョブ。Action の StatusGainSelf はほとんどのアクションで空なので、それだけでは足りない。
+//  1) アクションの StatusGainSelf・二次コストが指すもの → そのアクションのジョブ
+//  2) Status.ClassJobCategory が一部のジョブだけのもの（全ジョブの行は除く）→ そのジョブ
+//  3) ジョブのアクションと日本語名が同じもの（ランパートなど、古い行は全ジョブ扱いになっている）→ そのアクションのジョブ
+var statusJobs = new Dictionary<uint, SortedSet<string>>();
+void AddStatusJobs(uint sid, IEnumerable<string> js)
 {
-    if (!stEn.TryGetRow(sid, out var s) || s.Name.IsEmpty) continue;
-    var sj = stJa.GetRow(sid);
-    var sctx = new DescriptionEvaluator.Context(0, (uint)maxLevel);
-    statuses.Add(new StatusOut
+    if (!statusJobs.TryGetValue(sid, out var set)) statusJobs[sid] = set = new(StringComparer.Ordinal);
+    set.UnionWith(js);
+}
+foreach (var a in actions)
+{
+    if (a.StatusGainSelf is { } g) AddStatusJobs(g, a.Jobs);
+    if (a.SecondaryCost is { Type: var t, Value: var v } && statusCostTypes.Contains(t) && statusIds.Contains(v)) AddStatusJobs(v, a.Jobs);
+}
+var actionsByJaName = actions.GroupBy(a => a.Name.Ja).ToDictionary(g => g.Key, g => g.SelectMany(a => a.Jobs).Distinct().ToList());
+foreach (var s in stEn)
+{
+    if (s.RowId == 0 || s.Name.IsEmpty) continue;
+    var cat = s.ClassJobCategory.RowId != 0 ? JobsOfCategory(s.ClassJobCategory.RowId) : [];
+    if (cat.Count > 0 && cat.Count < combatJobs.Count) AddStatusJobs(s.RowId, cat);
+    if (actionsByJaName.TryGetValue(stJa.GetRow(s.RowId).Name.ExtractText(), out var aj)) AddStatusJobs(s.RowId, aj);
+}
+
+var sctx = new DescriptionEvaluator.Context(0, (uint)maxLevel);
+string StatusIconPath(uint icon) => $"/icons/statuses/{icon:D6}.png";
+List<uint> StackIcons(Status s) =>
+    s.Icon != 0 && s.MaxStacks > 1 ? Enumerable.Range(2, s.MaxStacks - 1).Select(n => s.Icon + (uint)n - 1).ToList() : [];
+StatusOut MakeStatus(Status s)
+{
+    var sj = stJa.GetRow(s.RowId);
+    var stacks = StackIcons(s);
+    return new StatusOut
     {
-        Id = sid,
+        Id = s.RowId,
         Name = new(sj.Name.ExtractText(), s.Name.ExtractText()),
         Description = new(DescriptionEvaluator.Evaluate(sj.Description, sctx, descStats), DescriptionEvaluator.Evaluate(s.Description, sctx, descStats)),
         Icon = s.Icon,
-        IconPath = s.Icon != 0 ? $"/icons/statuses/{s.Icon:D6}.png" : null,
+        IconPath = s.Icon != 0 ? StatusIconPath(s.Icon) : null,
         MaxStacks = s.MaxStacks,
+        StackIconPaths = stacks.Count > 0 ? stacks.Select(StatusIconPath).ToList() : null,
         Category = s.StatusCategory,
         IsPermanent = s.IsPermanent,
-    });
+        CanDispel = s.CanDispel,
+        CanStatusOff = s.CanStatusOff,
+        IsFcBuff = s.IsFcBuff,
+        InflictedByActor = s.InflictedByActor,
+        PartyListPriority = s.PartyListPriority,
+        LockMovement = s.LockMovement,
+        LockActions = s.LockActions,
+        LockControl = s.LockControl,
+        Transfiguration = s.Transfiguration,
+        IsGaze = s.IsGaze,
+        Invisibility = s.Invisibility,
+        Jobs = statusJobs.TryGetValue(s.RowId, out var js) ? js.ToList() : null,
+        ClassJobCategory = s.ClassJobCategory.RowId,
+        UsedByActions = statusIds.Contains(s.RowId),
+    };
 }
+var statuses = statusJobs.Keys.Order().Select(sid => stEn.GetRow(sid)).Where(s => !s.Name.IsEmpty).Select(MakeStatus).ToList();
+var allStatuses = stEn.Where(s => s.RowId != 0 && (!s.Name.IsEmpty || s.Icon != 0)).Select(MakeStatus).ToList();
 
 // ---- ジョブ ----
 var actionsByJob = combatJobs.ToDictionary(c => abbrById[c.RowId], _ => new List<uint>());
@@ -273,6 +321,7 @@ foreach (var c in combatJobs.OrderBy(c => c.UIPriority).ThenBy(c => c.RowId))
         IconPath = $"/icons/jobs/{ab}.png",
         LimitBreaks = new[] { c.LimitBreak1.RowId, c.LimitBreak2.RowId, c.LimitBreak3.RowId }.Where(x => x != 0).ToList(),
         ActionIds = actionsByJob[ab],
+        StatusIds = statuses.Where(s => s.Jobs?.Contains(ab) == true).Select(s => s.Id).ToList(),
     });
 }
 
@@ -304,6 +353,7 @@ void WriteJson(string name, object o)
 WriteJson("jobs.json", jobs);
 WriteJson("actions.json", actions);
 WriteJson("statuses.json", statuses);
+WriteJson("statuses-all.json", allStatuses);
 
 var iconStats = new IconExporter.Result();
 JobGaugeExporter.Result? gaugeResult = null;
@@ -312,7 +362,8 @@ if (opt.Icons)
     var icons = new IconExporter(gd);
     var pub = Path.Combine(opt.OutRoot, "public", "icons");
     iconStats.Add(icons.ExportAll(Path.Combine(pub, "actions"), actions.Where(a => a.Icon != 0).Select(a => (uint)a.Icon).Distinct().Select(i => (i, $"{i:D6}"))));
-    iconStats.Add(icons.ExportAll(Path.Combine(pub, "statuses"), statuses.Where(s => s.Icon != 0).Select(s => s.Icon).Distinct().Select(i => (i, $"{i:D6}"))));
+    var statusIcons = stEn.Where(s => s.RowId != 0 && s.Icon != 0).SelectMany(s => StackIcons(s).Prepend(s.Icon)).Distinct().Order();
+    iconStats.Add(icons.ExportAll(Path.Combine(pub, "statuses"), statusIcons.Select(i => (i, $"{i:D6}"))));
     iconStats.Add(icons.ExportAll(Path.Combine(pub, "jobs"), jobs.Select(j => (j.Icon, j.Abbreviation.En))));
     Console.WriteLine($"icons  : {iconStats.Written} 枚（HD {iconStats.Hd} / 通常 {iconStats.Written - iconStats.Hd}）、見つからない {iconStats.Missing.Count}");
     foreach (var m in iconStats.Missing) Console.WriteLine($"  missing icon: {m}");
@@ -344,7 +395,7 @@ var meta = new
         LuminaExcel = typeof(Action).Assembly.GetName().Version?.ToString(),
     },
     DescriptionLevel = maxLevel,
-    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.Jobs.Count ?? 0, JobGaugeTextures = gaugeResult?.Textures.Count ?? 0 },
+    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, StatusesAll = allStatuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.Jobs.Count ?? 0, JobGaugeTextures = gaugeResult?.Textures.Count ?? 0 },
     UnknownDescriptionMacros = descStats.UnknownMacros.OrderBy(k => k.Key).ToDictionary(k => k.Key, k => k.Value),
     UnknownDescriptionParams = descStats.UnknownParams.OrderBy(k => k.Key).ToDictionary(k => k.Key.ToString(), k => k.Value),
 };
