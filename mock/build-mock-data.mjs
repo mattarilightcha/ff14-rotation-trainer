@@ -232,6 +232,7 @@ const out = {
   bars,
   keybind: keybind.hotbar,
   move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
+  camera: keybind.camera, // カメラ操作のキー（KEYBIND.DAT。修飾キー付き）
   hud: {
     hotbars: addon.hotbars,
     // ジョブゲージ: 識別値で見つけ、ULD の大きさでどのゲージか決める（見つからなければ大きさだけで探す）

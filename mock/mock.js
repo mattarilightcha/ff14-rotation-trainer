@@ -108,6 +108,10 @@
     dmgScale: 1, // ダメージ = 威力 × この値（1 なら威力そのまま）
     lastDamage: 0, // 前回の与ダメージ（hpMode が last のとき使う）
     tankSkill: 'good', // タンクの腕前: good 上手 / normal ふつう / bad 下手
+    stage: 'dojo', // ステージ（stages.js）
+    markers: null, // フィールドマーカー: null = ステージの初期値 / true / false
+    camSpeed: 1, // カメラを回す速さ（マウス・キー・右スティック共通の倍率）
+    camInvX: false, camInvY: false, // カメラの左右・上下の反転
   };
 
   // ---------------- 状態 ----------------
@@ -142,7 +146,7 @@
     $('startOverlay').hidden = false;
     addLog('sys', `Space（パッドは Start）で開始。移動 ${keyLabel(D.move?.fore)}${keyLabel(D.move?.left)}${keyLabel(D.move?.back)}${keyLabel(D.move?.right)}・ジャンプ ${keyLabel(D.move?.jump) || 'なし'}`);
   }
-  const arenaOpts = () => ({ tank: OPT.tank, mech: OPT.mech, guide: OPT.guide, seed: OPT.seed, durationMs: OPT.durationMs, tankSkill: OPT.tankSkill });
+  const arenaOpts = () => ({ tank: OPT.tank, mech: OPT.mech, guide: OPT.guide, seed: OPT.seed, durationMs: OPT.durationMs, tankSkill: OPT.tankSkill, stage: OPT.stage, markers: OPT.markers });
   const live = () => S.phase === 'countdown' || S.phase === 'combat';
 
   const fmt = (ms) => {
@@ -1220,7 +1224,7 @@
   }
   const MECH_JA = { off: 'なし', easy: '少なめ', normal: 'ふつう', hard: '多め' };
 
-  // 移動キー（KEYBIND.DAT の MOVE_FORE など。見下ろし視点なので「前」は画面の上）
+  // 移動キー（KEYBIND.DAT の MOVE_FORE など）。「前」は画面の奥（カメラの向き）。3D でカメラを回すと、向きもそれに合わせて変わる
   const held = new Set();
   const MOVE = {
     up: [...(D.move?.fore ?? [])],
@@ -1229,15 +1233,19 @@
     right: [...(D.move?.right ?? []), ...(D.move?.strafeR ?? [])],
   };
   const ARROWS = { up: 'ArrowUp', down: 'ArrowDown', left: 'ArrowLeft', right: 'ArrowRight' };
-  const moveCodes = () => new Set([...MOVE.up, ...MOVE.down, ...MOVE.left, ...MOVE.right, ...(OPT.arrows ? Object.values(ARROWS) : [])]);
+  // 矢印キーでの移動: カメラ操作に割り当てられた矢印（サンプルは ←→）は除く
+  const arrowMoves = () => (OPT.arrows ? Object.values(ARROWS).filter((c) => !camCodes().has(c)) : []);
+  const moveCodes = () => new Set([...MOVE.up, ...MOVE.down, ...MOVE.left, ...MOVE.right, ...arrowMoves()]);
   const keyName = (code) => code.replace(/^Key/, '').replace(/^Digit/, '').replace(/^Arrow/, '').replace('Space', 'Space');
   const keyLabel = (codes) => (codes ?? []).map(keyName).join('/');
   let padMove = null;
   function moveInput() {
-    const on = (dir) => MOVE[dir].some((c) => held.has(c)) || (OPT.arrows && held.has(ARROWS[dir]));
+    const arrows = arrowMoves();
+    const on = (dir) => MOVE[dir].some((c) => held.has(c)) || (arrows.includes(ARROWS[dir]) && held.has(ARROWS[dir]));
     let x = (on('right') ? 1 : 0) - (on('left') ? 1 : 0);
     let y = (on('down') ? 1 : 0) - (on('up') ? 1 : 0);
     if (padMove) { x += padMove.x; y += padMove.y; }
+    if ((mouse.buttons & 3) === 3) y -= 1; // マウスの左右同時押しで前進（PC 版と同じ）
     Arena.setInput(live() && !paused() ? x : 0, live() && !paused() ? y : 0);
   }
 
@@ -1248,7 +1256,14 @@
     if (UI.isOpen()) { if (e.code === 'Escape') { e.preventDefault(); UI.close(); } return; }
     const tag = e.target?.tagName;
     if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
-    if (moveCodes().has(e.code) && !keymap.has(keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey }))) {
+    const kid = keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey });
+    const camAct = !keymap.has(kid) && camKeyOf(e);
+    if (camAct) {
+      e.preventDefault();
+      if (camAct === 'reset') { if (!e.repeat) Arena.camera.reset('behind'); } else camHeld.set(e.code, camAct);
+      return;
+    }
+    if (moveCodes().has(e.code) && !keymap.has(kid)) {
       e.preventDefault(); held.add(e.code);
       return;
     }
@@ -1262,8 +1277,60 @@
       press(hit.base);
     }
   });
-  window.addEventListener('keyup', (e) => held.delete(e.code));
-  window.addEventListener('blur', () => held.clear());
+  window.addEventListener('keyup', (e) => { held.delete(e.code); camHeld.delete(e.code); });
+  window.addEventListener('blur', () => { held.clear(); camHeld.clear(); mouse.buttons = 0; });
+
+  // ---------------- カメラ（3D のとき）----------------
+  // マウス: 左ドラッグ・右ドラッグで回す、左右同時押しで前進、ホイールで近づける・離す（PC 版 FF14 と同じ）。
+  // キーボード: KEYBIND.DAT のカメラ操作（サンプルは ←→ で左右、Ctrl+↑↓ で上下、Ctrl+Shift+End で自分の後ろへ）。パッド: 右スティック
+  const CAM_RATE = { yaw: 2.4, pitch: 45, zoom: 1.9 }; // キー・スティックでの速さ（ラジアン/秒・度/秒・倍/秒）
+  const camBinds = () => IMPORTED?.camera ?? D.camera ?? {};
+  const camCodes = () => new Set(Object.values(camBinds()).flat().filter((b) => !b.shift && !b.ctrl && !b.alt).map((b) => b.code));
+  function camKeyOf(e) {
+    for (const [act, binds] of Object.entries(camBinds())) {
+      if (binds.some((b) => b.code === e.code && b.shift === e.shiftKey && b.ctrl === e.ctrlKey && b.alt === e.altKey)) return act;
+    }
+    return null;
+  }
+  const camHeld = new Map();
+  const mouse = { buttons: 0 };
+  let padLook = null;
+  const camSign = () => ({ x: OPT.camInvX ? -1 : 1, y: OPT.camInvY ? -1 : 1 });
+  function cameraInput(dtMs) {
+    const dt = dtMs / 1000, k = OPT.camSpeed, sg = camSign();
+    let yaw = 0, pitch = 0, zoom = 0;
+    for (const act of camHeld.values()) {
+      if (act === 'left') yaw -= 1; else if (act === 'right') yaw += 1;
+      else if (act === 'up') pitch -= 1; else if (act === 'down') pitch += 1;
+      else if (act === 'zoomIn') zoom -= 1; else if (act === 'zoomOut') zoom += 1;
+    }
+    if (padLook) { yaw += padLook.x; pitch += padLook.y; }
+    if (yaw || pitch) Arena.camera.rotate(yaw * CAM_RATE.yaw * k * dt * sg.x, pitch * CAM_RATE.pitch * k * dt * sg.y);
+    if (zoom) Arena.camera.zoom(Math.pow(CAM_RATE.zoom, zoom * dt));
+  }
+  for (const cv of [$('arena'), $('arena3d')]) {
+    cv.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      Au?.unlock();
+      mouse.buttons = e.buttons;
+      cv.setPointerCapture(e.pointerId);
+      cv.classList.add('dragging');
+      e.preventDefault();
+    });
+    cv.addEventListener('pointermove', (e) => {
+      if (e.pointerType !== 'mouse' || !mouse.buttons) return;
+      mouse.buttons = e.buttons; // 2 つ目のボタンは pointerdown ではなく pointermove で届く
+      if (!e.buttons) { cv.classList.remove('dragging'); return; }
+      if (paused()) return;
+      const k = OPT.camSpeed, sg = camSign();
+      Arena.camera.rotate(e.movementX * 0.0058 * k * sg.x, e.movementY * 0.26 * k * sg.y);
+    });
+    const up = (e) => { mouse.buttons = e.buttons; if (!e.buttons) { cv.classList.remove('dragging'); if (cv.hasPointerCapture(e.pointerId)) cv.releasePointerCapture(e.pointerId); } };
+    cv.addEventListener('pointerup', up);
+    cv.addEventListener('pointercancel', up);
+    cv.addEventListener('contextmenu', (e) => e.preventDefault());
+    cv.addEventListener('wheel', (e) => { e.preventDefault(); if (!paused()) Arena.camera.zoom(Math.exp(Math.max(-200, Math.min(200, e.deltaY)) * 0.0012)); }, { passive: false });
+  }
   $('btnStart').addEventListener('click', start);
   $('btnReset').addEventListener('click', reset);
   $('btnSettings').addEventListener('click', () => (UI.isOpen() ? UI.close() : UI.open()));
@@ -1317,10 +1384,13 @@
   window.addEventListener('gamepadconnected', (e) => { addLog('sys', `パッドを検出: ${e.gamepad.id}（左スティックで移動）`); setMode('pad'); });
   function pollPad() {
     const gp = [...(navigator.getGamepads?.() ?? [])].find(Boolean);
-    if (!gp) { padMove = null; return; }
+    if (!gp) { padMove = null; padLook = null; return; }
     // 左スティック（遊びは FFXIV.cfg の DeadArea。設定で変えられる）
     const ax = gp.axes[0] ?? 0, ay = gp.axes[1] ?? 0, m = Math.hypot(ax, ay), dz = OPT.deadzone;
     padMove = m > dz ? { x: (ax / m) * Math.min(1, (m - dz) / (1 - dz)), y: (ay / m) * Math.min(1, (m - dz) / (1 - dz)) } : null;
+    // 右スティックでカメラ
+    const rx = gp.axes[2] ?? 0, ry = gp.axes[3] ?? 0, rm = Math.hypot(rx, ry);
+    padLook = rm > dz ? { x: (rx / rm) * Math.min(1, (rm - dz) / (1 - dz)), y: (ry / rm) * Math.min(1, (rm - dz) / (1 - dz)) } : null;
     const down = gp.buttons.map((b) => b.pressed || b.value > POLICY.padTrigger);
     const edge = (i) => down[i] && !padPrev[i];
     if (edge(9) && !live()) start();
@@ -1453,6 +1523,11 @@
   const applyPractice = () => { save(); if (!live()) reset(); };
 
   UI.tab('practice', '練習', (pane, k) => {
+    const s0 = k.section(pane, 'ステージ', '練習用に作った場所です（ゲームの特定の場所ではありません）。形と広さが変わると、動ける範囲と敵の範囲攻撃の切れ目も変わります。');
+    const stages = Arena.stages();
+    k.row(s0, 'ステージ', k.choice(stages.map((st) => [st.id, st.name]), OPT.stage, (v) => { OPT.stage = v; applyPractice(); UI.refresh(); }), stages.find((st) => st.id === OPT.stage)?.note ?? '');
+    const mkDef = stages.find((st) => st.id === OPT.stage)?.markers ?? false;
+    k.row(s0, 'フィールドマーカー', k.toggle(OPT.markers ?? mkDef, (v) => { OPT.markers = v; applyPractice(); }), '床に A〜D・1〜4 の印を置きます（A が北）。カメラを回したときの目印になります');
     const s1 = k.section(pane, '練習の内容');
     k.row(s1, '時間', k.choice([[60000, '60 秒'], [120000, '120 秒'], [180000, '180 秒'], [300000, '300 秒']], OPT.durationMs, (v) => { OPT.durationMs = v; applyPractice(); }));
     k.row(s1, '敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }), '予兆（橙色の範囲）が満ちたら発動。範囲の中にいると被弾');
@@ -1472,10 +1547,18 @@
   });
 
   UI.tab('control', '操作', (pane, k) => {
-    const s1 = k.section(pane, '移動（KEYBIND.DAT）', '見下ろし視点なので「前」は画面の上です。移動した方向を向き、攻撃すると敵の方を向きます。');
+    const s1 = k.section(pane, '移動（KEYBIND.DAT）', '「前」は画面の奥（カメラの向き）です。カメラを回すと、移動の向きもそれに合わせて変わります（ゲームの「レガシー」に近い動き）。移動した方向を向き、攻撃すると敵の方を向きます。');
     for (const [label, dir] of [['前へ', 'up'], ['後ろへ', 'down'], ['左へ', 'left'], ['右へ', 'right']]) k.row(s1, label, MOVE[dir].length ? MOVE[dir].map((c) => k.keycap(keyName(c))) : k.text('割り当てなし'));
     k.row(s1, 'ジャンプ', (D.move?.jump ?? []).length ? D.move.jump.map((c) => k.keycap(keyName(c))) : k.text('割り当てなし'), '開始前の Space は「開始」になります');
-    k.row(s1, '矢印キーでも移動', k.toggle(OPT.arrows, (v) => { OPT.arrows = v; save(); }), 'ホットバーに割り当てたキーが優先です');
+    k.row(s1, '矢印キーでも移動', k.toggle(OPT.arrows, (v) => { OPT.arrows = v; save(); }), 'ホットバーとカメラ操作に割り当てたキーが優先です');
+    const sc = k.section(pane, 'カメラ（3D のとき）', 'PC 版 FF14 と同じく、マウスのドラッグで回し、ホイールで近づける・離します。キーは KEYBIND.DAT のカメラ操作のとおりです。');
+    k.row(sc, 'マウス', k.text('左ドラッグ・右ドラッグで回す / 左右のボタンを同時に押すと前進 / ホイールで近づける・離す'));
+    const CAM_JA = [['left', '左に回す'], ['right', '右に回す'], ['up', '上に傾ける'], ['down', '下に傾ける'], ['zoomIn', '近づける'], ['zoomOut', '離す'], ['reset', '自分の後ろへ戻す']];
+    const combo = (b) => [b.ctrl && 'Ctrl', b.shift && 'Shift', b.alt && 'Alt', keyName(b.code)].filter(Boolean).join('+');
+    for (const [act, label] of CAM_JA) { const bs = camBinds()[act] ?? []; if (bs.length) k.row(sc, label, bs.map((b) => k.keycap(combo(b)))); }
+    k.row(sc, 'パッド', k.text('右スティックで回す'));
+    k.row(sc, '回す速さ', k.range(0.3, 2.5, 0.1, OPT.camSpeed, (v) => { OPT.camSpeed = v; save(); }, (v) => `${Math.round(v * 100)}%`));
+    k.row(sc, '反転', [k.toggle(OPT.camInvX, (v) => { OPT.camInvX = v; save(); }, ['左右を反転', '左右そのまま']), k.toggle(OPT.camInvY, (v) => { OPT.camInvY = v; save(); }, ['上下を反転', '上下そのまま'])]);
     const s2 = k.section(pane, 'ゲームパッド');
     k.row(s2, 'スティックの遊び', k.range(0.05, 0.9, 0.05, OPT.deadzone, (v) => { OPT.deadzone = v; save(); }, (v) => `${Math.round(v * 100)}%`), `左スティックで移動。初期値は FFXIV.cfg の DeadArea（${DISP.deadArea ?? '不明'}）`);
     k.row(s2, 'ジャンプ', k.keycap(PAD_MARK[padJump] ?? '△'), 'FFXIV.cfg の PadButton の割り当てから');
@@ -1546,6 +1629,10 @@
   });
 
   UI.tab('screen', '画面', (pane, k) => {
+    const s0 = k.section(pane, '練習場の表示', Arena.error3d() ? `この環境では 3D で表示できません（${Arena.error3d()}）。2D で表示しています。` : '3D は床と明かりを立体で描き、人物はドット絵の板で立たせます（カメラを回せます）。2D は真上から見た図で、北が上に固定です。');
+    k.row(s0, '表示', k.choice([['3d', '3D（斜め見下ろし）'], ['2d', '2D（真上）']], VIEW.arena ?? '3d', (v) => { VIEW.arena = v; Arena.setView(v, VIEW.quality ?? 'high'); save(); }));
+    k.row(s0, '画質（3D）', k.choice([['high', '高'], ['mid', '標準'], ['low', '軽い']], VIEW.quality ?? 'high', (v) => { VIEW.quality = v; Arena.setView(VIEW.arena ?? '3d', v); save(); }), '高: 光のにじみ・ピントのぼかし・周辺減光あり。標準: ぼかしなし・解像度を少し下げる。軽い: 後処理なし');
+    k.row(s0, 'カメラ', k.button('北が上に戻す', () => Arena.camera.reset('north')), 'カメラの向き・角度・距離を初期に戻します');
     const s1 = k.section(pane, 'ゲームの画面', '舞台（1280 幅）をゲームの縦横比で作り、HUD の大きさをゲームの解像度に合わせて縮めます。');
     const w = k.number(VIEW.gameW, 640, 7680, (v) => { VIEW.gameW = v; save(); fit(); rebuild(); }, 80);
     const h = k.number(VIEW.gameH, 360, 4320, (v) => { VIEW.gameH = v; save(); fit(); rebuild(); }, 80);
@@ -1592,6 +1679,7 @@
     row('方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }));
     const howto = [
       `移動は ${keyLabel(MOVE.up)}${keyLabel(MOVE.left)}${keyLabel(MOVE.down)}${keyLabel(MOVE.right)}（読み込んだ KEYBIND.DAT）・パッドは左スティック。攻撃は射程内で（近接は敵の輪の外側から ${Arena.POL.melee}m・仮）。`,
+      'カメラはマウスのドラッグで回し、ホイールで近づけます。左右のボタンを同時に押すと前へ進みます。キーボードは KEYBIND.DAT のカメラ操作、パッドは右スティックです。',
       '月光は背面、花車は側面から。敵の足元の緑が背面・黄が側面です。トゥルーノース中は向きを問いません。',
       '敵の範囲攻撃は、橙色の予兆が満ちると発動します。詠唱中（居合術など）に動くと中断します。',
       'ホットバーの中身・キー・配置・ジョブゲージの位置は、あなたの設定ファイル（サンプル）のとおりです。「設定」で差し替えられます。',
@@ -1610,7 +1698,7 @@
     // transform で拡大すると、動く文字や canvas が拡大前の画素数で描かれてからぼやけて引き伸ばされる。zoom なら拡大後の画素数で描かれる
     stage.style.zoom = String(s);
     stage.style.transform = '';
-    Arena.resize(STAGE.w, STAGE.h);
+    Arena.resize(STAGE.w, STAGE.h, s * (window.devicePixelRatio || 1));
     placeGauges();
     placeHudParts();
   }
@@ -1635,7 +1723,8 @@
     pollPad();
     moveInput();
     const run = live() && !paused();
-    Arena.update(run ? dt : 0, S.t, run ? S.phase : 'idle');
+    if (!paused()) cameraInput(dt);
+    Arena.update(run ? dt : 0, S.t, run ? S.phase : 'idle', paused() ? 0 : dt);
     if (run) step(Math.round(dt));
     Arena.render(S.t, S.phase);
     render();
@@ -1645,12 +1734,13 @@
   // 動作確認用のフック（ブラウザのコンソールや自動テストから状態を見る）
   window.MockDebug = { state: () => S, opt: OPT, arena: Arena, press, start };
 
-  Arena.init({ canvas: $('arena'), overlay: $('overlay') });
   $('startJobIcon').src = D.job.icon;
   $('ptSelfIcon').src = D.job.icon;
   $('ptTankIcon').src = D.tank.icon;
   loadSaved();
+  Arena.init({ canvas: $('arena'), canvas3d: $('arena3d'), overlay: $('overlay'), view: VIEW.arena ?? '3d', quality: VIEW.quality ?? 'high' });
   reset();
+  if (Arena.error3d()) addLog('sys', `3D で表示できないため 2D にしました（${Arena.error3d()}）`);
   buildStart();
   fit();
   setMode(VIEW.mode ?? 'hud');

@@ -3352,6 +3352,48 @@ window.MOCK_DATA = {
    "Space"
   ]
  },
+ "camera": {
+  "left": [
+   {
+    "code": "ArrowLeft",
+    "shift": false,
+    "ctrl": false,
+    "alt": false
+   }
+  ],
+  "right": [
+   {
+    "code": "ArrowRight",
+    "shift": false,
+    "ctrl": false,
+    "alt": false
+   }
+  ],
+  "reset": [
+   {
+    "code": "End",
+    "shift": true,
+    "ctrl": true,
+    "alt": false
+   }
+  ],
+  "up": [
+   {
+    "code": "ArrowUp",
+    "shift": false,
+    "ctrl": true,
+    "alt": false
+   }
+  ],
+  "down": [
+   {
+    "code": "ArrowDown",
+    "shift": false,
+    "ctrl": true,
+    "alt": false
+   }
+  ]
+ },
  "hud": {
   "hotbars": {
    "hb1": {

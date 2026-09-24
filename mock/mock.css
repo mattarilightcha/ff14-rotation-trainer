@@ -32,6 +32,8 @@ button { font: inherit; }
 
 /* ---------------- 戦闘画面（見下ろし 2D のドット絵。arena.js）---------------- */
 #arena { position: absolute; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; }
+#arena3d { position: absolute; left: 0; top: 0; touch-action: none; }
+#arena3d.dragging { cursor: grabbing; }
 #overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 /* 頭上の名前（敵・タンク） */
 .wname { position: absolute; transform: translate(-50%, -100%); white-space: nowrap; font-size: 14px; font-weight: 700; letter-spacing: .05em; text-shadow: var(--outline), 0 0 6px rgba(0,0,0,.8); }

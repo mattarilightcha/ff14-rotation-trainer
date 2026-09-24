@@ -27,13 +27,16 @@ for (const rel of icons) {
 data = data.replaceAll('"../public/icons/', '"icons/').replaceAll('"../public/fankit/', '"fankit/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
-for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'pixel.js', 'arena.js', 'uld.js', 'gauge.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'stages.js', 'pixel.js', 'sprites.js', 'arena.js', 'arena3d.js', 'uld.js', 'gauge.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+// three.js（mock/vendor/build-three.mjs でまとめたもの）とライセンス
+mkdirSync(join(out, 'vendor'), { recursive: true });
+for (const f of ['three.min.js', 'LICENSE-three.txt']) copyFileSync(join(root, 'mock/vendor', f), join(out, 'vendor', f));
 
 const commit = process.env.GITHUB_SHA?.slice(0, 7) ?? 'local';
 const html = readFileSync(join(root, 'mock/index.html'), 'utf8')
   .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">')
   // 更新がすぐ反映されるよう、読み込むファイルに版を付ける
-  .replace(/(src|href)="([\w-]+\.(?:js|css))"/g, `$1="$2?v=${commit}"`);
+  .replace(/(src|href)="([\w./-]+\.(?:js|css))"/g, `$1="$2?v=${commit}"`);
 writeFileSync(join(out, 'index.html'), html);
 writeFileSync(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 

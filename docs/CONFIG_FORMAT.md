@@ -116,6 +116,8 @@
 - キーは **Windows の仮想キーコード**（例 `31` = 1、`46` = F、`70` = F1、`61` = テンキー 1、`6A` = テンキー *）。
 - 修飾はビットの組み合わせ（`01` `02` `04`）。**1 = Shift、2 = Ctrl、4 = Alt と推定**（サンプルではホットバー 3 が `01` と `02` の 2 組、ホットバー 2 が `04`）。ゲーム内の表示と照らして確認する（CFG-12）。
 - ホットバーは `HOTBAR_<バー 1〜10>_<スロット 1〜9,0,A,B>`。サンプルではホットバー 1〜4・6〜9 に割り当てがあった。
+- 移動は `MOVE_FORE` `MOVE_BACK` `MOVE_LEFT` `MOVE_RIGHT`（サンプルは W S A D）、`MOVE_STRIFE_L` / `MOVE_STRIFE_R`（未割り当て）、`JUMP`。
+- **カメラ**（サンプルの値）: `CAMERA_LEFT` = `25.00`（←）、`CAMERA_RIGHT` = `27.00`（→）、`CAM_TILT_UP` = `26.02`（Ctrl+↑）、`CAM_TILT_DOWN` = `28.02`（Ctrl+↓）、`CAMERA_RESET` = `23.03`（Ctrl+Shift+End）、`CAMERA_SAVE` = `23.02`（Ctrl+End）、`CAMERA_FORWARD` = `A2.00`（左 Ctrl）。`CAMERA_UP` / `CAMERA_DOWN` / `CAMERA_ZOOMIN` / `CAMERA_ZOOMOUT` は未割り当て。意味はコマンド名からの推定（CFG-19）。修飾 `02` = Ctrl、`03` = Ctrl+Shift とすると、ゲームの初期設定らしい組み合わせになり、推定（CFG-12）と矛盾しない。モックは `mock/cfg-parse.js` の `parseKeybind()` で修飾キー込みで読む。
 - 文字列の検査（§5）: コマンド名のみで、人の名前などは含まれない。
 
 ## 7. ADDON.DAT（ホットバー部分は解読済み）

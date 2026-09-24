@@ -14,8 +14,9 @@
 <body>
 <div id="viewport">
   <div id="stage">
-    <!-- ==================== 戦闘画面（見下ろし 2D のドット絵。arena.js）。揺れるのはここだけで、HUD は揺らさない ==================== -->
+    <!-- ==================== 戦闘画面（3D の斜め見下ろし: arena3d.js / 真上の 2D: arena.js）。揺れるのはここだけで、HUD は揺らさない ==================== -->
     <canvas id="arena" aria-hidden="true"></canvas>
+    <canvas id="arena3d" aria-hidden="true" hidden></canvas>
     <div id="overlay" aria-hidden="true"></div>
 
     <!-- ==================== HUD ==================== -->
@@ -133,7 +134,11 @@
 <script src="mock-data.js"></script>
 <script src="audio.js"></script>
 <script src="gamemode.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="stages.js"></script>
 <script src="pixel.js"></script>
+<script src="sprites.js"></script>
+<script src="arena3d.js"></script>
 <script src="arena.js"></script>
 <script src="uld.js"></script>
 <script src="gauge.js"></script>

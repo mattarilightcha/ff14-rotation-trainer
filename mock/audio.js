@@ -82,7 +82,8 @@
   // 金属の鳴り（刀・鈴）: 整数倍でない倍音を重ね、高い倍音ほど早く消える
   function metal(t0, base, dur, peak, o = {}) {
     const ratios = o.ratios ?? [1, 2.32, 4.25, 6.63, 9.1];
-    ratios.forEach((r, i) => tone(t0, 'sine', base * r, base * r * (o.bend ?? 0.995), dur / (1 + i * 0.7), peak / (1 + i * 0.8), { attack: 0.002, pan: o.pan, send: o.send ?? 0.4 }));
+    // 聞こえる上限（標本化周波数の半分）を超える倍音は鳴らさない
+    ratios.forEach((r, i) => base * r < ctx.sampleRate * 0.45 && tone(t0, 'sine', base * r, base * r * (o.bend ?? 0.995), dur / (1 + i * 0.7), peak / (1 + i * 0.8), { attack: 0.002, pan: o.pan, send: o.send ?? 0.4 }));
   }
   const now = () => ctx.currentTime + 0.005;
   const rnd = (a, b) => a + Math.random() * (b - a);

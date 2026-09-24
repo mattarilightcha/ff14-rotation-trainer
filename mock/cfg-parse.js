@@ -50,6 +50,7 @@
       0xba: 'Semicolon', 0xbb: 'Equal', 0xbc: 'Comma', 0xbd: 'Minus', 0xbe: 'Period', 0xbf: 'Slash', 0xc0: 'Backquote',
       0xdb: 'BracketLeft', 0xdc: 'Backslash', 0xdd: 'BracketRight', 0xde: 'Quote', 0xe2: 'IntlBackslash',
       0x20: 'Space', 0x09: 'Tab', 0x2d: 'Insert', 0x2e: 'Delete', 0x24: 'Home', 0x23: 'End', 0x21: 'PageUp', 0x22: 'PageDown',
+      0x25: 'ArrowLeft', 0x26: 'ArrowUp', 0x27: 'ArrowRight', 0x28: 'ArrowDown',
     }[vk] ?? null;
   }
   function keyLabel(code, vk) {
@@ -63,9 +64,21 @@
     const re = /T[\s\S]\x00([A-Z0-9_]+)\x00C[\s\S]\x00([0-9A-Fa-f.,]*)\x00/g;
     const hotbar = {};
     const move = {};
+    const camera = {};
     // 移動・ジャンプ（MOVE_FORE / MOVE_BACK / MOVE_LEFT / MOVE_RIGHT / MOVE_STRIFE_L / MOVE_STRIFE_R / JUMP）
     const MOVE_CMDS = { MOVE_FORE: 'fore', MOVE_BACK: 'back', MOVE_LEFT: 'left', MOVE_RIGHT: 'right', MOVE_STRIFE_L: 'strafeL', MOVE_STRIFE_R: 'strafeR', JUMP: 'jump' };
+    // カメラ（左右に回す・上下に傾ける・近づける / 離す・元に戻す）。修飾キー付きで持つ（サンプルは Ctrl+↑↓ で傾ける）
+    const CAM_CMDS = { CAMERA_LEFT: 'left', CAMERA_RIGHT: 'right', CAM_TILT_UP: 'up', CAM_TILT_DOWN: 'down', CAMERA_ZOOMIN: 'zoomIn', CAMERA_ZOOMOUT: 'zoomOut', CAMERA_RESET: 'reset' };
     for (const m of text.matchAll(re)) {
+      if (CAM_CMDS[m[1]]) {
+        const keys = m[2].split(',').filter(Boolean).map((p) => {
+          const [k, mod] = p.split('.').map((x) => parseInt(x, 16));
+          const code = k ? vkToCode(k) : null;
+          return code ? { code, shift: !!(mod & 1), ctrl: !!(mod & 2), alt: !!(mod & 4) } : null;
+        }).filter(Boolean);
+        if (keys.length) camera[CAM_CMDS[m[1]]] = keys;
+        continue;
+      }
       if (MOVE_CMDS[m[1]]) {
         const keys = m[2].split(',').filter(Boolean).map((p) => {
           const [k, mod] = p.split('.').map((x) => parseInt(x, 16));
@@ -87,7 +100,7 @@
       }).filter(Boolean);
       if (binds.length) (hotbar[bar] ??= Array(12).fill(null))[slot] = binds;
     }
-    return { hotbar, move };
+    return { hotbar, move, camera };
   }
 
   // ---- ADDON.DAT（XOR なし。"ADDN" の後、32 バイトのレコード: 名前のハッシュ / X% / Y% / 倍率 / 識別 / 幅 / 高さ / 基準点と表示）----
