@@ -74,16 +74,19 @@ jobs:
         if: steps.check.outputs.skip != 'true'
         run: |
           # 登録値の揺れを吸収する（https:// や末尾の / 、前後の空白、host:port 形式）
-          host=$(printf '%s' "$DEPLOY_HOST" | tr -d '[:space:]')
-          host=${host#*://}; host=${host%%/*}
-          port=$(printf '%s' "$DEPLOY_PORT" | tr -d '[:space:]')
+          # ssh-keyscan の行（「ホスト 鍵の種類 鍵」）が入っていても、先頭の語をホスト名として使う
+          host=$(printf '%s' "$DEPLOY_HOST" | awk 'NF && $1 !~ /^#/ {print $1; exit}')
+          host=${host#*://}; host=${host%%/*}; host=${host%%,*}
+          case "$host" in \[*\]:*) port=${host##*:}; host=${host#[}; host=${host%%]*} ;; esac
+          port=${port:-$(printf '%s' "$DEPLOY_PORT" | tr -d '[:space:]')}
           case "$host" in *:*) port=${port:-${host##*:}}; host=${host%%:*} ;; esac
           port=${port:-22}
           user=$(printf '%s' "$DEPLOY_USER" | tr -d '[:space:]')
           dest=$(printf '%s' "$DEPLOY_MOCK_PATH" | sed 's/[[:space:]]*$//'); dest=${dest%/}
           case "$user" in */*|*@*) echo "::error::DEPLOY_USER にユーザー名以外（/ や @）が含まれています"; exit 1 ;; esac
           [ -n "$host" ] || { echo "::error::DEPLOY_HOST が空です"; exit 1; }
-          echo "接続先: ホスト ${#host} 文字 / ポート $port / 置き場所 $dest"
+          echo "接続先: ホスト名 ${#host} 文字 / ポート $port / 置き場所 $dest"
+          case "$host" in *.*|*:*) ;; *) echo "::error::DEPLOY_HOST からホスト名を読み取れません。ホスト名か IP だけを登録してください"; exit 1 ;; esac
           ssh_cmd="ssh -i $HOME/.ssh/id_deploy -p $port -o StrictHostKeyChecking=yes -o BatchMode=yes"
           $ssh_cmd "$user@$host" "mkdir -p '$dest'"
           rsync -rlptz --delete -e "$ssh_cmd" dist-mock/ "$user@$host:$dest/"
