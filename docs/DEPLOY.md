@@ -151,7 +151,7 @@ Alias /tools/ff14-rotation-trainer/ /var/www/ff14-rotation-trainer/current/
 | 方法 | 内容 | 備考 |
 |------|------|------|
 | リンク（既定） | 記事からツールの URL へリンク。ツールは単独ページとして全画面で動く | 最も確実。スマートフォンでも画面を広く使える |
-| 同一オリジン iframe | 記事内に `<iframe src="/tools/ff14-rotation-trainer/?embed=1">` を貼る | `embed=1` で見出しを省いた小さい表示＋「全画面で開く」ボタン。キー入力は iframe をクリック/タップしてフォーカスを移してから有効になる旨を表示 |
+| 同一オリジン iframe | 記事内に `<iframe src="/tools/ff14-rotation-trainer/?embed=1" allow="gamepad; fullscreen">` を貼る（パッドを使うには `allow="gamepad"` が必要） | `embed=1` で見出しを省いた小さい表示＋「全画面で開く」ボタン。キー入力は iframe をクリック/タップしてフォーカスを移してから有効になる旨を表示 |
 
 - 記事から特定の練習設定を開くリンクは共有 URL（`#/share?d=...`）で作れる。
 - ツールページの見出しとフッターに「nettoge.com トップ」「解説記事」へのリンクを置く（リンク先 URL はデータではなく設定ファイル `site.config.ts` に書く）。

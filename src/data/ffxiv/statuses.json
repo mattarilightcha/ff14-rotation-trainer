@@ -1,0 +1,2946 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "ja": "石化",
+      "en": "Petrification"
+    },
+    "description": {
+      "ja": "手足が石化し、行動できなくなった状態。",
+      "en": "Stone-like rigidity is preventing the execution of actions."
+    },
+    "icon": 215001,
+    "iconPath": "/icons/statuses/215001.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 2,
+    "name": {
+      "ja": "スタン",
+      "en": "Stun"
+    },
+    "description": {
+      "ja": "行動できなくなった状態。",
+      "en": "Unable to execute actions."
+    },
+    "icon": 215004,
+    "iconPath": "/icons/statuses/215004.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 3,
+    "name": {
+      "ja": "睡眠",
+      "en": "Sleep"
+    },
+    "description": {
+      "ja": "眠りに落ち、行動できなくなった状態。",
+      "en": "Overwhelming drowsiness is preventing the execution of actions."
+    },
+    "icon": 215013,
+    "iconPath": "/icons/statuses/215013.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 4,
+    "name": {
+      "ja": "気絶",
+      "en": "Daze"
+    },
+    "description": {
+      "ja": "気を失い、行動できなくなった状態。",
+      "en": "Scattered senses are preventing the execution of actions."
+    },
+    "icon": 215003,
+    "iconPath": "/icons/statuses/215003.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 5,
+    "name": {
+      "ja": "アビリティ不可",
+      "en": "Amnesia"
+    },
+    "description": {
+      "ja": "アビリティを使用できなくなった状態。",
+      "en": "Unable to use abilities."
+    },
+    "icon": 215015,
+    "iconPath": "/icons/statuses/215015.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 6,
+    "name": {
+      "ja": "ＷＳ不可",
+      "en": "Pacification"
+    },
+    "description": {
+      "ja": "ウェポンスキルを使用できなくなった状態。",
+      "en": "Unable to use weaponskills."
+    },
+    "icon": 215017,
+    "iconPath": "/icons/statuses/215017.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 8,
+    "name": {
+      "ja": "ヘイスト",
+      "en": "Haste"
+    },
+    "description": {
+      "ja": "オートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムが短縮された状態。",
+      "en": "Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are reduced."
+    },
+    "icon": 215008,
+    "iconPath": "/icons/statuses/215008.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 10,
+    "name": {
+      "ja": "拘束装置：スロウ",
+      "en": "Slow"
+    },
+    "description": {
+      "ja": "拘束装置の影響で動きが鈍り、オートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムが延長された状態。",
+      "en": "Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are increased."
+    },
+    "icon": 215545,
+    "iconPath": "/icons/statuses/215545.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 15,
+    "name": {
+      "ja": "暗闇",
+      "en": "Blind"
+    },
+    "description": {
+      "ja": "闇に囚われ、命中率が低下した状態。",
+      "en": "Encroaching darkness is lowering accuracy."
+    },
+    "icon": 215012,
+    "iconPath": "/icons/statuses/215012.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 20,
+    "name": {
+      "ja": "ＴＰ継続ダメージ",
+      "en": "TP Bleed"
+    },
+    "description": {
+      "ja": "連続してＴＰが減少している状態。",
+      "en": "Bleeding TP over time."
+    },
+    "icon": 215025,
+    "iconPath": "/icons/statuses/215025.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 32,
+    "name": {
+      "ja": "回避力ダウン",
+      "en": "Evasion Down"
+    },
+    "description": {
+      "ja": "回避力が低下した状態。",
+      "en": "Evasion is reduced."
+    },
+    "icon": 215063,
+    "iconPath": "/icons/statuses/215063.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 50,
+    "name": {
+      "ja": "スプリント",
+      "en": "Sprint"
+    },
+    "description": {
+      "ja": "移動速度が上昇した状態。",
+      "en": "Movement speed is increased."
+    },
+    "icon": 210101,
+    "iconPath": "/icons/statuses/210101.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 108,
+    "name": {
+      "ja": "弐の型：走竜",
+      "en": "Raptor Form"
+    },
+    "description": {
+      "ja": "弐の型：走竜の態勢をとっている状態。",
+      "en": "Employing the raptor fighting stance."
+    },
+    "icon": 210213,
+    "iconPath": "/icons/statuses/210213.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 109,
+    "name": {
+      "ja": "参の型：猛虎",
+      "en": "Coeurl Form"
+    },
+    "description": {
+      "ja": "参の型：猛虎の態勢をとっている状態。",
+      "en": "Employing the coeurl fighting stance."
+    },
+    "icon": 210214,
+    "iconPath": "/icons/statuses/210214.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 168,
+    "name": {
+      "ja": "マバリア",
+      "en": "Manaward"
+    },
+    "description": {
+      "ja": "一定量のダメージを無効化する状態。",
+      "en": "An aetherial barrier is preventing damage."
+    },
+    "icon": 210456,
+    "iconPath": "/icons/statuses/210456.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 171,
+    "name": {
+      "ja": "アポカタスタシス不可",
+      "en": "Ekpyrosis"
+    },
+    "description": {
+      "ja": "新たに「アポカタスタシス」がかからない状態。",
+      "en": "Unable to receive Apocatastasis."
+    },
+    "icon": 212652,
+    "iconPath": "/icons/statuses/212652.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 172,
+    "name": {
+      "ja": "虚弱",
+      "en": "Infirmity"
+    },
+    "description": {
+      "ja": "回復魔法による自身に対するＨＰ回復効果が低下した状態。",
+      "en": "HP recovery via healing magic is reduced."
+    },
+    "icon": 215531,
+    "iconPath": "/icons/statuses/215531.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 178,
+    "name": {
+      "ja": "アンブラルブリザードIII",
+      "en": "Umbral Ice III"
+    },
+    "description": {
+      "ja": "魂が霊極性に寄った状態。火属性魔法の威力が減少する代わりに消費ＭＰが減少する。火属性魔法の詠唱時間が半減する。さらにＭＰ回復速度が増加する。",
+      "en": "Aetherial balance of mind and spirit is leaning umbrally. Fire-aspected spells require less MP, but do less damage, and their casting times are halved. MP regeneration has quickened."
+    },
+    "icon": 210468,
+    "iconPath": "/icons/statuses/210468.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 179,
+    "name": {
+      "ja": "バイオ",
+      "en": "Bio"
+    },
+    "description": {
+      "ja": "ＨＰが徐々に失われる状態。",
+      "en": "Contagions are spreading, causing damage over time."
+    },
+    "icon": 210504,
+    "iconPath": "/icons/statuses/210504.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 180,
+    "name": {
+      "ja": "ミアズマ",
+      "en": "Miasma"
+    },
+    "description": {
+      "ja": "ＨＰが徐々に失われる状態。",
+      "en": "Lungs are failing, causing damage over time."
+    },
+    "icon": 210506,
+    "iconPath": "/icons/statuses/210506.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 181,
+    "name": {
+      "ja": "病気",
+      "en": "Disease"
+    },
+    "description": {
+      "ja": "移動速度が低下し、かつ回復魔法による自身に対するＨＰ回復効果が低下した状態。",
+      "en": "Movement speed and HP recovered via healing magic are reduced."
+    },
+    "icon": 215014,
+    "iconPath": "/icons/statuses/215014.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 182,
+    "name": {
+      "ja": "ウイルス",
+      "en": "Virus"
+    },
+    "description": {
+      "ja": "ＳＴＲとＤＥＸが低下した状態。",
+      "en": "Motor skills are hampered, causing reduced strength and dexterity."
+    },
+    "icon": 210510,
+    "iconPath": "/icons/statuses/210510.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 184,
+    "name": {
+      "ja": "サステイン",
+      "en": "Sustain"
+    },
+    "description": {
+      "ja": "連続してＨＰが回復している状態。",
+      "en": "Regenerating HP over time."
+    },
+    "icon": 210508,
+    "iconPath": "/icons/statuses/210508.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 186,
+    "name": {
+      "ja": "アイ・フォー・アイ：効果",
+      "en": "Eye for an Eye"
+    },
+    "description": {
+      "ja": "与ダメージが低下した状態。",
+      "en": "Damage dealt is reduced."
+    },
+    "icon": 213919,
+    "iconPath": "/icons/statuses/213919.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 187,
+    "name": {
+      "ja": "ラウズ",
+      "en": "Rouse"
+    },
+    "description": {
+      "ja": "与ダメージと回復魔法の威力が向上した状態。",
+      "en": "Damage and healing magic potency are increased."
+    },
+    "icon": 210509,
+    "iconPath": "/icons/statuses/210509.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 188,
+    "name": {
+      "ja": "ミアズラ",
+      "en": "Miasma II"
+    },
+    "description": {
+      "ja": "ＨＰが徐々に失われる状態。",
+      "en": "Contagions are spreading, causing damage over time."
+    },
+    "icon": 210507,
+    "iconPath": "/icons/statuses/210507.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 195,
+    "name": {
+      "ja": "ストロングホールド",
+      "en": "Stronghold"
+    },
+    "description": {
+      "ja": "受けるダメージの一部が軽減される状態。",
+      "en": "Damage taken is reduced."
+    },
+    "icon": 216306,
+    "iconPath": "/icons/statuses/216306.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 209,
+    "name": {
+      "ja": "魔法剣・水",
+      "en": "Enwater"
+    },
+    "description": {
+      "ja": "オートアタックに水属性のダメージが付与された状態。",
+      "en": "Water damage added to auto-attacks."
+    },
+    "icon": 215514,
+    "iconPath": "/icons/statuses/215514.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 214,
+    "name": {
+      "ja": "懐柔失敗",
+      "en": "Agitation"
+    },
+    "description": {
+      "ja": "手懐けるのを失敗して怒りだし、物理攻撃力、魔法攻撃力が向上した状態。",
+      "en": "Excited by failed pacification. Attack power and attack magic potency are enhanced."
+    },
+    "icon": 216302,
+    "iconPath": "/icons/statuses/216302.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 217,
+    "name": {
+      "ja": "トライアングレート",
+      "en": "Triangulate"
+    },
+    "description": {
+      "ja": "切れる木や草を刈れる場所が見えるようになり、ナビマップにも表示されている状態。",
+      "en": "Able to locate mature trees and lush vegetation."
+    },
+    "icon": 211051,
+    "iconPath": "/icons/statuses/211051.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 218,
+    "name": {
+      "ja": "採集獲得率アップ",
+      "en": "Gathering Rate Up"
+    },
+    "description": {
+      "ja": "採集のアイテム獲得率が上昇した状態。",
+      "en": "Chance of obtaining an item while gathering is increased."
+    },
+    "icon": 216002,
+    "iconPath": "/icons/statuses/216002.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 259,
+    "name": {
+      "ja": "イノベーション",
+      "en": "Innovation"
+    },
+    "description": {
+      "ja": "加工精度が50％上昇している状態。",
+      "en": "Control is increased by 50%."
+    },
+    "icon": 211652,
+    "iconPath": "/icons/statuses/211652.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 260,
+    "name": {
+      "ja": "リクレイム",
+      "en": "Reclaim"
+    },
+    "description": {
+      "ja": "製作失敗時の素材が戻ってくる確率が90％になっている状態。",
+      "en": "90% chance that materials will not be lost in the event of botched synthesis."
+    },
+    "icon": 211851,
+    "iconPath": "/icons/statuses/211851.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 265,
+    "name": {
+      "ja": "刺傷",
+      "en": "Stab Wound"
+    },
+    "description": {
+      "ja": "突属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Wounds dealt by a piercing weapon are bleeding, causing damage over time."
+    },
+    "icon": 215522,
+    "iconPath": "/icons/statuses/215522.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 266,
+    "name": {
+      "ja": "打撲傷",
+      "en": "Concussion"
+    },
+    "description": {
+      "ja": "打属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Wounds dealt by a blunt weapon are causing damage over time."
+    },
+    "icon": 215523,
+    "iconPath": "/icons/statuses/215523.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 271,
+    "name": {
+      "ja": "感電",
+      "en": "Electrocution"
+    },
+    "description": {
+      "ja": "雷属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Sustaining lightning damage over time."
+    },
+    "icon": 215528,
+    "iconPath": "/icons/statuses/215528.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 275,
+    "name": {
+      "ja": "毒",
+      "en": "Poison +1"
+    },
+    "description": {
+      "ja": "毒に冒された状態。ＨＰが徐々に失われる。",
+      "en": "Toxins are causing damage over time."
+    },
+    "icon": 217001,
+    "iconPath": "/icons/statuses/217001.png",
+    "maxStacks": 4,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 285,
+    "name": {
+      "ja": "凍傷",
+      "en": "Frostbite"
+    },
+    "description": {
+      "ja": "氷属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Sustaining ice damage over time."
+    },
+    "icon": 215525,
+    "iconPath": "/icons/statuses/215525.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 288,
+    "name": {
+      "ja": "感電",
+      "en": "Electrocution"
+    },
+    "description": {
+      "ja": "雷属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Sustaining lightning damage over time."
+    },
+    "icon": 215528,
+    "iconPath": "/icons/statuses/215528.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 289,
+    "name": {
+      "ja": "水毒",
+      "en": "Dropsy"
+    },
+    "description": {
+      "ja": "水属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Sustaining water damage over time."
+    },
+    "icon": 215529,
+    "iconPath": "/icons/statuses/215529.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 290,
+    "name": {
+      "ja": "ダメージ上昇",
+      "en": "Damage Up"
+    },
+    "description": {
+      "ja": "与ダメージが上昇した状態。",
+      "en": "Damage dealt is increased."
+    },
+    "icon": 215519,
+    "iconPath": "/icons/statuses/215519.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 291,
+    "name": {
+      "ja": "百烈拳",
+      "en": "Hundred Fists"
+    },
+    "description": {
+      "ja": "オートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムが短縮された状態。",
+      "en": "Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are reduced."
+    },
+    "icon": 215008,
+    "iconPath": "/icons/statuses/215008.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 303,
+    "name": {
+      "ja": "粘菌",
+      "en": "Burrs"
+    },
+    "description": {
+      "ja": "粘菌が蓄積した状態。",
+      "en": "Hooked burrs have dug into your flesh."
+    },
+    "icon": 217041,
+    "iconPath": "/icons/statuses/217041.png",
+    "maxStacks": 9,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 307,
+    "name": {
+      "ja": "勇戦の誉れ",
+      "en": "Voice of Valor"
+    },
+    "description": {
+      "ja": "一定範囲内にいるパーティメンバーのHPを継続して回復している状態。\u3000自身は与ダメージが減少する。",
+      "en": "Gradually restoring the HP of nearby party members. Damage dealt is reduced."
+    },
+    "icon": 215549,
+    "iconPath": "/icons/statuses/215549.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 308,
+    "name": {
+      "ja": "堅忍の誉れ",
+      "en": "Voice of Fortitude"
+    },
+    "description": {
+      "ja": "一定範囲内にいるパーティメンバーの被ダメージを継続して軽減している状態。\u3000自身は与ダメージが減少する。",
+      "en": "Reducing damage taken by nearby party members. Damage dealt is reduced."
+    },
+    "icon": 215550,
+    "iconPath": "/icons/statuses/215550.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 311,
+    "name": {
+      "ja": "大地の守り",
+      "en": "Earthen Ward"
+    },
+    "description": {
+      "ja": "受けるダメージの一部が軽減される状態。",
+      "en": "Damage taken is reduced."
+    },
+    "icon": 212701,
+    "iconPath": "/icons/statuses/212701.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 312,
+    "name": {
+      "ja": "大地の怒り",
+      "en": "Razed Earth"
+    },
+    "description": {
+      "ja": "土属性のダメージエリアを発生させている状態。",
+      "en": "Jagged shards protrude from the ground, dealing earth damage to any who tread upon them."
+    },
+    "icon": 212702,
+    "iconPath": "/icons/statuses/212702.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 314,
+    "name": {
+      "ja": "地獄の火炎",
+      "en": "Inferno"
+    },
+    "description": {
+      "ja": "火属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Sustaining fire damage over time."
+    },
+    "icon": 212712,
+    "iconPath": "/icons/statuses/212712.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 315,
+    "name": {
+      "ja": "光の囁き",
+      "en": "Whispering Dawn"
+    },
+    "description": {
+      "ja": "連続してＨＰが回復している状態。",
+      "en": "Regenerating HP over time."
+    },
+    "icon": 212826,
+    "iconPath": "/icons/statuses/212826.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 324,
+    "name": {
+      "ja": "森の悲憤",
+      "en": "Greenwrath"
+    },
+    "description": {
+      "ja": "大精霊が怒りに呑まれた状態。徐々にHPが失われる。",
+      "en": "The anger of the elementals tears at your very sanity, causing damage over time."
+    },
+    "icon": 215530,
+    "iconPath": "/icons/statuses/215530.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 374,
+    "name": {
+      "ja": "偏属性クリスタル",
+      "en": "Corrupted Crystal"
+    },
+    "description": {
+      "ja": "身体に偏属性クリスタルが付着した状態。3スタック付与されると爆散する。",
+      "en": "Shards of corrupted crystals are attached to your body. A stack of three will trigger an explosion."
+    },
+    "icon": 217161,
+    "iconPath": "/icons/statuses/217161.png",
+    "maxStacks": 3,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 376,
+    "name": {
+      "ja": "灼熱",
+      "en": "Searing Wind"
+    },
+    "description": {
+      "ja": "周囲に灼熱をまき散らす状態。火属性ダメージにより、ＨＰが徐々に失われる。",
+      "en": "Ignited by white-hot embers and scorching those nearby. Sustaining fire damage over time."
+    },
+    "icon": 215560,
+    "iconPath": "/icons/statuses/215560.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 412,
+    "name": {
+      "ja": "滞空",
+      "en": "Hover"
+    },
+    "description": {
+      "ja": "高度を上げた状態。",
+      "en": "Floating above ground."
+    },
+    "icon": 215683,
+    "iconPath": "/icons/statuses/215683.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 415,
+    "name": {
+      "ja": "ＴＰ継続回復",
+      "en": "Regain"
+    },
+    "description": {
+      "ja": "ＴＰが徐々に回復する状態。",
+      "en": "Gradually regenerating TP."
+    },
+    "icon": 216203,
+    "iconPath": "/icons/statuses/216203.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 418,
+    "name": {
+      "ja": "生還",
+      "en": "Transcendent"
+    },
+    "description": {
+      "ja": "蘇生を受け生還した状態。一時的に一部を除くすべてのダメージを無効化する。\nアクションを実行すると解除される。",
+      "en": "Recently resurrected and temporarily invulnerable to most damage. Status ends upon execution of an action."
+    },
+    "icon": 215273,
+    "iconPath": "/icons/statuses/215273.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 424,
+    "name": {
+      "ja": "ヴォイドの呪詛",
+      "en": "Diabolic Curse"
+    },
+    "description": {
+      "ja": "ヴォイドの呪詛にまみれた状態。受けるダメージが増加する。",
+      "en": "Placed under a diabolic curse. Damage taken is increased."
+    },
+    "icon": 217341,
+    "iconPath": "/icons/statuses/217341.png",
+    "maxStacks": 8,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 428,
+    "name": {
+      "ja": "ヘイスト＋",
+      "en": "Haste+"
+    },
+    "description": {
+      "ja": "オートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムが短縮された状態。解除不可。",
+      "en": "Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are reduced. Effect cannot be nullified."
+    },
+    "icon": 217381,
+    "iconPath": "/icons/statuses/217381.png",
+    "maxStacks": 16,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 429,
+    "name": {
+      "ja": "妖鱗粉",
+      "en": "Scale Flakes"
+    },
+    "description": {
+      "ja": "妖鱗粉が付着した状態。アリオクが好む香りを発する。受けるダメージが増加する。",
+      "en": "Dusted with wamoura scales and giving off a scent which attracts Arioch. Damage taken is increased."
+    },
+    "icon": 217401,
+    "iconPath": "/icons/statuses/217401.png",
+    "maxStacks": 16,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 430,
+    "name": {
+      "ja": "悲嘆",
+      "en": "Misery"
+    },
+    "description": {
+      "ja": "悲しみに暮れた状態。受けるダメージが増加する。",
+      "en": "Plunged into the depths of misery. Damage taken is increased."
+    },
+    "icon": 215576,
+    "iconPath": "/icons/statuses/215576.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 437,
+    "name": {
+      "ja": "石化の呪い",
+      "en": "Stone Curse"
+    },
+    "description": {
+      "ja": "石化した状態。攻撃を受けると戦闘不能になる。",
+      "en": "Turned into stone. Taking damage results in instant death."
+    },
+    "icon": 215586,
+    "iconPath": "/icons/statuses/215586.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 444,
+    "name": {
+      "ja": "被ダメージ上昇",
+      "en": "Vulnerability Up"
+    },
+    "description": {
+      "ja": "受けるダメージが増加する状態。",
+      "en": "Damage taken is increased."
+    },
+    "icon": 215020,
+    "iconPath": "/icons/statuses/215020.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 449,
+    "name": {
+      "ja": "蜂刺症",
+      "en": "Stung"
+    },
+    "description": {
+      "ja": "蜂の毒が蓄積した状態。蜂の群れから受けるダメージが増加する。",
+      "en": "Bee venom is coursing through your body. Damage received from bee swarms is increased."
+    },
+    "icon": 217001,
+    "iconPath": "/icons/statuses/217001.png",
+    "maxStacks": 8,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 462,
+    "name": {
+      "ja": "拘束加速",
+      "en": "Garrote Twist"
+    },
+    "description": {
+      "ja": "拘束具の束縛機能が加速した状態。徐々に拘束状態が強まっていく。",
+      "en": "Garrote is stacking at an increased rate."
+    },
+    "icon": 215594,
+    "iconPath": "/icons/statuses/215594.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 468,
+    "name": {
+      "ja": "異界の狭間",
+      "en": "Voidbound"
+    },
+    "description": {
+      "ja": "一時的に異界「ヴォイド」を歩んでいる状態。物質界に干渉できない。",
+      "en": "Trapped in the void and unable to interact with the physical realm."
+    },
+    "icon": 215585,
+    "iconPath": "/icons/statuses/215585.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 469,
+    "name": {
+      "ja": "極王",
+      "en": "High and Mighty"
+    },
+    "description": {
+      "ja": "究極の王様になったクポ！\u3000すべてのダメージを無効化する。",
+      "en": "Invulnerable to all damage. Long live the king, kupo!"
+    },
+    "icon": 215589,
+    "iconPath": "/icons/statuses/215589.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 470,
+    "name": {
+      "ja": "モグビネーション",
+      "en": "Pombination"
+    },
+    "description": {
+      "ja": "モーグリたちがコンビネーション攻撃に入った状態。スタン、沈黙を無効化する。",
+      "en": "In the midst of a combination attack. Immune to stun and silence effects."
+    },
+    "icon": 215584,
+    "iconPath": "/icons/statuses/215584.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 473,
+    "name": {
+      "ja": "モグルグル",
+      "en": "Bemoggled"
+    },
+    "description": {
+      "ja": "グルグルが大嫌いになった状態。モグリーゴーランドで大ダメージを受けてしまう。",
+      "en": "Massive damage is taken from Moogle-Go-Round."
+    },
+    "icon": 215600,
+    "iconPath": "/icons/statuses/215600.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 474,
+    "name": {
+      "ja": "闘魂",
+      "en": "Royal Rouse"
+    },
+    "description": {
+      "ja": "王様に闘魂を注入されたクポ！\u3000与ダメージとHP回復量が増加する。",
+      "en": "Damage dealt and HP recovery is increased. Long live the king, kupo!"
+    },
+    "icon": 217541,
+    "iconPath": "/icons/statuses/217541.png",
+    "maxStacks": 8,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 477,
+    "name": {
+      "ja": "水神のマント",
+      "en": "Mantle of the Whorl"
+    },
+    "description": {
+      "ja": "魔法攻撃に対して、ダメージを反射する状態。",
+      "en": "Reflecting damage dealt by magic attacks."
+    },
+    "icon": 215542,
+    "iconPath": "/icons/statuses/215542.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 481,
+    "name": {
+      "ja": "スプリント",
+      "en": "Sprint"
+    },
+    "description": {
+      "ja": "移動速度が上昇した状態。",
+      "en": "Movement speed is increased."
+    },
+    "icon": 210101,
+    "iconPath": "/icons/statuses/210101.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 483,
+    "name": {
+      "ja": "最大ＨＰアップ",
+      "en": "HP Boost"
+    },
+    "description": {
+      "ja": "最大ＨＰが増加した状態。",
+      "en": "Maximum HP is increased."
+    },
+    "icon": 215075,
+    "iconPath": "/icons/statuses/215075.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 484,
+    "name": {
+      "ja": "毒墨",
+      "en": "Ink"
+    },
+    "description": {
+      "ja": "クラーケンの墨が付着した状態。移動速度が低下し、ＨＰが徐々に失われる。",
+      "en": "Your body is dripping with thick toxic ink, slowing movement speed and dealing damage over time."
+    },
+    "icon": 215569,
+    "iconPath": "/icons/statuses/215569.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 487,
+    "name": {
+      "ja": "氷結",
+      "en": "Deep Freeze"
+    },
+    "description": {
+      "ja": "身体が凍り付き、行動できなくなった状態。ＨＰが徐々に失われる。",
+      "en": "Your body is encased in ice, preventing action and dealing damage over time."
+    },
+    "icon": 217621,
+    "iconPath": "/icons/statuses/217621.png",
+    "maxStacks": 16,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 488,
+    "name": {
+      "ja": "残影",
+      "en": "Shade Shift"
+    },
+    "description": {
+      "ja": "一定量のダメージを無効化する状態。",
+      "en": "Shadows are nullifying damage."
+    },
+    "icon": 210605,
+    "iconPath": "/icons/statuses/210605.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 491,
+    "name": {
+      "ja": "舞踏刃",
+      "en": "Dancing Edge"
+    },
+    "description": {
+      "ja": "斬耐性が低下し、かつ回復魔法による自身に対するＨＰ回復効果が低下した状態。\n※PvPエリアでは回復魔法の効果量低下効果は無効となる。",
+      "en": "Slashing resistance and HP recovery via healing magic and actions are reduced.\n※HP recovery unaffected in PvP."
+    },
+    "icon": 210601,
+    "iconPath": "/icons/statuses/210601.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 492,
+    "name": {
+      "ja": "無双旋",
+      "en": "Mutilation"
+    },
+    "description": {
+      "ja": "ＨＰが徐々に失われる状態。",
+      "en": "Wounds are bleeding, causing damage over time."
+    },
+    "icon": 210602,
+    "iconPath": "/icons/statuses/210602.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 496,
+    "name": {
+      "ja": "印",
+      "en": "Mudra"
+    },
+    "description": {
+      "ja": "印を結んだ状態。",
+      "en": "Readying ninjutsu by combining ritual hand gestures."
+    },
+    "icon": 212901,
+    "iconPath": "/icons/statuses/212901.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 497,
+    "name": {
+      "ja": "活殺自在",
+      "en": "Kassatsu"
+    },
+    "description": {
+      "ja": "忍術の威力を上昇させて実行できる状態。",
+      "en": "Able to execute a ninjutsu with increased potency."
+    },
+    "icon": 212902,
+    "iconPath": "/icons/statuses/212902.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 498,
+    "name": {
+      "ja": "虚弱",
+      "en": "Infirmity"
+    },
+    "description": {
+      "ja": "回復魔法による自身に対するＨＰ回復効果が低下した状態。",
+      "en": "HP recovery via healing magic is reduced."
+    },
+    "icon": 215531,
+    "iconPath": "/icons/statuses/215531.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 501,
+    "name": {
+      "ja": "土遁の術",
+      "en": "Doton"
+    },
+    "description": {
+      "ja": "土属性のダメージエリアを発生させている状態。",
+      "en": "Foul magicks corrupt the ground, dealing earth damage to any who tread upon it."
+    },
+    "icon": 212904,
+    "iconPath": "/icons/statuses/212904.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 510,
+    "name": {
+      "ja": "拘束",
+      "en": "Fetters"
+    },
+    "description": {
+      "ja": "行動できなくなった状態。",
+      "en": "Unable to execute actions."
+    },
+    "icon": 215545,
+    "iconPath": "/icons/statuses/215545.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 512,
+    "name": {
+      "ja": "導電",
+      "en": "Electroconductivity"
+    },
+    "description": {
+      "ja": "導電物質が付着した状態。3スタック付与されると、避雷状態になる。",
+      "en": "Conductive matter clings to your person. A stack of 3 will grant you the effect of Surge Protection."
+    },
+    "icon": 217561,
+    "iconPath": "/icons/statuses/217561.png",
+    "maxStacks": 2,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 513,
+    "name": {
+      "ja": "蓄電",
+      "en": "Static Condensation"
+    },
+    "description": {
+      "ja": "身体に雷気が過剰に蓄積された状態。スタック数が増えるほど、回復魔法によるＨＰ回復効果が低下する。",
+      "en": "Excess electric charge is stored within your body. The greater the stack, the fewer the HP recovered via healing magic."
+    },
+    "icon": 217581,
+    "iconPath": "/icons/statuses/217581.png",
+    "maxStacks": 3,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 515,
+    "name": {
+      "ja": "雷鼓",
+      "en": "Thunderclap"
+    },
+    "description": {
+      "ja": "雷の発生源になり、ＨＰが徐々に失われる状態。一定時間が経過するとスタック数が増し、より早くＨＰが失われるようになる。",
+      "en": "Sustaining damage over time. If the effect is not removed, it will continue to stack, increasing the amount of damage inflicted."
+    },
+    "icon": 217601,
+    "iconPath": "/icons/statuses/217601.png",
+    "maxStacks": 5,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 519,
+    "name": {
+      "ja": "カウンター",
+      "en": "Counter"
+    },
+    "description": {
+      "ja": "物理攻撃を無効化し、反射する状態。",
+      "en": "All physical attacks are reflected back at the dealer."
+    },
+    "icon": 215036,
+    "iconPath": "/icons/statuses/215036.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 564,
+    "name": {
+      "ja": "バインド",
+      "en": "Bind"
+    },
+    "description": {
+      "ja": "移動できなくなった状態。",
+      "en": "Unable to move."
+    },
+    "icon": 215003,
+    "iconPath": "/icons/statuses/215003.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 565,
+    "name": {
+      "ja": "変身",
+      "en": "Transfiguration"
+    },
+    "description": {
+      "ja": "別の姿に変身した状態。アクション実行不可。",
+      "en": "Corporeal form has been altered, inhibiting use of actions."
+    },
+    "icon": 216214,
+    "iconPath": "/icons/statuses/216214.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 567,
+    "name": {
+      "ja": "沈下",
+      "en": "Six Fulms Under"
+    },
+    "description": {
+      "ja": "徐々に身体が沈んでいく状態。移動速度が徐々に低下し、身体が沈みきると戦闘不能状態に陥る。",
+      "en": "You are slowly slipping down, your movement speed dropping as you descend deeper. Burial will result in KO."
+    },
+    "icon": 215769,
+    "iconPath": "/icons/statuses/215769.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 570,
+    "name": {
+      "ja": "エイム",
+      "en": "In the Line of Fire"
+    },
+    "description": {
+      "ja": "銃を構え狙いをつけている状態。銃撃するたびに、与ダメージが増加する。",
+      "en": "Damage dealt by firearms is increased."
+    },
+    "icon": 215636,
+    "iconPath": "/icons/statuses/215636.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 571,
+    "name": {
+      "ja": "暗闇",
+      "en": "Blind"
+    },
+    "description": {
+      "ja": "闇に囚われ、命中率が低下した状態。",
+      "en": "Encroaching darkness is lowering accuracy."
+    },
+    "icon": 215012,
+    "iconPath": "/icons/statuses/215012.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 574,
+    "name": {
+      "ja": "エラティックブラスター",
+      "en": "Erratic Blaster"
+    },
+    "description": {
+      "ja": "エラティックブラスターを受けた状態。効果終了時にダメージを受ける。",
+      "en": "Taking damage over time."
+    },
+    "icon": 215616,
+    "iconPath": "/icons/statuses/215616.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 577,
+    "name": {
+      "ja": "バロフィールド",
+      "en": "Barofield"
+    },
+    "description": {
+      "ja": "バロフィールドが展開された状態。カーリアに接近し過ぎると、攻撃を受ける。",
+      "en": "Damage taken when Kaliya is nearby."
+    },
+    "icon": 215617,
+    "iconPath": "/icons/statuses/215617.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 582,
+    "name": {
+      "ja": "被魔法ダメージ軽減",
+      "en": "Magic Vulnerability Down"
+    },
+    "description": {
+      "ja": "受ける魔法ダメージが軽減される状態。",
+      "en": "Magic damage taken is reduced."
+    },
+    "icon": 217761,
+    "iconPath": "/icons/statuses/217761.png",
+    "maxStacks": 16,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 585,
+    "name": {
+      "ja": "対防御フィールド",
+      "en": "Energy Field Down"
+    },
+    "description": {
+      "ja": "防御フィールドの効果を無効化する状態。",
+      "en": "Energy field is no longer deflecting ranged attacks."
+    },
+    "icon": 215622,
+    "iconPath": "/icons/statuses/215622.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 589,
+    "name": {
+      "ja": "誘爆",
+      "en": "Chain of Purgatory"
+    },
+    "description": {
+      "ja": "煉獄の炎を帯びた状態。煉獄の爆炎による被ダメージが増加する。",
+      "en": "Marked by the Brand of Purgatory. Damage taken by the Flames of Unforgiveness is increased."
+    },
+    "icon": 215625,
+    "iconPath": "/icons/statuses/215625.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 590,
+    "name": {
+      "ja": "延焼",
+      "en": "Arm of Purgatory"
+    },
+    "description": {
+      "ja": "煉獄の炎を帯びた状態。煉獄の爆炎による被ダメージが増加する。",
+      "en": "Marked by the Brand of Purgatory. Damage taken by the Flames of Unforgiveness is increased."
+    },
+    "icon": 215626,
+    "iconPath": "/icons/statuses/215626.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 598,
+    "name": {
+      "ja": "(仮)物理シールド(ストンスキン)",
+      "en": "(仮)物理シールド(ストンスキン)"
+    },
+    "description": {
+      "ja": "",
+      "en": ""
+    },
+    "icon": 215041,
+    "iconPath": "/icons/statuses/215041.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 599,
+    "name": {
+      "ja": "(仮)魔法シールド(ストンスキン)",
+      "en": "(仮)魔法シールド(ストンスキン)"
+    },
+    "description": {
+      "ja": "",
+      "en": ""
+    },
+    "icon": 215042,
+    "iconPath": "/icons/statuses/215042.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 603,
+    "name": {
+      "ja": "アーゼマの使徒",
+      "en": "Mummification"
+    },
+    "description": {
+      "ja": "日神アーゼマの呪いにより、操られた状態。",
+      "en": "Serving the Sunken Temple of Qarn as a mindless thrall."
+    },
+    "icon": 215632,
+    "iconPath": "/icons/statuses/215632.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 604,
+    "name": {
+      "ja": "氷床",
+      "en": "Thin Ice"
+    },
+    "description": {
+      "ja": "凍結した地面の上にいる状態。移動すると滑る。",
+      "en": "Having trouble maintaining a solid foothold upon ice-covered ground."
+    },
+    "icon": 215615,
+    "iconPath": "/icons/statuses/215615.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 613,
+    "name": {
+      "ja": "カッパ",
+      "en": "Imp"
+    },
+    "description": {
+      "ja": "カッパに変身した状態。アクション実行不可。\n専用アクション「カッパー」のみ実行可能。",
+      "en": "Transformed into an imp and only able to execute the action Imp Punch."
+    },
+    "icon": 215043,
+    "iconPath": "/icons/statuses/215043.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 614,
+    "name": {
+      "ja": "かくれる",
+      "en": "Hidden"
+    },
+    "description": {
+      "ja": "身を隠している状態。移動速度が低下した状態。",
+      "en": "Unable to be detected. Movement speed is severely reduced."
+    },
+    "icon": 210607,
+    "iconPath": "/icons/statuses/210607.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 617,
+    "name": {
+      "ja": "帯光",
+      "en": "Irradiated"
+    },
+    "description": {
+      "ja": "体内に幻光を帯びた状態。効果終了時に幻の光を発する。",
+      "en": "Luminescence is being stored within the body and will result in an emission of Banishing Light once the effect ends."
+    },
+    "icon": 215641,
+    "iconPath": "/icons/statuses/215641.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 624,
+    "name": {
+      "ja": "切傷",
+      "en": "Flesh Wound"
+    },
+    "description": {
+      "ja": "斬属性ダメージにより、ＨＰが徐々に失われる状態。",
+      "en": "Wounds dealt by a slashing weapon are bleeding, causing damage over time."
+    },
+    "icon": 215521,
+    "iconPath": "/icons/statuses/215521.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 628,
+    "name": {
+      "ja": "ダメージ低下",
+      "en": "Damage Down"
+    },
+    "description": {
+      "ja": "与ダメージが低下した状態。",
+      "en": "Damage dealt is reduced."
+    },
+    "icon": 218441,
+    "iconPath": "/icons/statuses/218441.png",
+    "maxStacks": 16,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 633,
+    "name": {
+      "ja": "動揺",
+      "en": "Lamed"
+    },
+    "description": {
+      "ja": "チョコボが動揺し、加速できない状態。",
+      "en": "Chocobo is injured and cannot accelerate."
+    },
+    "icon": 216579,
+    "iconPath": "/icons/statuses/216579.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 637,
+    "name": {
+      "ja": "憤怒の烙印",
+      "en": "Brand of the Ireful"
+    },
+    "description": {
+      "ja": "憤怒の烙印を押された状態。「憤怒の視線」を受けた際の被ダメージが上昇する。",
+      "en": "Damage taken by Ireful Gaze is increased."
+    },
+    "icon": 218061,
+    "iconPath": "/icons/statuses/218061.png",
+    "maxStacks": 4,
+    "category": 2,
+    "isPermanent": true
+  },
+  {
+    "id": 737,
+    "name": {
+      "ja": "黒魔紋",
+      "en": "Ley Lines"
+    },
+    "description": {
+      "ja": "黒魔紋を生成している状態。",
+      "en": "Naturally occurring ley lines have been connected into a circle of power."
+    },
+    "icon": 212653,
+    "iconPath": "/icons/statuses/212653.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 749,
+    "name": {
+      "ja": "ソルトアース",
+      "en": "Salted Earth"
+    },
+    "description": {
+      "ja": "無属性のダメージエリアを発生させている状態。",
+      "en": "The ground is rendered void of all life, dealing unaspected damage to any who tread upon it."
+    },
+    "icon": 213104,
+    "iconPath": "/icons/statuses/213104.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1234,
+    "name": {
+      "ja": "ヴァルファイア実行可",
+      "en": "Verfire Ready"
+    },
+    "description": {
+      "ja": "ヴァルファイアを実行できる状態。",
+      "en": "Able to cast Verfire."
+    },
+    "icon": 213402,
+    "iconPath": "/icons/statuses/213402.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1235,
+    "name": {
+      "ja": "ヴァルストーン実行可",
+      "en": "Verstone Ready"
+    },
+    "description": {
+      "ja": "ヴァルストーンを実行できる状態。",
+      "en": "Able to cast Verstone."
+    },
+    "icon": 213403,
+    "iconPath": "/icons/statuses/213403.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1243,
+    "name": {
+      "ja": "ミラージュダイブ実行可",
+      "en": "Dive Ready"
+    },
+    "description": {
+      "ja": "ミラージュダイブを実行できる状態。",
+      "en": "Able to execute Mirage Dive."
+    },
+    "icon": 212583,
+    "iconPath": "/icons/statuses/212583.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1719,
+    "name": {
+      "ja": "マイティガード",
+      "en": "Mighty Guard"
+    },
+    "description": {
+      "ja": "受けるダメージを軽減し、自身に向けられる敵視が上昇する代わりに、与ダメージが低下する状態。",
+      "en": "Damage taken and dealt are reduced, while enmity is increased."
+    },
+    "icon": 213506,
+    "iconPath": "/icons/statuses/213506.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 1820,
+    "name": {
+      "ja": "扇の舞い【急】実行可",
+      "en": "Threefold Fan Dance"
+    },
+    "description": {
+      "ja": "扇の舞い【急】を実行できる状態。",
+      "en": "Able to execute Fan Dance III."
+    },
+    "icon": 213707,
+    "iconPath": "/icons/statuses/213707.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1827,
+    "name": {
+      "ja": "インプロビゼーション",
+      "en": "Improvisation"
+    },
+    "description": {
+      "ja": "ダンスを踊っている状態。",
+      "en": "Dancing to the beat of your own drum."
+    },
+    "icon": 213716,
+    "iconPath": "/icons/statuses/213716.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1863,
+    "name": {
+      "ja": "竜眼",
+      "en": "Draconian Fire"
+    },
+    "description": {
+      "ja": "竜眼雷電を実行できる状態。",
+      "en": "Able to execute Raiden Thrust."
+    },
+    "icon": 212585,
+    "iconPath": "/icons/statuses/212585.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1897,
+    "name": {
+      "ja": "原初の混沌",
+      "en": "Nascent Chaos"
+    },
+    "description": {
+      "ja": "十分なインナービーストが蓄積されるとデシメートがカオティックサイクロンに変化する状態。\nインナーカオス修得後はフェルクリーヴもインナーカオスに変化する。",
+      "en": "Accumulating sufficient wrath in the Beast Gauge will upgrade Decimate to Chaotic Cyclone.\nFell Cleave will be upgraded to Inner Chaos once learned."
+    },
+    "icon": 212560,
+    "iconPath": "/icons/statuses/212560.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1902,
+    "name": {
+      "ja": "ロイエ実行可",
+      "en": "Atonement Ready"
+    },
+    "description": {
+      "ja": "ロイエを実行できる状態。",
+      "en": "Able to execute Atonement."
+    },
+    "icon": 212522,
+    "iconPath": "/icons/statuses/212522.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 1946,
+    "name": {
+      "ja": "ワイルドファイア",
+      "en": "Wildfire"
+    },
+    "description": {
+      "ja": "敵に「ワイルドファイア」を付与した状態。",
+      "en": "Currently afflicting an enemy with Wildfire."
+    },
+    "icon": 213019,
+    "iconPath": "/icons/statuses/213019.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2126,
+    "name": {
+      "ja": "エーテルコピー：ヒーラー",
+      "en": "Aetheric Mimicry: Healer"
+    },
+    "description": {
+      "ja": "ヒーラーのエーテルをコピーした状態。",
+      "en": "Copying the aetheric properties of a healer."
+    },
+    "icon": 213529,
+    "iconPath": "/icons/statuses/213529.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 2127,
+    "name": {
+      "ja": "意志薄弱",
+      "en": "Brush with Death"
+    },
+    "description": {
+      "ja": "意志が揺らいでいる状態。決死の覚悟が必要な一部のアクションが使用できない。",
+      "en": "Your resolve has deserted you. You are unable to perform actions that would result in your death."
+    },
+    "icon": 213530,
+    "iconPath": "/icons/statuses/213530.png",
+    "maxStacks": 0,
+    "category": 2,
+    "isPermanent": false
+  },
+  {
+    "id": 2587,
+    "name": {
+      "ja": "妖異の鎌",
+      "en": "Soul Reaver"
+    },
+    "description": {
+      "ja": "ジビトゥ、ギャロウズ、ギロティンを実行できる状態。",
+      "en": "Able to execute Gibbet, Gallows, and Guillotine."
+    },
+    "icon": 217097,
+    "iconPath": "/icons/statuses/217097.png",
+    "maxStacks": 2,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2588,
+    "name": {
+      "ja": "ジビトゥ効果アップ",
+      "en": "Enhanced Gibbet"
+    },
+    "description": {
+      "ja": "次に実行するジビトゥの威力が上昇する状態。",
+      "en": "Next Gibbet will deal increased damage."
+    },
+    "icon": 212927,
+    "iconPath": "/icons/statuses/212927.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2589,
+    "name": {
+      "ja": "ギャロウズ効果アップ",
+      "en": "Enhanced Gallows"
+    },
+    "description": {
+      "ja": "次に実行するギャロウズの威力が上昇する状態。",
+      "en": "Next Gallows will deal increased damage."
+    },
+    "icon": 212928,
+    "iconPath": "/icons/statuses/212928.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2592,
+    "name": {
+      "ja": "死の供物",
+      "en": "Immortal Sacrifice"
+    },
+    "description": {
+      "ja": "プレンティフルハーベストを実行できる状態。",
+      "en": "Able to execute Plentiful Harvest."
+    },
+    "icon": 217287,
+    "iconPath": "/icons/statuses/217287.png",
+    "maxStacks": 8,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2606,
+    "name": {
+      "ja": "エウクラシア",
+      "en": "Eukrasia"
+    },
+    "description": {
+      "ja": "自身の一部のアクションを変化させている状態。",
+      "en": "Certain actions are being augmented."
+    },
+    "icon": 212953,
+    "iconPath": "/icons/statuses/212953.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 2688,
+    "name": {
+      "ja": "オーバーヒート",
+      "en": "Overheated"
+    },
+    "description": {
+      "ja": "一部のウェポンスキルの威力が上昇する状態。",
+      "en": "Potency of single-target weaponskills is increased."
+    },
+    "icon": 218385,
+    "iconPath": "/icons/statuses/218385.png",
+    "maxStacks": 5,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2690,
+    "name": {
+      "ja": "月影雷獣実行可",
+      "en": "Raiju Ready"
+    },
+    "description": {
+      "ja": "月影雷獣爪または月影雷獣牙を実行できる状態。",
+      "en": "Able to execute Forked Raiju and Fleeting Raiju."
+    },
+    "icon": 217597,
+    "iconPath": "/icons/statuses/217597.png",
+    "maxStacks": 3,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2692,
+    "name": {
+      "ja": "ブラストアロー実行可",
+      "en": "Blast Arrow Ready"
+    },
+    "description": {
+      "ja": "ブラストアローを実行できる状態。",
+      "en": "Able to execute Blast Arrow."
+    },
+    "icon": 212621,
+    "iconPath": "/icons/statuses/212621.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2698,
+    "name": {
+      "ja": "ティラナ実行可",
+      "en": "Flourishing Finish"
+    },
+    "description": {
+      "ja": "ティラナを実行できる状態。",
+      "en": "Able to execute Tillana."
+    },
+    "icon": 213722,
+    "iconPath": "/icons/statuses/213722.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2699,
+    "name": {
+      "ja": "扇の舞い【終】実行可",
+      "en": "Fourfold Fan Dance"
+    },
+    "description": {
+      "ja": "扇の舞い【終】を実行できる状態。",
+      "en": "Able to execute Fan Dance IV."
+    },
+    "icon": 213723,
+    "iconPath": "/icons/statuses/213723.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2700,
+    "name": {
+      "ja": "流星の舞い実行可",
+      "en": "Flourishing Starfall"
+    },
+    "description": {
+      "ja": "流星の舞いを実行できる状態。",
+      "en": "Able to execute Starfall Dance."
+    },
+    "icon": 213724,
+    "iconPath": "/icons/statuses/213724.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2701,
+    "name": {
+      "ja": "ルインジャ実行可",
+      "en": "Further Ruin"
+    },
+    "description": {
+      "ja": "ルインジャを実行できる状態。",
+      "en": "Able to execute Ruin IV."
+    },
+    "icon": 212690,
+    "iconPath": "/icons/statuses/212690.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2718,
+    "name": {
+      "ja": "マクロコスモス",
+      "en": "Macrocosmos"
+    },
+    "description": {
+      "ja": "効果時間が経過するか自身にこのステータスを付与した占星術師が「ミクロコスモス」を実行することで、自身のＨＰを回復させる効果が発動する状態。回復効果の効果量はこのステータスが付与されているときに受けたダメージの総量によって変化する。",
+      "en": "Restores HP when effect duration expires or the astrologian who granted this effect executes Microcosmos. Healing potency is based on damage taken and compiled over the duration of the effect."
+    },
+    "icon": 213263,
+    "iconPath": "/icons/statuses/213263.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2723,
+    "name": {
+      "ja": "残影鎌鼬実行可",
+      "en": "Phantom Kamaitachi Ready"
+    },
+    "description": {
+      "ja": "残影鎌鼬を実行できる状態。",
+      "en": "Able to execute Phantom Kamaitachi."
+    },
+    "icon": 212917,
+    "iconPath": "/icons/statuses/212917.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2724,
+    "name": {
+      "ja": "クリムゾンサイクロン実行可",
+      "en": "Ifrit's Favor"
+    },
+    "description": {
+      "ja": "クリムゾンサイクロンを実行できる状態。",
+      "en": "Able to execute Crimson Cyclone."
+    },
+    "icon": 212696,
+    "iconPath": "/icons/statuses/212696.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2725,
+    "name": {
+      "ja": "スリップストリーム実行可",
+      "en": "Garuda's Favor"
+    },
+    "description": {
+      "ja": "スリップストリームを実行できる状態。",
+      "en": "Able to execute Slipstream."
+    },
+    "icon": 212697,
+    "iconPath": "/icons/statuses/212697.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2853,
+    "name": {
+      "ja": "マウンテンバスター実行可",
+      "en": "Titan's Favor"
+    },
+    "description": {
+      "ja": "マウンテンバスターを実行できる状態。",
+      "en": "Able to execute Mountain Buster."
+    },
+    "icon": 212698,
+    "iconPath": "/icons/statuses/212698.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 2959,
+    "name": {
+      "ja": "奥義波切実行可",
+      "en": "Ogi Namikiri Ready"
+    },
+    "description": {
+      "ja": "奥義波切を実行できる状態。",
+      "en": "Able to execute Ogi Namikiri."
+    },
+    "icon": 213313,
+    "iconPath": "/icons/statuses/213313.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3019,
+    "name": {
+      "ja": "コンフィテオル実行可",
+      "en": "Confiteor Ready"
+    },
+    "description": {
+      "ja": "コンフィテオルを実行できる状態。",
+      "en": "Able to execute Confiteor."
+    },
+    "icon": 212520,
+    "iconPath": "/icons/statuses/212520.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3674,
+    "name": {
+      "ja": "サブトラクティブパレット",
+      "en": "Subtractive Palette"
+    },
+    "description": {
+      "ja": "色魔法の性質が変化した状態。",
+      "en": "The properties of your pictomancy spells have changed."
+    },
+    "icon": 218673,
+    "iconPath": "/icons/statuses/218673.png",
+    "maxStacks": 3,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 3681,
+    "name": {
+      "ja": "スタープリズム実行可",
+      "en": "Starstruck"
+    },
+    "description": {
+      "ja": "スタープリズムを実行できる状態。",
+      "en": "Able to execute Star Prism."
+    },
+    "icon": 213806,
+    "iconPath": "/icons/statuses/213806.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3686,
+    "name": {
+      "ja": "テンペラコート",
+      "en": "Tempera Coat"
+    },
+    "description": {
+      "ja": "一定量のダメージを軽減する状態。",
+      "en": "A magicked barrier is nullifying damage."
+    },
+    "icon": 213809,
+    "iconPath": "/icons/statuses/213809.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3691,
+    "name": {
+      "ja": "色調反転",
+      "en": "Monochrome Tones"
+    },
+    "description": {
+      "ja": "ホワイトペイントが1スタックのみブラックペイントに変化する状態。",
+      "en": "One stack of White Paint has been converted to Black Paint."
+    },
+    "icon": 213814,
+    "iconPath": "/icons/statuses/213814.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": true
+  },
+  {
+    "id": 3827,
+    "name": {
+      "ja": "ゲベート実行可",
+      "en": "Supplication Ready"
+    },
+    "description": {
+      "ja": "ゲベートを実行できる状態。",
+      "en": "Able to execute Supplication."
+    },
+    "icon": 212523,
+    "iconPath": "/icons/statuses/212523.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3828,
+    "name": {
+      "ja": "グラブカッマー実行可",
+      "en": "Sepulchre Ready"
+    },
+    "description": {
+      "ja": "グラブカッマーを実行できる状態。",
+      "en": "Able to execute Sepulchre."
+    },
+    "icon": 212524,
+    "iconPath": "/icons/statuses/212524.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3831,
+    "name": {
+      "ja": "ブレード・オブ・オナー実行可",
+      "en": "Blade of Honor Ready"
+    },
+    "description": {
+      "ja": "ブレード・オブ・オナーを実行できる状態。",
+      "en": "Able to execute Blade of Honor."
+    },
+    "icon": 213052,
+    "iconPath": "/icons/statuses/213052.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3834,
+    "name": {
+      "ja": "ルイネーター実行可",
+      "en": "Primal Ruination Ready"
+    },
+    "description": {
+      "ja": "ルイネーターを実行できる状態。",
+      "en": "Able to execute Primal Ruination."
+    },
+    "icon": 212569,
+    "iconPath": "/icons/statuses/212569.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3836,
+    "name": {
+      "ja": "ブラッドデリリアム",
+      "en": "Delirium"
+    },
+    "description": {
+      "ja": "レッドデリリアムおよびインペイルメントを実行できる状態。",
+      "en": "Able to execute Scarlet Delirium and Impalement."
+    },
+    "icon": 217147,
+    "iconPath": "/icons/statuses/217147.png",
+    "maxStacks": 3,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3837,
+    "name": {
+      "ja": "ディセスティーム実行可",
+      "en": "Scorn"
+    },
+    "description": {
+      "ja": "ディセスティームを実行できる状態。",
+      "en": "Able to execute Disesteem."
+    },
+    "icon": 213126,
+    "iconPath": "/icons/statuses/213126.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3840,
+    "name": {
+      "ja": "ハートコンボ実行可",
+      "en": "Ready to Reign"
+    },
+    "description": {
+      "ja": "ハートコンボを実行できる状態。",
+      "en": "Able to execute Reign of Beasts."
+    },
+    "icon": 213621,
+    "iconPath": "/icons/statuses/213621.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3841,
+    "name": {
+      "ja": "金剛周天実行可",
+      "en": "Earth's Rumination"
+    },
+    "description": {
+      "ja": "金剛周天を実行できる状態。",
+      "en": "Able to execute Earth's Reply."
+    },
+    "icon": 212539,
+    "iconPath": "/icons/statuses/212539.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3842,
+    "name": {
+      "ja": "絶空拳実行可",
+      "en": "Wind's Rumination"
+    },
+    "description": {
+      "ja": "絶空拳を実行できる状態。",
+      "en": "Able to execute Wind's Reply."
+    },
+    "icon": 212540,
+    "iconPath": "/icons/statuses/212540.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3843,
+    "name": {
+      "ja": "乾坤闘気弾実行可",
+      "en": "Fire's Rumination"
+    },
+    "description": {
+      "ja": "乾坤闘気弾を実行できる状態。",
+      "en": "Able to execute Fire's Reply."
+    },
+    "icon": 212541,
+    "iconPath": "/icons/statuses/212541.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3844,
+    "name": {
+      "ja": "ナーストレンド実行可",
+      "en": "Nastrond Ready"
+    },
+    "description": {
+      "ja": "ナーストレンドを実行できる状態。",
+      "en": "Able to execute Nastrond."
+    },
+    "icon": 212589,
+    "iconPath": "/icons/statuses/212589.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3845,
+    "name": {
+      "ja": "ドラゴンライズ実行可",
+      "en": "Dragon's Flight"
+    },
+    "description": {
+      "ja": "ドラゴンライズを実行できる状態。",
+      "en": "Able to execute Rise of the Dragon."
+    },
+    "icon": 212587,
+    "iconPath": "/icons/statuses/212587.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3847,
+    "name": {
+      "ja": "ゴアブレード実行可",
+      "en": "Goring Blade Ready"
+    },
+    "description": {
+      "ja": "ゴアブレードを実行できる状態。",
+      "en": "Able to execute Goring Blade."
+    },
+    "icon": 213053,
+    "iconPath": "/icons/statuses/213053.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3848,
+    "name": {
+      "ja": "忍隠",
+      "en": "Shadow Walker"
+    },
+    "description": {
+      "ja": "隠れていなくても「かくれる」を条件とするアクションを実行できる状態。",
+      "en": "Able to use actions normally requiring the Hidden status."
+    },
+    "icon": 212919,
+    "iconPath": "/icons/statuses/212919.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3850,
+    "name": {
+      "ja": "秘技実行可",
+      "en": "Higi"
+    },
+    "description": {
+      "ja": "秘技を実行できる状態。",
+      "en": "Able to make use of advanced ninja arts."
+    },
+    "icon": 212921,
+    "iconPath": "/icons/statuses/212921.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3851,
+    "name": {
+      "ja": "天理人道実行可",
+      "en": "Tenri Jindo Ready"
+    },
+    "description": {
+      "ja": "天理人道を実行できる状態。",
+      "en": "Able to execute Tenri Jindo."
+    },
+    "icon": 212922,
+    "iconPath": "/icons/statuses/212922.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3855,
+    "name": {
+      "ja": "残心実行可",
+      "en": "Zanshin Ready"
+    },
+    "description": {
+      "ja": "残心を実行できる状態。",
+      "en": "Able to execute Zanshin."
+    },
+    "icon": 213318,
+    "iconPath": "/icons/statuses/213318.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3856,
+    "name": {
+      "ja": "天道",
+      "en": "Tendo"
+    },
+    "description": {
+      "ja": "天下五剣が天道五剣に、乱れ雪月花が天道雪月花に変化する状態。",
+      "en": "Tenka Goken is upgraded to Tendo Goken, and Midare Setsugekka is upgraded to Tendo Setsugekka."
+    },
+    "icon": 213319,
+    "iconPath": "/icons/statuses/213319.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3858,
+    "name": {
+      "ja": "処刑人",
+      "en": "Executioner"
+    },
+    "description": {
+      "ja": "エクスジビトゥ、エクスギャロウズ、エクスギロティンを実行できる状態。",
+      "en": "Able to execute Executioner's Gibbet, Executioner's Gallows, and Executioner's Guillotine."
+    },
+    "icon": 217198,
+    "iconPath": "/icons/statuses/217198.png",
+    "maxStacks": 2,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3862,
+    "name": {
+      "ja": "レゾナンスアロー実行可",
+      "en": "Resonant Arrow Ready"
+    },
+    "description": {
+      "ja": "レゾナンスアローを実行できる状態。",
+      "en": "Able to execute Resonant Arrow."
+    },
+    "icon": 213076,
+    "iconPath": "/icons/statuses/213076.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3863,
+    "name": {
+      "ja": "光神のアンコール実行可",
+      "en": "Radiant Encore Ready"
+    },
+    "description": {
+      "ja": "光神のアンコールを実行できる状態。",
+      "en": "Able to execute Radiant Encore."
+    },
+    "icon": 213077,
+    "iconPath": "/icons/statuses/213077.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3865,
+    "name": {
+      "ja": "エクスカベーター実行可",
+      "en": "Excavator Ready"
+    },
+    "description": {
+      "ja": "エクスカベーターを実行できる状態。",
+      "en": "Able to execute Excavator."
+    },
+    "icon": 213023,
+    "iconPath": "/icons/statuses/213023.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3866,
+    "name": {
+      "ja": "フルメタルバースト実行可",
+      "en": "Full Metal Machinist"
+    },
+    "description": {
+      "ja": "フルメタルバーストを実行できる状態。",
+      "en": "Able to execute Full Metal Field."
+    },
+    "icon": 213024,
+    "iconPath": "/icons/statuses/213024.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3867,
+    "name": {
+      "ja": "ラストダンス実行可",
+      "en": "Last Dance Ready"
+    },
+    "description": {
+      "ja": "ラストダンスを実行できる状態。",
+      "en": "Able to execute Last Dance."
+    },
+    "icon": 213727,
+    "iconPath": "/icons/statuses/213727.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3868,
+    "name": {
+      "ja": "フィニシングムーブ実行可",
+      "en": "Finishing Move Ready"
+    },
+    "description": {
+      "ja": "フィニシングムーブを実行できる状態。",
+      "en": "Able to execute Finishing Move."
+    },
+    "icon": 213728,
+    "iconPath": "/icons/statuses/213728.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3869,
+    "name": {
+      "ja": "暁の舞い実行可",
+      "en": "Dance of the Dawn Ready"
+    },
+    "description": {
+      "ja": "暁の舞いを実行できる状態。",
+      "en": "Able to execute Dance of the Dawn."
+    },
+    "icon": 213729,
+    "iconPath": "/icons/statuses/213729.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3873,
+    "name": {
+      "ja": "シアリングスパーク実行可",
+      "en": "Ruby's Glimmer"
+    },
+    "description": {
+      "ja": "シアリングスパークを実行できる状態。",
+      "en": "Able to execute Searing Flash."
+    },
+    "icon": 212750,
+    "iconPath": "/icons/statuses/212750.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3874,
+    "name": {
+      "ja": "ルクス・ソラリス実行可",
+      "en": "Refulgent Lux"
+    },
+    "description": {
+      "ja": "ルクス・ソラリスを実行できる状態。",
+      "en": "Able to execute Lux Solaris."
+    },
+    "icon": 212751,
+    "iconPath": "/icons/statuses/212751.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3876,
+    "name": {
+      "ja": "ブライヤー・クロゼ実行可",
+      "en": "Thorned Flourish"
+    },
+    "description": {
+      "ja": "ブライヤー・クロゼを実行できる状態。",
+      "en": "Able to execute Vice of Thorns."
+    },
+    "icon": 213411,
+    "iconPath": "/icons/statuses/213411.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3877,
+    "name": {
+      "ja": "ノーブルインパクト実行可",
+      "en": "Grand Impact Ready"
+    },
+    "description": {
+      "ja": "ノーブルインパクトを実行できる状態。",
+      "en": "Able to execute Grand Impact."
+    },
+    "icon": 213412,
+    "iconPath": "/icons/statuses/213412.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3878,
+    "name": {
+      "ja": "プリフルジェンス実行可",
+      "en": "Prefulgence Ready"
+    },
+    "description": {
+      "ja": "プリフルジェンスを実行できる状態。",
+      "en": "Able to cast Prefulgence."
+    },
+    "icon": 213413,
+    "iconPath": "/icons/statuses/213413.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3879,
+    "name": {
+      "ja": "グレアジャ実行可",
+      "en": "Sacred Sight"
+    },
+    "description": {
+      "ja": "グレアジャを実行できる状態。",
+      "en": "Able to execute Glare IV."
+    },
+    "icon": 218669,
+    "iconPath": "/icons/statuses/218669.png",
+    "maxStacks": 3,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3881,
+    "name": {
+      "ja": "ディヴァインカレス実行可",
+      "en": "Divine Grace"
+    },
+    "description": {
+      "ja": "ディヴァインカレスを実行できる状態。",
+      "en": "Able to execute Divine Caress."
+    },
+    "icon": 212640,
+    "iconPath": "/icons/statuses/212640.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3882,
+    "name": {
+      "ja": "埋伏の毒実行可",
+      "en": "Impact Imminent"
+    },
+    "description": {
+      "ja": "埋伏の毒を実行できる状態。",
+      "en": "Able to execute Baneful Impaction."
+    },
+    "icon": 212818,
+    "iconPath": "/icons/statuses/212818.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3884,
+    "name": {
+      "ja": "セラフィズム",
+      "en": "Seraphism"
+    },
+    "description": {
+      "ja": "自身と周囲のパーティメンバーのＨＰを継続回復している状態。",
+      "en": "Self and nearby party members are regenerating HP over time."
+    },
+    "icon": 212820,
+    "iconPath": "/icons/statuses/212820.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3886,
+    "name": {
+      "ja": "ソニックブレイク実行可",
+      "en": "Ready to Break"
+    },
+    "description": {
+      "ja": "ソニックブレイクを実行できる状態。",
+      "en": "Able to execute Sonic Break."
+    },
+    "icon": 213622,
+    "iconPath": "/icons/statuses/213622.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3893,
+    "name": {
+      "ja": "オラクル実行可",
+      "en": "Divining"
+    },
+    "description": {
+      "ja": "オラクルを実行できる状態。",
+      "en": "Able to execute Oracle."
+    },
+    "icon": 213264,
+    "iconPath": "/icons/statuses/213264.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3895,
+    "name": {
+      "ja": "サンサイン実行可",
+      "en": "Suntouched"
+    },
+    "description": {
+      "ja": "サンサインを実行できる状態。",
+      "en": "Able to execute Sun Sign."
+    },
+    "icon": 213266,
+    "iconPath": "/icons/statuses/213266.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 3901,
+    "name": {
+      "ja": "原初の激震実行可",
+      "en": "Wrathful"
+    },
+    "description": {
+      "ja": "原初の激震を実行できる状態。",
+      "en": "Able to execute Primal Wrath."
+    },
+    "icon": 212571,
+    "iconPath": "/icons/statuses/212571.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  },
+  {
+    "id": 4403,
+    "name": {
+      "ja": "クリムゾンストライク実行可",
+      "en": "Crimson Strike Ready"
+    },
+    "description": {
+      "ja": "クリムゾンストライクを実行できる状態。",
+      "en": "Able to execute Crimson Strike."
+    },
+    "icon": 212752,
+    "iconPath": "/icons/statuses/212752.png",
+    "maxStacks": 0,
+    "category": 1,
+    "isPermanent": false
+  }
+]

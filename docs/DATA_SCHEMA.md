@@ -5,9 +5,11 @@
 
 ## 0. 方針
 
+> **v0.2:** ゲームデータは「クライアント抽出データ（第 1 層）＋ 補足データ（第 2 層）」を合成して作る。本書の `JobData` は**合成後の形**を表す。第 2 層のファイル形式（`JobOverlay`）と合成ルールは [GAME_DATA.md](./GAME_DATA.md) を参照。
+
 1. **ゲームデータはコードに書かない。** アクション名・数値・開幕回しはすべて `src/data/` 以下のデータファイルに置く。エンジン・UI・採点コードに特定アクションの ID や数値が現れたらテストで失敗させる（[TEST_PLAN.md](./TEST_PLAN.md) S-02）。
 2. **形式は JSON。** 型は TypeScript で定義し、読み込み時に `zod` スキーマで実行時検証する（JSON は非エンジニアでも編集・レビューしやすく、共有形式とも揃えられるため）。
-3. **未確認の値は `null` で表す。** 推測値を入れない。`null` を含むデータは「ドラフト」として扱い、アプリではそのジョブを選択不可（「データ未整備」表示）にする。
+3. **未確認の値は `null` で表す。** 第 1 層にも第 2 層にもない値が `null` になる。 推測値を入れない。`null` を含むデータは「ドラフト」として扱い、アプリではそのジョブを選択不可（「データ未整備」表示）にする。
 4. **出典と検証状態をデータに持つ。** 各ファイル・各アクションに `verification` を持ち、確認済みの値には出典（`DataSource`）を記録する。
 5. **エンジン開発・テストは架空ジョブで行う。** 侍のデータ確定を待たずに実装を進めるため、明らかに架空と分かる名称・値のテスト用ジョブ（`_testjob`）を用意する。このデータはゲーム仕様を表さない。
 
@@ -63,11 +65,14 @@ interface JobData {
 ### 2.2 Action
 
 ```ts
-type ActionId = string;           // アプリ内部 ID。ゲーム内名称とは独立（表示は nameJa）
+type ActionId = number;           // ゲームのアクション ID（例 7477）。テストジョブは 900000 番台の架空 ID
 
 interface ActionDef {
   id: ActionId;
-  nameJa: string | null;          // 日本語クライアント表記。TODO(GAME-10)
+  nameJa: string | null;          // 第 1 層 name.ja
+  nameEn: string | null;          // 第 1 層 name.en
+  description: string | null;     // 第 1 層（ツールチップに表示）
+  iconPath: string | null;        // 第 1 層。null のときは label で仮アイコン
   label: string;                  // 仮アイコンに表示する 1〜2 文字（アプリが決める。ゲーム仕様ではない）
   category: 'weaponskill' | 'spell' | 'ability';
   isGcd: boolean;
@@ -379,6 +384,8 @@ https://nettoge.com/tools/ff14-rotation-trainer/#/share?d=<encoded>     ※ パ�
 | `ff14rt:v1:settings` | 表示設定（テーマ、ミス理由表示、音、`prefers-reduced-motion` 上書き） | — |
 | `ff14rt:v1:lastConfig` | 最後に使った `PracticeConfig` | — |
 | `ff14rt:v1:keybinds:<jobId>` | `Record<buttonId, KeyboardEvent.code>` | — |
+| `ff14rt:v1:inputProfiles` | `InputProfile[]`（設定ファイルから取り込んだホットバー・キー・パッド・HUD 配置。§6.1） | 10 件 |
+| `ff14rt:v1:activeInputProfile` | 使用中のプロフィール ID | — |
 | `ff14rt:v1:history:<jobId>` | 試行結果の配列（新しい順） | 50 件（超過分は古いものから削除） |
 | `ff14rt:v1:customOpeners:<jobId>` | `OpenerDefinition[]`（status `user`） | 20 件 |
 
@@ -391,6 +398,40 @@ interface HistoryEntry {
   metrics: Record<MetricId, number>;
   flags: { paused: boolean; timingOverridden: boolean; speed: number };
   replay?: SharePayload;          // 自己ベストのみ保持（容量節約）
+}
+```
+
+### 6.1 InputProfile / HudLayout（[INPUT_HUD.md](./INPUT_HUD.md)）
+
+```ts
+type SlotRef = { bar: `hb${1|2|3|4|5|6|7|8|9|10}` | `xhb${1|2|3|4|5|6|7|8}`; index: number };
+
+interface InputProfile {
+  id: string;
+  name: string;                         // ユーザーが付ける。キャラクターのフォルダ名は保存しない
+  importedAt: string;
+  sourceFiles: string[];                // 例 ["HOTBAR.DAT", "ADDON.DAT"]（ファイル名のみ）
+  hotbars: Record<string /* jobAbbr */, { slot: SlotRef; content: { kind: 'action'; actionId: number } | { kind: 'other' } | { kind: 'empty' } }[]>;
+  keyBindings: { slot: SlotRef; code: string; mods: ('shift' | 'ctrl' | 'alt')[] }[];
+  gamepad: {
+    mapping: 'standard' | 'custom';
+    custom?: Record<string /* 論理ボタン名 */, number /* buttons[] の添字 */>;
+    triggerThreshold: number;
+    bothTriggers: 'lastPressed';        // CFG-06 の確認後に選択肢を追加
+  };
+  hud: HudLayout | null;
+}
+
+interface HudLayout {
+  aspect: number;                       // 取り込み元の縦横比（幅/高さ）
+  elements: {
+    id: 'hotbar' | 'xhb' | 'jobGauge' | 'statusSelf' | 'statusTarget' | 'castBar' | 'target' | 'guide' | 'missReason' | 'history';
+    ref?: string;                       // hotbar の場合 'hb1' など
+    x: number; y: number;               // 0〜1 の比率（左上基準）
+    scale: number;
+    visible: boolean;
+    columns?: number;                   // ホットバーの並び（例 12×1、6×2）
+  }[];
 }
 ```
 
