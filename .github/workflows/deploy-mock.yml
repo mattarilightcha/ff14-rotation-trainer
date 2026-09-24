@@ -73,9 +73,20 @@ jobs:
       - name: Upload with rsync
         if: steps.check.outputs.skip != 'true'
         run: |
-          rsync -rlptz --delete \
-            -e "ssh -i ~/.ssh/id_deploy -p ${DEPLOY_PORT:-22} -o StrictHostKeyChecking=yes" \
-            dist-mock/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_MOCK_PATH%/}/"
+          # 登録値の揺れを吸収する（https:// や末尾の / 、前後の空白、host:port 形式）
+          host=$(printf '%s' "$DEPLOY_HOST" | tr -d '[:space:]')
+          host=${host#*://}; host=${host%%/*}
+          port=$(printf '%s' "$DEPLOY_PORT" | tr -d '[:space:]')
+          case "$host" in *:*) port=${port:-${host##*:}}; host=${host%%:*} ;; esac
+          port=${port:-22}
+          user=$(printf '%s' "$DEPLOY_USER" | tr -d '[:space:]')
+          dest=$(printf '%s' "$DEPLOY_MOCK_PATH" | sed 's/[[:space:]]*$//'); dest=${dest%/}
+          case "$user" in */*|*@*) echo "::error::DEPLOY_USER にユーザー名以外（/ や @）が含まれています"; exit 1 ;; esac
+          [ -n "$host" ] || { echo "::error::DEPLOY_HOST が空です"; exit 1; }
+          echo "接続先: ホスト ${#host} 文字 / ポート $port / 置き場所 $dest"
+          ssh_cmd="ssh -i $HOME/.ssh/id_deploy -p $port -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          $ssh_cmd "$user@$host" "mkdir -p '$dest'"
+          rsync -rlptz --delete -e "$ssh_cmd" dist-mock/ "$user@$host:$dest/"
       - name: Smoke check
         if: steps.check.outputs.skip != 'true' && env.MOCK_URL != ''
         run: |
