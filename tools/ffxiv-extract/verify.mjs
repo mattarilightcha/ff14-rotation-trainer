@@ -37,6 +37,39 @@ for (const j of jobs) {
   for (const id of j.actionIds) if (!byId.has(id)) fail(`${j.abbreviation.en} の actionIds ${id} が無い`);
 }
 
+// ---- ジョブゲージ ----
+const gauges = load("job-gauges.json");
+for (const j of jobs.filter((j) => j.isJob)) {
+  const ab = j.abbreviation.en;
+  if (!gauges.jobs[ab] && !gauges.noGauge.includes(ab)) fail(`${ab} のジョブゲージが job-gauges.json に無い`);
+}
+for (const [ab, names] of Object.entries(gauges.jobs))
+  for (const n of names) if (!gauges.layouts[n]) fail(`${ab} の ${n} が layouts に無い`);
+for (const [k, t] of Object.entries(gauges.textures))
+  if (!existsSync(join(root, "public", t.path))) fail(`ゲージ画像が無い ${k}`);
+let gaugeParts = 0;
+const liveLayouts = Object.values(gauges.jobs).flat();
+for (const n of liveLayouts) {
+  const L = gauges.layouts[n];
+  const allNodes = [...L.nodes, ...L.components.flatMap((c) => c.nodes)];
+  const used = new Set(allNodes.filter((x) => x.partListId != null).map((x) => `${x.partListId}/${x.partId}`));
+  for (const pl of L.partLists)
+    pl.parts.forEach((p, i) => {
+      const t = gauges.textures[p.texture];
+      if (!t) { fail(`${n} パーツリスト ${pl.id} の画像 ${p.texture} が無い`); return; }
+      gaugeParts++;
+      // ULD の座標は等倍、HD 画像は scale 倍。ゲームのデータには 1px の端数（JobHudPLD0）や、
+      // どのノードも使わない古いパーツ（JobHudSCH0・SMN0）のはみ出しがあるので、使われるものだけを 1px の余裕で見る
+      if (!used.has(`${pl.id}/${i}`)) return;
+      if ((p.u + p.w - 1) * t.scale > t.width || (p.v + p.h - 1) * t.scale > t.height)
+        fail(`${n} パーツ ${pl.id}/${i} (${p.u},${p.v},${p.w},${p.h}) が ${p.texture} (${t.width}x${t.height}/${t.scale}) からはみ出す`);
+    });
+  const partListIds = new Set(L.partLists.map((p) => p.id));
+  for (const node of allNodes)
+    if (node.partListId != null && node.partListId !== 0 && !partListIds.has(node.partListId))
+      fail(`${n} ノード ${node.id} の partListId ${node.partListId} が無い`);
+}
+
 // ---- 既知の値 ----
 // [id, 英名, 期待値]
 const expected = [
@@ -102,5 +135,6 @@ for (const [id, en, exp] of expected) {
 }
 
 console.log(`game ${meta.gameVersion.ffxiv} / jobs ${jobs.length} / actions ${actions.length} / statuses ${statuses.length}`);
+console.log(`job gauges ${Object.keys(gauges.jobs).length} / layouts ${liveLayouts.length} / parts ${gaugeParts} / textures ${Object.keys(gauges.textures).length}`);
 console.log(`既知の値 ${ok} 件一致、NG ${errors} 件`);
 process.exit(errors ? 1 : 0);

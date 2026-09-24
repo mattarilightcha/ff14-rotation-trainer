@@ -8,7 +8,9 @@
 //   src/data/ffxiv/jobs.json       戦闘クラス・ジョブ
 //   src/data/ffxiv/actions.json    PvE のプレイヤーアクション（ロールアクション・LB を含む）
 //   src/data/ffxiv/statuses.json   アクションが付与・参照するステータス
+//   src/data/ffxiv/job-gauges.json ジョブゲージの UI 画像（ジョブごとのページ一覧）
 //   public/icons/actions/<icon>.png, public/icons/statuses/<icon>.png, public/icons/jobs/<ABBR>.png
+//   public/icons/job-gauges/<ABBR>/<page>.png
 
 using System.Text.Encodings.Web;
 using System.Text.Json;
@@ -308,6 +310,7 @@ WriteJson("actions.json", actions);
 WriteJson("statuses.json", statuses);
 
 var iconStats = new IconExporter.Result();
+JobGaugeExporter.Result? gaugeResult = null;
 if (opt.Icons)
 {
     var icons = new IconExporter(gd);
@@ -317,6 +320,21 @@ if (opt.Icons)
     iconStats.Add(icons.ExportAll(Path.Combine(pub, "jobs"), jobs.Select(j => (j.Icon, j.Abbreviation.En))));
     Console.WriteLine($"icons  : {iconStats.Written} 枚（HD {iconStats.Hd} / 通常 {iconStats.Written - iconStats.Hd}）、見つからない {iconStats.Missing.Count}");
     foreach (var m in iconStats.Missing) Console.WriteLine($"  missing icon: {m}");
+
+    var gauges = new JobGaugeExporter(gd);
+    gaugeResult = gauges.ExportAll(Path.Combine(pub, "job-gauges"), jobs.Where(j => j.IsJob).Select(j => j.Abbreviation.En));
+    Console.WriteLine($"gauges : {gaugeResult.Jobs.Count} ジョブ・ULD {gaugeResult.Layouts.Count}・画像 {gaugeResult.Textures.Count} 枚、" +
+        $"ゲージ無し {string.Join(",", gaugeResult.NoGauge)}、対応表に無い ULD {string.Join(",", gaugeResult.Unassigned)}");
+    foreach (var m in gaugeResult.MissingTextures) Console.WriteLine($"  missing texture: {m}");
+    foreach (var (k, l) in gaugeResult.Layouts.Where(l => l.Value.ParseError != null)) Console.WriteLine($"  ULD を読めず .tex だけ拾った: {k}（{l.ParseError}）");
+    WriteJson("job-gauges.json", new
+    {
+        gaugeResult.Jobs,
+        gaugeResult.NoGauge,
+        gaugeResult.Unassigned,
+        gaugeResult.Layouts,
+        gaugeResult.Textures,
+    });
 }
 
 var meta = new
@@ -330,7 +348,7 @@ var meta = new
         LuminaExcel = typeof(Action).Assembly.GetName().Version?.ToString(),
     },
     DescriptionLevel = maxLevel,
-    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written },
+    Counts = new { Jobs = jobs.Count, Actions = actions.Count, Statuses = statuses.Count, Icons = iconStats.Written, JobGauges = gaugeResult?.Jobs.Count ?? 0, JobGaugeTextures = gaugeResult?.Textures.Count ?? 0 },
     UnknownDescriptionMacros = descStats.UnknownMacros.OrderBy(k => k.Key).ToDictionary(k => k.Key, k => k.Value),
     UnknownDescriptionParams = descStats.UnknownParams.OrderBy(k => k.Key).ToDictionary(k => k.Key.ToString(), k => k.Value),
 };

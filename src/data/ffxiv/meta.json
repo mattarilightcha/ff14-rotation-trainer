@@ -8,7 +8,7 @@
     "ex4": "2026.09.15.0000.0000",
     "ex5": "2026.09.15.0000.0000"
   },
-  "extractedAt": "2026-09-24T13:10:10+09:00",
+  "extractedAt": "2026-09-24T16:26:50+09:00",
   "tool": {
     "lumina": "7.0.0.0",
     "luminaExcel": "7.0.0.0"
@@ -18,7 +18,9 @@
     "jobs": 32,
     "actions": 1055,
     "statuses": 184,
-    "icons": 1222
+    "icons": 1222,
+    "jobGauges": 23,
+    "jobGaugeTextures": 51
   },
   "unknownDescriptionMacros": {},
   "unknownDescriptionParams": {
