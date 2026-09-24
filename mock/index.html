@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>侍 木人練習 UI モック</title>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+<div id="viewport">
+  <div id="stage">
+    <!-- 背景（木人のいる床） -->
+    <div class="floor"></div>
+    <div class="dummy" aria-hidden="true"><div class="dummy-body"></div><div class="dummy-shadow"></div></div>
+
+    <!-- ターゲット情報 -->
+    <section class="win target" aria-label="ターゲット">
+      <div class="target-name"><span class="lv">Lv100</span> 打撃木人</div>
+      <div class="hp"><div class="hp-fill"></div><span class="hp-text">100%</span></div>
+      <div class="status-row" id="targetStatus"></div>
+    </section>
+
+    <!-- 経過時間・カウントダウン -->
+    <div class="timer" id="timer">00:00.0 <span class="dim">/ 02:00</span></div>
+    <div class="countdown" id="countdown" hidden></div>
+
+    <!-- 自己バフ -->
+    <section class="win buffs" aria-label="自分のステータス">
+      <div class="win-title">ステータス</div>
+      <div class="status-row" id="selfStatus"></div>
+    </section>
+
+    <!-- キャストバー -->
+    <div class="castbar" id="castbar" hidden>
+      <div class="cast-name" id="castName"></div>
+      <div class="cast-track"><div class="cast-fill" id="castFill"></div></div>
+      <div class="cast-time" id="castTime"></div>
+    </div>
+
+    <!-- ジョブゲージ -->
+    <section class="win gauge" aria-label="ジョブゲージ">
+      <div class="win-title"><img class="job-icon" id="jobIcon" alt=""> 剣気・閃・剣圧</div>
+      <div class="kenki">
+        <div class="kenki-track"><div class="kenki-fill" id="kenkiFill"></div></div>
+        <div class="kenki-num" id="kenkiNum">0</div>
+      </div>
+      <div class="sen-row">
+        <div class="sen setsu" id="senSetsu" title="雪の閃">雪</div>
+        <div class="sen getsu" id="senGetsu" title="月の閃">月</div>
+        <div class="sen ka" id="senKa" title="花の閃">花</div>
+        <div class="meditation" id="meditation" title="剣圧"><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- お手本・ログ（ゲームにない部品。チャットログ風） -->
+    <section class="win log" aria-label="ログ">
+      <div class="tabs"><span class="tab on">判定ログ</span><span class="tab">お手本</span></div>
+      <ol id="log" aria-live="polite"></ol>
+    </section>
+
+    <!-- ホットバー -->
+    <section class="hotbars" id="hotbars" aria-label="ホットバー"></section>
+    <section class="xhb" id="xhb" aria-label="クロスホットバー" hidden></section>
+    <div class="gcd-strip" id="gcdStrip" title="GCD"><div id="gcdFill"></div></div>
+
+    <!-- 操作パネル -->
+    <div class="controls">
+      <button id="btnStart" type="button">開始 <kbd>Space</kbd></button>
+      <button id="btnReset" type="button">リセット <kbd>Esc</kbd></button>
+      <button id="btnMode" type="button">表示: キーボード</button>
+    </div>
+
+    <!-- 結果 -->
+    <section class="win result" id="result" hidden aria-label="結果"></section>
+
+    <!-- ツールチップ -->
+    <div class="tooltip" id="tooltip" hidden></div>
+
+    <footer class="notice">UI モック（判定は簡易・一部の値は仮） / 非公式ファンツール / (C) SQUARE ENIX CO., LTD. All Rights Reserved.</footer>
+  </div>
+</div>
+<script src="mock-data.js"></script>
+<script src="mock.js"></script>
+</body>
+</html>
