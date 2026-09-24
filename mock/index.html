@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>木人練習 UI モック</title>
+<link rel="icon" href="data:,">
+<!-- フォントは mock/fonts に同梱（画面: Zen Kaku Gothic New、見出し・フライテキスト: Cinzel としっぽり明朝 B1。SIL OFL） -->
+<link rel="preload" href="fonts/zen-kaku-gothic-new-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/zen-kaku-gothic-new-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="mock.css">
+</head>
+<body>
+<div id="viewport">
+  <div id="stage">
+    <!-- ==================== 戦闘画面（3D の斜め見下ろし: arena3d.js / 真上の 2D: arena.js）。揺れるのはここだけで、HUD は揺らさない ==================== -->
+    <canvas id="arena" aria-hidden="true"></canvas>
+    <canvas id="arena3d" aria-hidden="true" hidden></canvas>
+    <div id="overlay" aria-hidden="true"></div>
+
+    <!-- ==================== HUD ==================== -->
+    <!-- ターゲット情報（敵の詠唱バーを含む） -->
+    <section class="win target" aria-label="ターゲット">
+      <div class="target-name"><span class="lv">Lv100</span> <span id="targetName">からくり木人</span></div>
+      <div class="hp"><div class="hp-fill" id="bossHpFill"></div><span class="hp-text" id="bossHpText">100%</span></div>
+      <div class="boss-cast" id="bossCast" hidden>
+        <div class="bc-name" id="bossCastName"></div>
+        <div class="bc-track"><div class="bc-fill" id="bossCastFill"></div></div>
+      </div>
+      <!-- 敵の技の予告（練習用の補助。ゲームにはない） -->
+      <div class="mech-alert" id="mechAlert" hidden><b id="mechName"></b><span id="mechHint"></span></div>
+      <div class="status-row" id="targetStatus"></div>
+    </section>
+
+    <!-- パーティリスト -->
+    <section class="win party" aria-label="パーティリスト">
+      <div class="pt-row" id="ptSelf">
+        <img class="pt-job" id="ptSelfIcon" alt="">
+        <div class="pt-main"><div class="pt-name"><span class="pt-lv">Lv100</span>あなた</div><div class="pt-hp"><div class="pt-fill" id="ptSelfHp"></div></div></div>
+        <div class="pt-num" id="ptSelfNum">100</div>
+        <div class="pt-st status-row" id="ptSelfSt"></div>
+      </div>
+      <div class="pt-row" id="ptTank">
+        <img class="pt-job" id="ptTankIcon" alt="">
+        <div class="pt-main"><div class="pt-name"><span class="pt-lv">Lv100</span>タンク</div><div class="pt-hp"><div class="pt-fill" id="ptTankHp"></div></div></div>
+        <div class="pt-num" id="ptTankNum">100</div>
+        <div class="pt-st status-row" id="ptTankSt"></div>
+      </div>
+    </section>
+
+    <!-- 経過時間・カウントダウン・一時停止 -->
+    <div class="timer" id="timer"></div>
+    <div class="countdown" id="countdown" hidden></div>
+    <div class="pause-badge" id="pauseBadge" hidden>一時停止中</div>
+
+    <!-- 自己バフ -->
+    <section class="win buffs" aria-label="自分のステータス">
+      <div class="win-title">ステータス</div>
+      <div class="status-row" id="selfStatus"></div>
+    </section>
+
+    <!-- パラメーターバー（HP・MP。ADDON.DAT のパラメーターバーの位置） -->
+    <section class="param" id="param" aria-label="HP・MP">
+      <div class="pm-row"><span class="pm-l">HP</span><span class="pm-v" id="pmHpV">100%</span><div class="pm-bar"><div class="pm-fill hp" id="pmHp"></div></div></div>
+      <div class="pm-row"><span class="pm-l">MP</span><span class="pm-v" id="pmMpV">10000</span><div class="pm-bar"><div class="pm-fill mp" id="pmMp"></div></div></div>
+    </section>
+
+    <!-- ターゲット情報を分割表示するときの、キャストバーとステータスの置き場所 -->
+    <div class="hud-box" id="bossCastBox"></div>
+    <div class="hud-box" id="targetStatusBox"></div>
+
+    <!-- HUD の部品の枠（設定で「枠を表示」にしたとき） -->
+    <div class="hud-frames" id="hudFrames" hidden></div>
+
+    <!-- キャストバー -->
+    <div class="castbar" id="castbar" hidden>
+      <img class="cast-icon" id="castIcon" alt="">
+      <div class="cast-main">
+        <div class="cast-name" id="castName"></div>
+        <div class="cast-track"><div class="cast-fill" id="castFill"></div></div>
+        <div class="cast-time" id="castTime"></div>
+      </div>
+    </div>
+
+    <!-- ジョブゲージ（クライアントから抽出した ULD とテクスチャで組み立てる。gauge.js） -->
+    <div class="gauges" id="gauges" aria-label="ジョブゲージ"></div>
+
+    <!-- 判定ログ（ゲームにない部品。チャットログ風） -->
+    <section class="win log" aria-label="ログ">
+      <div class="tabs"><span class="tab on">判定ログ</span><span class="tab">お手本</span></div>
+      <ol id="log" aria-live="polite"></ol>
+    </section>
+
+    <!-- ホットバー -->
+    <section class="hotbars" id="hotbars" aria-label="ホットバー"></section>
+    <section class="sidebars" id="sidebars" aria-label="ホットバー 5〜10"></section>
+    <section class="hud" id="hud" aria-label="ホットバー（HUD 再現）"></section>
+    <section class="xhb" id="xhb" aria-label="クロスホットバー" hidden></section>
+
+    <!-- 操作 -->
+    <div class="controls">
+      <button id="btnStart" type="button">開始 <kbd>Space</kbd></button>
+      <button id="btnReset" type="button">リセット <kbd>Esc</kbd></button>
+      <button id="btnSettings" type="button">設定</button>
+      <button id="btnHud" type="button">HUD 調整</button>
+      <button id="btnGame" type="button">ゲームモード</button>
+      <button id="btnSound" type="button">音: 入</button>
+    </div>
+    <div class="game-badge" id="gameBadge" hidden></div>
+
+    <!-- 開始画面 -->
+    <section class="win start" id="startOverlay" aria-label="開始">
+      <div class="start-title"><img class="job-icon" id="startJobIcon" alt=""><b id="startJobName">侍 Lv100</b> 木人練習<span>UI モック</span></div>
+      <div class="start-buttons">
+        <button type="button" id="btnGameStart" class="primary">ゲームモードで開始</button>
+        <button type="button" id="btnPlainStart">このまま開始 <kbd>Space</kbd></button>
+      </div>
+      <p class="note" id="gameNote"></p>
+      <div class="start-opts" id="startOpts"></div>
+      <ul class="howto" id="howto"></ul>
+    </section>
+
+    <!-- 結果 -->
+    <section class="win result" id="result" hidden aria-label="結果"></section>
+
+    <!-- 設定（settings.js が中身を作る） -->
+    <div id="settingsHost"></div>
+
+    <!-- ツールチップ -->
+    <div class="tooltip" id="tooltip" hidden></div>
+
+    <footer class="notice">UI モック（判定は簡易・一部の値は仮） / 非公式ファンツール / (C) SQUARE ENIX CO., LTD. All Rights Reserved.</footer>
+  </div>
+</div>
+<script src="cfg-parse.js"></script>
+<script src="mock-data.js"></script>
+<script src="audio.js"></script>
+<script src="gamemode.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="stages.js"></script>
+<script src="pixel.js"></script>
+<script src="sprites.js"></script>
+<script src="arena3d.js"></script>
+<script src="arena.js"></script>
+<script src="uld.js"></script>
+<script src="gauge.js"></script>
+<script src="gauge2.js"></script>
+<script src="jobs.js"></script>
+<script src="settings.js"></script>
+<script src="result.js"></script>
+<script src="mock.js"></script>
+</body>
+</html>

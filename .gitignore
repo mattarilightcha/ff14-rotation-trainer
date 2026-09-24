@@ -41,3 +41,9 @@ Thumbs.db
 # .NET (tools/ffxiv-extract)
 bin/
 obj/
+
+# UI モックの配布用フォルダ（mock/package.mjs が作る）
+dist-mock/
+
+# personal save data - never commit without explicit review
+samples/hotbar-hud/UISAVE.DAT
