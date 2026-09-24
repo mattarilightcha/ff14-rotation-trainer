@@ -156,7 +156,7 @@
       { key: 'miss', label: 'ミス', y: 84 + R.tl.buffs.length * 16 + 10, h: 18 },
     ];
     const axisY = lanes[lanes.length - 1].y + 34;
-    c.font = '600 13px "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif';
+    c.font = '600 13px "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif';
     c.textBaseline = 'middle';
     // 段の背景と名前
     for (const L of lanes) {

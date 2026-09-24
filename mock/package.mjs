@@ -4,7 +4,7 @@
 // - 検索エンジンに載らないよう noindex を付ける（仮の公開のため）
 // 実行: node mock/package.mjs
 import { execFileSync } from 'node:child_process';
-import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -28,6 +28,16 @@ data = data.replaceAll('"../public/icons/', '"icons/').replaceAll('"../public/fa
 writeFileSync(join(out, 'mock-data.js'), data);
 
 for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'stages.js', 'pixel.js', 'sprites.js', 'arena.js', 'arena3d.js', 'uld.js', 'gauge.js', 'settings.js', 'result.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+// フォント（mock/fonts。使う文字だけに絞った WOFF2 とライセンス）。足りない文字があれば警告する
+mkdirSync(join(out, 'fonts'), { recursive: true });
+for (const f of readdirSync(join(root, 'mock/fonts'))) if (/\.(woff2|txt)$/.test(f) && f !== 'chars.txt') copyFileSync(join(root, 'mock/fonts', f), join(out, 'fonts', f));
+{
+  const have = new Set(readFileSync(join(root, 'mock/fonts/chars.txt'), 'utf8'));
+  const srcs = [...readdirSync(join(root, 'mock')).filter((f) => f.endsWith('.js')).map((f) => join(root, 'mock', f)), join(root, 'mock/index.html'), join(root, 'mock/mock.css')];
+  const miss = new Set();
+  for (const f of srcs) for (const ch of readFileSync(f, 'utf8')) if (ch.codePointAt(0) >= 0x80 && !have.has(ch) && /\p{L}|\p{N}|\p{P}|\p{S}/u.test(ch)) miss.add(ch);
+  if (miss.size) console.warn(`警告: フォントに無い文字が ${miss.size} 個あります（${[...miss].slice(0, 30).join('')}…）。python3 mock/fonts/build-fonts.py で作り直してください`);
+}
 // three.js（mock/vendor/build-three.mjs でまとめたもの）とライセンス
 mkdirSync(join(out, 'vendor'), { recursive: true });
 for (const f of ['three.min.js', 'LICENSE-three.txt']) copyFileSync(join(root, 'mock/vendor', f), join(out, 'vendor', f));

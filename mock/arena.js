@@ -268,6 +268,15 @@
     tank.flash = Math.max(0, tank.flash - vdt * 4);
     boss.flash = Math.max(0, boss.flash - vdt * 5);
     if (boss.dead) boss.dead = Math.min(2, boss.dead + vdt / 0.9);
+    // 敵の詠唱中: まわりから光の粒が集まる
+    if (boss.casting && !boss.dead && vdt > 0) {
+      const n = Math.round(vdt * 55 + Math.random() * 0.6);
+      for (let i = 0; i < n; i++) {
+        const a = rand(0, Math.PI * 2), r = rand(3.2, 5.5), h = rand(0.2, 3.6);
+        const tx = boss.x, ty = boss.y, tz = 2.4, k = 1 / 0.55;
+        spark({ x: boss.x + Math.cos(a) * r, y: boss.y + Math.sin(a) * r, z: h, vx: (tx - (boss.x + Math.cos(a) * r)) * k, vy: (ty - (boss.y + Math.sin(a) * r)) * k, vz: (tz - h) * k, g: 0, drag: 0, life: 0.5, max: 0.5, col: i % 3 ? '#ff9a4a' : '#ffe0a0', size: 1 });
+      }
+    }
     for (const e of [player, tank, boss]) if (e.act && (e.act.t += vdt) > e.act.dur) e.act = null;
 
     // 敵の技
@@ -290,6 +299,8 @@
       if (q.life <= 0) { parts.splice(i, 1); continue; }
       const k = Math.exp(-(q.drag ?? 1) * vdt);
       q.vx *= k; q.vy *= k; q.vz = q.vz * k - (q.g ?? 0) * vdt;
+      if (q.spin) q.rot = (q.rot ?? 0) + q.spin * vdt;
+      if (q.sway) { q.vx += Math.sin(clock * 3 + q.rot) * q.sway * vdt; q.vz = Math.max(q.vz, -0.9); }
       q.x += q.vx * vdt; q.y += q.vy * vdt; q.z += q.vz * vdt;
       if (q.z < 0) { q.z = 0; q.vz *= -0.3; q.vx *= 0.6; q.vy *= 0.6; }
     }
@@ -388,12 +399,7 @@
     tg.done = true;
     emit('boom', tg.kind);
     if (!tg.puddle) act(boss, 'slam');
-    // 見た目: 地面からはじける
-    for (let i = 0; i < 40; i++) {
-      const p = samplePoint(tg);
-      if (p) spark({ x: p.x, y: p.y, z: 0.05, vx: rand(-1.2, 1.2), vy: rand(-1.2, 1.2), vz: rand(2.5, 6.5), g: 11, drag: 1.5, life: rand(0.3, 0.7), max: 0.7, col: i % 3 ? '#ffb46a' : '#fff1c9', size: i % 5 ? 1 : 2 });
-    }
-    fx.push({ type: 'boom', tg, t: 0, dur: 420 });
+    boomFx(tg);
     if (opts.tank && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - (tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; act(tank, 'hurt', 0.4); flyText('被弾', 'hurt tank', tank, 0.2); }
     if (player.down > 0 || !inside(tg, player)) return;
     const dmg = tg.puddle ? 0.3 : 0.45;
@@ -404,6 +410,31 @@
     if (player.hp <= 0) { player.hp = 0; player.down = 3000; flyText('戦闘不能', 'hurt', player, 0.6); emit('down', tg.name); }
     emit('hit', tg.name);
     void simT;
+  }
+
+  // 発動の演出: 形の中が白く光り、衝撃の前線が広がり、地面から光の柱と火の粉が噴き出す。焦げ跡がしばらく残る
+  function boomFx(tg) {
+    fx.push({ type: 'boom', tg, t: 0, dur: 1600 });
+    const big = tg.puddle ? 0.6 : tg.kind === 'half' || tg.kind === 'donut' ? 1.4 : 1;
+    const c = tg.kind === 'cleave' || tg.kind === 'line' ? { x: tg.c.x + Math.cos(tg.dir) * 7, y: tg.c.y + Math.sin(tg.dir) * 7 } : tg.kind === 'half' ? { x: tg.c.x - Math.sin(tg.dir) * (tg.side === 'right' ? -8 : 8), y: tg.c.y + Math.cos(tg.dir) * (tg.side === 'right' ? -8 : 8) } : tg.c;
+    fx.push({ type: 'flash', at: { x: c.x, y: c.y, z: 1 }, col: ['#fff4d8', '#ff8a3c'], t: 0, dur: 520, power: 1.6 * big });
+    const n = Math.round(10 * big);
+    for (let i = 0; i < n; i++) {
+      const p = samplePoint(tg);
+      if (p) fx.push({ type: 'erupt', at: p, col: ['#fff1c9', '#ff7a2a'], t: -rand(0, 200), dur: rand(320, 460), h: rand(2.2, 4.6) });
+    }
+    for (let i = 0; i < 70 * big; i++) {
+      const p = samplePoint(tg);
+      if (p) spark({ x: p.x, y: p.y, z: 0.05, vx: rand(-1.5, 1.5), vy: rand(-1.5, 1.5), vz: rand(3, 8.5), g: 12, drag: 1.4, life: rand(0.35, 0.9), max: 0.9, col: i % 3 ? '#ffb46a' : '#fff1c9', size: i % 5 ? 1 : 2 });
+    }
+    // 土煙（地面を這って外へ）
+    for (let i = 0; i < 26 * big; i++) {
+      const p = samplePoint(tg);
+      if (!p) continue;
+      const a = Math.atan2(p.y - tg.c.y, p.x - tg.c.x) + rand(-0.4, 0.4), sp = rand(2, 5);
+      spark({ x: p.x, y: p.y, z: 0.15, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp, vz: rand(0.2, 0.8), g: 0, drag: 2.2, life: rand(0.5, 1.0), max: 1.0, col: '#8a7a6a', size: 2, dim: true });
+    }
+    if (!reduce) cam.shake = Math.max(cam.shake, inside(tg, player) ? 6 : Math.hypot(player.x - c.x, player.y - c.y) < 16 ? 2.6 : 1.2);
   }
 
   function samplePoint(tg) {
@@ -494,6 +525,7 @@
       default: break;
     }
     act(player, draw ? 'iai' : 'slash');
+    finisherFx(info.color, info.count ?? 1, info.crit);
     const n = info.count ?? 1;
     const delay = { projectile: 180, cone: 120, line: 90 }[info.kind] ?? 0;
     for (let i = 0; i < n; i++) addArc(boss, col, info.crit ? 1.25 : 1, POL.hitbox + 0.4, draw ? 2.0 : 1.4 + rand(0, 1.2), delay + i * 90, draw);
@@ -505,6 +537,29 @@
       if (info.name) flyText(info.name, info.crit ? 'crit' : info.combo ? 'combo' : '', boss, 0.2, col, info.dmg);
       if (info.pos) flyText(info.pos.ok ? `${info.pos.need === 'rear' ? '背面' : '側面'} ○` : '方向指定ミス', info.pos.ok ? 'pos-ok' : 'pos-ng', boss, -0.6);
     }, delay);
+  }
+
+  // 技ごとの演出: 雪 = 氷のかけら、月 = 大きな三日月、花 = 花びら、居合 = 金の一文字、波切 = 水しぶき
+  function finisherFx(color, count, crit) {
+    const at = (dz = 2.2) => ({ x: boss.x + rand(-0.6, 0.6), y: boss.y + rand(-0.6, 0.6), z: dz + rand(-0.8, 0.8) });
+    const burst = (n, cols, o) => {
+      for (let i = 0; i < n; i++) {
+        const a = rand(0, Math.PI * 2), e = rand(-0.2, 1.2), sp = rand(o.sp[0], o.sp[1]);
+        spark({ ...at(), vx: Math.cos(a) * Math.cos(e) * sp, vy: Math.sin(a) * Math.cos(e) * sp, vz: Math.sin(e) * sp, g: o.g, drag: o.drag, life: rand(o.life[0], o.life[1]), max: o.life[1], col: cols[i % cols.length], size: o.size, shape: o.shape, rot: rand(0, 6.28), spin: rand(-8, 8), sway: o.sway ?? 0 });
+      }
+    };
+    if (color === 'setsu') burst(24, ['#f4feff', '#9fe4ff', '#62d2ff'], { sp: [4, 10], g: 9, drag: 1.8, life: [0.5, 1.0], size: 2.2, shape: 2 });
+    else if (color === 'ka') burst(34, ['#ffd6e8', '#ff9cc8', '#ffffff'], { sp: [2.5, 6], g: 1.2, drag: 2.2, life: [1.1, 1.8], size: 2.6, shape: 1, sway: 1.4 });
+    else if (color === 'getsu') {
+      fx.push({ type: 'arc', target: boss, col: ['#f6f0ff', '#8f7dff'], t: -40, dur: 360, a0: rand(0, 6.28), span: 3.6 * (Math.random() < 0.5 ? 1 : -1), r: POL.hitbox + 1.4, h: 2.4, tilt: rand(-0.25, 0.25), w: 1.3 });
+      burst(14, ['#ffffff', '#cfc4ff'], { sp: [2, 5], g: 0, drag: 2, life: [0.5, 0.9], size: 1.4, shape: 2 });
+    } else if (color === 'iai') {
+      // 金の一文字（水平に長く、太い）
+      fx.push({ type: 'arc', target: boss, col: ['#fffbe9', '#ffc640'], t: -60, dur: 300, a0: rand(0, 6.28), span: 4.4, r: POL.hitbox + 1.8, h: 1.9, tilt: 0, w: 1.6 });
+      if (count >= 3) { burst(20, ['#f4feff', '#9fe4ff'], { sp: [4, 9], g: 9, drag: 1.8, life: [0.5, 1.0], size: 2.2, shape: 2 }); burst(26, ['#ffd6e8', '#ff9cc8'], { sp: [2.5, 6], g: 1.2, drag: 2.2, life: [1.1, 1.8], size: 2.6, shape: 1, sway: 1.4 }); }
+    } else if (color === 'namikiri') burst(30, ['#f2ffff', '#4fe3ff', '#8ff0ff'], { sp: [4, 11], g: 12, drag: 1.2, life: [0.4, 0.9], size: 1.4, shape: 0 });
+    else if (color === 'blood') burst(18, ['#ffecec', '#ff3b3b'], { sp: [3, 8], g: 8, drag: 2, life: [0.4, 0.8], size: 1.6, shape: 2 });
+    void crit;
   }
 
   // 斬撃の弧: 対象のまわり（高さ h m、半径 r m）に、傾いた円の一部を描く
@@ -704,7 +759,7 @@
     // フィールドマーカー（丸は A〜D、四角は 1〜4）
     function drawMarkers() {
       g.save();
-      g.font = 'bold 22px sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+      g.font = '700 22px Cinzel, "Zen Kaku Gothic New", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
       for (const m of ST.MARKERS) {
         const p = ST.markerPos(STG, m), x = sx(p.x), y = sy(p.y), r = 1.3 * PPY;
         g.globalAlpha = 0.9; g.strokeStyle = m.color; g.lineWidth = 3;
@@ -788,7 +843,8 @@
       g.restore();
     }
     function drawBoom(e) {
-      const k = 1 - e.t / e.dur;
+      const k = 1 - Math.min(1, e.t / 420);
+      if (k <= 0) return;
       g.save();
       clipArena();
       g.fillStyle = `rgba(255,236,190,${0.55 * k})`; tgPath(e.tg, 1); g.fill('evenodd');
@@ -822,6 +878,11 @@
         g.globalAlpha = (1 - p) * 0.9; g.strokeStyle = e.col[1]; g.lineWidth = e.thick ? 4 : 2;
         g.beginPath(); g.ellipse(cx, cy, r, r, 0, 0, Math.PI * 2); g.stroke();
         g.lineWidth = 1;
+      },
+      erupt(e) {
+        const p = e.t / e.dur, cx = sx(e.at.x), cy = sy(e.at.y), h = e.h * PPY * Z2 * Math.min(1, p * 4);
+        g.globalAlpha = (1 - p) * 0.7; g.fillStyle = e.col[1]; g.fillRect(cx - 3, cy - h, 6, h);
+        g.globalAlpha = 1 - p; g.fillStyle = e.col[0]; g.fillRect(cx - 1, cy - h, 2, h);
       },
       pillar(e) {
         const p = e.t / e.dur, cx = sx(e.at.x), cy = sy(e.at.y);
@@ -873,6 +934,7 @@
     options: () => ({ ...opts }), POL, MECH,
     // 動作確認用
     stage: () => STG, stages: () => ST.list,
+    testMech: (kind, simT, cast = 3000) => startMech({ kind, cast, side: 'left', r1: 0.3, r2: 0.5 }, simT), // 動作確認用: 敵の技をすぐ出す
     debug: () => ({ stage: STG.id, tankHits: tank.hits, tank: { x: tank.x, y: tank.y }, boss: { x: boss.x, y: boss.y, face: boss.face }, player: { x: player.x, y: player.y, face: player.face }, telegraphs: telegraphs.length, view: view3d() ? '3d' : '2d', cam: { ...cam }, r3: R3?.debug?.() ?? null }),
   };
 })();

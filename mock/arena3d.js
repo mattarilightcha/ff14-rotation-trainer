@@ -61,10 +61,12 @@
     }`;
   const ANG = `
     float angDiff(float a, float b) { float d = a - b; return atan(sin(d), cos(d)); }`;
-  // 敵の範囲攻撃の予兆（FF14 の橙色の範囲）。形ごとに「縁までの距離（内側が +）」を出して塗る
+  // 敵の範囲攻撃の予兆（FF14 の橙色の範囲）と、発動の演出。形ごとに「縁までの距離（内側が +）」を出して塗る。
+  // 予兆: 縁の二重線（外は明るく、終わり際は速く脈打つ）、縁に近いほど濃い内側、ゆっくり流れる模様、満ちていく先頭の光。
+  // 発動（uBoomT 0→1）: 白い閃光 → 形に沿って広がる衝撃の前線と縁の光 → 焦げ跡と燃えさし。明るさは 1 を超えてよい（光のにじみになる）
   const TELE_FS = `
     uniform int uKind; uniform vec2 uC; uniform float uDir; uniform float uA; uniform float uB; uniform float uBack; uniform float uSide;
-    uniform float uP; uniform float uTime; uniform float uBoom; uniform float uArena; uniform float uSq;
+    uniform float uP; uniform float uTime; uniform float uBoomT; uniform float uArena; uniform float uSq;
     varying vec2 vW;
     ${ANG}
     float sd(vec2 p, float k) {
@@ -76,26 +78,55 @@
       float side = d.x * -sin(uDir) + d.y * cos(uDir);
       return min(uSide * side, 60.0 * k - uSide * side);
     }
+    float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+    float noise(vec2 p) {
+      vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+      return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+    }
     void main() {
       float arena = uSq > 0.5 ? min(uArena - abs(vW.x), uArena - abs(vW.y)) : uArena - length(vW);
       float s = min(sd(vW, 1.0), arena);
-      if (s < -0.06) discard;
-      float edge = 1.0 - smoothstep(0.0, 0.22, abs(s));
-      float inner = smoothstep(2.2, 0.0, s);
-      vec4 c;
-      if (uBoom > 0.0) {
-        c = vec4(1.0, 0.9, 0.7, (0.55 + 0.35 * edge) * uBoom);
+      if (s < -0.08) discard;
+      float aa = smoothstep(-0.07, 0.0, s);
+      vec3 col; float a;
+      if (uBoomT < 0.0) {
+        float p = uP;
+        float urgent = smoothstep(0.62, 1.0, p);
+        float pulse = 0.5 + 0.5 * sin(uTime * mix(5.0, 19.0, urgent));
+        float rim = 1.0 - smoothstep(0.02, 0.13, abs(s));
+        float rim2 = 1.0 - smoothstep(0.0, 0.045, abs(s - 0.42));
+        float inner = smoothstep(3.2, 0.0, s);
+        float fillSd = min(sd(vW, max(p, 0.001)), arena);
+        float filled = step(0.0, fillSd);
+        float front = (1.0 - smoothstep(0.0, 0.32, abs(fillSd))) * step(0.02, p) * (1.0 - step(0.995, p));
+        float n = noise(vW * 0.8 + vec2(uTime * 0.35, -uTime * 0.22)) * 0.6 + noise(vW * 2.4 - vec2(uTime * 0.5)) * 0.4;
+        vec3 deep = vec3(0.92, 0.25, 0.04), warm = vec3(1.0, 0.5, 0.14), hot = vec3(1.0, 0.84, 0.56);
+        a = 0.14 + 0.2 * inner + 0.09 * filled + 0.08 * n * (0.5 + 0.5 * filled);
+        col = mix(deep, warm, 0.35 * inner + 0.3 * filled + 0.25 * n);
+        float rimK = rim * (0.8 + 0.2 * pulse * (0.35 + urgent));
+        col = mix(col, hot * (1.3 + 0.9 * urgent * pulse), rimK);
+        a = max(a, rimK * 0.95);
+        col = mix(col, hot, rim2 * 0.55); a = max(a, rim2 * 0.5);
+        col += hot * front * 0.9; a = max(a, front * 0.65);
+        a += urgent * pulse * 0.07;
       } else {
-        float fillK = step(0.0, min(sd(vW, max(uP, 0.001)), arena));
-        float wave = 0.5 + 0.5 * sin(s * 2.6 - uTime * 3.2);
-        vec3 base = vec3(1.0, 0.36, 0.08);
-        float a = 0.20 + 0.16 * inner + 0.10 * fillK + 0.035 * wave;
-        vec3 col = mix(base, vec3(1.0, 0.55, 0.22), 0.4 * inner + 0.25 * fillK);
-        c = vec4(col, a);
-        c = mix(c, vec4(1.0, 0.82, 0.55, 0.95), edge * step(-0.06, s));
+        float t = uBoomT;
+        float flash = 1.0 - smoothstep(0.0, 0.16, t);
+        float frontSd = min(sd(vW, clamp(t / 0.24, 0.001, 1.0)), arena);
+        float front = (1.0 - smoothstep(0.0, 0.55, abs(frontSd))) * (1.0 - smoothstep(0.12, 0.32, t));
+        float rim = (1.0 - smoothstep(0.0, 0.22, abs(s))) * (1.0 - smoothstep(0.06, 0.45, t));
+        float scorch = smoothstep(0.1, 0.22, t) * (1.0 - smoothstep(0.35, 1.0, t));
+        float n = noise(vW * 1.6) * 0.7 + noise(vW * 5.0) * 0.3;
+        float ember = step(0.9, noise(vW * 6.0 + 7.0)) * scorch * (1.0 - smoothstep(0.3, 0.7, t)) * (0.55 + 0.45 * sin(uTime * 9.0 + n * 20.0));
+        col = vec3(0.05, 0.035, 0.03); a = 0.5 * scorch * (0.55 + 0.45 * n);
+        col = mix(col, vec3(2.0, 0.8, 0.25), ember); a = max(a, ember * 0.7);
+        col = mix(col, vec3(2.2, 2.0, 1.7), flash); a = max(a, flash * 0.5);
+        float fr = max(front, rim);
+        col = mix(col, vec3(2.6, 1.6, 0.7), fr); a = max(a, fr * 0.95);
       }
-      if (s < 0.0) c.a *= smoothstep(-0.06, 0.0, s);
-      gl_FragColor = c;
+      a *= aa;
+      if (a < 0.003) discard;
+      gl_FragColor = vec4(col, a);
       #include <colorspace_fragment>
     }`;
   // 敵の足元の輪: 当たり判定の円・正面の矢印・方向指定の区切り。ガイドがオンなら背面（緑）と側面（黄）
@@ -169,18 +200,24 @@
     }`;
   // 粒子（四角いドット）
   const PART_VS = `
-    attribute float aSize; attribute float aAlpha; attribute vec3 aColor;
+    attribute float aSize; attribute float aAlpha; attribute vec3 aColor; attribute float aShape; attribute float aRot;
     uniform float uScale;
-    varying vec3 vC; varying float vA;
+    varying vec3 vC; varying float vA; varying float vS; varying float vR;
     void main() {
-      vC = aColor; vA = aAlpha;
+      vC = aColor; vA = aAlpha; vS = aShape; vR = aRot;
       vec4 mv = modelViewMatrix * vec4(position, 1.0);
       gl_PointSize = max(1.5, aSize * uScale / -mv.z);
       gl_Position = projectionMatrix * mv;
     }`;
   const PART_FS = `
-    varying vec3 vC; varying float vA;
+    varying vec3 vC; varying float vA; varying float vS; varying float vR;
     void main() {
+      if (vS > 0.5) {
+        vec2 q = gl_PointCoord - 0.5;
+        float c = cos(vR), s = sin(vR); q = vec2(c * q.x - s * q.y, s * q.x + c * q.y);
+        if (vS < 1.5) { float e = q.x * q.x / 0.2 + q.y * q.y / 0.06; if (e > 1.0 || (q.x > 0.3 && abs(q.y) < 0.05)) discard; } // 花びら
+        else if (abs(q.x) * 1.15 + abs(q.y) * 3.2 > 0.55) discard; // かけら（細いひし形）
+      }
       gl_FragColor = vec4(vC * 1.7, vA);
       #include <colorspace_fragment>
     }`;
@@ -336,7 +373,7 @@
     g.globalAlpha = 1; g.stroke();
     g.shadowBlur = 0;
     g.fillStyle = floating ? '#ffffff' : m.color;
-    g.font = `900 ${Math.round(N * 0.44)}px sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.font = `900 ${Math.round(N * 0.44)}px Cinzel, "Zen Kaku Gothic New", sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
     g.fillText(m.id, h, h + N * 0.03);
     return c;
   }
@@ -564,7 +601,7 @@
         const sign = new T.Sprite(new T.SpriteMaterial({ map: texOf(markerCanvas(mk, true)), transparent: true, depthWrite: false }));
         sign.scale.set(1.05, 1.05, 1); sign.position.set(at.x, 2.4, at.y); sign.renderOrder = 2;
         stageGroup.add(decal, sign);
-        markerSet.push({ decal, sign, ph: markerSet.length * 0.8 });
+        markerSet.push({ decal, sign, mk, ph: markerSet.length * 0.8 });
       }
       // 漂う粒（蛍 / 塵 / 火の粉）
       moteStyle = st.motes ?? 'firefly';
@@ -612,7 +649,7 @@
     const teleGeo = new T.PlaneGeometry(64, 64); // どのステージも覆う大きさ（形の外はシェーダーで切る）
     const telePool = pool(() => {
       const m = new T.Mesh(teleGeo, new T.ShaderMaterial({
-        uniforms: { uKind: { value: 0 }, uC: { value: new T.Vector2() }, uDir: { value: 0 }, uA: { value: 0 }, uB: { value: 0 }, uBack: { value: 0 }, uSide: { value: 1 }, uP: { value: 0 }, uTime: { value: 0 }, uBoom: { value: 0 }, uArena: { value: 20 }, uSq: { value: 0 } },
+        uniforms: { uKind: { value: 0 }, uC: { value: new T.Vector2() }, uDir: { value: 0 }, uA: { value: 0 }, uB: { value: 0 }, uBack: { value: 0 }, uSide: { value: 1 }, uP: { value: 0 }, uTime: { value: 0 }, uBoomT: { value: -1 }, uArena: { value: 20 }, uSq: { value: 0 } },
         vertexShader: DECAL_VS, fragmentShader: TELE_FS, transparent: true, depthWrite: false,
       }));
       m.rotation.x = -Math.PI / 2; m.position.y = 0.02; m.renderOrder = 1; m.frustumCulled = false; scene.add(m);
@@ -664,11 +701,13 @@
     // ---- 粒子 ----
     const MAXP = 1600;
     const pGeo = new T.BufferGeometry();
-    const pPos = new Float32Array(MAXP * 3), pCol = new Float32Array(MAXP * 3), pSize = new Float32Array(MAXP), pAlpha = new Float32Array(MAXP);
+    const pPos = new Float32Array(MAXP * 3), pCol = new Float32Array(MAXP * 3), pSize = new Float32Array(MAXP), pAlpha = new Float32Array(MAXP), pShape = new Float32Array(MAXP), pRot = new Float32Array(MAXP);
     pGeo.setAttribute('position', new T.BufferAttribute(pPos, 3));
     pGeo.setAttribute('aColor', new T.BufferAttribute(pCol, 3));
     pGeo.setAttribute('aSize', new T.BufferAttribute(pSize, 1));
     pGeo.setAttribute('aAlpha', new T.BufferAttribute(pAlpha, 1));
+    pGeo.setAttribute('aShape', new T.BufferAttribute(pShape, 1));
+    pGeo.setAttribute('aRot', new T.BufferAttribute(pRot, 1));
     const pMat = new T.ShaderMaterial({ uniforms: { uScale: { value: 1 } }, vertexShader: PART_VS, fragmentShader: PART_FS, transparent: true, depthWrite: false, blending: T.AdditiveBlending });
     const points = new T.Points(pGeo, pMat); points.frustumCulled = false; points.renderOrder = 4; scene.add(points);
     // ---- 後処理 ----
@@ -811,12 +850,12 @@
         u.uA.value = tg.kind === 'circle' ? tg.r : tg.kind === 'donut' ? tg.inner : tg.kind === 'cleave' ? tg.half : tg.kind === 'line' ? tg.w : 0;
         u.uB.value = tg.kind === 'donut' ? tg.outer : tg.kind === 'cleave' ? tg.r : tg.kind === 'line' ? tg.len : 0;
         u.uBack.value = tg.back ?? 0; u.uSide.value = tg.side === 'left' ? -1 : 1;
-        u.uP.value = boom ? 1 : Math.min(1, Math.max(0, (simT - tg.start) / (tg.end - tg.start)));
-        u.uTime.value = time; u.uBoom.value = boom;
+        u.uP.value = boom >= 0 ? 1 : Math.min(1, Math.max(0, (simT - tg.start) / (tg.end - tg.start)));
+        u.uTime.value = time; u.uBoomT.value = boom;
         u.uArena.value = STG.size; u.uSq.value = STG.shape === 'square' ? 1 : 0;
       };
-      for (const tg of S.telegraphs) if (!tg.done && simT >= tg.start && (!tg.follow || tg.placed)) teleOf(tg, 0);
-      for (const e of S.fx) if (e.type === 'boom' && e.t >= 0) teleOf(e.tg, Math.max(0.001, 1 - e.t / e.dur));
+      for (const tg of S.telegraphs) if (!tg.done && simT >= tg.start && (!tg.follow || tg.placed)) teleOf(tg, -1);
+      for (const e of S.fx) if (e.type === 'boom' && e.t >= 0) teleOf(e.tg, Math.min(1, e.t / e.dur));
       telePool.end();
 
       // 演出
@@ -848,6 +887,12 @@
           const m = pillarPool.take(), u = m.material.uniforms;
           m.position.set(e.at.x, 0, e.at.y); const k = Math.min(1, p * 3); m.scale.set(1 + p * 0.6, k, 1 + p * 0.6);
           u.uFade.value = 1 - p; u.uTime.value = time; u.uC0.value.copy(col(e.col[0])); u.uC1.value.copy(col(e.col[1]));
+        } else if (e.type === 'erupt') {
+          // 地面から噴き出す光の柱（細く高く、すぐ消える）
+          const m = pillarPool.take(), u = m.material.uniforms;
+          const k = Math.min(1, p * 3.5);
+          m.position.set(e.at.x, 0, e.at.y); m.scale.set(0.42 + p * 0.3, (e.h / 3.4) * k, 0.42 + p * 0.3);
+          u.uFade.value = (1 - p) * 1.6; u.uTime.value = time; u.uC0.value.copy(col(e.col[0])); u.uC1.value.copy(col(e.col[1]));
         } else if (e.type === 'proj') {
           const s = glowPool.take();
           s.position.set(player.x + (boss.x - player.x) * p, 1.5, player.y + (boss.y - player.y) * p); s.scale.set(1.2, 1.2, 1);
@@ -857,6 +902,12 @@
           s.position.set(e.at.x, e.at.z ?? 2, e.at.y); const sc = (2.5 + p * 3) * (e.power ?? 1); s.scale.set(sc, sc, 1);
           s.material.color.copy(col(e.col[0])); s.material.opacity = (1 - p) * 0.7;
         }
+      }
+      // 敵の詠唱中: 胸の芯が脈打って光る
+      if (boss.casting && !boss.dead) {
+        const s2 = glowPool.take(), pl = 0.75 + 0.25 * Math.sin(time * 9);
+        s2.position.set(boss.x, 2.3, boss.y); s2.scale.set(3.4 * pl, 3.4 * pl, 1);
+        s2.material.color.copy(col('#ff9a4a')); s2.material.opacity = 0.55 * pl;
       }
       arcPool.end(); gfxPool.end(); pillarPool.end(); glowPool.end();
       // 詠唱の陣
@@ -873,8 +924,9 @@
       for (const q of S.parts) {
         if (n >= MAXP - motes.length) break;
         pPos[n * 3] = q.x; pPos[n * 3 + 1] = q.z; pPos[n * 3 + 2] = q.y;
-        const c = col(q.col); pCol[n * 3] = c.r; pCol[n * 3 + 1] = c.g; pCol[n * 3 + 2] = c.b;
+        const c = col(q.col), k = q.dim ? 0.3 : 1; pCol[n * 3] = c.r * k; pCol[n * 3 + 1] = c.g * k; pCol[n * 3 + 2] = c.b * k;
         pSize[n] = q.size ?? 1; pAlpha[n] = Math.min(1, (q.life / q.max) * 1.4);
+        pShape[n] = q.shape ?? 0; pRot[n] = q.rot ?? 0;
         n++;
       }
       for (const mo of motes) {
@@ -885,11 +937,11 @@
         else c = mo.warm ? col('#ffcf7a') : col('#9fe0ff');
         pPos[n * 3] = mo.x + Math.sin(t * 0.7) * 1.2; pPos[n * 3 + 1] = z; pPos[n * 3 + 2] = mo.y + Math.cos(t * 0.6) * 1.2;
         pCol[n * 3] = c.r * k; pCol[n * 3 + 1] = c.g * k; pCol[n * 3 + 2] = c.b * k;
-        pSize[n] = size; pAlpha[n] = Math.max(0, a);
+        pSize[n] = size; pAlpha[n] = Math.max(0, a); pShape[n] = 0; pRot[n] = 0;
         n++;
       }
       pGeo.setDrawRange(0, n);
-      for (const k of ['position', 'aColor', 'aSize', 'aAlpha']) pGeo.attributes[k].needsUpdate = true;
+      for (const k of ['position', 'aColor', 'aSize', 'aAlpha', 'aShape', 'aRot']) pGeo.attributes[k].needsUpdate = true;
 
       // ティルトシフトのピント: 自分と敵のあいだ（帯の幅は、2 人の画面上の離れ具合に合わせて広げる）
       const fp = project(player.x, player.y, 1), fb = project(boss.x, boss.y, 2);
@@ -903,6 +955,17 @@
 
     buildStage(S.stage);
     setQuality('high');
+    // 同梱のフォント（Cinzel）が読み込まれたら、マーカーの文字を描き直す（canvas の文字は、描いた時点のフォントのまま）
+    document.fonts?.load('900 56px Cinzel').then(() => {
+      for (const m of markerSet) {
+        for (const [obj, floating] of [[m.decal, false], [m.sign, true]]) {
+          const tex = obj.material.map, c = markerCanvas(m.mk, floating);
+          tex.image.getContext('2d').clearRect(0, 0, tex.image.width, tex.image.height);
+          tex.image.getContext('2d').drawImage(c, 0, 0);
+          tex.needsUpdate = true;
+        }
+      }
+    }).catch(() => {});
     return {
       render, resize, project, setQuality, setStage: buildStage,
       debug: () => ({ stage: STG.id, calls: renderer.info.render.calls, tris: renderer.info.render.triangles, quality, cam: camera.position.toArray().map((v) => +v.toFixed(2)) }),

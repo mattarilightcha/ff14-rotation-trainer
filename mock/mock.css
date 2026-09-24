@@ -1,3 +1,11 @@
+/* ---- フォント（SIL OFL 1.1。mock/fonts/README.md） ---- */
+@font-face { font-family: "Zen Kaku Gothic New"; font-weight: 400; font-display: swap; src: url("fonts/zen-kaku-gothic-new-400.woff2") format("woff2"); }
+@font-face { font-family: "Zen Kaku Gothic New"; font-weight: 500; font-display: swap; src: url("fonts/zen-kaku-gothic-new-500.woff2") format("woff2"); }
+@font-face { font-family: "Zen Kaku Gothic New"; font-weight: 600 900; font-display: swap; src: url("fonts/zen-kaku-gothic-new-700.woff2") format("woff2"); }
+@font-face { font-family: "Shippori Mincho B1"; font-weight: 400 700; font-display: swap; src: url("fonts/shippori-mincho-b1-700.woff2") format("woff2"); }
+@font-face { font-family: "Shippori Mincho B1"; font-weight: 800 900; font-display: swap; src: url("fonts/shippori-mincho-b1-800.woff2") format("woff2"); }
+@font-face { font-family: "Cinzel"; font-weight: 400 900; font-display: swap; src: url("fonts/cinzel.woff2") format("woff2"); }
+
 /* FF14 の HUD に寄せた見た目（画像はアイコンとジョブゲージのテクスチャのみ。枠・窓は CSS、戦闘画面はドット絵の canvas） */
 :root {
   --panel: rgba(14, 16, 22, 0.64);
@@ -19,8 +27,13 @@
   --outline: 0 0 2px #000, 0 0 2px #000, 0 1px 2px #000;
   /* FF14 風の文字の縁（白い字に黒い縁取り） */
   --edge: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0 0 4px rgba(0, 0, 0, .9);
-  --font-fly: "Cinzel", "Noto Serif JP", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
-  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", "Noto Sans JP", system-ui, sans-serif;
+  /* フォント（mock/fonts に同梱。モックで使う文字だけに絞ってある） */
+  --font-ui: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+  --font-mincho: "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  --font-title: "Cinzel", "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  --font-fly: "Cinzel", "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  font-family: var(--font-ui);
+  font-feature-settings: "palt" 1; /* 約物を詰める */
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -109,7 +122,7 @@ button { font: inherit; }
 @keyframes st-in { from { opacity: 0; transform: translateY(-4px); } }
 .st .ic { width: 24px; height: 32px; margin: 0 auto; border-radius: 3px; display: grid; place-items: center; font-size: 11px; line-height: 1; position: relative; }
 .st .ic img { width: 24px; height: 32px; object-fit: contain; }
-.st .ic.txt { background: linear-gradient(160deg, #7ea2d6, #3b5b8c 55%, #22324f); border: 1px solid #000; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), inset 0 -6px 8px rgba(0,0,0,.35); color: #fff; writing-mode: vertical-rl; font-weight: 800; letter-spacing: -1px; text-shadow: 0 1px 2px #000; font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+.st .ic.txt { background: linear-gradient(160deg, #7ea2d6, #3b5b8c 55%, #22324f); border: 1px solid #000; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), inset 0 -6px 8px rgba(0,0,0,.35); color: #fff; writing-mode: vertical-rl; font-weight: 800; letter-spacing: -1px; text-shadow: 0 1px 2px #000; font-family: var(--font-mincho); }
 .st .ic.txt.fu { background: linear-gradient(160deg, #9fe0a9, #3f8b59 55%, #1f4a31); }
 .st .ic.txt.mk { background: linear-gradient(160deg, #a7e8ff, #3f86b0 55%, #1d3e57); }
 .st.debuff .ic.txt { background: linear-gradient(160deg, #ff9a8a, #b33a2e 55%, #5a1712); }
@@ -122,7 +135,7 @@ button { font: inherit; }
 .timer .dim { font-size: 14px; }
 .countdown {
   position: absolute; left: 50%; top: 150px; transform: translateX(-50%);
-  font-size: 120px; font-weight: 800; color: #fff; letter-spacing: .05em; pointer-events: none;
+  font-family: var(--font-title); font-size: 120px; font-weight: 800; color: #fff; letter-spacing: .05em; pointer-events: none;
   text-shadow: 0 0 22px rgba(232,199,122,.85), 0 4px 0 #6d5320, 0 8px 16px #000;
   animation: cd-pop 1s ease-out;
 }
@@ -255,7 +268,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 
 /* 開始画面 */
 .start { left: 50%; top: 50%; transform: translate(-50%, -58%); width: 520px; padding: 18px 22px 14px; background: linear-gradient(rgba(16,18,26,.92), rgba(10,11,16,.95)); z-index: 5; border-color: #000; box-shadow: inset 0 0 0 1px rgba(232,199,122,.28), 0 10px 40px rgba(0,0,0,.7); }
-.start-title { font-size: 22px; font-weight: 800; letter-spacing: .08em; display: flex; align-items: center; gap: 10px; color: var(--gold-hi); text-shadow: 0 2px 6px #000; }
+.start-title { font-family: var(--font-title); font-size: 24px; font-weight: 800; letter-spacing: .08em; display: flex; align-items: center; gap: 10px; color: var(--gold-hi); text-shadow: 0 2px 6px #000; }
 .start-title .job-icon { width: 32px; height: 32px; }
 .start-title span { font-size: 12px; color: var(--dim); font-weight: 400; letter-spacing: .05em; margin-left: auto; }
 .start-buttons { display: flex; gap: 10px; margin: 16px 0 8px; }
@@ -269,7 +282,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .rs-head { display: flex; align-items: center; gap: 16px; }
 .rs-title { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
 .rs-job { width: 44px; height: 44px; flex: none; }
-.rs-title h2 { margin: 0; font-size: 26px; line-height: 1.1; letter-spacing: .14em; color: #f1d58f; }
+.rs-title h2 { margin: 0; font-family: var(--font-title); font-weight: 800; font-size: 28px; line-height: 1.1; letter-spacing: .14em; color: #f1d58f; }
 .rs-sub { font-size: 13px; color: #9aa0ab; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rs-btns { display: flex; gap: 8px; flex: none; }
 .rs-btn { font: inherit; font-size: 14px; padding: 8px 18px; border-radius: 6px; border: 1px solid #2c313c; background: #1b1f28; color: #ece8df; cursor: pointer; }
@@ -280,7 +293,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .rs-top { display: grid; grid-template-columns: 590px 1fr; gap: 14px; }
 .rs-score { display: grid; grid-template-columns: 150px 1fr; gap: 12px; background: #151821; border: 1px solid #232733; border-radius: 10px; padding: 14px; }
 .rs-scorebox { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
-.rs-grade { width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font: 900 56px/1 "Hiragino Mincho ProN", "Yu Mincho", serif; color: #1a1206;
+.rs-grade { width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font: 900 56px/1 var(--font-title); color: #1a1206;
   background: radial-gradient(circle at 40% 35%, #fff4cf, #e8c77a 55%, #8a6a2c); box-shadow: 0 0 22px rgba(232,199,122,.35); }
 .rs-grade.g-C, .rs-grade.g-D { background: radial-gradient(circle at 40% 35%, #eef2f8, #9aa6b8 55%, #4a5566); box-shadow: 0 0 16px rgba(160,180,200,.25); }
 .rs-points b { font-size: 32px; font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -403,7 +416,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
   box-shadow: inset 0 0 0 1px rgba(232, 199, 122, .28), 0 14px 50px rgba(0, 0, 0, .8); font-size: 13px; }
 .cfg-titlebar { display: flex; align-items: center; height: 34px; padding: 0 8px 0 14px; flex: none;
   background: linear-gradient(#3a3322, #211d14); border-bottom: 1px solid #000; box-shadow: inset 0 1px 0 rgba(255, 236, 190, .18), 0 1px 0 rgba(232, 199, 122, .2); }
-.cfg-title { font-size: 14px; font-weight: 700; letter-spacing: .12em; color: var(--gold-hi); text-shadow: 0 1px 2px #000; }
+.cfg-title { font-family: var(--font-title); font-size: 15px; font-weight: 800; letter-spacing: .12em; color: var(--gold-hi); text-shadow: 0 1px 2px #000; }
 .cfg-x { margin-left: auto; width: 26px; height: 26px; border: 1px solid #000; border-radius: 4px; background: linear-gradient(#4a4a50, #26262b); color: var(--text); font-size: 16px; line-height: 1; cursor: pointer; }
 .cfg-x:hover { filter: brightness(1.3); }
 .cfg-body { flex: 1; display: flex; min-height: 0; }
@@ -413,7 +426,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .cfg-tab.on { color: var(--gold-hi); background: linear-gradient(90deg, rgba(232, 199, 122, .2), rgba(232, 199, 122, 0)); }
 .cfg-tab.on::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; border-radius: 2px; background: var(--gold); box-shadow: 0 0 6px var(--gold); }
 .cfg-pane { flex: 1; overflow-y: auto; padding: 12px 20px 18px; }
-.cfg-pane-title { margin: 0 0 6px; font-size: 16px; color: var(--gold); letter-spacing: .08em; }
+.cfg-pane-title { margin: 0 0 6px; font-family: var(--font-title); font-weight: 800; font-size: 18px; color: var(--gold); letter-spacing: .08em; }
 .cfg-section { margin-top: 12px; }
 .cfg-head { font-size: 12.5px; font-weight: 700; color: #e9dcc0; padding-bottom: 4px; margin-bottom: 4px; border-bottom: 1px solid rgba(232, 199, 122, .3); letter-spacing: .06em; }
 .cfg-note { font-size: 11.5px; color: var(--dim); line-height: 1.6; margin: 2px 0 6px; }
