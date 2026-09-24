@@ -897,7 +897,7 @@
       const id = isTarget ? r.base : split[r.base] ? r.base : resolve(r.base);
       const live1 = isTarget ? TARGET_BASE[r.base].some((b) => resolve(b) === r.base) : resolve(r.base);
       const a = A[id];
-      if (r.shown !== id) { r.img.src = iconOf(id); r.shown = id; }
+      if (r.shown !== id) { r.img.src = iconOf(id); r.shown = id; r.el.classList.toggle('framed', !!a.iconFramed); }
       let frac = 0, num = '';
       if (a.isGcd && S.gcdEnd != null && S.gcdEnd > S.t) frac = (S.gcdEnd - S.t) / (S.gcdEnd - S.gcdStart);
       if (ownCd(a) != null) {

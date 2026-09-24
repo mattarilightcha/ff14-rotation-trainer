@@ -16,14 +16,15 @@ execFileSync(process.execPath, [join(root, 'mock/build-mock-data.mjs')], { stdio
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
-// アイコン: mock-data.js が参照するものだけ
+// アイコン: mock-data.js が参照するものだけ（抽出したアイコン・ジョブゲージのテクスチャ・ファンキット）。
+// ファンキットのファイル名は URL として符号化してあるので、コピーするときは元に戻す
 let data = readFileSync(join(root, 'mock/mock-data.js'), 'utf8');
-const icons = [...new Set([...data.matchAll(/"\.\.\/public\/(icons\/[^"]+)"/g)].map((m) => m[1]))];
+const icons = [...new Set([...data.matchAll(/"\.\.\/public\/((?:icons|fankit)\/[^"]+)"/g)].map((m) => decodeURIComponent(m[1])))];
 for (const rel of icons) {
   mkdirSync(join(out, dirname(rel)), { recursive: true });
   copyFileSync(join(root, 'public', rel), join(out, rel));
 }
-data = data.replaceAll('"../public/icons/', '"icons/');
+data = data.replaceAll('"../public/icons/', '"icons/').replaceAll('"../public/fankit/', '"fankit/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
 for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'pixel.js', 'arena.js', 'uld.js', 'gauge.js', 'settings.js']) copyFileSync(join(root, 'mock', f), join(out, f));

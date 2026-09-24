@@ -2,7 +2,7 @@
 // 第 1 層（src/data/ffxiv/*.json）から侍 Lv100 の分だけを取り出し、
 // mock/mock-data.js（file:// でも読めるよう window に載せる形）を書き出す。
 // 実行: node mock/build-mock-data.mjs
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
@@ -120,11 +120,57 @@ for (const a of actions) if (a.isRoleAction && a.jobs?.includes(JOB) && a.level 
 // 置き換え先も含めて、モックで使うアクションを集める
 for (const [base, targets] of Object.entries(replaceGroups)) if (used.has(Number(base))) targets.forEach((id) => used.add(id));
 
+// アクションのアイコン: ファンキット（public/fankit/battle-pve。ホットバーの枠付き）を英語名で引く。無ければ抽出したアイコン
+const FANKIT_DIR = join(root, 'public/fankit/battle-pve');
+const normName = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+const fankit = new Map(); // "ジョブ略称|英語名" → URL
+for (const dir of readdirSync(FANKIT_DIR, { withFileTypes: true })) {
+  if (!dir.isDirectory()) continue;
+  const job = dir.name.split('_')[1];
+  for (const sub of ['', 'Role_Actions']) {
+    let files = [];
+    try { files = readdirSync(join(FANKIT_DIR, dir.name, sub)); } catch { continue; }
+    for (const f of files) {
+      if (!f.endsWith('.png')) continue;
+      const url = ['../public/fankit/battle-pve', dir.name, sub, f].filter(Boolean).map((x, i) => (i ? encodeURIComponent(x) : x)).join('/');
+      fankit.set(`${job}|${normName(f.slice(0, -4))}`, url);
+      if (!fankit.has(`*|${normName(f.slice(0, -4))}`)) fankit.set(`*|${normName(f.slice(0, -4))}`, url); // 他ジョブのアクション（共有バーに残っているもの）用
+    }
+  }
+}
+const fankitOf = (a) => fankit.get(`${JOB}|${normName(a.name.en)}`) ?? fankit.get(`*|${normName(a.name.en)}`);
+const iconOf = (a) => fankitOf(a) ?? (a.iconPath ? `../public${a.iconPath}` : null);
+
+// 威力（説明文から。例「威力：140」「コンボ時威力：300」「背面攻撃時威力：210」「コンボ時かつ背面攻撃時威力：420」
+// 「燕飛効果アップ時威力：270」「継続ダメージを付与する。 威力：50　効果時間：60秒」）。ダメージ計算に使う
+const POS_KEYS = { コンボ: 'combo', 背面攻撃: 'rear', 側面攻撃: 'flank', コンボ時かつ背面攻撃: 'comboRear', コンボ時かつ側面攻撃: 'comboFlank' };
+function parsePotency(desc) {
+  const d = desc.replace(/\r?\n/g, ' / ');
+  const out = {};
+  const base = /(?<!時)威力：(\d+)/.exec(d);
+  if (base) out.base = Number(base[1]);
+  for (const m of d.matchAll(/([^\s　/：。]+?)時威力：(\d+)/g)) {
+    const key = POS_KEYS[m[1]];
+    if (key) out[key] = Number(m[2]);
+    else (out.cond ??= []).push({ status: m[1], potency: Number(m[2]) });
+  }
+  const dot = /継続ダメージ[^/]*\/\s*威力：(\d+)[　 ]*効果時間：(\d+)秒/.exec(d);
+  if (dot) out.dot = { potency: Number(dot[1]), sec: Number(dot[2]) };
+  return Object.keys(out).length ? out : null;
+}
+// 与ダメージを上げるステータス（例「風月効果：自身の与ダメージを13％上昇させる」）→ { 風月: 13 }
+function parseDamageUp(list) {
+  const out = {};
+  for (const a of list) for (const m of a.description.ja.matchAll(/([^\s　/「」：。]+?)効果：自身の与ダメージを(\d+)％上昇/g)) out[m[1]] = Number(m[2]);
+  return out;
+}
+
 const pick = (a) => ({
   id: a.id,
   name: a.name.ja,
   desc: a.description.ja,
-  icon: a.iconPath ? `../public${a.iconPath}` : null,
+  icon: iconOf(a), // ファンキット（枠付き）。無ければ抽出したアイコン
+  iconFramed: !!fankitOf(a),
   isGcd: a.isGcd,
   castMs: Math.round(a.cast * 1000),
   recastMs: Math.round(a.recast * 1000),
@@ -149,6 +195,7 @@ const pick = (a) => ({
   // 移動を伴う技: 説明文「対象に急接近」「N m後方へ飛び退く」から
   dash: /対象に急接近/.test(a.description.ja),
   backstep: Number(/(\d+)m後方へ飛び退く/.exec(a.description.ja)?.[1] ?? 0),
+  pot: parsePotency(a.description.ja),
 });
 
 const out = {
@@ -187,6 +234,8 @@ const out = {
   move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
   hud: { hotbars: addon.hotbars, gauges: CfgParse.findGauges(addon.records, gauge.sizes) },
   gauge,
+  // 与ダメージ上昇のステータス（名前 → %）。説明文から
+  dmgUp: parseDamageUp(actions.filter((a) => a.jobs?.includes(JOB))),
   display: { width: cfg.width, height: cfg.height, mode: cfg.mode, uiScale: cfg.uiScale, uiHighScale: cfg.uiHighScale, deadArea: cfg.deadArea, pad: cfg.pad },
   // ブラウザで別の設定ファイルを読み込んだときに使う: アクション ID → 名前・このジョブで使えるか・上位版
   known: Object.fromEntries(actions.filter((a) => a.isPlayerAction !== false).map((a) => [a.id, [a.name.ja, a.jobs?.includes(JOB) ? 1 : 0]])),

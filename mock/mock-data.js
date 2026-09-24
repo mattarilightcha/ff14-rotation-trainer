@@ -18,7 +18,8 @@ window.MOCK_DATA = {
    "id": 7478,
    "name": "陣風",
    "desc": "対象に物理攻撃。　威力：140\nコンボ条件：暁風　コンボ時威力：300\nコンボボーナス：自身に「風月」を付与する。\n効果時間：40秒\n風月効果：自身の与ダメージを13％上昇させる。\nコンボボーナス：「剣気」を5上昇させる。",
-   "icon": "../public/icons/actions/003152.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Jinpu.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -41,13 +42,18 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 140,
+    "combo": 300
+   }
   },
   "7479": {
    "id": 7479,
    "name": "士風",
    "desc": "対象に物理攻撃。　威力：140\nコンボ条件：暁風　コンボ時威力：300\nコンボボーナス：自身に「風花」を付与する。\n効果時間：40秒\n風花効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを13％短縮させる。\nコンボボーナス：「剣気」を5上昇させる。",
-   "icon": "../public/icons/actions/003156.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Shifu.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -70,13 +76,18 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 140,
+    "combo": 300
+   }
   },
   "7480": {
    "id": 7480,
    "name": "雪風",
    "desc": "対象に物理攻撃。　威力：160\nコンボ条件：暁風　コンボ時威力：340\nコンボボーナス：「剣気」を15上昇させ、かつ「雪の閃」を付与する。",
-   "icon": "../public/icons/actions/003166.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Yukikaze.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -99,13 +110,18 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 160,
+    "combo": 340
+   }
   },
   "7481": {
    "id": 7481,
    "name": "月光",
    "desc": "対象に物理攻撃。　威力：160\n背面攻撃時威力：210\nコンボ条件：陣風　コンボ時威力：370\nコンボ時かつ背面攻撃時威力：420\nコンボボーナス：「剣気」を10上昇させ、かつ「月の閃」を付与する。",
-   "icon": "../public/icons/actions/003158.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Gekko.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -127,13 +143,20 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": "rear",
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 160,
+    "rear": 210,
+    "combo": 370,
+    "comboRear": 420
+   }
   },
   "7482": {
    "id": 7482,
    "name": "花車",
    "desc": "対象に物理攻撃。　威力：160\n側面攻撃時威力：210\nコンボ条件：士風　コンボ時威力：370\nコンボ時かつ側面攻撃時威力：420\nコンボボーナス：「剣気」を10上昇させ、かつ「花の閃」を付与する。",
-   "icon": "../public/icons/actions/003164.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Kasha.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -155,13 +178,20 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": "flank",
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 160,
+    "flank": 210,
+    "combo": 370,
+    "comboFlank": 420
+   }
   },
   "7484": {
    "id": 7484,
    "name": "満月",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：100\nコンボ条件：風光　コンボ時威力：120\nコンボボーナス：自身に「風月」を付与する。\n効果時間：40秒\n風月効果：自身の与ダメージを13％上昇させる。\nコンボボーナス：「剣気」を10上昇させ、かつ「月の閃」を付与する。",
-   "icon": "../public/icons/actions/003163.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Mangetsu.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -184,13 +214,18 @@ window.MOCK_DATA = {
    "effectRange": 5,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100,
+    "combo": 120
+   }
   },
   "7485": {
    "id": 7485,
    "name": "桜花",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：100\nコンボ条件：風光　コンボ時威力：120\nコンボボーナス：自身に「風花」を付与する。\n効果時間：40秒\n風花効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを13％短縮させる。\nコンボボーナス：「剣気」を10上昇させ、かつ「花の閃」を付与する。",
-   "icon": "../public/icons/actions/003165.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Oka.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -213,13 +248,18 @@ window.MOCK_DATA = {
    "effectRange": 5,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100,
+    "combo": 120
+   }
   },
   "7486": {
    "id": 7486,
    "name": "燕飛",
    "desc": "対象に遠隔物理攻撃。　威力：100\n燕飛効果アップ時威力：270\n追加効果：「剣気」を10上昇させる。",
-   "icon": "../public/icons/actions/003155.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Enpi.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -239,13 +279,23 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100,
+    "cond": [
+     {
+      "status": "燕飛効果アップ",
+      "potency": 270
+     }
+    ]
+   }
   },
   "7487": {
    "id": 7487,
    "name": "乱れ雪月花",
    "desc": "対象に物理攻撃。　威力：680\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「燕返し実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：自身に「閃」が3種類付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと居合術が乱れ雪月花に変化する。",
-   "icon": "../public/icons/actions/003162.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Midare_Setsugekka.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -265,13 +315,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 680
+   }
   },
   "7488": {
    "id": 7488,
    "name": "天下五剣",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：300\n追加効果：自身に「燕返し実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：自身に「閃」が2種類付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと居合術が天下五剣に変化する。",
-   "icon": "../public/icons/actions/003161.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tenka_Goken.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -291,13 +345,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 300
+   }
   },
   "7489": {
    "id": 7489,
    "name": "彼岸花",
    "desc": "対象に物理攻撃。　威力：200\n追加効果：対象に継続ダメージを付与する。\n威力：50　効果時間：60秒\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：自身に「閃」が1種類付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと居合術が彼岸花に変化する。",
-   "icon": "../public/icons/actions/003160.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Higanbana.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -317,13 +375,21 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 200,
+    "dot": {
+     "potency": 50,
+     "sec": 60
+    }
+   }
   },
   "7490": {
    "id": 7490,
    "name": "必殺剣・震天",
    "desc": "対象に物理攻撃。　威力：250\n発動条件：「剣気」25",
-   "icon": "../public/icons/actions/003173.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Shinten.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 1000,
@@ -343,13 +409,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 250
+   }
   },
   "7491": {
    "id": 7491,
    "name": "必殺剣・九天",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：100\n発動条件：「剣気」25",
-   "icon": "../public/icons/actions/003174.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Kyuten.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 1000,
@@ -369,13 +439,17 @@ window.MOCK_DATA = {
    "effectRange": 5,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100
+   }
   },
   "7492": {
    "id": 7492,
    "name": "必殺剣・暁天",
    "desc": "対象に急接近して物理攻撃。　威力：100\n発動条件：「剣気」10\nバインド中は実行不可。",
-   "icon": "../public/icons/actions/003169.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Gyoten.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 5000,
@@ -395,13 +469,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": true,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100
+   }
   },
   "7493": {
    "id": 7493,
    "name": "必殺剣・夜天",
    "desc": "対象に物理攻撃。　威力：100\n追加効果：10m後方へ飛び退く。\n追加効果：自身に「燕飛効果アップ」を付与する。\n効果時間：15秒\n発動条件：「剣気」10\nバインド中は実行不可。",
-   "icon": "../public/icons/actions/003170.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Yaten.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 10000,
@@ -421,13 +499,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 10
+   "backstep": 10,
+   "pot": {
+    "base": 100
+   }
   },
   "7495": {
    "id": 7495,
    "name": "葉隠",
    "desc": "自身に付与されている閃を「剣気」に変換する。\n付与されている閃ひとつにつき「剣気」が10上昇する。\n発動条件：「雪の閃」「月の閃」「花の閃」のいずれかが付与されている",
-   "icon": "../public/icons/actions/003176.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hagakure.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 5000,
@@ -447,13 +529,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7496": {
    "id": 7496,
    "name": "必殺剣・紅蓮",
    "desc": "対象に向かって前方直線範囲物理攻撃。　威力：400\n発動条件：「剣気」25\nリキャストタイマーを「必殺剣・閃影」と共有する。",
-   "icon": "../public/icons/actions/003177.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Guren.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -473,13 +557,17 @@ window.MOCK_DATA = {
    "effectRange": 10,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 400
+   }
   },
   "7497": {
    "id": 7497,
    "name": "黙想",
    "desc": "黙想を行い徐々に「剣気」を上昇させる。　効果時間：15秒\n追加効果：自身に「剣圧」を継続的に付与する。\n最大スタック数：3　効果時間：永続\n効果時間中にアクションの実行や移動・ターンを行うと、黙想は即座に解除される。\n実行後にオートアタックを停止する。\n非戦闘中に使用した場合は「剣気」は上昇せず、「剣圧」も付与されない。\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルと同様のリキャストタイムも発生する。",
-   "icon": "../public/icons/actions/003172.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Meditate.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 60000,
@@ -499,13 +587,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7499": {
    "id": 7499,
    "name": "明鏡止水",
    "desc": "一定時間、ウェポンスキルのコンボを、その条件を満たしていなくても成功させる。\nまた、月光を命中させると「風月」が、花車を命中させると「風花」が自身に付与される。\n効果時間が経過するか、居合術および奥義波切を除くウェポンスキルを3回実行すると効果が切れる。　効果時間：20秒\n追加効果：自身に「天道」を付与する。\n効果時間：30秒\n最大チャージ数：2",
-   "icon": "../public/icons/actions/003167.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Meikyo_Shisui.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 55000,
@@ -525,13 +615,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7541": {
    "id": 7541,
    "name": "内丹",
    "desc": "自身のＨＰを回復する。　回復力：800",
-   "icon": "../public/icons/actions/000821.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/Second_Wind.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -551,13 +643,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7542": {
    "id": 7542,
    "name": "ブラッドバス",
    "desc": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。　効果時間：20秒",
-   "icon": "../public/icons/actions/000823.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/Bloodbath.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 90000,
@@ -577,13 +671,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7546": {
    "id": 7546,
    "name": "トゥルーノース",
    "desc": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。　効果時間：10秒\n最大チャージ数：2",
-   "icon": "../public/icons/actions/000830.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/True_North.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 45000,
@@ -603,13 +699,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7548": {
    "id": 7548,
    "name": "アームズレングス",
    "desc": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。　効果時間：15秒",
-   "icon": "../public/icons/actions/000822.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/Arm's_Length.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -629,13 +727,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7549": {
    "id": 7549,
    "name": "牽制",
    "desc": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。　効果時間：15秒",
-   "icon": "../public/icons/actions/000828.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/Feint.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 90000,
@@ -655,13 +755,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7559": {
    "id": 7559,
    "name": "堅実魔",
    "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
-   "icon": "../public/icons/actions/000869.png",
+   "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Surecast.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -681,13 +783,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7561": {
    "id": 7561,
    "name": "迅速魔",
    "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
-   "icon": "../public/icons/actions/000866.png",
+   "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Swiftcast.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 60000,
@@ -707,13 +811,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7571": {
    "id": 7571,
    "name": "救出",
    "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
-   "icon": "../public/icons/actions/000890.png",
+   "icon": "../public/fankit/battle-pve/18_WHM/Role_Actions/Rescue.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -733,13 +839,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7863": {
    "id": 7863,
    "name": "レッグスウィープ",
    "desc": "対象をスタンさせる。　効果時間：3秒",
-   "icon": "../public/icons/actions/000824.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Role_Actions/Leg_Sweep.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 40000,
@@ -759,13 +867,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "7867": {
    "id": 7867,
    "name": "居合術",
    "desc": "自身に付与されている閃の数に応じた居合術を発動する。\n閃が1種類：「彼岸花」を発動する。\n閃が2種類：「天下五剣」を発動する。\n閃が3種類：「乱れ雪月花」を発動する。\n自身に「天道」が付与されている場合は、天下五剣が天道五剣に、乱れ雪月花が天道雪月花にそれぞれ変化する。",
-   "icon": "../public/icons/actions/003159.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Iaijutsu.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -785,13 +895,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "16472": {
    "id": 16472,
    "name": "影身具現",
    "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
-   "icon": "../public/icons/actions/003088.png",
+   "icon": "../public/fankit/battle-pve/03_DRK/Living_Shadow.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -811,13 +923,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 420
+   }
   },
   "16481": {
    "id": 16481,
    "name": "必殺剣・閃影",
    "desc": "対象に物理攻撃。　威力：800\n発動条件：「剣気」25\nリキャストタイマーを「必殺剣・紅蓮」と共有する。",
-   "icon": "../public/icons/actions/003178.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Hissatsu_Senei.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -837,13 +953,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 800
+   }
   },
   "16482": {
    "id": 16482,
    "name": "意気衝天",
    "desc": "「剣気」を50上昇させる。\n追加効果：自身に「奥義波切実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「残心実行可」を付与する。\n効果時間：30秒\n発動条件：自身が戦闘状態",
-   "icon": "../public/icons/actions/003179.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Ikishoten.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 120000,
@@ -863,13 +983,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "16483": {
    "id": 16483,
    "name": "燕返し",
    "desc": "直前に実行した居合術を再発動する。\nただし、彼岸花を除く。\n発動条件：「燕返し実行可」効果中",
-   "icon": "../public/icons/actions/003180.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tsubame-gaeshi.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -889,13 +1011,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "16485": {
    "id": 16485,
    "name": "返し五剣",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：300\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと燕返しが返し五剣に変化する。",
-   "icon": "../public/icons/actions/003182.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Kaeshi_Goken.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -915,13 +1039,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 300
+   }
   },
   "16486": {
    "id": 16486,
    "name": "返し雪月花",
    "desc": "対象に物理攻撃。　威力：680\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと燕返しが返し雪月花に変化する。",
-   "icon": "../public/icons/actions/003183.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Kaeshi_Setsugekka.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -941,13 +1069,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 680
+   }
   },
   "16487": {
    "id": 16487,
    "name": "照破",
    "desc": "対象に向かって前方直線範囲物理攻撃。　威力：640\n2体目以降の対象への威力は40％減少する。\n実行時に「剣圧」を全て消費する。\n発動条件：「剣圧」3\n「剣圧」は自身が戦闘状態で「黙想」「居合術」「奥義波切」を実行すると付与される。\n最大スタック数：3　効果時間：永続",
-   "icon": "../public/icons/actions/003184.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Shoha.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 15000,
@@ -967,13 +1099,17 @@ window.MOCK_DATA = {
    "effectRange": 10,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 640
+   }
   },
   "25757": {
    "id": 25757,
    "name": "シャドウブリンガー",
    "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
-   "icon": "../public/icons/actions/003091.png",
+   "icon": "../public/fankit/battle-pve/03_DRK/Shadowbringer.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 60000,
@@ -993,13 +1129,17 @@ window.MOCK_DATA = {
    "effectRange": 10,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 600
+   }
   },
   "25780": {
    "id": 25780,
    "name": "風光",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：100\n追加効果：「剣気」を10上昇させる。",
-   "icon": "../public/icons/actions/003189.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Fuko.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -1019,13 +1159,17 @@ window.MOCK_DATA = {
    "effectRange": 5,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 100
+   }
   },
   "25781": {
    "id": 25781,
    "name": "奥義波切",
    "desc": "対象に向かって前方扇範囲物理攻撃。　威力：1000\n2体目以降の対象への威力は40％減少する。\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：「奥義波切実行可」効果中\nこのアクションを実行すると「返し波切」に変化する。",
-   "icon": "../public/icons/actions/003187.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Ogi_Namikiri.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -1045,13 +1189,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 1000
+   }
   },
   "25782": {
    "id": 25782,
    "name": "返し波切",
    "desc": "対象に向かって前方扇範囲物理攻撃。　威力：1000\n2体目以降の対象への威力は40％減少する。\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと奥義波切が返し波切に変化する。",
-   "icon": "../public/icons/actions/003188.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Kaeshi_Namikiri.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -1071,13 +1219,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 1000
+   }
   },
   "36962": {
    "id": 36962,
    "name": "天眼通",
    "desc": "効果時間中に受ける1回の攻撃のダメージを10％軽減する。\n効果時間：4秒\n追加効果：天眼通に成功すると「剣気」が10上昇し、さらに「天眼通：生」に変化する。　効果時間：9秒\n天眼通：生効果：自身の被ダメージを10％軽減する。\nさらに、自身のＨＰを継続回復する。　回復力：200",
-   "icon": "../public/icons/actions/003190.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tengentsu.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 15000,
@@ -1097,13 +1249,15 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": null
   },
   "36963": {
    "id": 36963,
    "name": "暁風",
    "desc": "対象に物理攻撃。　威力：240\n追加効果：「剣気」を5上昇させる。",
-   "icon": "../public/icons/actions/003191.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Gyofu.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -1123,13 +1277,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 240
+   }
   },
   "36964": {
    "id": 36964,
    "name": "残心",
    "desc": "対象に向かって前方扇範囲物理攻撃。　威力：940\n2体目以降の対象への威力は40％減少する。\n発動条件：「残心実行可」効果中かつ「剣気」50",
-   "icon": "../public/icons/actions/003192.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Zanshin.png",
+   "iconFramed": true,
    "isGcd": false,
    "castMs": 0,
    "recastMs": 1000,
@@ -1149,13 +1307,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 940
+   }
   },
   "36965": {
    "id": 36965,
    "name": "天道五剣",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：410\n追加効果：自身に「燕返し実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：「天道」効果中かつ自身に「閃」が2種類付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと居合術が天道五剣に変化する。",
-   "icon": "../public/icons/actions/003193.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Goken.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -1175,13 +1337,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 410
+   }
   },
   "36966": {
    "id": 36966,
    "name": "天道雪月花",
    "desc": "対象に物理攻撃。　威力：1100\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「燕返し実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「剣圧」を付与する。\n最大スタック数：3　効果時間：永続\n発動条件：「天道」効果中かつ自身に「閃」が3種類付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと居合術が天道雪月花に変化する。",
-   "icon": "../public/icons/actions/003194.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Setsugekka.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 1800,
    "recastMs": 2500,
@@ -1201,13 +1367,17 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 1100
+   }
   },
   "36967": {
    "id": 36967,
    "name": "天道返し五剣",
    "desc": "自身の周囲の敵に範囲物理攻撃。　威力：410\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと燕返しが天道返し五剣に変化する。",
-   "icon": "../public/icons/actions/003195.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Kaeshi_Goken.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -1227,13 +1397,17 @@ window.MOCK_DATA = {
    "effectRange": 8,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 410
+   }
   },
   "36968": {
    "id": 36968,
    "name": "天道返し雪月花",
    "desc": "対象に物理攻撃。　威力：1100\nこのアクションは必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと燕返しが天道返し雪月花に変化する。",
-   "icon": "../public/icons/actions/003196.png",
+   "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Kaeshi_Setsugekka.png",
+   "iconFramed": true,
    "isGcd": true,
    "castMs": 0,
    "recastMs": 2500,
@@ -1253,7 +1427,10 @@ window.MOCK_DATA = {
    "effectRange": 0,
    "positional": null,
    "dash": false,
-   "backstep": 0
+   "backstep": 0,
+   "pot": {
+    "base": 1100
+   }
   }
  },
  "statuses": {
@@ -5711,6 +5888,9 @@ window.MOCK_DATA = {
     158
    ]
   }
+ },
+ "dmgUp": {
+  "風月": 13
  },
  "display": {
   "width": 3840,

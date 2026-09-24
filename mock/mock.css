@@ -121,7 +121,7 @@ button { font: inherit; }
 
 /* キャストバー */
 .castbar { position: absolute; left: 50%; top: 468px; transform: translateX(-50%); width: 330px; display: flex; align-items: center; gap: 8px; }
-.cast-icon { width: 34px; height: 34px; border-radius: 6px; box-shadow: 0 0 0 1px #000, 0 0 10px rgba(255,210,120,.6); }
+.cast-icon { width: 38px; height: 38px; filter: drop-shadow(0 0 6px rgba(255,210,120,.55)); }
 .cast-main { flex: 1; }
 .cast-name { font-size: 14px; font-weight: 700; text-shadow: var(--outline); margin-bottom: 2px; }
 .cast-track { position: relative; height: 10px; border-radius: 5px; background: rgba(0,0,0,.75); box-shadow: inset 0 0 0 1px #000, 0 0 0 1px rgba(255,255,255,.14); overflow: hidden; }
@@ -176,6 +176,11 @@ button { font: inherit; }
 .slot.other::after { content: "—"; position: absolute; inset: 0; display: grid; place-items: center; color: #555; font-size: 14px; }
 .slot.missing::after { content: "旧"; position: absolute; inset: 0; display: grid; place-items: center; color: #777; font-size: 13px; }
 .slot.foreign::after { content: attr(data-ch); position: absolute; inset: 0; display: grid; place-items: center; color: #777; font-size: 1.2em; }
+/* ファンキットのアイコン（枠・光沢・影が絵に含まれる）: モックの枠は付けず、暗転・射程外の赤は枠の内側（絵の部分）に収める */
+.slot.framed { background: none; box-shadow: none; }
+.slot.framed img, .hud-bar .slot.framed img { inset: 0; width: 100%; height: 100%; border-radius: 0; }
+.slot.framed .frame { display: none; }
+.slot.framed .cd, .hud-bar .slot.framed .cd, .slot.framed.far::after, .hud-bar .slot.framed.far::after { inset: 9% 9% 12% 9%; border-radius: 10%; }
 .slot.pressed { transform: scale(.9); }
 .slot.pressed img { filter: brightness(1.5); }
 .slot.ready-flash .frame { animation: ready .4s ease-out; }
@@ -270,7 +275,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 /* ツールチップ */
 .tooltip { position: absolute; z-index: 10; width: 320px; padding: 9px 11px; font-size: 12px; line-height: 1.55; white-space: pre-wrap; background: rgba(8,9,12,.95); border: 1px solid #000; box-shadow: inset 0 0 0 1px var(--edge), 0 6px 16px #000; border-radius: 5px; pointer-events: none; }
 .tooltip .tt-head { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; }
-.tooltip .tt-head img { width: 36px; height: 36px; border-radius: 6px; box-shadow: 0 0 0 1px #000; }
+.tooltip .tt-head img { width: 40px; height: 40px; }
 .tooltip b { display: block; font-size: 14px; color: var(--gold-hi); }
 .tooltip .kind { font-size: 11px; color: var(--dim); }
 .tooltip .meta { display: flex; gap: 14px; font-size: 11px; color: var(--dim); border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); padding: 3px 0; margin-bottom: 5px; }
