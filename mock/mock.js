@@ -1078,7 +1078,8 @@
         }
         r.chg.textContent = m > 1 ? ch : '';
       }
-      r.cd.style.background = frac > 0 ? `conic-gradient(transparent 0 ${(1 - frac) * 360}deg, rgba(0,0,0,.62) 0)` : 'none';
+      r.cd.style.background = frac > 0 ? `conic-gradient(transparent 0 ${(1 - frac) * 360}deg, rgba(0,0,0,.7) 0)` : 'none';
+      r.el.classList.toggle('cooling', frac > 0); // リキャスト中はアイコン全体も少し暗く
       r.num.textContent = num;
       // 固有のリキャストが明けたときだけ光らせる（GCD の回復では光らせない）
       const ownFrac = ownCd(a) != null && charges(a) === 0 ? 1 : 0;
