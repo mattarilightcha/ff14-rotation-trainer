@@ -257,7 +257,7 @@
     // 継続回復（リジェネなど。3 秒ごと）
     // かけた相手に固定（かけた後で HP の低い方に移ったりしない）。回復のたびに小さく「+N%」を出す
     for (const h of hots) {
-      while (h.next <= clock && h.next <= h.until) { h.next += 3; healOne(h.e, h.frac, 'tick'); }
+      while (h.next <= clock && h.next <= h.until) { h.next += 3; healOne(h.e, h.frac, 'tick'); emit('hotTick'); }
       // かかっている間、足元から緑の粒がときどき昇る（リジェネがかかっていると分かるように）
       if (h.until > clock && Math.random() < vdt * 6) {
         const a = rand(0, Math.PI * 2), r = rand(0.3, 0.9);

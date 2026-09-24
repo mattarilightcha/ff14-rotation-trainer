@@ -265,6 +265,9 @@ function buildJob(JOB, LEVEL) {
     mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0,
     range: a.range,
     crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
+    // 効果音のジャンル: 魔法の攻撃（AttackType 5）かと属性（Aspect: 1 火・2 氷・3 風・4 土・5 雷・6 水・7 無）。物理の斬・突・打はデータにない（-1）ので、ジョブの武器で決める
+    magic: a.attackType === 5,
+    aspect: a.attackType === 5 ? ({ 1: 'fire', 2: 'ice', 3: 'wind', 4: 'earth', 5: 'thunder', 6: 'water' }[a.aspect] ?? null) : null,
     effectRange: a.effectRange, // 範囲の大きさ（m）。自分の周囲の範囲なら半径
     ground: !!a.targetArea, // 地面指定（先行入力されない: docs/SPEC.md GAME-05）
     // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から

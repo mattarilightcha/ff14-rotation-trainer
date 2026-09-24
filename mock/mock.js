@@ -425,7 +425,7 @@
       S.lockUntil = at + ct + POLICY.castLockAfterMs;
       addLog('ok', `${a.name} の詠唱開始`);
       ev('詠唱開始', { action: a.name });
-      Arena.castStart(J.castColor(id), ct, J.castPower ?? 1); Au?.cast(ct);
+      Arena.castStart(J.castColor(id), ct, J.castPower ?? 1); castSfx(id, ct);
     } else {
       S.lockUntil = at + animLockOf(a);
       if (!a.isGcd) { S.lastOgcdLockEnd = S.lockUntil; S.lastOgcdAt = at; }
@@ -742,6 +742,7 @@
   });
   Arena.on('tankrevive', (how) => { if (S && live()) addLog('sys', how === 'raise' ? 'タンクを蘇生しました（HP 50%）' : 'タンクが起き上がりました（HP 50%）'); });
   Arena.on('boom', () => Au?.boom(0.8)); // 敵の範囲攻撃の発動
+  Arena.on('hotTick', () => Au?.heal('hot')); // 継続回復（リジェネなど）の 1 回ごとの小さなきらめき
   // 自分がダメージを受けた（リタージー・オブ・ベルが鳴る）・全体攻撃
   Arena.on('hurt', () => { if (S && live()) J.onHurt?.(); });
   Arena.on('raid', (name) => {
@@ -1505,7 +1506,34 @@
     if (dmg) info.dmg = dmg;
     Arena.play(info);
     if (!Au) return;
-    J.sfx(id, info, Au); // 効果音はジョブごと（侍: 居合術は抜刀、剣気の技は赤い閃光、閃の締めは色ごとの鈴）
+    playSfx(id, info);
+  }
+  // 効果音: ジャンル別の共通の音（audio.js の phys / spell / heal / boost）を全ジョブで使う。
+  // ジョブが決めるのは、物理技の武器（J.weapon: slash 斬撃 / blunt 打撃 / pierce 射撃）・無属性の魔法の色（J.magicTone）・
+  // 例外（J.sfxKind: 歌・召喚など）と、ジョブ独自の音（J.sfxSpecial: 侍の居合術・閃の締め。鳴らしたら true）だけ
+  function playSfx(id, info) {
+    const a = A[id];
+    if (J.sfxSpecial?.(id, info, Au)) return;
+    const aoe = info.kind === 'circle' || info.kind === 'cone' || info.kind === 'line', big = (info.power ?? 1) >= 1.5, pw = Math.min(1.4, info.power ?? 1);
+    let g = J.sfxKind?.(id, info);
+    if (!g) {
+      const heals = a.eff?.heal != null || a.eff?.hot || /バリア/.test(a.desc ?? '') || /蘇生/.test(a.desc ?? '');
+      if ((info.kind === 'heal' || info.kind === 'place') && heals) g = { g: 'heal', v: /蘇生/.test(a.desc ?? '') ? 'raise' : a.eff?.heal == null && !a.eff?.hot ? 'shield' : a.eff?.party || a.shape === 2 || info.kind === 'place' ? 'aoe' : 'single' };
+      else if (info.kind === 'buff' || info.kind === 'place' || info.kind === 'heal') g = { g: 'boost', v: /パーティメンバー|周囲/.test(a.desc ?? '') ? 'party' : 'self' };
+      else if (a.magic || a.category === 2) g = { g: 'spell', v: a.aspect ?? J.magicTone ?? 'aether' };
+      else g = { g: 'phys', v: J.weapon ?? 'slash' };
+    }
+    if (g.g === 'heal') Au.heal(g.v);
+    else if (g.g === 'boost') Au.boost(g.v);
+    else if (g.g === 'spell') { if (g.summon) Au.boost('summon'); Au.spell(g.v, pw, { aoe, big }); }
+    else Au.phys(g.v, pw, { aoe, big });
+    if (info.crit) Au.crit();
+  }
+  // 詠唱の音: 侍の居合術は鞘の音（J.castSfx === 'iai'）、魔法は属性の色のうなり
+  function castSfx(id, ct) {
+    const a = A[id];
+    if (J.castSfx === 'iai') Au?.cast(ct);
+    else Au?.castMagic(ct, a.aspect ?? J.magicTone ?? 'aether');
   }
   function pressFx(el) { el.classList.add('pressed'); setTimeout(() => el.classList.remove('pressed'), 90); }
   function showTip(el, id, macro) {
@@ -2067,11 +2095,21 @@
     const s1 = k.section(pane, '効果音', 'FF14 の効果音は使わず、ブラウザでその場で合成しています。');
     k.row(s1, '効果音', k.toggle(Au?.isEnabled() ?? false, (v) => { Au?.setEnabled(v); syncSound(); if (v) Au?.buff(); }));
     k.row(s1, '音量', k.range(0, 1, 0.05, Au?.getVolume() ?? 0.45, (v) => { Au?.setVolume(v); }, (v) => `${Math.round(v * 100)}%`));
-    k.row(s1, '試しに鳴らす（技）', [
+    k.row(s1, '試しに鳴らす（侍）', [
       k.button('斬撃', () => { Au?.slash(1); Au?.hit(1); }), k.button('雪', () => { Au?.slash(1.15); Au?.finisher('setsu'); Au?.hit(1.15); }),
       k.button('月', () => { Au?.slash(1.15); Au?.finisher('getsu'); Au?.hit(1.15); }), k.button('花', () => { Au?.slash(1.15); Au?.finisher('ka'); Au?.hit(1.15); }),
       k.button('居合術', () => { Au?.cast(1300); setTimeout(() => Au?.iai(3), 1300); }), k.button('剣気', () => { Au?.kenki(); Au?.slash(1.25); Au?.hit(1.25); }),
       k.button('明鏡止水', () => Au?.water()), k.button('意気衝天', () => Au?.surge()),
+    ]);
+    // ジャンル別の共通の音（全ジョブ）
+    k.row(s1, '試しに鳴らす（物理）', [
+      k.button('斬撃', () => Au?.phys('slash')), k.button('打撃', () => Au?.phys('blunt')), k.button('射撃', () => Au?.phys('pierce')), k.button('範囲', () => Au?.phys('slash', 1, { aoe: true })),
+    ]);
+    k.row(s1, '試しに鳴らす（魔法）', [['火', 'fire'], ['氷', 'ice'], ['雷', 'thunder'], ['風', 'wind'], ['土', 'earth'], ['水', 'water'], ['聖', 'holy'], ['星', 'astral'], ['エーテル', 'aether'], ['闇', 'dark']]
+      .map(([t, el]) => k.button(t, () => { Au?.castMagic(900, el); setTimeout(() => Au?.spell(el), 900); })));
+    k.row(s1, '試しに鳴らす（回復・強化）', [
+      k.button('回復', () => Au?.heal('single')), k.button('範囲回復', () => Au?.heal('aoe')), k.button('継続回復', () => Au?.heal('hot')), k.button('バリア', () => Au?.heal('shield')), k.button('蘇生', () => Au?.heal('raise')),
+      k.button('強化', () => Au?.boost('self')), k.button('全体強化', () => Au?.boost('party')), k.button('歌', () => Au?.boost('song')), k.button('召喚', () => Au?.boost('summon')),
     ]);
     k.row(s1, '試しに鳴らす（ほか）', [
       k.button('予兆', () => Au?.warn()), k.button('範囲攻撃', () => Au?.boom(1)), k.button('被弾', () => Au?.hurt()),

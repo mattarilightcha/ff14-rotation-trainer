@@ -286,8 +286,10 @@
         castColor: (id) => FX_COLOR[id] ?? 'iai',
         gcdColor: (id) => ({ setsu: '#7fd6ff', getsu: '#9c90ff', ka: '#ff8fc4', iai: '#ffc640', blood: '#ff7a6a', namikiri: '#4fe3ff' })[FX_COLOR[id]],
         hotOgcd: (id) => !!KENKI_COST[id],
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (id === ID.MEIKYO) Au.water(); else if (id === ID.IKISHOTEN) Au.surge(); else Au.buff(); return; }
+        // 効果音: 斬撃（刀）。侍だけの音（居合術の抜刀・剣気の閃光・閃の締めの鈴・明鏡止水の水滴）はここで鳴らす
+        weapon: 'slash', castSfx: 'iai',
+        sfxSpecial(id, info, Au) {
+          if (info.kind === 'buff') { if (id === ID.MEIKYO) Au.water(); else if (id === ID.IKISHOTEN) Au.surge(); else Au.buff(); return true; }
           const color = FX_COLOR[id];
           const draw = color === 'iai' || color === 'blood' || color === 'namikiri';
           if (draw) Au.iai(info.count);
@@ -297,6 +299,7 @@
           if (color === 'setsu' || color === 'getsu' || color === 'ka') Au.finisher(color);
           if (info.crit) Au.crit();
           else if (!draw) Au.hit(info.power);
+          return true;
         },
         tipCost: (id) => (KENKI_COST[id] ? ['剣気', KENKI_COST[id]] : null),
         // 結果: ジョブの指標・直すと良いところ・良かったところ
@@ -401,13 +404,9 @@
         castColor: () => 'holy',
         gcdColor: (id) => (CONF_CHAIN.has(id) || id === ID.HONOR ? '#9ad8ff' : id === ID.HOLY ? '#ffe39a' : id === ID.GORING ? '#ff7a6a' : [ID.ATONE, ID.SUPP, ID.SEPUL].includes(id) ? '#ffd27a' : null),
         hotOgcd: (id) => id === ID.EXPI || id === ID.CIRCLE || id === ID.IMPERATOR,
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { Au.buff(); return; }
-          if (A[id].category === 2 || CONF_CHAIN.has(id) || id === ID.HONOR) { Au.finisher('setsu'); Au.hit(info.power); return; }
-          if (info.kind === 'circle') Au.wave();
-          else Au.slash(info.power);
-          Au.hit(info.power);
-        },
+        // 効果音: 剣の斬撃、魔法（ホーリースピリット・コンフィテオル以降）は聖
+        weapon: 'slash', magicTone: 'holy',
+        sfxKind: (id) => (CONF_CHAIN.has(id) || id === ID.HONOR ? { g: 'spell', v: 'holy' } : null),
         tipCost: (id) => (A[id]?.eff?.cost ? [A[id].eff.cost.gauge, A[id].eff.cost.n] : null),
         report(s) {
           return { issues: [], metrics: [{ label: 'オウス（終了時）', value: `${s.oath}`, rate: null }], goods: [], overPct: 100, posAdvice: '', castAdvice: 'ホーリースピリットは、神聖魔法効果アップかレクイエスカットの間に使うと詠唱なしで撃てる', rangeAdvice: '敵が動いたらすぐ追いかける。離れたらインターヴィーン', comboAdvice: 'ファストブレード → ライオットソード → ロイヤルアソリティの順に。ホーリースピリット・ロイエ・コンフィテオル以降はコンボを切らない' };
@@ -552,11 +551,8 @@
         castPower: 0.35, // 詠唱の光（床の陣・光源）を控えめに（詠唱が多いジョブのため）
         gcdColor: (id) => (id === ID.GLARE3 ? '#dff4ff' : id === ID.GLARE4 ? '#fff0a8' : id === ID.DIA ? '#9ad8ff' : id === ID.MISERY ? '#ff7a8a' : A[id]?.eff?.heal != null ? '#8fe8a8' : null),
         hotOgcd: (id) => id === ID.ASSIZE,
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (id === ID.POM) Au.surge(); else Au.buff(); return; }
-          if (A[id]?.eff?.heal != null || A[id]?.eff?.hot) { Au.water(); return; }
-          Au.finisher(id === ID.MISERY ? 'ka' : 'setsu'); Au.hit(info.power);
-        },
+        // 効果音: 攻撃魔法は聖（グレア・ディア・ミゼリ）、回復は共通の回復の音
+        weapon: 'blunt', magicTone: 'holy',
         tipCost: (id) => (A[id]?.eff?.cost ? [A[id].eff.cost.gauge, A[id].eff.cost.n] : null),
         report(s) {
           const issues = [], metrics = [], goods = [];
@@ -798,11 +794,9 @@
         castPower: 0.35,
         gcdColor: (id) => (id === ID.MALEFIC ? '#cfe0ff' : id === ID.COMBUST ? '#ffd88a' : A[id]?.eff?.heal != null ? '#8fe8a8' : null),
         hotOgcd: (id) => id === ID.ORACLE || id === ID.LORD || id === ID.DIVINATION,
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (id === ID.DIVINATION) Au.surge(); else Au.buff(); return; }
-          if (A[id]?.eff?.heal != null || A[id]?.eff?.hot) { Au.water(); return; }
-          Au.finisher(id === ID.ORACLE || id === ID.LORD ? 'ka' : 'getsu'); Au.hit(info.power);
-        },
+        // 効果音: 攻撃魔法は星（マレフィク・コンバス・オラクル）、カードとディヴィネーションは全体の強化
+        weapon: 'blunt', magicTone: 'astral',
+        sfxKind: (id) => (id === ID.DIVINATION || CARD_SLOT[id] ? { g: 'boost', v: 'party' } : null),
         tipCost: () => null,
         report(s) {
           const issues = [], metrics = [], goods = [];
@@ -1018,10 +1012,8 @@
         castPower: 0.5,
         gcdColor: (id) => (FIRE_SET.has(id) ? '#ff9a6a' : ICE_SET.has(id) ? '#9ad8ff' : id === ID.XENO ? '#c8a8ff' : id === ID.PARADOX ? '#fff0a8' : null),
         hotOgcd: (id) => id === ID.MANAFONT || id === ID.AMPLIFIER,
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (id === ID.LEY) Au.surge(); else Au.buff(); return; }
-          Au.finisher(FIRE_SET.has(id) ? 'ka' : ICE_SET.has(id) ? 'setsu' : 'getsu'); Au.hit(info.power);
-        },
+        // 効果音: 属性の魔法はデータの属性（火・氷・雷）、ゼノグロシー・フレアスターなど無属性はエーテル
+        weapon: 'blunt', magicTone: 'aether',
         tipCost: (id) => (A[id] && (A[id].mp ?? 0) !== 0 ? ['MP', A[id].mp === -1 ? '全部' : mpCost(A[id])] : null),
         report(s) {
           const issues = [], metrics = [], goods = [];
@@ -1223,10 +1215,9 @@
         castPower: 0.4,
         gcdColor: (id) => (id === ID.REFULGENT ? '#ffe08a' : id === ID.APEX || id === ID.BLAST ? '#8ff0ff' : id === ID.IRONJAWS ? '#c8f0a0' : null),
         hotOgcd: (id) => id === ID.PITCH || id === ID.EMPYREAL || id === ID.HEARTBREAK || id === ID.SIDEWINDER,
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (SONGS[id] || id === ID.FINALE) Au.surge(); else Au.buff(); return; }
-          Au.finisher(id === ID.APEX || id === ID.BLAST ? 'setsu' : 'getsu'); Au.hit(info.power);
-        },
+        // 効果音: 弓の射撃。歌は竪琴、フィナーレ・バトルボイスなどは全体の強化
+        weapon: 'pierce',
+        sfxKind: (id) => (SONGS[id] ? { g: 'boost', v: 'song' } : id === ID.FINALE || id === ID.BV || id === ID.RAGING ? { g: 'boost', v: id === ID.RAGING ? 'self' : 'party' } : null),
         tipCost: (id) => (id === ID.APEX ? ['ソウルボイス', 20] : null),
         report(s) {
           const issues = [], metrics = [], goods = [];
@@ -1495,10 +1486,9 @@
         castPower: 0.5,
         gcdColor: (id) => (id === ID.RRITE || id === ID.RCAT ? '#ff9a6a' : id === ID.TRITE || id === ID.TCAT ? '#ffe08a' : id === ID.ERITE || id === ID.ECAT ? '#9af0b0' : null),
         hotOgcd: (id) => [ID.ENK, ID.ENK_P, ID.ENK_S, ID.DEATHFLARE, ID.SUNFLARE, ID.SEARING].includes(id),
-        sfx(id, info, Au) {
-          if (info.kind === 'buff') { if (DEMI_OF[id] || id === ID.SEARING) Au.surge(); else Au.buff(); return; }
-          Au.finisher(id === ID.RRITE || id === ID.RCAT || id === ID.CYCLONE ? 'ka' : id === ID.ERITE || id === ID.SLIP ? 'setsu' : 'getsu'); Au.hit(info.power);
-        },
+        // 効果音: 無属性の魔法はエーテル、エギの技はデータの属性（火・土・風）。デミ召喚とエギの召喚は召喚の音
+        weapon: 'blunt', magicTone: 'aether',
+        sfxKind: (id) => (DEMI_OF[id] ? { g: 'boost', v: 'summon' } : PRIMAL[id] ? { g: 'spell', v: { fire: 'fire', earth: 'earth', wind: 'wind' }[PRIMAL[id].el], summon: true } : null),
         tipCost: (id) => (A[id] && (A[id].mp ?? 0) > 0 ? ['MP', A[id].mp] : [ID.NECRO, ID.PAINFLARE].includes(id) ? ['エーテルフロー', 1] : null),
         report(s) {
           const issues = [], metrics = [], goods = [];

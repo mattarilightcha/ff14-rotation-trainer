@@ -1,5 +1,6 @@
 // UI モックの効果音。Web Audio API でその場で合成する（ゲームの音声ファイルは使わない）。
-// FF14 の侍の手ざわりに寄せて、斬撃は「風切り＋刀の金属の鳴り」、命中は「低い衝撃」、居合術は「溜め → 鋭い抜刀 → 重い衝撃」。
+// FF14 の手ざわりに寄せて、斬撃は「風切り＋刀の金属の鳴り」、命中は「低い衝撃」、居合術は「溜め → 鋭い抜刀 → 重い衝撃」。
+// 攻撃・回復・強化は、ジャンル別の共通の音（phys / spell / heal / boost）で全ジョブをそろえる。
 // 全体に短い残響（部屋の響き）を足す。ブラウザの自動再生の制限があるため、最初のキー入力やクリックのあとで鳴り始める。
 (function () {
   'use strict';
@@ -204,6 +205,141 @@
       if (!ensure()) return; const t = now();
       for (let i = 0; i < 6; i++) noise(t + i * 0.09, 0.2, 'lowpass', 2200 - i * 250, 150, 0.8, 0.35 - i * 0.04, { send: 0.4 });
       [523, 659, 784, 1047].forEach((f, i) => metal(t + 0.5 + i * 0.09, f, 1.4, 0.1, { ratios: [1, 2, 3.01], send: 0.6 }));
+    },
+    // ---------------- ジャンル別の音（全ジョブ共通。ジョブは「武器」と「魔法の色」を決めるだけ）----------------
+    // FF14 の手ざわりに寄せた合成音（ゲームの音声ファイルは使わない）:
+    //   斬撃 = 風切り＋刃の鳴り＋当たり / 打撃 = 低く重い衝撃とざらつき（金属音なし）/ 射撃 = 弦の「ビン」→ 矢の風切り → 刺さる音
+    //   魔法 = 属性ごとの着弾音（火: 燃え上がる轟き・氷: 砕ける結晶・雷: 破裂音と放電・風: 渦巻く風・土: 岩の地響き・水: 泡としぶき・
+    //          聖: 明るい鐘と「シャン」・星: 星のきらめき・エーテル: うなる魔力・闇: 低いうねり）
+    //   回復 = 上がっていくきらめき（範囲は左右に広がる和音）/ バリア = ガラスの響き＋包む風 / 強化 = 鈴の 2 音（全体は和音）
+    // o.aoe: 範囲（音を厚く）、o.big: 大技（重い衝撃を足す）
+    phys(kind = 'slash', power = 1, o = {}) {
+      if (!ensure()) return; const t = now(), pan = rnd(-0.25, 0.25);
+      if (kind === 'slash') { api.slash(power); api.hit(power); }
+      else if (kind === 'blunt') {
+        const ti = t + 0.03;
+        tone(ti, 'sine', 130, 40, 0.28, 0.95 * power, { send: 0.22 });
+        noise(ti, 0.14, 'lowpass', 1400, 160, 0.9, 0.75 * power, { pan, send: 0.2 });
+        noise(ti, 0.05, 'bandpass', 900, 500, 1.2, 0.5 * power, { pan, send: 0.1 });
+        noise(t, 0.08, 'bandpass', 700, 2200, 1, 0.35 * power, { attack: 0.02, pan, send: 0.1 }); // 振りかぶる風
+      } else if (kind === 'pierce') {
+        tone(t, 'triangle', 196, 188, 0.2, 0.32 * power, { lp: 1600, send: 0.2, pan });
+        tone(t, 'sawtooth', 392, 380, 0.06, 0.06 * power, { lp: 2400, send: 0.1, pan });
+        noise(t + 0.02, 0.12, 'bandpass', 2400, 5200, 1.4, 0.55 * power, { attack: 0.01, pan: pan * 0.5, send: 0.1 });
+        const ti = t + 0.13;
+        noise(ti, 0.05, 'bandpass', 1900, 600, 1.2, 0.7 * power, { send: 0.15 });
+        tone(ti, 'sine', 240, 90, 0.12, 0.55 * power, { send: 0.15 });
+      }
+      if (o.aoe) api.wave();
+      if (o.big) tone(t + 0.05, 'sine', 90, 30, 0.6, 0.8 * power, { send: 0.35 });
+    },
+    spell(el = 'aether', power = 1, o = {}) {
+      if (!ensure()) return; const t = now() + 0.03, p = power, pan = rnd(-0.2, 0.2);
+      switch (el) {
+        case 'fire':
+          noise(t, 0.1, 'lowpass', 500, 3000, 0.8, 0.35 * p, { attack: 0.04, send: 0.2 });
+          noise(t + 0.1, 0.5, 'bandpass', 1100, 260, 0.8, 0.8 * p, { send: 0.35 });
+          tone(t + 0.1, 'sine', 95, 38, 0.45, 0.7 * p, { send: 0.3 });
+          for (let i = 0; i < 9; i++) noise(t + 0.12 + rnd(0, 0.45), 0.015, 'highpass', 3000, 2500, 0.7, rnd(0.12, 0.3) * p, { pan: rnd(-0.5, 0.5), send: 0.1 });
+          break;
+        case 'ice':
+          noise(t, 0.3, 'highpass', 7000, 3000, 0.8, 0.45 * p, { send: 0.35 });
+          for (let i = 0; i < 7; i++) metal(t + rnd(0, 0.12), rnd(2600, 5400), rnd(0.25, 0.5), 0.07 * p, { ratios: [1, 1.52, 2.7], pan: rnd(-0.5, 0.5), send: 0.55 });
+          tone(t, 'sine', 2100, 1300, 0.3, 0.12 * p, { send: 0.5 });
+          tone(t, 'sine', 120, 50, 0.3, 0.45 * p, { send: 0.2 });
+          break;
+        case 'thunder':
+          noise(t, 0.035, 'highpass', 2500, 1800, 0.7, 1.3 * p, { send: 0.3 });
+          tone(t + 0.01, 'sawtooth', 1600, 140, 0.26, 0.2 * p, { lp: 4500, send: 0.3 });
+          tone(t + 0.02, 'square', 70, 45, 0.18, 0.08 * p, { lp: 900, send: 0.2 });
+          noise(t + 0.03, 0.7, 'lowpass', 700, 60, 0.7, 0.55 * p, { send: 0.5 });
+          break;
+        case 'wind':
+          noise(t, 0.35, 'bandpass', 450, 2800, 2.2, 0.55 * p, { attack: 0.08, pan: -0.4, send: 0.35 });
+          noise(t + 0.12, 0.35, 'bandpass', 2600, 700, 2.2, 0.5 * p, { attack: 0.06, pan: 0.4, send: 0.35 });
+          tone(t + 0.25, 'sine', 140, 60, 0.3, 0.4 * p, { send: 0.2 });
+          break;
+        case 'earth':
+          tone(t, 'sine', 75, 32, 0.55, 0.95 * p, { send: 0.3 });
+          noise(t, 0.45, 'lowpass', 900, 90, 0.7, 0.75 * p, { send: 0.35 });
+          for (let i = 0; i < 6; i++) noise(t + 0.05 + rnd(0, 0.3), 0.04, 'bandpass', rnd(500, 1300), 300, 1.5, 0.3 * p, { pan: rnd(-0.4, 0.4), send: 0.15 });
+          break;
+        case 'water':
+          for (let i = 0; i < 5; i++) tone(t + i * 0.04 + rnd(0, 0.02), 'sine', rnd(500, 900), rnd(1100, 1800), 0.06, 0.18 * p, { pan: rnd(-0.4, 0.4), send: 0.4 });
+          noise(t + 0.05, 0.35, 'bandpass', 1800, 500, 1, 0.55 * p, { send: 0.35 });
+          tone(t + 0.05, 'sine', 110, 50, 0.3, 0.45 * p, { send: 0.25 });
+          break;
+        case 'holy':
+          [1760, 2637, 3520].forEach((f, i) => metal(t + i * 0.02, f, 0.7, 0.07 * p, { ratios: [1, 2.01, 3.02], send: 0.6, pan: (i - 1) * 0.3 }));
+          noise(t, 0.3, 'highpass', 4000, 9000, 0.7, 0.4 * p, { attack: 0.02, send: 0.5 });
+          tone(t + 0.03, 'sine', 140, 55, 0.5, 0.75 * p, { send: 0.35 });
+          break;
+        case 'astral':
+          [1319, 1976, 2637].forEach((f, i) => metal(t + i * 0.05, f, 0.8, 0.07 * p, { ratios: [1, 2.4, 3.9], send: 0.6, pan: (i - 1) * 0.35 }));
+          noise(t + 0.02, 0.45, 'bandpass', 3000, 6000, 1.5, 0.25 * p, { attack: 0.05, send: 0.55 });
+          tone(t + 0.04, 'sine', 120, 50, 0.45, 0.65 * p, { send: 0.3 });
+          break;
+        case 'dark':
+          tone(t, 'sawtooth', 95, 55, 0.5, 0.18 * p, { lp: 700, send: 0.35 });
+          tone(t, 'sawtooth', 98, 57, 0.5, 0.18 * p, { lp: 700, send: 0.35 });
+          noise(t, 0.4, 'lowpass', 1200, 120, 0.8, 0.5 * p, { send: 0.35 });
+          break;
+        default: // aether（無属性の魔力）
+          tone(t, 'sawtooth', 700, 150, 0.28, 0.16 * p, { lp: 2200, send: 0.35, pan });
+          noise(t, 0.22, 'bandpass', 2600, 700, 1.4, 0.55 * p, { send: 0.3, pan });
+          tone(t + 0.04, 'sine', 180, 60, 0.4, 0.7 * p, { send: 0.3 });
+          metal(t + 0.02, 1175, 0.4, 0.05 * p, { ratios: [1, 1.5, 2.25], send: 0.5 });
+      }
+      if (o.aoe) noise(t + 0.08, 0.5, 'lowpass', 1600, 120, 0.8, 0.35 * p, { send: 0.45 });
+      if (o.big) { tone(t + 0.06, 'sine', 70, 26, 0.8, 0.9 * p, { send: 0.45 }); noise(t + 0.06, 0.8, 'lowpass', 1800, 60, 0.7, 0.5 * p, { send: 0.5 }); }
+    },
+    heal(kind = 'single') {
+      if (!ensure()) return; const t = now();
+      if (kind === 'hot') { metal(t, rnd(2400, 2900), 0.35, 0.035, { ratios: [1, 2.76], send: 0.6 }); return; }
+      if (kind === 'shield') {
+        noise(t, 0.35, 'bandpass', 400, 2600, 1.6, 0.35, { attack: 0.08, send: 0.45 });
+        metal(t + 0.08, 1397, 0.9, 0.08, { ratios: [1, 1.5, 2.99], send: 0.6 });
+        metal(t + 0.12, 2093, 0.8, 0.05, { ratios: [1, 2.01], send: 0.6 });
+        tone(t, 'sine', 220, 330, 0.6, 0.1, { attack: 0.1, send: 0.4 });
+        return;
+      }
+      if (kind === 'raise') {
+        [392, 523, 659, 784].forEach((f, i) => tone(t + i * 0.12, 'sine', f, f * 1.003, 1.4, 0.07, { attack: 0.3, send: 0.6 }));
+        for (let i = 0; i < 8; i++) metal(t + 0.2 + i * 0.09, rnd(2000, 4200), 0.5, 0.04, { ratios: [1, 2.5], pan: rnd(-0.6, 0.6), send: 0.6 });
+        return;
+      }
+      const aoe = kind === 'aoe';
+      // 上がっていくきらめき（範囲は左右から）＋柔らかい和音
+      const notes = [1568, 2093, 2637, 3136];
+      for (const side of aoe ? [-0.5, 0.5] : [0]) notes.forEach((f, i) => metal(t + i * 0.055 + (side > 0 ? 0.03 : 0), f, 0.55, 0.06, { ratios: [1, 2.76], pan: side, send: 0.6 }));
+      noise(t + 0.05, 0.5, 'highpass', 5000, 9000, 0.7, 0.18, { attack: 0.12, send: 0.5 });
+      (aoe ? [523, 659, 784] : [784, 1047]).forEach((f) => tone(t, 'sine', f, f * 1.01, aoe ? 1 : 0.6, aoe ? 0.06 : 0.07, { attack: 0.08, send: 0.55 }));
+    },
+    // 強化: self 自分（鈴の 2 音）/ party 全体（和音の鐘）/ song 歌（竪琴の上がる音）/ summon 召喚（湧き上がる轟きと鐘）
+    boost(kind = 'self') {
+      if (!ensure()) return; const t = now();
+      if (kind === 'self') { api.buff(); return; }
+      if (kind === 'party') {
+        [587, 740, 880, 1175].forEach((f, i) => metal(t + i * 0.03, f, 1.1, 0.07, { ratios: [1, 2, 3.01], send: 0.6, pan: (i - 1.5) * 0.25 }));
+        noise(t, 0.5, 'bandpass', 500, 3000, 1, 0.22, { attack: 0.25, send: 0.5 });
+        return;
+      }
+      if (kind === 'song') { [523, 659, 784, 1047, 1319].forEach((f, i) => tone(t + i * 0.06, 'triangle', f, f, 0.5, 0.08, { lp: 3500, send: 0.5, pan: (i - 2) * 0.2 })); return; }
+      if (kind === 'summon') {
+        noise(t, 0.6, 'lowpass', 200, 3200, 0.9, 0.45, { attack: 0.45, send: 0.5 });
+        tone(t, 'sawtooth', 55, 130, 0.6, 0.12, { lp: 1200, attack: 0.4, send: 0.4 });
+        tone(t + 0.6, 'sine', 80, 30, 0.7, 0.9, { send: 0.4 });
+        metal(t + 0.6, 440, 1.4, 0.12, { ratios: [1, 2.01, 2.99, 4.2], send: 0.6 });
+      }
+    },
+    // 魔法の詠唱: 属性の色の柔らかいうなり（詠唱の長さだけ）
+    castMagic(durMs, el = 'aether') {
+      if (!ensure()) return; const t = now(), d = Math.max(0.3, durMs / 1000);
+      const f = { fire: 220, ice: 660, thunder: 330, wind: 440, earth: 165, water: 392, holy: 523, astral: 587, dark: 147, aether: 294 }[el] ?? 294;
+      tone(t, 'triangle', f, f * 1.5, d * 0.95, 0.05, { attack: d * 0.6, lp: 2400, send: 0.5 });
+      tone(t, 'sine', f / 2, f * 0.75, d * 0.95, 0.12, { attack: d * 0.5, send: 0.3 });
+      noise(t, d * 0.9, 'bandpass', f * 2, f * 6, 2, 0.12, { attack: d * 0.7, send: 0.5 });
+      metal(t, f * 4, 0.3, 0.025, { ratios: [1, 2], send: 0.5 });
     },
     setEnabled(v) { enabled = !!v; save(); if (enabled) ensure(); },
     isEnabled: () => enabled,
