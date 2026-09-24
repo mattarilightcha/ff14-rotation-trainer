@@ -46,7 +46,7 @@
   const HEAD = { player: 2.7, tank: 2.8, boss: 4.6 };
   // 役割（自分のジョブのロール）: melee（侍）/ tank（ナイト。敵はあなたを狙い、相方は回復役）/ healer（白魔道士。相方のタンクを回復する）。
   // 相方（npc）の見た目: タンクならナイト、回復役なら白魔道士。数値は練習用の仮（DESIGN-06）
-  const ROLE_POL = { bossHit: 0.04, npcHeal: 0.08, tankHit: 0.035 }; // 敵の通常攻撃で減る HP・相方の回復量（最大 HP に対して）
+  const ROLE_POL = { bossHit: 0.04, npcHeal: 0.08, tankHit: 0.06 }; // 敵の通常攻撃で減る HP・相方の回復量（最大 HP に対して）
 
   const rand = (a, b) => a + Math.random() * (b - a);
   const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -77,6 +77,7 @@
   let hots = []; // 継続回復（リジェネなど）: { who, frac, until, next }
   // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）: { kind, x, y, r, until（試合の時刻）, frac, next, dying, endAt, ringAt, pops（弾けた鈴の花の時刻）}
   let zones = [], simNow = 0;
+  let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
   const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm' };
@@ -169,6 +170,7 @@
     Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
     hots = []; zones = [];
+    for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; }
     placeTank(true);
     if (!bossHasTank()) boss.face = Math.PI / 2;
     tankName.textContent = npcHealer() ? 'ヒーラー' : 'タンク';
@@ -411,7 +413,7 @@
       if (tank.down > 0) return;
       tank.flash = 1; act(tank, 'hurt', 0.25); addArc(tank, COLORS.kenki, 0.6, 1.2, 1.4);
       if (opts.role === 'healer') {
-        tank.hp = Math.max(0, tank.hp - ROLE_POL.tankHit);
+        tank.hp = Math.max(0, tank.hp - soak(tank, ROLE_POL.tankHit));
         if (tank.hp <= 0) { tank.down = 20000; tank.deaths++; flyText('戦闘不能', 'hurt tank', tank, 0.4); emit('tankdown'); }
       }
       return;
@@ -495,13 +497,13 @@
     if (tg.kind === 'raid') {
       // 全体攻撃: 全員が受ける（被弾の数には入れない）
       raidFx();
-      hurtNpc(0.14);
-      hurtPlayer(0.16, tg.name, `-${16}%`);
+      hurtNpc(0.2);
+      hurtPlayer(0.18, tg.name, '全体攻撃');
       emit('raid', tg.name);
       return;
     }
     boomFx(tg);
-    if (hasNpc() && tank.hp > 0 && !(tank.down > 0) && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - (tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; act(tank, 'hurt', 0.4); flyText('被弾', 'hurt tank', tank, 0.2); }
+    if (hasNpc() && tank.hp > 0 && !(tank.down > 0) && inside(tg, tank)) { tank.hp = Math.max(0.1, tank.hp - soak(tank, tg.puddle ? 0.2 : 0.35)); tank.hurt = 1; tank.hits++; act(tank, 'hurt', 0.4); flyText('被弾', 'hurt tank', tank, 0.2); }
     if (player.down > 0 || !inside(tg, player)) return;
     if (!reduce) cam.shake = 5;
     hurtPlayer(tg.puddle ? 0.3 : 0.45, tg.name, '被弾');
@@ -511,6 +513,7 @@
   // 自分が攻撃を受ける（範囲攻撃・全体攻撃・敵の通常攻撃）。'hurt' を出す（リタージー・オブ・ベルが鳴る）
   function hurtPlayer(frac, name, text, floor = 0, anim = true) {
     if (player.down > 0) return;
+    frac = soak(player, frac);
     player.hp = Math.max(floor, player.hp - frac); player.hurt = 1;
     if (anim) act(player, 'hurt', 0.45);
     if (text) flyText(text, 'hurt', player, 0.2);
@@ -520,8 +523,9 @@
   // 相方が攻撃を受ける（全体攻撃）。回復役の練習では、相方のタンクが倒れることがある
   function hurtNpc(frac) {
     if (!hasNpc() || tank.down > 0 || tank.hp <= 0) return;
-    tank.hp = Math.max(opts.role === 'healer' ? 0 : 0.1, tank.hp - frac); tank.hurt = 1; act(tank, 'hurt', 0.4);
-    flyText(`-${Math.round(frac * 100)}%`, 'hurt tank', tank, 0.2);
+    const f2 = soak(tank, frac);
+    tank.hp = Math.max(opts.role === 'healer' ? 0 : 0.1, tank.hp - f2); tank.hurt = 1; act(tank, 'hurt', 0.4);
+    flyText(`-${Math.round(f2 * 100)}%`, 'hurt tank', tank, 0.2);
     if (tank.hp <= 0) { tank.down = 20000; tank.deaths++; flyText('戦闘不能', 'hurt tank', tank, 0.4); emit('tankdown'); }
   }
   // 全体攻撃の演出: 敵から赤い衝撃の輪が練習場の端まで広がる
@@ -543,6 +547,33 @@
     const targets = who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : [lowest()];
     for (const e of targets) healOne(e, frac, quiet);
   }
+  // 被ダメージ軽減（アクアヴェール・テンパランスなど）とバリア（ディヴァインベニゾンなど）を通したダメージ
+  function soak(e, frac) {
+    e.mits = (e.mits ?? []).filter((m) => m.until > clock);
+    for (const m of e.mits) frac *= 1 - m.pct;
+    if (e.shield > 0 && e.shieldUntil > clock) {
+      const used = Math.min(e.shield, frac);
+      e.shield -= used; frac -= used;
+      if (used > 0.001) flyText('バリア', 'buff', e, 0.35);
+    }
+    return frac;
+  }
+  const partyOf = (who) => (who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : [lowest()]);
+  function shieldOn(who, frac, sec) {
+    for (const e of partyOf(who)) {
+      if (!e || (e === tank && tank.down > 0)) continue;
+      e.shield = Math.max(e.shield > 0 && e.shieldUntil > clock ? e.shield : 0, frac); e.shieldUntil = clock + sec;
+      fx.push({ type: 'ring', at: e, col: ['#f4fbff', '#8fd0ff'], t: 0, dur: 600, r0: 0.4, r1: 1.8, thick: true });
+      flyText('バリア', 'buff', e, 0.2);
+    }
+  }
+  function mitigateOn(who, pct, sec) {
+    for (const e of partyOf(who)) {
+      if (!e || (e === tank && tank.down > 0)) continue;
+      (e.mits ??= []).push({ pct, until: clock + sec });
+      fx.push({ type: 'ring', at: e, col: ['#fffbe8', '#b8e0ff'], t: 0, dur: 520, r0: 0.3, r1: 1.4 });
+    }
+  }
   function healOne(e, frac, quiet) {
     if (!e || (e === player && player.down > 0) || (e === tank && (tank.hp <= 0 || tank.down > 0))) return false;
     // アサイラムの中にいると、受ける回復が 10% 上がる（説明文「受けるＨＰ回復効果が10％上昇する」）
@@ -550,7 +581,7 @@
     const before = e.hp;
     e.hp = Math.min(1, e.hp + frac);
     healFx(e, quiet);
-    if (!quiet) flyText(`+${Math.round((e.hp - before) * 100)}%`, 'heal', e, 0.1);
+    if (!quiet) { flyText(`+${Math.round((e.hp - before) * 100)}%`, 'heal', e, 0.1); fx.push({ type: 'pillar', at: e, col: COLORS.heal, t: 0, dur: 650 }); }
     return true;
   }
   const lowest = () => (hasNpc() && tank.hp > 0 && !(tank.down > 0) && tank.hp < player.hp ? tank : player);
@@ -574,7 +605,8 @@
   function placeZone(kind, o = {}) {
     for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; } // 置き直すと前のものは消える
     // リタージー・オブ・ベルは自分の横（自分が攻撃を受けると鳴り、20m 以内を回復するため）。アサイラムは自分と相方の間
-    const r = o.r ?? 10, at = kind === 'bell' ? besidePlayer(2.6) : zonePlace(r);
+    // o.at: クリックで選んだ場所（なければ自動: パッドなど）
+    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : zonePlace(r);
     const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [] };
     zones.push(z);
     const col = kind === 'bell' ? COLORS.lily : COLORS.dome;
@@ -748,7 +780,7 @@
     }
   }
   function castParticles(dt) {
-    const n = Math.round(dt * 70 + Math.random());
+    const n = Math.round(dt * 70 * (castGlow.power ?? 1) + Math.random() * 0.8);
     for (let i = 0; i < n; i++) {
       const a = rand(0, Math.PI * 2), r = rand(1.6, 3.2);
       spark({ x: player.x + Math.cos(a) * r, y: player.y + Math.sin(a) * r, z: rand(0.1, 1.6), vx: -Math.cos(a) * r * 2.2, vy: -Math.sin(a) * r * 2.2, vz: rand(0.4, 1.4), g: 0, drag: 0.5, life: 0.35, max: 0.35, col: castGlow.col[0], size: 1 });
@@ -778,7 +810,7 @@
       case 'projectile': fx.push({ type: 'proj', col, t: 0, dur: 180 }); break;
       default: break;
     }
-    if (info.kind === 'heal') { act(player, 'spell'); return; } // 回復の光は healNow が出す
+    if (info.kind === 'heal') { act(player, 'spell'); return; } // 回復の光は相手の足元に出す（healNow）
     if (info.kind === 'spell') {
       // 魔法: 敵の頭上から光が落ちる
       act(player, 'spell');
@@ -836,7 +868,8 @@
     fx.push({ type: 'arc', target, col, t: -delay, dur: flat ? 260 : 220, a0, span: rand(1.8, 2.6) * (Math.random() < 0.5 ? 1 : -1), r: radius * scale, h: h ?? 1.4, tilt: flat ? rand(-0.12, 0.12) : rand(-0.7, 0.7), w: flat ? 0.75 : 0.5 });
   }
 
-  function castStart(color, ms) { castGlow = { col: COLORS[color] ?? COLORS.iai, t: 0, dur: ms }; }
+  // power: 詠唱の光の強さ（ジョブごと。詠唱の多いジョブは控えめ）
+  function castStart(color, ms, power = 1) { castGlow = { col: COLORS[color] ?? COLORS.iai, t: 0, dur: ms, power }; }
   function castEnd() { castGlow = null; }
   function dotTick(dmg) {
     for (let i = 0; i < 6; i++) spark({ x: boss.x + rand(-1, 1), y: boss.y + rand(-1, 1), z: rand(0.5, 3.4), vx: rand(-0.6, 0.6), vy: rand(-0.6, 0.6), vz: rand(0.6, 2), g: 0, drag: 1, life: 0.5, max: 0.5, col: '#ff4a3c', size: 1 });
@@ -932,7 +965,7 @@
     get stage() { return STG; }, get markers() { return opts.markers ?? STG.markers; },
     get opts() { return opts; }, get telegraphs() { return telegraphs; }, get fx() { return fx; }, get parts() { return parts; },
     get castGlow() { return castGlow; }, get guideNeed() { return guideNeed; }, get clock() { return clock; }, get SPR() { return SPR; },
-    get zones() { return zones; }, BELL_H,
+    get zones() { return zones; }, BELL_H, get aim() { return aim; },
     poseOf, inside, angDiff, hasNpc, setName,
   };
 
@@ -958,6 +991,7 @@
       cv.style.width = `${W * PX}px`; cv.style.height = `${H * PX}px`;
     }
     const project = (x, y, z = 0) => ({ x: sx(x) * PX, y: (sy(y) - z * PPY * Z2) * PX, ok: true });
+    const ground = (px, py) => ({ x: (px / PX - ox) / PPY, y: (py / PX - oy) / PPY });
     // 色付きの影（被弾の赤）
     function tinted(set, color) {
       const key = `${set.fw}|${set.count}|${color}`;
@@ -1001,6 +1035,7 @@
 
       if (STATE.markers) drawMarkers();
       for (const z of zones) drawZoneFloor(z);
+      if (aim) drawAim();
       for (const tg of telegraphs) drawTelegraph(tg, simT);
       for (const e of fx) if (e.type === 'boom' && e.t >= 0) drawBoom(e);
       drawTargetRing();
@@ -1053,6 +1088,17 @@
         gr.addColorStop(0, `rgba(170,255,240,${0.5 * f})`); gr.addColorStop(1, 'rgba(120,230,220,0)');
         g.fillStyle = gr; g.fillRect(cx - 22, cy - 22, 44, 44);
       }
+      g.restore();
+    }
+    // 置く場所のターゲットサークル（範囲の外なら赤）
+    function drawAim() {
+      const cx = sx(aim.x), cy = sy(aim.y), R = aim.r * PPY;
+      g.save();
+      g.fillStyle = aim.ok ? 'rgba(160,230,255,.14)' : 'rgba(255,110,90,.14)';
+      g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); g.fill();
+      g.strokeStyle = aim.ok ? 'rgba(210,245,255,.95)' : 'rgba(255,140,120,.95)'; g.lineWidth = 2;
+      g.setLineDash([8, 5]); g.lineDashOffset = -clock * 10; g.stroke(); g.setLineDash([]);
+      g.beginPath(); g.arc(cx, cy, 3, 0, Math.PI * 2); g.fillStyle = '#fff'; g.fill();
       g.restore();
     }
     // リタージー・オブ・ベル（sprites.js の vfx）: ハート・中央の花・鈴の花のガラス玉（残りのスタックの数）を加算で重ねる。1m = 20 画素（人物と同じ縮尺）
@@ -1245,7 +1291,7 @@
         g.globalAlpha = (1 - p) * 0.35; g.fillStyle = gr; g.fillRect(cx - r, cy - r, r * 2, r * 2);
       },
     };
-    return { init, resize, project, render, setStage };
+    return { init, resize, project, ground, render, setStage };
   })();
 
   window.MockArena = {
@@ -1255,8 +1301,10 @@
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
     tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
     hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,
-    heal: (who, frac) => healNow(who, frac), hot: (who, frac, sec) => { hots.push({ who, frac, until: clock + sec, next: clock + 3 }); },
-    placeZone, zoneHeal, endZone, zones: () => zones.filter((z) => !z.dying).map((z) => ({ kind: z.kind, x: z.x, y: z.y, r: z.r })),
+    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: (who, frac, sec) => { hots.push({ who, frac, until: clock + sec, next: clock + 3 }); },
+    placeZone, zoneHeal, endZone, setAim: (o) => { aim = o; },
+    // 画面の位置（舞台の px）→ 床の位置（m）
+    groundAt: (px, py) => (view3d() ? R3.ground(px, py) : R2D.ground(px, py)), zones: () => zones.filter((z) => !z.dying).map((z) => ({ kind: z.kind, x: z.x, y: z.y, r: z.r })),
     setBellStacks: (fn) => { STATE.bellStacks = fn; }, // ベルの残りスタック（光の玉の数）を教える関数
     setGuide: (need) => { guideNeed = need; },
     play, castStart, castEnd, dotTick, kill, flyText: (t, cls) => flyText(t, cls, player, 0.2),

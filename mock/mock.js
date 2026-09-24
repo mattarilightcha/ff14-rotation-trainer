@@ -3,7 +3,7 @@
 // - ここは共通の仕組み（時間・GCD・硬直・先行入力・詠唱・コンボ・リキャスト・ステータス・ダメージ・画面）。
 //   ジョブごとの決まり（ボタンの変化・使える条件・効果・ゲージ）は jobs.js
 // - ゲームデータにない値は POLICY と arena.js の POL にまとめ、「仮」として扱う（docs/SPEC.md §10）
-// - 画面: 戦闘は 3D の斜め見下ろし（arena3d.js）/ 真上の 2D（arena.js）、HUD は FF14 風。ジョブゲージは抽出した ULD とテクスチャ
+// - 画面: 戦闘は 3D の斜め見下ろし（arena3d.js。WebGL が使えないときだけ arena.js の真上の 2D）、HUD は FF14 風。ジョブゲージは抽出した ULD とテクスチャ
 (() => {
   'use strict';
   // ジョブ: URL の ?job=PLD、なければ保存した設定、なければ侍。切り替えはページを読み直す
@@ -50,9 +50,10 @@
     has: (k) => has(k), buff: (k, ms, stacks) => buff(k, ms, stacks), remove: (k) => remove(k),
     addLog: (c, t) => addLog(c, t), ev: (k, o) => ev(k, o), TARGET_BASE,
     heal: (who, frac) => Arena.heal(who, frac), hot: (who, frac, sec) => Arena.hot(who, frac, sec),
+    shield: (who, frac, sec) => Arena.shield(who, frac, sec), mitigate: (who, pct, sec) => Arena.mitigate(who, pct, sec),
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
-    zone: (kind, o) => Arena.placeZone(kind, o), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
+    zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
   };
   const J = window.MockJobs[JOB].create(R);
   const STATUS = J.STATUS;
@@ -111,6 +112,7 @@
     };
     S.hp = S.hpMax;
     J.initState(S);
+    cancelAim();
     $('log').innerHTML = '';
     $('result').hidden = true;
     Arena.reset(arenaOpts());
@@ -370,7 +372,7 @@
       S.lockUntil = at + ct + POLICY.castLockAfterMs;
       addLog('ok', `${a.name} の詠唱開始`);
       ev('詠唱開始', { action: a.name });
-      Arena.castStart(J.castColor(id), ct); Au?.cast(ct);
+      Arena.castStart(J.castColor(id), ct, J.castPower ?? 1); Au?.cast(ct);
     } else {
       S.lockUntil = at + animLockOf(a);
       if (!a.isGcd) { S.lastOgcdLockEnd = S.lockUntil; S.lastOgcdAt = at; }
@@ -408,7 +410,32 @@
     addLog('ng', msg);
   }
 
-  function press(baseId) {
+  // 地面指定の技（アサイラム・リタージー・オブ・ベルなど）: 押すとマウスの位置にターゲットサークルが出て、クリックした所に置く（ゲームと同じ）。
+  // もう一度押してもマウスの位置に置く。右クリック・Esc でやめる。パッドから押したときは自動の場所に置く
+  let aiming = null, placeAt = null, mousePos = null;
+  const aimRadius = (a) => Number(/周囲(\d+)m/.exec(a.desc ?? '')?.[1] ?? 0) || a.effectRange || 5;
+  function aimPos() {
+    if (!aiming || !mousePos) return null;
+    const g = Arena.groundAt(mousePos.x, mousePos.y);
+    if (!g) return null;
+    const p = Arena.debug().player, d = Math.hypot(g.x - p.x, g.y - p.y);
+    return { x: g.x, y: g.y, ok: d <= (aiming.range || 30) + 0.001 };
+  }
+  function updateAim() {
+    const q = aimPos();
+    Arena.setAim(aiming && q ? { ...q, r: aiming.r } : null);
+  }
+  function cancelAim(msg) { if (!aiming) return; aiming = null; Arena.setAim(null); if (msg) addLog('sys', msg); }
+  function confirmAim() {
+    const q = aimPos(), cur = aiming;
+    if (!cur) return;
+    if (!q) return;
+    if (!q.ok) { reject(`${A[cur.id].name}: 射程外です（射程 ${cur.range}m）`, 'range'); return; }
+    cancelAim();
+    placeAt = { x: q.x, y: q.y };
+    try { press(cur.baseId, 'place'); } finally { placeAt = null; }
+  }
+  function press(baseId, src) {
     if (!live()) {
       // 開始前・終了後の入力は案内を 1 回だけ出す
       if (!S.hinted) { S.hinted = true; addLog('sys', 'Space（または「開始」）で練習を始めてください'); }
@@ -434,6 +461,13 @@
     if (why) { reject(why); return; }
     const pb = placeBlock(a);
     if (pb) { reject(pb.msg, pb.kind); return; }
+    if (a.ground && src !== 'pad' && src !== 'place') {
+      if (aiming && aiming.baseId === baseId) { confirmAim(); return; }
+      aiming = { baseId, id, r: aimRadius(a), range: a.range > 0 ? a.range : 30 };
+      updateAim();
+      addLog('sys', `${a.name}: 置く場所をクリック（右クリック・Esc でやめる）`);
+      return;
+    }
     const ra = readyAt(a);
     if (ra <= S.t) { execute(id, S.t); return; }
     // 先行入力: そのアクション自身のリキャストの残りが 0.5 秒以下なら入れておき、使えるようになった瞬間に出す。
@@ -1004,7 +1038,7 @@
     if (a.comboFrom.length && S.chain != null && S.t <= S.chainUntil && a.comboFrom.includes(S.chain)) return true;
     const st = J.procStatus[a.proc];
     if (st && has(st)) return J.highlightOk(id, st);
-    return false;
+    return !!J.glow?.(id); // ジョブの決まりで光るもの（ナイトのホーリースピリットなど）
   }
   // 方向指定のガイド: 次に使う（光っている）方向指定の技の向き。明鏡止水中はまだ持っていない閃の技
   function guideNeed() {
@@ -1113,6 +1147,8 @@
   function fxFor(id, ok) {
     const a = A[id];
     // 自分にかけるもの: 敵を対象にできず、範囲でもない（自分の周囲の範囲攻撃も敵を対象にしないため、形で見分ける）
+    // 回復・バリアの技: 自分の光ではなく、相手の足元に回復の光（healNow）。詠唱の動きだけ
+    if (!a.hostile && (a.eff?.heal != null || a.eff?.hot || /バリア/.test(a.desc ?? '')) && a.shape !== 7) return { kind: 'heal', color: 'heal', name: a.name };
     if (!a.hostile && a.shape <= 1) return { kind: 'buff', color: J.fxColor(id) === 'steel' ? 'buff' : J.fxColor(id), name: a.name };
     // 地面に置く技（castType 7）: 置いたものの演出は練習場が出す（アサイラム・リタージー・オブ・ベルなど）
     if (a.shape === 7 && !a.hostile) return { kind: 'place', color: J.fxColor(id), name: a.name };
@@ -1218,7 +1254,7 @@
     }
     if (D.move?.jump?.includes(e.code) && live()) { e.preventDefault(); if (!e.repeat && !paused()) { Arena.jump(); Au?.whoosh(); } return; }
     if (e.code === 'Space') { e.preventDefault(); if (!e.repeat && !live()) start(); return; }
-    if (e.code === 'Escape') { reset(); return; }
+    if (e.code === 'Escape') { if (aiming) { cancelAim('置くのをやめました'); return; } reset(); return; }
     const hit = keymap.get(keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey }));
     if (hit) {
       e.preventDefault();
@@ -1258,10 +1294,16 @@
     if (yaw || pitch) Arena.camera.rotate(yaw * CAM_RATE.yaw * k * dt * sg.x, pitch * CAM_RATE.pitch * k * dt * sg.y);
     if (zoom) Arena.camera.zoom(Math.pow(CAM_RATE.zoom, zoom * dt));
   }
+  // マウスの位置（舞台の px。地面指定のターゲットサークルに使う）
+  window.addEventListener('pointermove', (e) => {
+    const r = stage.getBoundingClientRect();
+    mousePos = { x: ((e.clientX - r.left) / r.width) * STAGE.w, y: ((e.clientY - r.top) / r.height) * STAGE.h };
+  });
   for (const cv of [$('arena'), $('arena3d')]) {
     cv.addEventListener('pointerdown', (e) => {
       if (e.pointerType !== 'mouse') return;
       Au?.unlock();
+      if (aiming) { e.preventDefault(); if (e.button === 0) confirmAim(); else cancelAim('置くのをやめました'); return; }
       mouse.buttons = e.buttons;
       cv.setPointerCapture(e.pointerId);
       cv.classList.add('dragging');
@@ -1360,7 +1402,7 @@
   }
   function padPress(half, q, k) {
     const hit = padMap.get(`${half}|${q}|${k}`);
-    if (hit) { pressFx(hit.el); press(hit.base); }
+    if (hit) { pressFx(hit.el); press(hit.base, 'pad'); }
   }
 
   // ---------------- 設定ファイルの読み込み（INPUT_HUD §5）----------------
@@ -1519,7 +1561,7 @@
     const s2 = k.section(pane, '判定に使う仮の値', 'ゲームデータにない値です。実機で確かめて直します（docs/SPEC.md §10 GAME-04・05・50〜55）。');
     k.row(s2, '応答の遅れ', k.choice([[0, '0ms'], [50, '50ms'], [100, '100ms'], [150, '150ms']], OPT.latency ?? 50, (v) => { OPT.latency = Number(v); save(); }), '詠唱のない技の硬直は「0.6 秒＋応答の遅れ（サーバーまでの往復と処理）」です。大きいほどアビリティを挟みにくくなります');
     const P = Arena.POL;
-    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程（射程 -1 の技）', `敵の当たり判定の外側から ${P.melee} m`], ['敵の当たり判定の半径', `${P.hitbox} m`], ['方向指定の角度', `背面 = 真後ろから ±${180 - P.rearDeg}°、正面 = ±${P.frontDeg}°、その間が側面`], ['詠唱の終わりの猶予（滑り撃ち）', `残り ${POLICY.slideMs / 1000} 秒からは動いても中断しない。効果もこの時点で決まる`], ['先行入力', `そのアクションのリキャストの残りが ${POLICY.queueMs / 1000} 秒以下なら受け付け、使えるようになった瞬間に出す。入れておけるのは 1 つで、先に押したものが優先`], ['硬直', `詠唱のない技 ${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 2.5%（DESIGN-06）'], ['敵の通常攻撃', `2.8 秒ごと。${ROLE === 'tank' ? 'あなた' : 'タンク'}の HP を ${ROLE === 'tank' ? 4 : 3.5}% 減らす`]] : [])]) k.row(s2, label, k.text(v));
+    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程（射程 -1 の技）', `敵の当たり判定の外側から ${P.melee} m`], ['敵の当たり判定の半径', `${P.hitbox} m`], ['方向指定の角度', `背面 = 真後ろから ±${180 - P.rearDeg}°、正面 = ±${P.frontDeg}°、その間が側面`], ['詠唱の終わりの猶予（滑り撃ち）', `残り ${POLICY.slideMs / 1000} 秒からは動いても中断しない。効果もこの時点で決まる`], ['先行入力', `そのアクションのリキャストの残りが ${POLICY.queueMs / 1000} 秒以下なら受け付け、使えるようになった瞬間に出す。入れておけるのは 1 つで、先に押したものが優先`], ['硬直', `詠唱のない技 ${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 4%（ケアル 20%・ケアルラ 32%。DESIGN-06）'], ['敵の通常攻撃', `2.8 秒ごと。${ROLE === 'tank' ? 'あなた' : 'タンク'}の HP を ${ROLE === 'tank' ? 4 : 6}% 減らす`]] : [])]) k.row(s2, label, k.text(v));
   });
 
   UI.tab('control', '操作', (pane, k) => {
@@ -1605,9 +1647,8 @@
   });
 
   UI.tab('screen', '画面', (pane, k) => {
-    const s0 = k.section(pane, '練習場の表示', Arena.error3d() ? `この環境では 3D で表示できません（${Arena.error3d()}）。2D で表示しています。` : '3D は床と明かりを立体で描き、人物はドット絵の板で立たせます（カメラを回せます）。2D は真上から見た図で、北が上に固定です。');
-    k.row(s0, '表示', k.choice([['3d', '3D（斜め見下ろし）'], ['2d', '2D（真上）']], VIEW.arena ?? '3d', (v) => { VIEW.arena = v; Arena.setView(v, VIEW.quality ?? 'high'); save(); }));
-    k.row(s0, '画質（3D）', k.choice([['high', '高'], ['mid', '標準'], ['low', '軽い']], VIEW.quality ?? 'high', (v) => { VIEW.quality = v; Arena.setView(VIEW.arena ?? '3d', v); save(); }), '高: 光のにじみ・ピントのぼかし・周辺減光あり。標準: ぼかしなし・解像度を少し下げる。軽い: 後処理なし');
+    const s0 = k.section(pane, '練習場の表示', Arena.error3d() ? `この環境では 3D で表示できません（${Arena.error3d()}）。予備の真上の 2D で表示しています。` : '床と明かりを立体で描き、人物はドット絵の板で立たせます（カメラを回せます）。');
+    k.row(s0, '画質', k.choice([['high', '高'], ['mid', '標準'], ['low', '軽い']], VIEW.quality ?? 'high', (v) => { VIEW.quality = v; Arena.setView('3d', v); save(); }), '高: 光のにじみ・ピントのぼかし・周辺減光あり。標準: ぼかしなし・解像度を少し下げる。軽い: 後処理なし');
     k.row(s0, 'カメラ', k.button('北が上に戻す', () => Arena.camera.reset('north')), 'カメラの向き・角度・距離を初期に戻します');
     const s1 = k.section(pane, 'ゲームの画面', '舞台（1280 幅）をゲームの縦横比で作り、HUD の大きさをゲームの解像度に合わせて縮めます。');
     const w = k.number(VIEW.gameW, 640, 7680, (v) => { VIEW.gameW = v; save(); fit(); rebuild(); }, 80);
@@ -1703,6 +1744,7 @@
     if (!paused()) cameraInput(dt);
     Arena.update(run ? dt : 0, S.t, run ? S.phase : 'idle', paused() ? 0 : dt);
     if (run) step(Math.round(dt));
+    if (aiming) { if (!live()) cancelAim(); else updateAim(); }
     Arena.render(S.t, S.phase);
     render();
     requestAnimationFrame(loop);
@@ -1718,7 +1760,7 @@
   $('ptTankIcon').src = NPC.icon;
   $('ptTank').querySelector('.pt-name').lastChild.textContent = ROLE === 'tank' ? 'ヒーラー' : 'タンク';
   loadSaved();
-  Arena.init({ canvas: $('arena'), canvas3d: $('arena3d'), overlay: $('overlay'), view: VIEW.arena ?? '3d', quality: VIEW.quality ?? 'high' });
+  Arena.init({ canvas: $('arena'), canvas3d: $('arena3d'), overlay: $('overlay'), view: '3d', quality: VIEW.quality ?? 'high' }); // 表示は 3D だけ（2D は WebGL が使えないときの予備）
   reset();
   if (Arena.error3d()) addLog('sys', `3D で表示できないため 2D にしました（${Arena.error3d()}）`);
   buildStart();

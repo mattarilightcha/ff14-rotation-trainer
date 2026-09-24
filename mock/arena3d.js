@@ -197,6 +197,11 @@
         al = 0.05 + halo + ice * (1.0 - x * 0.4) + edge * (0.85 + 0.15 * sin(uTime * 1.6));
         al += uPulse * (1.0 - smoothstep(0.0, 0.16, abs(x - (1.0 - uPulse)))) * 0.35;
         col = mix(uC1, uC0, clamp(edge + ice, 0.0, 1.0));
+      } else if (uKind == 2) {
+        // 置く場所のターゲットサークル（流れる破線の縁・うっすらした内側・中心の点）
+        float dash = step(0.4, fract((a - uTime * 0.25) / 6.2832 * 40.0));
+        al = edge * (0.55 + 0.45 * dash) + 0.1 + (1.0 - smoothstep(0.0, 0.25, r)) * 0.8;
+        col = mix(uC1, uC0, edge);
       } else {
         float dash = step(0.5, fract((a + uTime * 0.05) / 6.2832 * 72.0));
         float base = (1.0 - smoothstep(0.0, 2.3, r)) * 0.32;
@@ -858,6 +863,13 @@
 
     const v3 = new T.Vector3(), camUp = new T.Vector3();
     // 画面の位置（舞台の px）。高さ z は、人物の板と同じく「カメラの上の向き」にとる（名前やフライテキストが、傾いた板の頭の上に来るように）
+    // 画面の位置 → 床（高さ 0）の位置
+    const ray = new T.Raycaster(), ndc = new T.Vector2(), floorPlane = new T.Plane(new T.Vector3(0, 1, 0), 0), hit = new T.Vector3();
+    function ground(px, py) {
+      ndc.set((px / W) * 2 - 1, 1 - (py / H) * 2);
+      ray.setFromCamera(ndc, camera);
+      return ray.ray.intersectPlane(floorPlane, hit) ? { x: hit.x, y: hit.z } : null;
+    }
     function project(x, y, z = 0) {
       camUp.setFromMatrixColumn(camera.matrixWorld, 1);
       v3.set(x, 0, y).addScaledVector(camUp, z).project(camera);
@@ -888,7 +900,7 @@
       flashLight.intensity = fl * 60;
       if (flp) { flashLight.position.set(flp.x, flp.z ?? 2, flp.y); flashLight.color.copy(flc); }
       const cg = S.castGlow;
-      castLight.intensity = cg ? 18 + 30 * Math.min(1, cg.t / cg.dur) : 0;
+      castLight.intensity = cg ? (18 + 30 * Math.min(1, cg.t / cg.dur)) * (cg.power ?? 1) : 0;
       if (cg) { castLight.color.copy(col(cg.col[1])); castLight.position.set(player.x, 1.2, player.y); }
       for (const g of glows) g.material.opacity = 0.5 + 0.08 * Math.sin(time * 7 + g.position.x) + 0.05 * Math.sin(time * 13.7 + g.position.z);
       const bf = PROPS[`brazier${Math.floor(time * 9) % 3}`];
@@ -901,7 +913,7 @@
       const tintAt = (x, y, out) => {
         out.copy(baseTint);
         if (fl > 0 && flp) { const k = fl * Math.max(0, 1 - Math.hypot(flp.x - x, flp.y - y) / 10) * 0.5; out.r += flc.r * k; out.g += flc.g * k; out.b += flc.b * k; }
-        if (cg) { const k = 0.35 * Math.min(1, cg.t / cg.dur) * Math.max(0, 1 - Math.hypot(player.x - x, player.y - y) / 6); const c = col(cg.col[1]); out.r += c.r * k; out.g += c.g * k; out.b += c.b * k; }
+        if (cg) { const k = 0.35 * (cg.power ?? 1) * Math.min(1, cg.t / cg.dur) * Math.max(0, 1 - Math.hypot(player.x - x, player.y - y) / 6); const c = col(cg.col[1]); out.r += c.r * k; out.g += c.g * k; out.b += c.b * k; }
         return out;
       };
       for (const kind of ['boss', 'tank', 'player']) {
@@ -989,6 +1001,12 @@
           place(bm, x * k, (y + Math.sin(S.clock * 2 + i * 1.3) * 0.06) * k, sc, sc, 0.5, 0.5, fade * a);
           bm.material.uniforms.uColor.value.setRGB(1.5, 1.65, 1.75); // ガラス玉は少し明るく（小さくても見えるように）
         });
+      }
+      if (S.aim) {
+        const am = zonePool.take(), au = am.material.uniforms, A2 = S.aim;
+        am.position.x = A2.x; am.position.z = A2.y; am.scale.set(A2.r * 2 + 1.8, A2.r * 2 + 1.8, 1);
+        au.uKind.value = 2; au.uC.value.set(A2.x, A2.y); au.uR.value = A2.r; au.uTime.value = time; au.uAlpha.value = 1; au.uPulse.value = 0;
+        au.uC0.value.copy(col(A2.ok ? '#f4fcff' : '#ffd0c8')); au.uC1.value.copy(col(A2.ok ? '#6ac8ff' : '#ff5a4a'));
       }
       zonePool.end(); domePool.end(); heartPool.end(); flowerPool.end(); bubblePool.end();
 
@@ -1080,7 +1098,7 @@
       if (cg) {
         const k = Math.min(1, cg.t / cg.dur);
         sigil.position.x = player.x; sigil.position.z = player.y; sigil.rotation.z = time * 0.9;
-        sigil.material.color.copy(col(cg.col[1])); sigil.material.opacity = 0.35 + 0.55 * k;
+        sigil.material.color.copy(col(cg.col[1])); sigil.material.opacity = (0.35 + 0.55 * k) * Math.min(1, (cg.power ?? 1) * 1.3);
         const sc = 1.15 - 0.25 * k; sigil.scale.set(sc, sc, 1);
       }
 
@@ -1132,7 +1150,7 @@
       }
     }).catch(() => {});
     return {
-      render, resize, project, setQuality, setStage: buildStage,
+      render, resize, project, ground, setQuality, setStage: buildStage,
       debug: () => ({ stage: STG.id, calls: renderer.info.render.calls, tris: renderer.info.render.triangles, quality, cam: camera.position.toArray().map((v) => +v.toFixed(2)) }),
     };
   }

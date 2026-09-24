@@ -60,6 +60,43 @@
     return id;
   }
 
+  // ---------------- 回復・バリア・軽減（説明文から。ナイト・白魔道士で共通）----------------
+  // 回復力 → 最大 HP の割合（仮 DESIGN-06）。回復力 500（ケアル）= 20%、800（ケアルラ）= 32%
+  const HEAL_K = 0.0004;
+  // 最大チャージ数（説明文「最大チャージ数：N」。シートの値は特性の前）
+  const descCharges = (A) => Object.fromEntries(Object.values(A).map((a) => [a.id, Number(/最大チャージ数：(\d+)/.exec(a.desc ?? '')?.[1] ?? 0)]).filter(([, n]) => n > 1));
+  // 効果時間: 語のあとで最初に出てくる「効果時間：N秒」
+  const secAfter = (d, i) => Number(/効果時間：(\d+)秒/.exec(d.slice(i))?.[1] ?? 10);
+  // 相手: 「自身と周囲」「範囲内」→ 全員、「自身の」→ 自分、それ以外（「対象の」）→ HP の低い方
+  function supportWho(d, i, party) {
+    const head = d.slice(Math.max(0, d.lastIndexOf('。', i) + 1), i + 1);
+    if (party || /自身と周囲|周囲のパーティメンバー|範囲内/.test(head)) return 'party';
+    if (/自身の/.test(head) && !/対象/.test(head)) return 'self';
+    return 'low';
+  }
+  // o.healUp: 回復量の倍率（テンパランスなど）、o.skipHot: 継続回復は別に扱う（アサイラム）
+  function support(R, a, o = {}) {
+    const d = a.desc ?? '', e = a.eff ?? {};
+    const up = o.healUp ?? 1;
+    if (e.heal != null) {
+      const i = d.search(/ＨＰを(全)?回復/);
+      R.heal(supportWho(d, i, e.party), e.heal === 'full' ? 1 : e.heal * HEAL_K * up);
+    }
+    if (e.hot && !o.skipHot) R.hot(supportWho(d, d.indexOf('継続回復'), e.party), e.hot.potency * HEAL_K * up, e.hot.sec);
+    // バリア:「回復力N相当のダメージを軽減」「最大ＨＰのN％分のダメージを軽減」
+    let m = /回復力(\d+)相当のダメージを軽減/.exec(d);
+    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) * HEAL_K * up, secAfter(d, m.index));
+    m = /最大ＨＰの(\d+)％分のダメージを軽減/.exec(d);
+    if (m) R.shield(supportWho(d, d.indexOf('バリア'), false), Number(m[1]) / 100, secAfter(d, m.index));
+    // 被ダメージ軽減（ステータスの付与はそのまま。練習場の被ダメージを減らす）
+    const re = /被ダメージを(\d+)％軽減/g;
+    let r;
+    while ((r = re.exec(d))) {
+      if (/効果：対象の被ダメージ/.test(d.slice(Math.max(0, r.index - 12), r.index + 4))) continue; // 別のステータスの説明（ナイトの堅守など）
+      R.mitigate(supportWho(d, r.index, false), Number(r[1]) / 100, secAfter(d, r.index));
+    }
+  }
+
   // ---------------- 侍 ----------------
   const SAM = {
     abbr: 'SAM',
@@ -306,7 +343,7 @@
       const CONF_CHAIN = new Set([ID.CONF, ID.FAITH, ID.TRUTH, ID.VALOR]);
       const J = {
         ids: ID, STATUS,
-        charges: {},
+        charges: descCharges(A),
         prepull: new Set([ID.IRONWILL]), // タンクのスタンスは戦闘前に入れる（自己バフのため仮で許可: GAME-30）
         comboStarters: new Set([ID.FAST, ID.TOTAL]),
         procStatus: { 36: 'atonement', 149: 'supplication', 150: 'sepulchre', 151: 'honorReady', 209: 'goringReady', 46: 'confiteorReady' },
@@ -335,6 +372,7 @@
             const st = S().st.requiescat; if (st.stacks > 1) st.stacks -= 1; else R.remove('requiescat'); // 仮（GAME-60）
           }
           if (id === ID.CIRCLE) R.buff('circleDot', (a.pot?.dot?.sec ?? 15) * 1000);
+          support(R, a); // ホーリースピリット・コンフィテオルの自分の回復、クレメンシー、ディヴァインヴェール、ホーリーシェルトロンなど
           // アイアンウィル「再使用で解除する。効果時間：永続」
           if (id === ID.IRONWILL) { if (has('ironWill')) R.remove('ironWill'); else R.buff('ironWill', 1e9); }
         },
@@ -345,6 +383,9 @@
           while (s.oathT >= 2500) { s.oathT -= 2500; gauges.オウス.set(s.oath + 5); } // 仮（GAME-61）
         },
         highlightOk: () => true,
+        // ホーリースピリット・ホーリーサークルは、神聖魔法効果アップかレクイエスカットの間光る（ゲーム内の表示。ActionProcStatus の指定は抽出データにない: GAME-65）
+        glow: (id) => (id === ID.HOLY || id === ID.HCIRCLE) && (has('divineMight') || has('requiescat')),
+        castPower: 0.55,
         guide: () => null,
         positional: () => null,
         fxColor: (id) => (CONF_CHAIN.has(id) || id === ID.HONOR || id === ID.IMPERATOR ? 'holy' : id === ID.HOLY || id === ID.HCIRCLE ? 'holy' : id === ID.GORING ? 'blood' : id === ID.FOF ? 'buff' : 'steel'),
@@ -380,7 +421,9 @@
     abbr: 'WHM',
     create(R) {
       const { A } = R;
-      const ID = { GLARE3: 25859, GLARE4: 37009, DIA: 16532, ASSIZE: 3571, POM: 136, MISERY: 16535, SOLACE: 16531, RAPTURE: 16534, SWIFT: 7561, HOLY3: 25860, THIN: 7430, TEMPERANCE: 16536, CARESS: 37011, LILYBELL: 25862, RAISE: 125, ASYLUM: 3569 };
+      const ID = { GLARE3: 25859, GLARE4: 37009, DIA: 16532, ASSIZE: 3571, POM: 136, MISERY: 16535, SOLACE: 16531, RAPTURE: 16534, SWIFT: 7561, HOLY3: 25860, THIN: 7430, TEMPERANCE: 16536, CARESS: 37011, LILYBELL: 25862, RAISE: 125, ASYLUM: 3569, CURE: 120, CURE2: 135, PLENARY: 7433 };
+      // インドゥルゲンティアの追加の回復が出る技（説明文「メディカ、ケアルガ、メディガ、ハート・オブ・ラプチャー」）
+      const PLENARY_HEALS = new Set([124, 131, 37010, 16534]);
       const STATUS = {
         pom: { name: '神速魔', tracked: true },
         glare4: { name: 'グレアジャ実行可', sid: 3879 },
@@ -390,6 +433,9 @@
         caressReady: { name: 'ディヴァインカレス実行可' },
         lilybell: { name: 'リタージー・オブ・ベル' },
         surecast: { name: '堅実魔' },
+        freecure: { name: '迅速ケアルラ' },
+        plenary: { name: 'インドゥルゲンティア' },
+        thinAir: { name: 'シンエアー' },
       };
       const S = () => R.S;
       const has = R.has;
@@ -398,7 +444,6 @@
         ブラッドリリー: { get: () => S().blood, set: (v) => { S().blood = Math.max(0, Math.min(3, v)); }, max: 3 },
       };
       const isSpell = (a) => a.category === 2;
-      const HEAL_K = 0.00025; // 回復力 1 = 最大 HP の 0.025%（仮 DESIGN-06）
       // リタージー・オブ・ベル（説明文）:「周囲20m以内」「回復力：400」「この効果は、発動後1秒間は再発動しない」「回復力：200×残りスタック数」
       const BELL = { r: 20, heal: 400, lockMs: 1000, burst: 200 };
       const Au = () => window.MockAudio;
@@ -413,10 +458,10 @@
       }
       const J = {
         ids: ID, STATUS,
-        charges: {},
+        charges: descCharges(A), // テトラグラマトン・ディヴァインベニゾン・シンエアー「最大チャージ数：2」
         prepull: new Set([ID.SWIFT]),
         comboStarters: new Set(),
-        procStatus: { 181: 'glare4', 182: 'caressReady' },
+        procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（迅速ケアルラの間光る）
         dot: { key: 'dia' },
         initState(s) { s.lily = 0; s.blood = 0; s.lilyT = 0; s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
         // リタージー・オブ・ベルの効果時間中の再使用（残りのスタックで回復して消える）は、リキャストを待たずに使える（説明文「効果時間中に再使用すると」）
@@ -444,17 +489,21 @@
           if (id === ID.SOLACE || id === ID.RAPTURE) { /* ブラッドリリーは説明文の付与で +1（ゲージ） */ }
           if (a.pot?.dot) R.buff('dia', a.pot.dot.sec * 1000);
           if (id === ID.RAISE) R.raise(); // レイズ: 倒れている相方を起こす（HP は仮で 50%）
-          // 回復（パーティ）
           const e = a.eff;
-          if (e?.heal != null) {
-            const frac = e.heal === 'full' ? 1 : e.heal * HEAL_K;
-            R.heal(e.party ? 'party' : 'low', frac);
-          }
+          // 回復・継続回復・バリア・軽減（説明文から）。テンパランス中は回復魔法の回復量 +20%（説明文）
+          const up = isSpell(a) && has('temperance') ? 1.2 : 1;
+          support(R, a, { healUp: up, skipHot: id === ID.ASYLUM });
+          if (PLENARY_HEALS.has(id) && has('plenary')) R.heal('party', 200 * HEAL_K * up); // インドゥルゲンティアの追加の回復「回復力：200」
+          if (id === ID.TEMPERANCE) R.buff('temperance', 20000);
+          if (id === ID.PLENARY) R.buff('plenary', 10000);
+          if (id === ID.THIN) R.buff('thinAir', 12000);
+          if (id === ID.CURE && Math.random() < 0.15) { R.buff('freecure', 15000); R.addLog('ok', '迅速ケアルラ（次のケアルラの消費 MP が 0）'); } // 発動確率15％
+          if (id === ID.CURE2) R.remove('freecure');
           if (id === ID.ASYLUM) {
             // アサイラム: 地面に回復の範囲を置く（範囲は抽出データの effectRange。3 秒ごとに中の味方を回復）
             R.zone('asylum', { r: a.effectRange || 15, sec: e.hot.sec, frac: e.hot.potency * HEAL_K });
             Au()?.water();
-          } else if (e?.hot) R.hot(e.party ? 'party' : 'low', e.hot.potency * HEAL_K, e.hot.sec);
+          }
           if (id === ID.LILYBELL) {
             // リタージー・オブ・ベル: 鐘を置く（ステータスの 5 スタックは説明文の付与で付いている）
             S().bell = S().st.lilybell?.stacks ?? 5; S().bellNext = 0;
@@ -490,7 +539,8 @@
         fxColor: (id) => (id === ID.MISERY ? 'blood' : id === ID.GLARE4 ? 'holy' : A[id]?.eff?.heal != null || A[id]?.eff?.hot ? 'heal' : id === ID.DIA ? 'water' : id === ID.ASSIZE ? 'holy' : 'holy'),
         fxPower: (id) => (id === ID.MISERY || id === ID.GLARE4 ? 1.4 : 1),
         fxCount: () => 1,
-        castColor: () => 'holy',
+        castColor: (id) => (A[id]?.eff?.heal != null ? 'heal' : 'holy'),
+        castPower: 0.35, // 詠唱の光（床の陣・光源）を控えめに（詠唱が多いジョブのため）
         gcdColor: (id) => (id === ID.GLARE3 ? '#dff4ff' : id === ID.GLARE4 ? '#fff0a8' : id === ID.DIA ? '#9ad8ff' : id === ID.MISERY ? '#ff7a8a' : A[id]?.eff?.heal != null ? '#8fe8a8' : null),
         hotOgcd: (id) => id === ID.ASSIZE,
         sfx(id, info, Au) {
