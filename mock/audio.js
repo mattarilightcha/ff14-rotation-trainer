@@ -101,6 +101,19 @@
     },
     // 使えない入力
     error() { if (!ensure()) return; const t = now(); tone(t, 'square', 196, 150, 0.08, 0.05); },
+    // 敵の範囲攻撃の予兆（低い警告音）と、自分の被弾（鈍い衝撃）
+    warn() {
+      if (!ensure()) return; const t = now();
+      tone(t, 'sawtooth', 220, 200, 0.12, 0.035);
+      tone(t + 0.16, 'sawtooth', 220, 200, 0.12, 0.035);
+    },
+    hurt() {
+      if (!ensure()) return; const t = now();
+      noise(t, 0.22, 'lowpass', 1800, 240, 0.7, 0.6);
+      tone(t, 'sine', 90, 38, 0.3, 0.8);
+    },
+    // ジャンプ・移動技（短い風音）
+    whoosh() { if (!ensure()) return; noise(now(), 0.18, 'bandpass', 800, 3200, 1.2, 0.28, 0.02); },
     setEnabled(v) { enabled = !!v; save(); if (enabled) ensure(); },
     isEnabled: () => enabled,
     setVolume(v) { volume = Math.max(0, Math.min(1, v)); if (master) master.gain.value = volume; save(); },

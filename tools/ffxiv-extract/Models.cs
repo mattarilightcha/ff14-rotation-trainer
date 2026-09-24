@@ -53,6 +53,8 @@ public class ActionOut
     public uint? ActionProcStatus { get; init; }
     /// <summary>ActionProcStatus の行が指すステータス（statuses.json の id）。このステータス中にアクションが光る。</summary>
     public uint? ActionProcStatusId { get; init; }
+    /// <summary>説明文の「」内の名前、またはアクション名と同じ名前のステータス（statuses.json の id）。同名の別ステータスを含むことがある。</summary>
+    public List<uint>? MentionedStatuses { get; set; }
     public sbyte Range { get; init; }
     public byte EffectRange { get; init; }
     public byte CastType { get; init; }

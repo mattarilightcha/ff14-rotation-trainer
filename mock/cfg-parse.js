@@ -62,7 +62,18 @@
     const text = new TextDecoder('latin1').decode(d);
     const re = /T[\s\S]\x00([A-Z0-9_]+)\x00C[\s\S]\x00([0-9A-Fa-f.,]*)\x00/g;
     const hotbar = {};
+    const move = {};
+    // 移動・ジャンプ（MOVE_FORE / MOVE_BACK / MOVE_LEFT / MOVE_RIGHT / MOVE_STRIFE_L / MOVE_STRIFE_R / JUMP）
+    const MOVE_CMDS = { MOVE_FORE: 'fore', MOVE_BACK: 'back', MOVE_LEFT: 'left', MOVE_RIGHT: 'right', MOVE_STRIFE_L: 'strafeL', MOVE_STRIFE_R: 'strafeR', JUMP: 'jump' };
     for (const m of text.matchAll(re)) {
+      if (MOVE_CMDS[m[1]]) {
+        const keys = m[2].split(',').filter(Boolean).map((p) => {
+          const [k, mod] = p.split('.').map((x) => parseInt(x, 16));
+          return k ? { code: vkToCode(k), vk: k, mod } : null;
+        }).filter((k) => k && k.code);
+        if (keys.length) move[MOVE_CMDS[m[1]]] = keys.map((k) => k.code);
+        continue;
+      }
       const hm = /^HOTBAR_(\d+)_([0-9AB])$/.exec(m[1]);
       if (!hm) continue;
       const bar = `hb${hm[1]}`, slot = SLOT_KEYS.indexOf(hm[2]);
@@ -76,7 +87,7 @@
       }).filter(Boolean);
       if (binds.length) (hotbar[bar] ??= Array(12).fill(null))[slot] = binds;
     }
-    return { hotbar };
+    return { hotbar, move };
   }
 
   // ---- ADDON.DAT（XOR なし。"ADDN" の後、32 バイトのレコード: 名前のハッシュ / X% / Y% / 倍率 / 識別 / 幅 / 高さ / 基準点と表示）----
@@ -119,7 +130,18 @@
     }
     // ホットバー以外の HUD 部品（どれが何かは未特定。位置と大きさだけ）
     const others = recs.filter((r) => r.index >= 437 && !Object.values(hotbars).some((h) => h.x === r.x && h.y === r.y));
-    return { hotbars, others, count: recs.length };
+    return { hotbars, others, records: recs, count: recs.length };
+  }
+
+  // ジョブゲージの配置: レコードの大きさ（w×h）が ULD の一番外側のノードの大きさと一致するものを探す（CONFIG_FORMAT §5.3）
+  // sizes: { JobHudSAM0: [330, 88], ... } → { JobHudSAM0: { x, y, scale, anchor, w, h }, ... }
+  function findGauges(records, sizes) {
+    const out = {};
+    for (const [name, [w, h]] of Object.entries(sizes)) {
+      const hits = records.filter((r) => r.w === w && r.h === h && r.scale > 0.2 && r.scale < 4 && r.anchor <= 8);
+      if (hits.length === 1) out[name] = { x: hits[0].x, y: hits[0].y, scale: hits[0].scale, anchor: hits[0].anchor, w, h };
+    }
+    return out;
   }
 
   // ---- FFXIV.cfg（テキスト。「キー<TAB>値」の行）----
@@ -134,7 +156,7 @@
       const m = /^\s*([A-Za-z0-9_]+)\t(.*)$/.exec(line);
       if (!m) continue;
       if (/^PadButton_/.test(m[1])) pad[m[1].slice(10)] = m[2].trim();
-      else if (/Screen|Scale|Width|Height/i.test(m[1]) && /^-?[0-9.]+$/.test(m[2].trim())) found[m[1]] = Number(m[2]);
+      else if (/Screen|Scale|Width|Height|DeadArea/i.test(m[1]) && /^-?[0-9.]+$/.test(m[2].trim())) found[m[1]] = Number(m[2]);
     }
     const mode = found.ScreenMode;
     const full = mode === 1 || mode === 2;
@@ -142,10 +164,10 @@
     const width = full ? pick('FullScreenWidth', 'ScreenWidth') : pick('ScreenWidth', 'FullScreenWidth');
     const height = full ? pick('FullScreenHeight', 'ScreenHeight') : pick('ScreenHeight', 'FullScreenHeight');
     const uiScale = UI_HIGH_SCALE[found.UiHighScale] ?? null;
-    return { width, height, mode, uiScale, uiHighScale: found.UiHighScale, uiBaseScale: found.UiBaseScale, pad, found };
+    return { width, height, mode, uiScale, uiHighScale: found.UiHighScale, uiBaseScale: found.UiBaseScale, deadArea: found.DeadArea ?? null, pad, found };
   }
 
-  const api = { parseHotbar, parseKeybind, parseAddon, parseCfg, vkToCode, BAR_NAMES, LAYOUTS };
+  const api = { parseHotbar, parseKeybind, parseAddon, findGauges, parseCfg, vkToCode, BAR_NAMES, LAYOUTS };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CfgParse = api;
 })(typeof window !== 'undefined' ? window : globalThis);

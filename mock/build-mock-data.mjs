@@ -14,6 +14,7 @@ const actions = read('src/data/ffxiv/actions.json');
 const statuses = read('src/data/ffxiv/statuses.json');
 const jobs = read('src/data/ffxiv/jobs.json');
 const meta = read('src/data/ffxiv/meta.json');
+const jobGauges = read('src/data/ffxiv/job-gauges.json');
 const CfgParse = createRequire(import.meta.url)('./cfg-parse.js');
 const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 
@@ -54,6 +55,33 @@ const hotbar = { job: parsedHotbar[JOB_SET] ?? {}, shared: parsedHotbar[0] ?? {}
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
 const addon = CfgParse.parseAddon(sample('ADDON.DAT'));
 const cfg = CfgParse.parseCfg(sample('FFXIV.cfg'));
+
+// ジョブゲージ（ui/uld/JobHud*.uld）: パーツの切り出し座標・ノードの配置と、参照しているテクスチャ（アトラスのまま）
+const gaugeNames = jobGauges.jobs[JOB] ?? [];
+const gaugeTex = new Set();
+const slimNode = ({ visible, ...n }) => n; // visible はゲーム側が実行時に切り替えるため使わない（ULD では全部 false）
+const gauge = {
+  names: gaugeNames,
+  layouts: Object.fromEntries(gaugeNames.map((name) => {
+    const L = jobGauges.layouts[name];
+    for (const pl of L.partLists) for (const p of pl.parts) if (p.texture) gaugeTex.add(p.texture);
+    return [name, {
+      partLists: L.partLists.map((pl) => ({ id: pl.id, parts: pl.parts.map(({ texture, u, v, w, h }) => ({ texture, u, v, w, h })) })),
+      components: L.components.filter((c) => c.nodes.length).map((c) => ({ id: c.id, type: c.type, nodes: c.nodes.map(slimNode) })),
+      nodes: L.nodes.map(slimNode),
+    }];
+  })),
+  textures: {},
+  // 一番外側のノードの大きさ（ADDON.DAT の配置レコードを見つけるのに使う）
+  sizes: Object.fromEntries(gaugeNames.map((name) => {
+    const r = jobGauges.layouts[name].nodes.find((n) => n.parent === 0);
+    return [name, [r.w, r.h]];
+  })),
+};
+for (const k of gaugeTex) {
+  const t = jobGauges.textures[k];
+  gauge.textures[k] = { path: `../public${t.path}`, w: t.width, h: t.height, scale: t.scale };
+}
 
 const bars = {};
 for (const bar of BAR_NAMES) {
@@ -115,22 +143,51 @@ const pick = (a) => ({
   range: a.range,
   crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
   category: a.category,
+  effectRange: a.effectRange, // 範囲の大きさ（m）。自分の周囲の範囲なら半径
+  // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から
+  positional: /背面攻撃時/.test(a.description.ja) ? 'rear' : /側面攻撃時/.test(a.description.ja) ? 'flank' : null,
+  // 移動を伴う技: 説明文「対象に急接近」「N m後方へ飛び退く」から
+  dash: /対象に急接近/.test(a.description.ja),
+  backstep: Number(/(\d+)m後方へ飛び退く/.exec(a.description.ja)?.[1] ?? 0),
 });
 
 const out = {
   gameVersion: meta.gameVersion.ffxiv,
   extractedAt: meta.extractedAt,
   job: { abbr: JOB, name: job.name.ja, icon: `../public${job.iconPath}`, level: LEVEL },
+  // 練習場のタンク役（見た目とパーティリストのみ。盾を持つナイトにしている）
+  tank: (() => { const t = jobs.find((j) => j.abbreviation.en === 'PLD'); return { abbr: 'PLD', name: t.name.ja, icon: `../public${t.iconPath}` }; })(),
   actions: Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))])),
   statuses: Object.fromEntries(
     statuses
       .filter((s) => [3856, 2959, 3855].includes(s.id))
       .map((s) => [s.id, { id: s.id, name: s.name.ja, icon: `../public${s.iconPath}` }]),
   ),
+  // ステータスのアイコンを名前で引く表（再抽出で風月・風花などが statuses.json に入れば自動で使われる）。
+  // 同じ名前が複数あるときは、このジョブのアクションが参照しているもの（mentionedStatuses など）を優先する
+  statusIcons: (() => {
+    const ref = new Set();
+    for (const a of actions) {
+      if (!a.jobs?.includes(JOB)) continue;
+      for (const v of [a.actionProcStatusId, a.statusGainSelf, ...(a.mentionedStatuses ?? [])]) if (v) ref.add(v);
+      // コストの値がステータスを指す型だけ（二次コスト 32・46、一次コスト 10。CONFIG と GAME_DATA §2 の調査より）
+      if (a.secondaryCost && [32, 46].includes(a.secondaryCost.type)) ref.add(a.secondaryCost.value);
+      if (a.primaryCost && a.primaryCost.type === 10) ref.add(a.primaryCost.value);
+    }
+    const out = {};
+    for (const st of statuses) {
+      if (!st.iconPath || !ref.has(st.id)) continue;
+      const name = st.name.ja;
+      if (!out[name] || (ref.has(st.id) && !out[name].ref)) out[name] = { icon: `../public${st.iconPath}`, id: st.id, ref: ref.has(st.id) };
+    }
+    return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, v.icon]));
+  })(),
   bars,
   keybind: keybind.hotbar,
-  hud: { hotbars: addon.hotbars },
-  display: { width: cfg.width, height: cfg.height, mode: cfg.mode, uiScale: cfg.uiScale, uiHighScale: cfg.uiHighScale, pad: cfg.pad },
+  move: keybind.move, // 移動・ジャンプのキー（KEYBIND.DAT）
+  hud: { hotbars: addon.hotbars, gauges: CfgParse.findGauges(addon.records, gauge.sizes) },
+  gauge,
+  display: { width: cfg.width, height: cfg.height, mode: cfg.mode, uiScale: cfg.uiScale, uiHighScale: cfg.uiHighScale, deadArea: cfg.deadArea, pad: cfg.pad },
   // ブラウザで別の設定ファイルを読み込んだときに使う: アクション ID → 名前・このジョブで使えるか・上位版
   known: Object.fromEntries(actions.filter((a) => a.isPlayerAction !== false).map((a) => [a.id, [a.name.ja, a.jobs?.includes(JOB) ? 1 : 0]])),
   upgrade,

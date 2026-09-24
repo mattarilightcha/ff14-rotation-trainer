@@ -1,6 +1,6 @@
 // UI モックを、サーバーにそのまま置ける 1 つのフォルダ（dist-mock/）にまとめる。
 // - mock-data.js を作り直し、アイコンの参照を ../public/icons/ → icons/ に書き換える
-// - 使っているアイコンだけをコピーする（全部だと 13MB あるため）
+// - 使っているアイコン・ジョブゲージのテクスチャだけをコピーする（全部だと 13MB あるため）
 // - 検索エンジンに載らないよう noindex を付ける（仮の公開のため）
 // 実行: node mock/package.mjs
 import { execFileSync } from 'node:child_process';
@@ -26,7 +26,7 @@ for (const rel of icons) {
 data = data.replaceAll('"../public/icons/', '"icons/');
 writeFileSync(join(out, 'mock-data.js'), data);
 
-for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'fx.js', 'audio.js', 'gamemode.js']) copyFileSync(join(root, 'mock', f), join(out, f));
+for (const f of ['mock.js', 'mock.css', 'cfg-parse.js', 'audio.js', 'gamemode.js', 'pixel.js', 'arena.js', 'uld.js', 'gauge.js', 'settings.js']) copyFileSync(join(root, 'mock', f), join(out, f));
 
 const commit = process.env.GITHUB_SHA?.slice(0, 7) ?? 'local';
 const html = readFileSync(join(root, 'mock/index.html'), 'utf8')

@@ -229,7 +229,33 @@ foreach (var id in included)
 
 // 二次コストの値が Status を指す型（32 など）のステータスも拾う
 foreach (var a in actions)
+{
     if (a.SecondaryCost is { Value: var v } && v != 0 && stEn.HasRow(v) && !stEn.GetRow(v).Name.IsEmpty) statusIds.Add(v);
+    // 一次コストの型 10 も値がステータスを指す（例: 返し五剣 → 燕返し実行可の一種）
+    if (a.PrimaryCost is { Type: 10, Value: var pv } && pv != 0 && stEn.HasRow(pv) && !stEn.GetRow(pv).Name.IsEmpty) statusIds.Add(pv);
+}
+
+// 説明文で「」に囲まれた名前、およびアクションと同じ名前のステータスも拾う（風月・風花・明鏡止水・彼岸花 など。DATA-01）
+// 名前だけで引くため、同名のステータス（PvP 用など）も混ざる。どれを使うかは利用側で決める
+var statusIdsByJaName = new Dictionary<string, List<uint>>();
+foreach (var st in stJa)
+{
+    if (st.Icon == 0) continue;
+    var n = st.Name.ExtractText();
+    if (string.IsNullOrEmpty(n)) continue;
+    if (!statusIdsByJaName.TryGetValue(n, out var list)) statusIdsByJaName[n] = list = [];
+    list.Add(st.RowId);
+}
+var quotedName = new System.Text.RegularExpressions.Regex("「([^」]+)」");
+foreach (var a in actions)
+{
+    if (a.Jobs.Count == 0) continue;
+    var names = quotedName.Matches(a.Description.Ja).Select(m => m.Groups[1].Value).Append(a.Name.Ja).Distinct();
+    var found = names.Where(statusIdsByJaName.ContainsKey).SelectMany(n => statusIdsByJaName[n]).Distinct().ToList();
+    if (found.Count == 0) continue;
+    a.MentionedStatuses = found;
+    foreach (var id in found) statusIds.Add(id);
+}
 
 // ---- ステータス ----
 var statuses = new List<StatusOut>();
