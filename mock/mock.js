@@ -519,7 +519,8 @@
   // ADDON.DAT のとおりにホットバーを置く（INPUT_HUD §6）。座標は画面に対する %、大きさは 1080 を基準とした px × 倍率
   const ANCHOR = (a) => [a % 3, Math.floor(a / 3)]; // 0 左上 1 上 2 右上 3 左 4 中央 5 右 6 左下 7 下 8 右下
   function buildHud(hud) {
-    const W = STAGE.w, H = STAGE.h, k = (H / 1080) * VIEW.hudScale;
+    // 大きさ: ゲーム画面の px（= 倍率 1 の大きさ × HUD の大きさ設定）を舞台の大きさに縮める
+    const W = STAGE.w, H = STAGE.h, k = (H / VIEW.gameH) * VIEW.uiScale * VIEW.hudScale;
     for (const [bar, h] of Object.entries(D.hud.hotbars)) {
       if (!h.visible || !D.bars[bar]) continue;
       const bw = h.w * h.scale * k, bh = h.h * h.scale * k;
@@ -738,8 +739,10 @@
 
   // ---------------- 設定ファイルの読み込み（INPUT_HUD §5）----------------
   // ファイルはブラウザの中だけで解析し、送信しない。保存するのは解析結果（アクション ID・キー・座標）だけ
-  const STORE = 'ff14rt:mock:v1';
-  const VIEW = { gameW: 1920, gameH: 1080, hudScale: 1, source: 'sample' };
+  const STORE = 'ff14rt:mock:v2';
+  const DISP = D.display ?? {};
+  const VIEW = { gameW: DISP.width ?? 1920, gameH: DISP.height ?? 1080, uiScale: DISP.uiScale ?? 1, hudScale: 1, source: 'sample' };
+  const SAMPLE_VIEW = { ...VIEW };
   const SAMPLE = { bars: D.bars, keybind: D.keybind, hud: D.hud };
   const save = () => {
     try { localStorage.setItem(STORE, JSON.stringify({ VIEW, imported: IMPORTED })); } catch { /* 保存できなくても動作は続ける */ }
@@ -804,8 +807,9 @@
           results.push(`ADDON.DAT ✓ ホットバー ${Object.keys(a.hotbars).length} 本の配置`);
         } else if (name === 'FFXIV.CFG') {
           const c = window.CfgParse.parseCfg(buf);
-          if (c.width && c.height) { VIEW.gameW = c.width; VIEW.gameH = c.height; results.push(`FFXIV.cfg ✓ 解像度 ${c.width}×${c.height}`); }
-          else results.push(`FFXIV.cfg ？ 解像度の項目が見つかりません（候補: ${Object.keys(c.found).join(', ') || 'なし'}）`);
+          if (c.width && c.height) { VIEW.gameW = c.width; VIEW.gameH = c.height; }
+          if (c.uiScale) VIEW.uiScale = c.uiScale;
+          results.push(c.width ? `FFXIV.cfg ✓ 解像度 ${c.width}×${c.height}（画面モード ${c.mode}）・HUD の大きさ ${c.uiScale ? c.uiScale * 100 + '%' : '不明'}` : `FFXIV.cfg ？ 解像度の項目が見つかりません`);
         } else {
           results.push(`${f.name} − 読みません（対象は HOTBAR.DAT / KEYBIND.DAT / ADDON.DAT / FFXIV.cfg）`);
         }
@@ -823,6 +827,7 @@
   function syncResInputs() {
     $('gameW').value = VIEW.gameW; $('gameH').value = VIEW.gameH;
     $('hudScale').value = VIEW.hudScale; $('hudScaleNum').textContent = `${Math.round(VIEW.hudScale * 100)}%`;
+    $('uiScale').value = String(VIEW.uiScale);
     $('importState').textContent = IMPORTED ? '読み込んだ設定を使用中' : 'サンプル（あなたの設定ファイル）を読み込み済みの状態';
   }
   function buildImport() {
@@ -831,7 +836,7 @@
     stage.addEventListener('dragover', (e) => e.preventDefault());
     stage.addEventListener('drop', (e) => { e.preventDefault(); importFiles([...e.dataTransfer.files]); });
     $('btnSample').addEventListener('click', () => {
-      IMPORTED = null; VIEW.source = 'sample';
+      IMPORTED = null; Object.assign(VIEW, SAMPLE_VIEW);
       applyData(); save(); syncResInputs(); setMode(mode);
       $('importResult').textContent = 'サンプルに戻しました';
     });
@@ -839,10 +844,11 @@
       const w = Number($('gameW').value), h = Number($('gameH').value);
       if (w >= 640 && h >= 360) { VIEW.gameW = w; VIEW.gameH = h; }
       VIEW.hudScale = Number($('hudScale').value);
+      VIEW.uiScale = Number($('uiScale').value);
       $('hudScaleNum').textContent = `${Math.round(VIEW.hudScale * 100)}%`;
       save(); fit(); rebuild();
     };
-    ['gameW', 'gameH', 'hudScale'].forEach((id) => $(id).addEventListener('input', onRes));
+    ['gameW', 'gameH', 'hudScale', 'uiScale'].forEach((id) => $(id).addEventListener('input', onRes));
     $('btnScreenRes').addEventListener('click', () => {
       VIEW.gameW = Math.round(screen.width * devicePixelRatio); VIEW.gameH = Math.round(screen.height * devicePixelRatio);
       syncResInputs(); save(); fit(); rebuild();

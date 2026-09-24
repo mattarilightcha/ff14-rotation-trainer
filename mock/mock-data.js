@@ -2745,6 +2745,29 @@ window.MOCK_DATA = {
    }
   }
  },
+ "display": {
+  "width": 3840,
+  "height": 2160,
+  "mode": 2,
+  "uiScale": 2,
+  "uiHighScale": 2,
+  "pad": {
+   "L2": "XHB_Left_Start",
+   "R2": "XHB_Right_Start",
+   "L1": "Autorun_Support",
+   "R1": "Hotbar_Set_Change",
+   "Triangle": "Jump",
+   "Circle": "Accept",
+   "Cross": "Cancel",
+   "Square": "Map_Sub",
+   "Select": "HUD_Select",
+   "Start": "MainCommand",
+   "LS": "Move_Operation",
+   "RS": "Camera_Operation",
+   "L3": "Lockon_and_Sword",
+   "R3": "Camera_Modechange"
+  }
+ },
  "known": {
   "9": [
    "ファストブレード",

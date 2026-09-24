@@ -123,20 +123,26 @@
   }
 
   // ---- FFXIV.cfg（テキスト。「キー<TAB>値」の行）----
-  // どのキーが画面の大きさかは未確認のため、候補を拾って返す（CONFIG_FORMAT §7）
+  // ScreenMode: 0 ウィンドウ / 1 フルスクリーン / 2 仮想フルスクリーン（推定）。フルスクリーン系は FullScreenWidth/Height を使う
+  // UiHighScale: HUD の大きさ（高解像度 UI）。0=100% 1=150% 2=200% 3=300% と推定（CONFIG_FORMAT §8）
+  const UI_HIGH_SCALE = { 0: 1, 1: 1.5, 2: 2, 3: 3 };
   function parseCfg(buf) {
     const text = new TextDecoder('utf-8').decode(u8(buf));
     const found = {};
+    const pad = {};
     for (const line of text.split(/\r?\n/)) {
-      const m = /^\s*([A-Za-z0-9_]+)\s+(-?[0-9.]+)\s*$/.exec(line);
-      if (m && /Screen|Resolution|Width|Height|Scale|Uhd|FullScreen|Window/i.test(m[1])) found[m[1]] = Number(m[2]);
+      const m = /^\s*([A-Za-z0-9_]+)\t(.*)$/.exec(line);
+      if (!m) continue;
+      if (/^PadButton_/.test(m[1])) pad[m[1].slice(10)] = m[2].trim();
+      else if (/Screen|Scale|Width|Height/i.test(m[1]) && /^-?[0-9.]+$/.test(m[2].trim())) found[m[1]] = Number(m[2]);
     }
-    const pick = (...keys) => keys.map((k) => found[k]).find((v) => v > 0);
     const mode = found.ScreenMode;
     const full = mode === 1 || mode === 2;
+    const pick = (...keys) => keys.map((k) => found[k]).find((v) => v > 0);
     const width = full ? pick('FullScreenWidth', 'ScreenWidth') : pick('ScreenWidth', 'FullScreenWidth');
     const height = full ? pick('FullScreenHeight', 'ScreenHeight') : pick('ScreenHeight', 'FullScreenHeight');
-    return { width, height, found };
+    const uiScale = UI_HIGH_SCALE[found.UiHighScale] ?? null;
+    return { width, height, mode, uiScale, uiHighScale: found.UiHighScale, uiBaseScale: found.UiBaseScale, pad, found };
   }
 
   const api = { parseHotbar, parseKeybind, parseAddon, parseCfg, vkToCode, BAR_NAMES, LAYOUTS };

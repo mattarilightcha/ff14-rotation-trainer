@@ -53,6 +53,7 @@ const parsedHotbar = CfgParse.parseHotbar(sample('HOTBAR.DAT'), [0, JOB_SET]);
 const hotbar = { job: parsedHotbar[JOB_SET] ?? {}, shared: parsedHotbar[0] ?? {} };
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
 const addon = CfgParse.parseAddon(sample('ADDON.DAT'));
+const cfg = CfgParse.parseCfg(sample('FFXIV.cfg'));
 
 const bars = {};
 for (const bar of BAR_NAMES) {
@@ -120,6 +121,7 @@ const out = {
   bars,
   keybind: keybind.hotbar,
   hud: { hotbars: addon.hotbars },
+  display: { width: cfg.width, height: cfg.height, mode: cfg.mode, uiScale: cfg.uiScale, uiHighScale: cfg.uiHighScale, pad: cfg.pad },
   // ブラウザで別の設定ファイルを読み込んだときに使う: アクション ID → 名前・このジョブで使えるか・上位版
   known: Object.fromEntries(actions.filter((a) => a.isPlayerAction !== false).map((a) => [a.id, [a.name.ja, a.jobs?.includes(JOB) ? 1 : 0]])),
   upgrade,
