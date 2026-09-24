@@ -1,7 +1,7 @@
 # SPEC — FF14 スキル回し練習アプリ 仕様書
 
 - 文書ステータス: Draft v0.1（設計のみ・未実装）
-- 関連文書: [STATE_MACHINE.md](./STATE_MACHINE.md) / [DATA_SCHEMA.md](./DATA_SCHEMA.md) / [TEST_PLAN.md](./TEST_PLAN.md) / [SCREENS.md](./SCREENS.md) / [DEV_PLAN.md](./DEV_PLAN.md)
+- 関連文書: [STATE_MACHINE.md](./STATE_MACHINE.md) / [DATA_SCHEMA.md](./DATA_SCHEMA.md) / [TEST_PLAN.md](./TEST_PLAN.md) / [SCREENS.md](./SCREENS.md) / [DEV_PLAN.md](./DEV_PLAN.md) / [DEPLOY.md](./DEPLOY.md)
 
 > **重要な方針**
 > 本書および関連文書では、ゲーム内のスキル名・リキャスト・効果時間・威力・ゲージ量などの**ゲーム仕様を推測で埋めない**。
@@ -46,13 +46,14 @@
 | 分類 | 採用 | 備考 |
 |------|------|------|
 | UI | React + TypeScript | 関数コンポーネント + hooks |
-| ビルド | Vite | GitHub Pages 用に `base: '/ff14-rotation-trainer/'` |
+| ビルド | Vite | 公開パスに合わせて `base` を環境変数 `VITE_BASE` で指定（既定案 `/tools/ff14-rotation-trainer/`） |
 | テスト | Vitest（+ @testing-library/react, jsdom） | エンジンは React 非依存の純粋 TS として単体テスト |
-| ルーティング | ハッシュルーティング（`#/...`） | GitHub Pages はサーバーサイドのリライト不可のため |
+| ルーティング | ハッシュルーティング（`#/...`） | サーバーのリライト設定が不要で、ブログ本体の URL 設定と衝突しないため |
 | 保存 | `localStorage` のみ | スキーマバージョン付き（[DATA_SCHEMA.md §6](./DATA_SCHEMA.md#6-localstorage-スキーマ)） |
-| 公開 | GitHub Pages（GitHub Actions でデプロイ） | |
+| 公開 | ブログ **nettoge.com** の VPS に静的ファイルとして設置。main へのマージで GitHub Actions が SSH + rsync でデプロイ | 詳細は [DEPLOY.md](./DEPLOY.md)。GitHub Pages は使わない |
 | アイコン | 文字 + CSS の仮アイコン | ゲーム画像は使用しない |
-| 外部通信 | なし | フォントも同梱またはシステムフォント |
+| 外部通信 | なし | フォントも同梱またはシステムフォント。広告・解析の扱いは TODO(DEPLOY-04) |
+| ブログとの関係 | 独立した HTML ページとして動作。記事からはリンク、または同一オリジンの iframe（`?embed=1`）で埋め込む | ブログの CSS/JS の影響を受けない |
 
 ### 3.1 権利表記
 
@@ -209,7 +210,7 @@
 | 時間精度 | 判定は仮想時計の整数 ms。`performance.now()` を使用 |
 | オフライン | 初回ロード後はネットワーク不要（外部リソースを読まない） |
 | アクセシビリティ | ボタンに `aria-label`、色だけに依存しない判定表示（記号併用）、`prefers-reduced-motion` 対応 |
-| 保存容量 | localStorage 合計 1MB 以内を目標。履歴は件数上限で古いものから削除 |
+| 保存容量 | localStorage 合計 1MB 以内を目標。履歴は件数上限で古いものから削除。ブログと同じオリジンのため、キーは `ff14rt:` 接頭辞のものだけを扱う |
 | データ分離 | ゲームデータは `src/data/` 以下の JSON / TS データファイルのみ。エンジン・UI コードにアクション名や数値を書かない（lint ルール or テストで検出） |
 
 ## 10. 未確認ゲーム仕様一覧（TODO）
@@ -260,6 +261,7 @@
 |----|------|------|
 | LEGAL-01 | 著作権・非公式表記の文面 | スクウェア・エニックスのガイドライン確認 |
 | DESIGN-01 | クリップ判定しきい値・点数換算テーブルの初期値 | ゲーム仕様ではなくアプリのポリシー |
+| DEPLOY-01〜05 | 公開パス・Web サーバー種別・SSH 制限・広告/解析・ステージング | [DEPLOY.md §8](./DEPLOY.md#8-未確定事項) |
 
 ## 11. 将来拡張（参考）
 

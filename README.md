@@ -14,6 +14,7 @@ FF14 のスキル回しをブラウザ上で練習するための Web アプリ�
 | [docs/TEST_PLAN.md](docs/TEST_PLAN.md) | テスト計画 |
 | [docs/SCREENS.md](docs/SCREENS.md) | 画面構成図（PC / スマートフォン） |
 | [docs/DEV_PLAN.md](docs/DEV_PLAN.md) | 小さな Pull Request に分けた開発計画 |
+| [docs/DEPLOY.md](docs/DEPLOY.md) | nettoge.com への設置（デプロイ方式・サーバー設定・ブログとの連携） |
 
 ## 最初の対象
 
@@ -22,7 +23,7 @@ FF14 のスキル回しをブラウザ上で練習するための Web アプリ�
 
 ## 技術構成（予定）
 
-React / TypeScript / Vite / Vitest。バックエンドなし（localStorage のみ）。GitHub Pages で公開。
+React / TypeScript / Vite / Vitest。バックエンドなし（localStorage のみ）。ブログ [nettoge.com](https://nettoge.com/) のサーバーに静的ファイルとして設置（[docs/DEPLOY.md](docs/DEPLOY.md)）。
 
 ## 注意
 

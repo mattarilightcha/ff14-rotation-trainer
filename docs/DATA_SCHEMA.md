@@ -347,11 +347,11 @@ type SharePayload =
 ### 5.3 URL 形式
 
 ```
-https://<owner>.github.io/ff14-rotation-trainer/#/share?d=<encoded>
+https://nettoge.com/tools/ff14-rotation-trainer/#/share?d=<encoded>     ※ パスは TODO(DEPLOY-01)
 ```
 
 - `encoded` = `z.` + base64url(deflate-raw(UTF-8 JSON))。`CompressionStream` 非対応環境では `j.` + base64url(JSON)。
-- ハッシュ部に置くため、共有内容はサーバーに送信されない（GitHub Pages のアクセスログにも残らない）。
+- ハッシュ部に置くため、共有内容はサーバーに送信されない（nettoge.com のアクセスログにも残らない）。
 - URL 長の目安: 設定のみ < 500 文字、リプレイ付き < 8,000 文字。超える場合は JSON ファイルでの共有を案内。
 
 ### 5.4 JSON ファイル形式
@@ -394,6 +394,7 @@ interface HistoryEntry {
 }
 ```
 
+- ブログ（nettoge.com）と同じオリジンで localStorage を共有するため、`ff14rt:` で始まるキー以外は読み書き・削除しない。「データを消去」も `ff14rt:` のキーだけを対象にする。
 - すべての読み書きは `storage.ts` 経由。`try/catch` で失敗（容量超過・プライベートモード）を握りつぶさずに UI へ通知し、アプリはメモリ上で動作継続。
 - 読み込み時に `zod` 検証。失敗したキーは `ff14rt:backup:<key>:<timestamp>` に退避して初期化。
 - `schemaVersion` が上がる場合は `migrations[from]` 関数で逐次移行する。
