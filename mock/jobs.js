@@ -65,6 +65,13 @@
   const HEAL_K = 0.0004;
   // 最大チャージ数（説明文「最大チャージ数：N」。シートの値は特性の前）
   const descCharges = (A) => Object.fromEntries(Object.values(A).map((a) => [a.id, Number(/最大チャージ数：(\d+)/.exec(a.desc ?? '')?.[1] ?? 0)]).filter(([, n]) => n > 1));
+  // MP の自然回復（ジョブ共通。利用者の調べ: The Balance の解説）: キャラクター側でいつも回っている 3 秒周期（actor tick）が来たときに、
+  // 戦闘中なら 200、戦闘外なら 600 回復する。周期は戦闘開始にそろわないので、最初の回復までの時間はプルごとに違う
+  // （練習では「敵の技の並び」の種から位相を決める。同じ種なら毎回同じ）
+  const MP_TICK = 3000;
+  const actorTickPhase = (R) => (((R.OPT.seed ?? 1) * 1237) % MP_TICK);
+  function mpTicks(s, dt) { s.mpTick += dt; let n = 0; while (s.mpTick >= MP_TICK) { s.mpTick -= MP_TICK; n++; } return n; }
+  const naturalMp = (s) => (s.phase === 'combat' ? 200 : 600);
   // 効果時間: 語のあとで最初に出てくる「効果時間：N秒」
   const secAfter = (d, i) => Number(/効果時間：(\d+)秒/.exec(d.slice(i))?.[1] ?? 10);
   // 相手: 「自身と周囲」「範囲内」→ 全員、「自身の」→ 自分、それ以外（「対象の」）→ HP の低い方
@@ -890,7 +897,7 @@
         comboStarters: new Set(),
         procStatus: {},
         dot: { key: 'thunderDot' },
-        initState(s) { s.mp = MP_MAX; s.af = 0; s.ub = 0; s.hearts = 0; s.poly = 0; s.polyT = 0; s.soul = 0; s.paradox = false; s.mpTick = 0; s.stats.polyOver = 0; s.stats.flareStar = 0; s.stats.f4 = 0; },
+        initState(s) { s.mp = MP_MAX; s.af = 0; s.ub = 0; s.hearts = 0; s.poly = 0; s.polyT = 0; s.soul = 0; s.paradox = false; s.mpTick = actorTickPhase(R); s.stats.polyOver = 0; s.stats.flareStar = 0; s.stats.f4 = 0; },
         // 黒魔紋は自分の足元に置く（地面を選ばない）
         instantNow: (id) => id === ID.LEY || id === ID.RETRACE || id === ID.BTL, // ラインズステップは黒魔紋の中心へ動くだけ（置く場所は選ばない）
         gaugeCols: [['MP', (s) => Math.floor(s.mp)], ['AF', (s) => s.af], ['UB', (s) => s.ub], ['ハート', (s) => s.hearts], ['ポリグロット', (s) => s.poly], ['ソウル', (s) => s.soul]],
@@ -978,12 +985,8 @@
           const s = S();
           if (!has('ley')) R.zoneEnd('ley');
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
-          // MP の回復（3 秒ごと。仮 GAME-68）
-          s.mpTick += dt;
-          while (s.mpTick >= 3000) {
-            s.mpTick -= 3000;
-            if (s.af <= 0) s.mp = Math.min(MP_MAX, s.mp + 200); // 仮（GAME-68）
-          }
+          // MP の自然回復（actor tick。アストラルファイア中は自然回復しない: 特性）
+          for (let n = mpTicks(s, dt); n > 0; n--) if (s.af <= 0) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s));
           // ポリグロット（AF / UB の間 30 秒ごと。仮 GAME-68）
           if (s.phase === 'combat' && (s.af > 0 || s.ub > 0)) {
             s.polyT += dt;
@@ -1252,9 +1255,10 @@
   //   エナジードレイン / サイフォン: エーテルフロー 2＋ルインジャ実行可（60 秒）。ミアズマノヴァ・ペインフレアでエーテルフローを 1 つ使う
   //   シアリングライト: 与ダメージ 5%（20 秒）＋シアリングスパーク実行可（30 秒）。サモン・ソルバハムート: ルクス・ソラリス実行可（30 秒）
   //   サモン・フェニックス: デミ・フェニックスが不死鳥の翼（周囲のパーティメンバーの HP を継続回復。回復力 100・21 秒）
-  // 仮（説明文に書き方がない: GAME-71）: 最初のデミ召喚はソルバハムート。デミの攻撃（ウィルムウェーブ・火焔・光芒）は自分の GCD ごとに 1 回。
-  //   エンキンドルの大技はすぐ当たる。デミが出ている間はエギを召喚できない。エギの姿は 4 秒で帰る。戦闘前にカーバンクルは召喚済み。
-  //   MP の自然回復（3 秒ごとに 200）、ルーシッドドリームは 3 秒ごとに 550。再生の炎の継続回復はすぐ始まる。スリップストリームの範囲は敵に当たり続ける
+  // 利用者の調べ（GAME-71）: Lv100 の開幕はソルバハムート（以後 バハムート → ソル → フェニックス → …）。デミの自動攻撃は 1.5 秒ごと（自分の GCD とは別）。
+  //   デミの顕現中はカーバンクルが帰るので、エギ（カーバンクルが存在することが条件）は召喚できない。MP は戦闘中 200・戦闘外 600（3 秒ごと）、ルーシッドドリームは 550 × 7 回。
+  // 前提: 戦闘前にカーバンクルを召喚済み（ゲームは自動で出さない）。
+  // 仮: デミの最初の攻撃は召喚の 1.5 秒後。エンキンドルの大技はすぐ当たる。エギの姿は 4 秒で帰る。再生の炎の継続回復はすぐ始まる。スリップストリームの範囲は敵に当たり続ける
   const SMN = {
     abbr: 'SMN',
     create(R) {
@@ -1296,6 +1300,9 @@
         phoenix: { summon: ID.PHOENIX, st: 'tranceP', atk: ID.SCARLET, enk: ID.ENK_P, flow: ID.REKINDLE, ruin: ID.FOUNTAIN, tri: ID.BRAND, name: 'デミ・フェニックス' },
         solar: { summon: ID.SOLAR, st: 'tranceS', atk: ID.LUXWAVE, enk: ID.ENK_S, flow: ID.SUNFLARE, ruin: ID.UIMPULSE, tri: ID.UFLARE, name: 'ソルバハムート' },
       };
+      // デミの自動攻撃の間隔（1.5 秒: 公式ジョブガイドの光芒・ウィルムウェーブ・火焔のリキャストタイム）。
+      // 召喚から最初の攻撃までの時間は未検証のため仮で 1.5 秒（GAME-71）。15 秒で何発当たるかもこの仮に左右される
+      const DEMI_ATK_MS = 1500, DEMI_FIRST_MS = 1500;
       const DEMI_OF = Object.fromEntries(Object.entries(DEMI).map(([k, v]) => [v.summon, k]));
       // エギ: ボタン → 神秘・エーテル（スタック数）・実行可
       const PRIMAL = {
@@ -1320,7 +1327,8 @@
         dot: { key: 'slip' },
         ownDots: true, // スリップストリームの範囲は自分で持つ
         initState(s) {
-          s.mp = MP_MAX; s.mpTick = 0; s.flow = 0; s.carby = true; s.demi = null; s.nextDemi = 'solar'; s.lastDemi = null;
+          // カーバンクル: ゲームは自動で出さない。練習は「戦闘前に召喚済み」を前提にする（GAME-71）
+          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.flow = 0; s.carby = true; s.demi = null; s.nextDemi = 'solar'; s.lastDemi = null;
           s.favor = { ruby: false, topaz: false, emerald: false }; s.att = null; s.dots = {};
           s.stats.flowLost = 0; s.stats.demis = 0; s.stats.primals = 0; s.stats.attLost = 0; s.stats.favorLost = 0; s.stats.demiHits = 0;
         },
@@ -1380,7 +1388,7 @@
             clearReadies();
             for (const f of Object.keys(s.favor)) if (s.favor[f]) s.stats.favorLost++;
             s.favor = { ruby: true, topaz: true, emerald: true };
-            s.demi = { kind: k, until: s.t + 15000 }; s.lastDemi = k; s.stats.demis++;
+            s.demi = { kind: k, until: s.t + 15000, nextAtk: s.t + DEMI_FIRST_MS }; s.lastDemi = k; s.stats.demis++;
             R.buff(dm.st, 15000);
             if (k === 'solar') { s.nextDemi = s.lastNonSolar === 'bahamut' ? 'phoenix' : 'bahamut'; R.buff('lux', 30000); } else { s.lastNonSolar = k; s.nextDemi = 'solar'; }
             if (k === 'phoenix') R.hot('party', A[ID.EFLIGHT]?.eff?.hot ? A[ID.EFLIGHT].eff.hot.potency * HEAL_K : 100 * HEAL_K, A[ID.EFLIGHT]?.eff?.hot?.sec ?? 21, '不死鳥の翼');
@@ -1428,9 +1436,6 @@
           if (id === ID.SWIFT) R.buff('swift', 10000);
           if (id === ID.LUCID) R.buff('lucid', 21000);
           if (id === ID.RESURRECT && R.npcDown()) R.raise();
-          // デミの攻撃: 自分の GCD ごとに 1 回（仮 GAME-71）
-          const d = demiOn();
-          if (d && a.isGcd && !DEMI_OF[id]) { const atk = A[DEMI[d.kind].atk]; if (atk?.pot?.base) { R.hit(atk.pot.base, atk.name); s.stats.demiHits++; R.pet('act'); } }
         },
         tick(dt) {
           const s = S();
@@ -1448,9 +1453,17 @@
             if (dd.until < s.t) delete s.dots[k];
           }
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
-          // MP の回復（3 秒ごと。仮 GAME-71）
-          s.mpTick += dt;
-          while (s.mpTick >= 3000) { s.mpTick -= 3000; s.mp = Math.min(MP_MAX, s.mp + 200 + (has('lucid') ? 550 : 0)); }
+          // MP の自然回復（actor tick）と、ルーシッドドリーム（同じ周期で 550。21 秒で 7 回 = 3850）
+          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          // デミの自動攻撃（ウィルムウェーブ・火焔・光芒）: デミ自身の 1.5 秒ごと。自分の GCD とは別（利用者の調べ: 公式ジョブガイド）
+          const dm = demiOn();
+          if (dm && s.phase === 'combat') {
+            while (dm.nextAtk <= s.t && dm.nextAtk < dm.until) {
+              dm.nextAtk += DEMI_ATK_MS;
+              const atk = A[DEMI[dm.kind].atk];
+              if (atk?.pot?.base) { R.hit(atk.pot.base, atk.name); s.stats.demiHits++; R.pet('act'); }
+            }
+          }
         },
         highlightOk: () => true,
         glow(id) {
