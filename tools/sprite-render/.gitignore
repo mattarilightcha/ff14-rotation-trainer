@@ -1,0 +1,5 @@
+venv/
+models/
+out/
+characters.json
+__pycache__/
