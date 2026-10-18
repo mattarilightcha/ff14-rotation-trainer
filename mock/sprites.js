@@ -46,9 +46,14 @@
     navy: ['#8ea0cc', '#4e6092', '#34426c', '#232d4c', '#151b30'], // ガンブレイカーの紺のコート
     bloodGlow: ['#ffffff', '#ffc4bc', '#ff5a4c', '#d0222c', '#6e1018'], // 暗黒騎士の兜の目・剣の筋（赤く光る）
     shade: ['#e6ccff', '#9c6cdc', '#6040a4', '#3c226c', '#200f40'], // 暗黒騎士の影身（紫に光る影）
+    schRobe: ['#8eb4d8', '#4a74a8', '#33568a', '#223c64', '#14243e'], // 学者の紺のコート
+    fey: ['#ffffff', '#f6ffe0', '#dcf8a8', '#a8d870', '#5e9038'], // 学者のフェアリー（エオス）の黄緑に光る体
+    feyWing: ['#f4fff0', '#c8f4c0', '#8edc9a', '#58b07a', '#2e6c50'], // エオスの蝶の翅
+    seraph: ['#ffffff', '#eef6ff', '#c4dcf8', '#86aee0', '#44609e'], // セラフィムの白い体
+    seraphWing: ['#ffffff', '#d8ecff', '#94c4f4', '#4a86d8', '#1e4a9c'], // セラフィムの青い羽根
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -835,6 +840,7 @@
     blm: { robe: 'blmRobe', trim: 'gold', head: 'hat', item: 'staff', orb: 'fire' },
     brd: { robe: 'brdCoat', trim: 'gold', head: 'cap', item: 'bow', orb: 'smear' },
     smn: { robe: 'smnRobe', trim: 'gold', head: 'hair', item: 'book', orb: 'demi' },
+    sch: { robe: 'schRobe', trim: 'gold', head: 'board', item: 'book', orb: 'fey', noCirclet: true }, // board: 角帽
   };
   // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
   function robeArm(F, s, h, bend, o = {}, st = ROBE_STYLE.whm) {
@@ -887,6 +893,19 @@
     hairSide(F, ux, hy, sy, tail, { ...st, noCirclet: true });
     F.fill('leather', (m) => { m.ellipse(ux + 0.5, hy - 3.5, 7.4, 2); m.ellipse(ux, hy - 5.5, 4.8, 3.2); }, { k: 1.4 });
     F.fill('feather', (m) => m.poly([ux - 2, hy - 6, ux, hy - 7.5, ux - 9 - tail, hy - 11, ux - 8 - tail, hy - 8]), { k: 1.3 });
+  }
+  // 学者: 髪の上に角帽（平らな四角い板と金の房）
+  function boardFB(F, cx, hy, sy, back, tail, st) {
+    hairFB(F, cx, hy, sy, back, tail, st);
+    F.fill('black', (m) => m.ellipse(cx, hy - 3.4, 6, 2.6), { k: 1.4 });
+    F.fill('black', (m) => m.poly([cx - 9, hy - 5.8, cx, hy - 8.4, cx + 9, hy - 5.8, cx, hy - 3.6]), { k: 1.3 });
+    F.fill('gold', (m) => { m.ellipse(cx, hy - 6, 0.9, 0.7); m.capsule(cx, hy - 6, cx + 6 + tail * 0.3, hy - 5.2, 0.4); m.capsule(cx + 6 + tail * 0.3, hy - 5.2, cx + 6.6 + tail * 0.6, hy - 1.4, 0.4, 0.7); }, { k: 1.2 });
+  }
+  function boardSide(F, ux, hy, sy, tail, st) {
+    hairSide(F, ux, hy, sy, tail, st);
+    F.fill('black', (m) => m.ellipse(ux, hy - 3.4, 5.6, 2.4), { k: 1.4 });
+    F.fill('black', (m) => m.poly([ux - 8.5, hy - 5.6, ux + 8, hy - 6.4, ux + 8, hy - 5, ux - 8.5, hy - 4.4]), { k: 1.3 });
+    F.fill('gold', (m) => m.capsule(ux - 8, hy - 5, ux - 8.6 - tail * 0.5, hy - 1.2, 0.4, 0.7), { k: 1.2 });
   }
   // 占星術師: 顔を出し、髪（後ろで結ぶ）と金の額飾り（中央に小さな星）。襟は服の色
   function hairFB(F, cx, hy, sy, back, tail, st) {
@@ -990,6 +1009,7 @@
     if (st.head === 'hat') hatFB(F, cx, hy, sy, back, tail, st);
     else if (st.head === 'cap') capFB(F, cx, hy, sy, back, tail, st);
     else if (st.head === 'hair') hairFB(F, cx, hy, sy, back, tail, st);
+    else if (st.head === 'board') boardFB(F, cx, hy, sy, back, tail, st);
     else {
       // フード（頭の後ろと肩に掛かる部分。先が少しとがる）
       F.fill(st.robe, (m) => {
@@ -1063,6 +1083,7 @@
     if (st.head === 'hat') hatSide(F, ux, hy, sy, tail, st);
     else if (st.head === 'cap') capSide(F, ux, hy, sy, tail, st);
     else if (st.head === 'hair') hairSide(F, ux, hy, sy, tail, st);
+    else if (st.head === 'board') boardSide(F, ux, hy, sy, tail, st);
     else {
       // 頭（横顔）とフード
       F.fill(st.robe, (m) => {
@@ -1216,6 +1237,55 @@
       else { m.poly([hx - 3, hy - 3, hx - 1, hy - 4, hx - 8, hy - 15]); m.poly([hx + 3, hy - 3, hx + 1, hy - 4, hx + 8, hy - 15]); m.poly([hx - 1, hy - 4, hx + 1, hy - 4, hx, hy - 13]); }
     }, { k: 1.3 });
     if (!back) F.fill(kind === 'bahamut' ? 'demi' : kind === 'phoenix' ? 'glow' : 'star', (m) => { if (side) m.ellipse(hx + 3, hy, 1, 0.8); else { m.ellipse(hx - 2, hy, 1, 0.8); m.ellipse(hx + 2, hy, 1, 0.8); } }, { flat: true, line: false, k: 1 });
+  }
+  // 学者のフェアリー（エオス）とセラフィム（64×64、足元 y=59。体は小さく、浮かぶ高さは練習場の z）
+  // エオス: 黄緑に光る小さな体と、蝶の翅（上下 2 枚ずつ）。セラフィム: 白い体と、青い羽根の大きな翼（体はエオスの 1.55 倍）
+  function fairy(F, p, view, kind) {
+    const ser = kind === 'seraph', side = view === 'right', back = view === 'up';
+    const b = p.bob ?? 0, w = p.wing ?? 0.5, g = p.glow ?? 0, cx = 32, k = ser ? 1.55 : 1;
+    const by = 49 - b - (ser ? 5 : 0); // 胴の中心
+    const body = ser ? 'seraph' : 'fey', wingM = ser ? 'seraphWing' : 'feyWing';
+    const wings = () => {
+      for (const s of side ? [-1] : [-1, 1]) {
+        const sx = cx + (side ? -1 : s * 1.2), sy = by - 3 * k;
+        if (ser) {
+          // 羽根の翼: 肩から外へ上がり、先から下へ羽根が並ぶ
+          const span = (side ? 9 : 13) * k * (0.85 + w * 0.2), lift = (4 + w * 4) * k;
+          F.fill(wingM, (m) => {
+            m.poly([sx, sy, sx + s * span * 0.55, sy - lift, sx + s * span, sy - lift * 0.55, sx + s * span * 0.92, sy - lift * 0.05, sx + s * span * 0.2, sy + 2 * k]);
+            // 下へ垂れる羽根の先（4 枚）
+            for (const [f, l] of [[0.32, 3.2], [0.52, 4.4], [0.72, 4], [0.9, 2.6]]) m.capsule(sx + s * span * (f - 0.1), sy - lift * 0.2, sx + s * span * f, sy + l * k, 1.3 * k, 0.7 * k);
+          }, { k: 1.2 });
+          const wl = F.last;
+          F.deco(wingM, 3, (m) => { for (const f of [0.42, 0.62, 0.81]) m.line(sx + s * span * (f - 0.06), sy - lift * 0.15, sx + s * span * (f + 0.02), sy + 3 * k); }, { only: wl });
+          F.deco(wingM, 0, (m) => m.line(sx + s * 1.5, sy - 0.5, sx + s * span * 0.55, sy - lift + 1), { only: wl });
+        } else {
+          // 蝶の翅: 上の大きな翅と、下の小さな翅
+          const span = (side ? 5 : 7) * k, up = (3.5 + w * 2.5) * k;
+          F.fill(wingM, (m) => { m.ellipse(sx + s * span * 0.8, sy - up * 0.7, span * 0.75, up); m.ellipse(sx + s * span * 0.6, sy + 3 * k, span * 0.5, 2.6 * k); }, { k: 1.1 });
+          const wl = F.last;
+          F.deco(wingM, 1, (m) => m.ellipse(sx + s * span * 0.85, sy - up * 0.8, span * 0.32, up * 0.45), { only: wl });
+        }
+      }
+    };
+    if (!back) wings();
+    // 脚（ドレスの下で後ろへ流れる）
+    F.fill(body, (m) => m.capsule(cx - 0.6, by + 3 * k, cx - (side ? 3.4 : 1.6), by + 7.5 * k, 0.8 * k, 0.5 * k), { k: 1.2, dark: 1 });
+    if (!side) F.fill(body, (m) => m.capsule(cx + 0.6, by + 3 * k, cx + 1.8, by + 7 * k, 0.8 * k, 0.5 * k), { k: 1.2 });
+    // ドレスと腕（技を使うと腕を上げる）
+    F.fill(body, (m) => m.poly([cx - 1.6 * k, by - 3.5 * k, cx + 1.6 * k, by - 3.5 * k, cx + (side ? 2.4 : 3) * k, by + 3.5 * k, cx - (side ? 3.2 : 3) * k, by + 3.5 * k]), { k: 1.4 });
+    for (const s of side ? [1] : [-1, 1]) F.fill(body, (m) => m.capsule(cx + s * 1.5 * k, by - 2.8 * k, cx + s * (2.8 + g * 0.6) * k, by + (0.6 - g * 2.4) * k, 0.6 * k, 0.5 * k), { k: 1.2 });
+    // 頭と髪
+    const hx = cx + (side ? 0.8 : 0), hy = by - 6 * k;
+    F.fill(body, (m) => {
+      m.ellipse(hx, hy, 2.4 * k, 2.4 * k);
+      if (side) m.poly([hx - 1.5 * k, hy, hx - 4 * k - w, hy + 3 * k, hx - 2 * k, hy + 1.5 * k]);
+      else m.poly([hx - 2.2 * k, hy, hx + 2.2 * k, hy, hx + 1.2 * k, hy + 3.6 * k, hx - 1.2 * k, hy + 3.6 * k]);
+    }, { k: 1.4, dark: 1 });
+    if (!back) F.fill('skin', (m) => m.ellipse(hx + (side ? 1 : 0), hy + 0.7 * k, (side ? 1.3 : 1.6) * k, 1.6 * k), { k: 1.3 });
+    if (back) wings();
+    // まわりの光の粒
+    F.fill('star', (m) => { m.ellipse(cx - 5 * k, by + 4 + Math.sin(g * 3 + w) * 2, 0.7, 0.7); m.ellipse(cx + 6 * k, by - 2 - Math.cos(g * 3 + w) * 2, 0.6, 0.6); }, { flat: true, line: false, k: 1 });
   }
   const PET_ANIMS = {
     idle: { fps: 5, loop: true, poses: [{ bob: 0, wing: 0.2, tail: 0 }, { bob: 1, wing: 0.5, tail: 1, glow: 0.3 }, { bob: 2, wing: 0.9, tail: 1.5, glow: 0.6 }, { bob: 1, wing: 0.5, tail: 1, glow: 0.3 }] },
@@ -1539,6 +1609,7 @@
     brd: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
     blm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
     smn: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
+    sch: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.sch) : whmFB(F, p, v === 'up', ROBE_STYLE.sch)), anims: WHM_ANIMS }),
     // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
     pet_carbuncle: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
     pet_ifrit: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),
@@ -1546,6 +1617,8 @@
     pet_garuda: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: garuda, anims: PET_ANIMS }),
     pet_bahamut: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'bahamut'), anims: PET_ANIMS }),
     pet_phoenix: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'phoenix'), anims: PET_ANIMS }),
+    pet_eos: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'eos'), anims: PET_ANIMS }),
+    pet_seraph: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'seraph'), anims: PET_ANIMS }),
     pet_shadow: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.shadow) : tankFB(F, p, v === 'up', TANK_STYLE.shadow)), anims: SHADOW_ANIMS }),
     pet_solar: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
     boss: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),

@@ -80,10 +80,12 @@
   let zones = [], simNow = 0;
   // 召喚士のペット: base（いつもいる: カーバンクル）と temp（しばらく出る: エギ・デミ召喚）。kind は今見えているもの
   const pet = { kind: null, base: null, temp: null, until: 0, x: 0, y: 0, z: 0, face: 0, born: 0, act: -1 };
+  // 戦闘前から出ているペット（練習では召喚済みとする: 召喚士のカーバンクル GAME-71・学者のフェアリー GAME-75）
+  const PET_BASE = { SMN: 'carbuncle', SCH: 'eos' };
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -179,7 +181,7 @@
     Object.assign(tank, { angle: TANK_ANGLE, walkT: 0, moving: false, hitT: 1.4, flash: 0, hp: 1, hurt: 0, wanderT: 0, hits: 0, deaths: 0, down: 0, act: null });
     rndTank = window.MockPixel.rng((opts.seed ?? 1) * 7919 + 13);
     hots = []; zones = []; target = 'boss';
-    Object.assign(pet, { base: opts.job === 'SMN' ? 'carbuncle' : null, temp: null, until: 0, born: -9, act: -1 });
+    Object.assign(pet, { base: PET_BASE[opts.job] ?? null, temp: null, until: 0, born: -9, act: -1 });
     pet.kind = pet.base; if (pet.kind) { const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z; }
     for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; e.marks = []; }
     placeTank(true);
@@ -570,6 +572,7 @@
   function soak(e, frac) {
     e.mits = (e.mits ?? []).filter((m) => m.until > clock);
     for (const m of e.mits) frac *= 1 - m.pct;
+    for (const z of zones) if (z.mit > 0 && !z.dying && Math.hypot(e.x - z.x, e.y - z.y) <= z.r) frac *= 1 - z.mit; // 野戦治療の陣の中
     if (e.shield > 0 && e.shieldUntil > clock) {
       const used = Math.min(e.shield, frac);
       e.shield -= used; frac -= used;
@@ -662,7 +665,7 @@
     // o.at: クリックで選んだ場所（なければ自動: パッドなど）
     // o.ring: 床の色付きの輪だけの範囲（暗黒騎士のソルトアースなど。o.col の 2 色で描き、時間が来たら消える）、o.self: 自分の足元に置く
     const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : kind === 'ley' || o.self ? { x: player.x, y: player.y } : zonePlace(r);
-    const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [], ring: !!o.ring, col: o.col ?? null };
+    const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, mit: o.mit ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [], ring: !!o.ring, col: o.col ?? null };
     zones.push(z);
     const col = z.col ?? (kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : kind === 'ley' ? COLORS.getsu : COLORS.dome);
     fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col, t: 0, dur: 750, r0: 0.5, r1: kind === 'bell' ? 4 : r, thick: true });
@@ -729,8 +732,8 @@
   function updateZones(simT, live, vdt) {
     for (const z of zones) {
       if (z.dying) continue;
-      if (z.kind === 'asylum') {
-        while (live && z.next <= simT && z.next <= z.until) { z.next += 3000; zoneHeal('asylum', z.frac, 'tick'); }
+      if (z.kind === 'asylum' || (z.ring && z.frac > 0)) {
+        while (live && z.next <= simT && z.next <= z.until) { z.next += 3000; zoneHeal(z.kind, z.frac, 'tick'); }
         if (simT >= z.until) { z.dying = true; z.endAt = clock; continue; }
       }
       if (z.ring && simT >= z.until) { z.dying = true; z.endAt = clock; continue; }
@@ -873,6 +876,8 @@
   function petGoal() {
     const k = pet.temp ?? pet.base;
     if (DEMIS.has(k)) { const a = player.face + Math.PI * 0.75; return { x: player.x + Math.cos(a) * 2, y: player.y + Math.sin(a) * 2, z: 2.3 + Math.sin(clock * 1.6) * 0.15 }; } // 自分の右後ろの上空
+    // 学者のフェアリー（エオス）・セラフィム: 自分の左後ろの肩のあたりに浮かび、ゆっくり上下する
+    if (k === 'eos' || k === 'seraph') { const a = player.face - Math.PI * 0.72; return { x: player.x + Math.cos(a) * 1.3, y: player.y + Math.sin(a) * 1.3, z: (k === 'seraph' ? 1.1 : 1.2) + Math.sin(clock * 2.1) * 0.12 }; }
     if (k === 'ifrit' || k === 'titan' || k === 'garuda' || k === 'shadow') {
       const d = dist(player, boss) || 1, ux = (boss.x - player.x) / d, uy = (boss.y - player.y) / d, f = Math.min(2.4, d * 0.5);
       return { x: player.x + ux * f - uy * 1.2, y: player.y + uy * f + ux * 1.2, z: k === 'garuda' ? 0.7 : 0 };
@@ -889,7 +894,7 @@
       pet.kind = k; pet.born = clock; pet.act = clock;
       const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z;
       if (k) {
-        const c = k === 'ifrit' || k === 'phoenix' ? '#ff9a52' : k === 'titan' ? '#ffd84a' : k === 'garuda' ? '#c8f070' : k === 'solar' ? '#eef4ff' : k === 'shadow' ? '#b07aff' : '#8ae8ff';
+        const c = k === 'ifrit' || k === 'phoenix' ? '#ff9a52' : k === 'titan' ? '#ffd84a' : k === 'garuda' ? '#c8f070' : k === 'solar' ? '#eef4ff' : k === 'shadow' ? '#b07aff' : k === 'eos' ? '#d8ff9a' : k === 'seraph' ? '#bfe4ff' : '#8ae8ff';
         fx.push({ type: 'flash', at: { x: pet.x, y: pet.y, z: pet.z + 1 }, col: [c, c], t: 0, dur: 500, power: DEMIS.has(k) ? 1.6 : 1 });
         for (let i = 0; i < 24; i++) { const a = rand(0, Math.PI * 2), r = rand(0.2, 1.6); spark({ x: pet.x + Math.cos(a) * r, y: pet.y + Math.sin(a) * r, z: rand(0, 1.5) + pet.z, vz: rand(0.6, 2), g: 0, drag: 0.8, life: rand(0.5, 1), max: 1, col: c, size: 1, shape: 2, rot: rand(0, 6.28), spin: rand(-3, 3) }); }
       }
@@ -1488,10 +1493,13 @@
     pickAt: (px, py) => (view3d() ? R3.pick(px, py) : null),
     screenOf: (k) => { const e = { player, tank, boss }[k]; return project(e.x, e.y, HEAD[k] * 0.25); }, // 動作確認用: 人物の腰の画面位置（舞台の px）
     distTo: (k) => (k === 'tank' ? dist(player, tank) : k === 'boss' ? Math.max(0, dist(player, boss) - POL.hitbox) : 0),
-    heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
+    heal: (who, frac, quiet) => healNow(who, frac, quiet), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
+    unmark: (who, name) => { for (const e of partyOf(who)) if (e) e.marks = (e.marks ?? []).filter((m) => m.name !== name); },
     // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
     // バリアの残り（最大 HP に対する割合）。'self' / 'npc'
     shieldLeft: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? e.shield : 0; },
+    // バリアの中身（学者の展開戦術: 鼓舞を広げる）。frac 量・left 残り秒・name 名前
+    shieldOf: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? { frac: e.shield, left: e.shieldUntil - clock, name: e.shieldName } : null; },
     zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
     inZone: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(player.x - z.x, player.y - z.y) <= z.r; },
     zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },

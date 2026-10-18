@@ -53,7 +53,8 @@
     has: (k) => has(k), buff: (k, ms, stacks) => buff(k, ms, stacks), remove: (k) => remove(k),
     addLog: (c, t) => addLog(c, t), ev: (k, o) => ev(k, o), TARGET_BASE,
     // マクロで対象を決めたとき（<me> <2> など）は、「対象」の回復・バリア・軽減をその相手にする
-    heal: (who, frac) => Arena.heal(aimWho(who), frac), hot: (who, frac, sec, name) => Arena.hot(aimWho(who), frac, sec, name),
+    // quiet: 'tick' なら継続回復のような小さな数字（学者のフェアリーの回復など）
+    heal: (who, frac, quiet) => Arena.heal(aimWho(who), frac, quiet), hot: (who, frac, sec, name) => Arena.hot(aimWho(who), frac, sec, name),
     shield: (who, frac, sec, name) => Arena.shield(aimWho(who), frac, sec, name), mitigate: (who, pct, sec, name) => Arena.mitigate(aimWho(who), pct, sec, name),
     npcDown: () => Arena.isNpcDown(), raise: () => Arena.raiseNpc(),
     inZone: (kind) => Arena.inZone(kind), shieldSelf: (frac, sec, name) => Arena.shield('self', frac, sec, name),
@@ -62,6 +63,8 @@
     zoneSet: (kind, o) => Arena.zoneSet(kind, o), zoneHitsBoss: (kind) => Arena.zoneHitsBoss(kind),
     // バリアの残り（暗黒騎士のブラックナイト: 全部吸収されたらダークアーツ）。'self' / 'npc'
     shieldLeft: (who) => Arena.shieldLeft?.(who) ?? 0,
+    // バリアの中身 { frac, left, name }（学者の展開戦術）と、味方に付けた効果を消す（深謀遠慮の策が発動したとき）
+    shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name),
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
@@ -814,8 +817,9 @@
     if (st.interrupts) add(st.interrupts * 3, 'ok', `詠唱の中断 ${st.interrupts} 回`, `${JR.castAdvice}（${slideText()}からは動いても完了）`);
     if (st.outRangeMs > 3000) add(pct(st.outRangeMs) * 0.3, pct(st.outRangeMs) > 10 ? 'bad' : 'ok', `射程外にいた時間 ${sec(st.outRangeMs)}`, JR.rangeAdvice);
     if (st.whiffs) add(st.whiffs * 2, 'ok', `空振り ${st.whiffs} 回`, '自分中心の範囲技は、敵の輪に届く距離で');
-    if (ROLE === 'healer' && st.tankDowns) add(st.tankDowns * 40 * 0.15, 'bad', `タンクの戦闘不能 ${st.tankDowns} 回`, 'タンクの HP が半分を切ったら回復。リリー（ハート・オブ・ソラス）やテトラグラマトンなど詠唱のない回復は、動きながらでも使える');
-    else if (ROLE === 'healer' && st.tankLowMs > 3000) add(pct(st.tankLowMs) * 2 * 0.15, 'ok', `タンクの HP が 30% を切っていた時間 ${sec(st.tankLowMs)}`, '早めに回復する（リジェネを切らさない）');
+    // 回復役の助言: ジョブの決まりの careAdvice（戦闘不能）・lowAdvice（HP が低い）。なければ共通の文
+    if (ROLE === 'healer' && st.tankDowns) add(st.tankDowns * 40 * 0.15, 'bad', `タンクの戦闘不能 ${st.tankDowns} 回`, JR.careAdvice ?? 'タンクの HP が半分を切ったら回復。詠唱のない回復（アビリティなど）は、動きながらでも使える');
+    else if (ROLE === 'healer' && st.tankLowMs > 3000) add(pct(st.tankLowMs) * 2 * 0.15, 'ok', `タンクの HP が 30% を切っていた時間 ${sec(st.tankLowMs)}`, JR.lowAdvice ?? '早めに回復する（継続回復を切らさない）');
     issues.sort((x, y) => y.loss - x.loss);
     const goods = [];
     if (gcdPct >= 97) goods.push(`GCD 稼働率 ${gcdPct.toFixed(1)}%`);

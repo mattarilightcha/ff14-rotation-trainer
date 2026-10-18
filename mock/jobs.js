@@ -571,7 +571,8 @@
           if (s.stats.lilyOver) issues.push({ loss: s.stats.lilyOver * 3, rate: s.stats.lilyOver > 2 ? 'bad' : 'ok', title: `ヒーリングリリーのあふれ ${s.stats.lilyOver} 回`, advice: 'リリーが 3 つになる前に、ハート・オブ・ソラスかラプチャーで使う（ブラッドリリーも溜まる）' });
           metrics.push({ label: 'ヒーリングリリーのあふれ', value: `${s.stats.lilyOver} 回`, rate: Math.max(0, 100 - s.stats.lilyOver * 20) });
           if (!s.stats.lilyOver && s.stats.gcds > 10) goods.push('リリーのあふれなし');
-          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.lilyOver * 20), posAdvice: '', comboAdvice: '光っている技を順に', castAdvice: 'グレアガの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときは迅速魔・グレアジャ・ディア・ハート・オブ・ミゼリ', rangeAdvice: '魔法の射程（25m）の中にいる' };
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.lilyOver * 20), posAdvice: '', comboAdvice: '光っている技を順に', castAdvice: 'グレアガの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときは迅速魔・グレアジャ・ディア・ハート・オブ・ミゼリ', rangeAdvice: '魔法の射程（25m）の中にいる',
+            careAdvice: 'タンクの HP が半分を切ったら回復。リリー（ハート・オブ・ソラス）やテトラグラマトンなど詠唱のない回復は、動きながらでも使える', lowAdvice: '早めに回復する（リジェネを切らさない）' };
         },
         howto: '白魔道士: グレアガを撃ち続け、ディアを切らさない。神速魔の間にグレアジャ 3 回。リリーはハート・オブ・ソラス / ラプチャーで使い、3 回でハート・オブ・ミゼリ。タンクの HP も見て回復してください。',
         gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'WHM'),
