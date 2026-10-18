@@ -47,3 +47,5 @@ dist-mock/
 
 # personal save data - never commit without explicit review
 samples/hotbar-hud/UISAVE.DAT
+__pycache__/
+*.pyc
