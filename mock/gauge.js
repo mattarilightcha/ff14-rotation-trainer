@@ -48,6 +48,8 @@
       for (const c of [2, 3, 4, 6]) set(k(`${g}/${c}`), { opacity: 0 });
     }
     k(KN.simple).hidden = true;
+    // シンプル表示の棒（#31 の #5）: 公式ジョブガイドの HUD の絵（public/jobguide/hud/samurai/05.png）は赤なので、ULD の橙から赤にする
+    if (K.img(`${KN.sBar}/5`)) K.img(`${KN.sBar}/5`).style.filter = U.colorFilter([90, -130, -120]);
     const fillImg = K.img(KN.fill), gainImg = K.img(KN.gain), lostImg = K.img(KN.lost), edgeImg = K.img(KN.edgeGlow);
     fillImg.classList.add('k-fill');
     k(KN.tip).classList.add('k-tip');
