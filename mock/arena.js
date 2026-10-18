@@ -85,7 +85,7 @@
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch', SGE: 'sge' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -1500,6 +1500,7 @@
     shieldLeft: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? e.shield : 0; },
     // バリアの中身（学者の展開戦術: 鼓舞を広げる）。frac 量・left 残り秒・name 名前
     shieldOf: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? { frac: e.shield, left: e.shieldUntil - clock, name: e.shieldName } : null; },
+    unshield: (who) => { const e = who === 'npc' ? tank : player; e.shield = 0; }, // バリアを消す（賢者のペプシス）
     zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
     inZone: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(player.x - z.x, player.y - z.y) <= z.r; },
     zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },

@@ -68,6 +68,12 @@ window.MOCK_DATA = {
    "name": "学者",
    "icon": "../public/icons/jobs/SCH.png",
    "role": "healer"
+  },
+  {
+   "abbr": "SGE",
+   "name": "賢者",
+   "icon": "../public/icons/jobs/SGE.png",
+   "role": "healer"
   }
  ],
  "jobs": {
@@ -78,6 +84,96 @@ window.MOCK_DATA = {
     "icon": "../public/icons/jobs/SAM.png",
     "level": 100,
     "role": "melee"
+   },
+   "guide": {
+    "traits": [
+     {
+      "en": "Kenki Mastery",
+      "level": null,
+      "desc": "「剣気」が上昇するようになる。\n発動条件：特定のウェポンスキルの命中時および心眼の実行により被ダメージの軽減に成功したとき。"
+     },
+     {
+      "en": "Kenki Mastery II",
+      "level": null,
+      "desc": "「剣気」が追加で上昇するようになる。\n発動条件：居合術を除くウェポンスキルの命中時"
+     },
+     {
+      "en": "Way of the Samurai",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n刃風の威力：200\n陣風の威力：120\n士風の威力：120"
+     },
+     {
+      "en": "Enhanced Iaijutsu",
+      "level": null,
+      "desc": "居合術の詠唱時間を1.3秒に短縮する。\nさらに、自身に「燕返し実行可」が付与される。\n効果時間：30秒\n発動条件：彼岸花を除く居合術の実行時"
+     },
+     {
+      "en": "Enhanced Meikyo Shisui",
+      "level": null,
+      "desc": "明鏡止水がチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Enhanced Fugetsu and Fuka",
+      "level": null,
+      "desc": "「風月」と「風花」の効果量を13％に上昇する。"
+     },
+     {
+      "en": "Third Eye Mastery",
+      "level": null,
+      "desc": "心眼が天眼通に変化する。"
+     },
+     {
+      "en": "Way of the Samurai II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n月光の威力：110\n花車の威力：110\n雪風の威力：110"
+     },
+     {
+      "en": "Fuga Mastery",
+      "level": null,
+      "desc": "風雅が風光に変化する。"
+     },
+     {
+      "en": "Enhanced Ikishoten",
+      "level": null,
+      "desc": "自身に「奥義波切実行可」を付与する。\n効果時間：30秒\n発動条件：意気衝天実行時"
+     },
+     {
+      "en": "Hakaze Mastery",
+      "level": null,
+      "desc": "刃風が暁風に変化する。"
+     },
+     {
+      "en": "Enhanced Hissatsu",
+      "level": null,
+      "desc": "必殺剣・紅蓮と必殺剣・閃影のリキャストタイムを60秒に短縮させる。"
+     },
+     {
+      "en": "Way of the Samurai III",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n陣風の威力：140\n燕飛効果アップ時の燕飛の威力：270\n士風の威力：140\n月光の威力：160\n彼岸花の継続ダメージの威力：50\n花車の威力：160\n雪風の威力：160\n乱れ雪月花の威力：680\n返し雪月花の威力：680\n照破の威力：640\n奥義波切の威力：1000\n返し波切の威力：1000"
+     },
+     {
+      "en": "Enhanced Ikishoten II",
+      "level": null,
+      "desc": "自身に「残心実行可」が付与される。\n効果時間：30秒\n発動条件：意気衝天実行時"
+     },
+     {
+      "en": "Enhanced Meikyo Shisui II",
+      "level": null,
+      "desc": "自身に「天道」が付与される。\n効果時間：30秒\n発動条件：明鏡止水実行時\n効果中は天下五剣が天道五剣に、乱れ雪月花が天道雪月花に変化する。"
+     },
+     {
+      "en": "Enhanced Second Wind",
+      "level": null,
+      "desc": "内丹の回復力を800に上昇させる。"
+     },
+     {
+      "en": "Enhanced Feint",
+      "level": null,
+      "desc": "牽制の効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
    },
    "actions": {
     "7478": {
@@ -495,8 +591,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Midare_Setsugekka.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -554,8 +653,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Tenka_Goken.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -613,8 +715,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Higanbana.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -912,7 +1017,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 120000,
+     "recastMs": 60000,
+     "fromGuide": [
+      "リキャスト 120→60"
+     ],
      "cooldownGroup": 22,
      "maxCharges": 0,
      "comboFrom": [],
@@ -1410,8 +1518,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Iaijutsu.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -1502,7 +1613,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 120000,
+     "recastMs": 60000,
+     "fromGuide": [
+      "リキャスト 120→60"
+     ],
      "cooldownGroup": 22,
      "maxCharges": 0,
      "comboFrom": [],
@@ -1866,8 +1980,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Ogi_Namikiri.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -2088,8 +2205,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Goken.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -2148,8 +2268,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/06_SAM/Tendo_Setsugekka.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 1800,
+     "castMs": 1300,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 1.8→1.3"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -2454,6 +2577,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -2516,6 +2648,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -5918,6 +6052,121 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "tank"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Tank Mastery",
+      "level": null,
+      "desc": "自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。"
+     },
+     {
+      "en": "Oath Mastery",
+      "level": null,
+      "desc": "「オウス」が5ずつ上昇するようになる。\n発動条件：オートアタックの命中時"
+     },
+     {
+      "en": "Enhanced Fight or Flight",
+      "level": null,
+      "desc": "自身に「ゴアブレード実行可」が付与される。\n効果時間：30秒\n発動条件：ファイト・オア・フライト実行時"
+     },
+     {
+      "en": "Chivalry",
+      "level": null,
+      "desc": "ライオットソードとスピリッツウィズインにＭＰ回復効果を付与する。"
+     },
+     {
+      "en": "Rage of Halone Mastery",
+      "level": null,
+      "desc": "レイジ・オブ・ハルオーネがロイヤルアソリティに変化する。"
+     },
+     {
+      "en": "Divine Magic Mastery",
+      "level": null,
+      "desc": "自身が実行するすべての魔法の消費ＭＰが50％減少し、かつ被ダメージにより詠唱が中断されることがなくなる。\nさらに、ロイヤルアソリティに下記の効果を追加する。\n\nコンボボーナス：自身に「神聖魔法効果アップ」が付与される。\n効果時間：30秒\n神聖魔法効果アップ効果：次に実行する1回のホーリースピリットまたはホーリーサークルの威力が上昇し、かつ詠唱時間無しで実行できる。\n発動条件：ロイヤルアソリティのコンボ成功時"
+     },
+     {
+      "en": "Enhanced Prominence",
+      "level": null,
+      "desc": "プロミネンスに下記の効果を追加する。\n\nコンボボーナス：自身のＭＰを回復する。\nコンボボーナス：自身に「神聖魔法効果アップ」が付与される。\n効果時間：30秒\n神聖魔法効果アップ効果：次に実行する1回のホーリースピリットまたはホーリーサークルの威力が上昇し、かつ詠唱時間無しで実行できる。\n発動条件：プロミネンスのコンボ成功時"
+     },
+     {
+      "en": "Enhanced Sheltron",
+      "level": null,
+      "desc": "シェルトロンの効果時間を6秒に延長する。"
+     },
+     {
+      "en": "Sword Oath",
+      "level": null,
+      "desc": "自身に「ロイエ実行可」が付与される。\n効果時間：30秒\n発動条件：ロイヤルアソリティのコンボ成功時"
+     },
+     {
+      "en": "Enhanced Requiescat",
+      "level": null,
+      "desc": "自身に「コンフィテオル実行可」が付与される。\n効果時間：30秒\n発動条件：レクイエスカット実行時"
+     },
+     {
+      "en": "Sheltron Mastery",
+      "level": null,
+      "desc": "シェルトロンがホーリーシェルトロンに変化する。"
+     },
+     {
+      "en": "Enhanced Intervention",
+      "level": null,
+      "desc": "インターベンションの効果時間を8秒に延長する。\nさらに、下記の効果を追加する。\n\n追加効果：対象に「ナイトの堅守」を付与する。\n効果時間：4秒\nナイトの堅守効果：対象の被ダメージを10％軽減する。\n追加効果：対象に「ナイトの加護」を付与する。\n効果時間：12秒\nナイトの加護効果：対象のＨＰを継続回復する。\n回復力：250"
+     },
+     {
+      "en": "Divine Magic Mastery II",
+      "level": null,
+      "desc": "ホーリースピリット、ホーリーサークル、コンフィテオルにＨＰ回復効果を付与する。\n回復力：400"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nファストブレードの威力：200\nライオットソードの威力：140\nロイヤルアソリティの威力：140\nホーリースピリットの威力：350\nロイエの威力：400\nゲベートの威力：420\nグラブカッマーの威力：440"
+     },
+     {
+      "en": "Spirits Within Mastery",
+      "level": null,
+      "desc": "スピリッツウィズインがエクスピアシオンに変化する。"
+     },
+     {
+      "en": "Enhanced Divine Veil",
+      "level": null,
+      "desc": "ディヴァインヴェール実行時に、対象のＨＰを回復させる。\n回復力：400"
+     },
+     {
+      "en": "Sentinel Mastery",
+      "level": null,
+      "desc": "センチネルがエクストリームガードに変化する。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nファストブレードの威力：220\nライオットソードの威力：170\nロイヤルアソリティの威力：200\nホーリースピリットの威力：400\nロイエの威力：460\nゲベートの威力：500\nグラブカッマーの威力：540\nコンフィテオルの威力：500\nブレード・オブ・フェイスの威力：260\nブレード・オブ・トゥルースの威力：380\nブレード・オブ・ヴァラーの威力：500"
+     },
+     {
+      "en": "Requiescat Mastery",
+      "level": null,
+      "desc": "レクイエスカットがインペラトルに変化する。"
+     },
+     {
+      "en": "Enhanced Blade of Valor",
+      "level": null,
+      "desc": "自身に「ブレード・オブ・オナー実行可」が付与される。\n効果時間：30秒\n発動条件：ブレード・オブ・ヴァラー実行時\n効果中はインペラトルがブレード・オブ・オナーに変化する。"
+     },
+     {
+      "en": "Enhanced Rampart",
+      "level": null,
+      "desc": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。"
+     },
+     {
+      "en": "Enhanced Reprisal",
+      "level": null,
+      "desc": "リプライザルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "9": {
      "id": 9,
@@ -6510,6 +6759,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 1500,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 4000→2000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -6524,7 +6776,7 @@ window.MOCK_DATA = {
      "hostile": false,
      "toSelf": true,
      "toParty": true,
-     "mp": 4000,
+     "mp": 2000,
      "range": 30,
      "crit": false,
      "magic": true,
@@ -6640,6 +6892,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 1500,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -6654,7 +6909,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -7189,6 +7444,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 1500,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -7203,7 +7461,7 @@ window.MOCK_DATA = {
      "hostile": false,
      "toSelf": true,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 0,
      "crit": false,
      "magic": true,
@@ -7244,6 +7502,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -7258,7 +7519,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -7542,6 +7803,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [
@@ -7558,7 +7822,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -7597,6 +7861,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [
@@ -7613,7 +7880,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -7652,6 +7919,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 2000→1000"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [
@@ -7668,7 +7938,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 2000,
+     "mp": 1000,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -8175,6 +8445,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "戦嵐": "../public/icons/statuses/212561.png",
@@ -8234,6 +8513,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -10347,6 +10628,121 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "healer"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Stone Mastery",
+      "level": null,
+      "desc": "ストーンがストンラに変化する。"
+     },
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Freecure",
+      "level": null,
+      "desc": "次に詠唱するケアルラの消費ＭＰを0にする。\n効果時間：15秒\n発動条件：ケアル実行時（発動確率15％）"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Aero Mastery",
+      "level": null,
+      "desc": "エアロがエアロラに変化する。"
+     },
+     {
+      "en": "Secret of the Lily",
+      "level": null,
+      "desc": "自身に「ヒーリングリリー」が付与される。\n最大スタック数：3\n発動条件：自身が戦闘状態になり20秒が経過するたび"
+     },
+     {
+      "en": "Stone Mastery II",
+      "level": null,
+      "desc": "ストンラがストンガに変化する。"
+     },
+     {
+      "en": "Stone Mastery III",
+      "level": null,
+      "desc": "ストンガがストンジャに変化する。"
+     },
+     {
+      "en": "Aero Mastery II",
+      "level": null,
+      "desc": "エアロラがディアに変化する。"
+     },
+     {
+      "en": "Stone Mastery IV",
+      "level": null,
+      "desc": "ストンジャがグレアに変化する。"
+     },
+     {
+      "en": "Transcendent Afflatus",
+      "level": null,
+      "desc": "自身に「ブラッドリリー」が付与される。\n最大スタック数：3\n発動条件：ハート・オブ・ソラス実行時"
+     },
+     {
+      "en": "Enhanced Asylum",
+      "level": null,
+      "desc": "アサイラムに、「効果範囲内にいるパーティメンバーの受けるＨＰ回復効果が10％上昇する効果」が付与される。"
+     },
+     {
+      "en": "Glare Mastery",
+      "level": null,
+      "desc": "グレアがグレアガに変化する。"
+     },
+     {
+      "en": "Holy Mastery",
+      "level": null,
+      "desc": "ホーリーがホーリガに変化する。"
+     },
+     {
+      "en": "Enhanced Healing Magic",
+      "level": null,
+      "desc": "特定のアクションの回復力を上昇させる。\n\nケアルの回復力：500\nメディカの回復力：400\nケアルラの回復力：800\nリジェネの継続回復効果の回復力：250\nケアルガの回復力：600\nメディカラの回復力：250\nメディカラの継続回復効果の回復力：150\nハート・オブ・ソラスの回復力：800\nハート・オブ・ラプチャーの回復力：400"
+     },
+     {
+      "en": "Enhanced Divine Benison",
+      "level": null,
+      "desc": "ディヴァインベニゾンがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Enhanced Presence of Mind",
+      "level": null,
+      "desc": "自身に3スタックの「グレアジャ実行可」が付与される。\n効果時間：30秒\n発動条件：神速魔実行時"
+     },
+     {
+      "en": "White Magic Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nディアの威力：85\nディアの継続ダメージの威力：85\nハート・オブ・ミゼリの威力：1400\nグレアガの威力：350"
+     },
+     {
+      "en": "Medica Mastery",
+      "level": null,
+      "desc": "メディカラがメディガに変化する。"
+     },
+     {
+      "en": "Enhanced Tetragrammaton",
+      "level": null,
+      "desc": "テトラグラマトンがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Enhanced Temperance",
+      "level": null,
+      "desc": "自身に「ディヴァインカレス実行可」が付与される。\n効果時間：30秒\n発動条件：テンパランス実行時"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "120": {
      "id": 120,
@@ -11002,7 +11398,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 60000,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
      "cooldownGroup": 44,
      "maxCharges": 0,
      "comboFrom": [],
@@ -12062,6 +12461,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -12116,6 +12524,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -14555,6 +14965,116 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "healer"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Enhanced Benefic",
+      "level": null,
+      "desc": "次に詠唱するベネフィラが必ずクリティカルヒットする\n効果時間：15秒\n発動条件：ベネフィク実行時（発動確率15％）"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Combust Mastery",
+      "level": null,
+      "desc": "コンバスがコンバラに変化する。"
+     },
+     {
+      "en": "Malefic Mastery",
+      "level": null,
+      "desc": "マレフィクがマレフィラに変化する。"
+     },
+     {
+      "en": "Malefic Mastery II",
+      "level": null,
+      "desc": "マレフィラがマレフィガに変化する。"
+     },
+     {
+      "en": "Hyper Lightspeed",
+      "level": null,
+      "desc": "ライトスピードのリキャストタイムを60秒に短縮させる。"
+     },
+     {
+      "en": "Minor Arcana Mastery",
+      "level": null,
+      "desc": "アストラルドローの実行時に「クラウンロード」を、アンブラルドローの実行時に「クラウンレディ」をドローするようになる。"
+     },
+     {
+      "en": "Combust Mastery II",
+      "level": null,
+      "desc": "コンバラがコンバガに変化する。"
+     },
+     {
+      "en": "Malefic Mastery III",
+      "level": null,
+      "desc": "マレフィガがマレフィジャに変化する。"
+     },
+     {
+      "en": "Enhanced Essential Dignity",
+      "level": null,
+      "desc": "ディグニティがチャージアクションになる。\n最大チャージ数：2"
+     },
+     {
+      "en": "Malefic Mastery IV",
+      "level": null,
+      "desc": "マレフィジャがフォールマレフィクに変化する。"
+     },
+     {
+      "en": "Gravity Mastery",
+      "level": null,
+      "desc": "グラビデがグラビラに変化する。"
+     },
+     {
+      "en": "Enhanced Healing Magic",
+      "level": null,
+      "desc": "特定のアクションの回復力を上昇させる。\n\nベネフィクの回復力：500\nヘリオスの回復力：400\nベネフィラの回復力：800\nアスペクト・ベネフィクの回復力：250\nアスペクト・ベネフィクの継続回復効果の回復力：250\nアスペクト・ヘリオスの回復力：250\nアスペクト・ヘリオスの継続回復効果の回復力：150"
+     },
+     {
+      "en": "Enhanced Celestial Intersection",
+      "level": null,
+      "desc": "星天交差がチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Enhanced Divination",
+      "level": null,
+      "desc": "自身に「オラクル実行可」が付与される。\n効果時間：30秒\n発動条件：ディヴィネーション実行時"
+     },
+     {
+      "en": "Magick Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nコンバガの継続ダメージの威力：70\nフォールマレフィクの威力：270\nグラビラの威力：140\nマクロコスモスの威力：270"
+     },
+     {
+      "en": "Aspected Helios Mastery",
+      "level": null,
+      "desc": "アスペクト・ヘリオスがコンジャンクション・ヘリオスに変化する。"
+     },
+     {
+      "en": "Enhanced Essential Dignity II",
+      "level": null,
+      "desc": "ディグニティの最大チャージ数が3に増加する。"
+     },
+     {
+      "en": "Enhanced Neutral Sect",
+      "level": null,
+      "desc": "自身に「サンサイン実行可」が付与される。\n効果時間：30秒\n発動条件：ニュートラルセクト実行時"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "3594": {
      "id": 3594,
@@ -14737,7 +15257,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 90000,
+     "recastMs": 60000,
+     "fromGuide": [
+      "リキャスト 90→60"
+     ],
      "cooldownGroup": 19,
      "maxCharges": 2,
      "comboFrom": [],
@@ -15129,7 +15652,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 60000,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
      "cooldownGroup": 44,
      "maxCharges": 0,
      "comboFrom": [],
@@ -16733,6 +17259,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -16795,6 +17330,8 @@ window.MOCK_DATA = {
     "埋伏の毒": "../public/icons/statuses/212819.png",
     "セラフィズム": "../public/icons/statuses/212820.png",
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -20255,6 +20792,136 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "ranged"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Aspect Mastery",
+      "level": null,
+      "desc": "一部の魔法を実行すると、自身に「アストラルファイア」もしくは「アンブラルブリザード」が付与される。\n最大スタック数：1\n効果時間：永続\n\nアストラルファイア効果：火属性魔法の威力が40％上昇する。\n火属性魔法の消費ＭＰが2倍になる。\n時間経過によるＭＰの回復量が0になる。\n氷属性魔法の消費ＭＰが0になる。\n氷属性魔法の威力が10％減少する。\n\nアンブラルブリザード効果：氷属性魔法の消費ＭＰが0になる。\n氷属性魔法の命中時にＭＰが2500回復する。\n火属性魔法の消費ＭＰが0になる。\n火属性魔法の威力が10％減少する。"
+     },
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Aspect Mastery II",
+      "level": null,
+      "desc": "「アストラルファイア」および「アンブラルブリザード」の最大スタック数が2に増加する。\n2スタック付与された場合にはそれぞれ下記の効果が発動する。\n\nアストラルファイア効果：火属性魔法の威力が60％上昇する。\n氷属性魔法の威力が20％減少する。\n\nアンブラルブリザード効果：氷属性魔法の命中時にＭＰが5000回復する。\n火属性魔法の威力が20％減少する。"
+     },
+     {
+      "en": "Aspect Mastery III",
+      "level": null,
+      "desc": "ファイラ実行時に自身に最大スタック分の「アストラルファイア」が、ブリザラ実行時に自身に最大スタック分の「アンブラルブリザード」が付与されるようになる。\n\n「アストラルファイア」および「アンブラルブリザード」の最大スタック数が3に増加する。\n3スタック付与された場合にはそれぞれ下記の効果が発動する。\n\nアストラルファイア効果：火属性魔法の威力が80％上昇する。\n氷属性魔法の威力が30％減少する。\n氷属性魔法の詠唱時間が半減する。\n\nアンブラルブリザード効果：氷属性魔法の命中時にＭＰが10000回復する。\n火属性魔法の威力が30％減少する。\n火属性魔法の詠唱時間が半減する。"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Firestarter",
+      "level": null,
+      "desc": "次に詠唱するファイガの詠唱時間と消費ＭＰを0にする。\n効果時間：永続\n発動条件：ファイア実行時（発動確率40％）"
+     },
+     {
+      "en": "Thunder Mastery",
+      "level": null,
+      "desc": "サンダーがサンダガに変化する。"
+     },
+     {
+      "en": "Enochian",
+      "level": null,
+      "desc": "自身の与魔法ダメージを5％上昇させる。\n発動条件：「アストラルファイア」または「アンブラルブリザード」効果中"
+     },
+     {
+      "en": "Umbral Heart",
+      "level": null,
+      "desc": "自身に「アンブラルハート」が付与される。\n発動条件：マナフォント、アンブラルソウル、フリーズの実行時"
+     },
+     {
+      "en": "Thunder Mastery II",
+      "level": null,
+      "desc": "サンダラがサンダジャに変化する。"
+     },
+     {
+      "en": "Enhanced Enochian",
+      "level": null,
+      "desc": "自身に「ポリグロット」が付与される。\n発動条件：「エノキアン」の効果を30秒間継続させる\nさらに、エノキアンの効果量を10％に上昇させる。"
+     },
+     {
+      "en": "Enhanced Enochian II",
+      "level": null,
+      "desc": "エノキアンの効果量を15％に上昇させる。"
+     },
+     {
+      "en": "Enhanced Polyglot",
+      "level": null,
+      "desc": "「ポリグロット」の最大スタック数が2に増加する。"
+     },
+     {
+      "en": "Enhanced Foul",
+      "level": null,
+      "desc": "ファウルを詠唱時間なしで実行することができる。"
+     },
+     {
+      "en": "Aspect Mastery IV",
+      "level": null,
+      "desc": "ファイラがハイファイラに、ブリザラがハイブリザラに変化する。"
+     },
+     {
+      "en": "Enhanced Manafont",
+      "level": null,
+      "desc": "マナフォントのリキャストタイムを100秒に短縮させる。"
+     },
+     {
+      "en": "Enhanced Enochian III",
+      "level": null,
+      "desc": "エノキアンの効果量を22％に上昇させる。"
+     },
+     {
+      "en": "Aspect Mastery V",
+      "level": null,
+      "desc": "自身に「パラドックスシンボル」が付与される。\nこの効果が付与されるとブリザドとファイアがパラドックスに変化する。\nパラドックスシンボルはアストラルファイアおよびアンブラルブリザードが解除されると消滅する。\n発動条件：自身に「アストラルファイア」もしくは「アンブラルブリザード」と「アンブラルハート」が最大スタック数まで付与された状態で、自身の状態が反対属性に変化したとき。"
+     },
+     {
+      "en": "Thunder Mastery III",
+      "level": null,
+      "desc": "サンダガがハイサンダーに、サンダジャがハイサンダラに変化する。"
+     },
+     {
+      "en": "Enhanced Ley Lines",
+      "level": null,
+      "desc": "魔紋再設置が実行できるようになる。\n発動条件：「黒魔紋」効果中"
+     },
+     {
+      "en": "Enhanced Enochian IV",
+      "level": null,
+      "desc": "エノキアンの効果量を27％に上昇させる。"
+     },
+     {
+      "en": "Enhanced Polyglot II",
+      "level": null,
+      "desc": "「ポリグロット」の最大スタック数が3に増加する。"
+     },
+     {
+      "en": "Enhanced Astral Fire",
+      "level": null,
+      "desc": "自身に「アストラルソウル」が付与される。\n最大スタック数：6\n発動条件：ファイジャおよびフレアの命中時\nまた、デスペアを詠唱時間なしで実行することができる。"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     },
+     {
+      "en": "Enhanced Addle",
+      "level": null,
+      "desc": "アドルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "141": {
      "id": 141,
@@ -20603,7 +21270,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 120000,
+     "recastMs": 100000,
+     "fromGuide": [
+      "リキャスト 120→100"
+     ],
      "cooldownGroup": 24,
      "maxCharges": 0,
      "comboFrom": [],
@@ -20979,8 +21649,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/14_BLM/Foul.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 2000,
+     "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 2→0"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -21107,7 +21780,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 60000,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
      "cooldownGroup": 44,
      "maxCharges": 0,
      "comboFrom": [],
@@ -21277,8 +21953,11 @@ window.MOCK_DATA = {
      "icon": "../public/fankit/battle-pve/14_BLM/Despair.png",
      "iconFramed": true,
      "isGcd": true,
-     "castMs": 2000,
+     "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "詠唱 2→0"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -22049,6 +22728,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -22112,6 +22800,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -26667,6 +27357,126 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "ranged"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Heavier Shot",
+      "level": null,
+      "desc": "自身に「ホークアイ」を付与する。\n効果時間：30秒\n発動条件：ヘヴィショットの命中時（発動確率20％）"
+     },
+     {
+      "en": "Increased Action Damage",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによるダメージをベースダメージの1.1倍にする。"
+     },
+     {
+      "en": "Enhanced Quick Nock",
+      "level": null,
+      "desc": "自身に「ホークアイ」を付与する。\n効果時間：30秒\n発動条件：クイックノックの命中時（発動確率20％）"
+     },
+     {
+      "en": "Increased Action Damage II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによるダメージをベースダメージの1.2倍にする。"
+     },
+     {
+      "en": "Bite Mastery",
+      "level": null,
+      "desc": "ベノムバイトがコースティックバイトに、ウィンドバイトがストームバイトに変化する。"
+     },
+     {
+      "en": "Enhanced Empyreal Arrow",
+      "level": null,
+      "desc": "賢人のバラード、軍神のパイオン、旅神のメヌエットの追加効果が発動する。\n発動条件：賢人のバラード、軍神のパイオン、旅神のメヌエットのいずれかを実行中でかつエンピリアルアローの命中時"
+     },
+     {
+      "en": "Straight Shot Mastery",
+      "level": null,
+      "desc": "ストレートショットがリフルジェントアローに変化する。"
+     },
+     {
+      "en": "Wide Volley Mastery",
+      "level": null,
+      "desc": "ワイドボレーがシャドウバイトに変化する。"
+     },
+     {
+      "en": "Bite Mastery II",
+      "level": null,
+      "desc": "自身に「ホークアイ」を付与する。\n効果時間：30秒\n発動条件：ストームバイト、コースティックバイト、アイアンジョーの命中時（発動確率35％）"
+     },
+     {
+      "en": "Heavy Shot Mastery",
+      "level": null,
+      "desc": "ヘヴィショットがバーストショットに変化する。"
+     },
+     {
+      "en": "Enhanced Army's Paeon",
+      "level": null,
+      "desc": "軍神のパイオンの効果中かつ自身に「詩心」が付与されている状態で、賢人のバラードか旅神のメヌエットを実行すると、自身に「軍神の加護」を付与する。\n効果時間：10秒\n軍神の加護効果：オートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを短縮させる。\n\nまた、軍神のパイオンの効果中かつ自身に「詩心」が付与されている状態で、賢人のバラードか旅神のメヌエットを実行することなく軍神のパイオンの効果時間が経過した場合、自身に「軍神の契約」を付与する。\n効果時間：30秒\n軍神の契約効果：賢人のバラード、軍神のパイオン、旅神のメヌエットを実行すると、自身に「軍神の加護」を付与する。\nどちらの場合も、効果量は「軍神の加護」および「軍神の契約」が付与されたときの「詩心」の数により異なる。\n\n詩心が1つのとき：1％\n詩心が2つのとき：2％\n詩心が3つのとき：4％\n詩心が4つのとき：12％"
+     },
+     {
+      "en": "Soul Voice",
+      "level": null,
+      "desc": "「ソウルボイス」が5ずつ上昇するようになる。\n発動条件：自身に「詩心」が付与されるとき"
+     },
+     {
+      "en": "Quick Nock Mastery",
+      "level": null,
+      "desc": "クイックノックがラドンバイトに変化する。"
+     },
+     {
+      "en": "Enhanced Bloodletter",
+      "level": null,
+      "desc": "ブラッドレッターとレイン・オブ・デスの最大チャージ数が3に増加する。"
+     },
+     {
+      "en": "Enhanced Apex Arrow",
+      "level": null,
+      "desc": "自身に「ブラストアロー実行可」が付与される。\n効果時間：10秒\nこの効果が付与されるとエイペックスアローがブラストアローに変化する。\n発動条件：ソウルボイスが80以上蓄積された状態でエイペックスアローを使用したとき"
+     },
+     {
+      "en": "Enhanced Troubadour",
+      "level": null,
+      "desc": "トルバドゥールのリキャストタイムを90秒に短縮させる。"
+     },
+     {
+      "en": "Minstrel's Coda",
+      "level": null,
+      "desc": "賢人のバラード、軍神のパイオン、旅神のメヌエットの実行時に、自身に対応した「コーダシンボル」が付与されるようになる。\n賢人のバラード実行時：「賢人のコーダ」が付与される。\n軍神のパイオン実行時：「軍神のコーダ」が付与される。\n旅神のメヌエット実行時：「旅神のコーダ」が付与される。"
+     },
+     {
+      "en": "Bloodletter Mastery",
+      "level": null,
+      "desc": "ブラッドレッターがハートブレイクショットに変化する。"
+     },
+     {
+      "en": "Ranged Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nエンピリアルアローの威力：260\nサイドワインダーの威力：400\nリフルジェントアローの威力：280\nバーストショットの威力：220\nエイペックスアローの威力：140～700"
+     },
+     {
+      "en": "Enhanced Barrage",
+      "level": null,
+      "desc": "自身に「レゾナンスアロー実行可」が付与される。\n効果時間：30秒\n発動条件：乱れ撃ち実行時"
+     },
+     {
+      "en": "Enhanced Troubadour II",
+      "level": null,
+      "desc": "トルバドゥールの効果量を15％に上昇させる。"
+     },
+     {
+      "en": "Enhanced Radiant Finale",
+      "level": null,
+      "desc": "自身に「光神のアンコール実行可」が付与される。\n効果時間：30秒\n発動条件：光神のフィナーレ実行時"
+     },
+     {
+      "en": "Enhanced Second Wind",
+      "level": null,
+      "desc": "内丹の回復力を800に上昇させる。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "101": {
      "id": 101,
@@ -27237,7 +28047,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 120000,
+     "recastMs": 90000,
+     "fromGuide": [
+      "リキャスト 120→90"
+     ],
      "cooldownGroup": 21,
      "maxCharges": 0,
      "comboFrom": [],
@@ -28532,6 +29345,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -28593,6 +29415,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -33354,6 +34178,152 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "ranged"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Enhanced Aethercharge",
+      "level": null,
+      "desc": "自身に「ルビーの神秘」と「トパーズの神秘」を付与する。\n発動条件：エーテルチャージ実行時"
+     },
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Enhanced Aethercharge II",
+      "level": null,
+      "desc": "自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：エーテルチャージ実行時"
+     },
+     {
+      "en": "Ruin Mastery",
+      "level": null,
+      "desc": "ルインがルインラに変化する。"
+     },
+     {
+      "en": "Ruby Summoning Mastery",
+      "level": null,
+      "desc": "サモン・ルビーがサモン・イフリートに変化する。"
+     },
+     {
+      "en": "Topaz Summoning Mastery",
+      "level": null,
+      "desc": "サモン・トパーズがサモン・タイタンに変化する。"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Emerald Summoning Mastery",
+      "level": null,
+      "desc": "サモン・エメラルドがサモン・ガルーダに変化する。"
+     },
+     {
+      "en": "Enkindle",
+      "level": null,
+      "desc": "「サモン・イフリート」「サモン・タイタン」「サモン・ガルーダ」により召喚するエギの実行するアクションが変化する。\nイフリート・エギ：バーニングストライクが地獄の火炎に変化する。\nタイタン・エギ：ロックバスターが大地の怒りに変化する。\nガルーダ・エギ：エリアルスラッシュがエリアルブラストに変化する。"
+     },
+     {
+      "en": "Ruin Mastery II",
+      "level": null,
+      "desc": "ルインラがルインガに変化する。"
+     },
+     {
+      "en": "Aethercharge Mastery",
+      "level": null,
+      "desc": "エーテルチャージがトランス・バハムートに変化する。"
+     },
+     {
+      "en": "Enhanced Energy Siphon",
+      "level": null,
+      "desc": "自身に「ルインジャ実行可」が付与されるようになる。\n発動条件：エナジードレインとエナジーサイフォン実行時"
+     },
+     {
+      "en": "Enhanced Dreadwyrm Trance",
+      "level": null,
+      "desc": "トランス・バハムートがサモン・バハムートに変化する。"
+     },
+     {
+      "en": "Ruin Mastery III",
+      "level": null,
+      "desc": "自身に付与されている「エーテル」によりジェムシャインが変化する。\nファイアエーテル効果中：ルビー・リチュアルに変化する。\nアースエーテル効果中：トパーズ・リチュアルに変化する。\nウィンドエーテル効果中：エメラルド・リチュアルに変化する。"
+     },
+     {
+      "en": "Outburst Mastery",
+      "level": null,
+      "desc": "アウトバーストがトライディザスターに変化する。"
+     },
+     {
+      "en": "Enhanced Summon Bahamut",
+      "level": null,
+      "desc": "サモン・バハムートがサモン・フェニックスに変化する。\n発動条件：デミ・バハムートの帰還後"
+     },
+     {
+      "en": "Outburst Mastery II",
+      "level": null,
+      "desc": "自身に付与されている「エーテル」によりジェムブリリアンスが変化する。\nファイアエーテル効果中：ルビー・カタストロフィに変化する。\nアースエーテル効果中：トパーズ・カタストロフィに変化する。\nウィンドエーテル効果中：エメラルド・カタストロフィに変化する。"
+     },
+     {
+      "en": "Ruin Mastery IV",
+      "level": null,
+      "desc": "ルインガ、ルビー・リチュアル、トパーズ・リチュアル、エメラルド・リチュアルの威力を上昇させる。\n\nルインガの威力：310\nルビー・リチュアルの威力：510\nトパーズ・リチュアルの威力：330\nエメラルド・リチュアルの威力：230"
+     },
+     {
+      "en": "Elemental Mastery",
+      "level": null,
+      "desc": "特定のアクションの実行時にアストラルフロウが変化する。\nサモン・イフリート実行時：クリムゾンサイクロンに変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：マウンテンバスターに変化する。\nサモン・ガルーダ実行時：スリップストリームに変化する。"
+     },
+     {
+      "en": "Enhanced Radiant Aegis",
+      "level": null,
+      "desc": "守りの光がチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Enkindle II",
+      "level": null,
+      "desc": "サモン・イフリートがサモン・イフリートIIに、サモン・タイタンがサモン・タイタンIIに、サモン・ガルーダがサモン・ガルーダIIに変化する。"
+     },
+     {
+      "en": "Enhanced Fester",
+      "level": null,
+      "desc": "ミアズマバーストがミアズマノヴァに変化する。"
+     },
+     {
+      "en": "Arcane Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nルインガの威力：400\nアストラルインパルスの威力：500\nルインジャの威力：520\nルビー・リチュアルの威力：620\nトパーズ・リチュアルの威力：340\nエメラルド・リチュアルの威力：280\n霊泉の炎の威力：580\nクリムゾンストライクの威力：560\nクリムゾンサイクロンの威力：560\nマウンテンバスターの威力：160\nスリップストリームの威力：520\n地獄の火炎の威力：800\n大地の怒りの威力：800\nエリアルブラストの威力：800"
+     },
+     {
+      "en": "Enhanced Searing Light",
+      "level": null,
+      "desc": "自身に「シアリングスパーク実行可」が付与される。\n効果時間：30秒\n発動条件：シアリングライト実行時"
+     },
+     {
+      "en": "Enhanced Summon Bahamut II",
+      "level": null,
+      "desc": "ソルバハムートと、デミ・バハムートおよびデミ・フェニックスを交互に顕現させることができるようになる。"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     },
+     {
+      "en": "Enhanced Addle",
+      "level": null,
+      "desc": "アドルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": [
+     {
+      "en": "Radiant Aegis",
+      "recastMs": 0,
+      "desc": "このペットを召喚している巴術士および召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。"
+     }
+    ]
+   },
    "actions": {
     "173": {
      "id": 173,
@@ -33622,7 +34592,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 0→1.5"
+     ],
      "cooldownGroup": 0,
      "maxCharges": 0,
      "comboFrom": [],
@@ -33830,7 +34803,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 60000,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
      "cooldownGroup": 44,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34339,7 +35315,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 0→1.5"
+     ],
      "cooldownGroup": 0,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34687,6 +35666,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 2800,
      "recastMs": 3000,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34701,7 +35683,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -34736,6 +35718,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34750,7 +35735,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -34793,6 +35778,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34807,7 +35795,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -34972,6 +35960,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 2800,
      "recastMs": 3000,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -34986,7 +35977,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -35021,6 +36012,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 2500,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -35035,7 +36029,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -35070,6 +36064,9 @@ window.MOCK_DATA = {
      "isGcd": true,
      "castMs": 0,
      "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→300"
+     ],
      "cooldownGroup": 58,
      "maxCharges": 0,
      "comboFrom": [],
@@ -35084,7 +36081,7 @@ window.MOCK_DATA = {
      "hostile": true,
      "toSelf": false,
      "toParty": false,
-     "mp": 0,
+     "mp": 300,
      "range": 25,
      "crit": false,
      "magic": true,
@@ -35737,7 +36734,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 0→1.5"
+     ],
      "cooldownGroup": 0,
      "maxCharges": 0,
      "comboFrom": [],
@@ -36167,6 +37167,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -36222,6 +37231,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png"
    },
@@ -41854,6 +42865,116 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "tank"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Tank Mastery",
+      "level": null,
+      "desc": "自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。"
+     },
+     {
+      "en": "The Beast Within",
+      "level": null,
+      "desc": "「インナービースト」が上昇するようになる。\n発動条件：メイムとシュトルムヴィントのコンボ成功時"
+     },
+     {
+      "en": "Inner Beast Mastery",
+      "level": null,
+      "desc": "原初の魂がフェルクリーヴに変化する。"
+     },
+     {
+      "en": "Steel Cyclone Mastery",
+      "level": null,
+      "desc": "スチールサイクロンがデシメートに変化する。"
+     },
+     {
+      "en": "Enhanced Infuriate",
+      "level": null,
+      "desc": "ウォークライのリキャストタイムを5秒短縮する。\n発動条件：一部を除く敵に対するフェルクリーヴおよびデシメートの命中時"
+     },
+     {
+      "en": "Berserk Mastery",
+      "level": null,
+      "desc": "バーサクが原初の解放に変化する。"
+     },
+     {
+      "en": "Nascent Chaos",
+      "level": null,
+      "desc": "自身に「原初の混沌」が付与される。\n効果時間：30秒\n原初の混沌効果：「インナービースト」が50蓄積されるとデシメートがカオティックサイクロンに変化する。\nさらに、インナーカオスを修得するとフェルクリーヴがインナーカオスに変化するようになる。\n発動条件：ウォークライ実行時"
+     },
+     {
+      "en": "Mastering the Beast",
+      "level": null,
+      "desc": "「インナービースト」が上昇するようになる。\n発動条件：ミスリルテンペストのコンボ成功時"
+     },
+     {
+      "en": "Enhanced Shake It Off",
+      "level": null,
+      "desc": "シェイクオフ実行時に、対象のＨＰを回復させる。\n回復力：300"
+     },
+     {
+      "en": "Enhanced Thrill of Battle",
+      "level": null,
+      "desc": "スリル・オブ・バトルに、「自身が受けるＨＰ回復効果を20％上昇させる効果」が付与される。"
+     },
+     {
+      "en": "Raw Intuition Mastery",
+      "level": null,
+      "desc": "原初の直感が原初の血気に変化する。"
+     },
+     {
+      "en": "Enhanced Nascent Flash",
+      "level": null,
+      "desc": "原初の猛り実行時に付与する「原初の猛り」と「原初の猛り［被］」の効果時間を8秒に延長する。\nさらに、「原初の猛り［被］」に、下記の効果を追加する。\n\n追加効果：対象に「原初の血潮」を付与する。\n効果時間：4秒\n原初の血潮効果：対象の被ダメージを10％軽減する。\n追加効果：対象に一定量のダメージを防ぐバリアである「原初の血煙」を付与する。\nバリア量：回復力400相当\n効果時間：20秒"
+     },
+     {
+      "en": "Enhanced Equilibrium",
+      "level": null,
+      "desc": "エクリブリウム実行時に、自身のＨＰを継続回復する。\n回復力：200\n効果時間：15秒"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nヘヴィスウィングの威力：200\nメイムの威力：150\nシュトルムヴィントの威力：160\nシュトルムブレハの威力：160"
+     },
+     {
+      "en": "Enhanced Onslaught",
+      "level": null,
+      "desc": "オンスロートの最大チャージ数が3に増加する。"
+     },
+     {
+      "en": "Vengeance Mastery",
+      "level": null,
+      "desc": "ヴェンジェンスがダムネーションに変化する。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nヘヴィスウィングの威力：240\nメイムの威力：190\nシュトルムヴィントの威力：220\nシュトルムブレハの威力：220\nフェルクリーヴの威力：580\nアップヒーバルの威力：420"
+     },
+     {
+      "en": "Enhanced Inner Release",
+      "level": null,
+      "desc": "自身に「原初の鼓動」が付与される。\n最大スタック数：3\n効果時間：30秒\n原初の鼓動が3スタック付与されると「原初の激震実行可」に変化し、原初の解放が原初の激震に変化する。\n発動条件：原初の解放の効果中に実行するフェルクリーヴおよびデシメートの命中時"
+     },
+     {
+      "en": "Enhanced Primal Rend",
+      "level": null,
+      "desc": "自身に「ルイネーター実行可」が付与される。\n効果時間：20秒\n発動条件：プライマルレンド実行時"
+     },
+     {
+      "en": "Enhanced Rampart",
+      "level": null,
+      "desc": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。"
+     },
+     {
+      "en": "Enhanced Reprisal",
+      "level": null,
+      "desc": "リプライザルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "31": {
      "id": 31,
@@ -43788,6 +44909,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
     "オブレーション": "../public/icons/statuses/213123.png",
@@ -43842,6 +44972,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
    },
@@ -45795,6 +46927,86 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "tank"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Tank Mastery",
+      "level": null,
+      "desc": "自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。"
+     },
+     {
+      "en": "Blackblood",
+      "level": null,
+      "desc": "「ブラックブラッド」が上昇するようになる。\n発動条件：特定のアクションの命中時"
+     },
+     {
+      "en": "Enhanced Blackblood",
+      "level": null,
+      "desc": "「ブラックブラッド」が上昇するようになる。\n発動条件：「ブラッドウェポン」効果中に実行するウェポンスキルおよび魔法の命中時"
+     },
+     {
+      "en": "Blood Weapon Mastery",
+      "level": null,
+      "desc": "ブラッドウェポンがブラッドデリリアムに変化する。"
+     },
+     {
+      "en": "Darkside Mastery",
+      "level": null,
+      "desc": "暗黒の波動が漆黒の波動に、暗黒の剣が漆黒の剣に変化する。"
+     },
+     {
+      "en": "Enhanced Unmend",
+      "level": null,
+      "desc": "シャドウストライドのリキャストタイムを5秒短縮する。\n発動条件：一部を除く敵に対するアンメンドの命中時"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：180\nサイフォンストライクの威力：120\nソウルイーターの威力：140"
+     },
+     {
+      "en": "Enhanced Living Shadow",
+      "level": null,
+      "desc": "英雄の影身による攻撃の威力が420に上昇する。"
+     },
+     {
+      "en": "Enhanced Living Shadow II",
+      "level": null,
+      "desc": "英雄の影身が使う漆黒の波動がシャドウブリンガーに変化する。\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は25％減少する。"
+     },
+     {
+      "en": "Shadow Wall Mastery",
+      "level": null,
+      "desc": "シャドウウォールがシャドウヴィジルに変化する。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：300\nサイフォンストライクの威力：240\nソウルイーターの威力：260\nストルワートソウルの威力：120\nカーヴ・アンド・スピットの威力：540\nブラッドスピラーの威力：600\nクワイタスの威力：240"
+     },
+     {
+      "en": "Enhanced Delirium",
+      "level": null,
+      "desc": "ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\n発動条件：「ブラッドデリリアム」効果中"
+     },
+     {
+      "en": "Enhanced Living Shadow III",
+      "level": null,
+      "desc": "自身に「ディセスティーム実行可」が付与される。\n効果時間：30秒\n発動条件：影身具現実行時\n\nまた、英雄の影身が使うカーヴ・アンド・スピットがディセスティームに変化する。\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：620\n2体目以降の対象への威力は25％減少する。"
+     },
+     {
+      "en": "Enhanced Rampart",
+      "level": null,
+      "desc": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。"
+     },
+     {
+      "en": "Enhanced Reprisal",
+      "level": null,
+      "desc": "リプライザルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "3617": {
      "id": 3617,
@@ -47725,6 +48937,15 @@ window.MOCK_DATA = {
     "軍神の加護": "../public/icons/statuses/212619.png",
     "軍神の契約": "../public/icons/statuses/212620.png",
     "トルバドゥール": "../public/icons/statuses/212615.png",
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -47788,6 +49009,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
    },
@@ -50592,6 +51815,91 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "tank"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Tank Mastery",
+      "level": null,
+      "desc": "自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。"
+     },
+     {
+      "en": "Cartridge Charge",
+      "level": null,
+      "desc": "自身に「ソイル」が付与される。\n最大スタック数：2\n発動条件：ソリッドバレルのコンボ成功時"
+     },
+     {
+      "en": "Enhanced Brutal Shell",
+      "level": null,
+      "desc": "自身に一定量のダメージを防ぐバリア「ブルータルシェル」が付与される。\n効果時間：30秒\n発動条件：ブルータルシェルのコンボ成功時"
+     },
+     {
+      "en": "Enhanced No Mercy",
+      "level": null,
+      "desc": "自身に「ソニックブレイク実行可」が付与される。\n効果時間：30秒\n発動条件：ノー・マーシー実行時"
+     },
+     {
+      "en": "Danger Zone Mastery",
+      "level": null,
+      "desc": "デンジャーゾーンがブラスティングゾーンに変化する。"
+     },
+     {
+      "en": "Heart of Stone Mastery",
+      "level": null,
+      "desc": "ハート・オブ・ストーンがハート・オブ・コランダムに変化する。"
+     },
+     {
+      "en": "Enhanced Aurora",
+      "level": null,
+      "desc": "オーロラがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nキーンエッジの威力：200\nブルータルシェルの威力：160\nソリッドバレルの威力：140"
+     },
+     {
+      "en": "Enhanced Continuation",
+      "level": null,
+      "desc": "自身に「ハイパーヴェロシティ実行可」を付与する。\n効果時間：10秒\n発動条件：バーストストライク実行時\n効果中はコンティニュエーションがハイパーヴェロシティに変化する。"
+     },
+     {
+      "en": "Cartridge Charge II",
+      "level": null,
+      "desc": "「ソイル」の最大スタック数が3に増加し、ブラッドソイルの効果中は最大スタック数が6に増加する。\nさらに、ブラッドソイルの実行時に付与されるソイルが3に増加する。"
+     },
+     {
+      "en": "Nebula Mastery",
+      "level": null,
+      "desc": "ネビュラがグレートネビュラに変化する。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nキーンエッジの威力：300\nブルータルシェルの威力：240\nソリッドバレルの威力：240\nバーストストライクの威力：420\nビートファングの威力：440\nサベッジクロウの威力：500\nウィケッドタロンの威力：560\nジャギュラーリップの威力：220\nアブドメンテアーの威力：260\nアイガウジの威力：300\nブラスティングゾーンの威力：800\nハイパーヴェロシティの威力：180"
+     },
+     {
+      "en": "Enhanced Continuation II",
+      "level": null,
+      "desc": "自身に「フェイテッドブランド実行可」が付与される。\n効果時間：10秒\n発動条件：フェイテッドサークル実行時\n効果中はコンティニュエーションがフェイテッドブランドに変化する。"
+     },
+     {
+      "en": "Enhanced Bloodfest",
+      "level": null,
+      "desc": "自身に「ハートコンボ実行可」が付与される。\n効果時間：30秒\n発動条件：ブラッドソイル実行時"
+     },
+     {
+      "en": "Enhanced Rampart",
+      "level": null,
+      "desc": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。"
+     },
+     {
+      "en": "Enhanced Reprisal",
+      "level": null,
+      "desc": "リプライザルの効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
    "actions": {
     "7531": {
      "id": 7531,
@@ -52847,6 +54155,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -52905,6 +54222,8 @@ window.MOCK_DATA = {
     "セラフィズム": "../public/icons/statuses/212820.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -55026,6 +56345,142 @@ window.MOCK_DATA = {
     "level": 100,
     "role": "healer"
    },
+   "guide": {
+    "traits": [
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Corruption Mastery",
+      "level": null,
+      "desc": "バイオがバイオラに変化する。"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Broil Mastery",
+      "level": null,
+      "desc": "ルインが気炎法に変化する。\nさらに、ルインラの威力を160に、破陣法の威力を165に上昇させる。"
+     },
+     {
+      "en": "Broil Mastery II",
+      "level": null,
+      "desc": "気炎法が魔炎法に変化する。\nさらに、ルインラの威力を180に上昇させる。"
+     },
+     {
+      "en": "Corruption Mastery II",
+      "level": null,
+      "desc": "バイオラが蠱毒法に変化する。"
+     },
+     {
+      "en": "Broil Mastery III",
+      "level": null,
+      "desc": "魔炎法が死炎法に変化する。\nさらに、ルインラの威力を200に上昇させる。"
+     },
+     {
+      "en": "Enhanced Sacred Soil",
+      "level": null,
+      "desc": "野戦治療の陣に、「効果範囲内にいるパーティメンバーを継続回復させる効果」が付与される。"
+     },
+     {
+      "en": "Broil Mastery IV",
+      "level": null,
+      "desc": "死炎法が極炎法に変化する。\nさらに、ルインラの威力を220に上昇させる。"
+     },
+     {
+      "en": "Art of War Mastery",
+      "level": null,
+      "desc": "破陣法が裂陣法に変化する。"
+     },
+     {
+      "en": "Enhanced Healing Magic",
+      "level": null,
+      "desc": "特定のアクションの回復力とバリア効果量を上昇させる。\n\nフィジクの回復力：450\n光の癒しの回復力：180\n鼓舞激励の策のバリア効果量：回復量の180％分\n士気高揚の策のバリア効果量：回復量の160％分\nセラフィックヴェールの回復力：180"
+     },
+     {
+      "en": "Enhanced Deployment Tactics",
+      "level": null,
+      "desc": "展開戦術のリキャストタイムを90秒に短縮させる。"
+     },
+     {
+      "en": "Enhanced Chain Stratagem",
+      "level": null,
+      "desc": "自身に「埋伏の毒実行可」が付与される。\n効果時間：30秒\n発動条件：連環計実行時"
+     },
+     {
+      "en": "Tactician's Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n蠱毒法の継続ダメージの威力：85\n極炎法の威力：320"
+     },
+     {
+      "en": "Succor Mastery",
+      "level": null,
+      "desc": "士気高揚の策が意気軒昂の策に変化する。"
+     },
+     {
+      "en": "Enhanced Recitation",
+      "level": null,
+      "desc": "秘策のリキャストタイムを60秒に短縮する。"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     }
+    ],
+    "pets": [
+     {
+      "en": "Embrace",
+      "recastMs": 3000,
+      "desc": "対象のＨＰを回復する。\n回復力：180\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Whispering Dawn",
+      "recastMs": 0,
+      "desc": "周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Fey Illumination",
+      "recastMs": 0,
+      "desc": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nセラフィムのセラフィックイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Fey Union",
+      "recastMs": 0,
+      "desc": "指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Fey Blessing",
+      "recastMs": 0,
+      "desc": "周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Seraphic Veil",
+      "recastMs": 3000,
+      "desc": "対象のＨＰを回復する。\n回復力：180\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Angel's Whisper",
+      "recastMs": 0,
+      "desc": "周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Seraphic Illumination",
+      "recastMs": 0,
+      "desc": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。"
+     },
+     {
+      "en": "Consolation",
+      "recastMs": 0,
+      "desc": "周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。"
+     }
+    ]
+   },
    "actions": {
     "166": {
      "id": 166,
@@ -55433,7 +56888,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 120000,
+     "recastMs": 90000,
+     "fromGuide": [
+      "リキャスト 120→90"
+     ],
      "cooldownGroup": 20,
      "maxCharges": 0,
      "comboFrom": [],
@@ -55727,7 +57185,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 60000,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
      "cooldownGroup": 44,
      "maxCharges": 0,
      "comboFrom": [],
@@ -56069,7 +57530,10 @@ window.MOCK_DATA = {
      "iconFramed": true,
      "isGcd": false,
      "castMs": 0,
-     "recastMs": 90000,
+     "recastMs": 60000,
+     "fromGuide": [
+      "リキャスト 90→60"
+     ],
      "cooldownGroup": 16,
      "maxCharges": 0,
      "comboFrom": [],
@@ -56907,6 +58371,15 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -56968,6 +58441,8 @@ window.MOCK_DATA = {
     "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
     "オラクル実行可": "../public/icons/statuses/213264.png",
     "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
     "原初の激震実行可": "../public/icons/statuses/212571.png",
     "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
     "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
@@ -59461,6 +60936,5311 @@ window.MOCK_DATA = {
    "replaceGroups": {
     "185": [
      37015
+    ]
+   },
+   "splitDetected": []
+  },
+  "SGE": {
+   "job": {
+    "abbr": "SGE",
+    "name": "賢者",
+    "icon": "../public/icons/jobs/SGE.png",
+    "level": 100,
+    "role": "healer"
+   },
+   "guide": {
+    "traits": [
+     {
+      "en": "Maim and Mend",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+     },
+     {
+      "en": "Maim and Mend II",
+      "level": null,
+      "desc": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+     },
+     {
+      "en": "Addersgall",
+      "level": null,
+      "desc": "自身に「アダーガル」が付与される。\n最大スタック数：3\nアダーガルは20秒経過するたびに付与される。\nまた、アダーガルは自身が戦闘不能状態でも付与される。"
+     },
+     {
+      "en": "Somanoutic Oath",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nドシスの威力：250\nフレグマの威力：330\nエウクラシア・ドシスの威力：35"
+     },
+     {
+      "en": "Physis Mastery",
+      "level": null,
+      "desc": "ピュシスがピュシスIIに変化する。"
+     },
+     {
+      "en": "Somanoutic Oath II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nドシスの威力：300\nフレグマの威力：400\nエウクラシア・ドシスの威力：40"
+     },
+     {
+      "en": "Addersting",
+      "level": null,
+      "desc": "自身に「アダースティング」が付与される。\n最大スタック数：3\n発動条件：「エウクラシア・ディアグノシス」および自身に付与した「エウクラシア・プログノシス」がダメージを完全に吸収して消滅したとき。"
+     },
+     {
+      "en": "Offensive Magic Mastery",
+      "level": null,
+      "desc": "ドシスがドシスIIに変化する。\nフレグマがフレグマIIに変化する。\nエウクラシア・ドシスがエウクラシア・ドシスIIに変化する。\nさらに、トキシコンの威力を300に上昇させる。"
+     },
+     {
+      "en": "Enhanced Kerachole",
+      "level": null,
+      "desc": "ケーラコレに、「対象のＨＰを継続回復する効果」が付与される。"
+     },
+     {
+      "en": "Offensive Magic Mastery II",
+      "level": null,
+      "desc": "ドシスIIがドシスIIIに変化する。\nフレグマIIがフレグマIIIに変化する。\nエウクラシア・ドシスIIがエウクラシア・ドシスIIIに変化する。\nディスクラシアがディスクラシアIIに変化する。\nトキシコンがトキシコンIIに変化する。"
+     },
+     {
+      "en": "Enhanced Healing Magic",
+      "level": null,
+      "desc": "特定のアクションの回復力とバリア効果量を上昇させる。\n\nディアグノシスの回復力：450\nカルディアの回復力：170\nエウクラシア・ディアグノシスのバリア効果量：回復量の180％分\nエウクラシア・プログノシスのバリア効果量：回復量の320％分"
+     },
+     {
+      "en": "Enhanced Zoe",
+      "level": null,
+      "desc": "ゾーエのリキャストタイムを90秒に短縮する。"
+     },
+     {
+      "en": "Enhanced Soteria",
+      "level": null,
+      "desc": "ソーテリアのリキャストタイムを60秒に短縮する。"
+     },
+     {
+      "en": "Magick Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nドシスIIIの威力：380\nエウクラシア・ドシスIIIの威力：90\nトキシコンIIの威力：380\nプネウマの威力：380"
+     },
+     {
+      "en": "Eukrasian Prognosis Mastery",
+      "level": null,
+      "desc": "エウクラシア・プログノシスがエウクラシア・プログノシスIIに変化する。"
+     },
+     {
+      "en": "Enhanced Physis II",
+      "level": null,
+      "desc": "ピュシスIIの「対象が受けるＨＰ回復効果を10％上昇させる効果」の効果時間を15秒に延長する。"
+     },
+     {
+      "en": "Enhanced Swiftcast",
+      "level": null,
+      "desc": "迅速魔のリキャストタイムを40秒に短縮する。"
+     }
+    ],
+    "pets": []
+   },
+   "actions": {
+    "7559": {
+     "id": 7559,
+     "name": "堅実魔",
+     "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Surecast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 44,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7561": {
+     "id": 7561,
+     "name": "迅速魔",
+     "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Swiftcast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "fromGuide": [
+      "リキャスト 60→40"
+     ],
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 18,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7562": {
+     "id": 7562,
+     "name": "ルーシッドドリーム",
+     "desc": "自身のＭＰを継続回復する。\n効果量：55　効果時間：21秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Lucid_Dreaming.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 45,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 14,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7568": {
+     "id": 7568,
+     "name": "エスナ",
+     "desc": "対象にかかった一部の弱体効果を1つ解除する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Esuna.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 10,
+     "forJob": true,
+     "isRole": true,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 400,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7571": {
+     "id": 7571,
+     "name": "救出",
+     "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Rescue.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 48,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "16472": {
+     "id": 16472,
+     "name": "影身具現",
+     "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+     "icon": "../public/fankit/battle-pve/03_DRK/Living_Shadow.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ディセスティーム実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "16560": {
+     "id": 16560,
+     "name": "リポーズ",
+     "desc": "対象に睡眠を付与する。　効果時間：30秒\n実行後にオートアタックを停止する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Role_Actions/Repose.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 2500,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 8,
+     "forJob": true,
+     "isRole": true,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 600,
+     "range": 30,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24284": {
+     "id": 24284,
+     "name": "ディアグノシス",
+     "desc": "対象のＨＰを回復する。　回復力：450",
+     "icon": "../public/fankit/battle-pve/21_SGE/Diagnosis.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 1500,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 2,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 400,
+     "range": 30,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 450,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24285": {
+     "id": 24285,
+     "name": "カルディア",
+     "desc": "自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。　効果時間：永続\n効果中に特定の攻撃魔法を命中させるとカルディア［被］の対象を回復する。　回復力：170",
+     "icon": "../public/fankit/battle-pve/21_SGE/Kardia.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 5000,
+     "cooldownGroup": 2,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 4,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24286": {
+     "id": 24286,
+     "name": "プログノシス",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300",
+     "icon": "../public/fankit/battle-pve/21_SGE/Prognosis.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 2000,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 10,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 700,
+     "range": 0,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 20,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 300,
+      "party": true
+     },
+     "replaces": []
+    },
+    "24287": {
+     "id": 24287,
+     "name": "エゲイロー",
+     "desc": "対象を衰弱状態で蘇生する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Egeiro.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 8000,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 12,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 2400,
+     "range": 30,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24290": {
+     "id": 24290,
+     "name": "エウクラシア",
+     "desc": "自身を強化して特定の魔法を変化させる。　効果時間：永続\n「ドシスIII」が「エウクラシア・ドシスIII」に変化する。\n「ディスクラシアII」が「エウクラシア・ディスクラシア」に変化する。\n「ディアグノシス」が「エウクラシア・ディアグノシス」に変化する。\n「プログノシス」が「エウクラシア・プログノシスII」に変化する。\n変化した魔法を実行すると効果が解除される。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasia.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1000,
+     "fromGuide": [
+      "リキャスト 2.5→1"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24291": {
+     "id": 24291,
+     "name": "エウクラシア・ディアグノシス",
+     "desc": "対象のＨＰを回復する。　回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nエウクラシア・ディアグノシス効果：回復量の180％分のダメージを軽減する。　効果時間：30秒\nエウクラシア・プログノシスおよび学者の鼓舞効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス［強］」を付与する。\nエウクラシア・ディアグノシス［強］効果：回復量の180％分のダメージを軽減する。　効果時間：30秒\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとディアグノシスがエウクラシア・ディアグノシスに変化する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Diagnosis.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→800"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 800,
+     "range": 30,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "requires": "エウクラシア",
+      "heal": 300,
+      "party": false
+     },
+     "replaces": [
+      24284
+     ]
+    },
+    "24292": {
+     "id": 24292,
+     "name": "エウクラシア・プログノシス",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Prognosis.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→800"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 800,
+     "range": 0,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 20,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "requires": "エウクラシア",
+      "heal": 100,
+      "party": true
+     },
+     "replaces": [
+      24286
+     ]
+    },
+    "24294": {
+     "id": 24294,
+     "name": "ソーテリア",
+     "desc": "自身に4スタックの「ソーテリア」を付与する。\n効果時間：15秒\nソーテリア効果：自身が「カルディア［被］」を付与した対象に対する、攻撃魔法と同時に発生するＨＰ回復効果の回復力を1.7倍にする。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Soteria.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "fromGuide": [
+      "リキャスト 90→60"
+     ],
+     "cooldownGroup": 15,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 35,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "ソーテリア",
+        "sec": 15,
+        "stacks": 4,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "24295": {
+     "id": 24295,
+     "name": "イカロス",
+     "desc": "敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Icarus.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 45000,
+     "cooldownGroup": 7,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 40,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": true,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24296": {
+     "id": 24296,
+     "name": "ドルオコレ",
+     "desc": "対象のＨＰを回復する。　回復力：600\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "icon": "../public/fankit/battle-pve/21_SGE/Druochole.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 45,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "cost": {
+       "gauge": "アダーガル",
+       "n": 1
+      },
+      "heal": 600,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24298": {
+     "id": 24298,
+     "name": "ケーラコレ",
+     "desc": "一定時間、自身と周囲のパーティメンバーの被ダメージを10％軽減させる。　効果時間：15秒\n「タウロコレ」とは同時に付与されない。\n追加効果：対象のＨＰを継続回復する。\n回復力：100　効果時間：15秒\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "icon": "../public/fankit/battle-pve/21_SGE/Kerachole.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 4,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "cost": {
+       "gauge": "アダーガル",
+       "n": 1
+      },
+      "hot": {
+       "potency": 100,
+       "sec": 15
+      }
+     },
+     "replaces": []
+    },
+    "24299": {
+     "id": 24299,
+     "name": "イックソコレ",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "icon": "../public/fankit/battle-pve/21_SGE/Ixochole.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 5,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 52,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 20,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "cost": {
+       "gauge": "アダーガル",
+       "n": 1
+      },
+      "heal": 400,
+      "party": true
+     },
+     "replaces": []
+    },
+    "24300": {
+     "id": 24300,
+     "name": "ゾーエ",
+     "desc": "効果時間中に実行する1回の回復魔法の回復量を1.5倍にする。\n効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Zoe.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "fromGuide": [
+      "リキャスト 120→90"
+     ],
+     "cooldownGroup": 20,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 56,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24301": {
+     "id": 24301,
+     "name": "ペプシス",
+     "desc": "自身と周囲のパーティメンバーを対象とする。\n自身が対象に付与した「エウクラシア・ディアグノシス」または「エウクラシア・プログノシス」を解除する代わりに、対象のＨＰを回復する。\nエウクラシア・ディアグノシス効果中の回復力：450\nエウクラシア・プログノシス効果中の回復力：350\n自身が対象にエウクラシア・ディアグノシスまたはエウクラシア・プログノシスを付与していない場合は効果無し。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Pepsis.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 3,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 58,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 20,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24302": {
+     "id": 24302,
+     "name": "ピュシスII",
+     "desc": "自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：130　効果時間：15秒\n追加効果：対象が受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Physis_II.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 12,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "hot": {
+       "potency": 130,
+       "sec": 15
+      }
+     },
+     "replaces": []
+    },
+    "24303": {
+     "id": 24303,
+     "name": "タウロコレ",
+     "desc": "自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。　回復力：700\n追加効果：対象の被ダメージを10％軽減させる。\n効果時間：15秒\n「ケーラコレ」とは同時に付与されない。\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "icon": "../public/fankit/battle-pve/21_SGE/Taurochole.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 45000,
+     "cooldownGroup": 8,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 62,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "cost": {
+       "gauge": "アダーガル",
+       "n": 1
+      },
+      "heal": 700,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24305": {
+     "id": 24305,
+     "name": "ハイマ",
+     "desc": "自身またはパーティメンバーひとりを対象として、回復力300相当のダメージを軽減するバリアを付与し、さらに5スタックの「ハイマの印」を付与する。　効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：150×「ハイマの印」の残スタック数",
+     "icon": "../public/fankit/battle-pve/21_SGE/Haima.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 21,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 150,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24309": {
+     "id": 24309,
+     "name": "リゾーマタ",
+     "desc": "自身に「アダーガル」を付与する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Rhizomata.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 16,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 74,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "アダーガル",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "24310": {
+     "id": 24310,
+     "name": "ホーリズム",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n追加効果：自身と周囲のパーティメンバーの被ダメージを10％軽減させる。　効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Holos.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 19,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 76,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 300,
+      "party": true
+     },
+     "replaces": []
+    },
+    "24311": {
+     "id": 24311,
+     "name": "パンハイマ",
+     "desc": "自身と周囲のパーティメンバーに、回復力200相当のダメージを軽減するバリアを付与し、さらに5スタックの「パンハイマの印」を付与する。　効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「パンハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「パンハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：100×「パンハイマの印」の残スタック数",
+     "icon": "../public/fankit/battle-pve/21_SGE/Panhaima.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 100,
+      "party": true
+     },
+     "replaces": []
+    },
+    "24312": {
+     "id": 24312,
+     "name": "ドシスIII",
+     "desc": "対象に無属性魔法攻撃。　威力：380\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "icon": "../public/fankit/battle-pve/21_SGE/Dosis_III.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 1500,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 400,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 380
+     },
+     "eff": {
+      "heal": 170,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24313": {
+     "id": 24313,
+     "name": "フレグマIII",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：690\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Phlegma_III.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 14,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 400,
+     "range": 6,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 690
+     },
+     "eff": {
+      "heal": 170,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24314": {
+     "id": 24314,
+     "name": "エウクラシア・ドシスIII",
+     "desc": "対象に無属性の継続ダメージを付与する。\n威力：90　効果時間：30秒\n「エウクラシア・ディスクラシア」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとドシスIIIがエウクラシア・ドシスIIIに変化する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Dosis_III.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→400"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 400,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 90,
+      "dot": {
+       "potency": 90,
+       "sec": 30
+      }
+     },
+     "eff": {
+      "requires": "エウクラシア",
+      "heal": 170,
+      "party": false
+     },
+     "replaces": [
+      24312
+     ]
+    },
+    "24315": {
+     "id": 24315,
+     "name": "ディスクラシアII",
+     "desc": "自身の周囲の敵に無属性範囲魔法攻撃。　威力：170\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "icon": "../public/fankit/battle-pve/21_SGE/Dyskrasia_II.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 400,
+     "range": 0,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 170
+     },
+     "eff": {
+      "heal": 170,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24316": {
+     "id": 24316,
+     "name": "トキシコンII",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：380\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」",
+     "icon": "../public/fankit/battle-pve/21_SGE/Toxikon_II.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 380
+     },
+     "eff": {
+      "cost": {
+       "gauge": "アダースティング",
+       "n": 1
+      },
+      "heal": 170,
+      "party": false
+     },
+     "replaces": []
+    },
+    "24317": {
+     "id": 24317,
+     "name": "クラーシス",
+     "desc": "自身またはパーティメンバーひとりを対象とする。\n対象が受けるＨＰ回復効果を20％上昇させる。\n効果時間：10秒",
+     "icon": "../public/fankit/battle-pve/21_SGE/Krasis.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 13,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24318": {
+     "id": 24318,
+     "name": "プネウマ",
+     "desc": "対象に向かって前方直線範囲無属性魔法攻撃。\n威力：380\n2体目以降の対象への威力は40％減少する。\n追加効果：自身と周囲20m以内のパーティメンバーのＨＰを回復する。\n回復力：600\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Pneuma.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 1500,
+     "recastMs": 120000,
+     "cooldownGroup": 23,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 90,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 700,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 25,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 380
+     },
+     "eff": {
+      "heal": 600,
+      "party": false
+     },
+     "replaces": []
+    },
+    "25757": {
+     "id": 25757,
+     "name": "シャドウブリンガー",
+     "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+     "icon": "../public/fankit/battle-pve/03_DRK/Shadowbringer.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 23,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 600
+     },
+     "eff": {
+      "requires": "暗黒"
+     },
+     "replaces": []
+    },
+    "37032": {
+     "id": 37032,
+     "name": "エウクラシア・ディスクラシア",
+     "desc": "自身の周囲の敵に無属性の継続ダメージを付与する。\n威力：40　効果時間：30秒\n「エウクラシア・ドシスIII」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとディスクラシアIIがエウクラシア・ディスクラシアに変化する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Dyskrasia.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→400"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 400,
+     "range": 0,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 40,
+      "dot": {
+       "potency": 40,
+       "sec": 30
+      }
+     },
+     "eff": {
+      "requires": "エウクラシア",
+      "heal": 170,
+      "party": false
+     },
+     "replaces": [
+      24315
+     ]
+    },
+    "37033": {
+     "id": 37033,
+     "name": "プシュケー",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：690\n2体目以降の対象への威力は50％減少する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Psyche.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 10,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 690
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "37034": {
+     "id": 37034,
+     "name": "エウクラシア・プログノシスII",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の360％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとプログノシスがエウクラシア・プログノシスIIに変化する。",
+     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Prognosis_II.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "MP 0→800"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 800,
+     "range": 0,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 20,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "requires": "エウクラシア",
+      "heal": 100,
+      "party": true
+     },
+     "replaces": [
+      24292
+     ]
+    },
+    "37035": {
+     "id": 37035,
+     "name": "フィロソフィア",
+     "desc": "一定時間、自身の回復魔法の回復量を20％増加させる。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに「エウダイモニア」を付与する。　効果時間：20秒\n効果中に魔法を命中させるとエウダイモニアの対象を回復する。\n回復力：150",
+     "icon": "../public/fankit/battle-pve/21_SGE/Philosophia.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 180000,
+     "cooldownGroup": 25,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 100,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    }
+   },
+   "statuses": {
+    "2959": {
+     "id": 2959,
+     "name": "奥義波切実行可",
+     "icon": "../public/icons/statuses/213313.png"
+    },
+    "3855": {
+     "id": 3855,
+     "name": "残心実行可",
+     "icon": "../public/icons/statuses/213318.png"
+    },
+    "3856": {
+     "id": 3856,
+     "name": "天道",
+     "icon": "../public/icons/statuses/213319.png"
+    }
+   },
+   "statusIcons": {
+    "クルセードスタンス": "../public/icons/statuses/210402.png",
+    "プロテス": "../public/icons/statuses/210405.png",
+    "堅実魔": "../public/icons/statuses/210452.png",
+    "迅速魔": "../public/icons/statuses/210454.png",
+    "アイ・フォー・アイ": "../public/icons/statuses/213918.png",
+    "シールドウォール": "../public/icons/statuses/216306.png",
+    "ストロングホールド": "../public/icons/statuses/216306.png",
+    "ラストバスティオン": "../public/icons/statuses/216306.png",
+    "原初の大地": "../public/icons/statuses/216306.png",
+    "ダークフォース": "../public/icons/statuses/216306.png",
+    "ルーシッドドリーム": "../public/icons/statuses/213909.png",
+    "慈愛": "../public/icons/statuses/213910.png",
+    "ソウルガンメタル": "../public/icons/statuses/216306.png",
+    "調和": "../public/icons/statuses/214816.png",
+    "カルディア": "../public/icons/statuses/212951.png",
+    "カルディア［被］": "../public/icons/statuses/212952.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "エウクラシア・ディアグノシス": "../public/icons/statuses/212954.png",
+    "エウクラシア・ディアグノシス［強］": "../public/icons/statuses/212955.png",
+    "エウクラシア・プログノシス": "../public/icons/statuses/212954.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "ハイマ": "../public/icons/statuses/212958.png",
+    "パンハイマ": "../public/icons/statuses/212959.png",
+    "エウクラシア・ドシス": "../public/icons/statuses/212960.png",
+    "エウクラシア・ドシスII": "../public/icons/statuses/212961.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
+    "ピュシス": "../public/icons/statuses/212963.png",
+    "ケーラコレ": "../public/icons/statuses/212964.png",
+    "タウロコレ": "../public/icons/statuses/212965.png",
+    "ピュシスII": "../public/icons/statuses/212966.png",
+    "ピュシスII［被］": "../public/icons/statuses/212967.png",
+    "クラーシス": "../public/icons/statuses/212968.png",
+    "プネウマ": "../public/icons/statuses/212969.png",
+    "ハイマの印": {
+     "icon": "../public/icons/statuses/217585.png",
+     "max": 5,
+     "base": 217585
+    },
+    "パンハイマの印": {
+     "icon": "../public/icons/statuses/217355.png",
+     "max": 5,
+     "base": 217355
+    },
+    "ルヴェユール・ドシスIII": "../public/icons/statuses/212962.png",
+    "ケーラコレ［回］": "../public/icons/statuses/212970.png",
+    "ホーリズム": "../public/icons/statuses/212971.png",
+    "●ゾーエ": "../public/icons/statuses/212957.png",
+    "トキシコン": "../public/icons/statuses/214908.png",
+    "アダースティング": "../public/icons/statuses/214909.png",
+    "カルディア[被]": "../public/icons/statuses/212952.png",
+    "メソテース": "../public/icons/statuses/214910.png",
+    "リュペー": "../public/icons/statuses/214912.png",
+    "ホーリズム［バリア］": "../public/icons/statuses/212972.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
+    "エウダイモニア": "../public/icons/statuses/212975.png",
+    "プシュケー": "../public/icons/statuses/214746.png",
+    "ストンラスキン": "../public/icons/statuses/214749.png",
+    "ディアブロシス": "../public/icons/statuses/214750.png",
+    "ランパート": "../public/icons/statuses/210152.png",
+    "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
+    "アイアンウィル": "../public/icons/statuses/212506.png",
+    "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
+    "ホルムギャング": "../public/icons/statuses/210255.png",
+    "ディフェンダー": "../public/icons/statuses/212551.png",
+    "ホークアイ": "../public/icons/statuses/210351.png",
+    "猛者の撃": "../public/icons/statuses/210354.png",
+    "乱れ撃ち": "../public/icons/statuses/210356.png",
+    "賢人のバラード": "../public/icons/statuses/212603.png",
+    "軍神のパイオン": "../public/icons/statuses/212605.png",
+    "バトルボイス": "../public/icons/statuses/212601.png",
+    "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
+    "神速魔": "../public/icons/statuses/212627.png",
+    "ファイガ効果アップ": "../public/icons/statuses/210460.png",
+    "マバリア": "../public/icons/statuses/210456.png",
+    "サークル・オブ・ドゥーム": "../public/icons/statuses/210158.png",
+    "エーテルフロー": {
+     "icon": "../public/icons/statuses/210501.png",
+     "max": 3,
+     "base": 210501
+    },
+    "フェイイルミネーション": "../public/icons/statuses/212828.png",
+    "ロイヤルガード": "../public/icons/statuses/213603.png",
+    "黒魔紋": "../public/icons/statuses/212653.png",
+    "ブラッドウェポン": {
+     "icon": "../public/icons/statuses/217926.png",
+     "max": 5,
+     "base": 217926
+    },
+    "グリットスタンス": "../public/icons/statuses/213108.png",
+    "ダークマインド": "../public/icons/statuses/213114.png",
+    "ソルトアース": "../public/icons/statuses/213104.png",
+    "暗黒": "../public/icons/statuses/213106.png",
+    "ダークアーツ": "../public/icons/statuses/213107.png",
+    "転化": "../public/icons/statuses/212805.png",
+    "応急戦術": "../public/icons/statuses/212806.png",
+    "トランス・バハムート": "../public/icons/statuses/212680.png",
+    "リビングデッド": "../public/icons/statuses/213115.png",
+    "アーゼマの均衡": "../public/icons/statuses/213204.png",
+    "ハルオーネの槍": "../public/icons/statuses/213207.png",
+    "ライトスピード": "../public/icons/statuses/213220.png",
+    "シナストリー": "../public/icons/statuses/213223.png",
+    "旅神のメヌエット": "../public/icons/statuses/212610.png",
+    "原初の解放": {
+     "icon": "../public/icons/statuses/217247.png",
+     "max": 3,
+     "base": 217247
+    },
+    "ブラックナイト": "../public/icons/statuses/213118.png",
+    "コースティックバイト": "../public/icons/statuses/212616.png",
+    "ストームバイト": "../public/icons/statuses/212617.png",
+    "地神のミンネ": "../public/icons/statuses/212618.png",
+    "三連魔": {
+     "icon": "../public/icons/statuses/219621.png",
+     "max": 3,
+     "base": 219621
+    },
+    "シンエアー": "../public/icons/statuses/212631.png",
+    "インドゥルゲンティア": "../public/icons/statuses/212637.png",
+    "連環計": "../public/icons/statuses/212809.png",
+    "星の支配者": "../public/icons/statuses/213241.png",
+    "彼岸花": "../public/icons/statuses/213304.png",
+    "明鏡止水": {
+     "icon": "../public/icons/statuses/219641.png",
+     "max": 3,
+     "base": 219641
+    },
+    "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "巨星の支配者": "../public/icons/statuses/213242.png",
+    "トゥルーノース": "../public/icons/statuses/213903.png",
+    "風月": "../public/icons/statuses/213311.png",
+    "風花": "../public/icons/statuses/213312.png",
+    "残心実行可": "../public/icons/statuses/213318.png",
+    "レクイエスカット": {
+     "icon": "../public/icons/statuses/218345.png",
+     "max": 4,
+     "base": 218345
+    },
+    "ノー・マーシー": "../public/icons/statuses/213601.png",
+    "カモフラージュ": "../public/icons/statuses/213602.png",
+    "ボーライド": "../public/icons/statuses/213606.png",
+    "ソニックブレイク": "../public/icons/statuses/213607.png",
+    "バウショック": "../public/icons/statuses/213608.png",
+    "ジャギュラーリップ実行可": "../public/icons/statuses/213611.png",
+    "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
+    "アイガウジ実行可": "../public/icons/statuses/213613.png",
+    "原初の猛り": "../public/icons/statuses/212558.png",
+    "ディア": "../public/icons/statuses/212635.png",
+    "テンパランス": "../public/icons/statuses/212634.png",
+    "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
+    "ディヴィネーション": "../public/icons/statuses/213245.png",
+    "コンバガ": "../public/icons/statuses/213248.png",
+    "ホロスコープ": "../public/icons/statuses/213251.png",
+    "ホロスコープ・ヘリオス": "../public/icons/statuses/213252.png",
+    "ニュートラルセクト": "../public/icons/statuses/213253.png",
+    "蠱毒法": "../public/icons/statuses/212812.png",
+    "秘策": "../public/icons/statuses/212813.png",
+    "原初の混沌": "../public/icons/statuses/212560.png",
+    "ブルータルシェル": "../public/icons/statuses/213614.png",
+    "ロイエ実行可": "../public/icons/statuses/212522.png",
+    "軍神の加護": "../public/icons/statuses/212619.png",
+    "軍神の契約": "../public/icons/statuses/212620.png",
+    "トルバドゥール": "../public/icons/statuses/212615.png",
+    "ブラッドデリリアム": {
+     "icon": "../public/icons/statuses/217147.png",
+     "max": 3,
+     "base": 217147
+    },
+    "プライマルレンド実行可": "../public/icons/statuses/212566.png",
+    "原初の覚悟": "../public/icons/statuses/212556.png",
+    "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
+    "戦嵐": "../public/icons/statuses/212561.png",
+    "原初の血気": "../public/icons/statuses/212562.png",
+    "原初の血潮": "../public/icons/statuses/212563.png",
+    "オブレーション": "../public/icons/statuses/213123.png",
+    "ハート・オブ・コランダム": "../public/icons/statuses/213615.png",
+    "カタルシス・オブ・コランダム": "../public/icons/statuses/213617.png",
+    "ハイパーヴェロシティ実行可": "../public/icons/statuses/213618.png",
+    "ブラストアロー実行可": "../public/icons/statuses/212621.png",
+    "ルインジャ実行可": "../public/icons/statuses/212690.png",
+    "守りの光": "../public/icons/statuses/212691.png",
+    "シアリングライト": "../public/icons/statuses/212699.png",
+    "スリップストリーム": "../public/icons/statuses/212695.png",
+    "リタージー・オブ・ベル": {
+     "icon": "../public/icons/statuses/218373.png",
+     "max": 5,
+     "base": 218373
+    },
+    "マクロコスモス": "../public/icons/statuses/213263.png",
+    "光神のフィナーレ": "../public/icons/statuses/212622.png",
+    "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
+    "スリップストリーム実行可": "../public/icons/statuses/212697.png",
+    "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
+    "奥義波切実行可": "../public/icons/statuses/213313.png",
+    "コンフィテオル実行可": "../public/icons/statuses/212520.png",
+    "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "トランス・フェニックス": "../public/icons/statuses/214965.png",
+    "ゲベート実行可": "../public/icons/statuses/212523.png",
+    "グラブカッマー実行可": "../public/icons/statuses/212524.png",
+    "ブレード・オブ・オナー実行可": "../public/icons/statuses/213052.png",
+    "ダムネーション": "../public/icons/statuses/212568.png",
+    "原初の鼓動": {
+     "icon": "../public/icons/statuses/218147.png",
+     "max": 3,
+     "base": 218147
+    },
+    "ルイネーター実行可": "../public/icons/statuses/212569.png",
+    "シャドウヴィジル": "../public/icons/statuses/213125.png",
+    "ディセスティーム実行可": "../public/icons/statuses/213126.png",
+    "グレートネビュラ": "../public/icons/statuses/213619.png",
+    "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
+    "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "ゴアブレード実行可": "../public/icons/statuses/213053.png",
+    "燕返し実行可": "../public/icons/statuses/213315.png",
+    "天道": "../public/icons/statuses/213319.png",
+    "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
+    "光神のアンコール実行可": "../public/icons/statuses/213077.png",
+    "サンダー系魔法実行可": "../public/icons/statuses/212660.png",
+    "ハイサンダー": "../public/icons/statuses/212661.png",
+    "シアリングスパーク実行可": "../public/icons/statuses/212750.png",
+    "ルクス・ソラリス実行可": "../public/icons/statuses/212751.png",
+    "グレアジャ実行可": {
+     "icon": "../public/icons/statuses/218669.png",
+     "max": 3,
+     "base": 218669
+    },
+    "ディヴァインカレス実行可": "../public/icons/statuses/212640.png",
+    "埋伏の毒実行可": "../public/icons/statuses/212818.png",
+    "埋伏の毒": "../public/icons/statuses/212819.png",
+    "セラフィズム": "../public/icons/statuses/212820.png",
+    "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
+    "オラクル実行可": "../public/icons/statuses/213264.png",
+    "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "原初の激震実行可": "../public/icons/statuses/212571.png",
+    "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
+    "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
+   },
+   "bars": {
+    "hb1": {
+     "job": [
+      {
+       "kind": "macro",
+       "no": 46
+      },
+      {
+       "kind": "action",
+       "id": 24286
+      },
+      {
+       "kind": "macro",
+       "no": 48
+      },
+      {
+       "kind": "action",
+       "id": 24299
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 24301
+      },
+      {
+       "kind": "action",
+       "id": 24294
+      },
+      {
+       "kind": "action",
+       "id": 7562
+      },
+      {
+       "kind": "action",
+       "id": 37035
+      },
+      {
+       "kind": "macro",
+       "no": 49
+      },
+      {
+       "kind": "action",
+       "id": 24312,
+       "from": 24283
+      },
+      {
+       "kind": "action",
+       "id": 24316,
+       "from": 24304
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24313,
+       "from": 24289
+      },
+      {
+       "kind": "action",
+       "id": 24315,
+       "from": 24297
+      },
+      {
+       "kind": "action",
+       "id": 24318
+      },
+      {
+       "kind": "action",
+       "id": 37033
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24317
+      },
+      {
+       "kind": "action",
+       "id": 24302
+      },
+      {
+       "kind": "action",
+       "id": 24309
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb3": {
+     "job": [
+      {
+       "kind": "macro",
+       "no": 51
+      },
+      {
+       "kind": "action",
+       "id": 24311
+      },
+      {
+       "kind": "macro",
+       "no": 40
+      },
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24310
+      },
+      {
+       "kind": "action",
+       "id": 24300
+      },
+      {
+       "kind": "action",
+       "id": 24298
+      },
+      null,
+      {
+       "kind": "macro",
+       "no": 47
+      },
+      null
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb4": {
+     "job": [
+      {
+       "kind": "macro",
+       "no": 52
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      {
+       "kind": "macro",
+       "no": 20
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "macro",
+       "no": 60
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24290
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 17
+      }
+     ],
+     "shared": [
+      {
+       "kind": "action",
+       "id": 7571
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 2
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "hb5": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 16472
+      },
+      {
+       "kind": "action",
+       "id": 25757
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb6": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "macro",
+       "no": 346
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb7": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 30
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "macro",
+       "no": 296
+      },
+      {
+       "kind": "macro",
+       "no": 297
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 307
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "macro",
+       "no": 309
+      },
+      {
+       "kind": "macro",
+       "no": 310
+      },
+      {
+       "kind": "macro",
+       "no": 298
+      },
+      {
+       "kind": "macro",
+       "no": 299
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb9": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 11
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 258
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb10": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "macro",
+       "no": 257
+      },
+      {
+       "kind": "macro",
+       "no": 256
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24313,
+       "from": 24289
+      },
+      {
+       "kind": "action",
+       "id": 24290
+      },
+      {
+       "kind": "action",
+       "id": 24302,
+       "from": 24288
+      },
+      {
+       "kind": "action",
+       "id": 7562
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "action",
+       "id": 24287
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      {
+       "kind": "action",
+       "id": 24286
+      },
+      {
+       "kind": "action",
+       "id": 7568
+      },
+      {
+       "kind": "action",
+       "id": 24285
+      },
+      {
+       "kind": "action",
+       "id": 16560
+      },
+      {
+       "kind": "action",
+       "id": 24312,
+       "from": 24283
+      },
+      {
+       "kind": "action",
+       "id": 24284
+      }
+     ],
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24310
+      },
+      {
+       "kind": "action",
+       "id": 24311
+      },
+      {
+       "kind": "action",
+       "id": 24305
+      },
+      {
+       "kind": "action",
+       "id": 24309
+      },
+      {
+       "kind": "action",
+       "id": 24303
+      },
+      {
+       "kind": "action",
+       "id": 24316,
+       "from": 24304
+      },
+      {
+       "kind": "action",
+       "id": 24300
+      },
+      {
+       "kind": "action",
+       "id": 24301
+      },
+      {
+       "kind": "action",
+       "id": 24298
+      },
+      {
+       "kind": "action",
+       "id": 24299
+      },
+      {
+       "kind": "action",
+       "id": 24315,
+       "from": 24297
+      },
+      {
+       "kind": "action",
+       "id": 7571
+      },
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      {
+       "kind": "action",
+       "id": 24296
+      },
+      {
+       "kind": "action",
+       "id": 24294
+      },
+      {
+       "kind": "action",
+       "id": 24295
+      }
+     ],
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb3": {
+     "job": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24317
+      },
+      {
+       "kind": "action",
+       "id": 24318
+      }
+     ],
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb7": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 24
+      },
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    }
+   },
+   "gauges": {
+    "JobHudGFF0": {
+     "index": 332,
+     "name": "エウクラシアゲージ",
+     "x": 36.875,
+     "y": 45.203556060791016,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 80,
+     "h": 80
+    },
+    "JobHudGFF1": {
+     "index": 333,
+     "name": "アダーガルゲージ",
+     "x": 37.16145706176758,
+     "y": 52.082359313964844,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 200,
+     "h": 114
+    }
+   },
+   "gauge": {
+    "names": [
+     "JobHudGFF0",
+     "JobHudGFF1"
+    ],
+    "layouts": {
+     "JobHudGFF0": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudGFF0",
+          "u": 0,
+          "v": 80,
+          "w": 40,
+          "h": 96
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 40,
+          "v": 80,
+          "w": 40,
+          "h": 96
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudGFF0",
+          "u": 0,
+          "v": 0,
+          "w": 36,
+          "h": 56
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 36,
+          "v": 0,
+          "w": 36,
+          "h": 56
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 0,
+          "v": 176,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 0,
+          "v": 56,
+          "w": 24,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 40,
+          "v": 176,
+          "w": 40,
+          "h": 40
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudGFF0",
+          "u": 24,
+          "v": 56,
+          "w": 24,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF0",
+          "u": 48,
+          "v": 56,
+          "w": 24,
+          "h": 24
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 56,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 4,
+          "y": 2,
+          "w": 40,
+          "h": 96,
+          "alpha": 0,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "multiply": [
+           50,
+           50,
+           50
+          ],
+          "add": [
+           -100,
+           -200,
+           200
+          ],
+          "partListId": 1,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 96,
+          "alpha": 51,
+          "scaleX": 0.55,
+          "scaleY": 0.55,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "multiply": [
+           60,
+           60,
+           60
+          ],
+          "add": [
+           -180,
+           -200,
+           200
+          ],
+          "partListId": 1,
+          "partId": 1,
+          "flipH": true,
+          "flipV": true
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 10,
+          "y": -4,
+          "w": 40,
+          "h": 96,
+          "alpha": 0,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "multiply": [
+           50,
+           50,
+           50
+          ],
+          "add": [
+           0,
+           0,
+           200
+          ],
+          "partListId": 1,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 56,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 24,
+          "originY": 90,
+          "add": [
+           0,
+           0,
+           100
+          ],
+          "partListId": 2,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 40,
+        "originY": 40
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 2,
+        "x": 28,
+        "y": 28,
+        "w": 24,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1.4,
+        "scaleY": 1.4,
+        "rotation": 0,
+        "originX": 12,
+        "originY": 12,
+        "partListId": 2,
+        "partId": 3,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 4,
+        "parent": 2,
+        "type": 1001,
+        "x": 22,
+        "y": -20,
+        "w": 36,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 135,
+        "originX": 18,
+        "originY": 60,
+        "add": [
+         50,
+         80,
+         80
+        ]
+       },
+       {
+        "id": 5,
+        "parent": 2,
+        "type": 1001,
+        "x": 22,
+        "y": -20,
+        "w": 36,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 225,
+        "originX": 18,
+        "originY": 60
+       },
+       {
+        "id": 6,
+        "parent": 2,
+        "type": 1001,
+        "x": 22,
+        "y": -20,
+        "w": 36,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 315,
+        "originX": 18,
+        "originY": 60
+       },
+       {
+        "id": 7,
+        "parent": 2,
+        "type": 1001,
+        "x": 22,
+        "y": -20,
+        "w": 36,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 45,
+        "originX": 18,
+        "originY": 60
+       },
+       {
+        "id": 8,
+        "parent": 2,
+        "type": 2,
+        "x": 32,
+        "y": -10,
+        "w": 36,
+        "h": 52,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": -45,
+        "originX": 18,
+        "originY": 60,
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 9,
+        "parent": 2,
+        "type": 2,
+        "x": 12,
+        "y": -10,
+        "w": 36,
+        "h": 52,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 45,
+        "originX": 18,
+        "originY": 60,
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 10,
+        "parent": 2,
+        "type": 2,
+        "x": 12,
+        "y": -30,
+        "w": 36,
+        "h": 52,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 135,
+        "originX": 18,
+        "originY": 60,
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 11,
+        "parent": 2,
+        "type": 2,
+        "x": 32,
+        "y": -30,
+        "w": 36,
+        "h": 52,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 225,
+        "originX": 18,
+        "originY": 60,
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 12,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 2,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 13,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 2,
+        "partId": 2,
+        "flipH": true,
+        "flipV": false
+       },
+       {
+        "id": 14,
+        "parent": 2,
+        "type": 2,
+        "x": 40,
+        "y": 0,
+        "w": 40,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 2,
+        "partId": 2,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 15,
+        "parent": 1,
+        "type": 1,
+        "x": 28,
+        "y": 28,
+        "w": 24,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 16,
+        "parent": 15,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 12,
+        "originY": 12,
+        "partListId": 3,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 17,
+        "parent": 15,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 12,
+        "originY": 12,
+        "partListId": 3,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       }
+      ]
+     },
+     "JobHudGFF1": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudGFF1",
+          "u": 0,
+          "v": 0,
+          "w": 200,
+          "h": 56
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 0,
+          "v": 56,
+          "w": 44,
+          "h": 68
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 44,
+          "v": 56,
+          "w": 44,
+          "h": 68
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 88,
+          "v": 56,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 124,
+          "v": 56,
+          "w": 20,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 144,
+          "v": 56,
+          "w": 20,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 89,
+          "v": 100,
+          "w": 8,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 99,
+          "v": 100,
+          "w": 30,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 130,
+          "v": 100,
+          "w": 22,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 152,
+          "v": 100,
+          "w": 22,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 174,
+          "v": 100,
+          "w": 22,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 178,
+          "v": 124,
+          "w": 22,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 1,
+          "v": 124,
+          "w": 142,
+          "h": 24
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 124,
+          "v": 80,
+          "w": 20,
+          "h": 20
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 144,
+          "v": 80,
+          "w": 20,
+          "h": 20
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 155,
+          "v": 125,
+          "w": 22,
+          "h": 22
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 164,
+          "v": 56,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 164,
+          "v": 88,
+          "w": 12,
+          "h": 12
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 176,
+          "v": 88,
+          "w": 24,
+          "h": 12
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudGFF1",
+          "u": 0,
+          "v": 148,
+          "w": 50,
+          "h": 50
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 50,
+          "v": 148,
+          "w": 50,
+          "h": 50
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 100,
+          "v": 148,
+          "w": 50,
+          "h": 50
+         },
+         {
+          "texture": "JobHudGFF1",
+          "u": 150,
+          "v": 148,
+          "w": 50,
+          "h": 50
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 32,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 32,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 4,
+        "parts": [
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 0,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 20,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 40,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 60,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 80,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 100,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 120,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 44,
+          "h": 54,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 10,
+          "y": -1,
+          "w": 24,
+          "h": 12,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 0.2,
+          "rotation": 20,
+          "originX": 12,
+          "originY": 6,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 18,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": 10,
+          "y": -1,
+          "w": 24,
+          "h": 12,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 0.2,
+          "rotation": 110,
+          "originX": 12,
+          "originY": 6,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 18,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 4,
+          "y": -6,
+          "w": 36,
+          "h": 36,
+          "alpha": 0,
+          "scaleX": 1.4,
+          "scaleY": 1.4,
+          "rotation": 90,
+          "originX": 18,
+          "originY": 18,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 16,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 4,
+          "y": -6,
+          "w": 36,
+          "h": 36,
+          "alpha": 0,
+          "scaleX": 1.8,
+          "scaleY": 1.8,
+          "rotation": 220,
+          "originX": 18,
+          "originY": 18,
+          "add": [
+           0,
+           -150,
+           255
+          ],
+          "partListId": 1,
+          "partId": 15,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": -14,
+          "w": 44,
+          "h": 68,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 7,
+          "parent": 6,
+          "type": 2,
+          "x": -3,
+          "y": 18,
+          "w": 50,
+          "h": 50,
+          "alpha": 0,
+          "scaleX": 0.6,
+          "scaleY": 0.7,
+          "rotation": 0,
+          "originX": 25,
+          "originY": 25,
+          "partListId": 2,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 8,
+          "parent": 6,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 44,
+          "h": 68,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 9,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": -38,
+          "w": 44,
+          "h": 68,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 6,
+          "y": 15,
+          "w": 24,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1.6,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 12,
+          "originY": 6,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 18,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": -2,
+          "y": 0,
+          "w": 20,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "rotation": 0,
+          "originX": 10,
+          "originY": 10,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 16,
+          "y": -12,
+          "w": 20,
+          "h": 20,
+          "alpha": 63,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "rotation": 0,
+          "originX": 10,
+          "originY": 10,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 4,
+          "y": -4,
+          "w": 20,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 10,
+          "originY": 10,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 14,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": 6,
+          "y": 10,
+          "w": 24,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1.4,
+          "scaleY": 0.5,
+          "rotation": 90,
+          "originX": 0,
+          "originY": 6,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 18,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 7,
+          "parent": 1,
+          "type": 2,
+          "x": 20,
+          "y": -20,
+          "w": 24,
+          "h": 12,
+          "alpha": 0,
+          "scaleX": 0.2,
+          "scaleY": 0.1,
+          "rotation": 90,
+          "originX": 0,
+          "originY": 6,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 18,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 8,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 3,
+          "w": 36,
+          "h": 36,
+          "alpha": 0,
+          "scaleX": 2,
+          "scaleY": 2,
+          "rotation": 90,
+          "originX": 18,
+          "originY": 18,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 16,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 9,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 3,
+          "w": 36,
+          "h": 36,
+          "alpha": 255,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "rotation": 90,
+          "originX": 18,
+          "originY": 18,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 16,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 10,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 3,
+          "w": 36,
+          "h": 36,
+          "alpha": 255,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "rotation": 90,
+          "originX": 18,
+          "originY": 18,
+          "add": [
+           -200,
+           -100,
+           255
+          ],
+          "partListId": 1,
+          "partId": 16,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 11,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 12,
+          "parent": 1,
+          "type": 2,
+          "x": 8,
+          "y": 9,
+          "w": 20,
+          "h": 24,
+          "alpha": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 4,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 13,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 14,
+          "parent": 13,
+          "type": 2,
+          "x": -7,
+          "y": -4,
+          "w": 50,
+          "h": 50,
+          "alpha": 102,
+          "scaleX": 0.5,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 25,
+          "originY": 25,
+          "partListId": 2,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 15,
+          "parent": 13,
+          "type": 2,
+          "x": 8,
+          "y": 9,
+          "w": 20,
+          "h": 24,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 4,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 16,
+          "parent": 1,
+          "type": 2,
+          "x": 8,
+          "y": 9,
+          "w": 20,
+          "h": 24,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           100,
+           100,
+           100
+          ],
+          "partListId": 1,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1003,
+        "type": 5,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 4,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "multiply": [
+           80,
+           80,
+           80
+          ],
+          "add": [
+           0,
+           100,
+           100
+          ],
+          "partListId": 4,
+          "partId": 2,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 4,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1004,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 0,
+          "scaleX": 2.5,
+          "scaleY": 2.5,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           80,
+           80,
+           80
+          ]
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           50,
+           -50,
+           90
+          ],
+          "partListId": 3,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1005,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -80,
+           -30,
+           120
+          ],
+          "partListId": 3,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 114,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 114,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 1,
+        "x": 52,
+        "y": 0,
+        "w": 96,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 4,
+        "parent": 3,
+        "type": 1002,
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 5,
+        "parent": 3,
+        "type": 1002,
+        "x": 30,
+        "y": 0,
+        "w": 36,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 6,
+        "parent": 3,
+        "type": 1002,
+        "x": 60,
+        "y": 0,
+        "w": 36,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 7,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 12,
+        "w": 200,
+        "h": 60,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 8,
+        "parent": 2,
+        "type": 1,
+        "x": 28,
+        "y": 37,
+        "w": 144,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 9,
+        "parent": 8,
+        "type": 1,
+        "x": -12,
+        "y": 0,
+        "w": 22,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 10,
+        "parent": 9,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 22,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 9,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 11,
+        "parent": 9,
+        "type": 2,
+        "x": 4,
+        "y": 0,
+        "w": 12,
+        "h": 12,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 6,
+        "originY": 6,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 12,
+        "parent": 9,
+        "type": 2,
+        "x": -10,
+        "y": 2,
+        "w": 12,
+        "h": 12,
+        "alpha": 0,
+        "scaleX": 0.4,
+        "scaleY": 0.4,
+        "rotation": 0,
+        "originX": 6,
+        "originY": 6,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 13,
+        "parent": 9,
+        "type": 2,
+        "x": 4,
+        "y": 8,
+        "w": 12,
+        "h": 12,
+        "alpha": 255,
+        "scaleX": 0.88,
+        "scaleY": 0.88,
+        "rotation": 0,
+        "originX": 6,
+        "originY": 6,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 14,
+        "parent": 9,
+        "type": 2,
+        "x": -4,
+        "y": 8,
+        "w": 12,
+        "h": 12,
+        "alpha": 0,
+        "scaleX": 0.4,
+        "scaleY": 0.4,
+        "rotation": 0,
+        "originX": 6,
+        "originY": 6,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 15,
+        "parent": 9,
+        "type": 2,
+        "x": -8,
+        "y": 14,
+        "w": 12,
+        "h": 12,
+        "alpha": 25,
+        "scaleX": 0.46,
+        "scaleY": 0.46,
+        "rotation": 0,
+        "originX": 6,
+        "originY": 6,
+        "add": [
+         -100,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 16,
+        "parent": 9,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 22,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         -80,
+         0,
+         0
+        ],
+        "partListId": 1,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 17,
+        "parent": 8,
+        "type": 1,
+        "x": -144,
+        "y": 0,
+        "w": 144,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 18,
+        "parent": 17,
+        "type": 4,
+        "x": 144,
+        "y": 0,
+        "w": 146,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 7,
+        "nineGrid": [
+         0,
+         0,
+         2,
+         2
+        ]
+       },
+       {
+        "id": 19,
+        "parent": 17,
+        "type": 2,
+        "x": 144,
+        "y": 0,
+        "w": 144,
+        "h": 24,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         -20,
+         -20,
+         -20
+        ],
+        "partListId": 1,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 20,
+        "parent": 8,
+        "type": 4,
+        "x": 0,
+        "y": 0,
+        "w": 144,
+        "h": 24,
+        "alpha": 229,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 6,
+        "nineGrid": [
+         0,
+         0,
+         2,
+         2
+        ]
+       },
+       {
+        "id": 21,
+        "parent": 2,
+        "type": 1,
+        "x": 46,
+        "y": 60,
+        "w": 108,
+        "h": 54,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 22,
+        "parent": 21,
+        "type": 1001,
+        "x": 0,
+        "y": 0,
+        "w": 44,
+        "h": 54,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 23,
+        "parent": 21,
+        "type": 1001,
+        "x": 32,
+        "y": 0,
+        "w": 44,
+        "h": 54,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 24,
+        "parent": 21,
+        "type": 1001,
+        "x": 64,
+        "y": 0,
+        "w": 44,
+        "h": 54,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 25,
+        "parent": 1,
+        "type": 1,
+        "x": 20,
+        "y": 16,
+        "w": 160,
+        "h": 64,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 26,
+        "parent": 25,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 27,
+        "parent": 26,
+        "type": 1005,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 28,
+        "parent": 26,
+        "type": 1005,
+        "x": 20,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 29,
+        "parent": 26,
+        "type": 1005,
+        "x": 40,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 30,
+        "parent": 25,
+        "type": 1,
+        "x": 0,
+        "y": 32,
+        "w": 72,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 31,
+        "parent": 30,
+        "type": 1004,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 32,
+        "parent": 30,
+        "type": 1004,
+        "x": 20,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 33,
+        "parent": 30,
+        "type": 1004,
+        "x": 40,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 34,
+        "parent": 25,
+        "type": 1,
+        "x": 0,
+        "y": 23,
+        "w": 160,
+        "h": 20,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 35,
+        "parent": 34,
+        "type": 1003,
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 20,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     }
+    },
+    "textures": {
+     "JobHudGFF0": {
+      "path": "../public/icons/job-gauges/textures/JobHudGFF0.png",
+      "w": 160,
+      "h": 432,
+      "scale": 2
+     },
+     "JobHudGFF1": {
+      "path": "../public/icons/job-gauges/textures/JobHudGFF1.png",
+      "w": 400,
+      "h": 400,
+      "scale": 2
+     },
+     "JobHudSimple_StackA": {
+      "path": "../public/icons/job-gauges/textures/JobHudSimple_StackA.png",
+      "w": 128,
+      "h": 128,
+      "scale": 2
+     },
+     "Parameter_Gauge": {
+      "path": "../public/icons/job-gauges/textures/Parameter_Gauge.png",
+      "w": 320,
+      "h": 304,
+      "scale": 2
+     }
+    },
+    "sizes": {
+     "JobHudGFF0": [
+      80,
+      80
+     ],
+     "JobHudGFF1": [
+      200,
+      114
+     ]
+    }
+   },
+   "dmgUp": {},
+   "upgrade": {
+    "24283": 24312,
+    "24288": 24302,
+    "24289": 24313,
+    "24292": 37034,
+    "24293": 24314,
+    "24297": 24315,
+    "24304": 24316,
+    "24306": 24312,
+    "24307": 24313,
+    "24308": 24314
+   },
+   "jobSet": 40,
+   "buttonsAll": [
+    24284,
+    24285,
+    24286,
+    24287,
+    24290,
+    24294,
+    24295,
+    24296,
+    24298,
+    24299,
+    24300,
+    24301,
+    24302,
+    24303,
+    24305,
+    24309,
+    24310,
+    24311,
+    24312,
+    24313,
+    24315,
+    24316,
+    24317,
+    24318,
+    37033,
+    37035
+   ],
+   "unplaced": [],
+   "replaceGroups": {
+    "24284": [
+     24291
+    ],
+    "24286": [
+     24292
+    ],
+    "24292": [
+     37034
+    ],
+    "24312": [
+     24314
+    ],
+    "24315": [
+     37032
     ]
    },
    "splitDetected": []

@@ -64,7 +64,7 @@
     // バリアの残り（暗黒騎士のブラックナイト: 全部吸収されたらダークアーツ）。'self' / 'npc'
     shieldLeft: (who) => Arena.shieldLeft?.(who) ?? 0,
     // バリアの中身 { frac, left, name }（学者の展開戦術）と、味方に付けた効果を消す（深謀遠慮の策が発動したとき）
-    shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name),
+    shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name), unshield: (who) => Arena.unshield?.(who),
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP

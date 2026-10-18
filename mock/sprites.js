@@ -51,9 +51,11 @@
     feyWing: ['#f4fff0', '#c8f4c0', '#8edc9a', '#58b07a', '#2e6c50'], // エオスの蝶の翅
     seraph: ['#ffffff', '#eef6ff', '#c4dcf8', '#86aee0', '#44609e'], // セラフィムの白い体
     seraphWing: ['#ffffff', '#d8ecff', '#94c4f4', '#4a86d8', '#1e4a9c'], // セラフィムの青い羽根
+    sgeRobe: ['#ffffff', '#eef4f6', '#ccdce2', '#94aab4', '#5a6c76'], // 賢者の白いローブ
+    noulith: ['#ffffff', '#d8f8ff', '#8ae0f8', '#3aa8d8', '#1a5a88'], // 賢者のノウリス（青く光る刃）
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -794,6 +796,7 @@
     if (st.item === 'globe') { globe(F, h, dir, o, st); return; }
     if (st.item === 'bow') { bow(F, h, dir, o); return; }
     if (st.item === 'book') { book(F, h, dir, o, st); return; }
+    if (st.item === 'noulith') { nouliths(F, h, dir, o, st); return; }
     const b = add(h, dir, -down), t = add(h, dir, up), head = add(t, dir, 2.6);
     F.fill('wood', (m) => m.capsule(b.x, b.y, t.x, t.y, 0.9, 1.0), { k: 1.1 });
     const r = 1.9 + (o.orb ?? 0) * 0.8;
@@ -833,6 +836,16 @@
     const g = add(c, dir, 5 + (o.orb ?? 0) * 1.5), r = 1.4 + (o.orb ?? 0) * 1.1;
     if ((o.orb ?? 0) > 0.1) F.fill(st.orb, (m) => { m.ellipse(g.x, g.y, r, r); m.cut().ellipse(g.x, g.y, r * 0.5, r * 0.5).add(); }, { flat: true, line: false, k: 1 });
   }
+  // 賢者のノウリス: 手の先に扇のように並んで浮かぶ 4 枚の青い刃（魔法を使うと広がって光る）
+  function nouliths(F, h, dir, o, st) {
+    const n = perp(dir), spread = 2.6 + (o.orb ?? 0) * 1.6;
+    for (let i = 0; i < 4; i++) {
+      const k = i - 1.5, c = add(add(h, dir, 4.5 - Math.abs(k) * 0.9), n, k * spread);
+      const d = unit(dir.x + n.x * k * 0.25, dir.y + n.y * k * 0.25), nn = perp(d);
+      const tip = add(c, d, 3.4), back = add(c, d, -2.4), l = add(c, nn, -1.1), r = add(c, nn, 1.1);
+      F.fill(st.orb, (m) => m.poly([tip.x, tip.y, r.x, r.y, back.x, back.y, l.x, l.y]), { k: 1.2 });
+    }
+  }
   // ジョブごとの見た目: robe 服・trim 縁（袖口・裾・フードの縁）・head（hood フード / hat とんがり帽子 / hair 髪と額飾り）・item（staff 杖 / globe 天球儀）・orb 杖の玉の光
   const ROBE_STYLE = {
     whm: { robe: 'white', trim: 'red', head: 'hood', item: 'staff', orb: 'aura', detail: true }, // detail: 白魔道士の描き込み（赤い三角の裾・前開き・襟と留め金・袖の三角・翼の杖）
@@ -841,6 +854,7 @@
     brd: { robe: 'brdCoat', trim: 'gold', head: 'cap', item: 'bow', orb: 'smear' },
     smn: { robe: 'smnRobe', trim: 'gold', head: 'hair', item: 'book', orb: 'demi' },
     sch: { robe: 'schRobe', trim: 'gold', head: 'board', item: 'book', orb: 'fey', noCirclet: true }, // board: 角帽
+    sge: { robe: 'sgeRobe', trim: 'blue', head: 'hair', item: 'noulith', orb: 'noulith' }, // noulith: 手のまわりに浮かぶ 4 枚の刃
   };
   // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
   function robeArm(F, s, h, bend, o = {}, st = ROBE_STYLE.whm) {
@@ -1610,6 +1624,7 @@
     blm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
     smn: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
     sch: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.sch) : whmFB(F, p, v === 'up', ROBE_STYLE.sch)), anims: WHM_ANIMS }),
+    sge: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.sge) : whmFB(F, p, v === 'up', ROBE_STYLE.sge)), anims: WHM_ANIMS }),
     // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
     pet_carbuncle: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
     pet_ifrit: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),

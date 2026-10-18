@@ -25,8 +25,42 @@ const CfgParse = createRequire(import.meta.url)('./cfg-parse.js');
 const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
+// 公式ジョブガイド（src/data/ffxiv/jobguide。tools/jobguide/README.md）: 表の詠唱・リキャスト・消費 MP は Lv100 の値（特性込み）。
+// 抽出データ（Action シート）は特性の前の基本値なので、違うときはジョブガイドの値を使う（迅速魔 60 → 40 秒、居合術の詠唱 1.8 → 1.3 秒など）。
+// 行は英語版の名前で突き合わせる（日本語版の名前にはふりがなが混ざる）。日英の行 ID は同じ
+const GUIDE_FILE = { PLD: 'paladin', WAR: 'warrior', DRK: 'darkknight', GNB: 'gunbreaker', WHM: 'whitemage', SCH: 'scholar', AST: 'astrologian', SGE: 'sage', MNK: 'monk', DRG: 'dragoon', NIN: 'ninja', SAM: 'samurai', RPR: 'reaper', VPR: 'viper', BRD: 'bard', MCH: 'machinist', DNC: 'dancer', BLM: 'blackmage', SMN: 'summoner', RDM: 'redmage', PCT: 'pictomancer' };
+// 特性とペットの技（Lv 以下の特性。英語名・Lv・日本語の説明文）。ジョブの決まりが「20秒経過するたび」などを読む
+function guideExtra(job, level) {
+  const f = GUIDE_FILE[job];
+  if (!f || !existsSync(join(root, `src/data/ffxiv/jobguide/en/${f}.json`))) return null;
+  const en = read(`src/data/ffxiv/jobguide/en/${f}.json`), ja = read(`src/data/ffxiv/jobguide/ja/${f}.json`);
+  const jaById = new Map(ja.sections.flatMap((x) => x.rows).map((r) => [r.rowId, r]));
+  const rowsOf = (re) => en.sections.filter((x) => x.mode === 'pve' && re.test(x.anchor)).flatMap((x) => x.rows);
+  return {
+    traits: rowsOf(/trait/).filter((r) => (r.level ?? 0) <= level).map((r) => ({ en: r.name, level: r.level, desc: jaById.get(r.rowId)?.description ?? '' })),
+    pets: rowsOf(/pet/).map((r) => ({ en: r.name, recastMs: Math.round((guideSec(r.recast) ?? 0) * 1000), desc: jaById.get(r.rowId)?.description ?? '' })),
+  };
+}
+function guideRows(job) {
+  const f = GUIDE_FILE[job];
+  if (!f || !existsSync(join(root, `src/data/ffxiv/jobguide/en/${f}.json`))) return [];
+  const en = read(`src/data/ffxiv/jobguide/en/${f}.json`), ja = read(`src/data/ffxiv/jobguide/ja/${f}.json`);
+  const jaById = new Map(ja.sections.flatMap((x) => x.rows).map((r) => [r.rowId, r]));
+  return en.sections.filter((x) => x.mode === 'pve' && /action|pet/.test(x.anchor)).flatMap((x) => x.rows.map((r) => ({ en: r, ja: jaById.get(r.rowId) })));
+}
+const guideSec = (v) => (v == null || v === '-' || v === '' ? null : /instant/i.test(v) ? 0 : Number.isFinite(Number(String(v).replace(/[^\d.]/g, ''))) && /\d/.test(v) ? Number(String(v).replace(/[^\d.]/g, '')) : null);
+const guideMp = (v) => { const m = /(\d+)\s*MP|MP\s*(\d+)/i.exec(v ?? ''); return m ? Number(m[1] ?? m[2]) : null; };
+// 同じ名前の行が複数あるとき（ホロスコープと、その発動）は、説明文の書き出しが長く一致する方
+function guideFor(rows, a) {
+  const c = rows.filter((r) => r.en.name === a.name.en);
+  if (c.length <= 1) return c[0] ?? null;
+  const d = a.description.ja;
+  const same = (t) => { let i = 0; while (i < t.length && t[i] === d[i]) i++; return i; };
+  return c.map((r) => [r, same(r.ja?.description ?? '')]).sort((x, y) => y[1] - x[1])[0][0];
+}
+
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -234,17 +268,32 @@ function buildJob(JOB, LEVEL) {
   for (const [base, targets] of Object.entries(replaceGroups)) if (used.has(Number(base))) targets.forEach((id) => used.add(id));
 
   const fankitOf = (a) => fankit.get(`${JOB}|${normName(a.name.en)}`) ?? fankit.get(`*|${normName(a.name.en)}`);
+  const GUIDE = guideRows(JOB);
+  const fromGuide = []; // ジョブガイドの値にしたもの（ログに出す）
+  // 詠唱・リキャスト・消費 MP: 抽出データの値と、ジョブガイド（Lv100・特性込み）が違えばジョブガイド
+  function timing(a) {
+    const o = { castMs: Math.round(a.cast * 1000), recastMs: Math.round(a.recast * 1000), mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0, guide: [] };
+    const g = a.jobs?.includes(JOB) ? guideFor(GUIDE, a) : null; // 他ジョブのアクション（共有バーに残っているもの）は見ない
+    if (!g) return o;
+    const gc = guideSec(g.en.cast), gr = guideSec(g.en.recast), gm = guideMp(g.en.cost);
+    if (gc != null && Math.round(gc * 1000) !== o.castMs) { o.guide.push(`詠唱 ${o.castMs / 1000}→${gc}`); o.castMs = Math.round(gc * 1000); }
+    if (gr != null && gr > 0 && Math.round(gr * 1000) !== o.recastMs) { o.guide.push(`リキャスト ${o.recastMs / 1000}→${gr}`); o.recastMs = Math.round(gr * 1000); }
+    if (gm != null && o.mp !== -1 && gm !== o.mp) { o.guide.push(`MP ${o.mp}→${gm}`); o.mp = gm; }
+    if (o.guide.length) fromGuide.push(`${a.name.ja}（${o.guide.join('・')}）`);
+    return o;
+  }
   const iconOf = (a) => fankitOf(a) ?? (a.iconPath ? `../public${a.iconPath}` : null);
 
-  const pick = (a) => ({
+  const pick = (a, t = timing(a)) => ({
     id: a.id,
     name: a.name.ja,
     desc: a.description.ja,
     icon: iconOf(a), // ファンキット（枠付き）。無ければ抽出したアイコン
     iconFramed: !!fankitOf(a),
     isGcd: a.isGcd,
-    castMs: Math.round(a.cast * 1000),
-    recastMs: Math.round(a.recast * 1000),
+    castMs: t.castMs,
+    recastMs: t.recastMs,
+    fromGuide: t.guide.length ? t.guide : undefined, // ジョブガイドの値にした項目
     cooldownGroup: a.cooldownGroup,
     maxCharges: a.maxCharges,
     comboFrom: a.comboFrom ? [a.comboFrom, upgrade[a.comboFrom]].filter(Boolean) : [],
@@ -262,8 +311,8 @@ function buildJob(JOB, LEVEL) {
     hostile: a.canTargetHostile,
     // 対象にできるもの（自分・味方）。ターゲットの決め方に使う（敵にしか使えない技は敵のターゲットが要る）
     toSelf: !!a.canTargetSelf, toParty: !!a.canTargetParty,
-    // 消費 MP（Action の一次コスト。型 3 と 76 は値 × 100、型 4 は「MP 全部」= -1。黒魔道士の MP の計算に使う）
-    mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0,
+    // 消費 MP（Action の一次コスト。型 3 と 76 は値 × 100、型 4 は「MP 全部」= -1。ジョブガイドに数があればそれ）
+    mp: t.mp,
     range: a.range,
     crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
     // 効果音のジャンル: 魔法の攻撃（AttackType 5）かと属性（Aspect: 1 火・2 氷・3 風・4 土・5 雷・6 水・7 無）。物理の斬・突・打はデータにない（-1）ので、ジョブの武器で決める
@@ -286,9 +335,12 @@ function buildJob(JOB, LEVEL) {
   });
 
   const role = { 1: 'tank', 2: 'melee', 3: 'ranged', 4: 'healer' }[job.role] ?? 'melee';
+  const actionsOut = Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))]));
+  if (fromGuide.length) console.log(`  ジョブガイドの値にした: ${fromGuide.join(' / ')}`);
   return {
     job: { abbr: JOB, name: job.name.ja, icon: `../public${job.iconPath}`, level: LEVEL, role },
-    actions: Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))])),
+    guide: guideExtra(JOB, LEVEL), // 公式ジョブガイドの特性・ペットの技（traits / pets）
+    actions: actionsOut,
     statuses: Object.fromEntries(
       statuses
         .filter((s) => [3856, 2959, 3855].includes(s.id))

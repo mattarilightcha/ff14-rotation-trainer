@@ -72,6 +72,10 @@
   const actorTickPhase = (R) => (((R.OPT.seed ?? 1) * 1237) % MP_TICK);
   function mpTicks(s, dt) { s.mpTick += dt; let n = 0; while (s.mpTick >= MP_TICK) { s.mpTick -= MP_TICK; n++; } return n; }
   const naturalMp = (s) => (s.phase === 'combat' ? 200 : 600);
+  // 公式ジョブガイドの特性・ペットの技（build-mock-data.mjs が D.guide に入れる。英語名で引く）。特性の文は日本語
+  const guideTrait = (R, en) => R.D.guide?.traits?.find((t) => t.en === en)?.desc ?? '';
+  const guidePet = (R, en) => R.D.guide?.pets?.find((p) => p.en === en) ?? null;
+  const numIn = (text, re, d) => Number(re.exec(text ?? '')?.[1] ?? d);
   // 効果時間: 語のあとで最初に出てくる「効果時間：N秒」
   const secAfter = (d, i) => Number(/効果時間：(\d+)秒/.exec(d.slice(i))?.[1] ?? 10);
   // 説明文の「「ゲージ名」をN上昇させる」の合計（前に「コンボボーナス：」があればコンボ時だけ）。戦士のインナービーストなど
@@ -154,9 +158,9 @@
         [ID.NAMIKIRI]: 'namikiri', [ID.K_NAMI]: 'namikiri', [ID.SHOHA]: 'shoha', [ID.MEIKYO]: 'water', [ID.IKISHOTEN]: 'kenki',
       };
       const TRIPLE = new Set([ID.MIDARE, ID.TENDO_SETSU, ID.K_SETSU, ID.TK_SETSU]);
-      // 居合術と奥義波切の詠唱時間: Lv74 の特性「居合術効果アップ」で 1.3 秒（風花・スキルスピードでは短くならない）。
-      // 抽出データの cast は基本値の 1.8 秒。特性の説明文（Trait シート）は未抽出のため仮（GAME-64）
-      const IAI_CAST_MS = 1300;
+      // 居合術と奥義波切の詠唱時間: Lv74 の特性「居合術効果アップ」で 1.3 秒（公式ジョブガイドの特性と表。データ作成時にジョブガイドの値にしてある。
+      // 抽出データの cast は基本値の 1.8 秒）。風花・スキルスピードでは短くならないとする（GAME-64: 風花の説明文はウェポンスキルの詠唱も縮めるとあり、ゲーム内で確かめる）
+      const IAI_CAST_MS = A[ID.MIDARE]?.castMs || 1300;
       const IAI_FIXED = new Set([ID.IAI, ID.HIGAN, ID.TENKA, ID.MIDARE, ID.TENDO_GOKEN, ID.TENDO_SETSU, ID.NAMIKIRI]);
       const STATUS = {
         fugetsu: { name: '風月', tracked: true, cls: 'fu' },
@@ -547,10 +551,12 @@
           if (s.bell > 0 && !has('lilybell')) bellEnd('時間切れ');
           if (s.phase !== 'combat') return;
           s.lilyT += dt;
-          while (s.lilyT >= 20000) {
-            s.lilyT -= 20000;
+          // ヒーリングリリー: 戦闘状態になってから 20 秒ごとに 1 つ（公式ジョブガイドの特性「シークレットリリー」。GAME-62）
+          const LILY_MS = numIn(guideTrait(R, 'Secret of the Lily'), /(\d+)秒が経過するたび/, 20) * 1000;
+          while (s.lilyT >= LILY_MS) {
+            s.lilyT -= LILY_MS;
             if (s.lily >= 3) { s.stats.lilyOver++; R.addLog('warn', 'ヒーリングリリーがあふれました（3 つのまま）'); R.ev('ミス', { result: 'あふれ', note: 'ヒーリングリリーが 3 つのまま' }); }
-            gauges.ヒーリングリリー.set(s.lily + 1); // 仮（GAME-62）
+            gauges.ヒーリングリリー.set(s.lily + 1);
           }
         },
         highlightOk: () => true,
@@ -1306,7 +1312,7 @@
       };
       // デミの自動攻撃の間隔（1.5 秒: 公式ジョブガイドの光芒・ウィルムウェーブ・火焔のリキャストタイム）。
       // 召喚から最初の攻撃までの時間は未検証のため仮で 1.5 秒（GAME-71）。15 秒で何発当たるかもこの仮に左右される
-      const DEMI_ATK_MS = 1500, DEMI_FIRST_MS = 1500;
+      const DEMI_ATK_MS = A[ID.WYRMWAVE]?.recastMs || 1500, DEMI_FIRST_MS = DEMI_ATK_MS;
       const DEMI_OF = Object.fromEntries(Object.entries(DEMI).map(([k, v]) => [v.summon, k]));
       // エギ: ボタン → 神秘・エーテル（スタック数）・実行可
       const PRIMAL = {
@@ -1524,6 +1530,6 @@
   window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
   // ほかのジョブの決まり（jobs-tank.js などの役割ごとのファイル）が使う共通の部品。ジョブの一覧に出ないよう列挙しない
   Object.defineProperty(window.MockJobs, 'lib', {
-    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, secAfter, descGain, extendBuff, supportWho, support },
+    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, secAfter, descGain, extendBuff, supportWho, support, guideTrait, guidePet, numIn },
   });
 })();

@@ -3,7 +3,7 @@
 // 値は説明文（抽出データの description と、build-mock-data.mjs が読み取った eff / pot）から。説明文にない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, HEAL_K, descCharges, support, actorTickPhase, mpTicks, naturalMp } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, HEAL_K, descCharges, support, actorTickPhase, mpTicks, naturalMp, guideTrait, guidePet, numIn } = window.MockJobs.lib;
   const MP_MAX = 10000;
   const isSpell = (a) => a?.category === 2;
   // 説明文の「回復量のN％分のダメージを軽減」（鼓舞・コンソレイションのバリア）
@@ -41,8 +41,9 @@
   //   深謀遠慮の策: HP が 50% 以下になるか 45 秒たつと、回復力 800
   //   連環計: 対象の被クリティカル +10%（20 秒）と埋伏の毒実行可（30 秒）
   //   セラフィズム: 20 秒、自分と周囲を回復力 100 で継続回復。鼓舞激励の策がマニフェステーションに変わり、応急戦術のリキャストが 1 秒になる
-  // 仮（説明文にない: GAME-75）: フェアリー（エオス）は戦闘前に召喚済み。フェアリーの自動の回復（光の癒し・セラフィックヴェール）は
-  //   回復力 120・3 秒ごと（セラフィムは同じ量のバリアも）。フェイユニオンは 3 秒ごと。フェイエーテルの上限は 100。
+  // 公式ジョブガイドのペットの技から: フェアリーの自動の回復「光の癒し」は回復力 180・リキャスト 3 秒、セラフィムの「セラフィックヴェール」は
+  //   回復力 180 と回復量の 100% のバリア・リキャスト 3 秒（HP の減った味方に）
+  // 前提・仮（説明文にない: GAME-75）: フェアリー（エオス）は戦闘前に召喚済み。フェイユニオンは 3 秒ごと。フェイエーテルの上限は 100。
   //   クリティカルは秘策のときだけ（回復量の上乗せはしない）。フェイイルミネーションの被魔法ダメージ 5% 軽減は、練習場の攻撃すべてに効かせる。
   //   連環計の被クリティカル上昇は、与ダメージに入れない（クリティカルを扱っていないため）
   const SCH = {
@@ -76,7 +77,10 @@
       const has = R.has;
       const Au = () => window.MockAudio;
       const FEY_MAX = 100; // 仮（GAME-75）
-      const FAIRY_MS = 3000, FAIRY_HEAL = 120; // フェアリーの自動の回復（仮 GAME-75）
+      // フェアリー・セラフィムの自動の回復（公式ジョブガイドのペットの技: 光の癒し・セラフィックヴェール）
+      const EMBRACE = guidePet(R, 'Embrace'), VEIL = guidePet(R, 'Seraphic Veil');
+      const FAIRY_MS = EMBRACE?.recastMs || 3000, FAIRY_HEAL = numIn(EMBRACE?.desc, /回復力：(\d+)/, 180);
+      const VEIL_HEAL = numIn(VEIL?.desc, /回復力：(\d+)/, 180), VEIL_BARRIER = numIn(VEIL?.desc, /回復量の(\d+)％分/, 100) / 100;
       const UNION_MS = 3000; // フェイユニオンの間隔（仮 GAME-75）
       const RECIT_SET = new Set([ID.ADLO, ID.CONCIT, ID.INDOM, ID.EXCOG]); // 秘策が効く技（説明文）
       const GALV_SET = new Set([ID.ADLO, ID.MANI, ID.CONCIT]); // 鼓舞を付ける回復魔法
@@ -270,13 +274,13 @@
               R.heal(s.union.who, 300 * HEAL_K, 'tick');
             }
           }
-          // フェアリー・セラフィムの自動の回復（HP の減った味方に。仮 GAME-75）
+          // フェアリー・セラフィムの自動の回復（HP の減った味方に。HP の低い方を選ぶのは仮）
           if (s.t >= s.fairyNext) {
             s.fairyNext = s.t + FAIRY_MS;
             const who = R.hpOf('npc') > 0 && R.hpOf('npc') < R.hpOf('self') ? 'npc' : 'self';
             if (petHere() && !s.union && R.hpOf(who) < 0.995) {
-              R.heal(who, FAIRY_HEAL * HEAL_K, 'tick');
-              if (seraphOn()) R.shield(who, FAIRY_HEAL * HEAL_K, 30, 'セラフィックヴェール');
+              if (seraphOn()) { R.heal(who, VEIL_HEAL * HEAL_K, 'tick'); R.shield(who, VEIL_HEAL * HEAL_K * VEIL_BARRIER, 30, 'セラフィックヴェール'); }
+              else R.heal(who, FAIRY_HEAL * HEAL_K, 'tick');
               s.stats.fairyHeals++; R.pet('act');
             }
           }
@@ -326,5 +330,254 @@
     },
   };
 
-  Object.assign(window.MockJobs, { SCH });
+  // ---------------- 賢者 ----------------
+  // 説明文から:
+  //   カルディア: 対象にカルディア［被］。ドシスIII・フレグマIII・エウクラシア・ドシスIII・ディスクラシアII・エウクラシア・ディスクラシア・
+  //     トキシコンII・プネウマが当たると、カルディア［被］の対象を回復力 170 で回復。ソーテリア（4 スタック・15 秒）の間は 1.7 倍
+  //   エウクラシア: ドシスIII・ディスクラシアII・ディアグノシス・プログノシスがエウクラシアの技に変わる（使うと解除）
+  //   アダーガル（最大 3）: ドルオコレ・ケーラコレ・イックソコレ・タウロコレが 1 つ使い、MP を最大 MP の 7% 回復。リゾーマタで +1
+  //   アダースティング: トキシコンII が 1 つ使う
+  //   エウクラシア・ディアグノシス: 回復力 300 と回復量の 180% のバリア。エウクラシア・プログノシスII: 回復力 100 と回復量の 360% のバリア
+  //   ハイマ / パンハイマ: 回復力 300 / 200 相当のバリアと 5 スタックの印。バリアが全部吸収されると印を 1 つ使って張り直す。
+  //     効果時間が過ぎると、残りの印 1 つにつき回復力 150 / 100 で回復
+  //   ペプシス: 自分が付けたエウクラシアのバリアを消す代わりに回復（ディアグノシス 450・プログノシス 350）
+  //   ゾーエ: 次の回復魔法 1 回の回復量 1.5 倍。フィロソフィア: 20 秒、自分の回復魔法 +20% と、魔法を当てるとエウダイモニアの味方を回復力 150
+  // 公式ジョブガイドの特性から: アダーガルは 20 秒ごとに 1 つ（最大 3。戦闘不能でも増える）。アダースティング（最大 3）は、エウクラシア・ディアグノシスと
+  //   自分に付けたエウクラシア・プログノシスのバリアが全部吸収されて消えると 1 つ。エウクラシアのリキャスト 1 秒は表の値（抽出データは 2.5 秒）
+  // 前提・仮（GAME-76）: 戦闘前にタンクへカルディアを付けている。クリティカルは扱わない
+  const SGE = {
+    abbr: 'SGE',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        DOSIS: 24312, EDOSIS: 24314, PHLEGMA: 24313, DYSK: 24315, EDYSK: 37032, TOXIKON: 24316, PSYCHE: 37033, PNEUMA: 24318, EUKRASIA: 24290,
+        DIAG: 24284, EDIAG: 24291, PROG: 24286, EPROG: 24292, EPROG2: 37034, KARDIA: 24285, SOTERIA: 24294, ICARUS: 24295,
+        DRUO: 24296, KERA: 24298, IXO: 24299, ZOE: 24300, PEPSIS: 24301, PHYSIS: 24302, TAURO: 24303, HAIMA: 24305, RHIZO: 24309,
+        HOLOS: 24310, PANHAIMA: 24311, KRASIS: 24317, PHILO: 37035, EGEIRO: 24287, SWIFT: 7561, LUCID: 7562, SURECAST: 7559,
+      };
+      const STATUS = {
+        edosis: { name: 'エウクラシア・ドシスIII', target: true, tracked: true },
+        edysk: { name: 'エウクラシア・ディスクラシア', target: true },
+        eukrasia: { name: 'エウクラシア' },
+        kardia: { name: 'カルディア' },
+        soteria: { name: 'ソーテリア' },
+        zoe: { name: 'ゾーエ' },
+        philo: { name: 'フィロソフィア' },
+        swift: { name: '迅速魔' },
+        lucid: { name: 'ルーシッドドリーム' },
+        surecast: { name: '堅実魔' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const GALL_MS = numIn(guideTrait(R, 'Addersgall'), /(\d+)秒経過するたび/, 20) * 1000; // アダーガルが 1 つ増える間隔（特性「アダーガル」）
+      const KARDIA_POT = Number(/回復力：(\d+)/.exec(A[ID.KARDIA]?.desc ?? '')?.[1] ?? 170);
+      // カルディアの回復が出る攻撃魔法（説明文「追加効果：カルディア［被］の効果対象のＨＰを回復する」）
+      const KARDIA_SET = new Set([ID.DOSIS, ID.EDOSIS, ID.PHLEGMA, ID.DYSK, ID.EDYSK, ID.TOXIKON, ID.PNEUMA]);
+      const GALL_SET = new Set([ID.DRUO, ID.KERA, ID.IXO, ID.TAURO]); // アダーガルを使う技
+      const E_SET = new Set([ID.EDOSIS, ID.EDYSK, ID.EDIAG, ID.EPROG, ID.EPROG2]); // エウクラシアの技
+      const HEAL_SPELLS = new Set([ID.DIAG, ID.PROG, ID.EDIAG, ID.EPROG, ID.EPROG2, ID.PNEUMA]); // ゾーエ・フィロソフィアが効く回復魔法
+      const gauges = {
+        アダーガル: { get: () => S().gall, set: (v) => { S().gall = Math.max(0, Math.min(3, v)); }, max: 3 },
+        アダースティング: { get: () => S().sting, set: (v) => { S().sting = Math.max(0, Math.min(3, v)); }, max: 3 },
+      };
+      const shieldName = { [ID.EDIAG]: 'エウクラシア・ディアグノシス', [ID.EPROG]: 'エウクラシア・プログノシス', [ID.EPROG2]: 'エウクラシア・プログノシス' };
+      // 回復魔法の倍率: フィロソフィア +20%、ゾーエ 1.5 倍（1 回で消える）
+      function healUp(a, consume) {
+        if (!HEAL_SPELLS.has(a.id)) return 1;
+        let k = has('philo') ? 1.2 : 1;
+        if (has('zoe')) { k *= 1.5; if (consume) R.remove('zoe'); }
+        return k;
+      }
+      function kardiaHeal() {
+        const s = S();
+        if (!s.kardia) return;
+        let pot = KARDIA_POT;
+        const so = s.st.soteria;
+        if (so && so.until > s.t) { pot *= 1.7; if ((so.stacks ?? 1) > 1) so.stacks -= 1; else R.remove('soteria'); }
+        R.heal(s.kardia, pot * HEAL_K, 'tick');
+        s.stats.kardia++;
+      }
+      // ハイマ・パンハイマ: 印のあるバリア。who ごとに { stacks, frac, until }
+      function marksOn(key, who, frac, sec, name) {
+        const s = S();
+        for (const w of who === 'party' ? ['self', ...(R.hpOf('npc') > 0 || R.npcDown() ? ['npc'] : [])] : [who]) {
+          s[key][w] = { stacks: 5, frac, until: s.t + sec * 1000, name };
+          R.shield(w, frac, sec, name);
+        }
+      }
+      function marksTick(key, burst) {
+        const s = S();
+        for (const [w, m] of Object.entries(s[key])) {
+          if (s.t >= m.until) {
+            if (m.stacks > 0) R.heal(w, burst * m.stacks * HEAL_K);
+            R.addLog('ok', `${m.name}の印が消えて回復（残り ${m.stacks}）`);
+            delete s[key][w];
+            continue;
+          }
+          const sh = R.shieldOf(w);
+          if (!sh && m.stacks > 0) { m.stacks -= 1; R.shield(w, m.frac, (m.until - s.t) / 1000, m.name); }
+          else if (sh && sh.name !== m.name) { /* ほかのバリアに置き換わった: 印はそのまま */ }
+        }
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // フレグマIII「最大チャージ数：2」
+        prepull: new Set([ID.DOSIS, ID.EUKRASIA, ID.EDIAG, ID.EPROG2, ID.KARDIA, ID.SWIFT, ID.DIAG, ID.PROG, ID.SURECAST]),
+        comboStarters: new Set(),
+        procStatus: {},
+        ownDots: true, // エウクラシア・ドシスIII とエウクラシア・ディスクラシア
+        initState(s) {
+          // 戦闘開始時はアダーガル 3（GAME-70）。カルディアはタンクに付けてある（仮 GAME-76）
+          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.gall = 3; s.gallT = 0; s.gallMs = GALL_MS; s.sting = 0; s.kardia = 'npc'; s.dots = {}; s.stingWatch = [];
+          s.haima = {}; s.panhaima = {};
+          s.stats.gallOver = 0; s.stats.kardia = 0; s.stats.stingGot = 0; s.stats.stingOver = 0; s.stats.gallUsed = 0;
+        },
+        gaugeCols: [['MP', (s) => Math.floor(s.mp)], ['アダーガル', (s) => s.gall], ['アダースティング', (s) => s.sting], ['エウクラシア', (s) => (R.has('eukrasia') ? '○' : '')]],
+        tracked: [['エウクラシア・ドシスIII', 'edosis', '#8ae0f8', '切れる前（残り 3 秒ほど）に、エウクラシア → ドシスIII で付け直す']],
+        speed: () => 1,
+        comboFree: () => false,
+        // 変化: ディアグノシス → エウクラシア・ディアグノシス、プログノシス → エウクラシア・プログノシス → II（変化先の変化もたどる）
+        resolve(id) {
+          let r = id;
+          for (let i = 0; i < 3; i++) { const n = tooltipResolve(R, J, r); if (n === r) break; r = n; }
+          return r;
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          const t = tooltipBlocked(R, J, a, gauges);
+          if (t) return t;
+          if (isSpell(a) && (a.mp ?? 0) > s.mp) return `MP が足りません（必要 ${a.mp} / 現在 ${Math.floor(s.mp)}）`;
+          if (id === ID.EUKRASIA && has('eukrasia')) return 'エウクラシアの効果中です';
+          if (id === ID.EGEIRO && !R.npcDown()) return '戦闘不能の味方がいません';
+          return null;
+        },
+        castMs: (a, base) => (base && isSpell(a) && has('swift') ? 0 : base),
+        noHit: (id) => id === ID.EDOSIS || id === ID.EDYSK, // 継続ダメージだけ
+        effects(id) {
+          const a = A[id], s = S();
+          if (isSpell(a) && a.castMs > 0 && has('swift')) R.remove('swift');
+          if (isSpell(a)) s.mp = Math.max(0, s.mp - (a.mp ?? 0));
+          if (E_SET.has(id)) R.remove('eukrasia');
+          if (GALL_SET.has(id)) { s.gall = Math.max(0, s.gall - 1); s.mp = Math.min(MP_MAX, s.mp + MP_MAX * 0.07); s.stats.gallUsed++; }
+          if (id === ID.TOXIKON) s.sting = Math.max(0, s.sting - 1);
+          // 攻撃魔法: カルディアと、フィロソフィア中のエウダイモニア
+          if (KARDIA_SET.has(id)) {
+            kardiaHeal();
+            if (has('philo')) R.heal('party', 150 * HEAL_K, 'tick');
+          }
+          if (id === ID.EDOSIS) { delete s.dots.edysk; R.remove('edysk'); dotOn(R, 'edosis', a); R.buff('edosis', a.pot.dot.sec * 1000); }
+          if (id === ID.EDYSK) { delete s.dots.edosis; R.remove('edosis'); dotOn(R, 'edysk', a); R.buff('edysk', a.pot.dot.sec * 1000); }
+          if (id === ID.EUKRASIA) R.buff('eukrasia', 1e9);
+          // 回復
+          if (id === ID.DIAG || id === ID.PROG || id === ID.PNEUMA || id === ID.DRUO || id === ID.IXO) support(R, a, { healUp: healUp(a, true) });
+          if (shieldName[id]) {
+            const up = healUp(a, true), heal = (a.eff?.heal ?? 0) * HEAL_K * up, w = id === ID.EDIAG ? (R.who ?? 'low') : 'party';
+            R.heal(w, heal);
+            R.shield(w, heal * (barrierPct(a) / 100), 30, shieldName[id]);
+            // アダースティングの元: エウクラシア・ディアグノシス（相手）と、自分に付けたエウクラシア・プログノシス
+            const who = id === ID.EDIAG ? R.who ?? (R.hpOf('npc') > 0 && R.hpOf('npc') <= R.hpOf('self') ? 'npc' : 'self') : 'self';
+            s.stingWatch = s.stingWatch.filter((q) => q.who !== who);
+            s.stingWatch.push({ who, name: shieldName[id], until: s.t + 30000 });
+          }
+          if (id === ID.KERA) { R.mitigate('party', mitPct(a) / 100, 15, 'ケーラコレ'); R.hot('party', a.eff.hot.potency * HEAL_K, a.eff.hot.sec, 'ケーラコレ［回］'); }
+          if (id === ID.TAURO) { const w = R.who ?? 'low'; R.heal(w, a.eff.heal * HEAL_K); R.mitigate(w, mitPct(a) / 100, 15, 'タウロコレ'); }
+          if (id === ID.PHYSIS) { R.hot('party', a.eff.hot.potency * HEAL_K, a.eff.hot.sec, 'ピュシスII'); R.mark('party', 'ピュシスII［被］', 15, { healUp: 0.1 }); }
+          if (id === ID.KRASIS) R.mark(R.who ?? 'self', 'クラーシス', 10, { healUp: 0.2 });
+          if (id === ID.HOLOS) {
+            const heal = a.eff.heal * HEAL_K;
+            R.heal('party', heal); R.shield('party', heal * (barrierPct(a) / 100), 30, 'ホーリズム［バリア］'); R.mitigate('party', mitPct(a) / 100, 20, 'ホーリズム');
+          }
+          if (id === ID.HAIMA) marksOn('haima', R.who ?? 'self', 300 * HEAL_K, 15, 'ハイマ');
+          if (id === ID.PANHAIMA) marksOn('panhaima', 'party', 200 * HEAL_K, 15, 'パンハイマ');
+          if (id === ID.PEPSIS) {
+            // ペプシス: 自分のエウクラシアのバリアを消して回復
+            let n = 0;
+            for (const w of ['self', 'npc']) {
+              const sh = R.shieldOf(w);
+              if (!sh) continue;
+              const pot = sh.name === 'エウクラシア・ディアグノシス' ? 450 : sh.name === 'エウクラシア・プログノシス' ? 350 : 0;
+              if (!pot) continue;
+              R.unshield(w); R.heal(w, pot * HEAL_K); n++;
+              s.stingWatch = s.stingWatch.filter((q) => q.who !== w);
+            }
+            if (!n) R.addLog('warn', 'ペプシス: エウクラシアのバリアが付いていません（効果なし）');
+          }
+          if (id === ID.RHIZO) { if (s.gall >= 3) { s.stats.gallOver++; R.addLog('warn', 'アダーガルがあふれました（リゾーマタ）'); } s.gall = Math.min(3, s.gall + 1); }
+          if (id === ID.SOTERIA) R.buff('soteria', 15000, 4);
+          if (id === ID.ZOE) R.buff('zoe', 30000);
+          if (id === ID.PHILO) { R.buff('philo', 20000); R.mark('party', 'エウダイモニア', 20); Au()?.surge(); }
+          if (id === ID.KARDIA) { const w = R.who ?? 'self'; if (s.kardia && s.kardia !== w) R.unmark(s.kardia, 'カルディア［被］'); s.kardia = w; R.mark(w, 'カルディア［被］', 9999); R.buff('kardia', 1e9); }
+          if (id === ID.EGEIRO && R.npcDown()) R.raise();
+          if (id === ID.SWIFT) R.buff('swift', 10000);
+          if (id === ID.LUCID) R.buff('lucid', 21000);
+          if (id === ID.SURECAST) R.buff('surecast', 6000);
+        },
+        tick(dt) {
+          const s = S();
+          dotsTick(R);
+          // カルディアの印（戦闘開始時に付ける: 前提）
+          if (!s.kardiaShown && s.kardia) { s.kardiaShown = true; R.mark(s.kardia, 'カルディア［被］', 9999); R.buff('kardia', 1e9); }
+          // アダースティング: エウクラシアのバリアが全部吸収されて消えた（特性「アダースティング」）。時間切れ・ほかのバリアへの置き換えは数えない
+          s.stingWatch = s.stingWatch.filter((q) => {
+            const sh = R.shieldOf(q.who);
+            if (s.t >= q.until || (sh && sh.name !== q.name)) return false;
+            if (sh) return true;
+            s.stats.stingGot++;
+            if (s.sting >= 3) s.stats.stingOver++;
+            s.sting = Math.min(3, s.sting + 1);
+            R.addLog('ok', `${q.name}のバリアが吸収された: アダースティング +1`);
+            return false;
+          });
+          marksTick('haima', 150); marksTick('panhaima', 100);
+          if (s.phase !== 'combat' && s.phase !== 'countdown') return;
+          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          if (s.phase !== 'combat') return;
+          s.gallT += dt;
+          while (s.gallT >= GALL_MS) {
+            s.gallT -= GALL_MS;
+            if (s.gall >= 3) { s.stats.gallOver++; R.addLog('warn', 'アダーガルがあふれました（3 つのまま）'); R.ev('ミス', { result: 'あふれ', note: 'アダーガルが 3 つのまま' }); }
+            s.gall = Math.min(3, s.gall + 1);
+          }
+        },
+        highlightOk: () => true,
+        glow(id) {
+          const s = S();
+          if (id === ID.EUKRASIA) return !has('eukrasia') && (!s.dots.edosis || s.dots.edosis.until - s.t < 3000);
+          if (E_SET.has(id)) return has('eukrasia');
+          if (id === ID.TOXIKON) return s.sting > 0;
+          return false;
+        },
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => (KARDIA_SET.has(id) || id === ID.PSYCHE ? 'setsu' : A[id]?.eff?.heal != null || A[id]?.eff?.hot ? 'heal' : 'setsu'),
+        fxPower: (id) => (id === ID.PHLEGMA || id === ID.PSYCHE || id === ID.PNEUMA ? 1.4 : 1),
+        fxCount: () => 1,
+        castColor: (id) => (A[id]?.eff?.heal != null && !KARDIA_SET.has(id) ? 'heal' : 'setsu'),
+        castPower: 0.4,
+        gcdColor: (id) => (id === ID.DOSIS ? '#bff4ff' : E_SET.has(id) ? '#8ae0f8' : id === ID.PHLEGMA ? '#d0f0ff' : null),
+        hotOgcd: (id) => id === ID.PSYCHE || id === ID.PHLEGMA,
+        weapon: 'blunt', magicTone: 'aether',
+        tipCost: (id) => (A[id] && isSpell(A[id]) && (A[id].mp ?? 0) > 0 ? ['MP', A[id].mp] : GALL_SET.has(id) ? ['アダーガル', 1] : id === ID.TOXIKON ? ['アダースティング', 1] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.gallOver) issues.push({ loss: s.stats.gallOver * 3, rate: s.stats.gallOver > 2 ? 'bad' : 'ok', title: `アダーガルのあふれ ${s.stats.gallOver} 回`, advice: 'アダーガルが 3 つになる前に、ドルオコレ・タウロコレ・ケーラコレ・イックソコレで使う（MP も 7% 戻る）。リゾーマタは 2 つ以下のときに' });
+          metrics.push({ label: 'アダーガルのあふれ', value: `${s.stats.gallOver} 回`, rate: Math.max(0, 100 - s.stats.gallOver * 20) });
+          metrics.push({ label: 'カルディアの回復', value: `${s.stats.kardia} 回`, rate: null });
+          metrics.push({ label: 'アダースティング', value: `${s.stats.stingGot} 回たまった`, rate: null });
+          metrics.push({ label: 'MP（終了時）', value: `${Math.floor(s.mp)}`, rate: null });
+          if (!s.stats.gallOver && s.stats.gcds > 10) goods.push('アダーガルのあふれなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.gallOver * 20), posAdvice: '', comboAdvice: '光っている技（エウクラシア → エウクラシア・ドシスIII、トキシコンII）を', castAdvice: 'ドシスIII の詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときはフレグマIII・トキシコンII・エウクラシアの技', rangeAdvice: '魔法の射程（25m）の中にいる。フレグマIII は敵から 6m 以内で',
+            careAdvice: 'タンクの HP が半分を切ったら回復。ドルオコレ・タウロコレ・ハイマなどのアビリティは、動きながらでも使える', lowAdvice: '早めに回復する（カルディアをタンクに付けたまま攻撃する・タウロコレやケーラコレで軽減する）' };
+        },
+        howto: '賢者: ドシスIII を撃ち続け（当たるたびにカルディアの相手が回復）、エウクラシア → エウクラシア・ドシスIII を切らさない。フレグマIII（2 回）とプシュケーは使えるときに。アダーガルはあふれる前にドルオコレなどで使う。タンクの HP も見て回復してください。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'SGE'),
+        gaugeDefault: { JobHudGFF0: { x: 66, y: 64, anchor: 4, scale: 1 }, JobHudGFF1: { x: 76, y: 64, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { SCH, SGE });
 })();
