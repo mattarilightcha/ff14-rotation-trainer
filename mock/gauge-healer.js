@@ -59,7 +59,7 @@
       }
       // フェアリー: eos / seraph / null（転化中・召喚していない）
       const ser = st.seraph && st.seraph.until > t ? st.seraph : null;
-      const dissip = (st.st?.dissipation?.until ?? 0) > t;
+      const dissip = !!st.st?.dissipation && st.st.dissipation.until > t;
       const who = ser ? 'seraph' : st.fairy && !dissip ? 'eos' : null;
       if (instant || who !== prev.who) {
         for (const id of [13, 14]) set(k1(id), { opacity: who === 'eos' ? 1 : 0 });
@@ -119,7 +119,7 @@
     function apply(st, instant) {
       const t = st.t ?? 0;
       // エウクラシア
-      const eu = (st.st?.eukrasia?.until ?? 0) > t;
+      const eu = !!st.st?.eukrasia && st.st.eukrasia.until > t;
       if (instant || eu !== prev.eu) {
         set(k(16), { opacity: eu ? 1 : 0 }); set(k(17), { opacity: eu ? 0 : 1 });
         for (const q of [4, 5, 6, 7]) set(k(q), { opacity: eu ? 1 : 0 });

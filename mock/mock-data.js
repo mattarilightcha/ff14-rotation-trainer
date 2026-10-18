@@ -74,6 +74,12 @@ window.MOCK_DATA = {
    "name": "賢者",
    "icon": "../public/icons/jobs/SGE.png",
    "role": "healer"
+  },
+  {
+   "abbr": "MNK",
+   "name": "モンク",
+   "icon": "../public/icons/jobs/MNK.png",
+   "role": "melee"
   }
  ],
  "jobs": {
@@ -2481,6 +2487,11 @@ window.MOCK_DATA = {
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -2527,6 +2538,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -2541,6 +2556,7 @@ window.MOCK_DATA = {
     "連環計": "../public/icons/statuses/212809.png",
     "星の支配者": "../public/icons/statuses/213241.png",
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "レクイエスカット": {
      "icon": "../public/icons/statuses/218345.png",
@@ -2577,6 +2593,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -2629,6 +2646,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
     "光神のアンコール実行可": "../public/icons/statuses/213077.png",
@@ -8343,9 +8363,15 @@ window.MOCK_DATA = {
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "シールドスマイト": "../public/icons/statuses/214716.png",
     "ランページ": "../public/icons/statuses/216622.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -8391,6 +8417,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -8411,6 +8441,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -8445,6 +8476,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -8493,6 +8525,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
     "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
@@ -12360,9 +12395,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -12406,6 +12447,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -12423,6 +12468,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -12461,6 +12507,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -12509,6 +12556,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -17162,9 +17212,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -17205,6 +17261,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -17224,6 +17284,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -17259,6 +17320,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -17311,6 +17373,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -22629,9 +22694,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -22674,6 +22745,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -22688,6 +22763,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -22728,6 +22804,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -22781,6 +22858,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -29249,9 +29329,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
     "神速魔": "../public/icons/statuses/212627.png",
     "堅実魔": "../public/icons/statuses/210452.png",
@@ -29291,6 +29377,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "ルーシッドドリーム": "../public/icons/statuses/213909.png",
     "三連魔": {
      "icon": "../public/icons/statuses/219621.png",
@@ -29308,6 +29398,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -29345,6 +29436,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -29396,6 +29488,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -37065,9 +37160,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -37108,6 +37209,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -37127,6 +37232,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -37167,6 +37273,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -37212,6 +37319,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -44810,6 +44920,12 @@ window.MOCK_DATA = {
     "ランページ": "../public/icons/statuses/216622.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -44851,6 +44967,10 @@ window.MOCK_DATA = {
     "シナストリー": "../public/icons/statuses/213223.png",
     "旅神のメヌエット": "../public/icons/statuses/212610.png",
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -44871,6 +44991,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -44909,6 +45030,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -44951,6 +45073,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -48843,9 +48968,15 @@ window.MOCK_DATA = {
     "ランページ": "../public/icons/statuses/216622.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -48882,6 +49013,10 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217247
     },
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -48902,6 +49037,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -48937,6 +49073,7 @@ window.MOCK_DATA = {
     "軍神の加護": "../public/icons/statuses/212619.png",
     "軍神の契約": "../public/icons/statuses/212620.png",
     "トルバドゥール": "../public/icons/statuses/212615.png",
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -48988,6 +49125,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -54056,9 +54196,15 @@ window.MOCK_DATA = {
     "ブラッドソイル": "../public/icons/statuses/213623.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -54104,6 +54250,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -54124,6 +54274,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -54155,6 +54306,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -54202,6 +54354,9 @@ window.MOCK_DATA = {
     "ルイネーター実行可": "../public/icons/statuses/212569.png",
     "シャドウヴィジル": "../public/icons/statuses/213125.png",
     "ディセスティーム実行可": "../public/icons/statuses/213126.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -58275,9 +58430,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -58314,6 +58475,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -58333,6 +58498,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -58371,6 +58537,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "カルディア": "../public/icons/statuses/212951.png",
     "エウクラシア": "../public/icons/statuses/212953.png",
     "ソーテリア": {
@@ -58423,6 +58590,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -62868,9 +63038,15 @@ window.MOCK_DATA = {
     "ランパート": "../public/icons/statuses/210152.png",
     "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
     "アイアンウィル": "../public/icons/statuses/212506.png",
+    "ブラッドバス": "../public/icons/statuses/213913.png",
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -62915,6 +63091,10 @@ window.MOCK_DATA = {
      "base": 217247
     },
     "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
     "コースティックバイト": "../public/icons/statuses/212616.png",
     "ストームバイト": "../public/icons/statuses/212617.png",
     "地神のミンネ": "../public/icons/statuses/212618.png",
@@ -62934,6 +63114,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -62974,6 +63155,7 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217147
     },
+    "零の型": "../public/icons/statuses/212535.png",
     "プライマルレンド実行可": "../public/icons/statuses/212566.png",
     "原初の覚悟": "../public/icons/statuses/212556.png",
     "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
@@ -63018,6 +63200,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -66241,6 +66426,7090 @@ window.MOCK_DATA = {
     ],
     "24315": [
      37032
+    ]
+   },
+   "splitDetected": []
+  },
+  "MNK": {
+   "job": {
+    "abbr": "MNK",
+    "name": "モンク",
+    "icon": "../public/icons/jobs/MNK.png",
+    "level": 100,
+    "role": "melee"
+   },
+   "guide": {
+    "traits": [
+     {
+      "en": "Greased Lightning",
+      "level": null,
+      "desc": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを5％短縮させる。"
+     },
+     {
+      "en": "Enhanced Greased Lightning",
+      "level": null,
+      "desc": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを10％短縮させる。"
+     },
+     {
+      "en": "Deep Meditation",
+      "level": null,
+      "desc": "自身に「闘気」が付与される。\n発動条件：ウェポンスキルのクリティカルヒット時（発動確率80％）"
+     },
+     {
+      "en": "Enhanced Greased Lightning II",
+      "level": null,
+      "desc": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。"
+     },
+     {
+      "en": "Steel Peak Mastery",
+      "level": null,
+      "desc": "鉄山闘気が陰陽闘気に、鉄山靠が陰陽闘気斬に変化する。"
+     },
+     {
+      "en": "Enhanced Perfect Balance",
+      "level": null,
+      "desc": "自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」が付与されるようになる。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」が付与される。\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」が付与される。\n参の型を付与するウェポンスキル：「走竜のチャクラ」が付与される。\n発動条件：「踏鳴」効果中"
+     },
+     {
+      "en": "Deep Meditation II",
+      "level": null,
+      "desc": "自身に「闘気」が付与される確率が100％に上昇する。\n発動条件：ウェポンスキルのクリティカルヒット時"
+     },
+     {
+      "en": "Howling Fist Mastery",
+      "level": null,
+      "desc": "空鳴闘気が万象闘気に、空鳴拳が万象闘気圏に変化する。"
+     },
+     {
+      "en": "Enhanced Greased Lightning III",
+      "level": null,
+      "desc": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを20％短縮させる。"
+     },
+     {
+      "en": "Arm of the Destroyer Mastery",
+      "level": null,
+      "desc": "壊神衝が壊神脚に変化する。"
+     },
+     {
+      "en": "Enhanced Thunderclap",
+      "level": null,
+      "desc": "抜重歩法の最大チャージ数が3に増加する。"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n連撃の威力：220\n正拳突きの威力：300\n崩拳の威力：270\n双掌打の威力：380\n破砕拳の威力：320\n双竜脚の威力：280\n陰陽闘気斬の威力：400"
+     },
+     {
+      "en": "Flint Strike Mastery",
+      "level": null,
+      "desc": "爆裂脚が鳳凰の舞に変化する。"
+     },
+     {
+      "en": "Enhanced Brotherhood",
+      "level": null,
+      "desc": "自身に付与される「桃園結義：闘気」による「闘気」の付与確率を100％に上昇させる。"
+     },
+     {
+      "en": "Tornado Kick Mastery",
+      "level": null,
+      "desc": "闘魂旋風脚が夢幻闘舞に変化する。"
+     },
+     {
+      "en": "Beast Chakra Mastery",
+      "level": null,
+      "desc": "連撃が猿舞連撃に、正拳突きが竜頷正拳撃に、崩拳が虎襲崩拳に、蒼気砲が真空波に変化する。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n双掌打の威力：420\n破砕拳の威力：360\n双竜脚の威力：320\n六合星導脚の威力：780\n夢幻闘舞の威力：1500"
+     },
+     {
+      "en": "Enhanced Riddle of Wind",
+      "level": null,
+      "desc": "自身に「絶空拳実行可」が付与される。\n効果時間：15秒\n発動条件：疾風の極意実行時"
+     },
+     {
+      "en": "Enhanced Riddle of Fire",
+      "level": null,
+      "desc": "自身に「乾坤闘気弾実行可」が付与される。\n効果時間：20秒\n発動条件：紅蓮の極意実行時"
+     },
+     {
+      "en": "Enhanced Second Wind",
+      "level": null,
+      "desc": "内丹の回復力を800に上昇させる。"
+     },
+     {
+      "en": "Enhanced Feint",
+      "level": null,
+      "desc": "牽制の効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
+   "actions": {
+    "61": {
+     "id": 61,
+     "name": "双掌打",
+     "desc": "対象に物理攻撃。　威力：420\n追加効果：自身に「弐の功力」を付与する。\n弐の功力効果：竜頷正拳撃の威力を200上昇させる。\n追加効果：自身に「参の型」を付与する。　効果時間：30秒\n発動条件：「弐の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Twin_Snakes.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 18,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "弐の功力",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "参の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "弐の型"
+     },
+     "replaces": []
+    },
+    "65": {
+     "id": 65,
+     "name": "マントラ",
+     "desc": "一定時間、自身と周囲のパーティメンバーが受けるＨＰ回復効果を10％上昇させる。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Mantra.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 16,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 42,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "66": {
+     "id": 66,
+     "name": "破砕拳",
+     "desc": "対象に物理攻撃。　威力：360\n背面攻撃時威力：420\n追加効果：自身に2スタックの「参の功力」を付与する。\n参の功力効果：虎襲崩拳の威力を150上昇させる。\n追加効果：自身に「壱の型」を付与する。　効果時間：30秒\n発動条件：「参の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Demolish.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "rear",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 360,
+      "rear": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "参の功力",
+        "sec": null,
+        "stacks": 2,
+        "combo": false
+       },
+       {
+        "status": "壱の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "参の型"
+     },
+     "replaces": []
+    },
+    "69": {
+     "id": 69,
+     "name": "踏鳴",
+     "desc": "自身に3スタックの「踏鳴」を付与する。　効果時間：20秒\n踏鳴効果：発動条件に「型」を持つウェポンスキルを、「型」が付与されていなくても実行できるようになる。\n追加効果：自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」を付与する。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」\n参の型を付与するウェポンスキル：「走竜のチャクラ」\n最大チャージ数：2\n発動条件：自身が戦闘状態かついずれのチャクラも付与されていない",
+     "icon": "../public/fankit/battle-pve/05_MNK/Perfect_Balance.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 14,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "踏鳴",
+        "sec": 20,
+        "stacks": 3,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "70": {
+     "id": 70,
+     "name": "地烈斬",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：150\n追加効果：自身に「壱の型」を付与する。　効果時間：30秒\n発動条件：「参の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Rockbreaker.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 150
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "壱の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "参の型"
+     },
+     "replaces": []
+    },
+    "74": {
+     "id": 74,
+     "name": "双竜脚",
+     "desc": "対象に物理攻撃。　威力：320\n壱の型効果中追加効果：自身に「壱の功力」を付与する。\n壱の功力効果：猿舞連撃の威力を200上昇させる。\n追加効果：自身に「弐の型」を付与する。　効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Dragon_Kick.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 50,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 320
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "壱の功力",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "弐の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "3543": {
+     "id": 3543,
+     "name": "闘魂旋風脚",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が闘魂旋風脚に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Tornado_Kick.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1200
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "陰の闘気",
+       "n": 1
+      }
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "3545": {
+     "id": 3545,
+     "name": "蒼気砲",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が蒼気砲に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Elixir_Field.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 800
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "陰の闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "3547": {
+     "id": 3547,
+     "name": "陰陽闘気斬",
+     "desc": "対象に物理攻撃。　威力：400\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "icon": "../public/fankit/battle-pve/05_MNK/The_Forbidden_Chakra.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 54,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 400
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "4262": {
+     "id": 4262,
+     "name": "演武",
+     "desc": "自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Form_Shift.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 52,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "7394": {
+     "id": 7394,
+     "name": "金剛の極意",
+     "desc": "一定時間、自身の被ダメージを20％軽減させる。\n効果時間：10秒\n追加効果：効果中に自身がダメージを受けると、自身に「金剛の決意」を付与する。\n金剛の決意効果：自身のＨＰを継続回復する。\n回復力：100　効果時間：15秒\n追加効果：自身に「金剛周天実行可」を付与する。\n効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Riddle_of_Earth.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 21,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 64,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "金剛の決意",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "金剛周天実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "hot": {
+       "potency": 100,
+       "sec": 15
+      }
+     },
+     "replaces": []
+    },
+    "7395": {
+     "id": 7395,
+     "name": "紅蓮の極意",
+     "desc": "一定時間、自身の与ダメージを15％上昇させる。\n効果時間：20秒\n追加効果：自身に「乾坤闘気弾実行可」を付与する。\n効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Riddle_of_Fire.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 12,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 68,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "乾坤闘気弾実行可",
+        "sec": 20,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "dmgUp": {
+       "pct": 15,
+       "sec": 20
+      }
+     },
+     "replaces": []
+    },
+    "7396": {
+     "id": 7396,
+     "name": "桃園結義",
+     "desc": "一定時間、自身と周囲のパーティメンバーに「桃園結義：攻撃」を付与する。　効果時間：20秒\n桃園結義：攻撃効果：対象の与ダメージを5％上昇させる。\n追加効果：自身と周囲のパーティメンバーに「桃園結義：闘気」を付与する。　効果時間：20秒\n桃園結義：闘気効果（自身の発動確率100％、パーティメンバーの発動確率20％）：自身または対象のパーティメンバーがウェポンスキルおよび魔法による攻撃を命中させると、自身に「闘気」が付与される。\nまた、闘気の最大スタック数が10に増加する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Brotherhood.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 20,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7541": {
+     "id": 7541,
+     "name": "内丹",
+     "desc": "自身のＨＰを回復する。　回復力：800",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/Second_Wind.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 8,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 800,
+      "party": false
+     },
+     "replaces": []
+    },
+    "7542": {
+     "id": 7542,
+     "name": "ブラッドバス",
+     "desc": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。　効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/Bloodbath.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 47,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 12,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7546": {
+     "id": 7546,
+     "name": "トゥルーノース",
+     "desc": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。　効果時間：10秒\n最大チャージ数：2",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/True_North.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 45000,
+     "cooldownGroup": 46,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7548": {
+     "id": 7548,
+     "name": "アームズレングス",
+     "desc": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/Arm's_Length.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 32,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7549": {
+     "id": 7549,
+     "name": "牽制",
+     "desc": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/Feint.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 48,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 22,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7559": {
+     "id": 7559,
+     "name": "堅実魔",
+     "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Surecast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 44,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7561": {
+     "id": 7561,
+     "name": "迅速魔",
+     "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Swiftcast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 18,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7571": {
+     "id": 7571,
+     "name": "救出",
+     "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "icon": "../public/fankit/battle-pve/18_WHM/Role_Actions/Rescue.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 48,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7863": {
+     "id": 7863,
+     "name": "レッグスウィープ",
+     "desc": "対象をスタンさせる。　効果時間：3秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Role_Actions/Leg_Sweep.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 10,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "16472": {
+     "id": 16472,
+     "name": "影身具現",
+     "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+     "icon": "../public/fankit/battle-pve/03_DRK/Living_Shadow.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ディセスティーム実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "16473": {
+     "id": 16473,
+     "name": "四面脚",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：140\n追加効果：自身に「参の型」を付与する。　効果時間：30秒\n発動条件：「弐の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Four-point_Fury.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 45,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "参の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "弐の型"
+     },
+     "replaces": []
+    },
+    "16474": {
+     "id": 16474,
+     "name": "万象闘気圏",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：160\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "icon": "../public/fankit/battle-pve/05_MNK/Enlightenment.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 3,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 74,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 160
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "16476": {
+     "id": 16476,
+     "name": "六合星導脚",
+     "desc": "対象に物理攻撃。　威力：780\n自身に付与されている「闘気」のスタック数に応じた威力が上乗せされる。\n1スタックごとの上乗せ威力：80\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\n実行時に「闘気」の効果が切れる。\nこのアクションはクリティカルヒットしても「闘気」が付与されない。\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Six-sided_Star.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 4000,
+     "fromGuide": [
+      "リキャスト 5→4"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 780
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "25757": {
+     "id": 25757,
+     "name": "シャドウブリンガー",
+     "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+     "icon": "../public/fankit/battle-pve/03_DRK/Shadowbringer.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 23,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 600
+     },
+     "eff": {
+      "requires": "暗黒"
+     },
+     "replaces": []
+    },
+    "25762": {
+     "id": 25762,
+     "name": "抜重歩法",
+     "desc": "敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Thunderclap.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 15,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 35,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": true,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "25764": {
+     "id": 25764,
+     "name": "必殺技",
+     "desc": "自身に3つの「チャクラ」が付与されていて、かつ特定の条件を満たす場合、必殺技を発動する。\n付与されているチャクラが1種類：「真空波」を発動する。\n付与されているチャクラが2種類：「天宙脚」を発動する。\n付与されているチャクラが3種類：「鳳凰の舞」を発動する。\nチャクラ3つと「陰の闘気」と「陽の闘気」：「夢幻闘舞」を発動する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Masterful_Blitz.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "25765": {
+     "id": 25765,
+     "name": "天宙脚",
+     "desc": "対象に物理攻撃。　威力：600\n追加効果：自身に「陰の闘気」を付与する。\n既に付与されている場合は「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が天宙脚に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Celestial_Revolution.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 600
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "陰の闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "25766": {
+     "id": 25766,
+     "name": "疾風の極意",
+     "desc": "自身のオートアタックの攻撃間隔を50％短縮させる。\n効果時間：15秒\n追加効果：自身に「絶空拳実行可」を付与する。\n効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Riddle_of_Wind.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 17,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 72,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "絶空拳実行可",
+        "sec": 15,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "25767": {
+     "id": 25767,
+     "name": "壊神脚",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：120\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。　効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Shadow_of_the_Destroyer.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": true,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 120
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "弐の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "25768": {
+     "id": 25768,
+     "name": "鳳凰の舞",
+     "desc": "自身の周囲の敵に火属性範囲物理攻撃。　威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が鳳凰の舞に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Rising_Phoenix.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 900
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "陽の闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "25769": {
+     "id": 25769,
+     "name": "夢幻闘舞",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1500\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が夢幻闘舞に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Phantom_Rush.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 90,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1500
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "陰の闘気",
+       "n": 1
+      }
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "25882": {
+     "id": 25882,
+     "name": "爆裂脚",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が爆裂脚に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Flint_Strike.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 800
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "陽の闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "36942": {
+     "id": 36942,
+     "name": "陰陽闘気",
+     "desc": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Forbidden_Meditation.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 54,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "闘気",
+       "n": 5
+      }
+     },
+     "replaces": []
+    },
+    "36943": {
+     "id": 36943,
+     "name": "万象闘気",
+     "desc": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Enlightened_Meditation.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 74,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "闘気",
+       "n": 5
+      }
+     },
+     "replaces": []
+    },
+    "36944": {
+     "id": 36944,
+     "name": "金剛周天",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n金剛の決意効果中回復力：500\n発動条件：「金剛周天実行可」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Earth's_Reply.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 2,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 64,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 158,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "requires": "金剛周天実行可",
+      "heal": 300,
+      "party": true
+     },
+     "replaces": []
+    },
+    "36945": {
+     "id": 36945,
+     "name": "猿舞連撃",
+     "desc": "対象に物理攻撃。　威力：260\n壱の功力時威力：460\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。　効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/05_MNK/Leaping_Opo.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": true,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 260,
+      "cond": [
+       {
+        "status": "壱の功力",
+        "potency": 460
+       }
+      ]
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "弐の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "36946": {
+     "id": 36946,
+     "name": "竜頷正拳撃",
+     "desc": "対象に物理攻撃。　威力：340\n弐の功力時威力：540\n追加効果：自身に「参の型」を付与する。　効果時間：30秒\n発動条件：「弐の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Rising_Raptor.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 340,
+      "cond": [
+       {
+        "status": "弐の功力",
+        "potency": 540
+       }
+      ]
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "参の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "弐の型"
+     },
+     "replaces": []
+    },
+    "36947": {
+     "id": 36947,
+     "name": "虎襲崩拳",
+     "desc": "対象に物理攻撃。　威力：310\n参の功力時威力：460\n側面攻撃時威力：370\n参の功力時かつ側面攻撃時威力：520\n追加効果：自身に「壱の型」を付与する。　効果時間：30秒\n発動条件：「参の型」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Pouncing_Coeurl.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "flank",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 310,
+      "cond": [
+       {
+        "status": "参の功力",
+        "potency": 460
+       },
+       {
+        "status": "参の功力時かつ側面攻撃",
+        "potency": 520
+       }
+      ],
+      "flank": 370
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "壱の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "参の型"
+     },
+     "replaces": []
+    },
+    "36948": {
+     "id": 36948,
+     "name": "真空波",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が真空波に変化する。",
+     "icon": "../public/fankit/battle-pve/05_MNK/Elixir_Burst.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 900
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "陰の闘気",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": [
+      25764
+     ]
+    },
+    "36949": {
+     "id": 36949,
+     "name": "絶空拳",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：1040\n2体目以降の対象への威力は35％減少する。\n発動条件：「絶空拳実行可」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Wind's_Reply.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 159,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1040
+     },
+     "eff": {
+      "requires": "絶空拳実行可"
+     },
+     "replaces": []
+    },
+    "36950": {
+     "id": 36950,
+     "name": "乾坤闘気弾",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1400\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「乾坤闘気弾実行可」効果中",
+     "icon": "../public/fankit/battle-pve/05_MNK/Fire's_Reply.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2000,
+     "fromGuide": [
+      "リキャスト 2.5→2"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 100,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 160,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1400
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "零の型",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "乾坤闘気弾実行可"
+     },
+     "replaces": []
+    }
+   },
+   "statuses": {
+    "2959": {
+     "id": 2959,
+     "name": "奥義波切実行可",
+     "icon": "../public/icons/statuses/213313.png"
+    },
+    "3855": {
+     "id": 3855,
+     "name": "残心実行可",
+     "icon": "../public/icons/statuses/213318.png"
+    },
+    "3856": {
+     "id": 3856,
+     "name": "天道",
+     "icon": "../public/icons/statuses/213319.png"
+    }
+   },
+   "statusIcons": {
+    "ブラッドバス": "../public/icons/statuses/213913.png",
+    "双竜脚": "../public/icons/statuses/210215.png",
+    "双掌打": "../public/icons/statuses/210216.png",
+    "マントラ": "../public/icons/statuses/210206.png",
+    "弐の型：走竜": "../public/icons/statuses/210213.png",
+    "参の型：猛虎": "../public/icons/statuses/210214.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
+    "シールドウォール": "../public/icons/statuses/216306.png",
+    "ストロングホールド": "../public/icons/statuses/216306.png",
+    "ラストバスティオン": "../public/icons/statuses/216306.png",
+    "破砕拳": "../public/icons/statuses/210218.png",
+    "叱咤": "../public/icons/statuses/210608.png",
+    "原初の大地": "../public/icons/statuses/216306.png",
+    "ダークフォース": "../public/icons/statuses/216306.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "金剛の決意": "../public/icons/statuses/212531.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
+    "牽制": "../public/icons/statuses/213904.png",
+    "アームズレングス": "../public/icons/statuses/213915.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
+    "トゥルーノース": "../public/icons/statuses/213903.png",
+    "連撃効果アップ": "../public/icons/statuses/212533.png",
+    "無我": "../public/icons/statuses/212534.png",
+    "ソウルガンメタル": "../public/icons/statuses/216306.png",
+    "捨身": "../public/icons/statuses/210304.png",
+    "フェターウォード": "../public/icons/statuses/214867.png",
+    "紅蓮の構え": "../public/icons/statuses/210202.png",
+    "金剛の構え": "../public/icons/statuses/210203.png",
+    "疾風の神髄": "../public/icons/statuses/212537.png",
+    "アームズレングス：効果": "../public/icons/statuses/214885.png",
+    "零の型": "../public/icons/statuses/212535.png",
+    "六合星導脚": "../public/icons/statuses/212536.png",
+    "紅蓮の神髄": "../public/icons/statuses/212528.png",
+    "金剛の神髄": "../public/icons/statuses/212527.png",
+    "急所経穴": "../public/icons/statuses/214931.png",
+    "抜重歩法": "../public/icons/statuses/214932.png",
+    "メテオドライヴ": "../public/icons/statuses/214933.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "絶空拳": "../public/icons/statuses/214725.png",
+    "スウィフト": "../public/icons/statuses/216678.png",
+    "ランパート": "../public/icons/statuses/210152.png",
+    "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
+    "アイアンウィル": "../public/icons/statuses/212506.png",
+    "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
+    "ホルムギャング": "../public/icons/statuses/210255.png",
+    "ディフェンダー": "../public/icons/statuses/212551.png",
+    "ホークアイ": "../public/icons/statuses/210351.png",
+    "猛者の撃": "../public/icons/statuses/210354.png",
+    "乱れ撃ち": "../public/icons/statuses/210356.png",
+    "賢人のバラード": "../public/icons/statuses/212603.png",
+    "軍神のパイオン": "../public/icons/statuses/212605.png",
+    "バトルボイス": "../public/icons/statuses/212601.png",
+    "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
+    "神速魔": "../public/icons/statuses/212627.png",
+    "堅実魔": "../public/icons/statuses/210452.png",
+    "ファイガ効果アップ": "../public/icons/statuses/210460.png",
+    "迅速魔": "../public/icons/statuses/210454.png",
+    "マバリア": "../public/icons/statuses/210456.png",
+    "サークル・オブ・ドゥーム": "../public/icons/statuses/210158.png",
+    "エーテルフロー": {
+     "icon": "../public/icons/statuses/210501.png",
+     "max": 3,
+     "base": 210501
+    },
+    "フェイイルミネーション": "../public/icons/statuses/212828.png",
+    "ロイヤルガード": "../public/icons/statuses/213603.png",
+    "黒魔紋": "../public/icons/statuses/212653.png",
+    "ブラッドウェポン": {
+     "icon": "../public/icons/statuses/217926.png",
+     "max": 5,
+     "base": 217926
+    },
+    "グリットスタンス": "../public/icons/statuses/213108.png",
+    "ダークマインド": "../public/icons/statuses/213114.png",
+    "ソルトアース": "../public/icons/statuses/213104.png",
+    "暗黒": "../public/icons/statuses/213106.png",
+    "ダークアーツ": "../public/icons/statuses/213107.png",
+    "転化": "../public/icons/statuses/212805.png",
+    "応急戦術": "../public/icons/statuses/212806.png",
+    "闘気": "../public/icons/statuses/218301.png",
+    "トランス・バハムート": "../public/icons/statuses/212680.png",
+    "リビングデッド": "../public/icons/statuses/213115.png",
+    "アーゼマの均衡": "../public/icons/statuses/213204.png",
+    "ハルオーネの槍": "../public/icons/statuses/213207.png",
+    "ライトスピード": "../public/icons/statuses/213220.png",
+    "シナストリー": "../public/icons/statuses/213223.png",
+    "旅神のメヌエット": "../public/icons/statuses/212610.png",
+    "原初の解放": {
+     "icon": "../public/icons/statuses/217247.png",
+     "max": 3,
+     "base": 217247
+    },
+    "ブラックナイト": "../public/icons/statuses/213118.png",
+    "コースティックバイト": "../public/icons/statuses/212616.png",
+    "ストームバイト": "../public/icons/statuses/212617.png",
+    "地神のミンネ": "../public/icons/statuses/212618.png",
+    "ルーシッドドリーム": "../public/icons/statuses/213909.png",
+    "三連魔": {
+     "icon": "../public/icons/statuses/219621.png",
+     "max": 3,
+     "base": 219621
+    },
+    "シンエアー": "../public/icons/statuses/212631.png",
+    "インドゥルゲンティア": "../public/icons/statuses/212637.png",
+    "連環計": "../public/icons/statuses/212809.png",
+    "星の支配者": "../public/icons/statuses/213241.png",
+    "彼岸花": "../public/icons/statuses/213304.png",
+    "明鏡止水": {
+     "icon": "../public/icons/statuses/219641.png",
+     "max": 3,
+     "base": 219641
+    },
+    "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "巨星の支配者": "../public/icons/statuses/213242.png",
+    "風月": "../public/icons/statuses/213311.png",
+    "風花": "../public/icons/statuses/213312.png",
+    "残心実行可": "../public/icons/statuses/213318.png",
+    "レクイエスカット": {
+     "icon": "../public/icons/statuses/218345.png",
+     "max": 4,
+     "base": 218345
+    },
+    "ノー・マーシー": "../public/icons/statuses/213601.png",
+    "カモフラージュ": "../public/icons/statuses/213602.png",
+    "ボーライド": "../public/icons/statuses/213606.png",
+    "ソニックブレイク": "../public/icons/statuses/213607.png",
+    "バウショック": "../public/icons/statuses/213608.png",
+    "ジャギュラーリップ実行可": "../public/icons/statuses/213611.png",
+    "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
+    "アイガウジ実行可": "../public/icons/statuses/213613.png",
+    "原初の猛り": "../public/icons/statuses/212558.png",
+    "ディア": "../public/icons/statuses/212635.png",
+    "テンパランス": "../public/icons/statuses/212634.png",
+    "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
+    "ディヴィネーション": "../public/icons/statuses/213245.png",
+    "コンバガ": "../public/icons/statuses/213248.png",
+    "ホロスコープ": "../public/icons/statuses/213251.png",
+    "ホロスコープ・ヘリオス": "../public/icons/statuses/213252.png",
+    "ニュートラルセクト": "../public/icons/statuses/213253.png",
+    "蠱毒法": "../public/icons/statuses/212812.png",
+    "秘策": "../public/icons/statuses/212813.png",
+    "原初の混沌": "../public/icons/statuses/212560.png",
+    "ブルータルシェル": "../public/icons/statuses/213614.png",
+    "ロイエ実行可": "../public/icons/statuses/212522.png",
+    "軍神の加護": "../public/icons/statuses/212619.png",
+    "軍神の契約": "../public/icons/statuses/212620.png",
+    "トルバドゥール": "../public/icons/statuses/212615.png",
+    "ブラッドデリリアム": {
+     "icon": "../public/icons/statuses/217147.png",
+     "max": 3,
+     "base": 217147
+    },
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
+    "プライマルレンド実行可": "../public/icons/statuses/212566.png",
+    "原初の覚悟": "../public/icons/statuses/212556.png",
+    "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
+    "戦嵐": "../public/icons/statuses/212561.png",
+    "原初の血気": "../public/icons/statuses/212562.png",
+    "原初の血潮": "../public/icons/statuses/212563.png",
+    "オブレーション": "../public/icons/statuses/213123.png",
+    "ハート・オブ・コランダム": "../public/icons/statuses/213615.png",
+    "カタルシス・オブ・コランダム": "../public/icons/statuses/213617.png",
+    "ハイパーヴェロシティ実行可": "../public/icons/statuses/213618.png",
+    "ブラストアロー実行可": "../public/icons/statuses/212621.png",
+    "ルインジャ実行可": "../public/icons/statuses/212690.png",
+    "守りの光": "../public/icons/statuses/212691.png",
+    "シアリングライト": "../public/icons/statuses/212699.png",
+    "スリップストリーム": "../public/icons/statuses/212695.png",
+    "リタージー・オブ・ベル": {
+     "icon": "../public/icons/statuses/218373.png",
+     "max": 5,
+     "base": 218373
+    },
+    "マクロコスモス": "../public/icons/statuses/213263.png",
+    "光神のフィナーレ": "../public/icons/statuses/212622.png",
+    "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
+    "スリップストリーム実行可": "../public/icons/statuses/212697.png",
+    "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
+    "奥義波切実行可": "../public/icons/statuses/213313.png",
+    "コンフィテオル実行可": "../public/icons/statuses/212520.png",
+    "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "トランス・フェニックス": "../public/icons/statuses/214965.png",
+    "ゲベート実行可": "../public/icons/statuses/212523.png",
+    "グラブカッマー実行可": "../public/icons/statuses/212524.png",
+    "ブレード・オブ・オナー実行可": "../public/icons/statuses/213052.png",
+    "ダムネーション": "../public/icons/statuses/212568.png",
+    "原初の鼓動": {
+     "icon": "../public/icons/statuses/218147.png",
+     "max": 3,
+     "base": 218147
+    },
+    "ルイネーター実行可": "../public/icons/statuses/212569.png",
+    "シャドウヴィジル": "../public/icons/statuses/213125.png",
+    "ディセスティーム実行可": "../public/icons/statuses/213126.png",
+    "グレートネビュラ": "../public/icons/statuses/213619.png",
+    "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
+    "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "ゴアブレード実行可": "../public/icons/statuses/213053.png",
+    "燕返し実行可": "../public/icons/statuses/213315.png",
+    "天道": "../public/icons/statuses/213319.png",
+    "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
+    "光神のアンコール実行可": "../public/icons/statuses/213077.png",
+    "サンダー系魔法実行可": "../public/icons/statuses/212660.png",
+    "ハイサンダー": "../public/icons/statuses/212661.png",
+    "シアリングスパーク実行可": "../public/icons/statuses/212750.png",
+    "ルクス・ソラリス実行可": "../public/icons/statuses/212751.png",
+    "グレアジャ実行可": {
+     "icon": "../public/icons/statuses/218669.png",
+     "max": 3,
+     "base": 218669
+    },
+    "ディヴァインカレス実行可": "../public/icons/statuses/212640.png",
+    "埋伏の毒実行可": "../public/icons/statuses/212818.png",
+    "埋伏の毒": "../public/icons/statuses/212819.png",
+    "セラフィズム": "../public/icons/statuses/212820.png",
+    "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
+    "オラクル実行可": "../public/icons/statuses/213264.png",
+    "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
+    "原初の激震実行可": "../public/icons/statuses/212571.png",
+    "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
+    "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
+   },
+   "bars": {
+    "hb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 36945,
+       "from": 53
+      },
+      {
+       "kind": "action",
+       "id": 36946,
+       "from": 54
+      },
+      {
+       "kind": "action",
+       "id": 36947,
+       "from": 56
+      },
+      {
+       "kind": "action",
+       "id": 61
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 69
+      },
+      {
+       "kind": "action",
+       "id": 65
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 7394
+      },
+      {
+       "kind": "action",
+       "id": 36942,
+       "from": 36940
+      },
+      {
+       "kind": "action",
+       "id": 74
+      },
+      {
+       "kind": "action",
+       "id": 66
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 25767,
+       "from": 62
+      },
+      {
+       "kind": "action",
+       "id": 16473
+      },
+      {
+       "kind": "action",
+       "id": 70
+      },
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7548
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 16474
+      },
+      {
+       "kind": "action",
+       "id": 16476
+      },
+      {
+       "kind": "macro",
+       "no": 64
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb3": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 7395
+      },
+      {
+       "kind": "action",
+       "id": 25766
+      },
+      {
+       "kind": "action",
+       "id": 7396
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 6
+      },
+      null
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb4": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 7542
+      },
+      {
+       "kind": "action",
+       "id": 7863
+      },
+      {
+       "kind": "action",
+       "id": 7549
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7546
+      },
+      {
+       "kind": "action",
+       "id": 25764
+      },
+      {
+       "kind": "action",
+       "id": 7541
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 17
+      }
+     ],
+     "shared": [
+      {
+       "kind": "action",
+       "id": 7571
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 2
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "hb5": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 16472
+      },
+      {
+       "kind": "action",
+       "id": 25757
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb6": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "macro",
+       "no": 346
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb7": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 30
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "macro",
+       "no": 296
+      },
+      {
+       "kind": "macro",
+       "no": 297
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 307
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "macro",
+       "no": 309
+      },
+      {
+       "kind": "macro",
+       "no": 310
+      },
+      {
+       "kind": "macro",
+       "no": 298
+      },
+      {
+       "kind": "macro",
+       "no": 299
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb9": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 11
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 258
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb10": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "macro",
+       "no": 257
+      },
+      {
+       "kind": "macro",
+       "no": 256
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb1": {
+     "job": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "action",
+       "id": 61
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 7863
+      },
+      {
+       "kind": "action",
+       "id": 7542
+      },
+      {
+       "kind": "action",
+       "id": 36947,
+       "from": 56
+      },
+      {
+       "kind": "action",
+       "id": 7541
+      },
+      {
+       "kind": "action",
+       "id": 36945,
+       "from": 53
+      },
+      {
+       "kind": "action",
+       "id": 36946,
+       "from": 54
+      }
+     ],
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb2": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb3": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb7": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 24
+      },
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    }
+   },
+   "gauges": {
+    "JobHudMNK0": {
+     "index": 395,
+     "name": "マスターゲージ",
+     "x": 36.783851623535156,
+     "y": 56.66666793823242,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 182,
+     "h": 80
+    },
+    "JobHudMNK1": {
+     "index": 394,
+     "name": "チャクラゲージ",
+     "x": 37.70833206176758,
+     "y": 45.16203689575195,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 200,
+     "h": 136
+    }
+   },
+   "gauge": {
+    "names": [
+     "JobHudMNK0",
+     "JobHudMNK1"
+    ],
+    "layouts": {
+     "JobHudMNK0": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudMNK0",
+          "u": 0,
+          "v": 0,
+          "w": 160,
+          "h": 64
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 160,
+          "v": 0,
+          "w": 36,
+          "h": 36
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 196,
+          "v": 0,
+          "w": 36,
+          "h": 36
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 0,
+          "v": 64,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 40,
+          "v": 64,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 80,
+          "v": 64,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 120,
+          "v": 64,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 160,
+          "v": 36,
+          "w": 72,
+          "h": 68
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 190,
+          "v": 136,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 287,
+          "v": 135,
+          "w": 80,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudMNK0",
+          "u": 380,
+          "v": 1,
+          "w": 30,
+          "h": 74
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 232,
+          "v": 0,
+          "w": 53,
+          "h": 166
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 285,
+          "v": 0,
+          "w": 47,
+          "h": 127
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 332,
+          "v": 0,
+          "w": 46,
+          "h": 132
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 380,
+          "v": 76,
+          "w": 30,
+          "h": 30
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 380,
+          "v": 106,
+          "w": 30,
+          "h": 30
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 380,
+          "v": 136,
+          "w": 30,
+          "h": 30
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudMNK0",
+          "u": 0,
+          "v": 104,
+          "w": 114,
+          "h": 48
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 114,
+          "v": 104,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 146,
+          "v": 104,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 178,
+          "v": 104,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 114,
+          "v": 136,
+          "w": 46,
+          "h": 30
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 160,
+          "v": 136,
+          "w": 30,
+          "h": 30
+         }
+        ]
+       },
+       {
+        "id": 4,
+        "parts": [
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 32,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 32,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudBLM0",
+          "u": 238,
+          "v": 272,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 5,
+        "parts": [
+         {
+          "texture": "JobHudNumBg",
+          "u": 0,
+          "v": 0,
+          "w": 60,
+          "h": 40
+         }
+        ]
+       },
+       {
+        "id": 6,
+        "parts": [
+         {
+          "texture": "JobHudMNK0",
+          "u": 0,
+          "v": 152,
+          "w": 46,
+          "h": 46
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 46,
+          "v": 152,
+          "w": 46,
+          "h": 46
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 92,
+          "v": 166,
+          "w": 46,
+          "h": 46
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 138,
+          "v": 168,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 0,
+          "v": 198,
+          "w": 20,
+          "h": 20
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 20,
+          "v": 198,
+          "w": 18,
+          "h": 18
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 38,
+          "v": 198,
+          "w": 18,
+          "h": 18
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 56,
+          "v": 198,
+          "w": 18,
+          "h": 18
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 170,
+          "v": 168,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 202,
+          "v": 168,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 234,
+          "v": 168,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 266,
+          "v": 168,
+          "w": 144,
+          "h": 44
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 138,
+          "v": 200,
+          "w": 26,
+          "h": 26
+         },
+         {
+          "texture": "JobHudMNK0",
+          "u": 164,
+          "v": 200,
+          "w": 26,
+          "h": 26
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 36,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 2,
+          "y": 2,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 5,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -200,
+           -100,
+           0
+          ],
+          "partListId": 1,
+          "partId": 8,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": 2,
+          "y": 2,
+          "w": 32,
+          "h": 32,
+          "alpha": 101,
+          "scaleX": 2.2,
+          "scaleY": 2.2,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -120,
+           -60,
+           0
+          ],
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 36,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 36,
+          "alpha": 85,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           100,
+           100,
+           100
+          ]
+         },
+         {
+          "id": 6,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 36,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           50,
+           10,
+           130
+          ],
+          "partListId": 1,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 6,
+          "y": -120,
+          "w": 46,
+          "h": 132,
+          "alpha": 0,
+          "scaleX": 0.7,
+          "scaleY": 0.7,
+          "rotation": 10,
+          "originX": 23,
+          "originY": 130,
+          "add": [
+           -200,
+           -200,
+           0
+          ],
+          "partListId": 2,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": 4,
+          "y": -93,
+          "w": 47,
+          "h": 127,
+          "alpha": 127,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 12,
+          "originX": 24,
+          "originY": 120,
+          "add": [
+           -100,
+           -100,
+           0
+          ],
+          "partListId": 2,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 8,
+          "y": -131,
+          "w": 53,
+          "h": 166,
+          "alpha": 89,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "rotation": 5,
+          "originX": 26,
+          "originY": 160,
+          "add": [
+           -150,
+           -100,
+           0
+          ],
+          "partListId": 2,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 4,
+          "x": 5,
+          "y": -110,
+          "w": 30,
+          "h": 140,
+          "alpha": 0,
+          "scaleX": 1,
+          "scaleY": 0,
+          "rotation": 15,
+          "originX": 15,
+          "originY": 140,
+          "add": [
+           -20,
+           70,
+           100
+          ],
+          "partListId": 2,
+          "partId": 0,
+          "nineGrid": [
+           24,
+           32,
+           0,
+           0
+          ]
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 40,
+          "alpha": 127,
+          "scaleX": 1.3,
+          "scaleY": 1.3,
+          "rotation": 0,
+          "originX": 20,
+          "originY": 20,
+          "add": [
+           90,
+           90,
+           150
+          ]
+         },
+         {
+          "id": 7,
+          "parent": 6,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1003,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 178,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16
+         },
+         {
+          "id": 4,
+          "parent": 3,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "partListId": 3,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1004,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -7,
+           -28,
+           2
+          ],
+          "partListId": 4,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 127,
+          "scaleX": 1.75,
+          "scaleY": 1.75,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           40,
+           40,
+           40
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 3,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 5,
+          "parent": 4,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           80,
+           -80,
+           0
+          ],
+          "partListId": 4,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 4,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1005,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 1,
+          "y": -2,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 3,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "partListId": 1,
+          "partId": 8,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": 1,
+          "y": -2,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 6,
+          "y": 5,
+          "w": 20,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 6,
+          "partId": 4,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 1,
+          "x": 8,
+          "y": 5,
+          "w": 18,
+          "h": 18,
+          "alpha": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 6,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 18,
+          "h": 18,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 9,
+          "originY": 9,
+          "add": [
+           50,
+           10,
+           130
+          ],
+          "partListId": 6,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 7,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 6,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1006,
+        "type": 19,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 3,
+          "x": 14,
+          "y": 5,
+          "w": 30,
+          "h": 30,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 5,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           28,
+           28
+          ]
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 182,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 1,
+        "y": -48,
+        "w": 180,
+        "h": 130,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 168,
+        "h": 132,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 4,
+        "parent": 3,
+        "type": 1,
+        "x": 10,
+        "y": 74,
+        "w": 54,
+        "h": 58,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 5,
+        "parent": 4,
+        "type": 1005,
+        "x": 22,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 6,
+        "parent": 4,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 46,
+        "h": 46,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 7,
+        "parent": 3,
+        "type": 1,
+        "x": 58,
+        "y": 74,
+        "w": 62,
+        "h": 58,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 8,
+        "parent": 7,
+        "type": 1005,
+        "x": 22,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 9,
+        "parent": 7,
+        "type": 1005,
+        "x": 30,
+        "y": 9,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 10,
+        "parent": 7,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 46,
+        "h": 46,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 11,
+        "parent": 3,
+        "type": 1,
+        "x": 106,
+        "y": 74,
+        "w": 62,
+        "h": 58,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 12,
+        "parent": 11,
+        "type": 1005,
+        "x": 22,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 13,
+        "parent": 11,
+        "type": 1005,
+        "x": 30,
+        "y": 9,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 16,
+        "originY": 16
+       },
+       {
+        "id": 14,
+        "parent": 11,
+        "type": 1005,
+        "x": 22,
+        "y": -9,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 15,
+        "parent": 11,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 46,
+        "h": 46,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 23,
+        "originY": 23,
+        "partListId": 6,
+        "partId": 2,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 16,
+        "parent": 3,
+        "type": 2,
+        "x": 10,
+        "y": 77,
+        "w": 144,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 11,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 17,
+        "parent": 2,
+        "type": 1,
+        "x": 0,
+        "y": 34,
+        "w": 180,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 18,
+        "parent": 17,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 180,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 19,
+        "parent": 18,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 10,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 20,
+        "parent": 19,
+        "type": 2,
+        "x": 36,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 0,
+        "scaleX": -1,
+        "scaleY": 0.5,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 36,
+        "multiply": [
+         80,
+         80,
+         80
+        ],
+        "add": [
+         -50,
+         -100,
+         200
+        ],
+        "partListId": 2,
+        "partId": 6,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 21,
+        "parent": 19,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 36,
+        "add": [
+         -150,
+         -50,
+         255
+        ],
+        "partListId": 2,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 22,
+        "parent": 19,
+        "type": 2,
+        "x": 180,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 0,
+        "scaleX": -1,
+        "scaleY": 0.5,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 36,
+        "add": [
+         200,
+         -50,
+         -100
+        ],
+        "partListId": 2,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 23,
+        "parent": 19,
+        "type": 2,
+        "x": 144,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 36,
+        "add": [
+         120,
+         0,
+         -100
+        ],
+        "partListId": 2,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 24,
+        "parent": 18,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 180,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 25,
+        "parent": 24,
+        "type": 1001,
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 26,
+        "parent": 24,
+        "type": 1001,
+        "x": 180,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": -1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 27,
+        "parent": 18,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 2,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 28,
+        "parent": 18,
+        "type": 2,
+        "x": 144,
+        "y": 0,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 2,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 29,
+        "parent": 18,
+        "type": 2,
+        "x": 10,
+        "y": -15,
+        "w": 160,
+        "h": 64,
+        "alpha": 18,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 80,
+        "originY": 32,
+        "multiply": [
+         50,
+         50,
+         50
+        ],
+        "add": [
+         100,
+         -50,
+         -200
+        ],
+        "partListId": 1,
+        "partId": 9,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 30,
+        "parent": 2,
+        "type": 1,
+        "x": 34,
+        "y": 32,
+        "w": 112,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 31,
+        "parent": 30,
+        "type": 1002,
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 32,
+        "parent": 30,
+        "type": 1002,
+        "x": 36,
+        "y": 0,
+        "w": 40,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 33,
+        "parent": 30,
+        "type": 1002,
+        "x": 72,
+        "y": 0,
+        "w": 40,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 34,
+        "parent": 30,
+        "type": 2,
+        "x": -24,
+        "y": -12,
+        "w": 160,
+        "h": 64,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 35,
+        "parent": 2,
+        "type": 1,
+        "x": 53,
+        "y": -17,
+        "w": 72,
+        "h": 68,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 36,
+        "parent": 35,
+        "type": 3,
+        "x": 17,
+        "y": 22,
+        "w": 34,
+        "h": 22,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 37,
+        "parent": 35,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 68,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 7,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 38,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": -23,
+        "w": 182,
+        "h": 48,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 39,
+        "parent": 38,
+        "type": 1,
+        "x": -22,
+        "y": 42,
+        "w": 216,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 108,
+        "originY": 16
+       },
+       {
+        "id": 40,
+        "parent": 39,
+        "type": 1,
+        "x": 20,
+        "y": 0,
+        "w": 58,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 41,
+        "parent": 40,
+        "type": 1004,
+        "x": 26,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 42,
+        "parent": 40,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 43,
+        "parent": 39,
+        "type": 1,
+        "x": 70,
+        "y": 0,
+        "w": 96,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 44,
+        "parent": 43,
+        "type": 1004,
+        "x": 26,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 45,
+        "parent": 43,
+        "type": 1004,
+        "x": 45,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 46,
+        "parent": 43,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 9,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 47,
+        "parent": 39,
+        "type": 1,
+        "x": 120,
+        "y": 0,
+        "w": 96,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 48,
+        "parent": 47,
+        "type": 1004,
+        "x": 26,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 49,
+        "parent": 47,
+        "type": 1004,
+        "x": 45,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 50,
+        "parent": 47,
+        "type": 1004,
+        "x": 64,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 51,
+        "parent": 47,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 6,
+        "partId": 10,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 52,
+        "parent": 38,
+        "type": 1,
+        "x": 134,
+        "y": 9,
+        "w": 46,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 53,
+        "parent": 52,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 54,
+        "parent": 53,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 0,
+        "scaleX": 2.5,
+        "scaleY": 2.5,
+        "rotation": 0,
+        "originX": 15,
+        "originY": 15,
+        "add": [
+         200,
+         200,
+         200
+        ]
+       },
+       {
+        "id": 55,
+        "parent": 54,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 15,
+        "originY": 15,
+        "add": [
+         60,
+         -20,
+         255
+        ],
+        "partListId": 3,
+        "partId": 5,
+        "flipH": true,
+        "flipV": false
+       },
+       {
+        "id": 56,
+        "parent": 52,
+        "type": 1,
+        "x": 20,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 57,
+        "parent": 56,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 0,
+        "scaleX": 2.5,
+        "scaleY": 2.5,
+        "rotation": 0,
+        "originX": 15,
+        "originY": 15,
+        "add": [
+         200,
+         200,
+         200
+        ]
+       },
+       {
+        "id": 58,
+        "parent": 57,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 15,
+        "originY": 15,
+        "add": [
+         100,
+         50,
+         -40
+        ],
+        "partListId": 3,
+        "partId": 5,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 59,
+        "parent": 52,
+        "type": 2,
+        "x": 2,
+        "y": 2,
+        "w": 46,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 3,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 60,
+        "parent": 38,
+        "type": 1,
+        "x": 36,
+        "y": 0,
+        "w": 72,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 61,
+        "parent": 60,
+        "type": 1003,
+        "x": 8,
+        "y": 8,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 62,
+        "parent": 60,
+        "type": 1003,
+        "x": 38,
+        "y": 8,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 63,
+        "parent": 60,
+        "type": 1003,
+        "x": 68,
+        "y": 8,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 64,
+        "parent": 60,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 114,
+        "h": 48,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 3,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 65,
+        "parent": 38,
+        "type": 1,
+        "x": -10,
+        "y": 4,
+        "w": 60,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 66,
+        "parent": 65,
+        "type": 1006,
+        "x": 0,
+        "y": 0,
+        "w": 60,
+        "h": 40,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     },
+     "JobHudMNK1": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudMNK1",
+          "u": 0,
+          "v": 0,
+          "w": 172,
+          "h": 130
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 2,
+          "v": 133,
+          "w": 85,
+          "h": 85
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 173,
+          "v": 1,
+          "w": 38,
+          "h": 38
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 213,
+          "v": 1,
+          "w": 38,
+          "h": 38
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 212,
+          "v": 40,
+          "w": 34,
+          "h": 34
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudMNK1",
+          "u": 172,
+          "v": 40,
+          "w": 40,
+          "h": 40
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 89,
+          "v": 133,
+          "w": 86,
+          "h": 65
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 89,
+          "v": 199,
+          "w": 68,
+          "h": 5
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 173,
+          "v": 81,
+          "w": 46,
+          "h": 46
+         },
+         {
+          "texture": "JobHudMNK1",
+          "u": 176,
+          "v": 130,
+          "w": 64,
+          "h": 64
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 0,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 128,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 256,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 384,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 512,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 640,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 768,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 0,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 128,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 256,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 384,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 512,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 640,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 768,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         },
+         {
+          "texture": "JobHudMNKEffect",
+          "u": 896,
+          "v": 896,
+          "w": 128,
+          "h": 128
+         }
+        ]
+       },
+       {
+        "id": 4,
+        "parts": [
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 0,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 32,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 0,
+          "v": 32,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 38,
+          "h": 38,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": -12,
+          "y": -24,
+          "w": 64,
+          "h": 64,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 32,
+          "originY": 32,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": -13,
+          "y": -14,
+          "w": 64,
+          "h": 64,
+          "alpha": 84,
+          "scaleX": 1.4,
+          "scaleY": 1.4,
+          "rotation": 60,
+          "originX": 32,
+          "originY": 32,
+          "multiply": [
+           80,
+           80,
+           80
+          ],
+          "add": [
+           100,
+           0,
+           -200
+          ],
+          "partListId": 2,
+          "partId": 4,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": -13,
+          "y": -14,
+          "w": 64,
+          "h": 64,
+          "alpha": 153,
+          "scaleX": 2,
+          "scaleY": 2,
+          "rotation": 0,
+          "originX": 32,
+          "originY": 32,
+          "multiply": [
+           70,
+           70,
+           70
+          ],
+          "add": [
+           80,
+           0,
+           -160
+          ],
+          "partListId": 2,
+          "partId": 4,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 38,
+          "h": 38,
+          "alpha": 0,
+          "scaleX": 1.2,
+          "scaleY": 1.2,
+          "rotation": 0,
+          "originX": 19,
+          "originY": 19,
+          "partListId": 1,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": -4,
+          "y": -4,
+          "w": 46,
+          "h": 46,
+          "alpha": 0,
+          "scaleX": 0.2,
+          "scaleY": 0.2,
+          "rotation": 0,
+          "originX": 23,
+          "originY": 23,
+          "multiply": [
+           50,
+           50,
+           50
+          ],
+          "add": [
+           200,
+           100,
+           -250
+          ],
+          "partListId": 2,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 7,
+          "parent": 1,
+          "type": 2,
+          "x": -15,
+          "y": 16,
+          "w": 68,
+          "h": 5,
+          "alpha": 0,
+          "scaleX": 0,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 34,
+          "originY": 3,
+          "multiply": [
+           50,
+           50,
+           50
+          ],
+          "add": [
+           200,
+           200,
+           -200
+          ],
+          "partListId": 2,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 8,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 38,
+          "h": 38,
+          "alpha": 0,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "rotation": 0,
+          "originX": 19,
+          "originY": 19,
+          "partListId": 1,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -7,
+           -28,
+           2
+          ],
+          "partListId": 4,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 63,
+          "scaleX": 2.125,
+          "scaleY": 2.125,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           60,
+           60,
+           60
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 3,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 191,
+          "scaleX": 1.375,
+          "scaleY": 1.375,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           0,
+           -168,
+           -255
+          ],
+          "partListId": 4,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 3,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           115,
+           20,
+           -95
+          ],
+          "partListId": 4,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 4,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 136,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 6,
+        "w": 200,
+        "h": 158,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 136,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         255,
+         255,
+         255
+        ],
+        "partListId": 0,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 4,
+        "parent": 2,
+        "type": 2,
+        "x": 90,
+        "y": 43,
+        "w": 40,
+        "h": 40,
+        "alpha": 51,
+        "scaleX": 3.7037036,
+        "scaleY": 3.7037036,
+        "rotation": 0,
+        "originX": 20,
+        "originY": 20,
+        "multiply": [
+         66,
+         66,
+         66
+        ],
+        "add": [
+         0,
+         -166,
+         -200
+        ],
+        "partListId": 2,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 5,
+        "parent": 2,
+        "type": 2,
+        "x": 68,
+        "y": 22,
+        "w": 85,
+        "h": 85,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 6,
+        "parent": 2,
+        "type": 1,
+        "x": 55,
+        "y": 12,
+        "w": 110,
+        "h": 110,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         13,
+         11,
+         10
+        ]
+       },
+       {
+        "id": 7,
+        "parent": 6,
+        "type": 1001,
+        "x": 10,
+        "y": 27,
+        "w": 38,
+        "h": 38,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 19,
+        "originY": 19
+       },
+       {
+        "id": 8,
+        "parent": 6,
+        "type": 1001,
+        "x": 21,
+        "y": 57,
+        "w": 38,
+        "h": 38,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 19,
+        "originY": 19
+       },
+       {
+        "id": 9,
+        "parent": 6,
+        "type": 1001,
+        "x": 52,
+        "y": 57,
+        "w": 38,
+        "h": 38,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 19,
+        "originY": 19
+       },
+       {
+        "id": 10,
+        "parent": 6,
+        "type": 1001,
+        "x": 63,
+        "y": 27,
+        "w": 38,
+        "h": 38,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 19,
+        "originY": 19
+       },
+       {
+        "id": 11,
+        "parent": 6,
+        "type": 1001,
+        "x": 37,
+        "y": 7,
+        "w": 38,
+        "h": 38,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 19,
+        "originY": 19
+       },
+       {
+        "id": 12,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 158,
+        "alpha": 0,
+        "scaleX": 0,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 79,
+        "originY": 158,
+        "multiply": [
+         60,
+         60,
+         60
+        ],
+        "add": [
+         200,
+         -150,
+         -200
+        ],
+        "partListId": 2,
+        "partId": 3,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 13,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 158,
+        "alpha": 0,
+        "scaleX": 0,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 79,
+        "originY": 158,
+        "multiply": [
+         80,
+         80,
+         80
+        ],
+        "add": [
+         200,
+         -100,
+         -200
+        ],
+        "partListId": 2,
+        "partId": 3,
+        "flipH": true,
+        "flipV": false
+       },
+       {
+        "id": 14,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 158,
+        "alpha": 0,
+        "scaleX": 0,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 79,
+        "originY": 158,
+        "multiply": [
+         60,
+         60,
+         60
+        ],
+        "add": [
+         200,
+         -150,
+         -200
+        ],
+        "partListId": 2,
+        "partId": 3,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 15,
+        "parent": 2,
+        "type": 2,
+        "x": 54,
+        "y": 32,
+        "w": 86,
+        "h": 65,
+        "alpha": 58,
+        "scaleX": 2,
+        "scaleY": 2,
+        "rotation": 0,
+        "originX": 43,
+        "originY": 32,
+        "multiply": [
+         60,
+         60,
+         60
+        ],
+        "add": [
+         100,
+         -50,
+         -180
+        ],
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 16,
+        "parent": 2,
+        "type": 1,
+        "x": 54,
+        "y": 32,
+        "w": 86,
+        "h": 65,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 17,
+        "parent": 16,
+        "type": 2,
+        "x": -44,
+        "y": -32,
+        "w": 172,
+        "h": 130,
+        "alpha": 0,
+        "scaleX": 1.05,
+        "scaleY": 1.05,
+        "rotation": 0,
+        "originX": 86,
+        "originY": 65,
+        "multiply": [
+         60,
+         60,
+         60
+        ],
+        "add": [
+         100,
+         -50,
+         -180
+        ],
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 18,
+        "parent": 2,
+        "type": 2,
+        "x": 10,
+        "y": 0,
+        "w": 172,
+        "h": 130,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 19,
+        "parent": 1,
+        "type": 1,
+        "x": 48,
+        "y": 52,
+        "w": 104,
+        "h": 33,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 20,
+        "parent": 19,
+        "type": 1,
+        "x": -1,
+        "y": -1,
+        "w": 104,
+        "h": 34,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 21,
+        "parent": 20,
+        "type": 4,
+        "x": 0,
+        "y": 0,
+        "w": 104,
+        "h": 34,
+        "alpha": 0,
+        "scaleX": 1.25,
+        "scaleY": 1.25,
+        "rotation": 0,
+        "originX": 52,
+        "originY": 17,
+        "multiply": [
+         60,
+         60,
+         60
+        ],
+        "add": [
+         100,
+         -50,
+         -180
+        ],
+        "partListId": 1,
+        "partId": 4,
+        "nineGrid": [
+         0,
+         0,
+         20,
+         20
+        ]
+       },
+       {
+        "id": 22,
+        "parent": 19,
+        "type": 1002,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 23,
+        "parent": 19,
+        "type": 1002,
+        "x": 18,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 24,
+        "parent": 19,
+        "type": 1002,
+        "x": 36,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 25,
+        "parent": 19,
+        "type": 1002,
+        "x": 54,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 26,
+        "parent": 19,
+        "type": 1002,
+        "x": 72,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 27,
+        "parent": 1,
+        "type": 8,
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 136,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     }
+    },
+    "textures": {
+     "JobHudMNK0": {
+      "path": "../public/icons/job-gauges/textures/JobHudMNK0.png",
+      "w": 824,
+      "h": 452,
+      "scale": 2
+     },
+     "JobHudSimple_StackA": {
+      "path": "../public/icons/job-gauges/textures/JobHudSimple_StackA.png",
+      "w": 128,
+      "h": 128,
+      "scale": 2
+     },
+     "JobHudBLM0": {
+      "path": "../public/icons/job-gauges/textures/JobHudBLM0.png",
+      "w": 784,
+      "h": 728,
+      "scale": 2
+     },
+     "JobHudNumBg": {
+      "path": "../public/icons/job-gauges/textures/JobHudNumBg.png",
+      "w": 120,
+      "h": 80,
+      "scale": 2
+     },
+     "JobHudMNK1": {
+      "path": "../public/icons/job-gauges/textures/JobHudMNK1.png",
+      "w": 504,
+      "h": 440,
+      "scale": 2
+     },
+     "JobHudMNKEffect": {
+      "path": "../public/icons/job-gauges/textures/JobHudMNKEffect.png",
+      "w": 2048,
+      "h": 2048,
+      "scale": 2
+     },
+     "JobHudSimple_StackB": {
+      "path": "../public/icons/job-gauges/textures/JobHudSimple_StackB.png",
+      "w": 128,
+      "h": 128,
+      "scale": 2
+     }
+    },
+    "sizes": {
+     "JobHudMNK0": [
+      182,
+      80
+     ],
+     "JobHudMNK1": [
+      200,
+      136
+     ]
+    }
+   },
+   "dmgUp": {
+    "紅蓮の極意": 15
+   },
+   "upgrade": {
+    "53": 36945,
+    "54": 36946,
+    "56": 36947,
+    "62": 25767,
+    "3543": 25769,
+    "3545": 36948,
+    "25761": 3547,
+    "25763": 16474,
+    "25882": 25768,
+    "36940": 36942,
+    "36941": 36943
+   },
+   "jobSet": 20,
+   "buttonsAll": [
+    61,
+    65,
+    66,
+    69,
+    70,
+    74,
+    3547,
+    4262,
+    7394,
+    7395,
+    7396,
+    16473,
+    16474,
+    16476,
+    25762,
+    25764,
+    25766,
+    25767,
+    36942,
+    36943,
+    36944,
+    36945,
+    36946,
+    36947,
+    36949,
+    36950
+   ],
+   "unplaced": [
+    3547,
+    4262,
+    25762,
+    36943,
+    36944,
+    36949,
+    36950
+   ],
+   "replaceGroups": {
+    "25764": [
+     3543,
+     3545,
+     25765,
+     25768,
+     25769,
+     25882,
+     36948
     ]
    },
    "splitDetected": []

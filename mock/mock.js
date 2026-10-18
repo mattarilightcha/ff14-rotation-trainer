@@ -67,6 +67,8 @@
     shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name), unshield: (who) => Arena.unshield?.(who),
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
+    // 今の自分の向き（敵から見て 'rear' / 'flank' / 'front'）。方向指定と状態の組み合わせで威力が変わる技（モンクの虎襲崩拳）に使う
+    posNow: () => Arena.positional(),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
     get who() { return actWho; }, hpOf: (who) => Arena.hpOf(who),
     // 継続ダメージを自分で持つジョブ（吟遊詩人の 2 つの毒）: 1 回分。mult は付けたときの与ダメージ上昇
@@ -564,6 +566,8 @@
         if (Arena.distTo('tank') > (a.range > 0 ? a.range : 30)) return { err: `${a.name}: 対象が射程外です` };
         return { who: 'npc' };
       }
+      // 敵にも味方にも使える技（モンクの抜重歩法・賢者のイカロス）: 敵をターゲットしていれば敵へ
+      if (t === 'boss' && a.hostile) return { who: 'boss' };
       if (a.toSelf) return { who: 'self' };
       return { err: `${a.name}: ターゲットが正しくありません（味方をターゲットしてください）` };
     }

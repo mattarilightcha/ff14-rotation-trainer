@@ -53,6 +53,7 @@
     seraphWing: ['#ffffff', '#d8ecff', '#94c4f4', '#4a86d8', '#1e4a9c'], // セラフィムの青い羽根
     sgeRobe: ['#ffffff', '#eef4f6', '#ccdce2', '#94aab4', '#5a6c76'], // 賢者の白いローブ
     noulith: ['#ffffff', '#d8f8ff', '#8ae0f8', '#3aa8d8', '#1a5a88'], // 賢者のノウリス（青く光る刃）
+    mnkTop: ['#ffd8a8', '#eb9a52', '#c4702e', '#8c4a20', '#552c14'], // モンクの橙の道着
   };
   // 3D で光らせる素材（光のにじみの対象）
   const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
@@ -309,8 +310,25 @@
     F.fill('skin', (m) => m.ellipse(h.x, h.y, 1.8, 1.7), { k: 1.3, dark: o.dark ?? 0 });
   }
 
-  // ---------------- 侍（64×64、足元 y=59）----------------
+  // ---------------- 侍とほかの軽装の近接（64×64、足元 y=59）----------------
   // p: { bob, crouch, fl, fr, sway, arm, free, smear, tail, lean, headDy, jump }
+  // st: 見た目（MELEE_STYLE）。top 上着・pants 袴（ズボン）・foot 足・belt 帯と trim 縁・knot 帯の結び・collar 襟と collarTrim 縁・mark 背中の紋・
+  //   band 鉢巻（null で無し）・topknot 髷・hair 髪の色・mask 口元の覆面・hood フード・sleeve 袖・
+  //   weapon 武器（katana 刀と鞘 / fist 籠手 / dagger 両手の短剣 / twin 両手の剣 / scythe 大鎌）
+  const MELEE_STYLE = {
+    sam: { top: 'red', pants: 'hakama', foot: 'black', belt: 'black', trim: 'gold', knot: 'red', collar: 'white', collarTrim: 'gold', mark: true, band: 'white', topknot: true, hair: 'hair', sleeve: true, weapon: 'katana' },
+    mnk: { top: 'mnkTop', pants: 'woodD', foot: 'leather', belt: 'red', trim: 'gold', knot: 'gold', collar: 'skin', collarTrim: 'gold', mark: false, band: 'red', topknot: true, hair: 'hair', sleeve: false, weapon: 'fist' },
+  };
+  // 近接の武器（手 h・向き dir・長さ len）。dual: 両手に持つ武器の、もう一方の手
+  function meleeWeapon(F, h, dir, len, st, dual = false) {
+    if (st.weapon === 'katana') { if (!dual) katana(F, h, dir, len); return; }
+    if (st.weapon === 'fist') {
+      // 籠手: 拳に鉄の覆いと金の鋲
+      F.fill('iron', (m) => m.ellipse(h.x, h.y, 2.3, 2.1), { k: 1.3 });
+      F.deco('gold', 1, (m) => { m.dot(h.x - 0.6, h.y - 0.6); m.dot(h.x + 0.8, h.y + 0.2); });
+      return;
+    }
+  }
   const SAM_ARM = {
     // 刀を持つ腕（正面から見て左 = 本人の右手）: 手の位置（肩からの相対）・刃の向き・長さ
     low: { h: [-2, 12], dir: [-0.78, 0.62], len: 19 },
@@ -323,46 +341,47 @@
     hurt: { h: [-7, 8], dir: [-0.35, 0.94], len: 18 },
     sheath: null,
   };
-  function samFB(F, p, back) {
+  function samFB(F, p, back, st = MELEE_STYLE.sam) {
     const c = p.crouch ?? 0, b = p.bob ?? 0, cx = 32, jump = p.jump ?? 0;
     const hipY = 38 + c - jump, sy = 26 + b + c * 0.8 - jump, hy = 17 + b + c * 0.8 + (p.headDy ?? 0) - jump;
     const sway = p.sway ?? 0, tail = p.tail ?? 0;
     const armSide = back ? 1 : -1; // 刀を持つ腕の側（正面: 画面の左、背面: 画面の右）
     const A = SAM_ARM[p.arm ?? 'low'];
     // 鉢巻の尻尾（頭の後ろ）
-    if (!back) F.fill('white', (m) => { m.capsule(cx + 6, hy - 3.5, cx + 10 + tail, hy - 1.5 + tail * 0.6, 0.75, 0.55); m.capsule(cx + 6, hy - 3, cx + 9 + tail * 0.6, hy + 2, 0.75, 0.5); }, { dark: 1, k: 1 });
+    if (!back && st.band) F.fill(st.band, (m) => { m.capsule(cx + 6, hy - 3.5, cx + 10 + tail, hy - 1.5 + tail * 0.6, 0.75, 0.55); m.capsule(cx + 6, hy - 3, cx + 9 + tail * 0.6, hy + 2, 0.75, 0.5); }, { dark: 1, k: 1 });
     // 鞘（本人の左腰 = 正面では画面の右）。背面では画面の左
     const sx = back ? -1 : 1;
-    if (p.arm !== 'sheath') saya(F, V(cx + sx * 6, hipY + 1), V(cx + sx * 16, hipY + 9), { dark: back ? 0 : 1 });
+    if (st.weapon === 'katana' && p.arm !== 'sheath') saya(F, V(cx + sx * 6, hipY + 1), V(cx + sx * 16, hipY + 9), { dark: back ? 0 : 1 });
     // 足（足袋）
     const footY = 58 - jump * 0.3;
-    F.fill('black', (m) => { m.ellipse(cx - 5 + sway, footY - (p.fl ?? 0), 2.6, 1.6); m.ellipse(cx + 5 + sway, footY - (p.fr ?? 0), 2.6, 1.6); }, { k: 1.2 });
+    F.fill(st.foot, (m) => { m.ellipse(cx - 5 + sway, footY - (p.fl ?? 0), 2.6, 1.6); m.ellipse(cx + 5 + sway, footY - (p.fr ?? 0), 2.6, 1.6); }, { k: 1.2 });
     // 袴（左右の脚）。裾は足に合わせて上がる
     const hem = 56 - jump * 0.3;
     const leg = (s, lift) => (m) => m.poly([cx + s * 1, hipY, cx + s * 8.5, hipY, cx + s * (10.5 + c * 0.6) + sway, hem - lift, cx + s * 0.6 + sway * 0.6, hem - lift]);
-    F.fill('hakama', leg(-1, p.fl ?? 0), { k: 1.2 });
-    F.deco('hakama', 3, (m) => { m.line(cx - 4, hipY + 3, cx - 5 + sway, hem - 1 - (p.fl ?? 0)); m.line(cx - 7, hipY + 4, cx - 8.5 + sway, hem - 1 - (p.fl ?? 0)); });
-    F.fill('hakama', leg(1, p.fr ?? 0), { k: 1.2 });
-    F.deco('hakama', 3, (m) => { m.line(cx + 4, hipY + 3, cx + 5 + sway, hem - 1 - (p.fr ?? 0)); m.line(cx + 7, hipY + 4, cx + 8.5 + sway, hem - 1 - (p.fr ?? 0)); });
+    F.fill(st.pants, leg(-1, p.fl ?? 0), { k: 1.2 });
+    F.deco(st.pants, 3, (m) => { m.line(cx - 4, hipY + 3, cx - 5 + sway, hem - 1 - (p.fl ?? 0)); m.line(cx - 7, hipY + 4, cx - 8.5 + sway, hem - 1 - (p.fl ?? 0)); });
+    F.fill(st.pants, leg(1, p.fr ?? 0), { k: 1.2 });
+    F.deco(st.pants, 3, (m) => { m.line(cx + 4, hipY + 3, cx + 5 + sway, hem - 1 - (p.fr ?? 0)); m.line(cx + 7, hipY + 4, cx + 8.5 + sway, hem - 1 - (p.fr ?? 0)); });
     // 上着
-    F.fill('red', (m) => m.poly([cx - 8.5, sy + 1.5, cx - 6, sy - 0.5, cx + 6, sy - 0.5, cx + 8.5, sy + 1.5, cx + 7.5, hipY + 0.5, cx - 7.5, hipY + 0.5]), { k: 1.3 });
+    F.fill(st.top, (m) => m.poly([cx - 8.5, sy + 1.5, cx - 6, sy - 0.5, cx + 6, sy - 0.5, cx + 8.5, sy + 1.5, cx + 7.5, hipY + 0.5, cx - 7.5, hipY + 0.5]), { k: 1.3 });
     if (!back) {
       // 襟（白）と金の縁
-      F.fill('white', (m) => m.poly([cx - 3.2, sy - 0.5, cx + 3.2, sy - 0.5, cx, sy + 6]), { line: false, k: 1 });
-      F.deco('gold', 1, (m) => { m.line(cx - 4, sy - 0.5, cx - 0.5, sy + 6.5); m.line(cx + 4, sy - 0.5, cx + 0.5, sy + 6.5); });
-    } else {
+      F.fill(st.collar, (m) => m.poly([cx - 3.2, sy - 0.5, cx + 3.2, sy - 0.5, cx, sy + 6]), { line: false, k: 1 });
+      F.deco(st.collarTrim, 1, (m) => { m.line(cx - 4, sy - 0.5, cx - 0.5, sy + 6.5); m.line(cx + 4, sy - 0.5, cx + 0.5, sy + 6.5); });
+    } else if (st.mark) {
       // 背中の紋
       F.deco('white', 2, (m) => { m.ellipse(cx, sy + 5.5, 2.4, 2.4); });
-      F.deco('red', 3, (m) => { m.dot(cx, sy + 5); m.dot(cx - 1, sy + 6); m.dot(cx, sy + 6); });
+      F.deco(st.top, 3, (m) => { m.dot(cx, sy + 5); m.dot(cx - 1, sy + 6); m.dot(cx, sy + 6); });
     }
     // 帯
-    F.fill('black', (m) => m.rect(cx - 8, hipY - 1.5, 16, 3), { k: 1, flat: true });
-    F.deco('gold', 2, (m) => m.line(cx - 7, hipY - 0.5, cx + 7, hipY - 0.5));
-    if (!back) F.fill('red', (m) => m.rect(cx + 2, hipY - 1.5, 2, 3), { k: 1 });
+    F.fill(st.belt, (m) => m.rect(cx - 8, hipY - 1.5, 16, 3), { k: 1, flat: true });
+    F.deco(st.trim, 2, (m) => m.line(cx - 7, hipY - 0.5, cx + 7, hipY - 0.5));
+    if (!back) F.fill(st.knot, (m) => m.rect(cx + 2, hipY - 1.5, 2, 3), { k: 1 });
     // 刀を持たない腕（本人の左手。鞘に添える）
     const fs = V(cx - armSide * 7.5, sy + 1.5);
     const fh = p.arm === 'sheath' ? V(cx - armSide * 4, hipY + 1) : p.free === 'up' ? V(cx - armSide * 11, sy - 3) : V(cx - armSide * 9.5, hipY + 0.5 + (p.freeDy ?? 0));
-    kimonoArm(F, fs, fh, -armSide * 1.5, 'red', { sway: -armSide * 0.5 });
+    kimonoArm(F, fs, fh, -armSide * 1.5, st.top, st.sleeve ? { sway: -armSide * 0.5 } : { sway: -armSide * 0.5, sleeve: false });
+    if (st.weapon !== 'katana') meleeWeapon(F, fh, unit(-armSide * 0.25, p.free === 'up' ? -1 : 1), 8, st, true);
     // 刀を持つ腕と刀
     const ks = V(cx + armSide * 7.5, sy + 1.5);
     if (p.arm === 'sheath') {
@@ -380,16 +399,16 @@
         const c0 = back ? [ks.x - ox, ks.y + oy, r, th, Math.PI - a0, Math.PI - a1, sqy, -rot] : [ks.x + ox, ks.y + oy, r, th, a0, a1, sqy, rot];
         smear(F, c0);
       }
-      if (back) katana(F, hand, dir, A.len);
-      kimonoArm(F, ks, hand, armSide * 1.5, 'red', { sleeve: p.arm !== 'raise' && p.arm !== 'up' });
-      if (!back) katana(F, hand, dir, A.len);
+      if (back) meleeWeapon(F, hand, dir, A.len, st);
+      kimonoArm(F, ks, hand, armSide * 1.5, st.top, { sleeve: st.sleeve && p.arm !== 'raise' && p.arm !== 'up' });
+      if (!back) meleeWeapon(F, hand, dir, A.len, st);
     }
     // 頭
     if (!back) {
-      F.fill('hair', (m) => m.ellipse(cx, hy - 1, 7.6, 7.8), { k: 1.6 });
+      F.fill(st.hair, (m) => m.ellipse(cx, hy - 1, 7.6, 7.8), { k: 1.6 });
       F.fill('skin', (m) => { m.ellipse(cx, hy + 1.2, 6.1, 6.4); m.rect(cx - 1.5, hy + 6, 3, 3); }, { k: 1.8 });
       // 前髪（ぎざぎざ）と横の髪
-      F.fill('hair', (m) => {
+      F.fill(st.hair, (m) => {
         m.ellipse(cx, hy - 3.2, 7.3, 4.8);
         m.cut().rect(0, hy - 1.5, 64, 20).add();
         m.poly([cx - 7, hy - 2, cx - 4.5, hy - 2, cx - 5.5, hy + 1.5]);
@@ -406,53 +425,58 @@
       F.deco('skin', 3, (m) => { m.line(cx - 0.5, hy + 4.5, cx + 0.5, hy + 4.5); });
       F.deco('red', 1, (m) => { m.dot(cx - 4.5, hy + 3); m.dot(cx + 4.5, hy + 3); });
     } else {
-      F.fill('hair', (m) => { m.ellipse(cx, hy - 0.5, 7.6, 8); m.capsule(cx - 5.5, hy + 2, cx - 5, hy + 7, 1.6, 1); m.capsule(cx + 5.5, hy + 2, cx + 5, hy + 7, 1.6, 1); }, { k: 1.6 });
+      F.fill(st.hair, (m) => { m.ellipse(cx, hy - 0.5, 7.6, 8); m.capsule(cx - 5.5, hy + 2, cx - 5, hy + 7, 1.6, 1); m.capsule(cx + 5.5, hy + 2, cx + 5, hy + 7, 1.6, 1); }, { k: 1.6 });
       F.deco('hair', 3, (m) => { m.line(cx - 2, hy - 4, cx - 3, hy + 5); m.line(cx + 2, hy - 4, cx + 3, hy + 5); });
     }
     // 髷（まげ）と赤い紐
-    F.fill('hair', (m) => { m.ellipse(cx, hy - 9, 3, 2.5); m.capsule(cx, hy - 9, cx + (back ? 0 : 0), hy - 6.5, 1.6); }, { k: 1.4 });
-    F.deco('red', 1, (m) => m.line(cx - 1.5, hy - 7.2, cx + 1.5, hy - 7.2));
-    // 鉢巻（額に白い帯）
-    F.fill('white', (m) => m.rect(cx - 7.4, hy - 3.8, 14.8, 1.5), { k: 0.8, line: false, dark: 1 });
-    if (back) {
-      // 結び目と尻尾（後ろに垂れて、なびく）
-      F.fill('white', (m) => { m.ellipse(cx + 0.5, hy - 3, 1.5, 1.3); m.capsule(cx + 0.5, hy - 2.5, cx - 2 + tail, hy + 6, 0.75, 0.55); m.capsule(cx + 1, hy - 2.5, cx + 3 + tail * 0.7, hy + 5, 0.75, 0.5); }, { k: 1, dark: 1 });
+    if (st.topknot) {
+      F.fill(st.hair, (m) => { m.ellipse(cx, hy - 9, 3, 2.5); m.capsule(cx, hy - 9, cx + (back ? 0 : 0), hy - 6.5, 1.6); }, { k: 1.4 });
+      F.deco('red', 1, (m) => m.line(cx - 1.5, hy - 7.2, cx + 1.5, hy - 7.2));
+    }
+    // 鉢巻（額に帯）
+    if (st.band) {
+      F.fill(st.band, (m) => m.rect(cx - 7.4, hy - 3.8, 14.8, 1.5), { k: 0.8, line: false, dark: 1 });
+      if (back) {
+        // 結び目と尻尾（後ろに垂れて、なびく）
+        F.fill(st.band, (m) => { m.ellipse(cx + 0.5, hy - 3, 1.5, 1.3); m.capsule(cx + 0.5, hy - 2.5, cx - 2 + tail, hy + 6, 0.75, 0.55); m.capsule(cx + 1, hy - 2.5, cx + 3 + tail * 0.7, hy + 5, 0.75, 0.5); }, { k: 1, dark: 1 });
+      }
     }
   }
 
-  function samSide(F, p) {
+  function samSide(F, p, st = MELEE_STYLE.sam) {
     const c = p.crouch ?? 0, b = p.bob ?? 0, cx = 31 + (p.lean ?? 0) * 0.3, jump = p.jump ?? 0;
     const hipY = 38 + c - jump, sy = 26 + b + c * 0.8 - jump, hy = 17 + b + c * 0.8 + (p.headDy ?? 0) - jump;
     const lean = p.lean ?? 0, tail = p.tail ?? 0;
     const A = SAM_ARM[p.arm ?? 'low'];
     const ux = cx + lean; // 上半身の中心
     // 鉢巻の尻尾（後ろ = 左へなびく）
-    F.fill('white', (m) => { m.capsule(ux - 6, hy - 3, ux - 11 - tail, hy - 1 - tail * 0.5, 0.75, 0.55); m.capsule(ux - 6, hy - 2.5, ux - 10 - tail * 0.6, hy + 3 - tail * 0.4, 0.75, 0.5); }, { k: 1, dark: 1 });
+    if (st.band) F.fill(st.band, (m) => { m.capsule(ux - 6, hy - 3, ux - 11 - tail, hy - 1 - tail * 0.5, 0.75, 0.55); m.capsule(ux - 6, hy - 2.5, ux - 10 - tail * 0.6, hy + 3 - tail * 0.4, 0.75, 0.5); }, { k: 1, dark: 1 });
     // 奥の腕（左手）
     const fsh = V(ux - 1, sy + 1.5);
     const fh = p.arm === 'sheath' ? V(ux + 3, hipY + 1) : p.free === 'up' ? V(ux - 2, sy - 6) : V(ux - 3 + (p.freeSwing ?? 0), hipY + 1);
-    kimonoArm(F, fsh, fh, -1.2, 'red', { dark: 1 });
+    kimonoArm(F, fsh, fh, -1.2, st.top, st.sleeve ? { dark: 1 } : { dark: 1, sleeve: false });
+    if (st.weapon !== 'katana') meleeWeapon(F, fh, unit(0.3, p.free === 'up' ? -1 : 1), 8, st, true);
     // 鞘（奥の腰から後ろへ）
-    if (p.arm !== 'sheath') saya(F, V(ux - 1, hipY), V(ux - 13, hipY + 5), { dark: 1 });
+    if (st.weapon === 'katana' && p.arm !== 'sheath') saya(F, V(ux - 1, hipY), V(ux - 13, hipY + 5), { dark: 1 });
     // 足（前後に開く）
     const fA = p.fa ?? 0, fB = p.fb ?? 0; // 前足・後ろ足の x のずれ
     const footY = 58 - jump * 0.3;
-    F.fill('black', (m) => m.ellipse(cx + 1 + fB, footY - (p.lb ?? 0), 2.8, 1.5), { k: 1.2, dark: 1 });
+    F.fill(st.foot, (m) => m.ellipse(cx + 1 + fB, footY - (p.lb ?? 0), 2.8, 1.5), { k: 1.2, dark: 1 });
     // 袴（横から: 前と後ろの裾が足に合わせて開く）
     const hem = 56 - jump * 0.3;
-    F.fill('hakama', (m) => m.poly([ux - 6.5, hipY, ux + 5.5, hipY, cx + 7 + Math.max(fA, fB) * 1.1, hem - Math.min(p.la ?? 0, p.lb ?? 0) * 0.6, cx - 7 + Math.min(fA, fB) * 1.1, hem - Math.max(p.la ?? 0, p.lb ?? 0) * 0.6]), { k: 1.2 });
-    F.deco('hakama', 3, (m) => { m.line(ux - 1, hipY + 3, cx + fB * 0.8, hem - 1); m.line(ux + 2, hipY + 3, cx + 3 + fA * 0.9, hem - 1); });
-    F.fill('black', (m) => m.ellipse(cx + 2 + fA, footY - (p.la ?? 0), 2.8, 1.5), { k: 1.2 });
+    F.fill(st.pants, (m) => m.poly([ux - 6.5, hipY, ux + 5.5, hipY, cx + 7 + Math.max(fA, fB) * 1.1, hem - Math.min(p.la ?? 0, p.lb ?? 0) * 0.6, cx - 7 + Math.min(fA, fB) * 1.1, hem - Math.max(p.la ?? 0, p.lb ?? 0) * 0.6]), { k: 1.2 });
+    F.deco(st.pants, 3, (m) => { m.line(ux - 1, hipY + 3, cx + fB * 0.8, hem - 1); m.line(ux + 2, hipY + 3, cx + 3 + fA * 0.9, hem - 1); });
+    F.fill(st.foot, (m) => m.ellipse(cx + 2 + fA, footY - (p.la ?? 0), 2.8, 1.5), { k: 1.2 });
     // 上着
-    F.fill('red', (m) => m.poly([ux - 6.5, sy + 1, ux - 3.5, sy - 0.8, ux + 3.5, sy - 0.8, ux + 6.5, sy + 1.5, ux + 6, hipY + 0.5, ux - 6.5, hipY + 0.5]), { k: 1.3 });
-    F.fill('white', (m) => m.poly([ux + 2, sy - 0.8, ux + 4.2, sy - 0.6, ux + 3.2, sy + 5]), { line: false, k: 1 });
-    F.deco('gold', 1, (m) => m.line(ux + 1.5, sy - 0.5, ux + 3, sy + 6));
-    F.fill('black', (m) => m.rect(ux - 6.5, hipY - 1.5, 13, 3), { k: 1, flat: true });
-    F.deco('gold', 2, (m) => m.line(ux - 6, hipY - 0.5, ux + 5.5, hipY - 0.5));
+    F.fill(st.top, (m) => m.poly([ux - 6.5, sy + 1, ux - 3.5, sy - 0.8, ux + 3.5, sy - 0.8, ux + 6.5, sy + 1.5, ux + 6, hipY + 0.5, ux - 6.5, hipY + 0.5]), { k: 1.3 });
+    F.fill(st.collar, (m) => m.poly([ux + 2, sy - 0.8, ux + 4.2, sy - 0.6, ux + 3.2, sy + 5]), { line: false, k: 1 });
+    F.deco(st.collarTrim, 1, (m) => m.line(ux + 1.5, sy - 0.5, ux + 3, sy + 6));
+    F.fill(st.belt, (m) => m.rect(ux - 6.5, hipY - 1.5, 13, 3), { k: 1, flat: true });
+    F.deco(st.trim, 2, (m) => m.line(ux - 6, hipY - 0.5, ux + 5.5, hipY - 0.5));
     // 頭（横顔）
-    F.fill('hair', (m) => m.ellipse(ux - 1, hy - 0.5, 7.2, 7.8), { k: 1.6 });
+    F.fill(st.hair, (m) => m.ellipse(ux - 1, hy - 0.5, 7.2, 7.8), { k: 1.6 });
     F.fill('skin', (m) => { m.ellipse(ux + 1.8, hy + 1.4, 5, 6.2); m.rect(ux + 5.5, hy + 1.5, 1.2, 1.4); m.rect(ux - 0.5, hy + 6, 3, 3); }, { k: 1.8 });
-    F.fill('hair', (m) => {
+    F.fill(st.hair, (m) => {
       m.ellipse(ux - 0.5, hy - 3, 7, 4.8);
       m.cut().rect(ux + 1, hy - 1.2, 20, 20).add();
       m.poly([ux + 2, hy - 2.5, ux + 6.5, hy - 2.5, ux + 5, hy + 0.5]);
@@ -463,10 +487,14 @@
     F.deco('white', 0, (m) => m.dot(ux + 4.5, hy + 1));
     F.deco('hair', 2, (m) => m.line(ux + 2.5, hy - 0.5, ux + 4.5, hy - 0.5));
     F.deco('skin', 3, (m) => m.dot(ux + 5, hy + 4.5));
-    F.fill('hair', (m) => m.ellipse(ux - 3, hy - 8.6, 2.8, 2.4), { k: 1.4 });
-    F.deco('red', 1, (m) => m.line(ux - 1.5, hy - 7.8, ux - 0.5, hy - 6.5));
-    F.fill('white', (m) => { m.poly([ux - 7.5, hy - 4.1, ux + 6, hy - 4.1, ux + 6, hy - 2.7, ux - 7.5, hy - 2.5]); }, { k: 0.8, line: false, dark: 1 });
-    F.fill('white', (m) => m.ellipse(ux - 7, hy - 3, 1.4, 1.2), { k: 1, dark: 1 });
+    if (st.topknot) {
+      F.fill(st.hair, (m) => m.ellipse(ux - 3, hy - 8.6, 2.8, 2.4), { k: 1.4 });
+      F.deco('red', 1, (m) => m.line(ux - 1.5, hy - 7.8, ux - 0.5, hy - 6.5));
+    }
+    if (st.band) {
+      F.fill(st.band, (m) => { m.poly([ux - 7.5, hy - 4.1, ux + 6, hy - 4.1, ux + 6, hy - 2.7, ux - 7.5, hy - 2.5]); }, { k: 0.8, line: false, dark: 1 });
+      F.fill(st.band, (m) => m.ellipse(ux - 7, hy - 3, 1.4, 1.2), { k: 1, dark: 1 });
+    }
     // 手前の腕（右手）と刀
     const ks = V(ux + 0.5, sy + 1.8);
     if (p.arm === 'sheath') {
@@ -476,8 +504,8 @@
       const S = SIDE_ARM[p.arm ?? 'low'];
       const hand = V(ks.x + S.h[0], ks.y + S.h[1]), dir = unit(S.dir[0], S.dir[1]);
       if (p.smear && S.smear) { const [ox, oy, ...rest] = S.smear; smear(F, [ks.x + ox, ks.y + oy, ...rest]); }
-      kimonoArm(F, ks, hand, 1.4, 'red', { sleeve: p.arm !== 'raise' && p.arm !== 'up', sway: -0.6 });
-      katana(F, hand, dir, S.len);
+      kimonoArm(F, ks, hand, 1.4, st.top, { sleeve: st.sleeve && p.arm !== 'raise' && p.arm !== 'up', sway: -0.6 });
+      meleeWeapon(F, hand, dir, S.len, st);
     }
   }
   // 横向きの刀の腕（右向き。手の位置は肩からの相対）
@@ -513,6 +541,9 @@
     jump: { fps: 1, loop: false, poses: [{ jump: 3, fl: 3, fr: 3, la: 3, lb: 3, fa: 3, fb: -3, tail: -1.5, free: 'up' }, { jump: 1, fl: 1, fr: 2, la: 1, lb: 2, tail: -0.5 }] },
     buff: { fps: 8, loop: false, poses: [{ arm: 'up', free: 'up', tail: 1 }, { arm: 'up', free: 'up', tail: 1.8, bob: -1 }] },
   };
+
+  // モンク: 斬撃の代わりに拳を突き出す（残像なし）
+  const MNK_ANIMS = { ...SAM_ANIMS, slash: { fps: 16, loop: false, poses: [{ arm: 'low', crouch: 1, tail: 0.5 }, { arm: 'iaiOut', crouch: 1, tail: 1.5 }, { arm: 'iaiOut', crouch: 1, tail: 2 }, { arm: 'follow', tail: 1 }] } };
 
   // ---------------- タンク（ナイト・戦士・暗黒騎士・ガンブレイカー。64×64）----------------
   // st: 見た目（TANK_STYLE）。armor 鎧・tabard 前垂れ・trim 縁と鍔・cape マント（null で無し）・
@@ -1614,6 +1645,7 @@
   // 人物・ペット・木人の組。どれも使うときに初めて作る（ジョブが増えて全部を作ると起動が遅くなるため）
   const SETS = {
     player: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
+    mnk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.mnk) : samFB(F, p, v === 'up', MELEE_STYLE.mnk)), anims: MNK_ANIMS }),
     tank: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
     war: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
     drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),

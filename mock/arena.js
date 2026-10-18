@@ -85,7 +85,7 @@
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch', SGE: 'sge' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch', SGE: 'sge', MNK: 'mnk' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
