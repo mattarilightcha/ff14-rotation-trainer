@@ -215,7 +215,7 @@
     v *= J.potMult?.(a) ?? 1; // ジョブの決まりの威力の倍率（黒魔道士のアストラルファイア・アンブラルブリザード）
     // 「〜時威力」は説明文に先に書かれたものを優先（ホーリースピリット「両方が付与されている場合は、神聖魔法効果アップの効果が優先」）
     for (const c of p.cond ?? []) { const k = statusByName[c.status]; if (k && has(k)) { v = c.potency; break; } }
-    return v;
+    return v + (J.potAdd?.(a, ok) ?? 0); // 上乗せ（忍者の風纏: 旋風刃 +100）
   }
   function dealDamage(potency, mult = dmgMult()) {
     const dmg = Math.round(potency * mult * OPT.dmgScale);
@@ -233,7 +233,8 @@
   const castTimeOf = (a) => { const base = Math.round(a.castMs * J.speed(a)); return J.castMs ? J.castMs(a, base) : base; };
   const ownCd = (a) => (a.cooldownGroup !== 58 && a.cooldownGroup ? a.cooldownGroup : null);
   // 固有のリキャストタイマーを持つ GCD（召喚士のサモン・バハムート: 60 秒）も、共通の GCD は 2.5 秒（説明文「この魔法は固有のリキャストタイマーを持つ」）
-  const gcdRecast = (a) => Math.round((a.isGcd && ownCd(a) != null ? 2500 : a.recastMs) * J.speed(a));
+  // J.gcdMs: ジョブの決まりの GCD の長さ（忍者の印: 0.5 秒）
+  const gcdRecast = (a) => Math.round((J.gcdMs?.(a) ?? (a.isGcd && ownCd(a) != null ? 2500 : a.recastMs)) * J.speed(a));
   const maxCh = (a) => J.charges[a.id] ?? Math.max(1, a.maxCharges);
 
   function charges(a) {
@@ -623,6 +624,7 @@
     }
     const ra = readyAt(a);
     if (ra <= S.t) {
+      S.pressBase = baseId; // 押したボタン（変化前）。ジョブの決まりが使う（忍者の天地人: どの印のボタンから出た忍術か）
       execute(id, S.t, tf.who);
       return true;
     }
@@ -669,7 +671,7 @@
         const q = S.queue;
         S.queue = null; S.t = Math.max(t0, ra);
         const why = blocked(id), pb = placeBlock(A[id], q.who);
-        if (!why && !pb) execute(id, S.t, q.who); else reject(why ?? pb.msg, pb?.kind);
+        if (!why && !pb) { S.pressBase = q.baseId; execute(id, S.t, q.who); } else reject(why ?? pb.msg, pb?.kind);
       }
     }
     // マクロの待ちのあとの行（待ちが明けた時刻で処理）

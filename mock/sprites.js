@@ -318,6 +318,8 @@
   const MELEE_STYLE = {
     sam: { top: 'red', pants: 'hakama', foot: 'black', belt: 'black', trim: 'gold', knot: 'red', collar: 'white', collarTrim: 'gold', mark: true, band: 'white', topknot: true, hair: 'hair', sleeve: true, weapon: 'katana' },
     mnk: { top: 'mnkTop', pants: 'woodD', foot: 'leather', belt: 'red', trim: 'gold', knot: 'gold', collar: 'skin', collarTrim: 'gold', mark: false, band: 'red', topknot: true, hair: 'hair', sleeve: false, weapon: 'fist' },
+    nin: { top: 'navy', pants: 'black', foot: 'black', belt: 'red', trim: 'iron', knot: 'red', collar: 'black', collarTrim: 'iron', mark: false, band: 'red', topknot: false, hair: 'hair', mask: 'black', sleeve: false, weapon: 'dagger' },
+    bunshin: { top: 'shade', pants: 'shade', foot: 'shade', belt: 'shade', trim: 'shade', knot: 'shade', collar: 'shade', collarTrim: 'shade', mark: false, band: 'shade', topknot: false, hair: 'shade', mask: 'shade', sleeve: false, weapon: 'dagger' },
   };
   // 近接の武器（手 h・向き dir・長さ len）。dual: 両手に持つ武器の、もう一方の手
   function meleeWeapon(F, h, dir, len, st, dual = false) {
@@ -326,6 +328,14 @@
       // 籠手: 拳に鉄の覆いと金の鋲
       F.fill('iron', (m) => m.ellipse(h.x, h.y, 2.3, 2.1), { k: 1.3 });
       F.deco('gold', 1, (m) => { m.dot(h.x - 0.6, h.y - 0.6); m.dot(h.x + 0.8, h.y + 0.2); });
+      return;
+    }
+    if (st.weapon === 'dagger') {
+      // 短刀（忍者刀）: 黒い柄と短い刃。両手に持つ
+      const n = perp(dir), t0 = add(h, dir, -2.5), b0 = add(h, dir, 1.6), b1 = add(h, dir, 1.6 + (dual ? 6 : 8));
+      F.fill('black', (m) => m.capsule(t0.x, t0.y, b0.x, b0.y, 0.9), { k: 1.2 });
+      F.fill('blade', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 0.9, 0.4), { k: 1.1 });
+      F.deco('blade', 0, (m) => { const a = add(b0, n, -0.3), e = add(b1, dir, -1); m.line(a.x, a.y, e.x, e.y); });
       return;
     }
   }
@@ -428,6 +438,8 @@
       F.fill(st.hair, (m) => { m.ellipse(cx, hy - 0.5, 7.6, 8); m.capsule(cx - 5.5, hy + 2, cx - 5, hy + 7, 1.6, 1); m.capsule(cx + 5.5, hy + 2, cx + 5, hy + 7, 1.6, 1); }, { k: 1.6 });
       F.deco('hair', 3, (m) => { m.line(cx - 2, hy - 4, cx - 3, hy + 5); m.line(cx + 2, hy - 4, cx + 3, hy + 5); });
     }
+    // 覆面（鼻から下を覆う）
+    if (st.mask && !back) F.fill(st.mask, (m) => { m.ellipse(cx, hy + 4.2, 6, 3.2); m.rect(cx - 6, hy + 2.6, 12, 2.4); }, { k: 1.3 });
     // 髷（まげ）と赤い紐
     if (st.topknot) {
       F.fill(st.hair, (m) => { m.ellipse(cx, hy - 9, 3, 2.5); m.capsule(cx, hy - 9, cx + (back ? 0 : 0), hy - 6.5, 1.6); }, { k: 1.4 });
@@ -487,6 +499,7 @@
     F.deco('white', 0, (m) => m.dot(ux + 4.5, hy + 1));
     F.deco('hair', 2, (m) => m.line(ux + 2.5, hy - 0.5, ux + 4.5, hy - 0.5));
     F.deco('skin', 3, (m) => m.dot(ux + 5, hy + 4.5));
+    if (st.mask) F.fill(st.mask, (m) => { m.ellipse(ux + 2.4, hy + 4.2, 4.4, 3); m.rect(ux - 1, hy + 2.6, 7, 2.4); }, { k: 1.3 });
     if (st.topknot) {
       F.fill(st.hair, (m) => m.ellipse(ux - 3, hy - 8.6, 2.8, 2.4), { k: 1.4 });
       F.deco('red', 1, (m) => m.line(ux - 1.5, hy - 7.8, ux - 0.5, hy - 6.5));
@@ -1646,6 +1659,7 @@
   const SETS = {
     player: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
     mnk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.mnk) : samFB(F, p, v === 'up', MELEE_STYLE.mnk)), anims: MNK_ANIMS }),
+    nin: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.nin) : samFB(F, p, v === 'up', MELEE_STYLE.nin)), anims: SAM_ANIMS }),
     tank: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
     war: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
     drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
@@ -1666,6 +1680,7 @@
     pet_phoenix: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'phoenix'), anims: PET_ANIMS }),
     pet_eos: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'eos'), anims: PET_ANIMS }),
     pet_seraph: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'seraph'), anims: PET_ANIMS }),
+    pet_bunshin: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.bunshin) : samFB(F, p, v === 'up', MELEE_STYLE.bunshin)), anims: { idle: SAM_ANIMS.idle, spell: SAM_ANIMS.slash } }),
     pet_shadow: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.shadow) : tankFB(F, p, v === 'up', TANK_STYLE.shadow)), anims: SHADOW_ANIMS }),
     pet_solar: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
     boss: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),

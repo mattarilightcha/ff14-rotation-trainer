@@ -3,7 +3,7 @@
 // 光り方などの動きは、ゲームのアニメーション定義（ULD のタイムライン）を抽出していないため仮（docs/SPEC.md §10 UI-01）
 (function () {
   'use strict';
-  const { U, set, anim, usePart, partsOf } = window.MockGauge2.lib;
+  const { U, set, anim, clipW, usePart, partsOf } = window.MockGauge2.lib;
   const pop = (el) => anim(el, [{ transform: 'scale(1.5)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 380 });
 
   // ---------------- モンク: 象形拳シンボル（JobHudMNK0）と闘気シンボル（JobHudMNK1）----------------
@@ -102,5 +102,57 @@
     };
   }
 
-  window.MockGauge2.add({ MNK: mnk });
+
+  // ---------------- 忍者: 忍気ゲージ（JobHudNIN0）と風纏シンボル（JobHudNIN1）----------------
+  // 忍気ゲージ（通常 #2）: 巻物 #13 の上の棒（#14。部品 1002 の #2 が紫の塗り・#5 が暗い下地）。忍気 50 以上（使える）ときは文字の光（#6・#8）を出す。
+  //   右の筒（#15）は以前の風遁の残り時間の表示で、今は使わない（ジョブガイドの HUD の説明に無い）。シンプル表示（#16）: #19 棒（部品 1003 の #4）・#18 数字
+  // 風纏シンボル（通常 #2）: 5 本のクナイ（#4〜#8。部品 1002 の #5 が光るクナイ・#4 が光）。空は #11〜#15 の暗いクナイ。
+  //   背景の渦（#9・#10）はゲームでは型抜き（JobHudNIN1Mask）で切り抜くもので、型抜きを再現できないので出さない。シンプル表示（#17）: #19〜#23（部品 1004 の #4）
+  const NIN_BAR_W = 174, NIN_SBAR_W = 160, NIN_KUNAI = [4, 5, 6, 7, 8], NIN_EMPTY = [11, 12, 13, 14, 15], NIN_SK = [19, 20, 21, 22, 23];
+  function nin(G) {
+    const L0 = G.layouts.JobHudNIN0, L1 = G.layouts.JobHudNIN1;
+    const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
+    const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    let simple = false, prev = {};
+    for (const id of [3, 4, 5, 6, 8, 9, 10, 11, 12]) set(k(id), { opacity: 0 });
+    for (const c of [3, 4]) set(k(`14/${c}`), { opacity: 0 });
+    for (const c of [3, 4, 5]) set(k(`15/${c}`), { opacity: 0 });
+    for (const c of [5, 6]) set(k(`19/${c}`), { opacity: 0 });
+    const n18 = k('18/2'); if (n18) n18.classList.add('g2-snum');
+    for (const q of NIN_KUNAI) for (const c of [2, 3, 4, 5]) set(k1(`${q}/${c}`), { opacity: 0 });
+    for (const id of [9, 10, 16]) set(k1(id), { opacity: 0 });
+    k(16).hidden = true; k1(17).hidden = true;
+    function apply(st, instant) {
+      const ninki = Math.max(0, Math.min(100, st.ninki ?? 0));
+      if (instant || ninki !== prev.ninki) {
+        set(k('14/2'), { clipPath: clipW(Math.round((NIN_BAR_W * ninki) / 100), NIN_BAR_W) });
+        set(k('19/4'), { clipPath: clipW(Math.round((NIN_SBAR_W * ninki) / 100), NIN_SBAR_W) });
+        const n = k('18/2'); if (n) n.textContent = String(ninki);
+        const ok = ninki >= 50;
+        set(k(6), { opacity: ok ? 0.75 : 0 }); set(k(8), { opacity: ok ? 0.35 : 0 });
+        if (!instant && ok && (prev.ninki ?? 0) < 50) anim(k(13), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 450 });
+      }
+      const kaze = Math.max(0, Math.min(5, st.kaze ?? 0));
+      if (instant || kaze !== prev.kaze) {
+        NIN_KUNAI.forEach((q, i) => {
+          const lit = i < kaze;
+          set(k1(`${q}/5`), { opacity: lit ? 1 : 0 }); set(k1(NIN_EMPTY[i]), { opacity: lit ? 0 : 1 });
+          set(k1(`${NIN_SK[i]}/4`), { opacity: lit ? 1 : 0 });
+          if (!instant && lit && i >= (prev.kaze ?? 0)) anim(k1(`${q}/4`), [{ opacity: 0.9 }, { opacity: 0 }], { duration: 450 });
+        });
+      }
+      prev = { ninki, kaze };
+    }
+    function setSimple(v) { simple = !!v; k(2).hidden = simple; k(16).hidden = !simple; k1(2).hidden = simple; k1(17).hidden = !simple; }
+    apply({ ninki: 0, kaze: 0 }, true);
+    return {
+      windows: [
+        { name: 'JobHudNIN0', label: '忍気ゲージ', el: K.el, w: K.w, h: K.h },
+        { name: 'JobHudNIN1', label: '風纏シンボル', el: K1.el, w: K1.w, h: K1.h },
+      ],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  window.MockGauge2.add({ MNK: mnk, NIN: nin });
 })();

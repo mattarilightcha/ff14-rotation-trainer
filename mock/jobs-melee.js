@@ -3,7 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, descCharges, guideTrait, numIn } = window.MockJobs.lib;
+  const { tooltipBlocked, descCharges, descGain, guideTrait, numIn } = window.MockJobs.lib;
   // クリティカルの代わり（仮 GAME-77）: クリティカルの発動率。乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
   const CRIT_RATE = 0.25;
   const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
@@ -226,5 +226,254 @@
     },
   };
 
-  Object.assign(window.MockJobs, { MNK });
+  // ---------------- 忍者 ----------------
+  // 説明文から:
+  //   印（天・地・人。チャージ 2・20 秒を共有）を結んでから忍術: 印 1 つ = 風魔手裏剣、2 つ = 最後が天なら火遁・地なら雷遁・人なら氷遁、
+  //     3 つ = 最後が天なら風遁・地なら土遁・人なら水遁。同じ印を 2 回結ぶと失敗。印の効果時間は 6 秒
+  //   活殺自在: 印のリキャストに関わらず忍術 1 回・威力 +30%。火遁 → 劫火滅却の術、氷遁 → 氷晶乱流の術
+  //   天地人: 6 秒、天・地・人のボタンが忍術に変わり、押すたびに別の忍術（最大 3 種類）。忍術以外は使えない。天理人道実行可（30 秒）
+  //   雷遁: 月影雷獣実行可（最大 3・30 秒。ウェポンスキルの近接攻撃で消える）→ 月影雷獣爪 / 牙
+  //   風纏: 強甲破点突（コンボ）で 2（最大 5）。旋風刃の威力 +100（1 つ使う）
+  //   忍気（最大 100）: 大蝦蟇・六道輪廻・分身の術が 50 使う。毒盛の術 +40（秘技実行可 → 是生滅法・蝦蟇仙）・命水 +50（忍隠を使う。次の六道輪廻 / 是生滅法の威力が上がる）
+  //   風遁・水遁で忍隠（20 秒。かくれていなくても百雷銃・命水を 1 回使える）。毒盛の術: 被ダメージ +5%（20 秒）、百雷銃: 自分からの被ダメージ +10%（15 秒）
+  //   分身の術（5 スタック・30 秒）: ウェポンスキルのたびに分身が追撃（威力 160、範囲は 80）し、忍気 +5。残影鎌鼬実行可（45 秒）
+  // 公式ジョブガイドの特性から: GCD 2.12 秒（攻撃速度アップ込みの表の値）
+  // 仮（GAME-78）: 印・忍術のあとの GCD は 0.5 秒（印）/ 1.5 秒（忍術。表の値）。印の途中で忍術以外の技を使うと失敗（うさぎ）。天地人の間は動いても止まらない。
+  //   夢幻三段の威力は 3 回分（180 × 3）。土遁は自分の足元に置く
+  const NIN = {
+    abbr: 'NIN',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        SPIN: 2240, GUST: 2242, AEOLIAN: 2255, ARMOR: 3563, DAGGER: 2247, BLOSSOM: 2254, HAKKE: 16488,
+        TEN: 2259, CHI: 2261, JIN: 2263, NINJUTSU: 2260, FUMA: 2265, KATON: 2266, RAITON: 2267, HYOTON: 2268, HUTON: 2269, DOTON: 2270, SUITON: 2271,
+        GOKA: 16491, HYOSHO: 16492, KASSATSU: 2264, TCJ: 7403, TENRI: 36961, FORKED: 25777, FLEETING: 25778,
+        HELLFROG: 7401, BHAVA: 7402, DEATHFROG: 36959, ZESHO: 36960, BUNSHIN: 16493, KAMAITACHI: 25774, MUG: 36957, KUNAI: 36958, MEISUI: 16489,
+        DREAM: 3566, HIDE: 2245, SHUKUCHI: 2262, SHADE: 2241,
+        SECONDWIND: 7541, BLOODBATH: 7542, TN: 7546, ARMS: 7548, FEINT: 7549, SWEEP: 7863,
+      };
+      const STATUS = {
+        mudra: { name: '印' },
+        kassatsu: { name: '活殺自在' },
+        tcj: { name: '天地人' },
+        tenriReady: { name: '天理人道実行可' },
+        raiju: { name: '月影雷獣実行可' },
+        shadowWalker: { name: '忍隠' },
+        hidden: { name: 'かくれる' },
+        meisui: { name: '命水' },
+        higi: { name: '秘技実行可' },
+        bunshin: { name: '分身の術' },
+        kamaitachiReady: { name: '残影鎌鼬実行可' },
+        mug: { name: '毒盛の術', target: true, tracked: true },
+        kunai: { name: '百雷銃', target: true },
+        doton: { name: '土遁の術' },
+        shade: { name: '残影' },
+        tn: { name: 'トゥルーノース' },
+        bloodbath: { name: 'ブラッドバス' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const MUDRA = { [ID.TEN]: 'ten', [ID.CHI]: 'chi', [ID.JIN]: 'jin' };
+      const MUDRA_JA = { ten: '天', chi: '地', jin: '人' };
+      const JUTSU = new Set([ID.FUMA, ID.KATON, ID.RAITON, ID.HYOTON, ID.HUTON, ID.DOTON, ID.SUITON, ID.GOKA, ID.HYOSHO]);
+      const MELEE_WS = new Set([ID.SPIN, ID.GUST, ID.AEOLIAN, ID.ARMOR, ID.BLOSSOM, ID.HAKKE]); // 月影雷獣実行可が消える近接のウェポンスキル
+      const AOE_WS = new Set([ID.BLOSSOM, ID.HAKKE]); // 分身の追撃が範囲（威力 80）になる
+      const KASSATSU_UP = 1 + numIn(A[ID.KASSATSU]?.desc, /威力を(\d+)％上昇/, 30) / 100;
+      const KAZE_ADD = numIn(A[ID.AEOLIAN]?.desc, /全ての威力が(\d+)上昇/, 100);
+      const gauges = { 忍気: { get: () => S().ninki, set: (v) => setNinki(v), max: 100 } };
+      function setNinki(v) {
+        const s = S(), over = Math.max(0, v - 100);
+        if (over > 0 && s.phase === 'combat') s.stats.ninkiOver += over;
+        s.ninki = Math.max(0, Math.min(100, v));
+      }
+      // 印の並び → 忍術（同じ印が 2 回なら失敗 = 'rabbit'）
+      function jutsuFor(seq) {
+        if (!seq.length) return null;
+        if (new Set(seq).size !== seq.length) return 'rabbit';
+        const last = seq[seq.length - 1], kas = has('kassatsu');
+        if (seq.length === 1) return ID.FUMA;
+        if (seq.length === 2) return last === 'ten' ? (kas ? ID.GOKA : ID.KATON) : last === 'chi' ? ID.RAITON : (kas ? ID.HYOSHO : ID.HYOTON);
+        return last === 'ten' ? ID.HUTON : last === 'chi' ? ID.DOTON : ID.SUITON;
+      }
+      const tcjOn = () => { const s = S(); return !!s.tcj && s.tcj.until > s.t; };
+      function endTcj() { const s = S(); s.tcj = null; R.remove('tcj'); }
+      function failMudra(why) {
+        const s = S();
+        s.mudras = []; R.remove('mudra'); s.stats.rabbit++;
+        R.addLog('ng', `忍術失敗（${why}）`); R.ev('ミス', { result: '忍術失敗', note: why });
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // 印・トゥルーノース・縮地「最大チャージ数：2」
+        prepull: new Set([ID.TEN, ID.CHI, ID.JIN, ID.NINJUTSU, ID.HIDE, ID.TN, ID.SHUKUCHI]),
+        comboStarters: new Set([ID.SPIN, ID.BLOSSOM]),
+        procStatus: { 58: 'raiju', 163: 'shadowWalker', 164: 'higi', 165: 'tenriReady' },
+        ownDots: true, // 土遁の範囲は自分で持つ
+        initState(s) {
+          s.ninki = 0; s.kaze = 0; s.mudras = []; s.tcj = null; s.dots = {};
+          s.stats.ninkiOver = 0; s.stats.kazeOver = 0; s.stats.kazeUsed = 0; s.stats.rabbit = 0; s.stats.jutsu = 0; s.stats.raijuLost = 0; s.stats.bunshinHits = 0;
+        },
+        gaugeCols: [['忍気', (s) => s.ninki], ['風纏', (s) => s.kaze], ['印', (s) => s.mudras.map((m) => MUDRA_JA[m]).join('')]],
+        tracked: [['毒盛の術', 'mug', '#c890ff', '120 秒ごと。中に強い技（是生滅法・天理人道など）を入れる']],
+        speed: () => 1, // 攻撃速度アップの短縮は、ジョブガイドの表のリキャスト（2.12 秒）に入っている
+        // 印のあとの GCD は 0.5 秒（仮 GAME-78）。天地人の忍術は表の 1.5 秒
+        gcdMs: (a) => (MUDRA[a.id] ? 500 : null),
+        // 印の硬直: 応答の遅れ（既定 50ms）と合わせて印の GCD（0.5 秒）と同じになるように（仮 GAME-78）
+        animLockMs: { [ID.TEN]: 450, [ID.CHI]: 450, [ID.JIN]: 450 },
+        comboFree: () => false,
+        resolve(id) {
+          const s = S();
+          if (MUDRA[id] && tcjOn()) {
+            const seq = [...s.tcj.used, MUDRA[id]];
+            const j = jutsuFor(seq);
+            return typeof j === 'number' ? j : id;
+          }
+          if (id === ID.NINJUTSU) { const j = jutsuFor(s.mudras); return typeof j === 'number' ? j : id; }
+          if (id === ID.TCJ && has('tenriReady') && !tcjOn()) return ID.TENRI;
+          if (id === ID.BHAVA && has('higi')) return ID.ZESHO;
+          if (id === ID.HELLFROG && has('higi')) return ID.DEATHFROG;
+          return id;
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          if (tcjOn() && !JUTSU.has(id) && !MUDRA[id]) return '天地人の間は忍術以外を使えません';
+          if (MUDRA[id] && tcjOn() && s.tcj.used.includes(MUDRA[id])) return `天地人: ${MUDRA_JA[MUDRA[id]]}の印は使いました`;
+          if (id === ID.NINJUTSU && !s.mudras.length) return '印を結んでいません';
+          if (id === ID.TCJ && has('kassatsu')) return '活殺自在の効果中は使えません';
+          if (id === ID.TCJ && s.phase !== 'combat') return '戦闘中だけ使えます';
+          if (id === ID.HIDE && s.phase === 'combat') return '戦闘中は使えません';
+          if (id === ID.KUNAI && !has('hidden') && !has('shadowWalker')) return '「かくれる」か「忍隠」の効果中ではありません';
+          if (id === ID.MEISUI && (!has('shadowWalker') || s.phase !== 'combat')) return '「忍隠」の効果中ではありません（戦闘中だけ使えます）';
+          if ((id === ID.FORKED || id === ID.FLEETING) && !has('raiju')) return '「月影雷獣実行可」の効果中ではありません';
+          if (id === ID.KAMAITACHI && !has('kamaitachiReady')) return '「残影鎌鼬実行可」の効果中ではありません';
+          if (id === ID.TENRI && !has('tenriReady')) return '「天理人道実行可」の効果中ではありません';
+          const c = a.eff?.cost;
+          if (c?.gauge === '忍気' && s.ninki < c.n) return `忍気が足りません（必要 ${c.n} / 現在 ${s.ninki}）`;
+          return null;
+        },
+        // 2 つ目からの印・活殺自在の間の印・天地人の忍術は、印のチャージを使わない
+        freeUse: (id) => (MUDRA[id] ? S().mudras.length > 0 || has('kassatsu') || tcjOn() : false),
+        castMs: (a, base) => base,
+        // 威力: 夢幻三段は 3 回分、活殺自在の忍術は +30%
+        potOverride: (a) => (a.id === ID.DREAM ? (a.pot?.base ?? 180) * 3 : null),
+        potMult: (a) => (JUTSU.has(a.id) && has('kassatsu') ? KASSATSU_UP : 1),
+        potAdd: (a, ok) => (a.id === ID.AEOLIAN && S().kaze > 0 ? KAZE_ADD : 0),
+        dmgMult: () => (has('mug') ? 1.05 : 1) * (has('kunai') ? 1.1 : 1),
+        // 失敗した忍術（うさぎ）は攻撃しない
+        noHit: (id) => id === ID.NINJUTSU,
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // 印
+          if (MUDRA[id] && !tcjOn()) {
+            s.mudras.push(MUDRA[id]); R.buff('mudra', 6000);
+            if (s.mudras.length > 3) failMudra('印が多すぎる');
+            return;
+          }
+          if (id === ID.NINJUTSU) { failMudra(s.mudras.length ? '印の順番' : '印なし'); return; }
+          // 印の途中で忍術以外を使うと失敗
+          if (s.mudras.length && !JUTSU.has(id)) failMudra(`印の途中で${a.name}`);
+          // 忍術
+          if (JUTSU.has(id)) {
+            s.stats.jutsu++;
+            if (tcjOn()) { s.tcj.used.push(MUDRA[s.pressBase] ?? 'ten'); if (s.tcj.used.length >= 3) endTcj(); }
+            else { s.mudras = []; R.remove('mudra'); }
+            if (has('kassatsu') && !tcjOn()) R.remove('kassatsu');
+            if (id === ID.RAITON) { const r = s.st.raiju; R.buff('raiju', 30000, Math.min(3, (r && r.until > s.t ? r.stacks ?? 1 : 0) + 1)); }
+            if (id === ID.HUTON || id === ID.SUITON) R.buff('shadowWalker', (a.eff?.grant?.[0]?.sec ?? 20) * 1000);
+            if (id === ID.DOTON) {
+              R.zone('doton', { r: a.effectRange || 5, sec: 18, ring: true, self: true, col: ['#f4e0b0', '#a8783a'] });
+              s.dots.doton = { until: s.t + 18000, next: s.t + 3000, potency: a.pot?.base ?? 80, mult: R.mult, name: a.name };
+              R.buff('doton', 18000);
+            }
+            Au()?.surge();
+          }
+          // 忍気（説明文の「「忍気」をN上昇」。コンボボーナスはコンボ時だけ）
+          const g = descGain(a, '忍気', ok);
+          if (g) setNinki(s.ninki + g);
+          if (a.eff?.cost?.gauge === '忍気') setNinki(s.ninki - a.eff.cost.n);
+          // 風纏
+          if (id === ID.ARMOR && ok) { const over = Math.max(0, s.kaze + 2 - 5); s.stats.kazeOver += over; s.kaze = Math.min(5, s.kaze + 2); }
+          if (id === ID.AEOLIAN && s.kaze > 0) { s.kaze -= 1; s.stats.kazeUsed++; }
+          // 月影雷獣
+          if (MELEE_WS.has(id) && has('raiju')) { s.stats.raijuLost += s.st.raiju.stacks ?? 1; R.remove('raiju'); R.addLog('warn', '月影雷獣実行可が近接のウェポンスキルで消えました'); }
+          if (id === ID.FORKED || id === ID.FLEETING) { const r = s.st.raiju; if (r) { if ((r.stacks ?? 1) > 1) r.stacks -= 1; else R.remove('raiju'); } }
+          // 分身の術の追撃（ウェポンスキルのたび）
+          if (a.isGcd && !JUTSU.has(id) && a.pot?.base && has('bunshin')) {
+            const b = s.st.bunshin;
+            R.hit(AOE_WS.has(id) ? 80 : 160, '分身の術'); R.pet('act'); setNinki(s.ninki + 5); s.stats.bunshinHits++;
+            if ((b.stacks ?? 1) > 1) b.stacks -= 1; else R.remove('bunshin');
+          }
+          if (id === ID.BUNSHIN) { R.buff('bunshin', 30000, 5); R.buff('kamaitachiReady', 45000); R.pet('bunshin', 30); }
+          if (id === ID.KAMAITACHI) { R.remove('kamaitachiReady'); R.pet('act'); }
+          if (id === ID.KASSATSU) R.buff('kassatsu', 15000);
+          if (id === ID.TCJ) { s.tcj = { until: s.t + 6000, used: [] }; R.buff('tcj', 6000); R.buff('tenriReady', 30000); s.mudras = []; R.remove('mudra'); Au()?.surge(); }
+          if (id === ID.TENRI) R.remove('tenriReady');
+          if (id === ID.MUG) { R.buff('mug', 20000); R.buff('higi', 30000); }
+          if (id === ID.ZESHO || id === ID.DEATHFROG) R.remove('higi');
+          if (id === ID.BHAVA || id === ID.ZESHO) R.remove('meisui');
+          if (id === ID.KUNAI) { R.buff('kunai', 15000); if (has('hidden')) R.remove('hidden'); else R.remove('shadowWalker'); }
+          if (id === ID.MEISUI) { R.remove('shadowWalker'); R.buff('meisui', 30000); }
+          if (id === ID.HIDE) { R.buff('hidden', 1e9); R.cdShift(ID.TEN, 1e9); }
+          if (id !== ID.HIDE && id !== ID.KUNAI && has('hidden')) R.remove('hidden'); // ほかのアクションで解除
+          if (id === ID.SHADE) R.shieldSelf(0.2, 20, '残影');
+          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
+          if (id === ID.TN) R.buff('tn', 10000);
+        },
+        tick() {
+          const s = S();
+          if (s.mudras.length && !has('mudra')) { s.mudras = []; R.addLog('warn', '印の効果時間が切れました'); }
+          if (s.tcj && s.tcj.until <= s.t) endTcj();
+          // 土遁（3 秒ごと。敵が範囲の中にいる間）
+          for (const k of Object.keys(s.dots)) {
+            const d = s.dots[k];
+            while (d.next <= s.t && d.next <= d.until) { d.next += 3000; if (s.phase === 'combat' && R.zoneHitsBoss('doton')) R.dotTick(d.potency, d.mult, d.name); }
+            if (d.until < s.t) delete s.dots[k];
+          }
+        },
+        highlightOk: () => true,
+        glow(id) {
+          const s = S();
+          if (id === ID.NINJUTSU || JUTSU.has(id)) return s.mudras.length > 0 && typeof jutsuFor(s.mudras) === 'number';
+          if (MUDRA[id] && tcjOn()) return !s.tcj.used.includes(MUDRA[id]);
+          if (id === ID.KAMAITACHI) return has('kamaitachiReady');
+          if ((id === ID.BHAVA || id === ID.ZESHO) && s.ninki >= 50) return s.ninki >= 85 || has('higi');
+          return false;
+        },
+        // 方向指定のガイド: 風断ちのあと。風纏が少なければ強甲破点突（側面）、多ければ旋風刃（背面）
+        guide(highlight) {
+          if (highlight(ID.AEOLIAN) || highlight(ID.ARMOR)) return S().kaze <= 1 ? A[ID.ARMOR].positional : A[ID.AEOLIAN].positional;
+          return null;
+        },
+        positional: () => has('tn') && 'トゥルーノース',
+        fxColor: (id) => (id === ID.KATON || id === ID.GOKA || id === ID.HELLFROG || id === ID.DEATHFROG ? 'kenki' : id === ID.RAITON || id === ID.FORKED || id === ID.FLEETING ? 'getsu' : id === ID.HYOTON || id === ID.HYOSHO || id === ID.SUITON ? 'setsu' : id === ID.HUTON || id === ID.KAMAITACHI ? 'shoha' : id === ID.TENRI || id === ID.ZESHO || id === ID.BHAVA ? 'holy' : 'steel'),
+        fxPower: (id) => (JUTSU.has(id) || id === ID.TENRI || id === ID.ZESHO ? 1.4 : 1),
+        fxCount: (id) => (id === ID.DREAM ? 3 : 1),
+        castColor: () => 'steel',
+        gcdColor: (id) => (JUTSU.has(id) ? '#ffd27a' : id === ID.FORKED || id === ID.FLEETING ? '#9c90ff' : null),
+        hotOgcd: (id) => id === ID.ZESHO || id === ID.BHAVA || id === ID.TENRI || id === ID.MUG,
+        weapon: 'slash',
+        tipCost: (id) => (A[id]?.eff?.cost?.gauge === '忍気' ? ['忍気', A[id].eff.cost.n] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.ninkiOver) issues.push({ loss: Math.min(100, s.stats.ninkiOver) * 0.1, rate: s.stats.ninkiOver > 30 ? 'bad' : 'ok', title: `忍気が ${s.stats.ninkiOver} あふれた`, advice: '忍気が 50 を超えたら六道輪廻で使う。毒盛の術（+40）・命水（+50）の前は 50 以下にしておく' });
+          if (s.stats.rabbit) issues.push({ loss: s.stats.rabbit * 4, rate: 'bad', title: `忍術の失敗 ${s.stats.rabbit} 回`, advice: '印は同じものを 2 回結ばない。印の途中でほかの技を使わない' });
+          if (s.stats.raijuLost) issues.push({ loss: s.stats.raijuLost * 3, rate: 'bad', title: `使わずに消えた月影雷獣 ${s.stats.raijuLost}`, advice: '雷遁のあとは、双刃旋などの近接の技より先に月影雷獣牙（爪）を使う' });
+          metrics.push({ label: '忍術', value: `${s.stats.jutsu} 回（失敗 ${s.stats.rabbit}）`, rate: null });
+          metrics.push({ label: '風纏', value: `${s.stats.kazeUsed} 回使った（あふれ ${s.stats.kazeOver}）`, rate: null });
+          metrics.push({ label: '分身の追撃', value: `${s.stats.bunshinHits} 回`, rate: null });
+          if (!s.stats.rabbit && s.stats.jutsu > 2) goods.push('忍術の失敗なし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.rabbit * 15 - Math.min(50, s.stats.ninkiOver / 2)), posAdvice: '旋風刃は背面、強甲破点突は側面。風纏が 3 以下のうちは強甲破点突で足す', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたら月影雷獣爪（急接近）や投刃', comboAdvice: '双刃旋 → 風断ち → 旋風刃 / 強甲破点突の順に。印と忍術はコンボを切らない' };
+        },
+        howto: '忍者: 双刃旋 → 風断ち → 旋風刃（背面）/ 強甲破点突（側面。風纏 +2）。印を結んで忍術（天地 = 雷遁、地天 = 火遁、天地人 = 水遁）。雷遁のあとは月影雷獣牙。忍気 50 で六道輪廻、毒盛の術のあとは是生滅法。天地人は 3 つの忍術を続けて。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'NIN'),
+        gaugeDefault: { JobHudNIN0: { x: 66, y: 64, anchor: 4, scale: 1 }, JobHudNIN1: { x: 80, y: 64, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { MNK, NIN });
 })();
