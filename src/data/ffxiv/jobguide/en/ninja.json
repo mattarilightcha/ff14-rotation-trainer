@@ -1,0 +1,2082 @@
+{
+ "job": "ninja",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/ninja/",
+ "pageTitle": "Job Guide: Ninja | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nNinjutsu\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMelee DPS\n\nHailing from the war-torn lands of the Far East, the secret arts of the ninja were born of necessity, and have since given rise to a unique breed of highly-trained combatants.\n\nAble to manipulate the vital energies of the land, the air, and living beings, they manifest their power through the weaving of signs, unleashing a wide array of attacks against their foes. Master the arts of the ninja and learn to bend the tide of battle to your will.\n\nStarting Job Quest\n\nPrerequisite Class: Rogue",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/cad6fe9181335338ed411e0d9a2357a6e8496efc.png",
+   "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png",
+   "https://lds-img.finalfantasyxiv.com/d/5b5c3b6be21935b60b3e60b8b2b473fd3c0a7530.png",
+   "https://lds-img.finalfantasyxiv.com/d/e3d6094d93d1e6f8cb9034229a9f4bed0571471b.png",
+   "https://lds-img.finalfantasyxiv.com/d/b36d71590151a6f7f3d5fd616933f452bc9eeb68.png",
+   "https://lds-img.finalfantasyxiv.com/d/820c1eb36bd9488505973d7141d73e7fa1c3d1db.png",
+   "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png",
+   "https://lds-img.finalfantasyxiv.com/d/55c66e798d7404567ec69a023335542cef7cd916.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1362c998dbfc19dfd13223d2ae275be7f4db7cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/1836df5cdf1d1f78ae7b2f65462661f2fa6a79d8.png",
+   "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png",
+   "https://lds-img.finalfantasyxiv.com/d/c8f030128bce9d193521eb5cfcd9ff4636bbea61.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea2717bad5b805b35bb32731d78113692104a30d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2183f2672edde169e6276764503ec11ae06b4c1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/a12553440d7385aaafc940cac8f14682e3012392.png",
+   "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png",
+   "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2e750bda00af60c3a06480f512753c8b6d5951b.png",
+   "https://lds-img.finalfantasyxiv.com/d/c802df3d7abd5e50889d1cc5e97cf64eb1610afa.png",
+   "https://lds-img.finalfantasyxiv.com/d/751e11fc60c05f5ac427b522211ae510ef845f6c.png",
+   "https://lds-img.finalfantasyxiv.com/d/7fa8283b30b9ac35aada60984cbfaf01d3268c95.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c0c72efe9ba9c13d3765b1b7dd863c68eeaf4ba.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c7d1c58eb10c5d105f1ee98a21f84a031d26518.png",
+   "https://lds-img.finalfantasyxiv.com/d/d74531599ce1fc1886de7c5302265b73dd45accb.png",
+   "https://lds-img.finalfantasyxiv.com/d/384071d47821ff848b0433515b14bce679ca72ae.png",
+   "https://lds-img.finalfantasyxiv.com/d/2be5fb388f3fa8857567e83e22b8b97ad17aeb0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/5eb233e8637d859bc6c0803ffef792f272692176.png",
+   "https://lds-img.finalfantasyxiv.com/d/5b620ecc1931b456fea19bbc787a7848a9ce77a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/70139d7c1c6e323518d56f1bd503a9e8bc94d21b.png",
+   "https://lds-img.finalfantasyxiv.com/d/cb1fc6f802ae442daa8ead243f4f9f49bf9525f4.png",
+   "https://lds-img.finalfantasyxiv.com/d/55604bbe9cf720982be6e0ef74e9bf002d939935.png",
+   "https://lds-img.finalfantasyxiv.com/d/7604dd447d3b450e4816e62d5bf4e2f83fafabc4.png",
+   "https://lds-img.finalfantasyxiv.com/d/be6fdb084ef5ffd556f82bf0f3e0bb0085adf53f.png",
+   "https://lds-img.finalfantasyxiv.com/d/c13292e99775bf7b834e9bf44eae59cdf977dc8c.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c5d9c8d2301016f0d1d7412cc5100a7e41de735.png",
+   "https://lds-img.finalfantasyxiv.com/d/c1f09309f06281706fd1a6f37051a97dc8fdfd4f.png",
+   "https://lds-img.finalfantasyxiv.com/d/52e16f75932d2dc542606dccf6b9a8ffdef35b5d.png",
+   "https://lds-img.finalfantasyxiv.com/d/c4807f81a654f2b25cca49c1f61e9b3bc7df62d6.png",
+   "https://lds-img.finalfantasyxiv.com/d/fd706ad1980d3382fd9c64ffec7a0374d549d5cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/42f7335959286b3409ae67dc35b603f5225fc488.png",
+   "https://lds-img.finalfantasyxiv.com/d/226d8c495bf3b742618ba71f4cb9ff80b63b4752.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/2c7a551985023f8a7d2e338a014ab29454318b81.png",
+   "https://lds-img.finalfantasyxiv.com/d/443f61d91e3c8a64e725b7366c33c267f606c8b1.png",
+   "https://lds-img.finalfantasyxiv.com/d/baa12f591901930702230bc6e3e5119c194de1db.png",
+   "https://lds-img.finalfantasyxiv.com/d/a4295da0185e15eaf0481b14d04e59133c8fc699.png",
+   "https://lds-img.finalfantasyxiv.com/d/889736b87dc2b4851a9d0e38f9c1f00f40414e73.png",
+   "https://lds-img.finalfantasyxiv.com/d/df52e05ddb6ca5801114faf60e5ba05442c5cb6f.png",
+   "https://lds-img.finalfantasyxiv.com/d/dd5359193e18dec8796cb164c2a31cd7de730e31.png",
+   "https://lds-img.finalfantasyxiv.com/d/cf1bb42ed0500b95e768ec8fff4aa0f7b3d1c20a.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2d3b22f23ff584579dc27d5526176fe0f99cb2a.png",
+   "https://lds-img.finalfantasyxiv.com/d/bd62134b59f61995abdfea2f7fee502c5795f9f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/4808fd0960ff552e382c3bc3242c43c4634b3a16.png",
+   "https://lds-img.finalfantasyxiv.com/d/834c61d21d0517e99776d435f3125c0d856bff96.png",
+   "https://lds-img.finalfantasyxiv.com/d/7b5b3ecb51c13a72c65bbb7dd48b6d702d546da9.png",
+   "https://lds-img.finalfantasyxiv.com/d/8ecdf7edc6dd4e686813cdd58a5edcdf49e0404d.png",
+   "https://lds-img.finalfantasyxiv.com/d/359bc1829d69bdbe859863cd2a782fbacc61de16.png",
+   "https://lds-img.finalfantasyxiv.com/d/839919eb2756e950cdae46be906b564ce77bd4b6.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c6735eac69b6180ad6b23c92fc467a81701cf4a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d2a67da760022e80b85ba1ccbeeecdf8bddda757.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3cc3f2b23553fa8ce5a4a46fe159c12a2f82aaa.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/0/ZY3hcNRvp729lVKIIKdDPPKsdA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Spinning Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.\nAdditional Effect: Increases Ninki Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 300.<br/>Additional Effect: Increases Ninki Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Shade Shift",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cad6fe9181335338ed411e0d9a2357a6e8496efc.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Create shadows that nullify damage up to 20% of maximum HP.\nDuration: 20s",
+     "descriptionHtml": "Create shadows that nullify damage up to 20% of maximum HP.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Gust Slash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nCombo Action: Spinning Edge\nCombo Potency: 400\nCombo Bonus: Increases Ninki Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Combo Action: Spinning Edge<br/>Combo Potency: 400<br/>Combo Bonus: Increases Ninki Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Hide",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5b5c3b6be21935b60b3e60b8b2b473fd3c0a7530.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Blend in with your surroundings, making it impossible for most enemies to detect you, but reducing movement speed by 50%. Has no effect on enemies 10 levels higher than your own, or certain enemies with special sight.\nAdditional Effect: Restores 2 charges to all mudra\nThe effect of Doton ends upon execution of Hide.\nCannot be executed while in combat.\nEffect ends upon use of any action other than Sprint, or upon reuse of Hide.",
+     "descriptionHtml": "Blend in with your surroundings, making it impossible for most enemies to detect you, but reducing movement speed by 50%. Has no effect on enemies 10 levels higher than your own, or certain enemies with special sight.<br/>Additional Effect: Restores 2 charges to all mudra<br/>The effect of Doton ends upon execution of Hide.<br/>Cannot be executed while in combat.<br/>Effect ends upon use of any action other than Sprint, or upon reuse of Hide."
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Throwing Dagger",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e3d6094d93d1e6f8cb9034229a9f4bed0571471b.png",
+     "skillCellText": "Throwing Dagger\nClass Quest",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 200.\nAdditional Effect: Increases Ninki Gauge by 5",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 200.<br/>Additional Effect: Increases Ninki Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Mug",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b36d71590151a6f7f3d5fd616933f452bc9eeb68.png",
+     "skillCellText": "Mug\nClass Quest",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 150.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Mug is dealt before, or as, the finishing blow",
+     "descriptionHtml": "Delivers an attack with a potency of 150.<br/>Additional Effect: Increases target's damage taken by 5%<br/>Duration: 20s<br/>Additional Effect: Increases the chance of additional items being dropped by target if Mug is dealt before, or as, the finishing blow"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Trick Attack",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/820c1eb36bd9488505973d7141d73e7fa1c3d1db.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.\n400 when executed from a target's rear.\nAdditional Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while under the effect of Hidden.",
+     "descriptionHtml": "Delivers an attack with a potency of 300.<br/>400 when executed from a target's rear.<br/>Additional Effect: Increases damage you deal target by 10%<br/>Duration: 15s<br/>Can only be executed while under the effect of Hidden."
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Aeolian Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 220.\n280 when executed from a target's rear.\nCombo Action: Gust Slash\nCombo Potency: 400\nRear Combo Potency: 460\nPotencies are increased by 100 while under the effect of Kazematoi.\nCombo Bonus: Increases Ninki Gauge by 15",
+     "descriptionHtml": "Delivers an attack with a potency of 220.<br/>280 when executed from a target's rear.<br/>Combo Action: Gust Slash<br/>Combo Potency: 400<br/>Rear Combo Potency: 460<br/>Potencies are increased by 100 while under the effect of Kazematoi.<br/>Combo Bonus: Increases Ninki Gauge by 15"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Ten",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55c66e798d7404567ec69a023335542cef7cd916.png",
+     "skillCellText": "Ten\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Make the ritual mudra hand gesture for \"heaven.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.",
+     "descriptionHtml": "Make the ritual mudra hand gesture for \"heaven.\"<br/>Duration: 6s<br/>Maximum Charges: 2<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/>Conversely, execution of weaponskills triggers the cooldown of this action."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Ninjutsu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1362c998dbfc19dfd13223d2ae275be7f4db7cc.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Executes a specific ninjutsu action coinciding with the combination of mudra made immediately beforehand.\nIf any other action is used before the mudra are combined and the ninjutsu executed, Ninjutsu will fail.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\nRestores 2 charges to all mudra when Hide is executed while outside of combat.",
+     "descriptionHtml": "Executes a specific ninjutsu action coinciding with the combination of mudra made immediately beforehand.<br/>If any other action is used before the mudra are combined and the ninjutsu executed, Ninjutsu will fail.<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/>Conversely, execution of weaponskills triggers the cooldown of this action.<br/>Restores 2 charges to all mudra when Hide is executed while outside of combat."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Chi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1836df5cdf1d1f78ae7b2f65462661f2fa6a79d8.png",
+     "skillCellText": "Chi\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Make the ritual mudra hand gesture for \"earth.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.",
+     "descriptionHtml": "Make the ritual mudra hand gesture for \"earth.\"<br/>Duration: 6s<br/>Maximum Charges: 2<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/>Conversely, execution of weaponskills triggers the cooldown of this action."
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Death Blossom",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 38",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increases Ninki Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all nearby enemies.<br/>Additional Effect: Increases Ninki Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Assassinate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c8f030128bce9d193521eb5cfcd9ff4636bbea61.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 200.",
+     "descriptionHtml": "Delivers an attack with a potency of 200."
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Shukuchi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea2717bad5b805b35bb32731d78113692104a30d.png",
+     "skillCellText": "Shukuchi\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Move quickly to the specified location.\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Move quickly to the specified location.<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Jin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2183f2672edde169e6276764503ec11ae06b4c1e.png",
+     "skillCellText": "Jin\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Make the ritual mudra hand gesture for \"man.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.",
+     "descriptionHtml": "Make the ritual mudra hand gesture for \"man.\"<br/>Duration: 6s<br/>Maximum Charges: 2<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/>Conversely, execution of weaponskills triggers the cooldown of this action."
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Kassatsu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a12553440d7385aaafc940cac8f14682e3012392.png",
+     "skillCellText": "Kassatsu\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Allows the execution of a single ninjutsu without consumption of mudra charges.\nAdditional Effect: Increases damage for the next ninjutsu action by 30%\nDuration: 15s\nRecast timer of mudra is not affected by the execution of this action.",
+     "descriptionHtml": "Allows the execution of a single ninjutsu without consumption of mudra charges.<br/>Additional Effect: Increases damage for the next ninjutsu action by 30%<br/>Duration: 15s<br/>Recast timer of mudra is not affected by the execution of this action."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Hakke Mujinsatsu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png",
+     "skillCellText": "Hakke Mujinsatsu\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 100 to all nearby enemies.\nCombo Action: Death Blossom\nCombo Potency: 120\nCombo Bonus: Increases Ninki Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all nearby enemies.<br/>Combo Action: Death Blossom<br/>Combo Potency: 120<br/>Combo Bonus: Increases Ninki Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Armor Crush",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png",
+     "skillCellText": "Armor Crush\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\n300 when executed from a target's flank.\nCombo Action: Gust Slash\nCombo Potency: 440\nFlank Combo Potency: 500\nCombo Bonus: Grants 2 stacks of Kazematoi\nKazematoi Effect: Increases potency of Aeolian Edge by 100\nMaximum Stacks: 5\nCombo Bonus: Increases Ninki Gauge by 15",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>300 when executed from a target's flank.<br/>Combo Action: Gust Slash<br/>Combo Potency: 440<br/>Flank Combo Potency: 500<br/>Combo Bonus: Grants 2 stacks of Kazematoi<br/>Kazematoi Effect: Increases potency of Aeolian Edge by 100<br/>Maximum Stacks: 5<br/>Combo Bonus: Increases Ninki Gauge by 15"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Dream Within a Dream",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2e750bda00af60c3a06480f512753c8b6d5951b.png",
+     "skillCellText": "Dream Within a Dream\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers a threefold attack, each hit with a potency of 180.",
+     "descriptionHtml": "Delivers a threefold attack, each hit with a potency of 180."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Hellfrog Medium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c802df3d7abd5e50889d1cc5e97cf64eb1610afa.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "6y",
+     "description": "Deals fire damage with a potency of 250 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nShares a recast timer with Bhavacakra.",
+     "descriptionHtml": "Deals fire damage with a potency of 250 to target and all enemies nearby it.<br/>Ninki Gauge Cost: 50<br/>Shares a recast timer with Bhavacakra."
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Dokumori",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/751e11fc60c05f5ac427b522211ae510ef845f6c.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack to all enemies in a cone before you with a potency of 400.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Dokumori is dealt before, or as, the finishing blow\nAdditional Effect: Increases Ninki Gauge by 40\nAdditional Effect: Grants Higi\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack to all enemies in a cone before you with a potency of 400.<br/>Additional Effect: Increases target's damage taken by 5%<br/>Duration: 20s<br/>Additional Effect: Increases the chance of additional items being dropped by target if Dokumori is dealt before, or as, the finishing blow<br/>Additional Effect: Increases Ninki Gauge by 40<br/>Additional Effect: Grants Higi<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Bhavacakra",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7fa8283b30b9ac35aada60984cbfaf01d3268c95.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 400.\nMeisui Bonus: Potency is increased to 550 when under the effect of Meisui\nNinki Gauge Cost: 50\nShares a recast timer with Hellfrog Medium.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 400.<br/>Meisui Bonus: Potency is increased to 550 when under the effect of Meisui<br/>Ninki Gauge Cost: 50<br/>Shares a recast timer with Hellfrog Medium."
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Ten Chi Jin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c0c72efe9ba9c13d3765b1b7dd863c68eeaf4ba.png",
+     "skillCellText": "Ten Chi Jin\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Temporarily converts each of the three mudra into a ninjutsu action. Executing one of these actions will convert the remaining mudra into different ninjutsu actions until all three have been executed or the Ten Chi Jin effect expires.\nDuration: 6s\nAdditional Effect: Grants Tenri Jindo Ready\nDuration: 30s\nOnly ninjutsu available while active. The same ninjutsu cannot be executed twice.\nCannot be executed while under the effect of Kassatsu.",
+     "descriptionHtml": "Temporarily converts each of the three mudra into a ninjutsu action. Executing one of these actions will convert the remaining mudra into different ninjutsu actions until all three have been executed or the Ten Chi Jin effect expires.<br/>Duration: 6s<br/>Additional Effect: Grants Tenri Jindo Ready<br/>Duration: 30s<br/>Only ninjutsu available while active. The same ninjutsu cannot be executed twice.<br/>Cannot be executed while under the effect of Kassatsu."
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Meisui",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c7d1c58eb10c5d105f1ee98a21f84a031d26518.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Dispels Shadow Walker, increasing the Ninki Gauge by 50.\nAdditional Effect: Grants Meisui\nDuration: 30s\nMeisui Effect: Increases the potency of Zesho Meppo to 850 and Bhavacakra to 550\nCan only be executed while in combat and under the effect of Shadow Walker.",
+     "descriptionHtml": "Dispels Shadow Walker, increasing the Ninki Gauge by 50.<br/>Additional Effect: Grants Meisui<br/>Duration: 30s<br/>Meisui Effect: Increases the potency of Zesho Meppo to 850 and Bhavacakra to 550<br/>Can only be executed while in combat and under the effect of Shadow Walker."
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Bunshin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d74531599ce1fc1886de7c5302265b73dd45accb.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill. Shadow attack potency varies based on the attack executed, but is not affected by combo bonuses.\nMelee Attack Potency: 160\nRanged Attack Potency: 160\nArea Attack Potency: 80\nNinki Gauge increases by 5 each time your shadow lands an attack.\nDuration: 30s\nAdditional Effect: Grants Phantom Kamaitachi Ready\nDuration: 45s\nNinki Gauge Cost: 50",
+     "descriptionHtml": "Grants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill. Shadow attack potency varies based on the attack executed, but is not affected by combo bonuses.<br/>Melee Attack Potency: 160<br/>Ranged Attack Potency: 160<br/>Area Attack Potency: 80<br/>Ninki Gauge increases by 5 each time your shadow lands an attack.<br/>Duration: 30s<br/>Additional Effect: Grants Phantom Kamaitachi Ready<br/>Duration: 45s<br/>Ninki Gauge Cost: 50"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Phantom Kamaitachi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/384071d47821ff848b0433515b14bce679ca72ae.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Your shadow deals wind damage to target and all enemies within 5 yalms with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 10\nCan only be executed while under the effect of Phantom Kamaitachi Ready.",
+     "descriptionHtml": "Your shadow deals wind damage to target and all enemies within 5 yalms with a potency of 700.<br/>Additional Effect: Increases Ninki Gauge by 10<br/>Can only be executed while under the effect of Phantom Kamaitachi Ready."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Hollow Nozuchi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2be5fb388f3fa8857567e83e22b8b97ad17aeb0d.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "100y",
+     "radius": "5y",
+     "description": "All enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 70.\nRequires Hakke Mujinsatsu to be executed as a combo action or upon executing Katon, Goka Mekkyaku, or Phantom Kamaitachi.\nEffect can only be triggered while Doton is active.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "All enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 70.<br/>Requires Hakke Mujinsatsu to be executed as a combo action or upon executing Katon, Goka Mekkyaku, or Phantom Kamaitachi.<br/>Effect can only be triggered while Doton is active.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Forked Raiju",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5eb233e8637d859bc6c0803ffef792f272692176.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers a lightning attack with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers a lightning attack with a potency of 700.<br/>Additional Effect: Increases Ninki Gauge by 5<br/>Can only be executed while under the effect of Raiju Ready.<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Fleeting Raiju",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5b620ecc1931b456fea19bbc787a7848a9ce77a6.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.12s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals lightning damage with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.",
+     "descriptionHtml": "Deals lightning damage with a potency of 700.<br/>Additional Effect: Increases Ninki Gauge by 5<br/>Can only be executed while under the effect of Raiju Ready."
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Kunai's Bane",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/70139d7c1c6e323518d56f1bd503a9e8bc94d21b.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "5y",
+     "description": "Deals damage to target and all enemies nearby it with a potency of 700.\nAdditional Effect: Afflicts target with Kunai's Bane\nKunai's Bane Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while Hidden.",
+     "descriptionHtml": "Deals damage to target and all enemies nearby it with a potency of 700.<br/>Additional Effect: Afflicts target with Kunai's Bane<br/>Kunai's Bane Effect: Increases damage you deal target by 10%<br/>Duration: 15s<br/>Can only be executed while Hidden."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Deathfrog Medium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cb1fc6f802ae442daa8ead243f4f9f49bf9525f4.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "6y",
+     "description": "Deals fire damage with a potency of 400 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Bhavacakra.\n\n※This action cannot be assigned to a hotbar.\n※Hellfrog Medium changes to Deathfrog Medium when requirements for execution are met.",
+     "descriptionHtml": "Deals fire damage with a potency of 400 to target and all enemies nearby it.<br/>Ninki Gauge Cost: 50<br/>Can only be executed while under the effect of Higi.<br/>Shares a recast timer with Bhavacakra.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Hellfrog Medium changes to Deathfrog Medium when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Zesho Meppo",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55604bbe9cf720982be6e0ef74e9bf002d939935.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 700.\nMeisui Bonus: Potency is increased to 850\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Hellfrog Medium.\n\n※This action cannot be assigned to a hotbar.\n※Bhavacakra changes to Zesho Meppo when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 700.<br/>Meisui Bonus: Potency is increased to 850<br/>Ninki Gauge Cost: 50<br/>Can only be executed while under the effect of Higi.<br/>Shares a recast timer with Hellfrog Medium.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Bhavacakra changes to Zesho Meppo when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Tenri Jindo",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7604dd447d3b450e4816e62d5bf4e2f83fafabc4.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,100.\nCan only be executed while under the effect of Tenri Jindo Ready.\n\n※This action cannot be assigned to a hotbar.\n※Ten Chi Jin changes to Tenri Jindo when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,100.<br/>Can only be executed while under the effect of Tenri Jindo Ready.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ten Chi Jin changes to Tenri Jindo when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__ninja_onlyaction",
+   "title": "Ninjutsu",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_jyutsu_action__01",
+     "name": "Fuma Shuriken",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/be6fdb084ef5ffd556f82bf0f3e0bb0085adf53f.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged ninjutsu attack with a potency of 500.\nMudra Combination: Any one of the Ten, Chi, or Jin mudra\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Fuma Shuriken when requirements for execution are met.",
+     "descriptionHtml": "Delivers a ranged ninjutsu attack with a potency of 500.<br/>Mudra Combination: Any one of the Ten, Chi, or Jin mudra<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Fuma Shuriken when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__02",
+     "name": "Katon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c13292e99775bf7b834e9bf44eae59cdf977dc8c.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "5y",
+     "description": "Deals fire damage with a potency of 350 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Katon when requirements for execution are met.",
+     "descriptionHtml": "Deals fire damage with a potency of 350 to target and all enemies nearby it.<br/>Mudra Combination: Chi→Ten or Jin→Ten<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Katon when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__03",
+     "name": "Raiton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c5d9c8d2301016f0d1d7412cc5100a7e41de735.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Deals lightning damage with a potency of 740.\nAdditional Effect: Grants a stack of Raiju Ready\nDuration: 30s\nMaximum Stacks: 3\nEffect of Raiju Ready ends upon execution of any melee weaponskill.\nMudra Combination: Ten→Chi or Jin→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Raiton when requirements for execution are met.",
+     "descriptionHtml": "Deals lightning damage with a potency of 740.<br/>Additional Effect: Grants a stack of Raiju Ready<br/>Duration: 30s<br/>Maximum Stacks: 3<br/>Effect of Raiju Ready ends upon execution of any melee weaponskill.<br/>Mudra Combination: Ten→Chi or Jin→Chi<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Raiton when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__04",
+     "name": "Hyoton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c1f09309f06281706fd1a6f37051a97dc8fdfd4f.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals ice damage with a potency of 350.\nAdditional Effect: Bind\nDuration: 15s\nMudra Combination: Ten→Jin or Chi→Jin\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyoton when requirements for execution are met.",
+     "descriptionHtml": "Deals ice damage with a potency of 350.<br/>Additional Effect: Bind<br/>Duration: 15s<br/>Mudra Combination: Ten→Jin or Chi→Jin<br/>Cancels auto-attack upon execution.<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Hyoton when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__05",
+     "name": "Huton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/52e16f75932d2dc542606dccf6b9a8ffdef35b5d.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "5y",
+     "description": "Deals wind damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Jin→Chi→Ten or Chi→Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Huton when requirements for execution are met.",
+     "descriptionHtml": "Deals wind damage with a potency of 240 to target and all enemies nearby it.<br/>Additional Effect: Grants Shadow Walker<br/>Shadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect<br/>Duration: 20s<br/>Mudra Combination: Jin→Chi→Ten or Chi→Jin→Ten<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Huton when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__06",
+     "name": "Doton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c4807f81a654f2b25cca49c1f61e9b3bc7df62d6.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Creates a patch of corrupted earth, dealing damage with a potency of 80 to any enemies who enter.\nDuration: 18s\nAdditional Effect: Heavy +40%\nMudra Combination: Ten→Jin→Chi or Jin→Ten→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Doton when requirements for execution are met.",
+     "descriptionHtml": "Creates a patch of corrupted earth, dealing damage with a potency of 80 to any enemies who enter.<br/>Duration: 18s<br/>Additional Effect: Heavy +40%<br/>Mudra Combination: Ten→Jin→Chi or Jin→Ten→Chi<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Doton when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__07",
+     "name": "Suiton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fd706ad1980d3382fd9c64ffec7a0374d549d5cc.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Deals water damage with a potency of 580.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Ten→Chi→Jin or Chi→Ten→Jin\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Suiton when requirements for execution are met.",
+     "descriptionHtml": "Deals water damage with a potency of 580.<br/>Additional Effect: Grants Shadow Walker<br/>Shadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect<br/>Duration: 20s<br/>Mudra Combination: Ten→Chi→Jin or Chi→Ten→Jin<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Suiton when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__08",
+     "name": "Goka Mekkyaku",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/42f7335959286b3409ae67dc35b603f5225fc488.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "5y",
+     "description": "Deals fire damage with a potency of 850 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Goka Mekkyaku when requirements for execution are met.",
+     "descriptionHtml": "Deals fire damage with a potency of 850 to target and all enemies nearby it.<br/>Mudra Combination: Chi→Ten or Jin→Ten<br/>Can only be executed while under the effect of Kassatsu.<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Goka Mekkyaku when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_jyutsu_action__09",
+     "name": "Hyosho Ranryu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/226d8c495bf3b742618ba71f4cb9ff80b63b4752.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals ice damage with a potency of 1,300.\nMudra Combination: Ten→Jin or Chi→Jin\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyosho Ranryu when requirements for execution are met.",
+     "descriptionHtml": "Deals ice damage with a potency of 1,300.<br/>Mudra Combination: Ten→Jin or Chi→Jin<br/>Can only be executed while under the effect of Kassatsu.<br/>Triggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Ninjutsu changes to Hyosho Ranryu when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Instantly restores own HP.\nCure Potency: 800",
+     "descriptionHtml": "Instantly restores own HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "Leg Sweep",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Stuns target.\nDuration: 3s",
+     "descriptionHtml": "Stuns target.<br/>Duration: 3s"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "Bloodbath",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Converts a portion of physical damage dealt into HP.\nDuration: 20s",
+     "descriptionHtml": "Converts a portion of physical damage dealt into HP.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "Feint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 22",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Lowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s",
+     "descriptionHtml": "Lowers target's physical damage dealt by 10% and magic damage dealt by 5%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "True North",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2",
+     "descriptionHtml": "Nullifies all action direction requirements.<br/>Duration: 10s<br/>Maximum Charges: 2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "All Fours",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fd819651f2279e1fe98f4824352620713d446a6.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 14",
+     "description": "Reduces damage taken when falling.",
+     "descriptionHtml": "Reduces damage taken when falling."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Fleet of Foot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d94c302e9fb661ef889d8ef58c4c694fa6564ea.png",
+     "acquired": [
+      {
+       "class": "Rogue",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases movement speed.",
+     "descriptionHtml": "Increases movement speed."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Increase Attack Speed",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6d96e09b096b18633938943d197373212d767009.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "description": "Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%.",
+     "descriptionHtml": "Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Adept Assassination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8e20e43cf11fb9e8170c5b2ed11630aabc2ca1dd.png",
+     "skillCellText": "Adept Assassination\nJob Quest",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "description": "Upgrades Assassinate to Dream Within a Dream.",
+     "descriptionHtml": "Upgrades Assassinate to Dream Within a Dream."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Shukiho",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fef32445cd44c56bf6a9500314912ebc67d73e4f.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "description": "Increases Ninki Gauge by 5 upon successfully landing certain weaponskills or completing certain combos.",
+     "descriptionHtml": "Increases Ninki Gauge by 5 upon successfully landing certain weaponskills or completing certain combos."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Enhanced Shukuchi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce513d4222cc5512ff25b458264517338e847220.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Resets the recast timer for Shukuchi upon executing Katon, Raiton, or Hyoton on most targets.",
+     "descriptionHtml": "Resets the recast timer for Shukuchi upon executing Katon, Raiton, or Hyoton on most targets."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Mug Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/16bc1bf7b920888ca93bcbb4d53c7e5a8b59cb9c.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "description": "Upgrades Mug to Dokumori.",
+     "descriptionHtml": "Upgrades Mug to Dokumori."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Enhanced Shukuchi II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b5d1357c43c6f9935d3de67584eadd79e08c1cff.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Allows the accumulation of charges for consecutive uses of Shukuchi.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of  Shukuchi.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Melee Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Increases the potency of Gust Slash to 120, Aeolian Edge to 140, and Armor Crush to 140.",
+     "descriptionHtml": "Increases the potency of Gust Slash to 120, Aeolian Edge to 140, and Armor Crush to 140."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Enhanced Kassatsu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92a5951f7dfce5eeeb154be45c61581bdc2c1479.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "description": "Upgrades Katon and Hyoton to Goka Mekkyaku and Hyosho Ranryu while under the effect of Kassatsu.",
+     "descriptionHtml": "Upgrades Katon and Hyoton to Goka Mekkyaku and Hyosho Ranryu while under the effect of Kassatsu."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Shukiho II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/68d3162b002738b64629b49b9380d8c1a1a4a7dc.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Increases Ninki Gauge by 10 upon successfully completing a combo with Aeolian Edge or Armor Crush.",
+     "descriptionHtml": "Increases Ninki Gauge by 10 upon successfully completing a combo with Aeolian Edge or Armor Crush."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Shukiho III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/554f6b82d072acfae267f4f7e46b113303a2f318.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases Ninki Gauge by 15 upon successfully completing a combo with Aeolian Edge or Armor Crush.",
+     "descriptionHtml": "Increases Ninki Gauge by 15 upon successfully completing a combo with Aeolian Edge or Armor Crush."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Melee Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases the potency of Spinning Edge to 220, Gust Slash to 160, and Throwing Dagger to 200.",
+     "descriptionHtml": "Increases the potency of Spinning Edge to 220, Gust Slash to 160, and Throwing Dagger to 200."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Meisui",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d937810c86fa7fd6eebe009864850eafee3e1c12.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Increases the potency of Bhavacakra to 500 while under the effect of Meisui.\nDuration: 30s",
+     "descriptionHtml": "Increases the potency of Bhavacakra to 500 while under the effect of Meisui.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Raiton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/70738b6b6497ca53a7dea280a6650c7025af88b9.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "description": "Grants a stack of Raiju Ready upon executing Raiton.\nMaximum Stacks: 3\nDuration: 30s\nEffect of Raiju Ready ends upon execution of any melee weaponskill.",
+     "descriptionHtml": "Grants a stack of Raiju Ready upon executing Raiton.<br/>Maximum Stacks: 3<br/>Duration: 30s<br/>Effect of Raiju Ready ends upon execution of any melee weaponskill."
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Trick Attack Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4ab2eab74e5f92060d2d1866451d9ebfe86204a7.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Upgrades Trick Attack to Kunai's Bane.",
+     "descriptionHtml": "Upgrades Trick Attack to Kunai's Bane."
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "Melee Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76ee293b5a8fae7dd16716bc05d79216ef2689a9.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Spinning Edge to 300, Gust Slash to 240, Aeolian Edge to 220, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 240, Bhavacakra to 400, Bhavacakra while under the effect of Meisui to 550, Forked Raiju to 700, and Fleeting Raiju to 700.",
+     "descriptionHtml": "Increases the potency of Spinning Edge to 300, Gust Slash to 240, Aeolian Edge to 220, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 240, Bhavacakra to 400, Bhavacakra while under the effect of Meisui to 550, Forked Raiju to 700, and Fleeting Raiju to 700."
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "Enhanced Dokumori",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f5e5d42f5d1ac030ce64650db8a0496edca66cd9.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Grants Higi upon executing Dokumori.\nDuration: 30s",
+     "descriptionHtml": "Grants Higi upon executing Dokumori.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "Enhanced Ten Chi Jin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c06ede286225c8c52a672be5d631803f4fc4821.png",
+     "acquired": [
+      {
+       "class": "Ninja",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Tenri Jindo Ready upon executing Ten Chi Jin.\nDuration: 30s\nTen Chi Jin changes to Tenri Jindo while under the effect of Tenri Jindo Ready.",
+     "descriptionHtml": "Grants Tenri Jindo Ready upon executing Ten Chi Jin.<br/>Duration: 30s<br/>Ten Chi Jin changes to Tenri Jindo while under the effect of Tenri Jindo Ready."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "Enhanced Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the healing potency of Second Wind to 800.",
+     "descriptionHtml": "Increases the healing potency of Second Wind to 800."
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "Enhanced Feint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Extends the duration of Feint to 15 seconds.",
+     "descriptionHtml": "Extends the duration of Feint to 15 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Spinning Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2c7a551985023f8a7d2e338a014ab29454318b81.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 5,000.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Gust Slash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/443f61d91e3c8a64e725b7366c33c267f606c8b1.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nCombo Action: Spinning Edge\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Combo Action: Spinning Edge<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Aeolian Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/baa12f591901930702230bc6e3e5119c194de1db.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nCombo Action: Gust Slash\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Combo Action: Gust Slash<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Fuma Shuriken",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a4295da0185e15eaf0481b14d04e59133c8fc699.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 8,000.\nMaximum Charges: 3\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Hyosho Ranryu while under the effect of Three Mudra.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 8,000.<br/>Maximum Charges: 3<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Hyosho Ranryu while under the effect of Three Mudra."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Dokumori",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889736b87dc2b4851a9d0e38f9c1f00f40414e73.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 2,000 to all enemies in a cone before you.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 6s\nAdditional Effect: Grants Zesho Meppo Ready\nDuration: 10s\n\n※Action changes to Goka Mekkyaku while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Zesho Meppo while under the effect of Zesho Meppo Ready.",
+     "descriptionHtml": "Delivers an attack with a potency of 2,000 to all enemies in a cone before you.<br/>Additional Effect: Increases target's damage taken by 10%<br/>Duration: 6s<br/>Additional Effect: Grants Zesho Meppo Ready<br/>Duration: 10s<br/><br/>※Action changes to Goka Mekkyaku while under the effect of Three Mudra.<br/>※Aeolian Edge Combo changes to Zesho Meppo while under the effect of Zesho Meppo Ready."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Three Mudra",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/df52e05ddb6ca5801114faf60e5ba05442c5cb6f.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Three Mudra, allowing for immediate execution of any ninjutsu action. However, the same ninjutsu action cannot be executed consecutively.\nDuration: 10s\nMaximum Charges: 2\n\n※Action changes to Meisui while under the effect of Three Mudra.\n※All actions except Seiton Tenchu will change to their respective ninjutsu actions while under the effect of Three Mudra.",
+     "descriptionHtml": "Grants Three Mudra, allowing for immediate execution of any ninjutsu action. However, the same ninjutsu action cannot be executed consecutively.<br/>Duration: 10s<br/>Maximum Charges: 2<br/><br/>※Action changes to Meisui while under the effect of Three Mudra.<br/>※All actions except Seiton Tenchu will change to their respective ninjutsu actions while under the effect of Three Mudra."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Bunshin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dd5359193e18dec8796cb164c2a31cd7de730e31.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill.\nBunshin Potency: 5,000\nPotency is halved when executing Fuma Shuriken or Zesho Meppo.\nDuration: 20s\nAdditional Effect: Grants Shade Shift, creating a shadow that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 10s\n\n※Action changes to Huton while under the effect of Three Mudra.",
+     "descriptionHtml": "Grants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill.<br/>Bunshin Potency: 5,000<br/>Potency is halved when executing Fuma Shuriken or Zesho Meppo.<br/>Duration: 20s<br/>Additional Effect: Grants Shade Shift, creating a shadow that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 10s<br/><br/>※Action changes to Huton while under the effect of Three Mudra."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Shukuchi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cf1bb42ed0500b95e768ec8fff4aa0f7b3d1c20a.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Move quickly to the specified location.\nAdditional Effect: Grants Hidden\nHidden Effect: Blend in with your surroundings, making it impossible for enemies to see or target you\nDuration: 4s\nEffect ends upon use of any action or upon taking damage from an enemy.\nCannot be executed while bound.\n\n※Action changes to Doton while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Assassinate while under the effect of Hidden.",
+     "descriptionHtml": "Move quickly to the specified location.<br/>Additional Effect: Grants Hidden<br/>Hidden Effect: Blend in with your surroundings, making it impossible for enemies to see or target you<br/>Duration: 4s<br/>Effect ends upon use of any action or upon taking damage from an enemy.<br/>Cannot be executed while bound.<br/><br/>※Action changes to Doton while under the effect of Three Mudra.<br/>※Aeolian Edge Combo changes to Assassinate while under the effect of Hidden."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Zesho Meppo",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2d3b22f23ff584579dc27d5526176fe0f99cb2a.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers a fourfold attack, each hit with a potency of 2,500.\nCan only be executed while under the effect of Zesho Meppo Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers a fourfold attack, each hit with a potency of 2,500.<br/>Can only be executed while under the effect of Zesho Meppo Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Assassinate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bd62134b59f61995abdfea2f7fee502c5795f9f9.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.\nCan only be executed while under the effect of Hidden.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000.<br/>Ignores the effects of Guard when dealing damage.<br/>Can only be executed while under the effect of Hidden.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Forked Raiju",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4808fd0960ff552e382c3bc3242c43c4634b3a16.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Fleeting Raiju Ready\nDuration: 5s\nCan only be executed while under the effect of Three Mudra.\nCannot be executed while bound.\n\n※Aeolian Edge Combo changes to Fleeting Raiju while under the effect of Fleeting Raiju Ready.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 6,000.<br/>Additional Effect: Stun<br/>Duration: 2s<br/>Additional Effect: Grants Fleeting Raiju Ready<br/>Duration: 5s<br/>Can only be executed while under the effect of Three Mudra.<br/>Cannot be executed while bound.<br/><br/>※Aeolian Edge Combo changes to Fleeting Raiju while under the effect of Fleeting Raiju Ready.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Fleeting Raiju",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/834c61d21d0517e99776d435f3125c0d856bff96.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Fleeting Raiju Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 6,000.<br/>Additional Effect: Stun<br/>Duration: 2s<br/>Can only be executed while under the effect of Fleeting Raiju Ready.<br/>Cannot be executed while bound.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Hyosho Ranryu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7b5b3ecb51c13a72c65bbb7dd48b6d702d546da9.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 18,000.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 18,000.<br/>Can only be executed while under the effect of Three Mudra.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "Goka Mekkyaku",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8ecdf7edc6dd4e686813cdd58a5edcdf49e0404d.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 5,000 to target and all enemies nearby it.\nAdditional Effect: Damage over time\nPotency: 5,000\nDuration: 12s\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 5,000 to target and all enemies nearby it.<br/>Additional Effect: Damage over time<br/>Potency: 5,000<br/>Duration: 12s<br/>Can only be executed while under the effect of Three Mudra.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "Meisui",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/359bc1829d69bdbe859863cd2a782fbacc61de16.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores own or target party member's HP.\nCure Potency: 8,000\nAdditional Effect: Grants healing over time effect to target\nCure Potency: 5,000\nDuration: 12s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores own or target party member's HP.<br/>Cure Potency: 8,000<br/>Additional Effect: Grants healing over time effect to target<br/>Cure Potency: 5,000<br/>Duration: 12s<br/>Additional Effect: Nullifies one status affliction that can be removed by Purify<br/>Can only be executed while under the effect of Three Mudra.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "Huton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/839919eb2756e950cdae46be906b564ce77bd4b6.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Huton, creating a barrier that absorbs damage equivalent to a heal of 16,000 potency.\nWhile barrier is active, reduces weaponskill recast time by 20%, and increases movement speed by 50%.\nDuration: 10s\nMovement speed returns to normal when barrier is completely absorbed.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Grants Huton, creating a barrier that absorbs damage equivalent to a heal of 16,000 potency.<br/>While barrier is active, reduces weaponskill recast time by 20%, and increases movement speed by 50%.<br/>Duration: 10s<br/>Movement speed returns to normal when barrier is completely absorbed.<br/>Can only be executed while under the effect of Three Mudra.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "Doton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c6735eac69b6180ad6b23c92fc467a81701cf4a.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Creates a patch of corrupted earth under your feet, dealing damage with a potency of 3,000 to any enemies who enter.\nDuration: 10s\nAdditional Effect: Reduces damage taken by 15% while standing in the patch of salted earth\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Creates a patch of corrupted earth under your feet, dealing damage with a potency of 3,000 to any enemies who enter.<br/>Duration: 10s<br/>Additional Effect: Reduces damage taken by 15% while standing in the patch of salted earth<br/>Can only be executed while under the effect of Three Mudra.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__18",
+     "name": "Hollow Nozuchi",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d2a67da760022e80b85ba1ccbeeecdf8bddda757.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "100y",
+     "radius": "5y",
+     "description": "All enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 3,000.\nRequires the execution of a weaponskill, Hyosho Ranryu, or Goka Mekkyaku.\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "All enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 3,000.<br/>Requires the execution of a weaponskill, Hyosho Ranryu, or Goka Mekkyaku.<br/>Additional Effect: Heavy +75%<br/>Duration: 3s<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Seiton Tenchu",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3cc3f2b23553fa8ce5a4a46fe159c12a2f82aaa.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 12,000, incapacitating foes whose HP is below 50%.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Afflicts target with Death Link\nDuration: 2s\nDefeating an enemy with this action, or one under the effect of Death Link, will grant Unsealed Seiton Tenchu, allowing a second execution of this action.\nDuration: 8s\nEffect duration is reduced by 1s each time it is applied to a target with a minimum duration of 4s.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed when the limit gauge is full or while under the effect of Unsealed Seiton Tenchu.\nGauge Charge Time: 90s\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 12,000, incapacitating foes whose HP is below 50%.<br/>Ignores the effects of Guard when dealing damage.<br/>Additional Effect: Afflicts target with Death Link<br/>Duration: 2s<br/>Defeating an enemy with this action, or one under the effect of Death Link, will grant Unsealed Seiton Tenchu, allowing a second execution of this action.<br/>Duration: 8s<br/>Effect duration is reduced by 1s each time it is applied to a target with a minimum duration of 4s.<br/>Effect cannot be applied to players riding machina or non-player combatants.<br/>Can only be executed when the limit gauge is full or while under the effect of Unsealed Seiton Tenchu.<br/>Gauge Charge Time: 90s<br/>Cannot be executed while bound."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Bloodbath",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s",
+     "descriptionHtml": "Increases damage dealt by 25%, and converts 100% of damage dealt into HP.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Swift",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.",
+     "descriptionHtml": "Increases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Effect ends when riding a mount."
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Smite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Potency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.<br/>Ignores the effects of Guard when dealing damage.<br/>Recast time resets upon earning a kill or an assist."
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__ninja_01",
+    "steps": [
+     {
+      "name": "Spinning Edge",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png"
+     },
+     {
+      "name": "Gust Slash",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png"
+     },
+     {
+      "name": "Aeolian Edge",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png"
+     }
+    ],
+    "effect": "Deals high damage and increases the Ninki Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__ninja_02",
+    "steps": [
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "Armor Crush",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png"
+     }
+    ],
+    "effect": "Increases the Ninki Gauge and grants stacks of Kazematoi."
+   },
+   {
+    "class": "job__combo__root job__combo__ninja_04",
+    "steps": [
+     {
+      "name": "Death Blossom",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png"
+     },
+     {
+      "name": "Hakke Mujinsatsu",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "Hits multiple enemies while increasing the Ninki Gauge."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSpinning Edge\n\nGust Slash\n\nAeolian Edge\n\nDeals high damage and increases the Ninki Gauge.\n\nArmor Crush\n\nIncreases the Ninki Gauge and grants stacks of Kazematoi.\n\nDeath Blossom\n\nHakke Mujinsatsu\n\nHits multiple enemies while increasing the Ninki Gauge."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Kazematoi Gauge",
+    "images": []
+   },
+   {
+    "title": "Ninki Gauge",
+    "images": []
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nKazematoi Gauge\n\nUsing the action Armor Crush as part of a combo grants stacks of Kazematoi, represented by this gauge. Up to five stacks can be stored, and are used to increase the potency of Aeolian Edge.\n\nNinki Gauge\n\nUpon learning the trait Shukiho, the Ninki Gauge will be displayed, indicating the amount of Ninki you have accumulated.\n\nNinki is accumulated upon executing weaponskills and can be used to execute special ninjutsu such as Hellfrog Medium (acquired at level 62) or Bhavacakra (acquired at level 68).\n\nSimple Mode\n\nKazematoi Gauge\n\nNinki Gauge\n\nNormal\n\nNinki Gauge Actions Available",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Kazematoi Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/X/4N08Eemw-qqy87gkDKHtHfULpg.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Using the action <span class=\"txt_red\">Armor Crush</span> as part of a combo grants stacks of <span class=\"txt_red\">Kazematoi</span>, represented by this gauge. Up to five stacks can be stored, and are used to increase the potency of <span class=\"txt_red\">Aeolian Edge</span>.</p>\n</div>\n<h3 class=\"job__hud__title\">Ninki Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/Q5_ZGRTO-GiH1dsmD5mybDBUcQ.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait Shukiho, the <span class=\"txt_red\">Ninki Gauge</span> will be displayed, indicating the amount of Ninki you have accumulated.<br/><br/>Ninki is accumulated upon executing weaponskills and can be used to execute special ninjutsu such as <span class=\"txt_red\">Hellfrog Medium</span> (acquired at level 62) or <span class=\"txt_red\">Bhavacakra</span> (acquired at level 68).</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">Kazematoi Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png\" width=\"290\"/>\n</td>\n<td></td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">Ninki Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Normal</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Ninki Gauge Actions Available</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/4N08Eemw-qqy87gkDKHtHfULpg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/Q5_ZGRTO-GiH1dsmD5mybDBUcQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSpinning Edge\n\nLv. 1\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\nAdditional Effect: Increases Ninki Gauge by 5\n\nShade Shift\n\nLv. 2\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nCreate shadows that nullify damage up to 20% of maximum HP.\nDuration: 20s\n\nGust Slash\n\nLv. 4\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Spinning Edge\nCombo Potency: 400\nCombo Bonus: Increases Ninki Gauge by 5\n\nHide\n\nLv. 10\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nBlend in with your surroundings, making it impossible for most enemies to detect you, but reducing movement speed by 50%. Has no effect on enemies 10 levels higher than your own, or certain enemies with special sight.\nAdditional Effect: Restores 2 charges to all mudra\nThe effect of Doton ends upon execution of Hide.\nCannot be executed while in combat.\nEffect ends upon use of any action other than Sprint, or upon reuse of Hide.\n\nThrowing Dagger\n\nClass Quest\n\nLv. 15\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 200.\nAdditional Effect: Increases Ninki Gauge by 5\n\nMug\n\nClass Quest\n\nLv. 15\n\nAbility\nInstant\n120s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 150.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Mug is dealt before, or as, the finishing blow\n\nTrick Attack\n\nLv. 18\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n400 when executed from a target's rear.\nAdditional Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while under the effect of Hidden.\n\nAeolian Edge\n\nLv. 26\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 220.\n280 when executed from a target's rear.\nCombo Action: Gust Slash\nCombo Potency: 400\nRear Combo Potency: 460\nPotencies are increased by 100 while under the effect of Kazematoi.\nCombo Bonus: Increases Ninki Gauge by 15\n\nTen\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"heaven.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nNinjutsu\n\nLv. 30\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nExecutes a specific ninjutsu action coinciding with the combination of mudra made immediately beforehand.\nIf any other action is used before the mudra are combined and the ninjutsu executed, Ninjutsu will fail.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\nRestores 2 charges to all mudra when Hide is executed while outside of combat.\n\nChi\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"earth.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nDeath Blossom\n\nLv. 38\n\nWeaponskill\nInstant\n2.12s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increases Ninki Gauge by 5\n\nAssassinate\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 200.\n\nShukuchi\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n20y\n\n0y\n\nMove quickly to the specified location.\nMaximum Charges: 2\nCannot be executed while bound.\n\nJin\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"man.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nKassatsu\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nAllows the execution of a single ninjutsu without consumption of mudra charges.\nAdditional Effect: Increases damage for the next ninjutsu action by 30%\nDuration: 15s\nRecast timer of mudra is not affected by the execution of this action.\n\nHakke Mujinsatsu\n\nJob Quest\n\nLv. 52\n\nWeaponskill\nInstant\n2.12s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nCombo Action: Death Blossom\nCombo Potency: 120\nCombo Bonus: Increases Ninki Gauge by 5\n\nArmor Crush\n\nJob Quest\n\nLv. 54\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\n300 when executed from a target's flank.\nCombo Action: Gust Slash\nCombo Potency: 440\nFlank Combo Potency: 500\nCombo Bonus: Grants 2 stacks of Kazematoi\nKazematoi Effect: Increases potency of Aeolian Edge by 100\nMaximum Stacks: 5\nCombo Bonus: Increases Ninki Gauge by 15\n\nDream Within a Dream\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers a threefold attack, each hit with a potency of 180.\n\nHellfrog Medium\n\nLv. 62\n\nAbility\nInstant\n1s\n-\n\n25y\n\n6y\n\nDeals fire damage with a potency of 250 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nShares a recast timer with Bhavacakra.\n\nDokumori\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n8y\n\n8y\n\nDelivers an attack to all enemies in a cone before you with a potency of 400.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Dokumori is dealt before, or as, the finishing blow\nAdditional Effect: Increases Ninki Gauge by 40\nAdditional Effect: Grants Higi\nDuration: 30s\n\nBhavacakra\n\nLv. 68\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 400.\nMeisui Bonus: Potency is increased to 550 when under the effect of Meisui\nNinki Gauge Cost: 50\nShares a recast timer with Hellfrog Medium.\n\nTen Chi Jin\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nTemporarily converts each of the three mudra into a ninjutsu action. Executing one of these actions will convert the remaining mudra into different ninjutsu actions until all three have been executed or the Ten Chi Jin effect expires.\nDuration: 6s\nAdditional Effect: Grants Tenri Jindo Ready\nDuration: 30s\nOnly ninjutsu available while active. The same ninjutsu cannot be executed twice.\nCannot be executed while under the effect of Kassatsu.\n\nMeisui\n\nLv. 72\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nDispels Shadow Walker, increasing the Ninki Gauge by 50.\nAdditional Effect: Grants Meisui\nDuration: 30s\nMeisui Effect: Increases the potency of Zesho Meppo to 850 and Bhavacakra to 550\nCan only be executed while in combat and under the effect of Shadow Walker.\n\nBunshin\n\nLv. 80\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill. Shadow attack potency varies based on the attack executed, but is not affected by combo bonuses.\nMelee Attack Potency: 160\nRanged Attack Potency: 160\nArea Attack Potency: 80\nNinki Gauge increases by 5 each time your shadow lands an attack.\nDuration: 30s\nAdditional Effect: Grants Phantom Kamaitachi Ready\nDuration: 45s\nNinki Gauge Cost: 50\n\nPhantom Kamaitachi\n\nLv. 82\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nYour shadow deals wind damage to target and all enemies within 5 yalms with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 10\nCan only be executed while under the effect of Phantom Kamaitachi Ready.\n\nHollow Nozuchi\n\nLv. 86\n\nAbility\nInstant\n-\n-\n\n100y\n\n5y\n\nAll enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 70.\nRequires Hakke Mujinsatsu to be executed as a combo action or upon executing Katon, Goka Mekkyaku, or Phantom Kamaitachi.\nEffect can only be triggered while Doton is active.\n\n※This action cannot be assigned to a hotbar.\n\nForked Raiju\n\nLv. 90\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nRushes target and delivers a lightning attack with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.\nCannot be executed while bound.\n\nFleeting Raiju\n\nLv. 90\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDeals lightning damage with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.\n\nKunai's Bane\n\nLv. 92\n\nAbility\nInstant\n60s\n-\n\n3y\n\n5y\n\nDeals damage to target and all enemies nearby it with a potency of 700.\nAdditional Effect: Afflicts target with Kunai's Bane\nKunai's Bane Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while Hidden.\n\nDeathfrog Medium\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n25y\n\n6y\n\nDeals fire damage with a potency of 400 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Bhavacakra.\n\n※This action cannot be assigned to a hotbar.\n※Hellfrog Medium changes to Deathfrog Medium when requirements for execution are met.\n\nZesho Meppo\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 700.\nMeisui Bonus: Potency is increased to 850\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Hellfrog Medium.\n\n※This action cannot be assigned to a hotbar.\n※Bhavacakra changes to Zesho Meppo when requirements for execution are met.\n\nTenri Jindo\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n20y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,100.\nCan only be executed while under the effect of Tenri Jindo Ready.\n\n※This action cannot be assigned to a hotbar.\n※Ten Chi Jin changes to Tenri Jindo when requirements for execution are met."
+  },
+  {
+   "heading": "Ninjutsu",
+   "anchor": "anchor__ninja_onlyaction",
+   "text": "Ninjutsu\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFuma Shuriken\n\nLv. 30\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers a ranged ninjutsu attack with a potency of 500.\nMudra Combination: Any one of the Ten, Chi, or Jin mudra\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Fuma Shuriken when requirements for execution are met.\n\nKaton\n\nLv. 35\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals fire damage with a potency of 350 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Katon when requirements for execution are met.\n\nRaiton\n\nLv. 35\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n0y\n\nDeals lightning damage with a potency of 740.\nAdditional Effect: Grants a stack of Raiju Ready\nDuration: 30s\nMaximum Stacks: 3\nEffect of Raiju Ready ends upon execution of any melee weaponskill.\nMudra Combination: Ten→Chi or Jin→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Raiton when requirements for execution are met.\n\nHyoton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDeals ice damage with a potency of 350.\nAdditional Effect: Bind\nDuration: 15s\nMudra Combination: Ten→Jin or Chi→Jin\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyoton when requirements for execution are met.\n\nHuton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals wind damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Jin→Chi→Ten or Chi→Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Huton when requirements for execution are met.\n\nDoton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n5y\n\nCreates a patch of corrupted earth, dealing damage with a potency of 80 to any enemies who enter.\nDuration: 18s\nAdditional Effect: Heavy +40%\nMudra Combination: Ten→Jin→Chi or Jin→Ten→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Doton when requirements for execution are met.\n\nSuiton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n0y\n\nDeals water damage with a potency of 580.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Ten→Chi→Jin or Chi→Ten→Jin\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Suiton when requirements for execution are met.\n\nGoka Mekkyaku\n\nLv. 76\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals fire damage with a potency of 850 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Goka Mekkyaku when requirements for execution are met.\n\nHyosho Ranryu\n\nLv. 76\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDeals ice damage with a potency of 1,300.\nMudra Combination: Ten→Jin or Chi→Jin\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyosho Ranryu when requirements for execution are met."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nLeg Sweep\n\nLv. 10\n\nAbility\nInstant\n40s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 3s\n\nBloodbath\n\nLv. 12\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nConverts a portion of physical damage dealt into HP.\nDuration: 20s\n\nFeint\n\nLv. 22\n\nAbility\nInstant\n90s\n-\n\n10y\n\n0y\n\nLowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrue North\n\nLv. 50\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nNullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2"
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nAll Fours\n\nLv. 14\n\nReduces damage taken when falling.\n\nFleet of Foot\n\nLv. 20\n\nIncreases movement speed.\n\nIncrease Attack Speed\n\nLv. 45\n\nReduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%.\n\nAdept Assassination\n\nJob Quest\n\nLv. 56\n\nUpgrades Assassinate to Dream Within a Dream.\n\nShukiho\n\nLv. 62\n\nIncreases Ninki Gauge by 5 upon successfully landing certain weaponskills or completing certain combos.\n\nEnhanced Shukuchi\n\nLv. 64\n\nResets the recast timer for Shukuchi upon executing Katon, Raiton, or Hyoton on most targets.\n\nMug Mastery\n\nLv. 66\n\nUpgrades Mug to Dokumori.\n\nEnhanced Shukuchi II\n\nLv. 74\n\nAllows the accumulation of charges for consecutive uses of Shukuchi.\nMaximum Charges: 2\n\nMelee Mastery\n\nLv. 74\n\nIncreases the potency of Gust Slash to 120, Aeolian Edge to 140, and Armor Crush to 140.\n\nEnhanced Kassatsu\n\nLv. 76\n\nUpgrades Katon and Hyoton to Goka Mekkyaku and Hyosho Ranryu while under the effect of Kassatsu.\n\nShukiho II\n\nLv. 78\n\nIncreases Ninki Gauge by 10 upon successfully completing a combo with Aeolian Edge or Armor Crush.\n\nShukiho III\n\nLv. 84\n\nIncreases Ninki Gauge by 15 upon successfully completing a combo with Aeolian Edge or Armor Crush.\n\nMelee Mastery II\n\nLv. 84\n\nIncreases the potency of Spinning Edge to 220, Gust Slash to 160, and Throwing Dagger to 200.\n\nEnhanced Meisui\n\nLv. 88\n\nIncreases the potency of Bhavacakra to 500 while under the effect of Meisui.\nDuration: 30s\n\nEnhanced Raiton\n\nLv. 90\n\nGrants a stack of Raiju Ready upon executing Raiton.\nMaximum Stacks: 3\nDuration: 30s\nEffect of Raiju Ready ends upon execution of any melee weaponskill.\n\nTrick Attack Mastery\n\nLv. 92\n\nUpgrades Trick Attack to Kunai's Bane.\n\nMelee Mastery III\n\nLv. 94\n\nIncreases the potency of Spinning Edge to 300, Gust Slash to 240, Aeolian Edge to 220, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 240, Bhavacakra to 400, Bhavacakra while under the effect of Meisui to 550, Forked Raiju to 700, and Fleeting Raiju to 700.\n\nEnhanced Dokumori\n\nLv. 96\n\nGrants Higi upon executing Dokumori.\nDuration: 30s\n\nEnhanced Ten Chi Jin\n\nLv. 100\n\nGrants Tenri Jindo Ready upon executing Ten Chi Jin.\nDuration: 30s\nTen Chi Jin changes to Tenri Jindo while under the effect of Tenri Jindo Ready."
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nEnhanced Feint\n\nLv. 98\n\nExtends the duration of Feint to 15 seconds."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSpinning Edge\n\nGust Slash\n\nAeolian Edge\n\nDeals high damage and increases the Ninki Gauge.\n\nArmor Crush\n\nIncreases the Ninki Gauge and grants stacks of Kazematoi.\n\nDeath Blossom\n\nHakke Mujinsatsu\n\nHits multiple enemies while increasing the Ninki Gauge."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nKazematoi Gauge\n\nUsing the action Armor Crush as part of a combo grants stacks of Kazematoi, represented by this gauge. Up to five stacks can be stored, and are used to increase the potency of Aeolian Edge.\n\nNinki Gauge\n\nUpon learning the trait Shukiho, the Ninki Gauge will be displayed, indicating the amount of Ninki you have accumulated.\n\nNinki is accumulated upon executing weaponskills and can be used to execute special ninjutsu such as Hellfrog Medium (acquired at level 62) or Bhavacakra (acquired at level 68).\n\nSimple Mode\n\nKazematoi Gauge\n\nNinki Gauge\n\nNormal\n\nNinki Gauge Actions Available"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSpinning Edge\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nGust Slash\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Spinning Edge\n\n※This action cannot be assigned to a hotbar.\n\nAeolian Edge\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Gust Slash\n\n※This action cannot be assigned to a hotbar.\n\nFuma Shuriken\n\nWeaponskill\nInstant\n10s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nMaximum Charges: 3\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Hyosho Ranryu while under the effect of Three Mudra.\n\nDokumori\n\nAbility\nInstant\n24s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 2,000 to all enemies in a cone before you.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 6s\nAdditional Effect: Grants Zesho Meppo Ready\nDuration: 10s\n\n※Action changes to Goka Mekkyaku while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Zesho Meppo while under the effect of Zesho Meppo Ready.\n\nThree Mudra\n\nAbility\nInstant\n15s\n-\n\n0y\n\n0y\n\nGrants Three Mudra, allowing for immediate execution of any ninjutsu action. However, the same ninjutsu action cannot be executed consecutively.\nDuration: 10s\nMaximum Charges: 2\n\n※Action changes to Meisui while under the effect of Three Mudra.\n※All actions except Seiton Tenchu will change to their respective ninjutsu actions while under the effect of Three Mudra.\n\nBunshin\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill.\nBunshin Potency: 5,000\nPotency is halved when executing Fuma Shuriken or Zesho Meppo.\nDuration: 20s\nAdditional Effect: Grants Shade Shift, creating a shadow that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 10s\n\n※Action changes to Huton while under the effect of Three Mudra.\n\nShukuchi\n\nAbility\nInstant\n20s\n-\n\n20y\n\n0y\n\nMove quickly to the specified location.\nAdditional Effect: Grants Hidden\nHidden Effect: Blend in with your surroundings, making it impossible for enemies to see or target you\nDuration: 4s\nEffect ends upon use of any action or upon taking damage from an enemy.\nCannot be executed while bound.\n\n※Action changes to Doton while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Assassinate while under the effect of Hidden.\n\nZesho Meppo\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers a fourfold attack, each hit with a potency of 2,500.\nCan only be executed while under the effect of Zesho Meppo Ready.\n\n※This action cannot be assigned to a hotbar.\n\nAssassinate\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.\nCan only be executed while under the effect of Hidden.\n\n※This action cannot be assigned to a hotbar.\n\nForked Raiju\n\nWeaponskill\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Fleeting Raiju Ready\nDuration: 5s\nCan only be executed while under the effect of Three Mudra.\nCannot be executed while bound.\n\n※Aeolian Edge Combo changes to Fleeting Raiju while under the effect of Fleeting Raiju Ready.\n※This action cannot be assigned to a hotbar.\n\nFleeting Raiju\n\nWeaponskill\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Fleeting Raiju Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nHyosho Ranryu\n\nSpell\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nDeals unaspected damage with a potency of 18,000.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nGoka Mekkyaku\n\nSpell\nInstant\n\n2s\n-\n\n20y\n\n8y\n\nDeals unaspected damage with a potency of 5,000 to target and all enemies nearby it.\nAdditional Effect: Damage over time\nPotency: 5,000\nDuration: 12s\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nMeisui\n\nSpell\nInstant\n\n2s\n-\n\n30y\n\n0y\n\nRestores own or target party member's HP.\nCure Potency: 8,000\nAdditional Effect: Grants healing over time effect to target\nCure Potency: 5,000\nDuration: 12s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nHuton\n\nSpell\nInstant\n\n2s\n-\n\n0y\n\n0y\n\nGrants Huton, creating a barrier that absorbs damage equivalent to a heal of 16,000 potency.\nWhile barrier is active, reduces weaponskill recast time by 20%, and increases movement speed by 50%.\nDuration: 10s\nMovement speed returns to normal when barrier is completely absorbed.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nDoton\n\nSpell\nInstant\n\n2s\n-\n\n0y\n\n5y\n\nCreates a patch of corrupted earth under your feet, dealing damage with a potency of 3,000 to any enemies who enter.\nDuration: 10s\nAdditional Effect: Reduces damage taken by 15% while standing in the patch of salted earth\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nHollow Nozuchi\n\nAbility\nInstant\n-\n-\n\n100y\n\n5y\n\nAll enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 3,000.\nRequires the execution of a weaponskill, Hyosho Ranryu, or Goka Mekkyaku.\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSeiton Tenchu\n\nInstant\n10s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 12,000, incapacitating foes whose HP is below 50%.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Afflicts target with Death Link\nDuration: 2s\nDefeating an enemy with this action, or one under the effect of Death Link, will grant Unsealed Seiton Tenchu, allowing a second execution of this action.\nDuration: 8s\nEffect duration is reduced by 1s each time it is applied to a target with a minimum duration of 4s.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed when the limit gauge is full or while under the effect of Unsealed Seiton Tenchu.\nGauge Charge Time: 90s\nCannot be executed while bound."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBloodbath\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s\n\nSwift\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.\n\nSmite\n\nAbility\nInstant\n15s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nNinjutsu\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMelee DPS\n\nHailing from the war-torn lands of the Far East, the secret arts of the ninja were born of necessity, and have since given rise to a unique breed of highly-trained combatants.\n\nAble to manipulate the vital energies of the land, the air, and living beings, they manifest their power through the weaving of signs, unleashing a wide array of attacks against their foes. Master the arts of the ninja and learn to bend the tide of battle to your will.\n\nStarting Job Quest\n\nPrerequisite Class: Rogue\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSpinning Edge\n\nLv. 1\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\nAdditional Effect: Increases Ninki Gauge by 5\n\nShade Shift\n\nLv. 2\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nCreate shadows that nullify damage up to 20% of maximum HP.\nDuration: 20s\n\nGust Slash\n\nLv. 4\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Spinning Edge\nCombo Potency: 400\nCombo Bonus: Increases Ninki Gauge by 5\n\nHide\n\nLv. 10\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nBlend in with your surroundings, making it impossible for most enemies to detect you, but reducing movement speed by 50%. Has no effect on enemies 10 levels higher than your own, or certain enemies with special sight.\nAdditional Effect: Restores 2 charges to all mudra\nThe effect of Doton ends upon execution of Hide.\nCannot be executed while in combat.\nEffect ends upon use of any action other than Sprint, or upon reuse of Hide.\n\nThrowing Dagger\n\nClass Quest\n\nLv. 15\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 200.\nAdditional Effect: Increases Ninki Gauge by 5\n\nMug\n\nClass Quest\n\nLv. 15\n\nAbility\nInstant\n120s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 150.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Mug is dealt before, or as, the finishing blow\n\nTrick Attack\n\nLv. 18\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n400 when executed from a target's rear.\nAdditional Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while under the effect of Hidden.\n\nAeolian Edge\n\nLv. 26\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 220.\n280 when executed from a target's rear.\nCombo Action: Gust Slash\nCombo Potency: 400\nRear Combo Potency: 460\nPotencies are increased by 100 while under the effect of Kazematoi.\nCombo Bonus: Increases Ninki Gauge by 15\n\nTen\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"heaven.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nNinjutsu\n\nLv. 30\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nExecutes a specific ninjutsu action coinciding with the combination of mudra made immediately beforehand.\nIf any other action is used before the mudra are combined and the ninjutsu executed, Ninjutsu will fail.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\nRestores 2 charges to all mudra when Hide is executed while outside of combat.\n\nChi\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"earth.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nDeath Blossom\n\nLv. 38\n\nWeaponskill\nInstant\n2.12s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increases Ninki Gauge by 5\n\nAssassinate\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 200.\n\nShukuchi\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n20y\n\n0y\n\nMove quickly to the specified location.\nMaximum Charges: 2\nCannot be executed while bound.\n\nJin\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nMake the ritual mudra hand gesture for \"man.\"\nDuration: 6s\nMaximum Charges: 2\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\nConversely, execution of weaponskills triggers the cooldown of this action.\n\nKassatsu\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nAllows the execution of a single ninjutsu without consumption of mudra charges.\nAdditional Effect: Increases damage for the next ninjutsu action by 30%\nDuration: 15s\nRecast timer of mudra is not affected by the execution of this action.\n\nHakke Mujinsatsu\n\nJob Quest\n\nLv. 52\n\nWeaponskill\nInstant\n2.12s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nCombo Action: Death Blossom\nCombo Potency: 120\nCombo Bonus: Increases Ninki Gauge by 5\n\nArmor Crush\n\nJob Quest\n\nLv. 54\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\n300 when executed from a target's flank.\nCombo Action: Gust Slash\nCombo Potency: 440\nFlank Combo Potency: 500\nCombo Bonus: Grants 2 stacks of Kazematoi\nKazematoi Effect: Increases potency of Aeolian Edge by 100\nMaximum Stacks: 5\nCombo Bonus: Increases Ninki Gauge by 15\n\nDream Within a Dream\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers a threefold attack, each hit with a potency of 180.\n\nHellfrog Medium\n\nLv. 62\n\nAbility\nInstant\n1s\n-\n\n25y\n\n6y\n\nDeals fire damage with a potency of 250 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nShares a recast timer with Bhavacakra.\n\nDokumori\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n8y\n\n8y\n\nDelivers an attack to all enemies in a cone before you with a potency of 400.\nAdditional Effect: Increases target's damage taken by 5%\nDuration: 20s\nAdditional Effect: Increases the chance of additional items being dropped by target if Dokumori is dealt before, or as, the finishing blow\nAdditional Effect: Increases Ninki Gauge by 40\nAdditional Effect: Grants Higi\nDuration: 30s\n\nBhavacakra\n\nLv. 68\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 400.\nMeisui Bonus: Potency is increased to 550 when under the effect of Meisui\nNinki Gauge Cost: 50\nShares a recast timer with Hellfrog Medium.\n\nTen Chi Jin\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nTemporarily converts each of the three mudra into a ninjutsu action. Executing one of these actions will convert the remaining mudra into different ninjutsu actions until all three have been executed or the Ten Chi Jin effect expires.\nDuration: 6s\nAdditional Effect: Grants Tenri Jindo Ready\nDuration: 30s\nOnly ninjutsu available while active. The same ninjutsu cannot be executed twice.\nCannot be executed while under the effect of Kassatsu.\n\nMeisui\n\nLv. 72\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nDispels Shadow Walker, increasing the Ninki Gauge by 50.\nAdditional Effect: Grants Meisui\nDuration: 30s\nMeisui Effect: Increases the potency of Zesho Meppo to 850 and Bhavacakra to 550\nCan only be executed while in combat and under the effect of Shadow Walker.\n\nBunshin\n\nLv. 80\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill. Shadow attack potency varies based on the attack executed, but is not affected by combo bonuses.\nMelee Attack Potency: 160\nRanged Attack Potency: 160\nArea Attack Potency: 80\nNinki Gauge increases by 5 each time your shadow lands an attack.\nDuration: 30s\nAdditional Effect: Grants Phantom Kamaitachi Ready\nDuration: 45s\nNinki Gauge Cost: 50\n\nPhantom Kamaitachi\n\nLv. 82\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nYour shadow deals wind damage to target and all enemies within 5 yalms with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 10\nCan only be executed while under the effect of Phantom Kamaitachi Ready.\n\nHollow Nozuchi\n\nLv. 86\n\nAbility\nInstant\n-\n-\n\n100y\n\n5y\n\nAll enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 70.\nRequires Hakke Mujinsatsu to be executed as a combo action or upon executing Katon, Goka Mekkyaku, or Phantom Kamaitachi.\nEffect can only be triggered while Doton is active.\n\n※This action cannot be assigned to a hotbar.\n\nForked Raiju\n\nLv. 90\n\nWeaponskill\nInstant\n2.12s\n-\n\n20y\n\n0y\n\nRushes target and delivers a lightning attack with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.\nCannot be executed while bound.\n\nFleeting Raiju\n\nLv. 90\n\nWeaponskill\nInstant\n2.12s\n-\n\n3y\n\n0y\n\nDeals lightning damage with a potency of 700.\nAdditional Effect: Increases Ninki Gauge by 5\nCan only be executed while under the effect of Raiju Ready.\n\nKunai's Bane\n\nLv. 92\n\nAbility\nInstant\n60s\n-\n\n3y\n\n5y\n\nDeals damage to target and all enemies nearby it with a potency of 700.\nAdditional Effect: Afflicts target with Kunai's Bane\nKunai's Bane Effect: Increases damage you deal target by 10%\nDuration: 15s\nCan only be executed while Hidden.\n\nDeathfrog Medium\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n25y\n\n6y\n\nDeals fire damage with a potency of 400 to target and all enemies nearby it.\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Bhavacakra.\n\n※This action cannot be assigned to a hotbar.\n※Hellfrog Medium changes to Deathfrog Medium when requirements for execution are met.\n\nZesho Meppo\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 700.\nMeisui Bonus: Potency is increased to 850\nNinki Gauge Cost: 50\nCan only be executed while under the effect of Higi.\nShares a recast timer with Hellfrog Medium.\n\n※This action cannot be assigned to a hotbar.\n※Bhavacakra changes to Zesho Meppo when requirements for execution are met.\n\nTenri Jindo\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n20y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,100.\nCan only be executed while under the effect of Tenri Jindo Ready.\n\n※This action cannot be assigned to a hotbar.\n※Ten Chi Jin changes to Tenri Jindo when requirements for execution are met.\n\nNinjutsu\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFuma Shuriken\n\nLv. 30\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers a ranged ninjutsu attack with a potency of 500.\nMudra Combination: Any one of the Ten, Chi, or Jin mudra\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Fuma Shuriken when requirements for execution are met.\n\nKaton\n\nLv. 35\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals fire damage with a potency of 350 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Katon when requirements for execution are met.\n\nRaiton\n\nLv. 35\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n0y\n\nDeals lightning damage with a potency of 740.\nAdditional Effect: Grants a stack of Raiju Ready\nDuration: 30s\nMaximum Stacks: 3\nEffect of Raiju Ready ends upon execution of any melee weaponskill.\nMudra Combination: Ten→Chi or Jin→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Raiton when requirements for execution are met.\n\nHyoton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDeals ice damage with a potency of 350.\nAdditional Effect: Bind\nDuration: 15s\nMudra Combination: Ten→Jin or Chi→Jin\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyoton when requirements for execution are met.\n\nHuton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals wind damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Jin→Chi→Ten or Chi→Jin→Ten\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Huton when requirements for execution are met.\n\nDoton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n5y\n\nCreates a patch of corrupted earth, dealing damage with a potency of 80 to any enemies who enter.\nDuration: 18s\nAdditional Effect: Heavy +40%\nMudra Combination: Ten→Jin→Chi or Jin→Ten→Chi\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Doton when requirements for execution are met.\n\nSuiton\n\nLv. 45\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n0y\n\nDeals water damage with a potency of 580.\nAdditional Effect: Grants Shadow Walker\nShadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect\nDuration: 20s\nMudra Combination: Ten→Chi→Jin or Chi→Ten→Jin\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Suiton when requirements for execution are met.\n\nGoka Mekkyaku\n\nLv. 76\n\nAbility\nInstant\n1.5s\n-\n\n20y\n\n5y\n\nDeals fire damage with a potency of 850 to target and all enemies nearby it.\nMudra Combination: Chi→Ten or Jin→Ten\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Goka Mekkyaku when requirements for execution are met.\n\nHyosho Ranryu\n\nLv. 76\n\nAbility\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDeals ice damage with a potency of 1,300.\nMudra Combination: Ten→Jin or Chi→Jin\nCan only be executed while under the effect of Kassatsu.\nTriggers the cooldown of weaponskills, mudra, and Ninjutsu upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Ninjutsu changes to Hyosho Ranryu when requirements for execution are met.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nLeg Sweep\n\nLv. 10\n\nAbility\nInstant\n40s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 3s\n\nBloodbath\n\nLv. 12\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nConverts a portion of physical damage dealt into HP.\nDuration: 20s\n\nFeint\n\nLv. 22\n\nAbility\nInstant\n90s\n-\n\n10y\n\n0y\n\nLowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrue North\n\nLv. 50\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nNullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2\n\nTrait\n\nTraits\nAcquired\nEffect\n\nAll Fours\n\nLv. 14\n\nReduces damage taken when falling.\n\nFleet of Foot\n\nLv. 20\n\nIncreases movement speed.\n\nIncrease Attack Speed\n\nLv. 45\n\nReduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%.\n\nAdept Assassination\n\nJob Quest\n\nLv. 56\n\nUpgrades Assassinate to Dream Within a Dream.\n\nShukiho\n\nLv. 62\n\nIncreases Ninki Gauge by 5 upon successfully landing certain weaponskills or completing certain combos.\n\nEnhanced Shukuchi\n\nLv. 64\n\nResets the recast timer for Shukuchi upon executing Katon, Raiton, or Hyoton on most targets.\n\nMug Mastery\n\nLv. 66\n\nUpgrades Mug to Dokumori.\n\nEnhanced Shukuchi II\n\nLv. 74\n\nAllows the accumulation of charges for consecutive uses of Shukuchi.\nMaximum Charges: 2\n\nMelee Mastery\n\nLv. 74\n\nIncreases the potency of Gust Slash to 120, Aeolian Edge to 140, and Armor Crush to 140.\n\nEnhanced Kassatsu\n\nLv. 76\n\nUpgrades Katon and Hyoton to Goka Mekkyaku and Hyosho Ranryu while under the effect of Kassatsu.\n\nShukiho II\n\nLv. 78\n\nIncreases Ninki Gauge by 10 upon successfully completing a combo with Aeolian Edge or Armor Crush.\n\nShukiho III\n\nLv. 84\n\nIncreases Ninki Gauge by 15 upon successfully completing a combo with Aeolian Edge or Armor Crush.\n\nMelee Mastery II\n\nLv. 84\n\nIncreases the potency of Spinning Edge to 220, Gust Slash to 160, and Throwing Dagger to 200.\n\nEnhanced Meisui\n\nLv. 88\n\nIncreases the potency of Bhavacakra to 500 while under the effect of Meisui.\nDuration: 30s\n\nEnhanced Raiton\n\nLv. 90\n\nGrants a stack of Raiju Ready upon executing Raiton.\nMaximum Stacks: 3\nDuration: 30s\nEffect of Raiju Ready ends upon execution of any melee weaponskill.\n\nTrick Attack Mastery\n\nLv. 92\n\nUpgrades Trick Attack to Kunai's Bane.\n\nMelee Mastery III\n\nLv. 94\n\nIncreases the potency of Spinning Edge to 300, Gust Slash to 240, Aeolian Edge to 220, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 240, Bhavacakra to 400, Bhavacakra while under the effect of Meisui to 550, Forked Raiju to 700, and Fleeting Raiju to 700.\n\nEnhanced Dokumori\n\nLv. 96\n\nGrants Higi upon executing Dokumori.\nDuration: 30s\n\nEnhanced Ten Chi Jin\n\nLv. 100\n\nGrants Tenri Jindo Ready upon executing Ten Chi Jin.\nDuration: 30s\nTen Chi Jin changes to Tenri Jindo while under the effect of Tenri Jindo Ready.\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nEnhanced Feint\n\nLv. 98\n\nExtends the duration of Feint to 15 seconds.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSpinning Edge\n\nGust Slash\n\nAeolian Edge\n\nDeals high damage and increases the Ninki Gauge.\n\nArmor Crush\n\nIncreases the Ninki Gauge and grants stacks of Kazematoi.\n\nDeath Blossom\n\nHakke Mujinsatsu\n\nHits multiple enemies while increasing the Ninki Gauge.\n\nJob Gauge\n\nKazematoi Gauge\n\nUsing the action Armor Crush as part of a combo grants stacks of Kazematoi, represented by this gauge. Up to five stacks can be stored, and are used to increase the potency of Aeolian Edge.\n\nNinki Gauge\n\nUpon learning the trait Shukiho, the Ninki Gauge will be displayed, indicating the amount of Ninki you have accumulated.\n\nNinki is accumulated upon executing weaponskills and can be used to execute special ninjutsu such as Hellfrog Medium (acquired at level 62) or Bhavacakra (acquired at level 68).\n\nSimple Mode\n\nKazematoi Gauge\n\nNinki Gauge\n\nNormal\n\nNinki Gauge Actions Available\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSpinning Edge\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nGust Slash\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Spinning Edge\n\n※This action cannot be assigned to a hotbar.\n\nAeolian Edge\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Gust Slash\n\n※This action cannot be assigned to a hotbar.\n\nFuma Shuriken\n\nWeaponskill\nInstant\n10s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nMaximum Charges: 3\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Hyosho Ranryu while under the effect of Three Mudra.\n\nDokumori\n\nAbility\nInstant\n24s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 2,000 to all enemies in a cone before you.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 6s\nAdditional Effect: Grants Zesho Meppo Ready\nDuration: 10s\n\n※Action changes to Goka Mekkyaku while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Zesho Meppo while under the effect of Zesho Meppo Ready.\n\nThree Mudra\n\nAbility\nInstant\n15s\n-\n\n0y\n\n0y\n\nGrants Three Mudra, allowing for immediate execution of any ninjutsu action. However, the same ninjutsu action cannot be executed consecutively.\nDuration: 10s\nMaximum Charges: 2\n\n※Action changes to Meisui while under the effect of Three Mudra.\n※All actions except Seiton Tenchu will change to their respective ninjutsu actions while under the effect of Three Mudra.\n\nBunshin\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Bunshin, each stack allowing your shadow to attack enemies each time you execute a weaponskill.\nBunshin Potency: 5,000\nPotency is halved when executing Fuma Shuriken or Zesho Meppo.\nDuration: 20s\nAdditional Effect: Grants Shade Shift, creating a shadow that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 10s\n\n※Action changes to Huton while under the effect of Three Mudra.\n\nShukuchi\n\nAbility\nInstant\n20s\n-\n\n20y\n\n0y\n\nMove quickly to the specified location.\nAdditional Effect: Grants Hidden\nHidden Effect: Blend in with your surroundings, making it impossible for enemies to see or target you\nDuration: 4s\nEffect ends upon use of any action or upon taking damage from an enemy.\nCannot be executed while bound.\n\n※Action changes to Doton while under the effect of Three Mudra.\n※Aeolian Edge Combo changes to Assassinate while under the effect of Hidden.\n\nZesho Meppo\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers a fourfold attack, each hit with a potency of 2,500.\nCan only be executed while under the effect of Zesho Meppo Ready.\n\n※This action cannot be assigned to a hotbar.\n\nAssassinate\n\nWeaponskill\nInstant\n\n2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.\nCan only be executed while under the effect of Hidden.\n\n※This action cannot be assigned to a hotbar.\n\nForked Raiju\n\nWeaponskill\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Fleeting Raiju Ready\nDuration: 5s\nCan only be executed while under the effect of Three Mudra.\nCannot be executed while bound.\n\n※Aeolian Edge Combo changes to Fleeting Raiju while under the effect of Fleeting Raiju Ready.\n※This action cannot be assigned to a hotbar.\n\nFleeting Raiju\n\nWeaponskill\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 6,000.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Fleeting Raiju Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nHyosho Ranryu\n\nSpell\nInstant\n\n2s\n-\n\n20y\n\n0y\n\nDeals unaspected damage with a potency of 18,000.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nGoka Mekkyaku\n\nSpell\nInstant\n\n2s\n-\n\n20y\n\n8y\n\nDeals unaspected damage with a potency of 5,000 to target and all enemies nearby it.\nAdditional Effect: Damage over time\nPotency: 5,000\nDuration: 12s\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nMeisui\n\nSpell\nInstant\n\n2s\n-\n\n30y\n\n0y\n\nRestores own or target party member's HP.\nCure Potency: 8,000\nAdditional Effect: Grants healing over time effect to target\nCure Potency: 5,000\nDuration: 12s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nHuton\n\nSpell\nInstant\n\n2s\n-\n\n0y\n\n0y\n\nGrants Huton, creating a barrier that absorbs damage equivalent to a heal of 16,000 potency.\nWhile barrier is active, reduces weaponskill recast time by 20%, and increases movement speed by 50%.\nDuration: 10s\nMovement speed returns to normal when barrier is completely absorbed.\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nDoton\n\nSpell\nInstant\n\n2s\n-\n\n0y\n\n5y\n\nCreates a patch of corrupted earth under your feet, dealing damage with a potency of 3,000 to any enemies who enter.\nDuration: 10s\nAdditional Effect: Reduces damage taken by 15% while standing in the patch of salted earth\nCan only be executed while under the effect of Three Mudra.\n\n※This action cannot be assigned to a hotbar.\n\nHollow Nozuchi\n\nAbility\nInstant\n-\n-\n\n100y\n\n5y\n\nAll enemies standing in the corrupted earth of Doton take additional earth damage with a potency of 3,000.\nRequires the execution of a weaponskill, Hyosho Ranryu, or Goka Mekkyaku.\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSeiton Tenchu\n\nInstant\n10s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 12,000, incapacitating foes whose HP is below 50%.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Afflicts target with Death Link\nDuration: 2s\nDefeating an enemy with this action, or one under the effect of Death Link, will grant Unsealed Seiton Tenchu, allowing a second execution of this action.\nDuration: 8s\nEffect duration is reduced by 1s each time it is applied to a target with a minimum duration of 4s.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed when the limit gauge is full or while under the effect of Unsealed Seiton Tenchu.\nGauge Charge Time: 90s\nCannot be executed while bound.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBloodbath\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s\n\nSwift\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.\n\nSmite\n\nAbility\nInstant\n15s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

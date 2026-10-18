@@ -1,0 +1,1727 @@
+{
+ "job": "bard",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/bard/",
+ "pageTitle": "Job Guide: Bard | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nPhysical Ranged DPS\n\nThe word \"bard\" ordinarily puts folk in mind of those itinerant minstrels, fair of voice and nimble of finger, who earn their coin performing in taverns and the halls of great lords. Few know, however, that bards in fact trace their origins back to the bowmen of eld, who sang in the heat of battle to fortify the spirits of their companions.\nIn time, their impassioned songs came to hold sway over the hearts of men, inspiring their comrades to great feats and granting peace unto those who lay upon the precipice of death.\n\nStarting Job Quest\n\nStarting Class: Archer",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/c2be827c9e88459a397d2d02851c435d27a7bfd8.png",
+   "https://lds-img.finalfantasyxiv.com/d/58345465e1b0bb46bac9920464892ef4e51be34f.png",
+   "https://lds-img.finalfantasyxiv.com/d/444bd0d452881277e79be184fdb8ca6d21906014.png",
+   "https://lds-img.finalfantasyxiv.com/d/5628b34f3942ef93659f9f03dd2c0556b66f83ea.png",
+   "https://lds-img.finalfantasyxiv.com/d/fd9763578c2d9e6fca1cc0637d953ba405aa5b2b.png",
+   "https://lds-img.finalfantasyxiv.com/d/33e4423b5606c916b4c92db7a6cfb7d22d8f89ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/674767e2dcc3f57156cd13273601bd4ed337657b.png",
+   "https://lds-img.finalfantasyxiv.com/d/f935382d44889e5e74a995ed49bb6db78532edd4.png",
+   "https://lds-img.finalfantasyxiv.com/d/798e2b8207ce793087365990d0996232238b9225.png",
+   "https://lds-img.finalfantasyxiv.com/d/7744e7d846192e0c01c11c8854e6701d3a1000e1.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2358f71a46fe53449fdff7c7e42bb99c51987ca.png",
+   "https://lds-img.finalfantasyxiv.com/d/28e7d01b94a703869a9bfae6f06864154f1bd2f3.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8e2b6d980867d94b2c2f3b5067e50dede5b9064.png",
+   "https://lds-img.finalfantasyxiv.com/d/86a4368f7c70f8ff48ac30768d6ee6253c73b3f5.png",
+   "https://lds-img.finalfantasyxiv.com/d/0b50ad3e2e20b0d9a5478c296c861592f0eccd41.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f0462d7211269eb0dc49978c35f58e4e1077aae.png",
+   "https://lds-img.finalfantasyxiv.com/d/4b5cb786bc03d337b39054027f6087b4f7cb6882.png",
+   "https://lds-img.finalfantasyxiv.com/d/df058855e5500505c31eda4041f74e8fe4dbdb76.png",
+   "https://lds-img.finalfantasyxiv.com/d/3224b272a8cb080df1f93bfaf11d1cfec05533d8.png",
+   "https://lds-img.finalfantasyxiv.com/d/f39927d0bec5c6d20e72bddd59b9a9f250c99e2c.png",
+   "https://lds-img.finalfantasyxiv.com/d/6618d7a1a2770ce51edecf1c26a2937b5fc95963.png",
+   "https://lds-img.finalfantasyxiv.com/d/d9dd6ba8d37d6319c1eafd39f665bfb7dc6953d5.png",
+   "https://lds-img.finalfantasyxiv.com/d/f40a7b8d145d3419b05d7c491c388a448773c995.png",
+   "https://lds-img.finalfantasyxiv.com/d/03c3c2cabca1caf35d1c9a6ef8d0fe150e03762c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3595a008f1495d37a1cf915ecd72b10754e1fbc9.png",
+   "https://lds-img.finalfantasyxiv.com/d/88f59edc609d2adbd323ced0d409048e30ca0b35.png",
+   "https://lds-img.finalfantasyxiv.com/d/5690bdb5a291ff736672ec4e52eb99fbed475e94.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f89a5408c4dec6ee1ccdc71968eed0c0a3e97bc.png",
+   "https://lds-img.finalfantasyxiv.com/d/3efef1c2c0b7ffb04ab2a5e4d167bdad1fa69906.png",
+   "https://lds-img.finalfantasyxiv.com/d/3d00d8fc59c62a0ebd964ad501cc401abddc3105.png",
+   "https://lds-img.finalfantasyxiv.com/d/38d93335592c001b3839ad49b743bb4f4341eb83.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0a5370256054855bc11136374ddbd388c3f8c98.png",
+   "https://lds-img.finalfantasyxiv.com/d/5ecc6e2f2f492310758f85277b00eb134eec6c68.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2f516fd00c23f16a32c6278b6d9ebd7481d41a3.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6b7be8517f51d8cbcc60be2ae5970668f515eb.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b1f979d2b1428f9791f54ad0e429ea94a8d95d6.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb8b0f0ca18af4362d27f6699579bd5a18b40137.png",
+   "https://lds-img.finalfantasyxiv.com/d/748fe5fc8262b58e9a35aa9e4d40e67a0dd006a5.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/1e34db9e1b7af20374cc605ba4a8ebf19284ad17.png",
+   "https://lds-img.finalfantasyxiv.com/d/b4a390950aaeb9822ce34a94dc28974ab9406292.png",
+   "https://lds-img.finalfantasyxiv.com/d/ba6c2c8c66fa2c9a2ea245ee45863385dfc1bb6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/2395550790bebce8b41c868606b68c5860ead521.png",
+   "https://lds-img.finalfantasyxiv.com/d/e37391df85073d56015199bf52adcac9205fe1f6.png",
+   "https://lds-img.finalfantasyxiv.com/d/76b51857adc9bb39158d03671673490adf986c23.png",
+   "https://lds-img.finalfantasyxiv.com/d/e7cdd41960b0bf51426b9f204646c87a49c72581.png",
+   "https://lds-img.finalfantasyxiv.com/d/ca478e17699b41d0b3f91e808c9a49951eb5b9a1.png",
+   "https://lds-img.finalfantasyxiv.com/d/b4a764dfa850a84439e920b436b7e0ff4f18d01f.png",
+   "https://lds-img.finalfantasyxiv.com/d/671e19fca51076d955a751ca8cf0b8f0c024d13b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/7d8fbe1550c91afbd4d4349a0aab9dab9a1e04ab.png",
+   "https://lds-img.finalfantasyxiv.com/d/5224aafe6eaf21b1b9a559865b37b023524ae0c7.png",
+   "https://lds-img.finalfantasyxiv.com/d/67522181f502fda37e11dd98b9bf8e8f337f36fa.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/z/BEpmU4B9YEz8zSHfGMvjXOo8MI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Heavy Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c2be827c9e88459a397d2d02851c435d27a7bfd8.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 160.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 160.<br/>Additional Effect: 20% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Straight Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/58345465e1b0bb46bac9920464892ef4e51be34f.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 200.\nCan only be executed when under the effect of Hawk's Eye or Barrage.",
+     "descriptionHtml": "Delivers an attack with a potency of 200.<br/>Can only be executed when under the effect of Hawk's Eye or Barrage."
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Raging Strikes",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/444bd0d452881277e79be184fdb8ca6d21906014.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases damage dealt by 15%.\nDuration: 20s",
+     "descriptionHtml": "Increases damage dealt by 15%.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Venomous Bite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5628b34f3942ef93659f9f03dd2c0556b66f83ea.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nAdditional Effect: Venom\nPotency: 15\nDuration: 45s",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Additional Effect: Venom<br/>Potency: 15<br/>Duration: 45s"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Bloodletter",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fd9763578c2d9e6fca1cc0637d953ba405aa5b2b.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 130.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.",
+     "descriptionHtml": "Delivers an attack with a potency of 130.<br/>Maximum Charges: 3<br/>Shares a recast timer with Rain of Death."
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Repelling Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/33e4423b5606c916b4c92db7a6cfb7d22d8f89ac.png",
+     "skillCellText": "Repelling Shot\nClass Quest",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "15y",
+     "radius": "0y",
+     "description": "Jump 10 yalms away from current target.\nCannot be executed while bound.",
+     "descriptionHtml": "Jump 10 yalms away from current target.<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Quick Nock",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/674767e2dcc3f57156cd13273601bd4ed337657b.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 110 to all enemies in a cone before you.<br/>Additional Effect: 20% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Wide Volley",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f935382d44889e5e74a995ed49bb6db78532edd4.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 25",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 140 to target and all enemies nearby it.\nBarrage Potency: 220\nCan only be executed while under the effect of Hawk's Eye or Barrage.",
+     "descriptionHtml": "Delivers an attack with a potency of 140 to target and all enemies nearby it.<br/>Barrage Potency: 220<br/>Can only be executed while under the effect of Hawk's Eye or Barrage."
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Windbite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/798e2b8207ce793087365990d0996232238b9225.png",
+     "skillCellText": "Windbite\nClass Quest",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 60.\nAdditional Effect: Wind damage over time\nPotency: 20\nDuration: 45s",
+     "descriptionHtml": "Deals wind damage with a potency of 60.<br/>Additional Effect: Wind damage over time<br/>Potency: 20<br/>Duration: 45s"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Mage's Ballad",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7744e7d846192e0c01c11c8854e6701d3a1000e1.png",
+     "skillCellText": "Mage's Ballad\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Mage's Ballad to self and all party members within 50 yalms, increasing damage dealt by 1%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Mage's Ballad.\nRepertoire Effect: Reduces the recast time of Heartbreak Shot and Rain of Death by 7.5s\nAdditional Effect: Grants Mage's Coda\nCan only be executed while in combat.",
+     "descriptionHtml": "Grants Mage's Ballad to self and all party members within 50 yalms, increasing damage dealt by 1%.<br/>Duration: 45s<br/>Additional Effect: 80% chance to grant Repertoire<br/>This effect can trigger repeatedly while singing the Mage's Ballad.<br/>Repertoire Effect: Reduces the recast time of Heartbreak Shot and Rain of Death by 7.5s<br/>Additional Effect: Grants Mage's Coda<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "The Warden's Paean",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2358f71a46fe53449fdff7c7e42bb99c51987ca.png",
+     "skillCellText": "The Warden's Paean\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Removes one select detrimental effect from self or target party member. If the target is not enfeebled, a barrier is created nullifying the target's next detrimental effect suffered.\nDuration: 30s",
+     "descriptionHtml": "Removes one select detrimental effect from self or target party member. If the target is not enfeebled, a barrier is created nullifying the target's next detrimental effect suffered.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Barrage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/28e7d01b94a703869a9bfae6f06864154f1bd2f3.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 38",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Barrage, allowing the use of Refulgent Arrow and Shadowbite. Upon execution, Refulgent Arrow will strike the selected target three times, while Shadowbite's potency will be increased to 300.\nDuration: 10s\nAdditional Effect: Grants Resonant Arrow Ready\nDuration: 30s",
+     "descriptionHtml": "Grants Barrage, allowing the use of Refulgent Arrow and Shadowbite. Upon execution, Refulgent Arrow will strike the selected target three times, while Shadowbite's potency will be increased to 300.<br/>Duration: 10s<br/>Additional Effect: Grants Resonant Arrow Ready<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Army's Paeon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8e2b6d980867d94b2c2f3b5067e50dede5b9064.png",
+     "skillCellText": "Army's Paeon\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Army's Paeon to self and all party members within 50 yalms, increasing direct hit rate by 3%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Army's Paeon.\nRepertoire Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 4%\nCan be stacked up to 4 times.\nAdditional Effect: Grants Army's Coda\nCan only be executed while in combat.",
+     "descriptionHtml": "Grants Army's Paeon to self and all party members within 50 yalms, increasing direct hit rate by 3%.<br/>Duration: 45s<br/>Additional Effect: 80% chance to grant Repertoire<br/>This effect can trigger repeatedly while singing the Army's Paeon.<br/>Repertoire Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 4%<br/>Can be stacked up to 4 times.<br/>Additional Effect: Grants Army's Coda<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Rain of Death",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86a4368f7c70f8ff48ac30768d6ee6253c73b3f5.png",
+     "skillCellText": "Rain of Death\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 100 to target and all enemies nearby it.\nMaximum Charges: 3\nShares a recast timer with Heartbreak Shot.",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to target and all enemies nearby it.<br/>Maximum Charges: 3<br/>Shares a recast timer with Heartbreak Shot."
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Battle Voice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0b50ad3e2e20b0d9a5478c296c861592f0eccd41.png",
+     "skillCellText": "Battle Voice\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases direct hit rate of self and all nearby party members by 20%.\nDuration: 20s",
+     "descriptionHtml": "Increases direct hit rate of self and all nearby party members by 20%.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "The Wanderer's Minuet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f0462d7211269eb0dc49978c35f58e4e1077aae.png",
+     "skillCellText": "The Wanderer's Minuet\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants the Wanderer's Minuet to self and all party members within 50 yalms, increasing critical hit rate by 2%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Wanderer's Minuet.\nRepertoire Effect: Allows execution of Pitch Perfect\nCan be stacked up to 3 times.\nAdditional Effect: Grants Wanderer's Coda\nCan only be executed while in combat.",
+     "descriptionHtml": "Grants the Wanderer's Minuet to self and all party members within 50 yalms, increasing critical hit rate by 2%.<br/>Duration: 45s<br/>Additional Effect: 80% chance to grant Repertoire<br/>This effect can trigger repeatedly while singing the Wanderer's Minuet.<br/>Repertoire Effect: Allows execution of Pitch Perfect<br/>Can be stacked up to 3 times.<br/>Additional Effect: Grants Wanderer's Coda<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Pitch Perfect",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4b5cb786bc03d337b39054027f6087b4f7cb6882.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to the target and all enemies nearby it. Potency varies with number of Repertoire stacks, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Repertoire Stack: 100\n2 Repertoire Stacks: 220\n3 Repertoire Stacks: 360\nCan only be executed when the Wanderer's Minuet is active and you have at least one stack of Repertoire.",
+     "descriptionHtml": "Delivers an attack to the target and all enemies nearby it. Potency varies with number of Repertoire stacks, dealing full damage for the first enemy, and 50% less for all remaining enemies.<br/>1 Repertoire Stack: 100<br/>2 Repertoire Stacks: 220<br/>3 Repertoire Stacks: 360<br/>Can only be executed when the Wanderer's Minuet is active and you have at least one stack of Repertoire."
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Empyreal Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/df058855e5500505c31eda4041f74e8fe4dbdb76.png",
+     "skillCellText": "Empyreal Arrow\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 260.\nAdditional Effect: Grants Repertoire while singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet",
+     "descriptionHtml": "Delivers an attack with a potency of 260.<br/>Additional Effect: Grants Repertoire while singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Iron Jaws",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3224b272a8cb080df1f93bfaf11d1cfec05533d8.png",
+     "skillCellText": "Iron Jaws\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nAdditional Effect: If the target is suffering from a Caustic Bite or Stormbite effect inflicted by you, the effect timer is reset\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Additional Effect: If the target is suffering from a Caustic Bite or Stormbite effect inflicted by you, the effect timer is reset<br/>Additional Effect: 35% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Sidewinder",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f39927d0bec5c6d20e72bddd59b9a9f250c99e2c.png",
+     "skillCellText": "Sidewinder\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 400.",
+     "descriptionHtml": "Delivers an attack with a potency of 400."
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Troubadour",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6618d7a1a2770ce51edecf1c26a2937b5fc95963.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with machinist's Tactician or dancer's Shield Samba.",
+     "descriptionHtml": "Reduces damage taken by self and nearby party members by 15%.<br/>Duration: 15s<br/>Effect cannot be stacked with machinist's Tactician or dancer's Shield Samba."
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Caustic Bite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d9dd6ba8d37d6319c1eafd39f665bfb7dc6953d5.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 150.\nAdditional Effect: Poison\nPotency: 20\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 150.<br/>Additional Effect: Poison<br/>Potency: 20<br/>Duration: 45s<br/>Additional Effect: 35% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Stormbite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f40a7b8d145d3419b05d7c491c388a448773c995.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 100.\nAdditional Effect: Wind damage over time\nPotency: 25\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Deals wind damage with a potency of 100.<br/>Additional Effect: Wind damage over time<br/>Potency: 25<br/>Duration: 45s<br/>Additional Effect: 35% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Nature's Minne",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/03c3c2cabca1caf35d1c9a6ef8d0fe150e03762c.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases HP recovery via healing actions by 15% for self and nearby party members.\nDuration: 15s",
+     "descriptionHtml": "Increases HP recovery via healing actions by 15% for self and nearby party members.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Refulgent Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3595a008f1495d37a1cf915ecd72b10754e1fbc9.png",
+     "skillCellText": "Refulgent Arrow\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 280.\nCan only be executed when under the effect of Hawk's Eye or Barrage.",
+     "descriptionHtml": "Delivers an attack with a potency of 280.<br/>Can only be executed when under the effect of Hawk's Eye or Barrage."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Shadowbite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/88f59edc609d2adbd323ced0d409048e30ca0b35.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 200 to target and all enemies nearby it.\nBarrage Potency: 300\nCan only be executed when under the effect of Hawk's Eye or Barrage.",
+     "descriptionHtml": "Delivers an attack with a potency of 200 to target and all enemies nearby it.<br/>Barrage Potency: 300<br/>Can only be executed when under the effect of Hawk's Eye or Barrage."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Burst Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5690bdb5a291ff736672ec4e52eb99fbed475e94.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 220.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 220.<br/>Additional Effect: 35% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Apex Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f89a5408c4dec6ee1ccdc71968eed0c0a3e97bc.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack with a potency of 140 to all enemies in a straight line before you.\nSoul Voice Gauge Cost: 20\nPotency increases up to 700 as Soul Voice Gauge exceeds minimum cost.\nAdditional Effect: Grants Blast Arrow Ready upon execution while Soul Voice Gauge is 80 or higher\nDuration: 10s\nConsumes Soul Voice Gauge upon execution.",
+     "descriptionHtml": "Delivers an attack with a potency of 140 to all enemies in a straight line before you.<br/>Soul Voice Gauge Cost: 20 <br/>Potency increases up to 700 as Soul Voice Gauge exceeds minimum cost.<br/>Additional Effect: Grants Blast Arrow Ready upon execution while Soul Voice Gauge is 80 or higher<br/>Duration: 10s<br/>Consumes Soul Voice Gauge upon execution."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Ladonsbite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3efef1c2c0b7ffb04ab2a5e4d167bdad1fa69906.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 140 to all enemies in a cone before you.<br/>Additional Effect: 35% chance of granting Hawk's Eye<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Blast Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3d00d8fc59c62a0ebd964ad501cc401abddc3105.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack to all enemies in a straight line before you with a potency of 700 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.\n※Apex Arrow changes to Blast Arrow when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack to all enemies in a straight line before you with a potency of 700 for the first enemy, and 50% less for all remaining enemies.<br/>Can only be executed while under the effect of Blast Arrow Ready.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Apex Arrow changes to Blast Arrow when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Radiant Finale",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/38d93335592c001b3839ad49b743bb4f4341eb83.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "110s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases damage dealt by self and nearby party members.\nDuration: 20s\nEffectiveness is determined by the number of different Coda active in the Song Gauge.\n1 Coda: 2%\n2 Coda: 4%\n3 Coda: 6%\nAdditional Effect: Grants Radiant Encore Ready\nDuration: 30s\nCan only be executed when at least 1 coda is active.",
+     "descriptionHtml": "Increases damage dealt by self and nearby party members.<br/>Duration: 20s<br/>Effectiveness is determined by the number of different Coda active in the Song Gauge.<br/>1 Coda: 2%<br/>2 Coda: 4%<br/>3 Coda: 6%<br/>Additional Effect: Grants Radiant Encore Ready<br/>Duration: 30s<br/>Can only be executed when at least 1 coda is active."
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Heartbreak Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0a5370256054855bc11136374ddbd388c3f8c98.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 180.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.",
+     "descriptionHtml": "Delivers an attack with a potency of 180.<br/>Maximum Charges: 3<br/>Shares a recast timer with Rain of Death."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Resonant Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ecc6e2f2f492310758f85277b00eb134eec6c68.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 640 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Resonant Arrow Ready.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 640 for the first enemy, and 50% less for all remaining enemies.<br/>Can only be executed while under the effect of Resonant Arrow Ready."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Radiant Encore",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2f516fd00c23f16a32c6278b6d9ebd7481d41a3.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it.\nPotency is determined by the number of different Coda consumed in the Radiant Finale executed prior, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Coda: 700\n2 Coda: 800\n3 Coda: 1,100\nCan only be executed while under the effect of Radiant Encore Ready.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it.<br/>Potency is determined by the number of different Coda consumed in the Radiant Finale executed prior, dealing full damage for the first enemy, and 50% less for all remaining enemies.<br/>1 Coda: 700<br/>2 Coda: 800<br/>3 Coda: 1,100<br/>Can only be executed while under the effect of Radiant Encore Ready."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "prange_action__01",
+     "name": "Leg Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6b7be8517f51d8cbcc60be2ae5970668f515eb.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Afflicts target with Heavy +40%.\nDuration: 10s",
+     "descriptionHtml": "Afflicts target with Heavy +40%.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "prange_action__02",
+     "name": "Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Instantly restores own HP.\nCure Potency: 800",
+     "descriptionHtml": "Instantly restores own HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "prange_action__03",
+     "name": "Foot Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b1f979d2b1428f9791f54ad0e429ea94a8d95d6.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Binds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.",
+     "descriptionHtml": "Binds target.<br/>Duration: 10s<br/>Cancels auto-attack upon execution.<br/>Target unbound if damage taken."
+    },
+    {
+     "rowId": "prange_action__04",
+     "name": "Peloton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb8b0f0ca18af4362d27f6699579bd5a18b40137.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.",
+     "descriptionHtml": "Increases movement speed of self and nearby party members.<br/>Duration: 30s<br/>Effect ends when enmity is generated. Has no effect in battle."
+    },
+    {
+     "rowId": "prange_action__05",
+     "name": "Head Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/748fe5fc8262b58e9a35aa9e4d40e67a0dd006a5.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 24",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Interrupts the use of a target's action.",
+     "descriptionHtml": "Interrupts the use of a target's action."
+    },
+    {
+     "rowId": "prange_action__06",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Heavier Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/108765871bee04e1c77e2da519cb3fd2852c2fc4.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "description": "Adds to Heavy Shot a 20% chance to grant Hawk's Eye.\nDuration: 30s",
+     "descriptionHtml": "Adds to Heavy Shot a 20% chance to grant Hawk's Eye.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Increased Action Damage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1cbde20b4d66b10cc3e14d49c73e8f522374a7f9.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage by 10%.",
+     "descriptionHtml": "Increases base action damage by 10%."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Enhanced Quick Nock",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/03721e9a337502bdf9a5b6b5e526e641662fbda3.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 25",
+     "description": "Adds to Quick Nock a 20% chance to grant Hawk's Eye.\nDuration: 30s",
+     "descriptionHtml": "Adds to Quick Nock a 20% chance to grant Hawk's Eye.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Increased Action Damage II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3d8aac6fa53ff85d08edf1daf5600ffbf3aa0823.png",
+     "acquired": [
+      {
+       "class": "Archer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/K/gm9qOAy0dmiDT1-4iIAS9G5bx8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage by 20%.",
+     "descriptionHtml": "Increases base action damage by 20%."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Bite Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3996f2fb3bf036dde9a7a5c7124b219ad2d526a8.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Upgrades Venomous Bite and Windbite to Caustic Bite and Stormbite respectively.",
+     "descriptionHtml": "Upgrades Venomous Bite and Windbite to Caustic Bite and Stormbite respectively."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Enhanced Empyreal Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/205554ca5b8a3f6b11ad289baebca6e3d16a1d25.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "description": "Guarantees the trigger of the additional effects for current Mage's Ballad, Army's Paeon, and the Wanderer's Minuet when Empyreal Arrow hits a target.",
+     "descriptionHtml": "Guarantees the trigger of the additional effects for current Mage's Ballad, Army's Paeon, and the Wanderer's Minuet when Empyreal Arrow hits a target."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Straight Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b8755d0bb5a7289428c28fdd148e312352f4b0ba.png",
+     "skillCellText": "Straight Shot Mastery\nJob Quest",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "description": "Upgrades Straight Shot to Refulgent Arrow.",
+     "descriptionHtml": "Upgrades Straight Shot to Refulgent Arrow."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Wide Volley Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/18779c63b4e4e61466a651e89b34c081f2267ac1.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Wide Volley to Shadowbite.",
+     "descriptionHtml": "Upgrades Wide Volley to Shadowbite."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Bite Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dac77b0a8057476c7e6960073d556a18bd9546e8.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "description": "Adds to Stormbite, Caustic Bite, and Iron Jaws a 35% chance to grant Hawk's Eye.\nDuration: 30s",
+     "descriptionHtml": "Adds to Stormbite, Caustic Bite, and Iron Jaws a 35% chance to grant Hawk's Eye.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Heavy Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0e874ba4fac033f599bf4be495c873a5a39e5977.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "description": "Upgrades Heavy Shot to Burst Shot.",
+     "descriptionHtml": "Upgrades Heavy Shot to Burst Shot."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Enhanced Army's Paeon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b069b1998c1efc3e5d8effbf2537e97bb3e8d7a1.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "While under the effect of Army's Paeon with at least one stack of Repertoire, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay.\nDuration: 10s\nAllowing the effect of Army's Paeon and accumulated stacks of Repertoire to expire without singing Mage's Ballad or the Wanderer's Minuet will grant Army's Ethos.\nDuration: 30s\nWhile under the effect of Army's Ethos, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse. Both Army's Ethos and Army's Muse require stacks of Repertoire, the number of which will determine the potency of the latter.\n1 Repertoire: 1%\n2 Repertoire: 2%\n3 Repertoire: 4%\n4 Repertoire: 12%",
+     "descriptionHtml": "While under the effect of Army's Paeon with at least one stack of Repertoire, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay.<br/>Duration: 10s<br/>Allowing the effect of Army's Paeon and accumulated stacks of Repertoire to expire without singing Mage's Ballad or the Wanderer's Minuet will grant Army's Ethos. <br/>Duration: 30s<br/>While under the effect of Army's Ethos, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse. Both Army's Ethos and Army's Muse require stacks of Repertoire, the number of which will determine the potency of the latter.<br/>1 Repertoire:  1%<br/>2 Repertoire:  2%<br/>3 Repertoire:  4%<br/>4 Repertoire:  12%"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Soul Voice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/97aa6fb597a70e4e19b5c48e0a7072e108edcd6d.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "description": "Increases Soul Voice Gauge by 5 each time Repertoire is granted.",
+     "descriptionHtml": "Increases Soul Voice Gauge by 5 each time Repertoire is granted."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Quick Nock Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b01f4d9bcc23c43cdf9a2ddaefdf96d0eee1db1a.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Quick Nock to Ladonsbite.",
+     "descriptionHtml": "Upgrades Quick Nock to Ladonsbite."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Bloodletter",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b884f8ddaee8b302526bae34a30b0376ebfc224a.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Allows a third charge of Bloodletter and Rain of Death.",
+     "descriptionHtml": "Allows a third charge of Bloodletter and Rain of Death."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Apex Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/49c08cec8e74847d62dd4c72032b129b523fdccc.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "description": "Grants Blast Arrow Ready upon executing Apex Arrow after the Soul Voice Gauge has reached 80 or higher.\nDuration: 10s\nApex Arrow becomes Blast Arrow while under this effect.",
+     "descriptionHtml": "Grants Blast Arrow Ready upon executing Apex Arrow after the Soul Voice Gauge has reached 80 or higher.<br/>Duration: 10s<br/>Apex Arrow becomes Blast Arrow while under this effect."
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Enhanced Troubadour",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b92602bacc1c9df1cc9e99532f86fb947b588e57.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Reduces Troubadour recast time to 90 seconds.",
+     "descriptionHtml": "Reduces Troubadour recast time to 90 seconds."
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "Minstrel's Coda",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/97a521528ace5db960e08581df0138af6567eb0b.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "description": "Grants Mage's Coda, Army's Coda, or Wanderer's Coda upon singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet respectively.",
+     "descriptionHtml": "Grants Mage's Coda, Army's Coda, or Wanderer's Coda upon singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet respectively."
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "Bloodletter Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fbd9bd3aa726059da139262c130e97f2207b0518.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Upgrades Bloodletter to Heartbreak Shot.",
+     "descriptionHtml": "Upgrades Bloodletter to Heartbreak Shot."
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "Ranged Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c948f409f459cc6cc4983962f78d071f06ef5b8.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Empyreal Arrow to 260, Sidewinder to 400, Refulgent Arrow to 280, Burst Shot to 220, and Apex Arrow to 140 up to 700.",
+     "descriptionHtml": "Increases the potency of Empyreal Arrow to 260, Sidewinder to 400, Refulgent Arrow to 280, Burst Shot to 220, and Apex Arrow to 140 up to 700."
+    },
+    {
+     "rowId": "trait_action__20",
+     "name": "Enhanced Barrage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d139ce87bcae2a797053062936c54f77e2f5d320.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Grants Resonant Arrow Ready upon executing Barrage.\nDuration: 30s",
+     "descriptionHtml": "Grants Resonant Arrow Ready upon executing Barrage.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__21",
+     "name": "Enhanced Troubadour II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d7ccdc150d408b54d8635981fd098379485e3ec.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Improves Troubadour's damage reduction effect to 15%.",
+     "descriptionHtml": "Improves Troubadour's damage reduction effect to 15%."
+    },
+    {
+     "rowId": "trait_action__22",
+     "name": "Enhanced Radiant Finale",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3168efe251b2ebe7635e0b5da38e6e58858546e4.png",
+     "acquired": [
+      {
+       "class": "Bard",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Radiant Encore Ready upon executing Radiant Finale.\nDuration: 30s",
+     "descriptionHtml": "Grants Radiant Encore Ready upon executing Radiant Finale.<br/>Duration: 30s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "prange_action__01",
+     "name": "Enhanced Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the healing potency of Second Wind to 800.",
+     "descriptionHtml": "Increases the healing potency of Second Wind to 800."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Powerful Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1e34db9e1b7af20374cc605ba4a8ebf19284ad17.png",
+     "type": "Weaponskill",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 6,000.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nRequires casting time to execute. However, it is possible to walk while casting.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 6,000.<br/>Additional Effect: Reduces the recast time of Harmonic Arrow by 4s<br/>Requires casting time to execute. However, it is possible to walk while casting."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Apex Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b4a390950aaeb9822ce34a94dc28974ab9406292.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nAdditional Effect: Grants Frontliner's March\nFrontliner's March Effect: Reduces your weaponskill cast time and recast time by 15%, and increases damage dealt by self and all party members within a radius of 30 yalms by 5%\nDuration: 30s\nAdditional Effect: Grants Blast Arrow Ready\nDuration: 20s\nThis action's effects extend through obstructions.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Blast Arrow while under the effect of Blast Arrow Ready.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before you.<br/>Additional Effect: Grants Frontliner's March<br/>Frontliner's March Effect: Reduces your weaponskill cast time and recast time by 15%, and increases damage dealt by self and all party members within a radius of 30 yalms by 5%<br/>Duration: 30s<br/>Additional Effect: Grants Blast Arrow Ready<br/>Duration: 20s<br/>This action's effects extend through obstructions.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Blast Arrow while under the effect of Blast Arrow Ready."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Harmonic Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ba6c2c8c66fa2c9a2ea245ee45863385dfc1bb6e.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 9,000.\nConsumes all charges upon execution, each charge adding an additional strike to the attack while lowering potency.\n2 Charge Potency: 6,000 per strike\n3 Charge Potency: 5,000 per strike\n4 Charge Potency: 4,500 per strike\nMaximum Charges: 4",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 9,000.<br/>Consumes all charges upon execution, each charge adding an additional strike to the attack while lowering potency.<br/>2 Charge Potency: 6,000 per strike<br/>3 Charge Potency: 5,000 per strike<br/>4 Charge Potency: 4,500 per strike<br/>Maximum Charges: 4"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Silent Nocturne",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2395550790bebce8b41c868606b68c5860ead521.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Silences target.\nDuration: 2s\nAdditional Effect: Grants Repertoire\nDuration: 10s\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.",
+     "descriptionHtml": "Silences target.<br/>Duration: 2s<br/>Additional Effect: Grants Repertoire<br/>Duration: 10s<br/><br/>※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Repelling Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e37391df85073d56015199bf52adcac9205fe1f6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 4,500.\nAdditional Effect: 10-yalm backstep\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Grants Repertoire\nDuration: 10s\nCannot be executed while bound.\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,500.<br/>Additional Effect: 10-yalm backstep<br/>Additional Effect: Bind<br/>Duration: 3s<br/>Additional Effect: Grants Repertoire<br/>Duration: 10s<br/>Cannot be executed while bound.<br/><br/>※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "The Warden's Paean",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76b51857adc9bb39158d03671673490adf986c23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Removes one status affliction from self or target party member that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify.\nDuration: 10s\nGrants Warden's Grace upon successfully removing or nullifying a status affliction.\nWarden's Grace Effect: Reduces damage taken by 25% while increasing HP recovered by healing actions and movement speed by 25%\nDuration: 5s",
+     "descriptionHtml": "Removes one status affliction from self or target party member that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify.<br/>Duration: 10s<br/>Grants Warden's Grace upon successfully removing or nullifying a status affliction.<br/>Warden's Grace Effect: Reduces damage taken by 25% while increasing HP recovered by healing actions and movement speed by 25%<br/>Duration: 5s"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Pitch Perfect",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e7cdd41960b0bf51426b9f204646c87a49c72581.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 9,000 for the first enemy, and 4,500 for all remaining enemies.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nCan only be executed while under the effect of Repertoire.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 9,000 for the first enemy, and 4,500 for all remaining enemies.<br/>Additional Effect: Reduces the recast time of Harmonic Arrow by 4s<br/>Can only be executed while under the effect of Repertoire.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Blast Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ca478e17699b41d0b3f91e808c9a49951eb5b9a1.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack with a potency of 10,000 to all enemies in a straight line before you.\nAdditional Effect: 10-yalm knockback\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 10,000 to all enemies in a straight line before you.<br/>Additional Effect: 10-yalm knockback<br/>Can only be executed while under the effect of Blast Arrow Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Encore of Light",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b4a764dfa850a84439e920b436b7e0ff4f18d01f.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers a ranged attack with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's MP by 4,000\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Encore of Light Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 10,000 to target and all enemies nearby it.<br/>Additional Effect: Reduces target's MP by 4,000<br/>Effect cannot be applied to players riding machina or non-player combatants.<br/>Can only be executed while under the effect of Encore of Light Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Final Fantasia",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/671e19fca51076d955a751ca8cf0b8f0c024d13b.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Final Fantasia.\nFinal Fantasia Effect: Reduces your weaponskill cast time and recast time by 15%, while also increasing damage dealt by self and all party members within 30 yalms by 10%, and movement speed by 25%\nEffect also gradually fills the limit gauge when targets are in combat.\nDuration: 30s\nAdditional Effect: Grants Encore of Light Ready\nDuration: 30s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 120s\nThis action's effects extend through obstructions.\n\n※Action changes to Encore of Light upon execution.",
+     "descriptionHtml": "Grants Final Fantasia.<br/>Final Fantasia Effect: Reduces your weaponskill cast time and recast time by 15%, while also increasing damage dealt by self and all party members within 30 yalms by 10%, and movement speed by 25%<br/>Effect also gradually fills the limit gauge when targets are in combat.<br/>Duration: 30s<br/>Additional Effect: Grants Encore of Light Ready<br/>Duration: 30s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 120s<br/>This action's effects extend through obstructions.<br/><br/>※Action changes to Encore of Light upon execution."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Dervish",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d8fbe1550c91afbd4d4349a0aab9dab9a1e04ab.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Reduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s",
+     "descriptionHtml": "Reduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.<br/>This action's effects extend through obstructions.<br/>Duration: 12s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Bravery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5224aafe6eaf21b1b9a559865b37b023524ae0c7.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s",
+     "descriptionHtml": "Increases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Eagle Eye Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67522181f502fda37e11dd98b9bf8e8f337f36fa.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "40y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000.<br/>Ignores the effects of Guard when dealing damage."
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "Song Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/X/u6DYtRwjQaqIXibHeCBkqir5o0.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/yJP1VzDXI5EHsC3u_z6PDeBxvk.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/a/N6xiUu_sM0buay4CIOLe_1NhkI.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/6/lg3gqIHbIPmaBukFXl_0yk5Ru4.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/V/KrC5hrQ2S6dmIcrDVWL6E67wnw.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nSong Gauge\n\nSinging Mage's Ballad will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, shortening the recast timer of Heartbreak Shot (acquired at level 92) and Rain of Death (acquired at level 45).\n\nSinging Army's Paeon will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay. This effect increases for each stack of Repertoire you accumulate up to a total of four.\n\nSinging The Wanderer's Minuet will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, allowing the execution of Pitch Perfect. The Repertoire effect can be stacked up to three times.\n\nUpon learning the trait Soul Voice, the Soul Voice Gauge will be displayed. This gauge increases in tandem with Repertoire, and is depleted when using the action Apex Arrow (acquired at level 80).\n\nWhen you learn the trait Minstrel's Coda, the Coda will be displayed.\nThere are three types of Coda: Mage's Coda, Army's Coda, and Wanderer's Coda. Each is granted respectively by executing the actions Mage's Ballad, Army's Paeon, and The Wanderer's Minuet. You can execute the action Radiant Finale if you have at least one Coda.\n\nSimple Mode\n\nSong Gauge\n\nMage's Ballad\n\nArmy's Paeon\n\nThe Wanderer's Minuet\n\nSoul Voice Gauge and Coda",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Song Gauge</h3>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/C/6UAuuGF_bnfRwSST-dCBUBh2Zw.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Singing <span class=\"txt_red\">Mage's Ballad</span> will display its corresponding <span class=\"txt_red\">Song Gauge</span>, which indicates the effect's remaining duration.<br/>During a song, there is a chance you will be granted <span class=\"txt_red\">Repertoire</span>, shortening the recast timer of <span class=\"txt_red\">Heartbreak Shot</span> (acquired at level 92) and <span class=\"txt_red\">Rain of Death</span> (acquired at level 45).</p>\n</div>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/0/QnR7fHYkAr_3AQFpbtW0dwhsJk.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Singing <span class=\"txt_red\">Army's Paeon</span> will display its corresponding <span class=\"txt_red\">Song Gauge</span>, which indicates the effect's remaining duration.<br/>During a song, there is a chance you will be granted <span class=\"txt_red\">Repertoire</span>, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay. This effect increases for each stack of Repertoire you accumulate up to a total of four.</p>\n</div>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/2/zIhfAHktEHJDMVyF6loNl0p7Kw.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Singing <span class=\"txt_red\">The Wanderer's Minuet</span> will display its corresponding <span class=\"txt_red\">Song Gauge</span>, which indicates the effect's remaining duration.<br/>During a song, there is a chance you will be granted <span class=\"txt_red\">Repertoire</span>, allowing the execution of <span class=\"txt_red\">Pitch Perfect</span>. The Repertoire effect can be stacked up to three times.</p>\n</div>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/L/GtH6guRBbIwI7w_2QuSO-gsEXs.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Soul Voice</span>, the <span class=\"txt_red\">Soul Voice Gauge</span> will be displayed. This gauge increases in tandem with Repertoire, and is depleted when using the action <span class=\"txt_red\">Apex Arrow</span> (acquired at level 80).</p>\n</div>\n<p class=\"job__hud__text\">When you learn the trait Minstrel's Coda, the Coda will be displayed.<br/>There are three types of Coda: <span class=\"txt_red\">Mage's Coda</span>, <span class=\"txt_red\">Army's Coda</span>, and <span class=\"txt_red\">Wanderer's Coda</span>. Each is granted respectively by executing the actions <span class=\"txt_red\">Mage's Ballad</span>, <span class=\"txt_red\">Army's Paeon</span>, and <span class=\"txt_red\">The Wanderer's Minuet</span>. You can execute the action <span class=\"txt_red\">Radiant Finale</span> if you have at least one Coda.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/X/u6DYtRwjQaqIXibHeCBkqir5o0.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">Song Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/yJP1VzDXI5EHsC3u_z6PDeBxvk.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Mage's Ballad</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/a/N6xiUu_sM0buay4CIOLe_1NhkI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Army's Paeon</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/lg3gqIHbIPmaBukFXl_0yk5Ru4.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">The Wanderer's Minuet</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/V/KrC5hrQ2S6dmIcrDVWL6E67wnw.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Soul Voice Gauge and Coda</p>\n</td>\n<td></td>\n<td></td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/C/6UAuuGF_bnfRwSST-dCBUBh2Zw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/0/QnR7fHYkAr_3AQFpbtW0dwhsJk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/2/zIhfAHktEHJDMVyF6loNl0p7Kw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/L/GtH6guRBbIwI7w_2QuSO-gsEXs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/u6DYtRwjQaqIXibHeCBkqir5o0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/yJP1VzDXI5EHsC3u_z6PDeBxvk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/a/N6xiUu_sM0buay4CIOLe_1NhkI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/lg3gqIHbIPmaBukFXl_0yk5Ru4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/V/KrC5hrQ2S6dmIcrDVWL6E67wnw.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHeavy Shot\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 160.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s\n\nStraight Shot\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 200.\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nRaging Strikes\n\nLv. 4\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 15%.\nDuration: 20s\n\nVenomous Bite\n\nLv. 6\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nAdditional Effect: Venom\nPotency: 15\nDuration: 45s\n\nBloodletter\n\nLv. 12\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 130.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.\n\nRepelling Shot\n\nClass Quest\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n15y\n\n0y\n\nJump 10 yalms away from current target.\nCannot be executed while bound.\n\nQuick Nock\n\nLv. 18\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s\n\nWide Volley\n\nLv. 25\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 140 to target and all enemies nearby it.\nBarrage Potency: 220\nCan only be executed while under the effect of Hawk's Eye or Barrage.\n\nWindbite\n\nClass Quest\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals wind damage with a potency of 60.\nAdditional Effect: Wind damage over time\nPotency: 20\nDuration: 45s\n\nMage's Ballad\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Mage's Ballad to self and all party members within 50 yalms, increasing damage dealt by 1%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Mage's Ballad.\nRepertoire Effect: Reduces the recast time of Heartbreak Shot and Rain of Death by 7.5s\nAdditional Effect: Grants Mage's Coda\nCan only be executed while in combat.\n\nThe Warden's Paean\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n45s\n-\n\n30y\n\n0y\n\nRemoves one select detrimental effect from self or target party member. If the target is not enfeebled, a barrier is created nullifying the target's next detrimental effect suffered.\nDuration: 30s\n\nBarrage\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Barrage, allowing the use of Refulgent Arrow and Shadowbite. Upon execution, Refulgent Arrow will strike the selected target three times, while Shadowbite's potency will be increased to 300.\nDuration: 10s\nAdditional Effect: Grants Resonant Arrow Ready\nDuration: 30s\n\nArmy's Paeon\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Army's Paeon to self and all party members within 50 yalms, increasing direct hit rate by 3%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Army's Paeon.\nRepertoire Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 4%\nCan be stacked up to 4 times.\nAdditional Effect: Grants Army's Coda\nCan only be executed while in combat.\n\nRain of Death\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n15s\n-\n\n25y\n\n8y\n\nDelivers an attack with a potency of 100 to target and all enemies nearby it.\nMaximum Charges: 3\nShares a recast timer with Heartbreak Shot.\n\nBattle Voice\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases direct hit rate of self and all nearby party members by 20%.\nDuration: 20s\n\nThe Wanderer's Minuet\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants the Wanderer's Minuet to self and all party members within 50 yalms, increasing critical hit rate by 2%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Wanderer's Minuet.\nRepertoire Effect: Allows execution of Pitch Perfect\nCan be stacked up to 3 times.\nAdditional Effect: Grants Wanderer's Coda\nCan only be executed while in combat.\n\nPitch Perfect\n\nLv. 52\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDelivers an attack to the target and all enemies nearby it. Potency varies with number of Repertoire stacks, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Repertoire Stack: 100\n2 Repertoire Stacks: 220\n3 Repertoire Stacks: 360\nCan only be executed when the Wanderer's Minuet is active and you have at least one stack of Repertoire.\n\nEmpyreal Arrow\n\nJob Quest\n\nLv. 54\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 260.\nAdditional Effect: Grants Repertoire while singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet\n\nIron Jaws\n\nJob Quest\n\nLv. 56\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nAdditional Effect: If the target is suffering from a Caustic Bite or Stormbite effect inflicted by you, the effect timer is reset\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nSidewinder\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 400.\n\nTroubadour\n\nLv. 62\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with machinist's Tactician or dancer's Shield Samba.\n\nCaustic Bite\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 150.\nAdditional Effect: Poison\nPotency: 20\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nStormbite\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals wind damage with a potency of 100.\nAdditional Effect: Wind damage over time\nPotency: 25\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nNature's Minne\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases HP recovery via healing actions by 15% for self and nearby party members.\nDuration: 15s\n\nRefulgent Arrow\n\nJob Quest\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 280.\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nShadowbite\n\nLv. 72\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 200 to target and all enemies nearby it.\nBarrage Potency: 300\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nBurst Shot\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 220.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nApex Arrow\n\nLv. 80\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 140 to all enemies in a straight line before you.\nSoul Voice Gauge Cost: 20\nPotency increases up to 700 as Soul Voice Gauge exceeds minimum cost.\nAdditional Effect: Grants Blast Arrow Ready upon execution while Soul Voice Gauge is 80 or higher\nDuration: 10s\nConsumes Soul Voice Gauge upon execution.\n\nLadonsbite\n\nLv. 82\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nBlast Arrow\n\nLv. 86\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n25y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 700 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.\n※Apex Arrow changes to Blast Arrow when requirements for execution are met.\n\nRadiant Finale\n\nLv. 90\n\nAbility\nInstant\n110s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members.\nDuration: 20s\nEffectiveness is determined by the number of different Coda active in the Song Gauge.\n1 Coda: 2%\n2 Coda: 4%\n3 Coda: 6%\nAdditional Effect: Grants Radiant Encore Ready\nDuration: 30s\nCan only be executed when at least 1 coda is active.\n\nHeartbreak Shot\n\nLv. 92\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 180.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.\n\nResonant Arrow\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 640 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Resonant Arrow Ready.\n\nRadiant Encore\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it.\nPotency is determined by the number of different Coda consumed in the Radiant Finale executed prior, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Coda: 700\n2 Coda: 800\n3 Coda: 1,100\nCan only be executed while under the effect of Radiant Encore Ready."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nLeg Graze\n\nLv. 6\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nAfflicts target with Heavy +40%.\nDuration: 10s\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nFoot Graze\n\nLv. 10\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nBinds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.\n\nPeloton\n\nLv. 20\n\nAbility\nInstant\n5s\n-\n\n0y\n\n30y\n\nIncreases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.\n\nHead Graze\n\nLv. 24\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nInterrupts the use of a target's action.\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s"
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nHeavier Shot\n\nLv. 2\n\nAdds to Heavy Shot a 20% chance to grant Hawk's Eye.\nDuration: 30s\n\nIncreased Action Damage\n\nLv. 20\n\nIncreases base action damage by 10%.\n\nEnhanced Quick Nock\n\nLv. 25\n\nAdds to Quick Nock a 20% chance to grant Hawk's Eye.\nDuration: 30s\n\nIncreased Action Damage II\n\nLv. 40\n\nIncreases base action damage by 20%.\n\nBite Mastery\n\nLv. 64\n\nUpgrades Venomous Bite and Windbite to Caustic Bite and Stormbite respectively.\n\nEnhanced Empyreal Arrow\n\nLv. 68\n\nGuarantees the trigger of the additional effects for current Mage's Ballad, Army's Paeon, and the Wanderer's Minuet when Empyreal Arrow hits a target.\n\nStraight Shot Mastery\n\nJob Quest\n\nLv. 70\n\nUpgrades Straight Shot to Refulgent Arrow.\n\nWide Volley Mastery\n\nLv. 72\n\nUpgrades Wide Volley to Shadowbite.\n\nBite Mastery II\n\nLv. 76\n\nAdds to Stormbite, Caustic Bite, and Iron Jaws a 35% chance to grant Hawk's Eye.\nDuration: 30s\n\nHeavy Shot Mastery\n\nLv. 76\n\nUpgrades Heavy Shot to Burst Shot.\n\nEnhanced Army's Paeon\n\nLv. 78\n\nWhile under the effect of Army's Paeon with at least one stack of Repertoire, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay.\nDuration: 10s\nAllowing the effect of Army's Paeon and accumulated stacks of Repertoire to expire without singing Mage's Ballad or the Wanderer's Minuet will grant Army's Ethos.\nDuration: 30s\nWhile under the effect of Army's Ethos, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse. Both Army's Ethos and Army's Muse require stacks of Repertoire, the number of which will determine the potency of the latter.\n1 Repertoire: 1%\n2 Repertoire: 2%\n3 Repertoire: 4%\n4 Repertoire: 12%\n\nSoul Voice\n\nLv. 80\n\nIncreases Soul Voice Gauge by 5 each time Repertoire is granted.\n\nQuick Nock Mastery\n\nLv. 82\n\nUpgrades Quick Nock to Ladonsbite.\n\nEnhanced Bloodletter\n\nLv. 84\n\nAllows a third charge of Bloodletter and Rain of Death.\n\nEnhanced Apex Arrow\n\nLv. 86\n\nGrants Blast Arrow Ready upon executing Apex Arrow after the Soul Voice Gauge has reached 80 or higher.\nDuration: 10s\nApex Arrow becomes Blast Arrow while under this effect.\n\nEnhanced Troubadour\n\nLv. 88\n\nReduces Troubadour recast time to 90 seconds.\n\nMinstrel's Coda\n\nLv. 90\n\nGrants Mage's Coda, Army's Coda, or Wanderer's Coda upon singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet respectively.\n\nBloodletter Mastery\n\nLv. 92\n\nUpgrades Bloodletter to Heartbreak Shot.\n\nRanged Mastery\n\nLv. 94\n\nIncreases the potency of Empyreal Arrow to 260, Sidewinder to 400, Refulgent Arrow to 280, Burst Shot to 220, and Apex Arrow to 140 up to 700.\n\nEnhanced Barrage\n\nLv. 96\n\nGrants Resonant Arrow Ready upon executing Barrage.\nDuration: 30s\n\nEnhanced Troubadour II\n\nLv. 98\n\nImproves Troubadour's damage reduction effect to 15%.\n\nEnhanced Radiant Finale\n\nLv. 100\n\nGrants Radiant Encore Ready upon executing Radiant Finale.\nDuration: 30s"
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nSong Gauge\n\nSinging Mage's Ballad will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, shortening the recast timer of Heartbreak Shot (acquired at level 92) and Rain of Death (acquired at level 45).\n\nSinging Army's Paeon will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay. This effect increases for each stack of Repertoire you accumulate up to a total of four.\n\nSinging The Wanderer's Minuet will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, allowing the execution of Pitch Perfect. The Repertoire effect can be stacked up to three times.\n\nUpon learning the trait Soul Voice, the Soul Voice Gauge will be displayed. This gauge increases in tandem with Repertoire, and is depleted when using the action Apex Arrow (acquired at level 80).\n\nWhen you learn the trait Minstrel's Coda, the Coda will be displayed.\nThere are three types of Coda: Mage's Coda, Army's Coda, and Wanderer's Coda. Each is granted respectively by executing the actions Mage's Ballad, Army's Paeon, and The Wanderer's Minuet. You can execute the action Radiant Finale if you have at least one Coda.\n\nSimple Mode\n\nSong Gauge\n\nMage's Ballad\n\nArmy's Paeon\n\nThe Wanderer's Minuet\n\nSoul Voice Gauge and Coda"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nPowerful Shot\n\nWeaponskill\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 6,000.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nRequires casting time to execute. However, it is possible to walk while casting.\n\nApex Arrow\n\nWeaponskill\nInstant\n20s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nAdditional Effect: Grants Frontliner's March\nFrontliner's March Effect: Reduces your weaponskill cast time and recast time by 15%, and increases damage dealt by self and all party members within a radius of 30 yalms by 5%\nDuration: 30s\nAdditional Effect: Grants Blast Arrow Ready\nDuration: 20s\nThis action's effects extend through obstructions.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Blast Arrow while under the effect of Blast Arrow Ready.\n\nHarmonic Arrow\n\nWeaponskill\nInstant\n12s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 9,000.\nConsumes all charges upon execution, each charge adding an additional strike to the attack while lowering potency.\n2 Charge Potency: 6,000 per strike\n3 Charge Potency: 5,000 per strike\n4 Charge Potency: 4,500 per strike\nMaximum Charges: 4\n\nSilent Nocturne\n\nAbility\nInstant\n20s\n-\n\n20y\n\n0y\n\nSilences target.\nDuration: 2s\nAdditional Effect: Grants Repertoire\nDuration: 10s\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.\n\nRepelling Shot\n\nAbility\nInstant\n10s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 4,500.\nAdditional Effect: 10-yalm backstep\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Grants Repertoire\nDuration: 10s\nCannot be executed while bound.\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.\n\nThe Warden's Paean\n\nAbility\nInstant\n24s\n-\n\n30y\n\n0y\n\nRemoves one status affliction from self or target party member that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify.\nDuration: 10s\nGrants Warden's Grace upon successfully removing or nullifying a status affliction.\nWarden's Grace Effect: Reduces damage taken by 25% while increasing HP recovered by healing actions and movement speed by 25%\nDuration: 5s\n\nPitch Perfect\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 9,000 for the first enemy, and 4,500 for all remaining enemies.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nCan only be executed while under the effect of Repertoire.\n\n※This action cannot be assigned to a hotbar.\n\nBlast Arrow\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 10,000 to all enemies in a straight line before you.\nAdditional Effect: 10-yalm knockback\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.\n\nEncore of Light\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDelivers a ranged attack with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's MP by 4,000\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Encore of Light Ready.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFinal Fantasia\n\nInstant\n10s\n-\n\n0y\n\n0y\n\nGrants Final Fantasia.\nFinal Fantasia Effect: Reduces your weaponskill cast time and recast time by 15%, while also increasing damage dealt by self and all party members within 30 yalms by 10%, and movement speed by 25%\nEffect also gradually fills the limit gauge when targets are in combat.\nDuration: 30s\nAdditional Effect: Grants Encore of Light Ready\nDuration: 30s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 120s\nThis action's effects extend through obstructions.\n\n※Action changes to Encore of Light upon execution."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nDervish\n\nAbility\nInstant\n45s\n-\n\n0y\n\n15y\n\nReduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s\n\nBravery\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s\n\nEagle Eye Shot\n\nAbility\nInstant\n15s\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nPhysical Ranged DPS\n\nThe word \"bard\" ordinarily puts folk in mind of those itinerant minstrels, fair of voice and nimble of finger, who earn their coin performing in taverns and the halls of great lords. Few know, however, that bards in fact trace their origins back to the bowmen of eld, who sang in the heat of battle to fortify the spirits of their companions.\nIn time, their impassioned songs came to hold sway over the hearts of men, inspiring their comrades to great feats and granting peace unto those who lay upon the precipice of death.\n\nStarting Job Quest\n\nStarting Class: Archer\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHeavy Shot\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 160.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s\n\nStraight Shot\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 200.\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nRaging Strikes\n\nLv. 4\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 15%.\nDuration: 20s\n\nVenomous Bite\n\nLv. 6\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nAdditional Effect: Venom\nPotency: 15\nDuration: 45s\n\nBloodletter\n\nLv. 12\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 130.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.\n\nRepelling Shot\n\nClass Quest\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n15y\n\n0y\n\nJump 10 yalms away from current target.\nCannot be executed while bound.\n\nQuick Nock\n\nLv. 18\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: 20% chance of granting Hawk's Eye\nDuration: 30s\n\nWide Volley\n\nLv. 25\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 140 to target and all enemies nearby it.\nBarrage Potency: 220\nCan only be executed while under the effect of Hawk's Eye or Barrage.\n\nWindbite\n\nClass Quest\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals wind damage with a potency of 60.\nAdditional Effect: Wind damage over time\nPotency: 20\nDuration: 45s\n\nMage's Ballad\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Mage's Ballad to self and all party members within 50 yalms, increasing damage dealt by 1%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Mage's Ballad.\nRepertoire Effect: Reduces the recast time of Heartbreak Shot and Rain of Death by 7.5s\nAdditional Effect: Grants Mage's Coda\nCan only be executed while in combat.\n\nThe Warden's Paean\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n45s\n-\n\n30y\n\n0y\n\nRemoves one select detrimental effect from self or target party member. If the target is not enfeebled, a barrier is created nullifying the target's next detrimental effect suffered.\nDuration: 30s\n\nBarrage\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Barrage, allowing the use of Refulgent Arrow and Shadowbite. Upon execution, Refulgent Arrow will strike the selected target three times, while Shadowbite's potency will be increased to 300.\nDuration: 10s\nAdditional Effect: Grants Resonant Arrow Ready\nDuration: 30s\n\nArmy's Paeon\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Army's Paeon to self and all party members within 50 yalms, increasing direct hit rate by 3%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Army's Paeon.\nRepertoire Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 4%\nCan be stacked up to 4 times.\nAdditional Effect: Grants Army's Coda\nCan only be executed while in combat.\n\nRain of Death\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n15s\n-\n\n25y\n\n8y\n\nDelivers an attack with a potency of 100 to target and all enemies nearby it.\nMaximum Charges: 3\nShares a recast timer with Heartbreak Shot.\n\nBattle Voice\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases direct hit rate of self and all nearby party members by 20%.\nDuration: 20s\n\nThe Wanderer's Minuet\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants the Wanderer's Minuet to self and all party members within 50 yalms, increasing critical hit rate by 2%.\nDuration: 45s\nAdditional Effect: 80% chance to grant Repertoire\nThis effect can trigger repeatedly while singing the Wanderer's Minuet.\nRepertoire Effect: Allows execution of Pitch Perfect\nCan be stacked up to 3 times.\nAdditional Effect: Grants Wanderer's Coda\nCan only be executed while in combat.\n\nPitch Perfect\n\nLv. 52\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDelivers an attack to the target and all enemies nearby it. Potency varies with number of Repertoire stacks, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Repertoire Stack: 100\n2 Repertoire Stacks: 220\n3 Repertoire Stacks: 360\nCan only be executed when the Wanderer's Minuet is active and you have at least one stack of Repertoire.\n\nEmpyreal Arrow\n\nJob Quest\n\nLv. 54\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 260.\nAdditional Effect: Grants Repertoire while singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet\n\nIron Jaws\n\nJob Quest\n\nLv. 56\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nAdditional Effect: If the target is suffering from a Caustic Bite or Stormbite effect inflicted by you, the effect timer is reset\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nSidewinder\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 400.\n\nTroubadour\n\nLv. 62\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with machinist's Tactician or dancer's Shield Samba.\n\nCaustic Bite\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 150.\nAdditional Effect: Poison\nPotency: 20\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nStormbite\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals wind damage with a potency of 100.\nAdditional Effect: Wind damage over time\nPotency: 25\nDuration: 45s\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nNature's Minne\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases HP recovery via healing actions by 15% for self and nearby party members.\nDuration: 15s\n\nRefulgent Arrow\n\nJob Quest\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 280.\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nShadowbite\n\nLv. 72\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 200 to target and all enemies nearby it.\nBarrage Potency: 300\nCan only be executed when under the effect of Hawk's Eye or Barrage.\n\nBurst Shot\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 220.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nApex Arrow\n\nLv. 80\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 140 to all enemies in a straight line before you.\nSoul Voice Gauge Cost: 20\nPotency increases up to 700 as Soul Voice Gauge exceeds minimum cost.\nAdditional Effect: Grants Blast Arrow Ready upon execution while Soul Voice Gauge is 80 or higher\nDuration: 10s\nConsumes Soul Voice Gauge upon execution.\n\nLadonsbite\n\nLv. 82\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: 35% chance of granting Hawk's Eye\nDuration: 30s\n\nBlast Arrow\n\nLv. 86\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n25y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 700 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.\n※Apex Arrow changes to Blast Arrow when requirements for execution are met.\n\nRadiant Finale\n\nLv. 90\n\nAbility\nInstant\n110s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members.\nDuration: 20s\nEffectiveness is determined by the number of different Coda active in the Song Gauge.\n1 Coda: 2%\n2 Coda: 4%\n3 Coda: 6%\nAdditional Effect: Grants Radiant Encore Ready\nDuration: 30s\nCan only be executed when at least 1 coda is active.\n\nHeartbreak Shot\n\nLv. 92\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 180.\nMaximum Charges: 3\nShares a recast timer with Rain of Death.\n\nResonant Arrow\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 640 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed while under the effect of Resonant Arrow Ready.\n\nRadiant Encore\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it.\nPotency is determined by the number of different Coda consumed in the Radiant Finale executed prior, dealing full damage for the first enemy, and 50% less for all remaining enemies.\n1 Coda: 700\n2 Coda: 800\n3 Coda: 1,100\nCan only be executed while under the effect of Radiant Encore Ready.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nLeg Graze\n\nLv. 6\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nAfflicts target with Heavy +40%.\nDuration: 10s\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nFoot Graze\n\nLv. 10\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nBinds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.\n\nPeloton\n\nLv. 20\n\nAbility\nInstant\n5s\n-\n\n0y\n\n30y\n\nIncreases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.\n\nHead Graze\n\nLv. 24\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nInterrupts the use of a target's action.\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrait\n\nTraits\nAcquired\nEffect\n\nHeavier Shot\n\nLv. 2\n\nAdds to Heavy Shot a 20% chance to grant Hawk's Eye.\nDuration: 30s\n\nIncreased Action Damage\n\nLv. 20\n\nIncreases base action damage by 10%.\n\nEnhanced Quick Nock\n\nLv. 25\n\nAdds to Quick Nock a 20% chance to grant Hawk's Eye.\nDuration: 30s\n\nIncreased Action Damage II\n\nLv. 40\n\nIncreases base action damage by 20%.\n\nBite Mastery\n\nLv. 64\n\nUpgrades Venomous Bite and Windbite to Caustic Bite and Stormbite respectively.\n\nEnhanced Empyreal Arrow\n\nLv. 68\n\nGuarantees the trigger of the additional effects for current Mage's Ballad, Army's Paeon, and the Wanderer's Minuet when Empyreal Arrow hits a target.\n\nStraight Shot Mastery\n\nJob Quest\n\nLv. 70\n\nUpgrades Straight Shot to Refulgent Arrow.\n\nWide Volley Mastery\n\nLv. 72\n\nUpgrades Wide Volley to Shadowbite.\n\nBite Mastery II\n\nLv. 76\n\nAdds to Stormbite, Caustic Bite, and Iron Jaws a 35% chance to grant Hawk's Eye.\nDuration: 30s\n\nHeavy Shot Mastery\n\nLv. 76\n\nUpgrades Heavy Shot to Burst Shot.\n\nEnhanced Army's Paeon\n\nLv. 78\n\nWhile under the effect of Army's Paeon with at least one stack of Repertoire, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay.\nDuration: 10s\nAllowing the effect of Army's Paeon and accumulated stacks of Repertoire to expire without singing Mage's Ballad or the Wanderer's Minuet will grant Army's Ethos.\nDuration: 30s\nWhile under the effect of Army's Ethos, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse. Both Army's Ethos and Army's Muse require stacks of Repertoire, the number of which will determine the potency of the latter.\n1 Repertoire: 1%\n2 Repertoire: 2%\n3 Repertoire: 4%\n4 Repertoire: 12%\n\nSoul Voice\n\nLv. 80\n\nIncreases Soul Voice Gauge by 5 each time Repertoire is granted.\n\nQuick Nock Mastery\n\nLv. 82\n\nUpgrades Quick Nock to Ladonsbite.\n\nEnhanced Bloodletter\n\nLv. 84\n\nAllows a third charge of Bloodletter and Rain of Death.\n\nEnhanced Apex Arrow\n\nLv. 86\n\nGrants Blast Arrow Ready upon executing Apex Arrow after the Soul Voice Gauge has reached 80 or higher.\nDuration: 10s\nApex Arrow becomes Blast Arrow while under this effect.\n\nEnhanced Troubadour\n\nLv. 88\n\nReduces Troubadour recast time to 90 seconds.\n\nMinstrel's Coda\n\nLv. 90\n\nGrants Mage's Coda, Army's Coda, or Wanderer's Coda upon singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet respectively.\n\nBloodletter Mastery\n\nLv. 92\n\nUpgrades Bloodletter to Heartbreak Shot.\n\nRanged Mastery\n\nLv. 94\n\nIncreases the potency of Empyreal Arrow to 260, Sidewinder to 400, Refulgent Arrow to 280, Burst Shot to 220, and Apex Arrow to 140 up to 700.\n\nEnhanced Barrage\n\nLv. 96\n\nGrants Resonant Arrow Ready upon executing Barrage.\nDuration: 30s\n\nEnhanced Troubadour II\n\nLv. 98\n\nImproves Troubadour's damage reduction effect to 15%.\n\nEnhanced Radiant Finale\n\nLv. 100\n\nGrants Radiant Encore Ready upon executing Radiant Finale.\nDuration: 30s\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nJob Gauge\n\nSong Gauge\n\nSinging Mage's Ballad will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, shortening the recast timer of Heartbreak Shot (acquired at level 92) and Rain of Death (acquired at level 45).\n\nSinging Army's Paeon will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay. This effect increases for each stack of Repertoire you accumulate up to a total of four.\n\nSinging The Wanderer's Minuet will display its corresponding Song Gauge, which indicates the effect's remaining duration.\nDuring a song, there is a chance you will be granted Repertoire, allowing the execution of Pitch Perfect. The Repertoire effect can be stacked up to three times.\n\nUpon learning the trait Soul Voice, the Soul Voice Gauge will be displayed. This gauge increases in tandem with Repertoire, and is depleted when using the action Apex Arrow (acquired at level 80).\n\nWhen you learn the trait Minstrel's Coda, the Coda will be displayed.\nThere are three types of Coda: Mage's Coda, Army's Coda, and Wanderer's Coda. Each is granted respectively by executing the actions Mage's Ballad, Army's Paeon, and The Wanderer's Minuet. You can execute the action Radiant Finale if you have at least one Coda.\n\nSimple Mode\n\nSong Gauge\n\nMage's Ballad\n\nArmy's Paeon\n\nThe Wanderer's Minuet\n\nSoul Voice Gauge and Coda\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nPowerful Shot\n\nWeaponskill\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 6,000.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nRequires casting time to execute. However, it is possible to walk while casting.\n\nApex Arrow\n\nWeaponskill\nInstant\n20s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nAdditional Effect: Grants Frontliner's March\nFrontliner's March Effect: Reduces your weaponskill cast time and recast time by 15%, and increases damage dealt by self and all party members within a radius of 30 yalms by 5%\nDuration: 30s\nAdditional Effect: Grants Blast Arrow Ready\nDuration: 20s\nThis action's effects extend through obstructions.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Blast Arrow while under the effect of Blast Arrow Ready.\n\nHarmonic Arrow\n\nWeaponskill\nInstant\n12s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 9,000.\nConsumes all charges upon execution, each charge adding an additional strike to the attack while lowering potency.\n2 Charge Potency: 6,000 per strike\n3 Charge Potency: 5,000 per strike\n4 Charge Potency: 4,500 per strike\nMaximum Charges: 4\n\nSilent Nocturne\n\nAbility\nInstant\n20s\n-\n\n20y\n\n0y\n\nSilences target.\nDuration: 2s\nAdditional Effect: Grants Repertoire\nDuration: 10s\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.\n\nRepelling Shot\n\nAbility\nInstant\n10s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 4,500.\nAdditional Effect: 10-yalm backstep\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Grants Repertoire\nDuration: 10s\nCannot be executed while bound.\n\n※Powerful Shot changes to Pitch Perfect while under the effect of Repertoire.\n\nThe Warden's Paean\n\nAbility\nInstant\n24s\n-\n\n30y\n\n0y\n\nRemoves one status affliction from self or target party member that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify.\nDuration: 10s\nGrants Warden's Grace upon successfully removing or nullifying a status affliction.\nWarden's Grace Effect: Reduces damage taken by 25% while increasing HP recovered by healing actions and movement speed by 25%\nDuration: 5s\n\nPitch Perfect\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 9,000 for the first enemy, and 4,500 for all remaining enemies.\nAdditional Effect: Reduces the recast time of Harmonic Arrow by 4s\nCan only be executed while under the effect of Repertoire.\n\n※This action cannot be assigned to a hotbar.\n\nBlast Arrow\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 10,000 to all enemies in a straight line before you.\nAdditional Effect: 10-yalm knockback\nCan only be executed while under the effect of Blast Arrow Ready.\n\n※This action cannot be assigned to a hotbar.\n\nEncore of Light\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDelivers a ranged attack with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's MP by 4,000\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Encore of Light Ready.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFinal Fantasia\n\nInstant\n10s\n-\n\n0y\n\n0y\n\nGrants Final Fantasia.\nFinal Fantasia Effect: Reduces your weaponskill cast time and recast time by 15%, while also increasing damage dealt by self and all party members within 30 yalms by 10%, and movement speed by 25%\nEffect also gradually fills the limit gauge when targets are in combat.\nDuration: 30s\nAdditional Effect: Grants Encore of Light Ready\nDuration: 30s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 120s\nThis action's effects extend through obstructions.\n\n※Action changes to Encore of Light upon execution.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nDervish\n\nAbility\nInstant\n45s\n-\n\n0y\n\n15y\n\nReduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s\n\nBravery\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s\n\nEagle Eye Shot\n\nAbility\nInstant\n15s\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

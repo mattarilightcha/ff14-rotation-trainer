@@ -1,0 +1,2941 @@
+{
+ "job": "summoner",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/summoner/",
+ "pageTitle": "ジョブガイド「召喚士」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nペットアクション\n\nペットアクション（指示）\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\n焔神「イフリート」、岩神「タイタン」、嵐神「ガルーダ」……これら蛮族勢力が呼び降ろした「蛮神」と呼ばれる存在は、エオルゼア諸都市にとって大いなる脅威となっている。\n\nだが、太古の昔には、呼び降ろされた「蛮神」の力を奪い、性質を変容させることで、使い魔として使役する者たちがいた。人は彼らを「異形の獣を召喚する者」、「召喚士」と呼んだが、その存在は今や忘れ去られて久しい。\n\nジョブ開始クエスト\n\n初期クラス：巴術士",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/14a64b174c103f36179809458245dc5e4f4fe0a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/a116b861109158ee5db8e36cf922fae8f923e7d5.png",
+   "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+   "https://lds-img.finalfantasyxiv.com/d/ad9a8a02fa446a43dc54439c8ac1d04dad1384b2.png",
+   "https://lds-img.finalfantasyxiv.com/d/23ce1df0ac3aa5df6aa4b22cdf2369ff364cabc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1b0a655e18e0c446a0774ef264f010a8766db7f.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/34e34cc7ee016c8dc1493838cefc523aea784378.png",
+   "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+   "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/45345cb4f108a07c372f8a355b26c13661d51887.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/d9d328ec1a7b30579dd56ad69fad33981e197f70.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+   "https://lds-img.finalfantasyxiv.com/d/1fa3119e51a423fedea3e3a238497548d0c64960.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/715b4b554a74c32f7c76258400c2e254c6b9d401.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/0e63c4fe037c46bb8fcb3b1402319d0cf1084711.png",
+   "https://lds-img.finalfantasyxiv.com/d/f9335b8757ce19d93307eb4686a8271552de608d.png",
+   "https://lds-img.finalfantasyxiv.com/d/f0d45cc564da364190b10ea26b9978147b3813fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/f7611746e0238a496d85af166ef6da7cff071f43.png",
+   "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+   "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+   "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+   "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+   "https://lds-img.finalfantasyxiv.com/d/7509846b70611448faedd354f58cb626c90fe0b5.png",
+   "https://lds-img.finalfantasyxiv.com/d/2ba7ab41cd2f8dac96ba0c89426eebff963d6be0.png",
+   "https://lds-img.finalfantasyxiv.com/d/41380367e3ff56dfc723ac049dbcacd00ac5c6f8.png",
+   "https://lds-img.finalfantasyxiv.com/d/3fd44c9091d6888f7b3b3ee449d3f71d94d9b05a.png",
+   "https://lds-img.finalfantasyxiv.com/d/e88a1de4bbb8cdaa4c08ef5717797c2872bb42dd.png",
+   "https://lds-img.finalfantasyxiv.com/d/289900e8f6153efeabb601c5cce046b80eed4c88.png",
+   "https://lds-img.finalfantasyxiv.com/d/6c4b1ae3c69201feb415963f374cd3449a4ad7db.png",
+   "https://lds-img.finalfantasyxiv.com/d/88e476ec7f35cfb0f94120dc2ef1b7ed0c00768a.png",
+   "https://lds-img.finalfantasyxiv.com/d/0e7bcb6dd7b20399f831c58338994005b10da6b3.png",
+   "https://lds-img.finalfantasyxiv.com/d/7841102eeddcd359b9bc0af66a8c51aee6c7b258.png",
+   "https://lds-img.finalfantasyxiv.com/d/ffbcb07b5ee81884939776d358768995cb4083ae.png",
+   "https://lds-img.finalfantasyxiv.com/d/3c739e3604ba2d045b691a46c0dbef1a658951f3.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c4900529cf628e2f3fda4134c996741f8b465c3.png",
+   "https://lds-img.finalfantasyxiv.com/d/87c16672ddea00204d4c0489b5417166cdb2546a.png",
+   "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+   "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+   "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+   "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+   "https://lds-img.finalfantasyxiv.com/d/e38e769e9f268f4dcc345b25d310cd53d10d4795.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b50beab981774f701d16ac61674bfc01747f38b.png",
+   "https://lds-img.finalfantasyxiv.com/d/daebb0133d31dbdcc989ecf9fd04ef3acf040cba.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b2befa4d39ad77fa8992d934bd796e836eed13f.png",
+   "https://lds-img.finalfantasyxiv.com/d/596917791c140eef84754e4488df04bfb7aabf87.png",
+   "https://lds-img.finalfantasyxiv.com/d/47555a1b908cba86b377560667afa40e8471b69a.png",
+   "https://lds-img.finalfantasyxiv.com/d/865ff61841e27dc0ede5742b0109c45b672c2ef2.png",
+   "https://lds-img.finalfantasyxiv.com/d/9358e80cfda84c41bef60f05c6f66218842a6f74.png",
+   "https://lds-img.finalfantasyxiv.com/d/aff103d032034722b3a4063ad749eb2bb85793aa.png",
+   "https://lds-img.finalfantasyxiv.com/d/8f6bc648e6b39fcdfdb5d747cc28ea98dd65b441.png",
+   "https://lds-img.finalfantasyxiv.com/d/876d6589f594c3f74d7d2834d297f18da7809199.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ec3b0243e57959d38e7bcbfaaab4fe0bbf8972b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a63bb4e29d20c938e1b68ea0dc0ab64c3a8a9fdf.png",
+   "https://lds-img.finalfantasyxiv.com/d/735d3aabed75539866193ca97b356367f818821f.png",
+   "https://lds-img.finalfantasyxiv.com/d/6a54b05a1f6bd144d28149045f1f9cc61f86daf3.png",
+   "https://lds-img.finalfantasyxiv.com/d/e49b3a55b75a637cb0e6e794d588b2ba4886c742.png",
+   "https://lds-img.finalfantasyxiv.com/d/d5e3edcb915673621b1ccb51774abf494eba6b5e.png",
+   "https://lds-img.finalfantasyxiv.com/d/f25f4c81570c889872295e4ba99496ee6bf3fc89.png",
+   "https://lds-img.finalfantasyxiv.com/d/f224b169e6f0f4b35b361e5c6666293e09a1f0ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1edfc3a4d1b47e1df840e26e0969529070fed58.png",
+   "https://lds-img.finalfantasyxiv.com/d/38e51b1e903bd0b7bc685ec95c2ac105779bbc8c.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b65e3df95387470664286d1e2a0f71dd29b8f77.png",
+   "https://lds-img.finalfantasyxiv.com/d/097755a6dc321ca146451fbb0e5c42dca4d9dd02.png",
+   "https://lds-img.finalfantasyxiv.com/d/e20b0b341a670598c6af9548925d4da35c2e4365.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea98821592c274277d2472f4eb33e014c66a751f.png",
+   "https://lds-img.finalfantasyxiv.com/d/4deaaa9815c4b1bd5fc52e76019d9192342568b9.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ea77f0af91e55be0b619e4dc72e20c5ba56f516.png",
+   "https://lds-img.finalfantasyxiv.com/d/97f91c1009d19698ee6e2e3272b974a4c0dd62ff.png",
+   "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/38c2df65f188c9a5f9a3ad26343f8d835f309628.png",
+   "https://lds-img.finalfantasyxiv.com/d/4fc71ae248e50adc69b9c80b00442de765b93d4b.png",
+   "https://lds-img.finalfantasyxiv.com/d/ce754803ec26e9785e32a9650cffcfc65c56409e.png",
+   "https://lds-img.finalfantasyxiv.com/d/79fa50e276f79eda778dfce164dc19481e609e30.png",
+   "https://lds-img.finalfantasyxiv.com/d/4d754f3d97b8dcf60ebfd971b73e5368971e3965.png",
+   "https://lds-img.finalfantasyxiv.com/d/b85eed363cf03ccdd2ddb535f391e2578dc27f61.png",
+   "https://lds-img.finalfantasyxiv.com/d/f8b0bec880b47f638a9fe401def3fed21370580b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a4f03f56fc241517b2f1d3b66f44968caf83d6f7.png",
+   "https://lds-img.finalfantasyxiv.com/d/38e05864b47b78020da96fc263981869c4b6a5c9.png",
+   "https://lds-img.finalfantasyxiv.com/d/20b52c9ffc91356c6aceaaf9752e942df7bceffb.png",
+   "https://lds-img.finalfantasyxiv.com/d/2debb2b7003d1f2e47bedc8444867d059fa80371.png",
+   "https://lds-img.finalfantasyxiv.com/d/263f013078d0d6bedf26eaabc03f7db2574460dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/486ac3f0e00283c10de5009a26b0cc90c3c424d4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3b078c7a3180375e47a20012da7ca10c5ca364ef.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ef1dd621306bd909533ec27e89d0c1dc00da182.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a26548300186f20cfb000ecd2e279e952b0daf7.png",
+   "https://lds-img.finalfantasyxiv.com/d/43a7121c604b4da78f2a9d4110cc2a85bc6c6425.png",
+   "https://lds-img.finalfantasyxiv.com/d/790d6bfaf5e0b6360d2a39c760e66f1b92ba4b46.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+   "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/i/0gvGM60GDHHYNHVeH2wQJMrVv0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "ルイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：240",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：240"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "サモン・カーバンクル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/14a64b174c103f36179809458245dc5e4f4fe0a6.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚士を補助する能力を持つペットである「カーバンクル」を召喚する。",
+     "descriptionHtml": "召喚士を補助する能力を持つペットである「カーバンクル」を召喚する。"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "守まもりの光ひかり",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a116b861109158ee5db8e36cf922fae8f923e7d5.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているカーバンクルに「守りの光」を実行させる。\n\nこのペットを召喚している召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：カーバンクルが存在する",
+     "descriptionHtml": "召喚しているカーバンクルに「守りの光」を実行させる。<br/><br/>このペットを召喚している召喚士に一定量のダメージを防ぐバリアを張る。<br/>このバリアは対象の最大ＨＰの20％分のダメージを軽減する。<br/>効果時間：30秒<br/>最大チャージ数：2<br/>発動条件：カーバンクルが存在する"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "フィジク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：400",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：400"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "エーテルチャージ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad9a8a02fa446a43dc54439c8ac1d04dad1384b2.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が「エーテルチャージ」状態になる。\n効果時間：15秒\nエーテルチャージ効果：自身が実行するルイン、ルインラ、ルインガの威力を50、アウトバーストの威力を20上昇させる。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身が「エーテルチャージ」状態になる。<br/>効果時間：15秒<br/>エーテルチャージ効果：自身が実行するルイン、ルインラ、ルインガの威力を50、アウトバーストの威力を20上昇させる。<br/>追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>発動条件：自身が戦闘状態かつカーバンクルが存在する。<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "サモン・ルビー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23ce1df0ac3aa5df6aa4b22cdf2369ff364cabc0.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "カーバンクル・ルビーを召喚し、「ルビーの煌き」を実行させる。\n\n対象に接近して火属性魔法攻撃。\n威力：400\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはカーバンクル・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "カーバンクル・ルビーを召喚し、「ルビーの煌き」を実行させる。<br/><br/>対象に接近して火属性魔法攻撃。<br/>威力：400<br/>追加効果：自身に2スタックの「ファイアエーテル」を付与する。<br/>効果時間：30秒<br/>ファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。<br/>発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。<br/>カーバンクルはカーバンクル・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "ジェムシャイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1b0a655e18e0c446a0774ef264f010a8766db7f.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の単体攻撃魔法に変化する。\nアースエーテル効果中：土属性の単体攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の単体攻撃魔法に変化する。",
+     "descriptionHtml": "自身に付与されている「エーテル」に応じたアクションを発動する。<br/>ファイアエーテル効果中：火属性の単体攻撃魔法に変化する。<br/>アースエーテル効果中：土属性の単体攻撃魔法に変化する。<br/>ウィンドエーテル効果中：風属性の単体攻撃魔法に変化する。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "ルビー・ルイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：340\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：340<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "ミアズマバースト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34e34cc7ee016c8dc1493838cefc523aea784378.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：340\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：340<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "エナジードレイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：200\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジーサイフォン」と共有する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：200<br/>追加効果：自身に2スタックの「エーテルフロー」を付与する。<br/>追加効果：自身に「ルインジャ実行可」を付与する。<br/>効果時間：60秒<br/>リキャストタイマーを「エナジーサイフォン」と共有する。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "リザレク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "魔法",
+     "cast": "8秒",
+     "recast": "2.5秒",
+     "cost": "MP2400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象を衰弱状態で蘇生する。",
+     "descriptionHtml": "対象を衰弱状態で蘇生する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "サモン・トパーズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/45345cb4f108a07c372f8a355b26c13661d51887.png",
+     "skillCellText": "サモン・トパーズ\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "カーバンクル・トパーズを召喚し、「トパーズの煌き」を実行させる。\n\n対象に接近して土属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはカーバンクル・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "カーバンクル・トパーズを召喚し、「トパーズの煌き」を実行させる。<br/><br/>対象に接近して土属性魔法攻撃。<br/>威力：400<br/>追加効果：自身に4スタックの「アースエーテル」を付与する。<br/>効果時間：30秒<br/>アースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。<br/>発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。<br/>カーバンクルはカーバンクル・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "トパーズ・ルイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：240\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：240<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "サモン・エメラルド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d9d328ec1a7b30579dd56ad69fad33981e197f70.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "カーバンクル・エメラルドを召喚し、「エメラルドの煌き」を実行させる。\n\n対象に風属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはカーバンクル・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "カーバンクル・エメラルドを召喚し、「エメラルドの煌き」を実行させる。<br/><br/>対象に風属性魔法攻撃。<br/>威力：400<br/>追加効果：自身に4スタックの「ウィンドエーテル」を付与する。<br/>効果時間：30秒<br/>ウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。<br/>発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。<br/>カーバンクルはカーバンクル・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "エメラルド・ルイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：160\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：160<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "アウトバースト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：100"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "ジェムブリリアンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fa3119e51a423fedea3e3a238497548d0c64960.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の範囲攻撃魔法に変化する。\nアースエーテル効果中：土属性の範囲攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の範囲攻撃魔法に変化する。",
+     "descriptionHtml": "自身に付与されている「エーテル」に応じたアクションを発動する。<br/>ファイアエーテル効果中：火属性の範囲攻撃魔法に変化する。<br/>アースエーテル効果中：土属性の範囲攻撃魔法に変化する。<br/>ウィンドエーテル効果中：風属性の範囲攻撃魔法に変化する。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "ルビー・アウトバースト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：160\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：160<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "トパーズ・アウトバースト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：110\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に土属性範囲魔法攻撃。<br/>威力：110<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "エメラルド・アウトバースト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b85c12f6f9b3f7bd5d4599d9fb2d88f42e7d551.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：70\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：70<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "ルインラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "skillCellText": "ルインラ\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：270",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：270"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "サモン・イフリート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/715b4b554a74c32f7c76258400c2e254c6b9d401.png",
+     "skillCellText": "サモン・イフリート\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "イフリート・エギを召喚し、「地獄の火炎」を実行させる。\n\n対象に接近し、前方5mに対して火属性扇範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "イフリート・エギを召喚し、「地獄の火炎」を実行させる。<br/><br/>対象に接近し、前方5mに対して火属性扇範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に2スタックの「ファイアエーテル」を付与する。<br/>効果時間：30秒<br/>ファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。<br/>追加効果：自身に「クリムゾンサイクロン実行可」を付与する<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。<br/>カーバンクルはイフリート・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "ルビー・ルインラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：380\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：380<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "トパーズ・ルインラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：270\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：270<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "エメラルド・ルインラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：170\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：170<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "サモン・タイタン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0e63c4fe037c46bb8fcb3b1402319d0cf1084711.png",
+     "skillCellText": "サモン・タイタン\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "タイタン・エギを召喚し、「大地の怒り」を実行させる。\n\n対象に接近して自身の周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "タイタン・エギを召喚し、「大地の怒り」を実行させる。<br/><br/>対象に接近して自身の周囲5m以内の敵に土属性範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に4スタックの「アースエーテル」を付与する。<br/>効果時間：30秒<br/>アースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。<br/>発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。<br/>カーバンクルはタイタン・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "ペインフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f9335b8757ce19d93307eb4686a8271552de608d.png",
+     "skillCellText": "ペインフレア\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：220\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：220<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "サモン・ガルーダ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0d45cc564da364190b10ea26b9978147b3813fd.png",
+     "skillCellText": "サモン・ガルーダ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "ガルーダ・エギを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "ガルーダ・エギを召喚し、「エリアルブラスト」を実行させる。<br/><br/>対象とその周囲5m以内の敵に風属性範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に4スタックの「ウィンドエーテル」を付与する。<br/>効果時間：30秒<br/>ウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。<br/>追加効果：自身に「スリップストリーム実行可」を付与する<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。<br/>カーバンクルはガルーダ・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "エナジーサイフォン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f7611746e0238a496d85af166ef6da7cff071f43.png",
+     "skillCellText": "エナジーサイフォン\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジードレイン」と共有する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：100<br/>追加効果：自身に2スタックの「エーテルフロー」を付与する。<br/>追加効果：自身に「ルインジャ実行可」を付与する。<br/>効果時間：60秒<br/>リキャストタイマーを「エナジードレイン」と共有する。"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "ルインガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+     "skillCellText": "ルインガ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：400",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：400"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "ルビー・ルインガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：410\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：410<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "トパーズ・ルインガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：300\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：300<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "エメラルド・ルインガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d133d1c9ecf315375c76bc25ddd5c01d9ce56512.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：180\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：180<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "トランス・バハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7509846b70611448faedd354f58cb626c90fe0b5.png",
+     "skillCellText": "トランス・バハムート\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が「トランス・バハムート」状態になる。\n効果時間：15秒\n追加効果：ルインガがアストラルインパルスに変化し、アウトバーストがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身が「トランス・バハムート」状態になる。<br/>効果時間：15秒<br/>追加効果：ルインガがアストラルインパルスに変化し、アウトバーストがアストラルフレアに変化する。<br/>追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>発動条件：自身が戦闘状態かつカーバンクルが存在する。<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "アストラルインパルス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2ba7ab41cd2f8dac96ba0c89426eebff963d6be0.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：500\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアストラルインパルスに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：500<br/>発動条件：「トランス・バハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとルインガがアストラルインパルスに変化する。"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "アストラルフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/41380367e3ff56dfc723ac049dbcacd00ac5c6f8.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：180\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアストラルフレアに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：180<br/>発動条件：「トランス・バハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとトライディザスターがアストラルフレアに変化する。"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "アストラルフロウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3fd44c9091d6888f7b3b3ee449d3f71d94d9b05a.png",
+     "skillCellText": "アストラルフロウ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "特定のアクションの実行時に、このアクションが変化する。\nサモン・バハムート実行時：「デスフレア」に変化する。\nサモン・フェニックス実行時：「再生の炎」に変化する。\nサモン・イフリートII実行時：「クリムゾンサイクロン」に変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：「マウンテンバスター」に変化する。\nサモン・ガルーダII実行時：「スリップストリーム」に変化する。\nサモン・ソルバハムート実行時：「ソルフレア」に変化する。",
+     "descriptionHtml": "特定のアクションの実行時に、このアクションが変化する。<br/>サモン・バハムート実行時：「デスフレア」に変化する。<br/>サモン・フェニックス実行時：「再生の炎」に変化する。<br/>サモン・イフリートII実行時：「クリムゾンサイクロン」に変化する。<br/>トパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：「マウンテンバスター」に変化する。<br/>サモン・ガルーダII実行時：「スリップストリーム」に変化する。<br/>サモン・ソルバハムート実行時：「ソルフレア」に変化する。"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "デスフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e88a1de4bbb8cdaa4c08ef5717797c2872bb42dd.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがデスフレアに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：500<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：「トランス・バハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウがデスフレアに変化する。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "ルインジャ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/289900e8f6153efeabb601c5cce046b80eed4c88.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n発動条件：「ルインジャ実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：520<br/>2体目以降の対象への威力は60％減少する。<br/>発動条件：「ルインジャ実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "シアリングライト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6c4b1ae3c69201feb415963f374cd3449a4ad7db.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「シアリングスパーク実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。<br/>効果時間：20秒<br/>追加効果：自身に「シアリングスパーク実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "サモン・バハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/88e476ec7f35cfb0f94120dc2ef1b7ed0c00768a.png",
+     "skillCellText": "サモン・バハムート\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "敵単体を対象とする。\n自身が「トランス・バハムート」状態になり、さらにデミ・バハムートを顕現させる。\n顕現時間：15秒\nデミ・バハムートは召喚士の攻撃対象に「ウィルムウェーブ」による攻撃を行う。\n追加効果：ルインガがアストラルインパルスに変化し、トライディザスターがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・バハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "敵単体を対象とする。<br/>自身が「トランス・バハムート」状態になり、さらにデミ・バハムートを顕現させる。<br/>顕現時間：15秒<br/>デミ・バハムートは召喚士の攻撃対象に「ウィルムウェーブ」による攻撃を行う。<br/>追加効果：ルインガがアストラルインパルスに変化し、トライディザスターがアストラルフレアに変化する。<br/>追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>このアクションを実行すると、対象から自身への敵視を上昇させる。<br/>発動条件：カーバンクルが存在する<br/>カーバンクルはデミ・バハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__42",
+     "name": "ウィルムウェーブ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0e7bcb6dd7b20399f831c58338994005b10da6b3.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "50m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：150\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：150<br/>発動条件：デミ・バハムートが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__43",
+     "name": "エンキンドル・バハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7841102eeddcd359b9bc0af66a8c51aee6c7b258.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "顕現しているデミ・バハムートに「アク・モーン」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している",
+     "descriptionHtml": "顕現しているデミ・バハムートに「アク・モーン」を実行させる。<br/><br/>対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1300<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：デミ・バハムートが顕現している"
+    },
+    {
+     "rowId": "pve_action__44",
+     "name": "アク・モーン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ffbcb07b5ee81884939776d358768995cb4083ae.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "50m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1300<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：デミ・バハムートが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__45",
+     "name": "ルビー・リチュアル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3c739e3604ba2d045b691a46c0dbef1a658951f3.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：620\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがルビー・リチュアルに変化する。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：620<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムシャインがルビー・リチュアルに変化する。"
+    },
+    {
+     "rowId": "pve_action__46",
+     "name": "トパーズ・リチュアル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c4900529cf628e2f3fda4134c996741f8b465c3.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：340\n追加効果：自身に「マウンテンバスター実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがトパーズ・リチュアルに変化する。",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：340<br/>追加効果：自身に「マウンテンバスター実行可」を付与する。<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムシャインがトパーズ・リチュアルに変化する。"
+    },
+    {
+     "rowId": "pve_action__47",
+     "name": "エメラルド・リチュアル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/87c16672ddea00204d4c0489b5417166cdb2546a.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：280\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがエメラルド・リチュアルに変化する。",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：280<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムシャインがエメラルド・リチュアルに変化する。"
+    },
+    {
+     "rowId": "pve_action__48",
+     "name": "トライディザスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：120"
+    },
+    {
+     "rowId": "pve_action__49",
+     "name": "ルビー・ディザスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：190\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：190<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__50",
+     "name": "トパーズ・ディザスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：130\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に土属性範囲魔法攻撃。<br/>威力：130<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__51",
+     "name": "エメラルド・ディザスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20e1e40922c159401231154ab0cc94c789b1f58f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：90\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：90<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__52",
+     "name": "サモン・フェニックス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e38e769e9f268f4dcc345b25d310cd53d10d4795.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "敵単体を対象とする。\n自身が「トランス・フェニックス」状態になり、さらにデミ・フェニックスを顕現させる。\n顕現時間：15秒\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\nまた、デミ・フェニックスは召喚士の攻撃対象に「火焔」による攻撃を行う。\n追加効果：ルインガが霊泉の炎に変化し、トライディザスターが煉獄の炎に変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・フェニックスの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・フェニックスに変化する。",
+     "descriptionHtml": "敵単体を対象とする。<br/>自身が「トランス・フェニックス」状態になり、さらにデミ・フェニックスを顕現させる。<br/>顕現時間：15秒<br/>デミ・フェニックスは顕現時に「不死鳥の翼」を実行する。<br/>また、デミ・フェニックスは召喚士の攻撃対象に「火焔」による攻撃を行う。<br/>追加効果：ルインガが霊泉の炎に変化し、トライディザスターが煉獄の炎に変化する。<br/>追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>このアクションを実行すると、対象から自身への敵視を上昇させる。<br/>発動条件：カーバンクルが存在する<br/>カーバンクルはデミ・フェニックスの顕現時に帰還するが、顕現時間が経過すると再出現する。<br/>この魔法は固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとサモン・バハムートがサモン・フェニックスに変化する。"
+    },
+    {
+     "rowId": "pve_action__53",
+     "name": "霊泉れいせんの炎ほのお",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b50beab981774f701d16ac61674bfc01747f38b.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：580\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガが霊泉の炎に変化する。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：580<br/>発動条件：「トランス・フェニックス」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとルインガが霊泉の炎に変化する。"
+    },
+    {
+     "rowId": "pve_action__54",
+     "name": "煉獄れんごくの炎ほのお",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/daebb0133d31dbdcc989ecf9fd04ef3acf040cba.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "8m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：240\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターが煉獄の炎に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：240<br/>発動条件：「トランス・フェニックス」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとトライディザスターが煉獄の炎に変化する。"
+    },
+    {
+     "rowId": "pve_action__55",
+     "name": "再生さいせいの炎ほのお",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b2befa4d39ad77fa8992d934bd796e836eed13f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：400\n追加効果：対象に「再生の炎」を付与する。\n効果時間：30秒\n再生の炎効果：対象のＨＰが75％を下回るか効果時間が経過すると、ＨＰ継続回復効果が発動する。\n回復力：200\n効果時間：15秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウが再生の炎に変化する。",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象のＨＰを回復する。<br/>回復力：400<br/>追加効果：対象に「再生の炎」を付与する。<br/>効果時間：30秒<br/>再生の炎効果：対象のＨＰが75％を下回るか効果時間が経過すると、ＨＰ継続回復効果が発動する。<br/>回復力：200<br/>効果時間：15秒<br/>発動条件：「トランス・フェニックス」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウが再生の炎に変化する。"
+    },
+    {
+     "rowId": "pve_action__56",
+     "name": "エンキンドル・フェニックス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/596917791c140eef84754e4488df04bfb7aabf87.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "顕現しているデミ・フェニックスに「リヴァレーション」を実行させる。\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・フェニックスに変化する。",
+     "descriptionHtml": "顕現しているデミ・フェニックスに「リヴァレーション」を実行させる。<br/><br/>対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：1300<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：デミ・フェニックスが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとエンキンドル・バハムートがエンキンドル・フェニックスに変化する。"
+    },
+    {
+     "rowId": "pve_action__57",
+     "name": "不死鳥ふしちょうの翼つばさ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/47555a1b908cba86b377560667afa40e8471b69a.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：100<br/>効果時間：21秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__58",
+     "name": "火焔かえん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/865ff61841e27dc0ede5742b0109c45b672c2ef2.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "50m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：150\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：150<br/>発動条件：デミ・フェニックスが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__59",
+     "name": "リヴァレーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9358e80cfda84c41bef60f05c6f66218842a6f74.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "50m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：1300<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：デミ・フェニックスが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__60",
+     "name": "ルビー・カタストロフィ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/aff103d032034722b3a4063ad749eb2bb85793aa.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "2.8秒",
+     "recast": "3秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：210\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがルビー・カタストロフィに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：210<br/>発動条件：「ファイアエーテル」<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムブリリアンスがルビー・カタストロフィに変化する。"
+    },
+    {
+     "rowId": "pve_action__61",
+     "name": "トパーズ・カタストロフィ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8f6bc648e6b39fcdfdb5d747cc28ea98dd65b441.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：140\n追加効果：自身に「マウンテンバスター実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがトパーズ・カタストロフィに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に土属性範囲魔法攻撃。<br/>威力：140<br/>追加効果：自身に「マウンテンバスター実行可」を付与する<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：「アースエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムブリリアンスがトパーズ・カタストロフィに変化する。"
+    },
+    {
+     "rowId": "pve_action__62",
+     "name": "エメラルド・カタストロフィ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/876d6589f594c3f74d7d2834d297f18da7809199.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：100\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがエメラルド・カタストロフィに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：100<br/>発動条件：「ウィンドエーテル」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジェムブリリアンスがエメラルド・カタストロフィに変化する。"
+    },
+    {
+     "rowId": "pve_action__63",
+     "name": "クリムゾンサイクロン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ec3b0243e57959d38e7bcbfaaab4fe0bbf8972b.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象に急接近して、対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「クリムゾンサイクロン実行可」効果中\nバインド中は実行不可。\nこのアクションを実行すると「クリムゾンストライク」に変化する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがクリムゾンサイクロンに変化する。",
+     "descriptionHtml": "対象に急接近して、対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：560<br/>2体目以降の対象への威力は60％減少する。<br/>追加効果：自身に「クリムゾンストライク実行可」を付与する。<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：「クリムゾンサイクロン実行可」効果中<br/>バインド中は実行不可。<br/>このアクションを実行すると「クリムゾンストライク」に変化する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウがクリムゾンサイクロンに変化する。"
+    },
+    {
+     "rowId": "pve_action__64",
+     "name": "クリムゾンストライク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a63bb4e29d20c938e1b68ea0dc0ab64c3a8a9fdf.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクリムゾンサイクロンがクリムゾンストライクに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：560<br/>2体目以降の対象への威力は60％減少する。<br/>発動条件：「クリムゾンストライク実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとクリムゾンサイクロンがクリムゾンストライクに変化する。"
+    },
+    {
+     "rowId": "pve_action__65",
+     "name": "マウンテンバスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/735d3aabed75539866193ca97b356367f818821f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：160\n2体目以降の対象への威力は60％減少する。\n発動条件：「マウンテンバスター実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがマウンテンバスターに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に土属性範囲魔法攻撃。<br/>威力：160<br/>2体目以降の対象への威力は60％減少する。<br/>発動条件：「マウンテンバスター実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウがマウンテンバスターに変化する。"
+    },
+    {
+     "rowId": "pve_action__66",
+     "name": "スリップストリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6a54b05a1f6bd144d28149045f1f9cc61f86daf3.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "3.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n追加効果：対象を中心にダメージエリアを生成する。\n威力：30\n効果時間：15秒\n発動条件：「スリップストリーム実行可」効果中\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがスリップストリームに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：520<br/>2体目以降の対象への威力は60％減少する。<br/>追加効果：対象を中心にダメージエリアを生成する。<br/>威力：30<br/>効果時間：15秒<br/>発動条件：「スリップストリーム実行可」効果中<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウがスリップストリームに変化する。"
+    },
+    {
+     "rowId": "pve_action__67",
+     "name": "サモン・イフリートIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e49b3a55b75a637cb0e6e794d588b2ba4886c742.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "イフリート・ルビーを召喚し、「地獄の火炎」を実行させる。\n\n対象とその周囲5m以内の敵に火属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "イフリート・ルビーを召喚し、「地獄の火炎」を実行させる。<br/><br/>対象とその周囲5m以内の敵に火属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に2スタックの「ファイアエーテル」を付与する。<br/>効果時間：30秒<br/>ファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。<br/>追加効果：自身に「クリムゾンサイクロン実行可」を付与する。<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。<br/>カーバンクルはイフリート・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__68",
+     "name": "サモン・タイタンIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d5e3edcb915673621b1ccb51774abf494eba6b5e.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "タイタン・トパーズを召喚し、「大地の怒り」を実行させる。\n\n対象とその周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "タイタン・トパーズを召喚し、「大地の怒り」を実行させる。<br/><br/>対象とその周囲5m以内の敵に土属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に4スタックの「アースエーテル」を付与する。<br/>効果時間：30秒<br/>アースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。<br/>発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。<br/>カーバンクルはタイタン・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__69",
+     "name": "サモン・ガルーダIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f25f4c81570c889872295e4ba99496ee6bf3fc89.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "ガルーダ・エメラルドを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。",
+     "descriptionHtml": "ガルーダ・エメラルドを召喚し、「エリアルブラスト」を実行させる。<br/><br/>対象とその周囲5m以内の敵に風属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に4スタックの「ウィンドエーテル」を付与する。<br/>効果時間：30秒<br/>ウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。<br/>追加効果：自身に「スリップストリーム実行可」を付与する。<br/>効果時間：永続<br/>この効果は他のサモン系アクションを実行すると解除される。<br/>発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。<br/>カーバンクルはガルーダ・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。"
+    },
+    {
+     "rowId": "pve_action__70",
+     "name": "ミアズマノヴァ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f224b169e6f0f4b35b361e5c6666293e09a1f0ac.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：500\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：500<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__71",
+     "name": "シアリングスパーク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1edfc3a4d1b47e1df840e26e0969529070fed58.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：700\n発動条件：「シアリングスパーク実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：700<br/>発動条件：「シアリングスパーク実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__72",
+     "name": "ルクス・ソラリス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/38e51b1e903bd0b7bc685ec95c2ac105779bbc8c.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：500\n発動条件：「ルクス・ソラリス実行可」効果中",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：500<br/>発動条件：「ルクス・ソラリス実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__73",
+     "name": "サモン・ソルバハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b65e3df95387470664286d1e2a0f71dd29b8f77.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "敵単体を対象とする。\n自身が「トランス・ソルバハムート」状態になり、さらにソルバハムートを顕現させる。\n顕現時間：15秒\nソルバハムートは召喚士の攻撃対象に「光芒」による攻撃を行う。\n追加効果：自身に「ルクス・ソラリス実行可」を付与する。\n効果時間：30秒\n追加効果：ルインガがアンブラルインパルスに変化し、トライディザスターがアンブラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはソルバハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・ソルバハムートに変化する。",
+     "descriptionHtml": "敵単体を対象とする。<br/>自身が「トランス・ソルバハムート」状態になり、さらにソルバハムートを顕現させる。<br/>顕現時間：15秒<br/>ソルバハムートは召喚士の攻撃対象に「光芒」による攻撃を行う。<br/>追加効果：自身に「ルクス・ソラリス実行可」を付与する。<br/>効果時間：30秒<br/>追加効果：ルインガがアンブラルインパルスに変化し、トライディザスターがアンブラルフレアに変化する。<br/>追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>このアクションを実行すると、対象から自身への敵視を上昇させる。<br/>発動条件：カーバンクルが存在する<br/>カーバンクルはソルバハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。<br/>この魔法は固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとサモン・バハムートがサモン・ソルバハムートに変化する。"
+    },
+    {
+     "rowId": "pve_action__74",
+     "name": "アンブラルインパルス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/097755a6dc321ca146451fbb0e5c42dca4d9dd02.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：640\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアンブラルインパルスに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：640<br/>発動条件：「トランス・ソルバハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとルインガがアンブラルインパルスに変化する。"
+    },
+    {
+     "rowId": "pve_action__75",
+     "name": "アンブラルフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e20b0b341a670598c6af9548925d4da35c2e4365.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "8m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアンブラルフレアに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：300<br/>発動条件：「トランス・ソルバハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとトライディザスターがアンブラルフレアに変化する。"
+    },
+    {
+     "rowId": "pve_action__76",
+     "name": "ソルフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea98821592c274277d2472f4eb33e014c66a751f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1000\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがソルフレアに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1000<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：「トランス・ソルバハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとアストラルフロウがソルフレアに変化する。"
+    },
+    {
+     "rowId": "pve_action__77",
+     "name": "エンキンドル・ソルバハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4deaaa9815c4b1bd5fc52e76019d9192342568b9.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "顕現しているソルバハムートに「エクソダス」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・ソルバハムートに変化する。",
+     "descriptionHtml": "顕現しているソルバハムートに「エクソダス」を実行させる。<br/><br/>対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1500<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：ソルバハムートが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとエンキンドル・バハムートがエンキンドル・ソルバハムートに変化する。"
+    },
+    {
+     "rowId": "pve_action__78",
+     "name": "光芒こうぼう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ea77f0af91e55be0b619e4dc72e20c5ba56f516.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "50m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：160\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：160<br/>発動条件：ソルバハムートが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__79",
+     "name": "エクソダス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/97f91c1009d19698ee6e2e3272b974a4c0dd62ff.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "50m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1500<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：ソルバハムートが顕現している<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pet",
+   "title": "ペットアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_pet_action__01",
+     "name": "守まもりの光ひかり",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/926e42e9a30e357e4214c95427cd1dd1592974c5.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "このペットを召喚している巴術士および召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "このペットを召喚している巴術士および召喚士に一定量のダメージを防ぐバリアを張る。<br/>このバリアは対象の最大ＨＰの20％分のダメージを軽減する。<br/>効果時間：30秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "アドル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "スリプル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "MP800",
+     "range": "30m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。",
+     "descriptionHtml": "対象とその周囲の敵に睡眠を付与する。<br/>効果時間：30秒<br/>実行後にオートアタックを停止する。"
+    },
+    {
+     "rowId": "mrange_action__03",
+     "name": "ルーシッドドリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒",
+     "descriptionHtml": "自身のＭＰを継続回復する。<br/>効果量：55<br/>効果時間：21秒"
+    },
+    {
+     "rowId": "mrange_action__04",
+     "name": "迅速魔じんそくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "mrange_action__05",
+     "name": "堅実魔けんじつま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 44,
+     "jobclassText": "Lv44",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒",
+     "descriptionHtml": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。<br/>さらに、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "エーテルチャージ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/833fb7a7289adc987612c6fe7ec7c0c52f1ca023.png",
+     "skillCellText": "エーテルチャージ効果こうかアップ\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "description": "自身に「ルビーの神秘」と「トパーズの神秘」を付与する。\n発動条件：エーテルチャージ実行時",
+     "descriptionHtml": "自身に「ルビーの神秘」と「トパーズの神秘」を付与する。<br/>発動条件：エーテルチャージ実行時"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "アクションダメージ・回復量かいふくりょうアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。<br/>また、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "エーテルチャージ効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d9ea40e15cdc9ca551e6f6cd3c37e79c41b0f7d4.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "description": "自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：エーテルチャージ実行時",
+     "descriptionHtml": "自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。<br/>発動条件：エーテルチャージ実行時"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "ルインマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c9c9593424873cebf5410f30102cde070a67b4ef.png",
+     "skillCellText": "ルインマスタリー\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "description": "ルインがルインラに変化する。",
+     "descriptionHtml": "ルインがルインラに変化する。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "サモン・ルビーマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/87cdc3ebbd71bec68467522fd39ab574c96b8a8c.png",
+     "skillCellText": "サモン・ルビーマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "description": "サモン・ルビーがサモン・イフリートに変化する。",
+     "descriptionHtml": "サモン・ルビーがサモン・イフリートに変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "サモン・トパーズマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4dd5cef826208f1d99ceaed3795fbb6228c5b7f7.png",
+     "skillCellText": "サモン・トパーズマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "description": "サモン・トパーズがサモン・タイタンに変化する。",
+     "descriptionHtml": "サモン・トパーズがサモン・タイタンに変化する。"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "アクションダメージ・回復量かいふくりょうアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。<br/>また、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "サモン・エメラルドマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/95e9ac235eaad597ff4c7e534c859c59045f5fc8.png",
+     "skillCellText": "サモン・エメラルドマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "description": "サモン・エメラルドがサモン・ガルーダに変化する。",
+     "descriptionHtml": "サモン・エメラルドがサモン・ガルーダに変化する。"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "エンキンドル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d90dbe61dd6ffc1cca8872d8e1948168a353459.png",
+     "skillCellText": "エンキンドル\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "description": "「サモン・イフリート」「サモン・タイタン」「サモン・ガルーダ」により召喚するエギの実行するアクションが変化する。\nイフリート・エギ：バーニングストライクが地獄の火炎に変化する。\nタイタン・エギ：ロックバスターが大地の怒りに変化する。\nガルーダ・エギ：エリアルスラッシュがエリアルブラストに変化する。",
+     "descriptionHtml": "「サモン・イフリート」「サモン・タイタン」「サモン・ガルーダ」により召喚するエギの実行するアクションが変化する。<br/>イフリート・エギ：バーニングストライクが地獄の火炎に変化する。<br/>タイタン・エギ：ロックバスターが大地の怒りに変化する。<br/>ガルーダ・エギ：エリアルスラッシュがエリアルブラストに変化する。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "ルインマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d4ea457991d066ae3bc15e62c2f68d34411c16cf.png",
+     "skillCellText": "ルインマスタリーIIつー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "ルインラがルインガに変化する。",
+     "descriptionHtml": "ルインラがルインガに変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "エーテルチャージマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7eb19b3383fa7a5695f77d1b0a43fe3345cbf1bf.png",
+     "skillCellText": "エーテルチャージマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "description": "エーテルチャージがトランス・バハムートに変化する。",
+     "descriptionHtml": "エーテルチャージがトランス・バハムートに変化する。"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "エナジーサイフォン効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/256ecd04c595d81c1a829323df4363bce875669b.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "description": "自身に「ルインジャ実行可」が付与されるようになる。\n発動条件：エナジードレインとエナジーサイフォン実行時",
+     "descriptionHtml": "自身に「ルインジャ実行可」が付与されるようになる。<br/>発動条件：エナジードレインとエナジーサイフォン実行時"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "トランス・バハムート効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b74dac96842d894ce48a836a547a9740f43ac5fd.png",
+     "skillCellText": "トランス・バハムート効果こうかアップ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "description": "トランス・バハムートがサモン・バハムートに変化する。",
+     "descriptionHtml": "トランス・バハムートがサモン・バハムートに変化する。"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "ルインマスタリーIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0c4b8afc7743c94419459a8c769684c18f9b45da.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "description": "自身に付与されている「エーテル」によりジェムシャインが変化する。\nファイアエーテル効果中：ルビー・リチュアルに変化する。\nアースエーテル効果中：トパーズ・リチュアルに変化する。\nウィンドエーテル効果中：エメラルド・リチュアルに変化する。",
+     "descriptionHtml": "自身に付与されている「エーテル」によりジェムシャインが変化する。<br/>ファイアエーテル効果中：ルビー・リチュアルに変化する。<br/>アースエーテル効果中：トパーズ・リチュアルに変化する。<br/>ウィンドエーテル効果中：エメラルド・リチュアルに変化する。"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "アウトバーストマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23c503aa80bd76d21530f3315437c0a508a00728.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "アウトバーストがトライディザスターに変化する。",
+     "descriptionHtml": "アウトバーストがトライディザスターに変化する。"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "サモン・バハムート効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ffa880b9e6fa7885cd1a189c65407b7684193713.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "description": "サモン・バハムートがサモン・フェニックスに変化する。\n発動条件：デミ・バハムートの帰還後",
+     "descriptionHtml": "サモン・バハムートがサモン・フェニックスに変化する。<br/>発動条件：デミ・バハムートの帰還後"
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "アウトバーストマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/448eb6e9ab2d87010ba3b5a68d34811a257bf508.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "自身に付与されている「エーテル」によりジェムブリリアンスが変化する。\nファイアエーテル効果中：ルビー・カタストロフィに変化する。\nアースエーテル効果中：トパーズ・カタストロフィに変化する。\nウィンドエーテル効果中：エメラルド・カタストロフィに変化する。",
+     "descriptionHtml": "自身に付与されている「エーテル」によりジェムブリリアンスが変化する。<br/>ファイアエーテル効果中：ルビー・カタストロフィに変化する。<br/>アースエーテル効果中：トパーズ・カタストロフィに変化する。<br/>ウィンドエーテル効果中：エメラルド・カタストロフィに変化する。"
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "ルインマスタリーIVふぉー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0cc6b901ac12a7f7e940cef007a0c1e4f10fb92f.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "ルインガ、ルビー・リチュアル、トパーズ・リチュアル、エメラルド・リチュアルの威力を上昇させる。\n\nルインガの威力：310\nルビー・リチュアルの威力：510\nトパーズ・リチュアルの威力：330\nエメラルド・リチュアルの威力：230",
+     "descriptionHtml": "ルインガ、ルビー・リチュアル、トパーズ・リチュアル、エメラルド・リチュアルの威力を上昇させる。<br/><br/>ルインガの威力：310<br/>ルビー・リチュアルの威力：510<br/>トパーズ・リチュアルの威力：330<br/>エメラルド・リチュアルの威力：230"
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "エレメントマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/716d563631b5801b1f84e2b425b59a425090d1cd.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "description": "特定のアクションの実行時にアストラルフロウが変化する。\nサモン・イフリート実行時：クリムゾンサイクロンに変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：マウンテンバスターに変化する。\nサモン・ガルーダ実行時：スリップストリームに変化する。",
+     "descriptionHtml": "特定のアクションの実行時にアストラルフロウが変化する。<br/>サモン・イフリート実行時：クリムゾンサイクロンに変化する。<br/>トパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：マウンテンバスターに変化する。<br/>サモン・ガルーダ実行時：スリップストリームに変化する。"
+    },
+    {
+     "rowId": "trait_action__20",
+     "name": "守まもりの光ひかり効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9dde5b48a5a7ec709bafd340ac139865a7108c10.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "守りの光がチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "守りの光がチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__21",
+     "name": "エンキンドルIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b5dc1990c0140d8e9012af3816de515f30f17359.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "サモン・イフリートがサモン・イフリートIIに、サモン・タイタンがサモン・タイタンIIに、サモン・ガルーダがサモン・ガルーダIIに変化する。",
+     "descriptionHtml": "サモン・イフリートがサモン・イフリートIIに、サモン・タイタンがサモン・タイタンIIに、サモン・ガルーダがサモン・ガルーダIIに変化する。"
+    },
+    {
+     "rowId": "trait_action__22",
+     "name": "ミアズマバーストマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/53facd8b25710db47632a36af5234c873d2e0fb9.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "ミアズマバーストがミアズマノヴァに変化する。",
+     "descriptionHtml": "ミアズマバーストがミアズマノヴァに変化する。"
+    },
+    {
+     "rowId": "trait_action__23",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\nルインガの威力：400\nアストラルインパルスの威力：500\nルインジャの威力：520\nルビー・リチュアルの威力：620\nトパーズ・リチュアルの威力：340\nエメラルド・リチュアルの威力：280\n霊泉の炎の威力：580\nクリムゾンストライクの威力：560\nクリムゾンサイクロンの威力：560\nマウンテンバスターの威力：160\nスリップストリームの威力：520\n地獄の火炎の威力：800\n大地の怒りの威力：800\nエリアルブラストの威力：800",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ルインガの威力：400<br/>アストラルインパルスの威力：500<br/>ルインジャの威力：520<br/>ルビー・リチュアルの威力：620<br/>トパーズ・リチュアルの威力：340<br/>エメラルド・リチュアルの威力：280<br/>霊泉の炎の威力：580<br/>クリムゾンストライクの威力：560<br/>クリムゾンサイクロンの威力：560<br/>マウンテンバスターの威力：160<br/>スリップストリームの威力：520<br/>地獄の火炎の威力：800<br/>大地の怒りの威力：800<br/>エリアルブラストの威力：800"
+    },
+    {
+     "rowId": "trait_action__24",
+     "name": "シアリングライト効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/449b3c71c516f6bef021c30b88e2fa442cfb8b6b.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "自身に「シアリングスパーク実行可」が付与される。\n効果時間：30秒\n発動条件：シアリングライト実行時",
+     "descriptionHtml": "自身に「シアリングスパーク実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：シアリングライト実行時"
+    },
+    {
+     "rowId": "trait_action__25",
+     "name": "サモン・バハムート効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6a8260bfa47331ec8f85dd4a445b793acdcbc468.png",
+     "acquired": [
+      {
+       "class": "召喚士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "ソルバハムートと、デミ・バハムートおよびデミ・フェニックスを交互に顕現させることができるようになる。",
+     "descriptionHtml": "ソルバハムートと、デミ・バハムートおよびデミ・フェニックスを交互に顕現させることができるようになる。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "迅速魔じんそくま効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "迅速魔のリキャストタイムを40秒に短縮する。",
+     "descriptionHtml": "迅速魔のリキャストタイムを40秒に短縮する。"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "アドル効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/590a381c0421f33d428c1dd51293c715a1a53ee7.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "アドルの効果時間を15秒に延長する。",
+     "descriptionHtml": "アドルの効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "ルインガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/38c2df65f188c9a5f9a3ad26343f8d835f309628.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\n「ルインジャ実行可」効果中はルインジャに変化する。\n「トランス・バハムート」効果中はアストラルインパルスに変化する。\n「トランス・フェニックス」効果中は霊泉の炎に変化する。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>「ルインジャ実行可」効果中はルインジャに変化する。<br/>「トランス・バハムート」効果中はアストラルインパルスに変化する。<br/>「トランス・フェニックス」効果中は霊泉の炎に変化する。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "マウンテンバスター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4fc71ae248e50adc69b9c80b00442de765b93d4b.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲魔法攻撃。\n威力：12000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身が受けるダメージを15％軽減させる。\n効果時間：5秒\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に向かって前方扇範囲魔法攻撃。<br/>威力：12000<br/>追加効果：対象をスタンさせる。<br/>効果時間：2秒<br/>追加効果：自身が受けるダメージを15％軽減させる。<br/>効果時間：5秒<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "スリップストリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce754803ec26e9785e32a9650cffcfc65c56409e.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "24秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "10m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n敵への追加効果：対象に継続ダメージを与える。\n威力：4500\n効果時間：6秒\n味方への追加効果：自身および攻撃範囲内にいるパーティメンバーの移動速度を25％上昇させる。\n効果時間：6秒\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：9000<br/>敵への追加効果：対象に継続ダメージを与える。<br/>威力：4500<br/>効果時間：6秒<br/>味方への追加効果：自身および攻撃範囲内にいるパーティメンバーの移動速度を25％上昇させる。<br/>効果時間：6秒<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "クリムゾンサイクロン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/79fa50e276f79eda778dfce164dc19481e609e30.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象に急接近して、対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：10秒\nバインド中は実行不可。\nこのアクションを実行するとクリムゾンストライクに変化する。",
+     "descriptionHtml": "対象に急接近して、対象とその周囲の敵に範囲魔法攻撃。 <br/>威力：6000<br/>追加効果：自身に「クリムゾンストライク実行可」を付与する。<br/>効果時間：10秒<br/>バインド中は実行不可。<br/>このアクションを実行するとクリムゾンストライクに変化する。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "ミアズマノヴァ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4d754f3d97b8dcf60ebfd971b73e5368971e3965.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：5000\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：5000<br/>追加効果：自身に「ルインジャ実行可」を付与する。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "守まもりの光ひかり",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b85eed363cf03ccdd2ddb535f391e2578dc27f61.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象に被ダメージを25％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象に被ダメージを25％軽減し、かつ一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力12000相当<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "ルインジャ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f8b0bec880b47f638a9fe401def3fed21370580b.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n発動条件：「ルインジャ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>発動条件：「ルインジャ実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "アストラルインパルス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a4f03f56fc241517b2f1d3b66f44968caf83d6f7.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：8000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：8000<br/>発動条件：「トランス・バハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "霊泉れいせんの炎ほのお",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/38e05864b47b78020da96fc263981869c4b6a5c9.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>発動条件：「トランス・フェニックス」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "クリムゾンストライク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20b52c9ffc91356c6aceaaf9752e942df7bceffb.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n2体目以降の対象への威力は8000に減少する。\n追加効果：メインターゲットを中心に、周囲の敵を放射状に5mノックバックする。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：12000<br/>2体目以降の対象への威力は8000に減少する。<br/>追加効果：メインターゲットを中心に、周囲の敵を放射状に5mノックバックする。<br/>発動条件：「クリムゾンストライク実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "デスフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2debb2b7003d1f2e47bedc8444867d059fa80371.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：10000<br/>発動条件：「トランス・バハムート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "煉獄れんごくの炎ほのお",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/263f013078d0d6bedf26eaabc03f7db2574460dc.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：7500\n追加効果：対象の与ダメージを50％減少させる。\n効果時間：6秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：7500<br/>追加効果：対象の与ダメージを50％減少させる。<br/>効果時間：6秒<br/>発動条件：「トランス・フェニックス」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "ウィルムウェーブ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/486ac3f0e00283c10de5009a26b0cc90c3c424d4.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：8000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：8000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "火焔かえん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3b078c7a3180375e47a20012da7ca10c5ca364ef.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：4000\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：4000<br/>追加効果：対象に継続ダメージを付与する。<br/>威力：4000<br/>効果時間：6秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "サモン・バハムート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ef1dd621306bd909533ec27e89d0c1dc00da182.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "15m",
+     "description": "指定地点にデミ・バハムートを顕現させ、自身が「トランス・バハムート」状態になる。\n顕現時間：20秒\nトランス・バハムート効果：ルインガがアストラルインパルスに変化する。\nデミ・バハムートは顕現時に「メガフレア」を実行する。\n顕現したデミ・バハムートは、周囲30m以内にいる敵の中で、最も現在ＨＰが少ない敵に対してウィルムウェーブを実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとデスフレアに変化する。",
+     "descriptionHtml": "指定地点にデミ・バハムートを顕現させ、自身が「トランス・バハムート」状態になる。<br/>顕現時間：20秒<br/>トランス・バハムート効果：ルインガがアストラルインパルスに変化する。<br/>デミ・バハムートは顕現時に「メガフレア」を実行する。<br/>顕現したデミ・バハムートは、周囲30m以内にいる敵の中で、最も現在ＨＰが少ない敵に対してウィルムウェーブを実行する。<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒<br/>このアクションを実行するとデスフレアに変化する。"
+    },
+    {
+     "rowId": "pvplimitbreakaction_02",
+     "name": "メガフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a26548300186f20cfb000ecd2e279e952b0daf7.png",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "周囲の敵に範囲魔法攻撃。\n威力：20000\nこのアクションは遮蔽物を越えて効果を発揮する。\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲の敵に範囲魔法攻撃。<br/>威力：20000<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvplimitbreakaction_03",
+     "name": "サモン・フェニックス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/43a7121c604b4da78f2a9d4110cc2a85bc6c6425.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "15m",
+     "description": "指定地点にデミ・フェニックスを顕現させ、自身が「トランス・フェニックス」状態になる。\n顕現時間：20秒\nトランス・フェニックス効果：ルインガが霊泉の炎に変化する。\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\n顕現したデミ・フェニックスは、周囲30m以内にいる「火焔」が付与されていない敵の中で、最も近い敵に対して火焔を実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行すると煉獄の炎に変化する。",
+     "descriptionHtml": "指定地点にデミ・フェニックスを顕現させ、自身が「トランス・フェニックス」状態になる。<br/>顕現時間：20秒<br/>トランス・フェニックス効果：ルインガが霊泉の炎に変化する。<br/>デミ・フェニックスは顕現時に「不死鳥の翼」を実行する。<br/>顕現したデミ・フェニックスは、周囲30m以内にいる「火焔」が付与されていない敵の中で、最も近い敵に対して火焔を実行する。<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒<br/>このアクションを実行すると煉獄の炎に変化する。"
+    },
+    {
+     "rowId": "pvplimitbreakaction_04",
+     "name": "不死鳥ふしちょうの翼つばさ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/790d6bfaf5e0b6360d2a39c760e66f1b92ba4b46.png",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "周囲のパーティメンバーのＨＰを継続回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：4000\n効果時間：18秒\n対象のＨＰが25％を下回るか効果時間が経過すると、効果が解除される代わりに回復効果が発動する。\n回復力：16000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを継続回復する。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>回復力：4000<br/>効果時間：18秒<br/>対象のＨＰが25％を下回るか効果時間が経過すると、効果が解除される代わりに回復効果が発動する。<br/>回復力：16000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "コメット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+     "type": "魔法",
+     "cast": "2.4秒",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "10m",
+     "description": "指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。",
+     "descriptionHtml": "指定した地面の周囲に魔法攻撃。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>威力：20000<br/>このアクションの詠唱中は移動することができず、また詠唱を中断することもできない。"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ファントムダート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：4000<br/>追加効果：対象が受けるダメージを25％増加させる。<br/>効果時間：5秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "ダルウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。<br/>効果時間：10秒"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "エーテルフローシンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/G/Ui5eNVVV9i0JqAd7-BhhavKSto.png"
+    ]
+   },
+   {
+    "title": "トランスゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/G/Ui5eNVVV9i0JqAd7-BhhavKSto.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/9/qqlNHsTJb5P6rU50n2QEIaWwUw.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/x/1AoIp95eq1ig_hMpUyW4rbNYWo.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/e/aMUEAYvsL55UF-An46fxLWITd4.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/r/OSi6LNZc9c7UNDTKOH-iNBpDYo.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/lCXntxryJgaToW3p81IOnJTJ_U.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/WpnqdM3ovXf2R7nMJviRv9RzCA.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/l/35fTAvRf1103OVjLLU5xzRe6X0.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/K/ZA9rsYQaW8AM1XA3iBeLl9dWyk.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/w/2-OhVK4tGy4qXReYEqNre0mBlk.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nエーテルフローシンボル\n\nアクション「エナジードレイン」 を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エナジードレイン」や「エナジーサイフォン」を使用することで最大スタック数まで付与され、エーテルフローを消費することで「ミアズマバースト」やレベル40で修得する「ペインフレア」などを発動できます。\n\nトランスゲージ\n\nアクション「エーテルチャージ」を修得すると、エーテルチャージの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nエーテルチャージを使用すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。これらを消費して「サモン・イフリート」、「サモン・トパーズ」、「サモン・エメラルド」を実行し、3種類のペットを召喚できます。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」やレベル26で修得する「ジェムブリリアンス」の性能が変化します。\n\nレベル58で特性「エーテルチャージマスタリー」を修得すると、トランス・バハムートの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nアクション「トランス・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、トランス・バハムートの効果中は「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル70で特性「トランス・バハムート効果アップ」を修得すると、アクション「サモン・バハムート」により\"デミ・バハムート\"を召喚できるようになります。\nサモン・バハムート中はトランスゲージに「デミ・バハムート」の残り顕現時間が表示されます。\nアクション「サモン・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・バハムート中は、「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に、さらに「アストラルフロウ」が「デスフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル80で特性「サモン・バハムート効果アップ」を修得すると、アクション「サモン・フェニックス」により\"デミ・フェニックス\"を召喚できるようになります。\nサモン・フェニックス中はトランスゲージに「デミ・フェニックス」の残り顕現時間が表示されます。\nアクション「サモン・フェニックス」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・フェニックス中は、「ルインガ」が「霊泉の炎」に、「トライディザスター」が「煉獄の炎」に、さらに「アストラルフロウ」が「再生の炎」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nレベル100で特性「サモン・バハムート効果アップII」を修得すると、アクション「サモン・ソルバハムート」により\"ソルバハムート\"を召喚できるようになります。\nサモン・ソルバハムート中はトランスゲージに「ソルバハムート」の残り顕現時間が表示されます。\nアクション「サモン・ソルバハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・ソルバハムート中は、「ルインガ」が「アンブラルインパルス」に、「トライディザスター」が「アンブラルフレア」に、さらに「アストラルフロウ」が「ソルフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nシンプルモード\n\nエーテルフローシンボル\n\nトランスゲージ\n\nトランス・バハムート時\n\nエーテル付与\n\nサモン・バハムート時\n\nエーテル付与\n\nサモン・フェニックス時\n\nエーテル付与\n\nサモン・ソルバハムート時\n\nエーテル付与",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">エーテルフローシンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/g/ehaBoG3n-NogfWkhsbscDC-AZ4.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「エナジードレイン」 </span>を修得すると、<span class=\"txt_red\">\"エーテルフロー\"</span>のスタック数を示す<span class=\"txt_red\">「エーテルフローシンボル」</span>が表示されるようになります。<br/>エーテルフローは<span class=\"txt_red\">「エナジードレイン」</span>や<span class=\"txt_red\">「エナジーサイフォン」</span>を使用することで最大スタック数まで付与され、エーテルフローを消費することで<span class=\"txt_red\">「ミアズマバースト」</span>やレベル40で修得する<span class=\"txt_red\">「ペインフレア」</span>などを発動できます。</p>\n</div>\n<h3 class=\"job__hud__title\">トランスゲージ</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/G/Ui5eNVVV9i0JqAd7-BhhavKSto.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「エーテルチャージ」</span>を修得すると、エーテルチャージの効果時間残量を示す<span class=\"txt_red\">「トランスゲージ」</span>が表示されるようになります。<br/>エーテルチャージを使用すると<span class=\"txt_red\">「ルビーの神秘」</span>、<span class=\"txt_red\">「トパーズの神秘」</span>、<span class=\"txt_red\">「エメラルドの神秘」</span>が付与されます。これらを消費して<span class=\"txt_red\">「サモン・イフリート」</span>、<span class=\"txt_red\">「サモン・トパーズ」</span>、<span class=\"txt_red\">「サモン・エメラルド」</span>を実行し、3種類のペットを召喚できます。</p>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/7tjpQn-CAGS3VUwI8uCoIDWCxE.png\" width=\"290\"/>\n<p class=\"job__hud__text\">ペットを召喚すると、ペットごとに対応した<span class=\"txt_red\">\"エーテル\"</span>が自身に付与されます。<br/>トランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると<span class=\"txt_red\">「ジェムシャイン」</span>やレベル26で修得する<span class=\"txt_red\">「ジェムブリリアンス」</span>の性能が変化します。</p>\n</div>\n<hr class=\"job__hud__layout--border\"/>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/G/RQMU_MezuqQwopegB5utV9TQXU.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">レベル58で特性<span class=\"txt_red\">「エーテルチャージマスタリー」</span>を修得すると、トランス・バハムートの効果時間残量を示す「トランスゲージ」が表示されるようになります。<br/>アクション「トランス・バハムート」を実行すると<span class=\"txt_red\">「ルビーの神秘」</span>、<span class=\"txt_red\">「トパーズの神秘」</span>、<span class=\"txt_red\">「エメラルドの神秘」</span>が付与されます。また、トランス・バハムートの効果中は「ルインガ」が<span class=\"txt_red\">「アストラルインパルス」</span>に、「アウトバースト」が<span class=\"txt_red\">「アストラルフレア」</span>に変化します。</p>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/u/fyHMyrcoegyoIPzCTorrhQJ5Eo.png\" width=\"290\"/>\n<p class=\"job__hud__text\">ペットを召喚すると、ペットごとに対応した<span class=\"txt_red\">\"エーテル\"</span>が自身に付与されます。<br/>トランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると<span class=\"txt_red\">「ジェムシャイン」</span>や<span class=\"txt_red\">「ジェムブリリアンス」</span>の性能が変化します。</p>\n</div>\n<hr class=\"job__hud__layout--border\"/>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/V/Jx1V4GKed6G97aTgEos_tO2I-o.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">レベル70で特性<span class=\"txt_red\">「トランス・バハムート効果アップ」</span>を修得すると、アクション<span class=\"txt_red\">「サモン・バハムート」</span>により<span class=\"txt_red\">\"デミ・バハムート\"</span>を召喚できるようになります。<br/>サモン・バハムート中はトランスゲージに「デミ・バハムート」の残り顕現時間が表示されます。<br/>アクション「サモン・バハムート」を実行すると<span class=\"txt_red\">「ルビーの神秘」</span>、<span class=\"txt_red\">「トパーズの神秘」</span>、<span class=\"txt_red\">「エメラルドの神秘」</span>が付与されます。また、サモン・バハムート中は、「ルインガ」が<span class=\"txt_red\">「アストラルインパルス」</span>に、「アウトバースト」が<span class=\"txt_red\">「アストラルフレア」</span>に、さらに「アストラルフロウ」が<span class=\"txt_red\">「デスフレア」</span>にそれぞれ変化します。</p>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/Z/hcno8vopMMgLhKLNav9GWC0gc0.png\" width=\"290\"/>\n<p class=\"job__hud__text\">ペットを召喚すると、ペットごとに対応した<span class=\"txt_red\">\"エーテル\"</span>が自身に付与されます。<br/>トランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると<span class=\"txt_red\">「ジェムシャイン」</span>や<span class=\"txt_red\">「ジェムブリリアンス」</span>の性能が変化します。</p>\n</div>\n<hr class=\"job__hud__layout--border\"/>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/C/PAwlX1mzeDUiiOM1pu3PG8ahtU.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">レベル80で特性<span class=\"txt_red\">「サモン・バハムート効果アップ」</span>を修得すると、アクション<span class=\"txt_red\">「サモン・フェニックス」</span>により<span class=\"txt_red\">\"デミ・フェニックス\"</span>を召喚できるようになります。<br/>サモン・フェニックス中はトランスゲージに「デミ・フェニックス」の残り顕現時間が表示されます。<br/>アクション「サモン・フェニックス」を実行すると<span class=\"txt_red\">「ルビーの神秘」</span>、<span class=\"txt_red\">「トパーズの神秘」</span>、<span class=\"txt_red\">「エメラルドの神秘」</span>が付与されます。また、サモン・フェニックス中は、「ルインガ」が<span class=\"txt_red\">「霊泉の炎」</span>に、「トライディザスター」が<span class=\"txt_red\">「煉獄の炎」</span>に、さらに「アストラルフロウ」が<span class=\"txt_red\">「再生の炎」</span>にそれぞれ変化します。</p>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/F/6k81p57hMtbK964aPLVGJP4k_I.png\" width=\"290\"/>\n<p class=\"job__hud__text\">ペットを召喚すると、ペットごとに対応した<span class=\"txt_red\">\"エーテル\"</span>が自身に付与されます。<br/>トランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると<span class=\"txt_red\">「ジェムシャイン」</span>や<span class=\"txt_red\">「ジェムブリリアンス」</span>の性能が変化します。さらに、レベル86で特性<span class=\"txt_red\">「エレメントマスタリー」</span>を修得すると、<span class=\"txt_red\">「アストラルフロウ」</span>がエーテルに応じたアクションに変化します。</p>\n</div>\n<hr class=\"job__hud__layout--border\"/>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/x/DUmdzAXO1gpzTH6XaN3I4XrCJI.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">レベル100で特性<span class=\"txt_red\">「サモン・バハムート効果アップII」</span>を修得すると、アクション<span class=\"txt_red\">「サモン・ソルバハムート」</span>により<span class=\"txt_red\">\"ソルバハムート\"</span>を召喚できるようになります。<br/>サモン・ソルバハムート中はトランスゲージに「ソルバハムート」の残り顕現時間が表示されます。<br/>アクション「サモン・ソルバハムート」を実行すると<span class=\"txt_red\">「ルビーの神秘」</span>、<span class=\"txt_red\">「トパーズの神秘」</span>、<span class=\"txt_red\">「エメラルドの神秘」</span>が付与されます。また、サモン・ソルバハムート中は、「ルインガ」が<span class=\"txt_red\">「アンブラルインパルス」</span>に、「トライディザスター」が<span class=\"txt_red\">「アンブラルフレア」</span>に、さらに「アストラルフロウ」が<span class=\"txt_red\">「ソルフレア」</span>にそれぞれ変化します。</p>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/pdJ0IrP2SpywJ_i7c3U0E6-KAQ.png\" width=\"290\"/>\n<p class=\"job__hud__text\">ペットを召喚すると、ペットごとに対応した<span class=\"txt_red\">\"エーテル\"</span>が自身に付与されます。<br/>トランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると<span class=\"txt_red\">「ジェムシャイン」</span>や<span class=\"txt_red\">「ジェムブリリアンス」</span>の性能が変化します。さらに、レベル86で特性<span class=\"txt_red\">「エレメントマスタリー」</span>を修得すると、<span class=\"txt_red\">「アストラルフロウ」</span>がエーテルに応じたアクションに変化します。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">エーテルフローシンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/9/qqlNHsTJb5P6rU50n2QEIaWwUw.png\" width=\"290\"/>\n</td>\n<td></td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">トランスゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/x/1AoIp95eq1ig_hMpUyW4rbNYWo.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">トランス・バハムート時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/aMUEAYvsL55UF-An46fxLWITd4.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">エーテル付与</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/r/OSi6LNZc9c7UNDTKOH-iNBpDYo.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">サモン・バハムート時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/E/lCXntxryJgaToW3p81IOnJTJ_U.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">エーテル付与</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/WpnqdM3ovXf2R7nMJviRv9RzCA.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">サモン・フェニックス時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/l/35fTAvRf1103OVjLLU5xzRe6X0.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">エーテル付与</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/K/ZA9rsYQaW8AM1XA3iBeLl9dWyk.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">サモン・ソルバハムート時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/w/2-OhVK4tGy4qXReYEqNre0mBlk.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">エーテル付与</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/g/ehaBoG3n-NogfWkhsbscDC-AZ4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/G/Ui5eNVVV9i0JqAd7-BhhavKSto.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/7tjpQn-CAGS3VUwI8uCoIDWCxE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/G/RQMU_MezuqQwopegB5utV9TQXU.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/u/fyHMyrcoegyoIPzCTorrhQJ5Eo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/V/Jx1V4GKed6G97aTgEos_tO2I-o.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Z/hcno8vopMMgLhKLNav9GWC0gc0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/C/PAwlX1mzeDUiiOM1pu3PG8ahtU.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/F/6k81p57hMtbK964aPLVGJP4k_I.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/x/DUmdzAXO1gpzTH6XaN3I4XrCJI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/pdJ0IrP2SpywJ_i7c3U0E6-KAQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/9/qqlNHsTJb5P6rU50n2QEIaWwUw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/x/1AoIp95eq1ig_hMpUyW4rbNYWo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/aMUEAYvsL55UF-An46fxLWITd4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/r/OSi6LNZc9c7UNDTKOH-iNBpDYo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/E/lCXntxryJgaToW3p81IOnJTJ_U.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/WpnqdM3ovXf2R7nMJviRv9RzCA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/l/35fTAvRf1103OVjLLU5xzRe6X0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/ZA9rsYQaW8AM1XA3iBeLl9dWyk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/w/2-OhVK4tGy4qXReYEqNre0mBlk.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルイン\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：240\n\nサモン・カーバンクル\n\nLv2\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n0m\n\n0m\n\n召喚士を補助する能力を持つペットである「カーバンクル」を召喚する。\n\n守まもりの光ひかり\n\nLv2\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているカーバンクルに「守りの光」を実行させる。\n\nこのペットを召喚している召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：カーバンクルが存在する\n\nフィジク\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：400\n\nエーテルチャージ\n\nLv6\n\n魔法\nInstant\n\n60秒\n-\n\n0m\n\n0m\n\n自身が「エーテルチャージ」状態になる。\n効果時間：15秒\nエーテルチャージ効果：自身が実行するルイン、ルインラ、ルインガの威力を50、アウトバーストの威力を20上昇させる。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nサモン・ルビー\n\nLv6\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・ルビーを召喚し、「ルビーの煌き」を実行させる。\n\n対象に接近して火属性魔法攻撃。\n威力：400\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはカーバンクル・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nジェムシャイン\n\nLv6\n\n魔法\n\n2.5秒\n\n2.5秒\n-\n\n25m\n\n0m\n\n自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の単体攻撃魔法に変化する。\nアースエーテル効果中：土属性の単体攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の単体攻撃魔法に変化する。\n\nルビー・ルイン\n\nLv6\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：340\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nミアズマバースト\n\nLv10\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：340\n発動条件：「エーテルフロー」\n\nエナジードレイン\n\nLv10\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：200\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジーサイフォン」と共有する。\n\nリザレク\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nサモン・トパーズ\n\nクラスクエスト\n\nLv15\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・トパーズを召喚し、「トパーズの煌き」を実行させる。\n\n対象に接近して土属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはカーバンクル・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nトパーズ・ルイン\n\nLv15\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：240\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・エメラルド\n\nLv22\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・エメラルドを召喚し、「エメラルドの煌き」を実行させる。\n\n対象に風属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはカーバンクル・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nエメラルド・ルイン\n\nLv22\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：160\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nアウトバースト\n\nLv26\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100\n\nジェムブリリアンス\n\nLv26\n\n魔法\n\n2.5秒\n\n2.5秒\n-\n\n25m\n\n5m\n\n自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の範囲攻撃魔法に変化する。\nアースエーテル効果中：土属性の範囲攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の範囲攻撃魔法に変化する。\n\nルビー・アウトバースト\n\nLv26\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：160\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・アウトバースト\n\nLv26\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：110\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・アウトバースト\n\nLv26\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：70\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nルインラ\n\nクラスクエスト\n\nLv30\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：270\n\nサモン・イフリート\n\nジョブクエスト\n\nLv30\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nイフリート・エギを召喚し、「地獄の火炎」を実行させる。\n\n対象に接近し、前方5mに対して火属性扇範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nルビー・ルインラ\n\nLv30\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：380\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ルインラ\n\nLv30\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：270\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ルインラ\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：170\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・タイタン\n\nジョブクエスト\n\nLv35\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nタイタン・エギを召喚し、「大地の怒り」を実行させる。\n\n対象に接近して自身の周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nペインフレア\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：220\n発動条件：「エーテルフロー」\n\nサモン・ガルーダ\n\nジョブクエスト\n\nLv45\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nガルーダ・エギを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nエナジーサイフォン\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジードレイン」と共有する。\n\nルインガ\n\nジョブクエスト\n\nLv54\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：400\n\nルビー・ルインガ\n\nLv54\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：410\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ルインガ\n\nLv54\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：300\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ルインガ\n\nLv54\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：180\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nトランス・バハムート\n\nジョブクエスト\n\nLv58\n\n魔法\nInstant\n\n60秒\n-\n\n0m\n\n0m\n\n自身が「トランス・バハムート」状態になる。\n効果時間：15秒\n追加効果：ルインガがアストラルインパルスに変化し、アウトバーストがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nアストラルインパルス\n\nLv58\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：500\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアストラルインパルスに変化する。\n\nアストラルフレア\n\nLv58\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：180\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアストラルフレアに変化する。\n\nアストラルフロウ\n\nジョブクエスト\n\nLv60\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n0m\n\n特定のアクションの実行時に、このアクションが変化する。\nサモン・バハムート実行時：「デスフレア」に変化する。\nサモン・フェニックス実行時：「再生の炎」に変化する。\nサモン・イフリートII実行時：「クリムゾンサイクロン」に変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：「マウンテンバスター」に変化する。\nサモン・ガルーダII実行時：「スリップストリーム」に変化する。\nサモン・ソルバハムート実行時：「ソルフレア」に変化する。\n\nデスフレア\n\nLv60\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがデスフレアに変化する。\n\nルインジャ\n\nLv62\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n発動条件：「ルインジャ実行可」効果中\n\nシアリングライト\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「シアリングスパーク実行可」を付与する。\n効果時間：30秒\n\nサモン・バハムート\n\nジョブクエスト\n\nLv70\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・バハムート」状態になり、さらにデミ・バハムートを顕現させる。\n顕現時間：15秒\nデミ・バハムートは召喚士の攻撃対象に「ウィルムウェーブ」による攻撃を行う。\n追加効果：ルインガがアストラルインパルスに変化し、トライディザスターがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・バハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nウィルムウェーブ\n\nLv70\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nエンキンドル・バハムート\n\nLv70\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているデミ・バハムートに「アク・モーン」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している\n\nアク・モーン\n\nLv70\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nルビー・リチュアル\n\nLv72\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：620\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがルビー・リチュアルに変化する。\n\nトパーズ・リチュアル\n\nLv72\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：340\n追加効果：自身に「マウンテンバスター実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがトパーズ・リチュアルに変化する。\n\nエメラルド・リチュアル\n\nLv72\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：280\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがエメラルド・リチュアルに変化する。\n\nトライディザスター\n\nLv74\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120\n\nルビー・ディザスター\n\nLv74\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：190\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ディザスター\n\nLv74\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：130\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ディザスター\n\nLv74\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：90\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・フェニックス\n\nLv80\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・フェニックス」状態になり、さらにデミ・フェニックスを顕現させる。\n顕現時間：15秒\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\nまた、デミ・フェニックスは召喚士の攻撃対象に「火焔」による攻撃を行う。\n追加効果：ルインガが霊泉の炎に変化し、トライディザスターが煉獄の炎に変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・フェニックスの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・フェニックスに変化する。\n\n霊泉れいせんの炎ほのお\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：580\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガが霊泉の炎に変化する。\n\n煉獄れんごくの炎ほのお\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n8m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：240\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターが煉獄の炎に変化する。\n\n再生さいせいの炎ほのお\n\nLv80\n\nアビリティ\nInstant\n20秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：400\n追加効果：対象に「再生の炎」を付与する。\n効果時間：30秒\n再生の炎効果：対象のＨＰが75％を下回るか効果時間が経過すると、ＨＰ継続回復効果が発動する。\n回復力：200\n効果時間：15秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウが再生の炎に変化する。\n\nエンキンドル・フェニックス\n\nLv80\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているデミ・フェニックスに「リヴァレーション」を実行させる。\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・フェニックスに変化する。\n\n不死鳥ふしちょうの翼つばさ\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\n火焔かえん\n\nLv80\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：150\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nリヴァレーション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nルビー・カタストロフィ\n\nLv82\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：210\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがルビー・カタストロフィに変化する。\n\nトパーズ・カタストロフィ\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：140\n追加効果：自身に「マウンテンバスター実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがトパーズ・カタストロフィに変化する。\n\nエメラルド・カタストロフィ\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：100\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがエメラルド・カタストロフィに変化する。\n\nクリムゾンサイクロン\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象に急接近して、対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「クリムゾンサイクロン実行可」効果中\nバインド中は実行不可。\nこのアクションを実行すると「クリムゾンストライク」に変化する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがクリムゾンサイクロンに変化する。\n\nクリムゾンストライク\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクリムゾンサイクロンがクリムゾンストライクに変化する。\n\nマウンテンバスター\n\nLv86\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：160\n2体目以降の対象への威力は60％減少する。\n発動条件：「マウンテンバスター実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがマウンテンバスターに変化する。\n\nスリップストリーム\n\nLv86\n\n魔法\n\n3秒\n\n3.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n追加効果：対象を中心にダメージエリアを生成する。\n威力：30\n効果時間：15秒\n発動条件：「スリップストリーム実行可」効果中\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがスリップストリームに変化する。\n\nサモン・イフリートIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nイフリート・ルビーを召喚し、「地獄の火炎」を実行させる。\n\n対象とその周囲5m以内の敵に火属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nサモン・タイタンIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nタイタン・トパーズを召喚し、「大地の怒り」を実行させる。\n\n対象とその周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nサモン・ガルーダIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nガルーダ・エメラルドを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nミアズマノヴァ\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：500\n発動条件：「エーテルフロー」\n\nシアリングスパーク\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：700\n発動条件：「シアリングスパーク実行可」効果中\n\nルクス・ソラリス\n\nLv100\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：500\n発動条件：「ルクス・ソラリス実行可」効果中\n\nサモン・ソルバハムート\n\nLv100\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・ソルバハムート」状態になり、さらにソルバハムートを顕現させる。\n顕現時間：15秒\nソルバハムートは召喚士の攻撃対象に「光芒」による攻撃を行う。\n追加効果：自身に「ルクス・ソラリス実行可」を付与する。\n効果時間：30秒\n追加効果：ルインガがアンブラルインパルスに変化し、トライディザスターがアンブラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはソルバハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・ソルバハムートに変化する。\n\nアンブラルインパルス\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：640\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアンブラルインパルスに変化する。\n\nアンブラルフレア\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n8m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアンブラルフレアに変化する。\n\nソルフレア\n\nLv100\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1000\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがソルフレアに変化する。\n\nエンキンドル・ソルバハムート\n\nLv100\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているソルバハムートに「エクソダス」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・ソルバハムートに変化する。\n\n光芒こうぼう\n\nLv100\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：160\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nエクソダス\n\nLv100\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "ペットアクション",
+   "anchor": "anchor__pet",
+   "text": "ペットアクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n守まもりの光ひかり\n\nLv2\n\nアビリティ\nInstant\n-\n-\n\n30m\n\n0m\n\nこのペットを召喚している巴術士および召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "ペットアクション（指示）",
+   "anchor": "anchor__pet_instruction",
+   "text": "ペットアクション（指示）\n\nアクション名\n内容\n\n帰還きかん\n\nペットを帰還させる。\n\n追従ついじゅう\n\nペットを自身に追従させる。\n\n移動いどう\n\nペットを指定地点まで移動させる。\n\n待機たいき\n\nペットをその場で待機させる。\n\nインターセプト\n\nペットに、自分が攻撃を行うか、自分が攻撃を受けるまで戦闘しないように命令する。\n\nピース\n\nペットに、自分が指示を出すまで戦闘しないように命令する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nエーテルチャージ効果こうかアップ\n\nクラスクエスト\n\nLv15\n\n自身に「ルビーの神秘」と「トパーズの神秘」を付与する。\n発動条件：エーテルチャージ実行時\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。\n\nエーテルチャージ効果こうかアップIIつー\n\nLv22\n\n自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：エーテルチャージ実行時\n\nルインマスタリー\n\nクラスクエスト\n\nLv30\n\nルインがルインラに変化する。\n\nサモン・ルビーマスタリー\n\nジョブクエスト\n\nLv30\n\nサモン・ルビーがサモン・イフリートに変化する。\n\nサモン・トパーズマスタリー\n\nジョブクエスト\n\nLv35\n\nサモン・トパーズがサモン・タイタンに変化する。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。\n\nサモン・エメラルドマスタリー\n\nジョブクエスト\n\nLv45\n\nサモン・エメラルドがサモン・ガルーダに変化する。\n\nエンキンドル\n\nジョブクエスト\n\nLv50\n\n「サモン・イフリート」「サモン・タイタン」「サモン・ガルーダ」により召喚するエギの実行するアクションが変化する。\nイフリート・エギ：バーニングストライクが地獄の火炎に変化する。\nタイタン・エギ：ロックバスターが大地の怒りに変化する。\nガルーダ・エギ：エリアルスラッシュがエリアルブラストに変化する。\n\nルインマスタリーIIつー\n\nジョブクエスト\n\nLv54\n\nルインラがルインガに変化する。\n\nエーテルチャージマスタリー\n\nジョブクエスト\n\nLv58\n\nエーテルチャージがトランス・バハムートに変化する。\n\nエナジーサイフォン効果こうかアップ\n\nLv62\n\n自身に「ルインジャ実行可」が付与されるようになる。\n発動条件：エナジードレインとエナジーサイフォン実行時\n\nトランス・バハムート効果こうかアップ\n\nジョブクエスト\n\nLv70\n\nトランス・バハムートがサモン・バハムートに変化する。\n\nルインマスタリーIIIすりー\n\nLv72\n\n自身に付与されている「エーテル」によりジェムシャインが変化する。\nファイアエーテル効果中：ルビー・リチュアルに変化する。\nアースエーテル効果中：トパーズ・リチュアルに変化する。\nウィンドエーテル効果中：エメラルド・リチュアルに変化する。\n\nアウトバーストマスタリー\n\nLv74\n\nアウトバーストがトライディザスターに変化する。\n\nサモン・バハムート効果こうかアップ\n\nLv80\n\nサモン・バハムートがサモン・フェニックスに変化する。\n発動条件：デミ・バハムートの帰還後\n\nアウトバーストマスタリーIIつー\n\nLv82\n\n自身に付与されている「エーテル」によりジェムブリリアンスが変化する。\nファイアエーテル効果中：ルビー・カタストロフィに変化する。\nアースエーテル効果中：トパーズ・カタストロフィに変化する。\nウィンドエーテル効果中：エメラルド・カタストロフィに変化する。\n\nルインマスタリーIVふぉー\n\nLv84\n\nルインガ、ルビー・リチュアル、トパーズ・リチュアル、エメラルド・リチュアルの威力を上昇させる。\n\nルインガの威力：310\nルビー・リチュアルの威力：510\nトパーズ・リチュアルの威力：330\nエメラルド・リチュアルの威力：230\n\nエレメントマスタリー\n\nLv86\n\n特定のアクションの実行時にアストラルフロウが変化する。\nサモン・イフリート実行時：クリムゾンサイクロンに変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：マウンテンバスターに変化する。\nサモン・ガルーダ実行時：スリップストリームに変化する。\n\n守まもりの光ひかり効果こうかアップ\n\nLv88\n\n守りの光がチャージアクションに変化する。\n最大チャージ数：2\n\nエンキンドルIIつー\n\nLv90\n\nサモン・イフリートがサモン・イフリートIIに、サモン・タイタンがサモン・タイタンIIに、サモン・ガルーダがサモン・ガルーダIIに変化する。\n\nミアズマバーストマスタリー\n\nLv92\n\nミアズマバーストがミアズマノヴァに変化する。\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nルインガの威力：400\nアストラルインパルスの威力：500\nルインジャの威力：520\nルビー・リチュアルの威力：620\nトパーズ・リチュアルの威力：340\nエメラルド・リチュアルの威力：280\n霊泉の炎の威力：580\nクリムゾンストライクの威力：560\nクリムゾンサイクロンの威力：560\nマウンテンバスターの威力：160\nスリップストリームの威力：520\n地獄の火炎の威力：800\n大地の怒りの威力：800\nエリアルブラストの威力：800\n\nシアリングライト効果こうかアップ\n\nLv96\n\n自身に「シアリングスパーク実行可」が付与される。\n効果時間：30秒\n発動条件：シアリングライト実行時\n\nサモン・バハムート効果こうかアップIIつー\n\nLv100\n\nソルバハムートと、デミ・バハムートおよびデミ・フェニックスを交互に顕現させることができるようになる。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nエーテルフローシンボル\n\nアクション「エナジードレイン」 を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エナジードレイン」や「エナジーサイフォン」を使用することで最大スタック数まで付与され、エーテルフローを消費することで「ミアズマバースト」やレベル40で修得する「ペインフレア」などを発動できます。\n\nトランスゲージ\n\nアクション「エーテルチャージ」を修得すると、エーテルチャージの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nエーテルチャージを使用すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。これらを消費して「サモン・イフリート」、「サモン・トパーズ」、「サモン・エメラルド」を実行し、3種類のペットを召喚できます。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」やレベル26で修得する「ジェムブリリアンス」の性能が変化します。\n\nレベル58で特性「エーテルチャージマスタリー」を修得すると、トランス・バハムートの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nアクション「トランス・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、トランス・バハムートの効果中は「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル70で特性「トランス・バハムート効果アップ」を修得すると、アクション「サモン・バハムート」により\"デミ・バハムート\"を召喚できるようになります。\nサモン・バハムート中はトランスゲージに「デミ・バハムート」の残り顕現時間が表示されます。\nアクション「サモン・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・バハムート中は、「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に、さらに「アストラルフロウ」が「デスフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル80で特性「サモン・バハムート効果アップ」を修得すると、アクション「サモン・フェニックス」により\"デミ・フェニックス\"を召喚できるようになります。\nサモン・フェニックス中はトランスゲージに「デミ・フェニックス」の残り顕現時間が表示されます。\nアクション「サモン・フェニックス」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・フェニックス中は、「ルインガ」が「霊泉の炎」に、「トライディザスター」が「煉獄の炎」に、さらに「アストラルフロウ」が「再生の炎」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nレベル100で特性「サモン・バハムート効果アップII」を修得すると、アクション「サモン・ソルバハムート」により\"ソルバハムート\"を召喚できるようになります。\nサモン・ソルバハムート中はトランスゲージに「ソルバハムート」の残り顕現時間が表示されます。\nアクション「サモン・ソルバハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・ソルバハムート中は、「ルインガ」が「アンブラルインパルス」に、「トライディザスター」が「アンブラルフレア」に、さらに「アストラルフロウ」が「ソルフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nシンプルモード\n\nエーテルフローシンボル\n\nトランスゲージ\n\nトランス・バハムート時\n\nエーテル付与\n\nサモン・バハムート時\n\nエーテル付与\n\nサモン・フェニックス時\n\nエーテル付与\n\nサモン・ソルバハムート時\n\nエーテル付与"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルインガ\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n「ルインジャ実行可」効果中はルインジャに変化する。\n「トランス・バハムート」効果中はアストラルインパルスに変化する。\n「トランス・フェニックス」効果中は霊泉の炎に変化する。\n\nマウンテンバスター\n\n魔法\nInstant\n20秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：12000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身が受けるダメージを15％軽減させる。\n効果時間：5秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nスリップストリーム\n\n魔法\n\n1.44秒\n24秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n敵への追加効果：対象に継続ダメージを与える。\n威力：4500\n効果時間：6秒\n味方への追加効果：自身および攻撃範囲内にいるパーティメンバーの移動速度を25％上昇させる。\n効果時間：6秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nクリムゾンサイクロン\n\nアビリティ\nInstant\n16秒\n-\n\n25m\n\n5m\n\n対象に急接近して、対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：10秒\nバインド中は実行不可。\nこのアクションを実行するとクリムゾンストライクに変化する。\n\nミアズマノヴァ\n\nアビリティ\nInstant\n10秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：10秒\n最大チャージ数：2\n\n守まもりの光ひかり\n\nアビリティ\nInstant\n20秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に被ダメージを25％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒\n\nルインジャ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n発動条件：「ルインジャ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nアストラルインパルス\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n霊泉れいせんの炎ほのお\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nクリムゾンストライク\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n2体目以降の対象への威力は8000に減少する。\n追加効果：メインターゲットを中心に、周囲の敵を放射状に5mノックバックする。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nデスフレア\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n煉獄れんごくの炎ほのお\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：7500\n追加効果：対象の与ダメージを50％減少させる。\n効果時間：6秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nウィルムウェーブ\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n\n※このアクションはホットバーに登録することはできない。\n\n火焔かえん\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nサモン・バハムート\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n指定地点にデミ・バハムートを顕現させ、自身が「トランス・バハムート」状態になる。\n顕現時間：20秒\nトランス・バハムート効果：ルインガがアストラルインパルスに変化する。\nデミ・バハムートは顕現時に「メガフレア」を実行する。\n顕現したデミ・バハムートは、周囲30m以内にいる敵の中で、最も現在ＨＰが少ない敵に対してウィルムウェーブを実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとデスフレアに変化する。\n\nメガフレア\n\nInstant\n1秒\n-\n\n0m\n\n15m\n\n周囲の敵に範囲魔法攻撃。\n威力：20000\nこのアクションは遮蔽物を越えて効果を発揮する。\n※このアクションはホットバーに登録することはできない。\n\nサモン・フェニックス\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n指定地点にデミ・フェニックスを顕現させ、自身が「トランス・フェニックス」状態になる。\n顕現時間：20秒\nトランス・フェニックス効果：ルインガが霊泉の炎に変化する。\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\n顕現したデミ・フェニックスは、周囲30m以内にいる「火焔」が付与されていない敵の中で、最も近い敵に対して火焔を実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行すると煉獄の炎に変化する。\n\n不死鳥ふしちょうの翼つばさ\n\nInstant\n1秒\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを継続回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：4000\n効果時間：18秒\n対象のＨＰが25％を下回るか効果時間が経過すると、効果が解除される代わりに回復効果が発動する。\n回復力：16000\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nペットアクション\n\nペットアクション（指示）\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\n焔神「イフリート」、岩神「タイタン」、嵐神「ガルーダ」……これら蛮族勢力が呼び降ろした「蛮神」と呼ばれる存在は、エオルゼア諸都市にとって大いなる脅威となっている。\n\nだが、太古の昔には、呼び降ろされた「蛮神」の力を奪い、性質を変容させることで、使い魔として使役する者たちがいた。人は彼らを「異形の獣を召喚する者」、「召喚士」と呼んだが、その存在は今や忘れ去られて久しい。\n\nジョブ開始クエスト\n\n初期クラス：巴術士\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルイン\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：240\n\nサモン・カーバンクル\n\nLv2\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n0m\n\n0m\n\n召喚士を補助する能力を持つペットである「カーバンクル」を召喚する。\n\n守まもりの光ひかり\n\nLv2\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているカーバンクルに「守りの光」を実行させる。\n\nこのペットを召喚している召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：カーバンクルが存在する\n\nフィジク\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：400\n\nエーテルチャージ\n\nLv6\n\n魔法\nInstant\n\n60秒\n-\n\n0m\n\n0m\n\n自身が「エーテルチャージ」状態になる。\n効果時間：15秒\nエーテルチャージ効果：自身が実行するルイン、ルインラ、ルインガの威力を50、アウトバーストの威力を20上昇させる。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nサモン・ルビー\n\nLv6\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・ルビーを召喚し、「ルビーの煌き」を実行させる。\n\n対象に接近して火属性魔法攻撃。\n威力：400\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはカーバンクル・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nジェムシャイン\n\nLv6\n\n魔法\n\n2.5秒\n\n2.5秒\n-\n\n25m\n\n0m\n\n自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の単体攻撃魔法に変化する。\nアースエーテル効果中：土属性の単体攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の単体攻撃魔法に変化する。\n\nルビー・ルイン\n\nLv6\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：340\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nミアズマバースト\n\nLv10\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：340\n発動条件：「エーテルフロー」\n\nエナジードレイン\n\nLv10\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：200\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジーサイフォン」と共有する。\n\nリザレク\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nサモン・トパーズ\n\nクラスクエスト\n\nLv15\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・トパーズを召喚し、「トパーズの煌き」を実行させる。\n\n対象に接近して土属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはカーバンクル・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nトパーズ・ルイン\n\nLv15\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：240\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・エメラルド\n\nLv22\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nカーバンクル・エメラルドを召喚し、「エメラルドの煌き」を実行させる。\n\n対象に風属性魔法攻撃。\n威力：400\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはカーバンクル・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nエメラルド・ルイン\n\nLv22\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：160\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nアウトバースト\n\nLv26\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100\n\nジェムブリリアンス\n\nLv26\n\n魔法\n\n2.5秒\n\n2.5秒\n-\n\n25m\n\n5m\n\n自身に付与されている「エーテル」に応じたアクションを発動する。\nファイアエーテル効果中：火属性の範囲攻撃魔法に変化する。\nアースエーテル効果中：土属性の範囲攻撃魔法に変化する。\nウィンドエーテル効果中：風属性の範囲攻撃魔法に変化する。\n\nルビー・アウトバースト\n\nLv26\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：160\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・アウトバースト\n\nLv26\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：110\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・アウトバースト\n\nLv26\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：70\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nルインラ\n\nクラスクエスト\n\nLv30\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：270\n\nサモン・イフリート\n\nジョブクエスト\n\nLv30\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nイフリート・エギを召喚し、「地獄の火炎」を実行させる。\n\n対象に接近し、前方5mに対して火属性扇範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nルビー・ルインラ\n\nLv30\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：380\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ルインラ\n\nLv30\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：270\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ルインラ\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：170\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・タイタン\n\nジョブクエスト\n\nLv35\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nタイタン・エギを召喚し、「大地の怒り」を実行させる。\n\n対象に接近して自身の周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nペインフレア\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：220\n発動条件：「エーテルフロー」\n\nサモン・ガルーダ\n\nジョブクエスト\n\nLv45\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nガルーダ・エギを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エギの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nエナジーサイフォン\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：100\n追加効果：自身に2スタックの「エーテルフロー」を付与する。\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：60秒\nリキャストタイマーを「エナジードレイン」と共有する。\n\nルインガ\n\nジョブクエスト\n\nLv54\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：400\n\nルビー・ルインガ\n\nLv54\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：410\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ルインガ\n\nLv54\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：300\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ルインガ\n\nLv54\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：180\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nトランス・バハムート\n\nジョブクエスト\n\nLv58\n\n魔法\nInstant\n\n60秒\n-\n\n0m\n\n0m\n\n自身が「トランス・バハムート」状態になる。\n効果時間：15秒\n追加効果：ルインガがアストラルインパルスに変化し、アウトバーストがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：自身が戦闘状態かつカーバンクルが存在する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nアストラルインパルス\n\nLv58\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：500\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアストラルインパルスに変化する。\n\nアストラルフレア\n\nLv58\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：180\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアストラルフレアに変化する。\n\nアストラルフロウ\n\nジョブクエスト\n\nLv60\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n0m\n\n特定のアクションの実行時に、このアクションが変化する。\nサモン・バハムート実行時：「デスフレア」に変化する。\nサモン・フェニックス実行時：「再生の炎」に変化する。\nサモン・イフリートII実行時：「クリムゾンサイクロン」に変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：「マウンテンバスター」に変化する。\nサモン・ガルーダII実行時：「スリップストリーム」に変化する。\nサモン・ソルバハムート実行時：「ソルフレア」に変化する。\n\nデスフレア\n\nLv60\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがデスフレアに変化する。\n\nルインジャ\n\nLv62\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n発動条件：「ルインジャ実行可」効果中\n\nシアリングライト\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「シアリングスパーク実行可」を付与する。\n効果時間：30秒\n\nサモン・バハムート\n\nジョブクエスト\n\nLv70\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・バハムート」状態になり、さらにデミ・バハムートを顕現させる。\n顕現時間：15秒\nデミ・バハムートは召喚士の攻撃対象に「ウィルムウェーブ」による攻撃を行う。\n追加効果：ルインガがアストラルインパルスに変化し、トライディザスターがアストラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・バハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\nウィルムウェーブ\n\nLv70\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nエンキンドル・バハムート\n\nLv70\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているデミ・バハムートに「アク・モーン」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している\n\nアク・モーン\n\nLv70\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・バハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nルビー・リチュアル\n\nLv72\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：620\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがルビー・リチュアルに変化する。\n\nトパーズ・リチュアル\n\nLv72\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：340\n追加効果：自身に「マウンテンバスター実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがトパーズ・リチュアルに変化する。\n\nエメラルド・リチュアル\n\nLv72\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：280\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムシャインがエメラルド・リチュアルに変化する。\n\nトライディザスター\n\nLv74\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120\n\nルビー・ディザスター\n\nLv74\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：190\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\nトパーズ・ディザスター\n\nLv74\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：130\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nエメラルド・ディザスター\n\nLv74\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：90\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\nサモン・フェニックス\n\nLv80\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・フェニックス」状態になり、さらにデミ・フェニックスを顕現させる。\n顕現時間：15秒\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\nまた、デミ・フェニックスは召喚士の攻撃対象に「火焔」による攻撃を行う。\n追加効果：ルインガが霊泉の炎に変化し、トライディザスターが煉獄の炎に変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはデミ・フェニックスの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・フェニックスに変化する。\n\n霊泉れいせんの炎ほのお\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：580\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガが霊泉の炎に変化する。\n\n煉獄れんごくの炎ほのお\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n8m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：240\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターが煉獄の炎に変化する。\n\n再生さいせいの炎ほのお\n\nLv80\n\nアビリティ\nInstant\n20秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：400\n追加効果：対象に「再生の炎」を付与する。\n効果時間：30秒\n再生の炎効果：対象のＨＰが75％を下回るか効果時間が経過すると、ＨＰ継続回復効果が発動する。\n回復力：200\n効果時間：15秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウが再生の炎に変化する。\n\nエンキンドル・フェニックス\n\nLv80\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているデミ・フェニックスに「リヴァレーション」を実行させる。\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・フェニックスに変化する。\n\n不死鳥ふしちょうの翼つばさ\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\n火焔かえん\n\nLv80\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：150\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nリヴァレーション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：1300\n2体目以降の対象への威力は50％減少する。\n発動条件：デミ・フェニックスが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nルビー・カタストロフィ\n\nLv82\n\n魔法\n\n2.8秒\n\n3秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：210\n発動条件：「ファイアエーテル」\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがルビー・カタストロフィに変化する。\n\nトパーズ・カタストロフィ\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：140\n追加効果：自身に「マウンテンバスター実行可」を付与する\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「アースエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがトパーズ・カタストロフィに変化する。\n\nエメラルド・カタストロフィ\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：100\n発動条件：「ウィンドエーテル」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジェムブリリアンスがエメラルド・カタストロフィに変化する。\n\nクリムゾンサイクロン\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象に急接近して、対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：「クリムゾンサイクロン実行可」効果中\nバインド中は実行不可。\nこのアクションを実行すると「クリムゾンストライク」に変化する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがクリムゾンサイクロンに変化する。\n\nクリムゾンストライク\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は60％減少する。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクリムゾンサイクロンがクリムゾンストライクに変化する。\n\nマウンテンバスター\n\nLv86\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：160\n2体目以降の対象への威力は60％減少する。\n発動条件：「マウンテンバスター実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがマウンテンバスターに変化する。\n\nスリップストリーム\n\nLv86\n\n魔法\n\n3秒\n\n3.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：520\n2体目以降の対象への威力は60％減少する。\n追加効果：対象を中心にダメージエリアを生成する。\n威力：30\n効果時間：15秒\n発動条件：「スリップストリーム実行可」効果中\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがスリップストリームに変化する。\n\nサモン・イフリートIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nイフリート・ルビーを召喚し、「地獄の火炎」を実行させる。\n\n対象とその周囲5m以内の敵に火属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に2スタックの「ファイアエーテル」を付与する。\n効果時間：30秒\nファイアエーテル効果：ジェムシャインとジェムブリリアンスが火属性魔法に変化する。\n追加効果：自身に「クリムゾンサイクロン実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「ルビーの神秘」が付与されている。\nカーバンクルはイフリート・ルビーの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nサモン・タイタンIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nタイタン・トパーズを召喚し、「大地の怒り」を実行させる。\n\n対象とその周囲5m以内の敵に土属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「アースエーテル」を付与する。\n効果時間：30秒\nアースエーテル効果：ジェムシャインとジェムブリリアンスが土属性魔法に変化する。\n発動条件：カーバンクルが存在し、自身に「トパーズの神秘」が付与されている。\nカーバンクルはタイタン・トパーズの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nサモン・ガルーダIIつー\n\nLv90\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\nガルーダ・エメラルドを召喚し、「エリアルブラスト」を実行させる。\n\n対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に4スタックの「ウィンドエーテル」を付与する。\n効果時間：30秒\nウィンドエーテル効果：ジェムシャインとジェムブリリアンスが風属性魔法に変化する。\n追加効果：自身に「スリップストリーム実行可」を付与する。\n効果時間：永続\nこの効果は他のサモン系アクションを実行すると解除される。\n発動条件：カーバンクルが存在し、自身に「エメラルドの神秘」が付与されている。\nカーバンクルはガルーダ・エメラルドの顕現時に帰還するが、顕現時間が経過すると再出現する。\n\nミアズマノヴァ\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：500\n発動条件：「エーテルフロー」\n\nシアリングスパーク\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：700\n発動条件：「シアリングスパーク実行可」効果中\n\nルクス・ソラリス\n\nLv100\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：500\n発動条件：「ルクス・ソラリス実行可」効果中\n\nサモン・ソルバハムート\n\nLv100\n\n魔法\nInstant\n\n60秒\n-\n\n25m\n\n0m\n\n敵単体を対象とする。\n自身が「トランス・ソルバハムート」状態になり、さらにソルバハムートを顕現させる。\n顕現時間：15秒\nソルバハムートは召喚士の攻撃対象に「光芒」による攻撃を行う。\n追加効果：自身に「ルクス・ソラリス実行可」を付与する。\n効果時間：30秒\n追加効果：ルインガがアンブラルインパルスに変化し、トライディザスターがアンブラルフレアに変化する。\n追加効果：自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\nこのアクションを実行すると、対象から自身への敵視を上昇させる。\n発動条件：カーバンクルが存在する\nカーバンクルはソルバハムートの顕現時に帰還するが、顕現時間が経過すると再出現する。\nこの魔法は固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとサモン・バハムートがサモン・ソルバハムートに変化する。\n\nアンブラルインパルス\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：640\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルインガがアンブラルインパルスに変化する。\n\nアンブラルフレア\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n8m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトライディザスターがアンブラルフレアに変化する。\n\nソルフレア\n\nLv100\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1000\n2体目以降の対象への威力は50％減少する。\n発動条件：「トランス・ソルバハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとアストラルフロウがソルフレアに変化する。\n\nエンキンドル・ソルバハムート\n\nLv100\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n顕現しているソルバハムートに「エクソダス」を実行させる。\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンキンドル・バハムートがエンキンドル・ソルバハムートに変化する。\n\n光芒こうぼう\n\nLv100\n\n魔法\nInstant\n1.5秒\n-\n\n50m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：160\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nエクソダス\n\nLv100\n\nアビリティ\nInstant\n-\n-\n\n50m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1500\n2体目以降の対象への威力は50％減少する。\n発動条件：ソルバハムートが顕現している\n\n※このアクションはホットバーに登録することはできない。\n\nペットアクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n守まもりの光ひかり\n\nLv2\n\nアビリティ\nInstant\n-\n-\n\n30m\n\n0m\n\nこのペットを召喚している巴術士および召喚士に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。\n\nペットアクション（指示）\n\nアクション名\n内容\n\n帰還きかん\n\nペットを帰還させる。\n\n追従ついじゅう\n\nペットを自身に追従させる。\n\n移動いどう\n\nペットを指定地点まで移動させる。\n\n待機たいき\n\nペットをその場で待機させる。\n\nインターセプト\n\nペットに、自分が攻撃を行うか、自分が攻撃を受けるまで戦闘しないように命令する。\n\nピース\n\nペットに、自分が指示を出すまで戦闘しないように命令する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n特性\n\n特性名\n修得\n効果\n\nエーテルチャージ効果こうかアップ\n\nクラスクエスト\n\nLv15\n\n自身に「ルビーの神秘」と「トパーズの神秘」を付与する。\n発動条件：エーテルチャージ実行時\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。\n\nエーテルチャージ効果こうかアップIIつー\n\nLv22\n\n自身に「ルビーの神秘」「トパーズの神秘」「エメラルドの神秘」を付与する。\n発動条件：エーテルチャージ実行時\n\nルインマスタリー\n\nクラスクエスト\n\nLv30\n\nルインがルインラに変化する。\n\nサモン・ルビーマスタリー\n\nジョブクエスト\n\nLv30\n\nサモン・ルビーがサモン・イフリートに変化する。\n\nサモン・トパーズマスタリー\n\nジョブクエスト\n\nLv35\n\nサモン・トパーズがサモン・タイタンに変化する。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。\n\nサモン・エメラルドマスタリー\n\nジョブクエスト\n\nLv45\n\nサモン・エメラルドがサモン・ガルーダに変化する。\n\nエンキンドル\n\nジョブクエスト\n\nLv50\n\n「サモン・イフリート」「サモン・タイタン」「サモン・ガルーダ」により召喚するエギの実行するアクションが変化する。\nイフリート・エギ：バーニングストライクが地獄の火炎に変化する。\nタイタン・エギ：ロックバスターが大地の怒りに変化する。\nガルーダ・エギ：エリアルスラッシュがエリアルブラストに変化する。\n\nルインマスタリーIIつー\n\nジョブクエスト\n\nLv54\n\nルインラがルインガに変化する。\n\nエーテルチャージマスタリー\n\nジョブクエスト\n\nLv58\n\nエーテルチャージがトランス・バハムートに変化する。\n\nエナジーサイフォン効果こうかアップ\n\nLv62\n\n自身に「ルインジャ実行可」が付与されるようになる。\n発動条件：エナジードレインとエナジーサイフォン実行時\n\nトランス・バハムート効果こうかアップ\n\nジョブクエスト\n\nLv70\n\nトランス・バハムートがサモン・バハムートに変化する。\n\nルインマスタリーIIIすりー\n\nLv72\n\n自身に付与されている「エーテル」によりジェムシャインが変化する。\nファイアエーテル効果中：ルビー・リチュアルに変化する。\nアースエーテル効果中：トパーズ・リチュアルに変化する。\nウィンドエーテル効果中：エメラルド・リチュアルに変化する。\n\nアウトバーストマスタリー\n\nLv74\n\nアウトバーストがトライディザスターに変化する。\n\nサモン・バハムート効果こうかアップ\n\nLv80\n\nサモン・バハムートがサモン・フェニックスに変化する。\n発動条件：デミ・バハムートの帰還後\n\nアウトバーストマスタリーIIつー\n\nLv82\n\n自身に付与されている「エーテル」によりジェムブリリアンスが変化する。\nファイアエーテル効果中：ルビー・カタストロフィに変化する。\nアースエーテル効果中：トパーズ・カタストロフィに変化する。\nウィンドエーテル効果中：エメラルド・カタストロフィに変化する。\n\nルインマスタリーIVふぉー\n\nLv84\n\nルインガ、ルビー・リチュアル、トパーズ・リチュアル、エメラルド・リチュアルの威力を上昇させる。\n\nルインガの威力：310\nルビー・リチュアルの威力：510\nトパーズ・リチュアルの威力：330\nエメラルド・リチュアルの威力：230\n\nエレメントマスタリー\n\nLv86\n\n特定のアクションの実行時にアストラルフロウが変化する。\nサモン・イフリート実行時：クリムゾンサイクロンに変化する。\nトパーズ・リチュアルおよびトパーズ・カタストロフィ実行時：マウンテンバスターに変化する。\nサモン・ガルーダ実行時：スリップストリームに変化する。\n\n守まもりの光ひかり効果こうかアップ\n\nLv88\n\n守りの光がチャージアクションに変化する。\n最大チャージ数：2\n\nエンキンドルIIつー\n\nLv90\n\nサモン・イフリートがサモン・イフリートIIに、サモン・タイタンがサモン・タイタンIIに、サモン・ガルーダがサモン・ガルーダIIに変化する。\n\nミアズマバーストマスタリー\n\nLv92\n\nミアズマバーストがミアズマノヴァに変化する。\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nルインガの威力：400\nアストラルインパルスの威力：500\nルインジャの威力：520\nルビー・リチュアルの威力：620\nトパーズ・リチュアルの威力：340\nエメラルド・リチュアルの威力：280\n霊泉の炎の威力：580\nクリムゾンストライクの威力：560\nクリムゾンサイクロンの威力：560\nマウンテンバスターの威力：160\nスリップストリームの威力：520\n地獄の火炎の威力：800\n大地の怒りの威力：800\nエリアルブラストの威力：800\n\nシアリングライト効果こうかアップ\n\nLv96\n\n自身に「シアリングスパーク実行可」が付与される。\n効果時間：30秒\n発動条件：シアリングライト実行時\n\nサモン・バハムート効果こうかアップIIつー\n\nLv100\n\nソルバハムートと、デミ・バハムートおよびデミ・フェニックスを交互に顕現させることができるようになる。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。\n\nジョブHUD\n\nエーテルフローシンボル\n\nアクション「エナジードレイン」 を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エナジードレイン」や「エナジーサイフォン」を使用することで最大スタック数まで付与され、エーテルフローを消費することで「ミアズマバースト」やレベル40で修得する「ペインフレア」などを発動できます。\n\nトランスゲージ\n\nアクション「エーテルチャージ」を修得すると、エーテルチャージの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nエーテルチャージを使用すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。これらを消費して「サモン・イフリート」、「サモン・トパーズ」、「サモン・エメラルド」を実行し、3種類のペットを召喚できます。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」やレベル26で修得する「ジェムブリリアンス」の性能が変化します。\n\nレベル58で特性「エーテルチャージマスタリー」を修得すると、トランス・バハムートの効果時間残量を示す「トランスゲージ」が表示されるようになります。\nアクション「トランス・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、トランス・バハムートの効果中は「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル70で特性「トランス・バハムート効果アップ」を修得すると、アクション「サモン・バハムート」により\"デミ・バハムート\"を召喚できるようになります。\nサモン・バハムート中はトランスゲージに「デミ・バハムート」の残り顕現時間が表示されます。\nアクション「サモン・バハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・バハムート中は、「ルインガ」が「アストラルインパルス」に、「アウトバースト」が「アストラルフレア」に、さらに「アストラルフロウ」が「デスフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。\n\nレベル80で特性「サモン・バハムート効果アップ」を修得すると、アクション「サモン・フェニックス」により\"デミ・フェニックス\"を召喚できるようになります。\nサモン・フェニックス中はトランスゲージに「デミ・フェニックス」の残り顕現時間が表示されます。\nアクション「サモン・フェニックス」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・フェニックス中は、「ルインガ」が「霊泉の炎」に、「トライディザスター」が「煉獄の炎」に、さらに「アストラルフロウ」が「再生の炎」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nレベル100で特性「サモン・バハムート効果アップII」を修得すると、アクション「サモン・ソルバハムート」により\"ソルバハムート\"を召喚できるようになります。\nサモン・ソルバハムート中はトランスゲージに「ソルバハムート」の残り顕現時間が表示されます。\nアクション「サモン・ソルバハムート」を実行すると「ルビーの神秘」、「トパーズの神秘」、「エメラルドの神秘」が付与されます。また、サモン・ソルバハムート中は、「ルインガ」が「アンブラルインパルス」に、「トライディザスター」が「アンブラルフレア」に、さらに「アストラルフロウ」が「ソルフレア」にそれぞれ変化します。\n\nペットを召喚すると、ペットごとに対応した\"エーテル\"が自身に付与されます。\nトランスゲージには、付与されているエーテルのスタック数と効果時間が表示されます。エーテルが付与されると「ジェムシャイン」や「ジェムブリリアンス」の性能が変化します。さらに、レベル86で特性「エレメントマスタリー」を修得すると、「アストラルフロウ」がエーテルに応じたアクションに変化します。\n\nシンプルモード\n\nエーテルフローシンボル\n\nトランスゲージ\n\nトランス・バハムート時\n\nエーテル付与\n\nサモン・バハムート時\n\nエーテル付与\n\nサモン・フェニックス時\n\nエーテル付与\n\nサモン・ソルバハムート時\n\nエーテル付与\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルインガ\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n「ルインジャ実行可」効果中はルインジャに変化する。\n「トランス・バハムート」効果中はアストラルインパルスに変化する。\n「トランス・フェニックス」効果中は霊泉の炎に変化する。\n\nマウンテンバスター\n\n魔法\nInstant\n20秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：12000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身が受けるダメージを15％軽減させる。\n効果時間：5秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nスリップストリーム\n\n魔法\n\n1.44秒\n24秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n敵への追加効果：対象に継続ダメージを与える。\n威力：4500\n効果時間：6秒\n味方への追加効果：自身および攻撃範囲内にいるパーティメンバーの移動速度を25％上昇させる。\n効果時間：6秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nクリムゾンサイクロン\n\nアビリティ\nInstant\n16秒\n-\n\n25m\n\n5m\n\n対象に急接近して、対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n追加効果：自身に「クリムゾンストライク実行可」を付与する。\n効果時間：10秒\nバインド中は実行不可。\nこのアクションを実行するとクリムゾンストライクに変化する。\n\nミアズマノヴァ\n\nアビリティ\nInstant\n10秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\n追加効果：自身に「ルインジャ実行可」を付与する。\n効果時間：10秒\n最大チャージ数：2\n\n守まもりの光ひかり\n\nアビリティ\nInstant\n20秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に被ダメージを25％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒\n\nルインジャ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n発動条件：「ルインジャ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nアストラルインパルス\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n霊泉れいせんの炎ほのお\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nクリムゾンストライク\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n2体目以降の対象への威力は8000に減少する。\n追加効果：メインターゲットを中心に、周囲の敵を放射状に5mノックバックする。\n発動条件：「クリムゾンストライク実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nデスフレア\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n発動条件：「トランス・バハムート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n煉獄れんごくの炎ほのお\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：7500\n追加効果：対象の与ダメージを50％減少させる。\n効果時間：6秒\n発動条件：「トランス・フェニックス」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nウィルムウェーブ\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n\n※このアクションはホットバーに登録することはできない。\n\n火焔かえん\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nサモン・バハムート\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n指定地点にデミ・バハムートを顕現させ、自身が「トランス・バハムート」状態になる。\n顕現時間：20秒\nトランス・バハムート効果：ルインガがアストラルインパルスに変化する。\nデミ・バハムートは顕現時に「メガフレア」を実行する。\n顕現したデミ・バハムートは、周囲30m以内にいる敵の中で、最も現在ＨＰが少ない敵に対してウィルムウェーブを実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとデスフレアに変化する。\n\nメガフレア\n\nInstant\n1秒\n-\n\n0m\n\n15m\n\n周囲の敵に範囲魔法攻撃。\n威力：20000\nこのアクションは遮蔽物を越えて効果を発揮する。\n※このアクションはホットバーに登録することはできない。\n\nサモン・フェニックス\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n指定地点にデミ・フェニックスを顕現させ、自身が「トランス・フェニックス」状態になる。\n顕現時間：20秒\nトランス・フェニックス効果：ルインガが霊泉の炎に変化する。\nデミ・フェニックスは顕現時に「不死鳥の翼」を実行する。\n顕現したデミ・フェニックスは、周囲30m以内にいる「火焔」が付与されていない敵の中で、最も近い敵に対して火焔を実行する。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行すると煉獄の炎に変化する。\n\n不死鳥ふしちょうの翼つばさ\n\nInstant\n1秒\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを継続回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：4000\n効果時間：18秒\n対象のＨＰが25％を下回るか効果時間が経過すると、効果が解除される代わりに回復効果が発動する。\n回復力：16000\n\n※このアクションはホットバーに登録することはできない。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

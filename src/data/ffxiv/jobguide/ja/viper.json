@@ -1,0 +1,2263 @@
+{
+ "job": "viper",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/viper/",
+ "pageTitle": "ジョブガイド「ヴァイパー」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nトラル大陸において、長い年月を経て強大な力を得た獣を「トラルヴィドラール」と呼ぶ。\nこの種の限界を超えた脅威を倒すため、狩人たちは密林最強の捕食者を観察し、学びを得ることとなる。\nそれは、ときに己よりも大きな獲物さえ丸呑みにする「蛇」――素早い動きで二本の毒牙を突き立てる様から「二刀による連撃」を、長い身体で獲物に絡みつく様から「二刀を連結させる型」を編み出したのだ。\n二刀流武器を駆使して大物を狩り、人々の営みを護る者たちが、ヴァイパーと称されるのはそれ故のことである。\n\nジョブ開始クエスト",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/4c17f1a64284635f1483f205f9aea15be9bd1a16.png",
+   "https://lds-img.finalfantasyxiv.com/d/3b2aea9fa0be73f01aeb45b7eff15fd344776af0.png",
+   "https://lds-img.finalfantasyxiv.com/d/0763edc3238365b4076dba5d28b8f5c68be1d3de.png",
+   "https://lds-img.finalfantasyxiv.com/d/251a98740164ae526be0e23bf9477abb8e28fe94.png",
+   "https://lds-img.finalfantasyxiv.com/d/75a4621d0d002a4b18c59acfdfb097424ff88a5b.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b9f63b988cfb7be43914b31ff5551ee41c99ffa.png",
+   "https://lds-img.finalfantasyxiv.com/d/05bf152b3b5ac3ed319b5cdcbbdca1db4006cd96.png",
+   "https://lds-img.finalfantasyxiv.com/d/24777f7ac5f5169f3ebf6b656d7cedf54d57e9a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0524362f22ecb3fe78015685d2385c1cfbbe811.png",
+   "https://lds-img.finalfantasyxiv.com/d/2ca132552615abcd4f962ec2b32eb8b0ef6ccd50.png",
+   "https://lds-img.finalfantasyxiv.com/d/d5b0fd312dbb29775aba54246dc487805eb045e7.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ebdd1c17d9bfe7e52641396ee2c0ff944aea319.png",
+   "https://lds-img.finalfantasyxiv.com/d/2117aa184918197d460d34352b715a239d27af1d.png",
+   "https://lds-img.finalfantasyxiv.com/d/c45c309beb82894d97fdb3a01afe3673cc1ec5b0.png",
+   "https://lds-img.finalfantasyxiv.com/d/a7c0917ef2eebad0e74ffceccb472348016fcb79.png",
+   "https://lds-img.finalfantasyxiv.com/d/6715225127c0d7b81affb5d8cbdbb81dbaac8744.png",
+   "https://lds-img.finalfantasyxiv.com/d/462326b75ba66828eb96e0f2d64ef7542daccf38.png",
+   "https://lds-img.finalfantasyxiv.com/d/42670e7db3e339182d5d65c29f7acee4319d5360.png",
+   "https://lds-img.finalfantasyxiv.com/d/6931cd1152c69f96360689e0e61a8c6cabfafe46.png",
+   "https://lds-img.finalfantasyxiv.com/d/7958ea7095b37de74593fd6d1426d74177e46536.png",
+   "https://lds-img.finalfantasyxiv.com/d/a9a91ec0b652e92408c4211e510ffca14d7498cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/2ff8a8c9e5710f229b6d3dc3e19ea40c7908cb50.png",
+   "https://lds-img.finalfantasyxiv.com/d/13c9698f33d48e95d53bb67e7eef68bfff122e14.png",
+   "https://lds-img.finalfantasyxiv.com/d/d807e8e444e8cb313a14e04f5c4d9f3af91b9706.png",
+   "https://lds-img.finalfantasyxiv.com/d/2425fc375286fe6776b09f0db2f020faec679bfd.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0a3ce4ca4284759ef6ac5592b351f6985fe4edd.png",
+   "https://lds-img.finalfantasyxiv.com/d/0093aca28c0a2877e6fb631b24af1d0b77c46f92.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f157bebbaa01d92600ee604fbce64f969730966.png",
+   "https://lds-img.finalfantasyxiv.com/d/d2e6fe2cd7f5e0ac0170f7aeb78639533e4f7cc7.png",
+   "https://lds-img.finalfantasyxiv.com/d/94a94c69ef3f58b4b0601e1f04fdef144ad2830f.png",
+   "https://lds-img.finalfantasyxiv.com/d/29c3f69d1f38de7049262c99da58d8ff8ba8607d.png",
+   "https://lds-img.finalfantasyxiv.com/d/9b1b65c7abae88ab3c5ba775a7eda8e6afccf3b2.png",
+   "https://lds-img.finalfantasyxiv.com/d/07ad6a7df65952f604f164eb4ac1cb99238dd871.png",
+   "https://lds-img.finalfantasyxiv.com/d/747eae977c8adbe87254c934e1e890fc54a85b50.png",
+   "https://lds-img.finalfantasyxiv.com/d/0669ed905da6f1885333d21619a678cf6b382a72.png",
+   "https://lds-img.finalfantasyxiv.com/d/0c534882c858afef2cee59ccf78664dac5f5d28e.png",
+   "https://lds-img.finalfantasyxiv.com/d/bac0b9c0fc9068b083e47d645b2db52d8888ae7e.png",
+   "https://lds-img.finalfantasyxiv.com/d/718f70f8e5f985309a09171ba83bcf34fba0cbf9.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb4eb443e7d759b2e6e01ead35aa6b6dd73abf4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/eb4f394f15241c1820a674ba2f671d005ab431cf.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c66e4147b2a5467f541734d3aedc5e0f1522b07.png",
+   "https://lds-img.finalfantasyxiv.com/d/a7750d692ef417ce934373dab4f71214ca5d6676.png",
+   "https://lds-img.finalfantasyxiv.com/d/845aa0a62b6afed88ac65e36b63ec0e171526aa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/6fbd15532cd7c980e0f5c55b40d641d64c849b17.png",
+   "https://lds-img.finalfantasyxiv.com/d/479c9e0777b6a210f15ef8215c2bac81c1c5ffb0.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/15337c3d71d35597218e0409e01081633652d23f.png",
+   "https://lds-img.finalfantasyxiv.com/d/dfeba44b89c0d27641837c677bb18ff423b34d40.png",
+   "https://lds-img.finalfantasyxiv.com/d/a0c368a4f7ebb14a8cea1d1a344e0fc916081a3f.png",
+   "https://lds-img.finalfantasyxiv.com/d/e59eb58734d7a36986f811450ec692e626655bec.png",
+   "https://lds-img.finalfantasyxiv.com/d/ad647f94d46f0cb3284648c436fa967aadf989a1.png",
+   "https://lds-img.finalfantasyxiv.com/d/9df032ccdca8feaf3e7288acfd2dd3fdb68def20.png",
+   "https://lds-img.finalfantasyxiv.com/d/1a805b094cbbf2d8cba34910f919e4ed395a2786.png",
+   "https://lds-img.finalfantasyxiv.com/d/c9bf1d09821271fbe0d0fa58a70b9460eb72680c.png",
+   "https://lds-img.finalfantasyxiv.com/d/c6b4fc449bc125b8df51956cd02b4721cd94e742.png",
+   "https://lds-img.finalfantasyxiv.com/d/1558fe95bce595ce0219cc4d24631d922c72bb81.png",
+   "https://lds-img.finalfantasyxiv.com/d/e07af133f3aa974349eba0f4a938631964728177.png",
+   "https://lds-img.finalfantasyxiv.com/d/147f8d74ae9ae599fa971b0ab6080a4690220c4f.png",
+   "https://lds-img.finalfantasyxiv.com/d/8f5e873cc3e905162527647b1156f0ae740b442e.png",
+   "https://lds-img.finalfantasyxiv.com/d/af774179732ea48f9ce9c21b0e2a7f35d58330df.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b755b35b9d30313dbae0a1bc153fe714668b790.png",
+   "https://lds-img.finalfantasyxiv.com/d/e71fea55bada906d1f752bdcb7f1cda184978532.png",
+   "https://lds-img.finalfantasyxiv.com/d/1842fa2852ed84e6b56cf7385caabd23312e47de.png",
+   "https://lds-img.finalfantasyxiv.com/d/e7971a6b1359d5fb936f931f07f362247061077c.png",
+   "https://lds-img.finalfantasyxiv.com/d/071377e0e1e3711012d7e0db2dc7b84b74ca9714.png",
+   "https://lds-img.finalfantasyxiv.com/d/e87afcce9e10bc1bf6fabb5db22d3e5644af2688.png",
+   "https://lds-img.finalfantasyxiv.com/d/6bbb676b91db09777535491b7c2bbd236b693dcb.png",
+   "https://lds-img.finalfantasyxiv.com/d/da71d25a9c4ec075ee870a2ad5434f54d5ec141d.png",
+   "https://lds-img.finalfantasyxiv.com/d/7988ba0a7efd3045918bd5237541ec5ddef6d57a.png",
+   "https://lds-img.finalfantasyxiv.com/d/3eded561d986ef0d88cbddc58a1203bd13392e12.png",
+   "https://lds-img.finalfantasyxiv.com/d/754ccf3d14880402121e03e9d6406fb938558a7b.png",
+   "https://lds-img.finalfantasyxiv.com/d/9ab5ad729ec0e3b515a72f1f15dcdc64b159decd.png",
+   "https://lds-img.finalfantasyxiv.com/d/609221c5f7e2ab86304dcc9db03fef237f414985.png",
+   "https://lds-img.finalfantasyxiv.com/d/6c01119dc0bdb81236252001d0c655ad929feed1.png",
+   "https://lds-img.finalfantasyxiv.com/d/ed95dc742df4e9795e7c0a72e18eb72d0d00293a.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/A/ko0D-0VWBFJDMz4sltre2Qb6BY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "壱いちの牙きば【咬創こうそう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c17f1a64284635f1483f205f9aea15be9bd1a16.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：200\n蛇鋭牙【咬創】時威力：300\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：200<br/>蛇鋭牙【咬創】時威力：300<br/>追加効果：自身に「蛇鋭牙【穿裂】」を付与する。<br/>効果時間：60秒<br/>蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。<br/>「蛇鋭牙【咬創】」とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "弐にの牙きば【猛襲もうしゅう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3b2aea9fa0be73f01aeb45b7eff15fd344776af0.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 5,
+     "jobclassText": "Lv5",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】が弐の牙【猛襲】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300<br/>追加効果：自身に「猛襲」を付与する。<br/>効果時間：40秒<br/>猛襲効果：自身の与ダメージを10％上昇させる。<br/>発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の牙【咬創】が弐の牙【猛襲】に変化する。"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "壱いちの牙きば【穿裂せんれつ】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0763edc3238365b4076dba5d28b8f5c68be1d3de.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：200\n蛇鋭牙【穿裂】時威力：300\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：200<br/>蛇鋭牙【穿裂】時威力：300<br/>追加効果：自身に「蛇鋭牙【咬創】」を付与する。<br/>効果時間：60秒<br/>蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。<br/>「蛇鋭牙【穿裂】」とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "飛蛇とびへびの牙きば",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/251a98740164ae526be0e23bf9477abb8e28fe94.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に遠隔物理攻撃。\n威力：200",
+     "descriptionHtml": "対象に遠隔物理攻撃。<br/>威力：200"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "弐にの牙きば【疾速しっそく】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/75a4621d0d002a4b18c59acfdfb097424ff88a5b.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】が弐の牙【疾速】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300<br/>追加効果：自身に「疾速」を付与する。<br/>効果時間：40秒<br/>疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。<br/>発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の牙【穿裂】が弐の牙【疾速】に変化する。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "壱いちの大牙おおきば【咬創こうそう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b9f63b988cfb7be43914b31ff5551ee41c99ffa.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 25,
+     "jobclassText": "Lv25",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【咬創】時威力：140\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：120<br/>蛇鋭牙【咬創】時威力：140<br/>追加効果：自身に「蛇鋭牙【穿裂】」を付与する。<br/>効果時間：60秒<br/>蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。<br/>「蛇鋭牙【咬創】」とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "参さんの牙きば【側撃そくげき】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/05bf152b3b5ac3ed319b5cdcbbdca1db4006cd96.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背撃】」を付与する。\n効果時間：60秒\n鋭牙【背撃】効果：参の牙【背撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【側撃】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：340<br/>側面攻撃時威力：400<br/>鋭牙【側撃】が付与されている場合は全ての威力が100上昇する。<br/>追加効果：自身に「鋭牙【背撃】」を付与する。<br/>効果時間：60秒<br/>鋭牙【背撃】効果：参の牙【背撃】の威力を100上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の牙【猛襲】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の牙【猛襲】が参の牙【側撃】に変化する。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "参さんの牙きば【側裂そくれつ】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/24777f7ac5f5169f3ebf6b656d7cedf54d57e9a6.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背裂】」を付与する。\n効果時間：60秒\n鋭牙【背裂】効果：参の牙【背裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：340<br/>側面攻撃時威力：400<br/>鋭牙【側裂】が付与されている場合は全ての威力が100上昇する。<br/>追加効果：自身に「鋭牙【背裂】」を付与する。<br/>効果時間：60秒<br/>鋭牙【背裂】効果：参の牙【背裂】の威力を100上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の牙【猛襲】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "参さんの牙きば【背撃はいげき】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0524362f22ecb3fe78015685d2385c1cfbbe811.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側裂】」を付与する。\n効果時間：60秒\n鋭牙【側裂】効果：参の牙【側裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【背撃】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：340<br/>背面攻撃時威力：400<br/>鋭牙【背撃】が付与されている場合は全ての威力が100上昇する。<br/>追加効果：自身に「鋭牙【側裂】」を付与する。<br/>効果時間：60秒<br/>鋭牙【側裂】効果：参の牙【側裂】の威力を100上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の牙【疾速】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の牙【猛襲】が参の牙【背撃】に変化する。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "参さんの牙きば【背裂はいれつ】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2ca132552615abcd4f962ec2b32eb8b0ef6ccd50.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側撃】」を付与する。\n効果時間：60秒\n鋭牙【側撃】効果：参の牙【側撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【背裂】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：340<br/>背面攻撃時威力：400<br/>鋭牙【背裂】が付与されている場合は全ての威力が100上昇する。<br/>追加効果：自身に「鋭牙【側撃】」を付与する。<br/>効果時間：60秒<br/>鋭牙【側撃】効果：参の牙【側撃】の威力を100上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の牙【疾速】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の牙【疾速】が参の牙【背裂】に変化する。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "壱いちの大牙おおきば【穿裂せんれつ】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d5b0fd312dbb29775aba54246dc487805eb045e7.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【穿裂】時威力：140\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：120<br/>蛇鋭牙【穿裂】時威力：140<br/>追加効果：自身に「蛇鋭牙【咬創】」を付与する。<br/>効果時間：60秒<br/>蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。<br/>「蛇鋭牙【穿裂】」とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "蛇行だこう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ebdd1c17d9bfe7e52641396ee2c0ff944aea319.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。",
+     "descriptionHtml": "敵またはパーティメンバーひとりを対象とする。<br/>対象の目前まで素早く移動する。<br/>最大チャージ数：3<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "弐にの大牙おおきば【猛襲もうしゅう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2117aa184918197d460d34352b715a239d27af1d.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【咬創】が弐の大牙【猛襲】に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：180<br/>追加効果：自身に「猛襲」を付与する。<br/>効果時間：40秒<br/>猛襲効果：自身の与ダメージを10％上昇させる。<br/>発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の大牙【咬創】が弐の大牙【猛襲】に変化する。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "弐にの大牙おおきば【疾速しっそく】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c45c309beb82894d97fdb3a01afe3673cc1ec5b0.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【穿裂】が弐の大牙【疾速】に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：180<br/>追加効果：自身に「疾速」を付与する。<br/>効果時間：40秒<br/>疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。<br/>発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の大牙【穿裂】が弐の大牙【疾速】に変化する。"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "参さんの大牙おおきば【乱撃らんげき】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7c0917ef2eebad0e74ffceccb472348016fcb79.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱撃】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱裂】」を付与する。\n効果時間：60秒\n大鋭牙【乱裂】効果：参の大牙【乱裂】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【猛襲】が参の大牙【乱撃】に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：180<br/>大鋭牙【乱撃】が付与されている場合は威力が40上昇する。<br/>追加効果：自身に「大鋭牙【乱裂】」を付与する。<br/>効果時間：60秒<br/>大鋭牙【乱裂】効果：参の大牙【乱裂】の威力を40上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の大牙【猛襲】が参の大牙【乱撃】に変化する。"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "参さんの大牙おおきば【乱裂らんれつ】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6715225127c0d7b81affb5d8cbdbb81dbaac8744.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱裂】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱撃】」を付与する。\n効果時間：60秒\n大鋭牙【乱撃】効果：参の大牙【乱撃】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【疾速】が参の大牙【乱裂】に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：180<br/>大鋭牙【乱裂】が付与されている場合は威力が40上昇する。<br/>追加効果：自身に「大鋭牙【乱撃】」を付与する。<br/>効果時間：60秒<br/>大鋭牙【乱撃】効果：参の大牙【乱撃】の威力を40上昇させる。<br/>他の「鋭牙」「大鋭牙」とは同時に付与されない。<br/>追加効果：「霊力ゲージ」を10上昇させる。<br/>発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の大牙【疾速】が参の大牙【乱裂】に変化する。"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "蛇尾術じゃびじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/462326b75ba66828eb96e0f2d64ef7542daccf38.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 55,
+     "jobclassText": "Lv55",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "発動条件を満たすと蛇尾撃、蛇尾閃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。",
+     "descriptionHtml": "発動条件を満たすと蛇尾撃、蛇尾閃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "蛇尾撃じゃびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/42670e7db3e339182d5d65c29f7acee4319d5360.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 55,
+     "jobclassText": "Lv55",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：280\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾撃に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：280<br/>発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が蛇尾撃に変化する。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "蛇尾閃じゃびせん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6931cd1152c69f96360689e0e61a8c6cabfafe46.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：120\n発動条件：参の大牙【乱撃】または参の大牙【乱裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾閃に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：120<br/>発動条件：参の大牙【乱撃】または参の大牙【乱裂】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が蛇尾閃に変化する。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "壱いちの蛇へび【強砕きょうさい】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7958ea7095b37de74593fd6d1426d74177e46536.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 65,
+     "jobclassText": "Lv65",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：540\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の大蛇【強砕】」と共有する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：540<br/>追加効果：自身に「飛蛇の魂」を付与する。<br/>最大スタック数：3<br/>最大チャージ数：2<br/>このウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の大蛇【強砕】」と共有する。"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "弐にの蛇へび【猛襲もうしゅう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a9a91ec0b652e92408c4211e510ffca14d7498cd.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 65,
+     "jobclassText": "Lv65",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：630\n側面攻撃時威力：680\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n双鋭牙【連撃】効果：双牙連撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：630<br/>側面攻撃時威力：680<br/>追加効果：自身に「猛襲」を付与する。<br/>効果時間：40秒<br/>猛襲効果：自身の与ダメージを10％上昇させる。<br/>追加効果：自身に「双鋭牙【連撃】」を付与する。<br/>効果時間：30秒<br/>双鋭牙【連撃】効果：双牙連撃の威力を50上昇させる。<br/>追加効果：「霊力ゲージ」を5上昇させる。<br/>このアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。<br/>発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "弐にの蛇へび【疾速しっそく】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2ff8a8c9e5710f229b6d3dc3e19ea40c7908cb50.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 65,
+     "jobclassText": "Lv65",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：630\n背面攻撃時威力：680\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n双鋭牙【乱撃】効果：双牙乱撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：630<br/>背面攻撃時威力：680<br/>追加効果：自身に「疾速」を付与する。<br/>効果時間：40秒<br/>疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。<br/>追加効果：自身に「双鋭牙【乱撃】」を付与する。<br/>効果時間：30秒<br/>双鋭牙【乱撃】効果：双牙乱撃の威力を50上昇させる。<br/>追加効果：「霊力ゲージ」を5上昇させる。<br/>このアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。<br/>発動条件：壱の蛇【強砕】または弐の蛇【猛襲】実行後<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "壱いちの大蛇だいじゃ【強砕きょうさい】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/13c9698f33d48e95d53bb67e7eef68bfff122e14.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：250\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の蛇【強砕】」と共有する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：250<br/>追加効果：自身に「飛蛇の魂」を付与する。<br/>最大スタック数：3<br/>最大チャージ数：2<br/>このウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の蛇【強砕】」と共有する。"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "弐にの大蛇だいじゃ【猛襲もうしゅう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d807e8e444e8cb313a14e04f5c4d9f3af91b9706.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n双鋭牙【連閃】効果：双牙連閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：300<br/>追加効果：自身に「猛襲」を付与する。<br/>効果時間：40秒<br/>猛襲効果：自身の与ダメージを10％上昇させる。<br/>追加効果：自身に「双鋭牙【連閃】」を付与する。<br/>効果時間：30秒<br/>双鋭牙【連閃】効果：双牙連閃の威力を30上昇させる。<br/>追加効果：「霊力ゲージ」を5上昇させる。<br/>このアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。<br/>発動条件：壱の大蛇【強砕】または弐の大蛇【疾速】実行後<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "弐にの大蛇だいじゃ【疾速しっそく】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2425fc375286fe6776b09f0db2f020faec679bfd.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n双鋭牙【乱閃】効果：双牙乱閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：300<br/>追加効果：自身に「疾速」を付与する。<br/>効果時間：40秒<br/>疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。<br/>追加効果：自身に「双鋭牙【乱閃】」を付与する。<br/>効果時間：30秒<br/>双鋭牙【乱閃】効果：双牙乱閃の威力を30上昇させる。<br/>追加効果：「霊力ゲージ」を5上昇させる。<br/>このアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。<br/>発動条件：壱の大蛇【強砕】または弐の大蛇【猛襲】実行後<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "双牙連術そうがれんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0a3ce4ca4284759ef6ac5592b351f6985fe4edd.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 75,
+     "jobclassText": "Lv75",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "発動条件を満たすと双牙連撃、双牙連閃、飛蛇連尾撃のいずれかに変化する。",
+     "descriptionHtml": "発動条件を満たすと双牙連撃、双牙連閃、飛蛇連尾撃のいずれかに変化する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "双牙乱術そうがらんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0093aca28c0a2877e6fb631b24af1d0b77c46f92.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 75,
+     "jobclassText": "Lv75",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "発動条件を満たすと双牙乱撃、双牙乱閃、飛蛇乱尾撃のいずれかに変化する。",
+     "descriptionHtml": "発動条件を満たすと双牙乱撃、双牙乱閃、飛蛇乱尾撃のいずれかに変化する。"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "双牙連撃そうがれんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f157bebbaa01d92600ee604fbce64f969730966.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 75,
+     "jobclassText": "Lv75",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：120\n双鋭牙【連撃】時威力：170\n追加効果：弐の蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連撃に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：120<br/>双鋭牙【連撃】時威力：170<br/>追加効果：弐の蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱撃】」を付与する。<br/>効果時間：30秒<br/>発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙連術が双牙連撃に変化する。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "双牙乱撃そうがらんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d2e6fe2cd7f5e0ac0170f7aeb78639533e4f7cc7.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 75,
+     "jobclassText": "Lv75",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：120\n双鋭牙【乱撃】時威力：170\n追加効果：弐の蛇【疾速】の直後に実行すると自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱撃に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：120<br/>双鋭牙【乱撃】時威力：170<br/>追加効果：弐の蛇【疾速】の直後に実行すると自身に「双鋭牙【連撃】」を付与する。<br/>効果時間：30秒<br/>発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙乱術が双牙乱撃に変化する。"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "双牙連閃そうがれんせん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/94a94c69ef3f58b4b0601e1f04fdef144ad2830f.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【連閃】時威力：80\n追加効果：弐の大蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連閃に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：50<br/>双鋭牙【連閃】時威力：80<br/>追加効果：弐の大蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱閃】」を付与する。<br/>効果時間：30秒<br/>発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙連術が双牙連閃に変化する。"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "双牙乱閃そうがらんせん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/29c3f69d1f38de7049262c99da58d8ff8ba8607d.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【乱閃】時威力：80\n追加効果：弐の大蛇【疾速】の直後に実行すると自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱閃に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：50<br/>双鋭牙【乱閃】時威力：80<br/>追加効果：弐の大蛇【疾速】の直後に実行すると自身に「双鋭牙【連閃】」を付与する。<br/>効果時間：30秒<br/>発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙乱術が双牙乱閃に変化する。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "飛蛇とびへびの尾お",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9b1b65c7abae88ab3c5ba775a7eda8e6afccf3b2.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：680\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【連尾】」を付与する。\n効果時間：60秒\n飛鋭尾【連尾】効果：飛蛇連尾撃の威力を50上昇させる。\nこのアクションを命中させると双牙連術が飛蛇連尾撃に、双牙乱術が飛蛇乱尾撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：「飛蛇の魂」\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：680<br/>2体目以降の対象への威力は75％減少する。<br/>追加効果：自身に「飛鋭尾【連尾】」を付与する。<br/>効果時間：60秒<br/>飛鋭尾【連尾】効果：飛蛇連尾撃の威力を50上昇させる。<br/>このアクションを命中させると双牙連術が飛蛇連尾撃に、双牙乱術が飛蛇乱尾撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。<br/>発動条件：「飛蛇の魂」<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "蛇へびの霊気れいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07ad6a7df65952f604f164eb4ac1cb99238dd871.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「飛蛇の魂」を付与する。\nさらに、自身に「祖霊降ろし実行可」を付与する。\n効果時間：30秒\n発動条件：自身が戦闘状態",
+     "descriptionHtml": "自身に「飛蛇の魂」を付与する。<br/>さらに、自身に「祖霊降ろし実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：自身が戦闘状態"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "祖霊それい降おろし",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/747eae977c8adbe87254c934e1e890fc54a85b50.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：750\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に5スタックの「霊力」を付与する。\n効果時間：30秒\n発動条件：「霊力ゲージ」50\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：750<br/>2体目以降の対象への威力は75％減少する。<br/>追加効果：自身に5スタックの「霊力」を付与する。<br/>効果時間：30秒<br/>発動条件：「霊力ゲージ」50<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "祖霊それいの牙きば【壱いち】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0669ed905da6f1885333d21619a678cf6b382a72.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊降ろしの後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】と壱の大牙【咬創】が祖霊の牙【壱】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：480<br/>祖霊降ろしの後に実行すると威力が680に上昇する。<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：「霊力」<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の牙【咬創】と壱の大牙【咬創】が祖霊の牙【壱】に変化する。"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "祖霊それいの牙きば【弐に】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0c534882c858afef2cee59ccf78664dac5f5d28e.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【壱】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】と壱の大牙【穿裂】が祖霊の牙【弐】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：480<br/>祖霊の牙【壱】の後に実行すると威力が680に上昇する。<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：「霊力」<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと壱の牙【穿裂】と壱の大牙【穿裂】が祖霊の牙【弐】に変化する。"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "祖霊それいの牙きば【参さん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bac0b9c0fc9068b083e47d645b2db52d8888ae7e.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【弐】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【猛襲】と弐の大蛇【猛襲】が祖霊の牙【参】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：480<br/>祖霊の牙【弐】の後に実行すると威力が680に上昇する。<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：「霊力」<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の蛇【猛襲】と弐の大蛇【猛襲】が祖霊の牙【参】に変化する。"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "祖霊それいの牙きば【肆し】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/718f70f8e5f985309a09171ba83bcf34fba0cbf9.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【参】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【疾速】と弐の大蛇【疾速】が祖霊の牙【肆】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：480<br/>祖霊の牙【参】の後に実行すると威力が680に上昇する。<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：「霊力」<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと弐の蛇【疾速】と弐の大蛇【疾速】が祖霊の牙【肆】に変化する。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "飛蛇連尾撃とびへびれんびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb4eb443e7d759b2e6e01ead35aa6b6dd73abf4c.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【連尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【乱尾】」を付与する。\n効果時間：60秒\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が飛蛇連尾撃に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：120<br/>飛鋭尾【連尾】時威力：170<br/>2体目以降の対象への威力は75％減少する。<br/>追加効果：自身に「飛鋭尾【乱尾】」を付与する。<br/>効果時間：60秒<br/>発動条件：飛蛇の尾の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙連術が飛蛇連尾撃に変化する。"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "飛蛇乱尾撃とびへびらんびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eb4f394f15241c1820a674ba2f671d005ab431cf.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【乱尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が飛蛇乱尾撃に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：120<br/>飛鋭尾【乱尾】時威力：170<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：飛蛇の尾の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと双牙乱術が飛蛇乱尾撃に変化する。"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "祖霊それいの大蛇牙だいじゃが",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c66e4147b2a5467f541734d3aedc5e0f1522b07.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：1150\n2体目以降の対象への威力は75％減少する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「霊力」1以上\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと祖霊降ろしが祖霊の大蛇牙に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：1150<br/>2体目以降の対象への威力は75％減少する。<br/>実行時に「祖霊降ろし」の効果が切れる。<br/>発動条件：「霊力」1以上<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと祖霊降ろしが祖霊の大蛇牙に変化する。"
+    },
+    {
+     "rowId": "pve_action__42",
+     "name": "祖霊それいの蛇へび【壱いち】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7750d692ef417ce934373dab4f71214ca5d6676.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【壱】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【壱】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：320<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：祖霊の牙【壱】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が祖霊の蛇【壱】に変化する。"
+    },
+    {
+     "rowId": "pve_action__43",
+     "name": "祖霊それいの蛇へび【弐に】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/845aa0a62b6afed88ac65e36b63ec0e171526aa4.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【弐】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【弐】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：320<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：祖霊の牙【弐】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が祖霊の蛇【弐】に変化する。"
+    },
+    {
+     "rowId": "pve_action__44",
+     "name": "祖霊それいの蛇へび【参さん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6fbd15532cd7c980e0f5c55b40d641d64c849b17.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【参】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【参】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：320<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：祖霊の牙【参】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が祖霊の蛇【参】に変化する。"
+    },
+    {
+     "rowId": "pve_action__45",
+     "name": "祖霊それいの蛇へび【肆し】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/479c9e0777b6a210f15ef8215c2bac81c1c5ffb0.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【肆】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【肆】に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：320<br/>2体目以降の対象への威力は75％減少する。<br/>発動条件：祖霊の牙【肆】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと蛇尾術が祖霊の蛇【肆】に変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：800",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "レッグスウィープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象をスタンさせる。\n効果時間：3秒",
+     "descriptionHtml": "対象をスタンさせる。<br/>効果時間：3秒"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "牽制けんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "アームズレングス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 32,
+     "jobclassText": "Lv32",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒<br/>追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "トゥルーノース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "牙きばの技わざ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9e14a796df9b3cae3544d8cb2d1854bc672ad210.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 55,
+     "jobclassText": "Lv55",
+     "description": "蛇尾撃が実行できるようになる。\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時",
+     "descriptionHtml": "蛇尾撃が実行できるようになる。<br/>発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "大牙おおきばの技わざ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/09630c297ad9fe64beeca174d41e2cf8c8ed559d.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "description": "蛇尾閃が実行できるようになる。\n発動条件：参の大牙【乱撃】および参の大牙【乱裂】の命中時",
+     "descriptionHtml": "蛇尾閃が実行できるようになる。<br/>発動条件：参の大牙【乱撃】および参の大牙【乱裂】の命中時"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "特定のアクションの威力を上昇させる。\n\n壱の牙【咬創】の威力：200\n壱の牙【穿裂】の威力：200\n弐の牙【猛襲】の威力：300\n弐の牙【疾速】の威力：300",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>壱の牙【咬創】の威力：200<br/>壱の牙【穿裂】の威力：200<br/>弐の牙【猛襲】の威力：300<br/>弐の牙【疾速】の威力：300"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "蛇へびの技わざ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4b105f04e744d6a65f6ed28c75a79ec5f0151a49.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 75,
+     "jobclassText": "Lv75",
+     "description": "双牙連撃および双牙乱撃が実行できるようになる。\n発動条件：弐の蛇【猛襲】および弐の蛇【疾速】の命中時",
+     "descriptionHtml": "双牙連撃および双牙乱撃が実行できるようになる。<br/>発動条件：弐の蛇【猛襲】および弐の蛇【疾速】の命中時"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "大蛇だいじゃの技わざ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2122a2b003b6dd72cc260a13a93f22097ebe07af.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "description": "双牙連閃および双牙乱閃が実行できるようになる。\n発動条件：弐の大蛇【猛襲】および弐の大蛇【疾速】の命中時",
+     "descriptionHtml": "双牙連閃および双牙乱閃が実行できるようになる。<br/>発動条件：弐の大蛇【猛襲】および弐の大蛇【疾速】の命中時"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "飛蛇とびへびの魂たましい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5e6639d21fbec398ad534ae0c2fe19b5f3001b4b.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "自身に「飛蛇の魂」が付与される。\n発動条件：壱の蛇【強砕】および壱の大蛇【強砕】の命中時",
+     "descriptionHtml": "自身に「飛蛇の魂」が付与される。<br/>発動条件：壱の蛇【強砕】および壱の大蛇【強砕】の命中時"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "蛇行だこう効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1e60ee225ffece4266216964ac996c1466a8b858.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "蛇行の最大チャージ数が3に増加する。",
+     "descriptionHtml": "蛇行の最大チャージ数が3に増加する。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "アクション威力いりょくアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "特定のアクションの威力を上昇させる。\n\n参の牙【側撃】の威力：340\n参の牙【側裂】の威力：340\n参の牙【背撃】の威力：340\n参の牙【背裂】の威力：340",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>参の牙【側撃】の威力：340<br/>参の牙【側裂】の威力：340<br/>参の牙【背撃】の威力：340<br/>参の牙【背裂】の威力：340"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "飛蛇とびへびの魂たましい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a6e704cdb935de113fa46e137907d9a816e5194.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "「飛蛇の魂」の最大スタック数が3に増加する。",
+     "descriptionHtml": "「飛蛇の魂」の最大スタック数が3に増加する。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "祖霊それいの魂たましい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/026131d5e2c5bb1aab3bb492c7329cc791cc8c39.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "「霊力ゲージ」が上昇するようになる。\nさらに、自身に「祖霊降ろし実行可」が付与される。\n効果時間：30秒\n発動条件：特定のウェポンスキルの命中時と蛇の霊気実行時",
+     "descriptionHtml": "「霊力ゲージ」が上昇するようになる。<br/>さらに、自身に「祖霊降ろし実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：特定のウェポンスキルの命中時と蛇の霊気実行時"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "飛蛇とびへびの尾お効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fd453ec378516f7b77ff959e7c0714be8f82c1e.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "飛蛇連尾撃および飛蛇乱尾撃が実行できるようになる。\n発動条件：飛蛇の尾の命中時",
+     "descriptionHtml": "飛蛇連尾撃および飛蛇乱尾撃が実行できるようになる。<br/>発動条件：飛蛇の尾の命中時"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "祖霊それいの魂たましい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/940beb1eff18a213456848f7d19318112040ea6e.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "「霊力」の最大スタック数が5に増加する。\nさらに、祖霊の大蛇牙が実行できるようになる。\n発動条件：「祖霊降ろし」効果中",
+     "descriptionHtml": "「霊力」の最大スタック数が5に増加する。<br/>さらに、祖霊の大蛇牙が実行できるようになる。<br/>発動条件：「祖霊降ろし」効果中"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "祖霊それいの牙きばマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f06c1aae31dc1d1324391254870d3b0b0a1402ea.png",
+     "acquired": [
+      {
+       "class": "ヴァイパー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/sS2MK2LmSHGjziXHE6DIOw7_4U.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】が実行できるようになる。\n発動条件：祖霊の牙【壱】、祖霊の牙【弐】、祖霊の牙【参】、祖霊の牙【肆】それぞれの命中時",
+     "descriptionHtml": "祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】が実行できるようになる。<br/>発動条件：祖霊の牙【壱】、祖霊の牙【弐】、祖霊の牙【参】、祖霊の牙【肆】それぞれの命中時"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "内丹の回復力を800に上昇させる。",
+     "descriptionHtml": "内丹の回復力を800に上昇させる。"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "牽制けんせい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "牽制の効果時間を15秒に延長する。",
+     "descriptionHtml": "牽制の効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "壱いちの牙きば【咬創こうそう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/15337c3d71d35597218e0409e01081633652d23f.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：5000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "弐にの牙きば【猛襲もうしゅう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dfeba44b89c0d27641837c677bb18ff423b34d40.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【咬創】\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/>コンボ条件：壱の牙【咬創】<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "参さんの牙きば【咬撃こうげき】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a0c368a4f7ebb14a8cea1d1a344e0fc916081a3f.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【猛襲】\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：弐の牙【猛襲】<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "壱いちの牙きば【切創せっそう】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e59eb58734d7a36986f811450ec692e626655bec.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：5000\nコンボ条件：参の牙【咬撃】\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：5000<br/>コンボ条件：参の牙【咬撃】<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "弐にの牙きば【疾速しっそく】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad647f94d46f0cb3284648c436fa967aadf989a1.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【切創】\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/>コンボ条件：壱の牙【切創】<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "参さんの牙きば【噛砕ごうさい】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9df032ccdca8feaf3e7288acfd2dd3fdb68def20.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【疾速】\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：弐の牙【疾速】<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "壱いちの蛇へび【血宴けつえん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1a805b094cbbf2d8cba34910f919e4ed395a2786.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：10000\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのアクションを実行すると弐の蛇【血宴】に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：10000<br/>追加効果：与ダメージの100％分のＨＰを吸収する。<br/>このアクションを実行すると弐の蛇【血宴】に変化する。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "飛蛇とびへびの尾お",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c9bf1d09821271fbe0d0fa58a70b9460eb72680c.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n最大チャージ数：2",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>2体目以降の対象への威力は4000に減少する。<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "追ついの牙きば",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c6b4fc449bc125b8df51956cd02b4721cd94e742.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "発動条件を満たすと蛇尾撃、双牙連撃、双牙乱撃、飛蛇連尾撃、飛蛇乱尾撃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。",
+     "descriptionHtml": "発動条件を満たすと蛇尾撃、双牙連撃、双牙乱撃、飛蛇連尾撃、飛蛇乱尾撃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "蛇行だこう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1558fe95bce595ce0219cc4d24631d922c72bb81.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象の目前まで素早く移動する。\n追加効果：自身の移動速度を50％上昇させる。\n効果時間：4秒\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象の目前まで素早く移動する。<br/>追加効果：自身の移動速度を50％上昇させる。<br/>効果時間：4秒<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "蛇鱗術じゃりんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e07af133f3aa974349eba0f4a938631964728177.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「蛇鱗」を付与する。\n効果時間：4秒\n蛇鱗効果：被ダメージを50％軽減させ、さらに浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nまた、効果中はこのアクションが「蛇鱗撃」に変化する。\n効果中は移動できない。\n追加効果：自身に一定量のダメージを防ぐバリアの「蛇鱗［バリア］」を付与する。\nバリア量：回復力4000相当\n効果時間：4秒\nバリアがダメージを完全に吸収して消滅すると、ヴァイパー自身に「蛇血」を付与する。\n効果時間が経過するか、効果時間中に「蛇鱗撃」を実行すると、周囲6m以内の敵に範囲物理攻撃を実行する。\n威力：12000\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。",
+     "descriptionHtml": "自身に「蛇鱗」を付与する。<br/>効果時間：4秒<br/>蛇鱗効果：被ダメージを50％軽減させ、さらに浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>また、効果中はこのアクションが「蛇鱗撃」に変化する。<br/>効果中は移動できない。<br/>追加効果：自身に一定量のダメージを防ぐバリアの「蛇鱗［バリア］」を付与する。<br/>バリア量：回復力4000相当<br/>効果時間：4秒<br/>バリアがダメージを完全に吸収して消滅すると、ヴァイパー自身に「蛇血」を付与する。<br/>効果時間が経過するか、効果時間中に「蛇鱗撃」を実行すると、周囲6m以内の敵に範囲物理攻撃を実行する。<br/>威力：12000<br/>自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "飛蛇とびへびの魂たましい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/147f8d74ae9ae599fa971b0ab6080a4690220c4f.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "飛蛇の尾と蛇鱗術のリキャストタイムを解消する。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが15秒短縮される。",
+     "descriptionHtml": "飛蛇の尾と蛇鱗術のリキャストタイムを解消する。<br/>自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが15秒短縮される。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "祖霊それいの牙きば【壱いち】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8f5e873cc3e905162527647b1156f0ae740b442e.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：大空喰らう蛇\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>コンボ条件：大空喰らう蛇<br/>発動条件：「祖霊降ろし」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "祖霊それいの牙きば【弐に】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/af774179732ea48f9ce9c21b0e2a7f35d58330df.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【壱】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>コンボ条件：祖霊の牙【壱】<br/>発動条件：「祖霊降ろし」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "祖霊それいの牙きば【参さん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b755b35b9d30313dbae0a1bc153fe714668b790.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【弐】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>コンボ条件：祖霊の牙【弐】<br/>発動条件：「祖霊降ろし」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "祖霊それいの牙きば【肆し】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e71fea55bada906d1f752bdcb7f1cda184978532.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【参】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>コンボ条件：祖霊の牙【参】<br/>発動条件：「祖霊降ろし」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "弐にの蛇へび【血宴けつえん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1842fa2852ed84e6b56cf7385caabd23312e47de.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：10000\nコンボ条件：壱の蛇【血宴】\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：10000<br/>コンボ条件：壱の蛇【血宴】<br/>追加効果：与ダメージの100％分のＨＰを吸収する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__18",
+     "name": "祖霊それいの大蛇牙だいじゃが",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e7971a6b1359d5fb936f931f07f362247061077c.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの100％分のＨＰを吸収する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：12000<br/>追加効果：与ダメージの100％分のＨＰを吸収する。<br/>実行時に「祖霊降ろし」の効果が切れる。<br/>発動条件：「祖霊降ろし」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__19",
+     "name": "蛇尾撃じゃびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/071377e0e1e3711012d7e0db2dc7b84b74ca9714.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：参の牙【咬撃】または参の牙【噛砕】の命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：参の牙【咬撃】または参の牙【噛砕】の命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__20",
+     "name": "双牙連撃そうがれんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e87afcce9e10bc1bf6fabb5db22d3e5644af2688.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：壱の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：壱の蛇【血宴】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__21",
+     "name": "双牙乱撃そうがらんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6bbb676b91db09777535491b7c2bbd236b693dcb.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：弐の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：弐の蛇【血宴】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__22",
+     "name": "飛蛇連尾撃とびへびれんびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/da71d25a9c4ec075ee870a2ad5434f54d5ec141d.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "0.7秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇の尾命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：飛蛇の尾命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__23",
+     "name": "飛蛇乱尾撃とびへびらんびげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7988ba0a7efd3045918bd5237541ec5ddef6d57a.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "0.7秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇連尾撃命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：飛蛇連尾撃命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__24",
+     "name": "祖霊それいの蛇へび【壱いち】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3eded561d986ef0d88cbddc58a1203bd13392e12.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【壱】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：祖霊の牙【壱】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__25",
+     "name": "祖霊それいの蛇へび【弐に】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/754ccf3d14880402121e03e9d6406fb938558a7b.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【弐】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：祖霊の牙【弐】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__26",
+     "name": "祖霊それいの蛇へび【参さん】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9ab5ad729ec0e3b515a72f1f15dcdc64b159decd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【参】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：祖霊の牙【参】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__27",
+     "name": "祖霊それいの蛇へび【肆し】",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/609221c5f7e2ab86304dcc9db03fef237f414985.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【肆】命中時\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に物理攻撃。<br/>威力：4000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身のリミットゲージを3秒分増加させる。<br/>発動条件：祖霊の牙【肆】命中時<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__28",
+     "name": "蛇鱗撃じゃりんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6c01119dc0bdb81236252001d0c655ad929feed1.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "6m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの50％分のＨＰを吸収する。\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。\n実行時に「蛇鱗」と「蛇血」の効果が切れる。\n発動条件：「蛇鱗」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：12000<br/>追加効果：与ダメージの50％分のＨＰを吸収する。<br/>自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。<br/>実行時に「蛇鱗」と「蛇血」の効果が切れる。<br/>発動条件：「蛇鱗」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "大空おおぞら喰くらう蛇へび",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ed95dc742df4e9795e7c0a72e18eb72d0d00293a.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象に飛びかかりつつ、対象とその周囲の敵に範囲物理攻撃。\n威力：15000\n追加効果：自身に「祖霊降ろし」を付与する。\nさらに、自身の移動速度を50％上昇させる。\n効果時間：20秒\n効果中は「コンボ：牙の構え」が祖霊の牙【壱】に、壱の蛇【血宴】が祖霊の大蛇牙にそれぞれ変化する。\n追加効果：与ダメージの50％分のＨＰを吸収する。\n追加効果：対象に「惨毒」を付与する。\n効果時間：12秒\n惨毒効果：自身から対象に与えるダメージを25％上昇させる。\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：5秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒",
+     "descriptionHtml": "対象に飛びかかりつつ、対象とその周囲の敵に範囲物理攻撃。<br/>威力：15000<br/>追加効果：自身に「祖霊降ろし」を付与する。<br/>さらに、自身の移動速度を50％上昇させる。<br/>効果時間：20秒<br/>効果中は「コンボ：牙の構え」が祖霊の牙【壱】に、壱の蛇【血宴】が祖霊の大蛇牙にそれぞれ変化する。<br/>追加効果：与ダメージの50％分のＨＰを吸収する。<br/>追加効果：対象に「惨毒」を付与する。<br/>効果時間：12秒<br/>惨毒効果：自身から対象に与えるダメージを25％上昇させる。<br/>追加効果：対象に75％ヘヴィを付与する。<br/>効果時間：5秒<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒",
+     "descriptionHtml": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "スウィフト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。",
+     "descriptionHtml": "自身の移動速度を100％上昇させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>この効果はマウントに騎乗すると解除される。"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "スマイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000～18000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。<br/>自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "アクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__viper",
+    "steps": [
+     {
+      "name": "壱の牙【咬創】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/4c17f1a64284635f1483f205f9aea15be9bd1a16.png"
+     },
+     {
+      "name": "弐の牙【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/3b2aea9fa0be73f01aeb45b7eff15fd344776af0.png"
+     },
+     {
+      "name": "参の牙【側撃】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/05bf152b3b5ac3ed319b5cdcbbdca1db4006cd96.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "参の牙【側裂】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/24777f7ac5f5169f3ebf6b656d7cedf54d57e9a6.png"
+     },
+     {
+      "name": "壱の牙【穿裂】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/0763edc3238365b4076dba5d28b8f5c68be1d3de.png"
+     },
+     {
+      "name": "弐の牙【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/75a4621d0d002a4b18c59acfdfb097424ff88a5b.png"
+     },
+     {
+      "name": "参の牙【背撃】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/c0524362f22ecb3fe78015685d2385c1cfbbe811.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "参の牙【背裂】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2ca132552615abcd4f962ec2b32eb8b0ef6ccd50.png"
+     }
+    ],
+    "effect": "「霊力ゲージ」の上昇と、単体の敵を攻撃することに適した攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の牙」の直後に、アビリティ「蛇尾撃」を実行できます。"
+   },
+   {
+    "class": "job__combo__root job__combo__viper",
+    "steps": [
+     {
+      "name": "壱の大牙【咬創】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/8b9f63b988cfb7be43914b31ff5551ee41c99ffa.png"
+     },
+     {
+      "name": "弐の大牙【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2117aa184918197d460d34352b715a239d27af1d.png"
+     },
+     {
+      "name": "参の大牙【乱撃】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a7c0917ef2eebad0e74ffceccb472348016fcb79.png"
+     },
+     {
+      "name": "壱の大牙【穿裂】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/d5b0fd312dbb29775aba54246dc487805eb045e7.png"
+     },
+     {
+      "name": "弐の大牙【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/c45c309beb82894d97fdb3a01afe3673cc1ec5b0.png"
+     },
+     {
+      "name": "参の大牙【乱裂】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/6715225127c0d7b81affb5d8cbdbb81dbaac8744.png"
+     }
+    ],
+    "effect": "「霊力ゲージ」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の大牙」の直後に、アビリティ「蛇尾閃」を実行できます。"
+   },
+   {
+    "class": "job__combo__root job__combo__viper",
+    "steps": [
+     {
+      "name": "壱の蛇【強砕】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/7958ea7095b37de74593fd6d1426d74177e46536.png"
+     },
+     {
+      "name": "弐の蛇【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a9a91ec0b652e92408c4211e510ffca14d7498cd.png"
+     },
+     {
+      "name": "弐の蛇【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2ff8a8c9e5710f229b6d3dc3e19ea40c7908cb50.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "弐の蛇【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2ff8a8c9e5710f229b6d3dc3e19ea40c7908cb50.png"
+     },
+     {
+      "name": "弐の蛇【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a9a91ec0b652e92408c4211e510ffca14d7498cd.png"
+     }
+    ],
+    "effect": "「霊力ゲージ」と「飛蛇の魂」が上昇し、単体の敵を攻撃することに適した攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の蛇」の直後に、アビリティ「双牙連撃」および「双牙乱撃」を実行をすることができます。"
+   },
+   {
+    "class": "job__combo__root job__combo__viper",
+    "steps": [
+     {
+      "name": "壱の大蛇【強砕】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/13c9698f33d48e95d53bb67e7eef68bfff122e14.png"
+     },
+     {
+      "name": "弐の大蛇【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/d807e8e444e8cb313a14e04f5c4d9f3af91b9706.png"
+     },
+     {
+      "name": "弐の大蛇【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2425fc375286fe6776b09f0db2f020faec679bfd.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "弐の大蛇【疾速】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2425fc375286fe6776b09f0db2f020faec679bfd.png"
+     },
+     {
+      "name": "弐の大蛇【猛襲】",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/d807e8e444e8cb313a14e04f5c4d9f3af91b9706.png"
+     }
+    ],
+    "effect": "「霊力ゲージ」と「飛蛇の魂」が上昇し、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の大蛇」の直後に、アビリティ「双牙連閃」および「双牙乱閃」を実行することができます。"
+   }
+  ],
+  "allText": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n壱の牙【咬創】\n\n弐の牙【猛襲】\n\n参の牙【側撃】\n\n参の牙【側裂】\n\n壱の牙【穿裂】\n\n弐の牙【疾速】\n\n参の牙【背撃】\n\n参の牙【背裂】\n\n「霊力ゲージ」の上昇と、単体の敵を攻撃することに適した攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の牙」の直後に、アビリティ「蛇尾撃」を実行できます。\n\n壱の大牙【咬創】\n\n弐の大牙【猛襲】\n\n参の大牙【乱撃】\n\n壱の大牙【穿裂】\n\n弐の大牙【疾速】\n\n参の大牙【乱裂】\n\n「霊力ゲージ」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の大牙」の直後に、アビリティ「蛇尾閃」を実行できます。\n\n壱の蛇【強砕】\n\n弐の蛇【猛襲】\n\n弐の蛇【疾速】\n\n弐の蛇【疾速】\n\n弐の蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、単体の敵を攻撃することに適した攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の蛇」の直後に、アビリティ「双牙連撃」および「双牙乱撃」を実行をすることができます。\n\n壱の大蛇【強砕】\n\n弐の大蛇【猛襲】\n\n弐の大蛇【疾速】\n\n弐の大蛇【疾速】\n\n弐の大蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の大蛇」の直後に、アビリティ「双牙連閃」および「双牙乱閃」を実行することができます。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "ヴァイパーシンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/t/G22uSFZcTh5fVpuIdm8c92Ou8o.png"
+    ]
+   },
+   {
+    "title": "霊力ゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/T/VclkHU7jT40MouLAejjB0I_i4o.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/U/0JmVot_twAiT5SRFTo2DQokGRs.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/M/Ah71mlnDubOTcu5YWkcDXfRvVo.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/n/8BELXKcihCR4GnJDU987mowoYM.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/K/C0FqrLuPrCVLAoJyhd7YlgU0xc.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nヴァイパーシンボル\n\n「ヴァイパーシンボル」はアクションのコンボ状況を示します。\nヴァイパーは「壱の牙【咬創】」と「壱の牙【穿裂】」のように2つのアクションのうち、いずれか1つのアクションを実行し、\n「壱の牙」、「弐の牙」、「参の牙」とコンボを繋げて戦います。\n\n「参の牙」には複数の種類があり、いずれかの「参の牙」を実行すると、異なる「参の牙」にダメージ上昇効果が付与されます。\n効果が付与された「参の牙」を実行するためには、特定のコンボルートでコンボを成功させる必要があります。\n\n「ヴァイパーシンボル」の刀身の強調表現は、ホットバー上のコンボアクションの強調表現と対応しているため、\n刀身の明滅に従ってアクションを実行していくと、ボーナスが付与された「参の牙」のコンボルートへ繋げることができます。\n例えば、「壱の牙【咬創】」が強調された場合は左の刀身が明滅し、「壱の牙【穿裂】」が強調された場合は右の刀身が明滅します。\n刀身の強調表現の色と刀身内部のゲージはコンボの段階を示しています。\n\nレベル82で特性「飛蛇の魂」を修得することで、「ヴァイパーシンボル」に\"飛蛇の魂\"が表示されるようになります。\n飛蛇の魂はアクション「壱の蛇【強砕】」や「壱の大蛇【強砕】」、またはレベル86で修得するアビリティ「蛇の霊気」を実行すると付与され、これを消費して「飛蛇の尾」を実行することができます。\n\nレベル88で特性「飛蛇の魂効果アップ」を修得することで、\"飛蛇の魂\"の最大スタック数が3つに増加します。\n\n霊力ゲージ\n\nレベル90で特性「祖霊の魂」を修得することで、「霊力ゲージ」が表示されるようになります。\n霊力ゲージは特定のウェポンスキルでコンボを成功させると蓄積していき、一定の霊力ゲージを消費して「祖霊降ろし」を実行できます。\n「祖霊降ろし」効果中は自身に\"霊力\"が付与され、霊力を消費して「祖霊降ろし」状態専用のウェポンスキルを実行することができます。\n\nレベル96で特性「祖霊の魂効果アップ」を修得することで、「霊力ゲージ」の\"霊力\"の最大スタック数が5つに増加します。\n\nシンプルモード\n\nヴァイパーシンボル\n\n刀身の強調表現\n\n「飛蛇の魂」スタック時（飛蛇の魂×3）\n\n霊力ゲージ\n\n通常時\n\n「祖霊降ろし」状態",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">ヴァイパーシンボル</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/t/G22uSFZcTh5fVpuIdm8c92Ou8o.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\"><span class=\"txt_red\">「ヴァイパーシンボル」</span>はアクションのコンボ状況を示します。<br/>ヴァイパーは<span class=\"txt_red\">「壱の牙【咬創】」</span>と<span class=\"txt_red\">「壱の牙【穿裂】」</span>のように2つのアクションのうち、いずれか1つのアクションを実行し、<br/><span class=\"txt_red\">「壱の牙」</span>、<span class=\"txt_red\">「弐の牙」</span>、<span class=\"txt_red\">「参の牙」</span>とコンボを繋げて戦います。<br/><br/>「参の牙」には複数の種類があり、いずれかの「参の牙」を実行すると、異なる「参の牙」にダメージ上昇効果が付与されます。<br/>効果が付与された「参の牙」を実行するためには、特定のコンボルートでコンボを成功させる必要があります。<br/><br/>「ヴァイパーシンボル」の<span class=\"txt_red\">刀身の強調表現</span>は、ホットバー上のコンボアクションの強調表現と対応しているため、<br/>刀身の明滅に従ってアクションを実行していくと、ボーナスが付与された「参の牙」のコンボルートへ繋げることができます。<br/>例えば、「壱の牙【咬創】」が強調された場合は<span class=\"txt_red\">左の刀身が明滅</span>し、「壱の牙【穿裂】」が強調された場合は<span class=\"txt_red\">右の刀身が明滅</span>します。<br/>刀身の強調表現の色と刀身内部のゲージはコンボの段階を示しています。</p>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/I/FJbikj-7YbIXL8OnIBV-MaVhZk.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル82で特性<span class=\"txt_red\">「飛蛇の魂」</span>を修得することで、「ヴァイパーシンボル」に<span class=\"txt_red\">\"飛蛇の魂\"</span>が表示されるようになります。<br/>飛蛇の魂はアクション<span class=\"txt_red\">「壱の蛇【強砕】」</span>や<span class=\"txt_red\">「壱の大蛇【強砕】」</span>、またはレベル86で修得するアビリティ<span class=\"txt_red\">「蛇の霊気」</span>を実行すると付与され、これを消費して<span class=\"txt_red\">「飛蛇の尾」</span>を実行することができます。</p>\n</div>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/n/itotI6ZbqGe7TmMQXoIgDt6OJo.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル88で特性<span class=\"txt_red\">「飛蛇の魂効果アップ」</span>を修得することで、\"飛蛇の魂\"の最大スタック数が3つに増加します。</p>\n</div>\n<h3 class=\"job__hud__title\">霊力ゲージ</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/T/VclkHU7jT40MouLAejjB0I_i4o.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">レベル90で特性<span class=\"txt_red\">「祖霊の魂」</span>を修得することで、<span class=\"txt_red\">「霊力ゲージ」</span>が表示されるようになります。<br/>霊力ゲージは特定のウェポンスキルでコンボを成功させると蓄積していき、一定の霊力ゲージを消費して<span class=\"txt_red\">「祖霊降ろし」</span>を実行できます。<br/>「祖霊降ろし」効果中は自身に<span class=\"txt_red\">\"霊力\"</span>が付与され、霊力を消費して「祖霊降ろし」状態専用のウェポンスキルを実行することができます。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/9/MVtt6dbYH04CR6ziMIf6_O-PzY.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">レベル96で特性<span class=\"txt_red\">「祖霊の魂効果アップ」</span>を修得することで、「霊力ゲージ」の\"霊力\"の最大スタック数が5つに増加します。</p>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">ヴァイパーシンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/U/0JmVot_twAiT5SRFTo2DQokGRs.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">刀身の強調表現</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/M/Ah71mlnDubOTcu5YWkcDXfRvVo.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「飛蛇の魂」スタック時（飛蛇の魂×3）</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">霊力ゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/n/8BELXKcihCR4GnJDU987mowoYM.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">通常時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/K/C0FqrLuPrCVLAoJyhd7YlgU0xc.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「祖霊降ろし」状態</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/G22uSFZcTh5fVpuIdm8c92Ou8o.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/I/FJbikj-7YbIXL8OnIBV-MaVhZk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/n/itotI6ZbqGe7TmMQXoIgDt6OJo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/T/VclkHU7jT40MouLAejjB0I_i4o.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/9/MVtt6dbYH04CR6ziMIf6_O-PzY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/U/0JmVot_twAiT5SRFTo2DQokGRs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/M/Ah71mlnDubOTcu5YWkcDXfRvVo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/n/8BELXKcihCR4GnJDU987mowoYM.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/C0FqrLuPrCVLAoJyhd7YlgU0xc.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n壱いちの牙きば【咬創こうそう】\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n蛇鋭牙【咬創】時威力：300\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。\n\n弐にの牙きば【猛襲もうしゅう】\n\nLv5\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】が弐の牙【猛襲】に変化する。\n\n壱いちの牙きば【穿裂せんれつ】\n\nLv10\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n蛇鋭牙【穿裂】時威力：300\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。\n\n飛蛇とびへびの牙きば\n\nLv15\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\n\n弐にの牙きば【疾速しっそく】\n\nLv20\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】が弐の牙【疾速】に変化する。\n\n壱いちの大牙おおきば【咬創こうそう】\n\nLv25\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【咬創】時威力：140\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。\n\n参さんの牙きば【側撃そくげき】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背撃】」を付与する。\n効果時間：60秒\n鋭牙【背撃】効果：参の牙【背撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【側撃】に変化する。\n\n参さんの牙きば【側裂そくれつ】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背裂】」を付与する。\n効果時間：60秒\n鋭牙【背裂】効果：参の牙【背裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する。\n\n参さんの牙きば【背撃はいげき】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側裂】」を付与する。\n効果時間：60秒\n鋭牙【側裂】効果：参の牙【側裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【背撃】に変化する。\n\n参さんの牙きば【背裂はいれつ】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側撃】」を付与する。\n効果時間：60秒\n鋭牙【側撃】効果：参の牙【側撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【背裂】に変化する。\n\n壱いちの大牙おおきば【穿裂せんれつ】\n\nLv35\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【穿裂】時威力：140\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。\n\n蛇行だこう\n\nLv40\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。\n\n弐にの大牙おおきば【猛襲もうしゅう】\n\nLv40\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【咬創】が弐の大牙【猛襲】に変化する。\n\n弐にの大牙おおきば【疾速しっそく】\n\nLv45\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【穿裂】が弐の大牙【疾速】に変化する。\n\n参さんの大牙おおきば【乱撃らんげき】\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱撃】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱裂】」を付与する。\n効果時間：60秒\n大鋭牙【乱裂】効果：参の大牙【乱裂】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【猛襲】が参の大牙【乱撃】に変化する。\n\n参さんの大牙おおきば【乱裂らんれつ】\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱裂】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱撃】」を付与する。\n効果時間：60秒\n大鋭牙【乱撃】効果：参の大牙【乱撃】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【疾速】が参の大牙【乱裂】に変化する。\n\n蛇尾術じゃびじゅつ\n\nLv55\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと蛇尾撃、蛇尾閃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。\n\n蛇尾撃じゃびげき\n\nLv55\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：280\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾撃に変化する。\n\n蛇尾閃じゃびせん\n\nLv60\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n発動条件：参の大牙【乱撃】または参の大牙【乱裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾閃に変化する。\n\n壱いちの蛇へび【強砕きょうさい】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n40秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：540\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の大蛇【強砕】」と共有する。\n\n弐にの蛇へび【猛襲もうしゅう】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：630\n側面攻撃時威力：680\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n双鋭牙【連撃】効果：双牙連撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n弐にの蛇へび【疾速しっそく】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：630\n背面攻撃時威力：680\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n双鋭牙【乱撃】効果：双牙乱撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n壱いちの大蛇だいじゃ【強砕きょうさい】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n40秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：250\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の蛇【強砕】」と共有する。\n\n弐にの大蛇だいじゃ【猛襲もうしゅう】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n双鋭牙【連閃】効果：双牙連閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n弐にの大蛇だいじゃ【疾速しっそく】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n双鋭牙【乱閃】効果：双牙乱閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n双牙連術そうがれんじゅつ\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと双牙連撃、双牙連閃、飛蛇連尾撃のいずれかに変化する。\n\n双牙乱術そうがらんじゅつ\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと双牙乱撃、双牙乱閃、飛蛇乱尾撃のいずれかに変化する。\n\n双牙連撃そうがれんげき\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：120\n双鋭牙【連撃】時威力：170\n追加効果：弐の蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連撃に変化する。\n\n双牙乱撃そうがらんげき\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：120\n双鋭牙【乱撃】時威力：170\n追加効果：弐の蛇【疾速】の直後に実行すると自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱撃に変化する。\n\n双牙連閃そうがれんせん\n\nLv80\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【連閃】時威力：80\n追加効果：弐の大蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連閃に変化する。\n\n双牙乱閃そうがらんせん\n\nLv80\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【乱閃】時威力：80\n追加効果：弐の大蛇【疾速】の直後に実行すると自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱閃に変化する。\n\n飛蛇とびへびの尾お\n\nLv82\n\nウェポン\nスキル\nInstant\n\n3.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：680\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【連尾】」を付与する。\n効果時間：60秒\n飛鋭尾【連尾】効果：飛蛇連尾撃の威力を50上昇させる。\nこのアクションを命中させると双牙連術が飛蛇連尾撃に、双牙乱術が飛蛇乱尾撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：「飛蛇の魂」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n蛇へびの霊気れいき\n\nLv86\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に「飛蛇の魂」を付与する。\nさらに、自身に「祖霊降ろし実行可」を付与する。\n効果時間：30秒\n発動条件：自身が戦闘状態\n\n祖霊それい降おろし\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2.2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：750\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に5スタックの「霊力」を付与する。\n効果時間：30秒\n発動条件：「霊力ゲージ」50\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n祖霊それいの牙きば【壱いち】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊降ろしの後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】と壱の大牙【咬創】が祖霊の牙【壱】に変化する。\n\n祖霊それいの牙きば【弐に】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【壱】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】と壱の大牙【穿裂】が祖霊の牙【弐】に変化する。\n\n祖霊それいの牙きば【参さん】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【弐】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【猛襲】と弐の大蛇【猛襲】が祖霊の牙【参】に変化する。\n\n祖霊それいの牙きば【肆し】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【参】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【疾速】と弐の大蛇【疾速】が祖霊の牙【肆】に変化する。\n\n飛蛇連尾撃とびへびれんびげき\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【連尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【乱尾】」を付与する。\n効果時間：60秒\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が飛蛇連尾撃に変化する。\n\n飛蛇乱尾撃とびへびらんびげき\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【乱尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が飛蛇乱尾撃に変化する。\n\n祖霊それいの大蛇牙だいじゃが\n\nLv96\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1150\n2体目以降の対象への威力は75％減少する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「霊力」1以上\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと祖霊降ろしが祖霊の大蛇牙に変化する。\n\n祖霊それいの蛇へび【壱いち】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【壱】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【壱】に変化する。\n\n祖霊それいの蛇へび【弐に】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【弐】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【弐】に変化する。\n\n祖霊それいの蛇へび【参さん】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【参】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【参】に変化する。\n\n祖霊それいの蛇へび【肆し】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【肆】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【肆】に変化する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\n牙きばの技わざ効果こうかアップ\n\nLv55\n\n蛇尾撃が実行できるようになる。\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時\n\n大牙おおきばの技わざ効果こうかアップ\n\nLv60\n\n蛇尾閃が実行できるようになる。\n発動条件：参の大牙【乱撃】および参の大牙【乱裂】の命中時\n\nアクション威力いりょくアップ\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\n壱の牙【咬創】の威力：200\n壱の牙【穿裂】の威力：200\n弐の牙【猛襲】の威力：300\n弐の牙【疾速】の威力：300\n\n蛇へびの技わざ効果こうかアップ\n\nLv75\n\n双牙連撃および双牙乱撃が実行できるようになる。\n発動条件：弐の蛇【猛襲】および弐の蛇【疾速】の命中時\n\n大蛇だいじゃの技わざ効果こうかアップ\n\nLv80\n\n双牙連閃および双牙乱閃が実行できるようになる。\n発動条件：弐の大蛇【猛襲】および弐の大蛇【疾速】の命中時\n\n飛蛇とびへびの魂たましい\n\nLv82\n\n自身に「飛蛇の魂」が付与される。\n発動条件：壱の蛇【強砕】および壱の大蛇【強砕】の命中時\n\n蛇行だこう効果こうかアップ\n\nLv84\n\n蛇行の最大チャージ数が3に増加する。\n\nアクション威力いりょくアップIIつー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n参の牙【側撃】の威力：340\n参の牙【側裂】の威力：340\n参の牙【背撃】の威力：340\n参の牙【背裂】の威力：340\n\n飛蛇とびへびの魂たましい効果こうかアップ\n\nLv88\n\n「飛蛇の魂」の最大スタック数が3に増加する。\n\n祖霊それいの魂たましい\n\nLv90\n\n「霊力ゲージ」が上昇するようになる。\nさらに、自身に「祖霊降ろし実行可」が付与される。\n効果時間：30秒\n発動条件：特定のウェポンスキルの命中時と蛇の霊気実行時\n\n飛蛇とびへびの尾お効果こうかアップ\n\nLv92\n\n飛蛇連尾撃および飛蛇乱尾撃が実行できるようになる。\n発動条件：飛蛇の尾の命中時\n\n祖霊それいの魂たましい効果こうかアップ\n\nLv96\n\n「霊力」の最大スタック数が5に増加する。\nさらに、祖霊の大蛇牙が実行できるようになる。\n発動条件：「祖霊降ろし」効果中\n\n祖霊それいの牙きばマスタリー\n\nLv100\n\n祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】が実行できるようになる。\n発動条件：祖霊の牙【壱】、祖霊の牙【弐】、祖霊の牙【参】、祖霊の牙【肆】それぞれの命中時"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "コンボ",
+   "anchor": "anchor__pve_combo",
+   "text": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n壱の牙【咬創】\n\n弐の牙【猛襲】\n\n参の牙【側撃】\n\n参の牙【側裂】\n\n壱の牙【穿裂】\n\n弐の牙【疾速】\n\n参の牙【背撃】\n\n参の牙【背裂】\n\n「霊力ゲージ」の上昇と、単体の敵を攻撃することに適した攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の牙」の直後に、アビリティ「蛇尾撃」を実行できます。\n\n壱の大牙【咬創】\n\n弐の大牙【猛襲】\n\n参の大牙【乱撃】\n\n壱の大牙【穿裂】\n\n弐の大牙【疾速】\n\n参の大牙【乱裂】\n\n「霊力ゲージ」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の大牙」の直後に、アビリティ「蛇尾閃」を実行できます。\n\n壱の蛇【強砕】\n\n弐の蛇【猛襲】\n\n弐の蛇【疾速】\n\n弐の蛇【疾速】\n\n弐の蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、単体の敵を攻撃することに適した攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の蛇」の直後に、アビリティ「双牙連撃」および「双牙乱撃」を実行をすることができます。\n\n壱の大蛇【強砕】\n\n弐の大蛇【猛襲】\n\n弐の大蛇【疾速】\n\n弐の大蛇【疾速】\n\n弐の大蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の大蛇」の直後に、アビリティ「双牙連閃」および「双牙乱閃」を実行することができます。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nヴァイパーシンボル\n\n「ヴァイパーシンボル」はアクションのコンボ状況を示します。\nヴァイパーは「壱の牙【咬創】」と「壱の牙【穿裂】」のように2つのアクションのうち、いずれか1つのアクションを実行し、\n「壱の牙」、「弐の牙」、「参の牙」とコンボを繋げて戦います。\n\n「参の牙」には複数の種類があり、いずれかの「参の牙」を実行すると、異なる「参の牙」にダメージ上昇効果が付与されます。\n効果が付与された「参の牙」を実行するためには、特定のコンボルートでコンボを成功させる必要があります。\n\n「ヴァイパーシンボル」の刀身の強調表現は、ホットバー上のコンボアクションの強調表現と対応しているため、\n刀身の明滅に従ってアクションを実行していくと、ボーナスが付与された「参の牙」のコンボルートへ繋げることができます。\n例えば、「壱の牙【咬創】」が強調された場合は左の刀身が明滅し、「壱の牙【穿裂】」が強調された場合は右の刀身が明滅します。\n刀身の強調表現の色と刀身内部のゲージはコンボの段階を示しています。\n\nレベル82で特性「飛蛇の魂」を修得することで、「ヴァイパーシンボル」に\"飛蛇の魂\"が表示されるようになります。\n飛蛇の魂はアクション「壱の蛇【強砕】」や「壱の大蛇【強砕】」、またはレベル86で修得するアビリティ「蛇の霊気」を実行すると付与され、これを消費して「飛蛇の尾」を実行することができます。\n\nレベル88で特性「飛蛇の魂効果アップ」を修得することで、\"飛蛇の魂\"の最大スタック数が3つに増加します。\n\n霊力ゲージ\n\nレベル90で特性「祖霊の魂」を修得することで、「霊力ゲージ」が表示されるようになります。\n霊力ゲージは特定のウェポンスキルでコンボを成功させると蓄積していき、一定の霊力ゲージを消費して「祖霊降ろし」を実行できます。\n「祖霊降ろし」効果中は自身に\"霊力\"が付与され、霊力を消費して「祖霊降ろし」状態専用のウェポンスキルを実行することができます。\n\nレベル96で特性「祖霊の魂効果アップ」を修得することで、「霊力ゲージ」の\"霊力\"の最大スタック数が5つに増加します。\n\nシンプルモード\n\nヴァイパーシンボル\n\n刀身の強調表現\n\n「飛蛇の魂」スタック時（飛蛇の魂×3）\n\n霊力ゲージ\n\n通常時\n\n「祖霊降ろし」状態"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n壱いちの牙きば【咬創こうそう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの牙きば【猛襲もうしゅう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【咬創】\n\n※このアクションはホットバーに登録することはできない。\n\n参さんの牙きば【咬撃こうげき】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【猛襲】\n\n※このアクションはホットバーに登録することはできない。\n\n壱いちの牙きば【切創せっそう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\nコンボ条件：参の牙【咬撃】\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの牙きば【疾速しっそく】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【切創】\n\n※このアクションはホットバーに登録することはできない。\n\n参さんの牙きば【噛砕ごうさい】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【疾速】\n\n※このアクションはホットバーに登録することはできない。\n\n壱いちの蛇へび【血宴けつえん】\n\nウェポン\nスキル\nInstant\n10秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのアクションを実行すると弐の蛇【血宴】に変化する。\n\n飛蛇とびへびの尾お\n\nウェポン\nスキル\nInstant\n20秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n最大チャージ数：2\n\n追ついの牙きば\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと蛇尾撃、双牙連撃、双牙乱撃、飛蛇連尾撃、飛蛇乱尾撃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。\n\n蛇行だこう\n\nアビリティ\nInstant\n12秒\n-\n\n20m\n\n0m\n\n対象の目前まで素早く移動する。\n追加効果：自身の移動速度を50％上昇させる。\n効果時間：4秒\n最大チャージ数：2\nバインド中は実行不可。\n\n蛇鱗術じゃりんじゅつ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身に「蛇鱗」を付与する。\n効果時間：4秒\n蛇鱗効果：被ダメージを50％軽減させ、さらに浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nまた、効果中はこのアクションが「蛇鱗撃」に変化する。\n効果中は移動できない。\n追加効果：自身に一定量のダメージを防ぐバリアの「蛇鱗［バリア］」を付与する。\nバリア量：回復力4000相当\n効果時間：4秒\nバリアがダメージを完全に吸収して消滅すると、ヴァイパー自身に「蛇血」を付与する。\n効果時間が経過するか、効果時間中に「蛇鱗撃」を実行すると、周囲6m以内の敵に範囲物理攻撃を実行する。\n威力：12000\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。\n\n飛蛇とびへびの魂たましい\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n飛蛇の尾と蛇鱗術のリキャストタイムを解消する。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが15秒短縮される。\n\n祖霊それいの牙きば【壱いち】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：大空喰らう蛇\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【弐に】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【壱】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【参さん】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【弐】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【肆し】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【参】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの蛇へび【血宴けつえん】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\nコンボ条件：壱の蛇【血宴】\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの大蛇牙だいじゃが\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの100％分のＨＰを吸収する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n蛇尾撃じゃびげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：参の牙【咬撃】または参の牙【噛砕】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n双牙連撃そうがれんげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：壱の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n双牙乱撃そうがらんげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：弐の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n飛蛇連尾撃とびへびれんびげき\n\nアビリティ\nInstant\n0.7秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇の尾命中時\n\n※このアクションはホットバーに登録することはできない。\n\n飛蛇乱尾撃とびへびらんびげき\n\nアビリティ\nInstant\n0.7秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇連尾撃命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【壱いち】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【壱】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【弐に】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【弐】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【参さん】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【参】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【肆し】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【肆】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n蛇鱗撃じゃりんげき\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの50％分のＨＰを吸収する。\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。\n実行時に「蛇鱗」と「蛇血」の効果が切れる。\n発動条件：「蛇鱗」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n大空おおぞら喰くらう蛇へび\n\nInstant\n10秒\n-\n\n20m\n\n5m\n\n対象に飛びかかりつつ、対象とその周囲の敵に範囲物理攻撃。\n威力：15000\n追加効果：自身に「祖霊降ろし」を付与する。\nさらに、自身の移動速度を50％上昇させる。\n効果時間：20秒\n効果中は「コンボ：牙の構え」が祖霊の牙【壱】に、壱の蛇【血宴】が祖霊の大蛇牙にそれぞれ変化する。\n追加効果：与ダメージの50％分のＨＰを吸収する。\n追加効果：対象に「惨毒」を付与する。\n効果時間：12秒\n惨毒効果：自身から対象に与えるダメージを25％上昇させる。\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：5秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nトラル大陸において、長い年月を経て強大な力を得た獣を「トラルヴィドラール」と呼ぶ。\nこの種の限界を超えた脅威を倒すため、狩人たちは密林最強の捕食者を観察し、学びを得ることとなる。\nそれは、ときに己よりも大きな獲物さえ丸呑みにする「蛇」――素早い動きで二本の毒牙を突き立てる様から「二刀による連撃」を、長い身体で獲物に絡みつく様から「二刀を連結させる型」を編み出したのだ。\n二刀流武器を駆使して大物を狩り、人々の営みを護る者たちが、ヴァイパーと称されるのはそれ故のことである。\n\nジョブ開始クエスト\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n壱いちの牙きば【咬創こうそう】\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n蛇鋭牙【咬創】時威力：300\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。\n\n弐にの牙きば【猛襲もうしゅう】\n\nLv5\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】が弐の牙【猛襲】に変化する。\n\n壱いちの牙きば【穿裂せんれつ】\n\nLv10\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n蛇鋭牙【穿裂】時威力：300\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。\n\n飛蛇とびへびの牙きば\n\nLv15\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\n\n弐にの牙きば【疾速しっそく】\n\nLv20\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】が弐の牙【疾速】に変化する。\n\n壱いちの大牙おおきば【咬創こうそう】\n\nLv25\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【咬創】時威力：140\n追加効果：自身に「蛇鋭牙【穿裂】」を付与する。\n効果時間：60秒\n蛇鋭牙【穿裂】効果：壱の牙【穿裂】の威力を100、壱の大牙【穿裂】の威力を20上昇させる。\n「蛇鋭牙【咬創】」とは同時に付与されない。\n\n参さんの牙きば【側撃そくげき】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背撃】」を付与する。\n効果時間：60秒\n鋭牙【背撃】効果：参の牙【背撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【側撃】に変化する。\n\n参さんの牙きば【側裂そくれつ】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n側面攻撃時威力：400\n鋭牙【側裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【背裂】」を付与する。\n効果時間：60秒\n鋭牙【背裂】効果：参の牙【背裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【猛襲】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する。\n\n参さんの牙きば【背撃はいげき】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背撃】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側裂】」を付与する。\n効果時間：60秒\n鋭牙【側裂】効果：参の牙【側裂】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【猛襲】が参の牙【背撃】に変化する。\n\n参さんの牙きば【背裂はいれつ】\n\nLv30\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n背面攻撃時威力：400\n鋭牙【背裂】が付与されている場合は全ての威力が100上昇する。\n追加効果：自身に「鋭牙【側撃】」を付与する。\n効果時間：60秒\n鋭牙【側撃】効果：参の牙【側撃】の威力を100上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の牙【疾速】が参の牙【背裂】に変化する。\n\n壱いちの大牙おおきば【穿裂せんれつ】\n\nLv35\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n蛇鋭牙【穿裂】時威力：140\n追加効果：自身に「蛇鋭牙【咬創】」を付与する。\n効果時間：60秒\n蛇鋭牙【咬創】効果：壱の牙【咬創】の威力を100、壱の大牙【咬創】の威力を20上昇させる。\n「蛇鋭牙【穿裂】」とは同時に付与されない。\n\n蛇行だこう\n\nLv40\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。\n\n弐にの大牙おおきば【猛襲もうしゅう】\n\nLv40\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【咬創】が弐の大牙【猛襲】に変化する。\n\n弐にの大牙おおきば【疾速しっそく】\n\nLv45\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n発動条件：壱の大牙【咬創】または壱の大牙【穿裂】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の大牙【穿裂】が弐の大牙【疾速】に変化する。\n\n参さんの大牙おおきば【乱撃らんげき】\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱撃】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱裂】」を付与する。\n効果時間：60秒\n大鋭牙【乱裂】効果：参の大牙【乱裂】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【猛襲】が参の大牙【乱撃】に変化する。\n\n参さんの大牙おおきば【乱裂らんれつ】\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：180\n大鋭牙【乱裂】が付与されている場合は威力が40上昇する。\n追加効果：自身に「大鋭牙【乱撃】」を付与する。\n効果時間：60秒\n大鋭牙【乱撃】効果：参の大牙【乱撃】の威力を40上昇させる。\n他の「鋭牙」「大鋭牙」とは同時に付与されない。\n追加効果：「霊力ゲージ」を10上昇させる。\n発動条件：弐の大牙【猛襲】または弐の大牙【疾速】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の大牙【疾速】が参の大牙【乱裂】に変化する。\n\n蛇尾術じゃびじゅつ\n\nLv55\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと蛇尾撃、蛇尾閃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。\n\n蛇尾撃じゃびげき\n\nLv55\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：280\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾撃に変化する。\n\n蛇尾閃じゃびせん\n\nLv60\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n発動条件：参の大牙【乱撃】または参の大牙【乱裂】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が蛇尾閃に変化する。\n\n壱いちの蛇へび【強砕きょうさい】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n40秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：540\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の大蛇【強砕】」と共有する。\n\n弐にの蛇へび【猛襲もうしゅう】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：630\n側面攻撃時威力：680\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n双鋭牙【連撃】効果：双牙連撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n弐にの蛇へび【疾速しっそく】\n\nLv65\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：630\n背面攻撃時威力：680\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n双鋭牙【乱撃】効果：双牙乱撃の威力を50上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連撃に、双牙乱術が双牙乱撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の蛇【強砕】または弐の蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n壱いちの大蛇だいじゃ【強砕きょうさい】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n40秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：250\n追加効果：自身に「飛蛇の魂」を付与する。\n最大スタック数：3\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、かつリキャストタイマーを「壱の蛇【強砕】」と共有する。\n\n弐にの大蛇だいじゃ【猛襲もうしゅう】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「猛襲」を付与する。\n効果時間：40秒\n猛襲効果：自身の与ダメージを10％上昇させる。\n追加効果：自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n双鋭牙【連閃】効果：双牙連閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【疾速】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n弐にの大蛇だいじゃ【疾速しっそく】\n\nLv70\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身に「疾速」を付与する。\n効果時間：40秒\n疾速効果：自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n追加効果：自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n双鋭牙【乱閃】効果：双牙乱閃の威力を30上昇させる。\n追加効果：「霊力ゲージ」を5上昇させる。\nこのアクションを命中させると双牙連術が双牙連閃に、双牙乱術が双牙乱閃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：壱の大蛇【強砕】または弐の大蛇【猛襲】実行後\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n双牙連術そうがれんじゅつ\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと双牙連撃、双牙連閃、飛蛇連尾撃のいずれかに変化する。\n\n双牙乱術そうがらんじゅつ\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと双牙乱撃、双牙乱閃、飛蛇乱尾撃のいずれかに変化する。\n\n双牙連撃そうがれんげき\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：120\n双鋭牙【連撃】時威力：170\n追加効果：弐の蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連撃に変化する。\n\n双牙乱撃そうがらんげき\n\nLv75\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：120\n双鋭牙【乱撃】時威力：170\n追加効果：弐の蛇【疾速】の直後に実行すると自身に「双鋭牙【連撃】」を付与する。\n効果時間：30秒\n発動条件：弐の蛇【猛襲】または弐の蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱撃に変化する。\n\n双牙連閃そうがれんせん\n\nLv80\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【連閃】時威力：80\n追加効果：弐の大蛇【猛襲】の直後に実行すると自身に「双鋭牙【乱閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が双牙連閃に変化する。\n\n双牙乱閃そうがらんせん\n\nLv80\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：50\n双鋭牙【乱閃】時威力：80\n追加効果：弐の大蛇【疾速】の直後に実行すると自身に「双鋭牙【連閃】」を付与する。\n効果時間：30秒\n発動条件：弐の大蛇【猛襲】または弐の大蛇【疾速】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が双牙乱閃に変化する。\n\n飛蛇とびへびの尾お\n\nLv82\n\nウェポン\nスキル\nInstant\n\n3.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：680\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【連尾】」を付与する。\n効果時間：60秒\n飛鋭尾【連尾】効果：飛蛇連尾撃の威力を50上昇させる。\nこのアクションを命中させると双牙連術が飛蛇連尾撃に、双牙乱術が飛蛇乱尾撃にそれぞれ変化し、それらのアクションを2回実行できるようになる。\n発動条件：「飛蛇の魂」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n蛇へびの霊気れいき\n\nLv86\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に「飛蛇の魂」を付与する。\nさらに、自身に「祖霊降ろし実行可」を付与する。\n効果時間：30秒\n発動条件：自身が戦闘状態\n\n祖霊それい降おろし\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2.2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：750\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に5スタックの「霊力」を付与する。\n効果時間：30秒\n発動条件：「霊力ゲージ」50\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n祖霊それいの牙きば【壱いち】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊降ろしの後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【咬創】と壱の大牙【咬創】が祖霊の牙【壱】に変化する。\n\n祖霊それいの牙きば【弐に】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【壱】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと壱の牙【穿裂】と壱の大牙【穿裂】が祖霊の牙【弐】に変化する。\n\n祖霊それいの牙きば【参さん】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【弐】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【猛襲】と弐の大蛇【猛襲】が祖霊の牙【参】に変化する。\n\n祖霊それいの牙きば【肆し】\n\nLv90\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：480\n祖霊の牙【参】の後に実行すると威力が680に上昇する。\n2体目以降の対象への威力は75％減少する。\n発動条件：「霊力」\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと弐の蛇【疾速】と弐の大蛇【疾速】が祖霊の牙【肆】に変化する。\n\n飛蛇連尾撃とびへびれんびげき\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【連尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n追加効果：自身に「飛鋭尾【乱尾】」を付与する。\n効果時間：60秒\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙連術が飛蛇連尾撃に変化する。\n\n飛蛇乱尾撃とびへびらんびげき\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：120\n飛鋭尾【乱尾】時威力：170\n2体目以降の対象への威力は75％減少する。\n発動条件：飛蛇の尾の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと双牙乱術が飛蛇乱尾撃に変化する。\n\n祖霊それいの大蛇牙だいじゃが\n\nLv96\n\nウェポン\nスキル\nInstant\n\n3秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1150\n2体目以降の対象への威力は75％減少する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「霊力」1以上\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと祖霊降ろしが祖霊の大蛇牙に変化する。\n\n祖霊それいの蛇へび【壱いち】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【壱】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【壱】に変化する。\n\n祖霊それいの蛇へび【弐に】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【弐】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【弐】に変化する。\n\n祖霊それいの蛇へび【参さん】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【参】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【参】に変化する。\n\n祖霊それいの蛇へび【肆し】\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：320\n2体目以降の対象への威力は75％減少する。\n発動条件：祖霊の牙【肆】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと蛇尾術が祖霊の蛇【肆】に変化する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2\n\n特性\n\n特性名\n修得\n効果\n\n牙きばの技わざ効果こうかアップ\n\nLv55\n\n蛇尾撃が実行できるようになる。\n発動条件：参の牙【側撃】、参の牙【側裂】、参の牙【背撃】、参の牙【背裂】の命中時\n\n大牙おおきばの技わざ効果こうかアップ\n\nLv60\n\n蛇尾閃が実行できるようになる。\n発動条件：参の大牙【乱撃】および参の大牙【乱裂】の命中時\n\nアクション威力いりょくアップ\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\n壱の牙【咬創】の威力：200\n壱の牙【穿裂】の威力：200\n弐の牙【猛襲】の威力：300\n弐の牙【疾速】の威力：300\n\n蛇へびの技わざ効果こうかアップ\n\nLv75\n\n双牙連撃および双牙乱撃が実行できるようになる。\n発動条件：弐の蛇【猛襲】および弐の蛇【疾速】の命中時\n\n大蛇だいじゃの技わざ効果こうかアップ\n\nLv80\n\n双牙連閃および双牙乱閃が実行できるようになる。\n発動条件：弐の大蛇【猛襲】および弐の大蛇【疾速】の命中時\n\n飛蛇とびへびの魂たましい\n\nLv82\n\n自身に「飛蛇の魂」が付与される。\n発動条件：壱の蛇【強砕】および壱の大蛇【強砕】の命中時\n\n蛇行だこう効果こうかアップ\n\nLv84\n\n蛇行の最大チャージ数が3に増加する。\n\nアクション威力いりょくアップIIつー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n参の牙【側撃】の威力：340\n参の牙【側裂】の威力：340\n参の牙【背撃】の威力：340\n参の牙【背裂】の威力：340\n\n飛蛇とびへびの魂たましい効果こうかアップ\n\nLv88\n\n「飛蛇の魂」の最大スタック数が3に増加する。\n\n祖霊それいの魂たましい\n\nLv90\n\n「霊力ゲージ」が上昇するようになる。\nさらに、自身に「祖霊降ろし実行可」が付与される。\n効果時間：30秒\n発動条件：特定のウェポンスキルの命中時と蛇の霊気実行時\n\n飛蛇とびへびの尾お効果こうかアップ\n\nLv92\n\n飛蛇連尾撃および飛蛇乱尾撃が実行できるようになる。\n発動条件：飛蛇の尾の命中時\n\n祖霊それいの魂たましい効果こうかアップ\n\nLv96\n\n「霊力」の最大スタック数が5に増加する。\nさらに、祖霊の大蛇牙が実行できるようになる。\n発動条件：「祖霊降ろし」効果中\n\n祖霊それいの牙きばマスタリー\n\nLv100\n\n祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】が実行できるようになる。\n発動条件：祖霊の牙【壱】、祖霊の牙【弐】、祖霊の牙【参】、祖霊の牙【肆】それぞれの命中時\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。\n\nコンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n壱の牙【咬創】\n\n弐の牙【猛襲】\n\n参の牙【側撃】\n\n参の牙【側裂】\n\n壱の牙【穿裂】\n\n弐の牙【疾速】\n\n参の牙【背撃】\n\n参の牙【背裂】\n\n「霊力ゲージ」の上昇と、単体の敵を攻撃することに適した攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の牙」の直後に、アビリティ「蛇尾撃」を実行できます。\n\n壱の大牙【咬創】\n\n弐の大牙【猛襲】\n\n参の大牙【乱撃】\n\n壱の大牙【穿裂】\n\n弐の大牙【疾速】\n\n参の大牙【乱裂】\n\n「霊力ゲージ」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【咬創】は【穿裂】の威力を上昇させる「蛇鋭牙【穿裂】」を付与し、【穿裂】は【咬創】の威力を上昇させる「蛇鋭牙【咬創】」を付与します。\nまた【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「参の大牙」の直後に、アビリティ「蛇尾閃」を実行できます。\n\n壱の蛇【強砕】\n\n弐の蛇【猛襲】\n\n弐の蛇【疾速】\n\n弐の蛇【疾速】\n\n弐の蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、単体の敵を攻撃することに適した攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の蛇」の直後に、アビリティ「双牙連撃」および「双牙乱撃」を実行をすることができます。\n\n壱の大蛇【強砕】\n\n弐の大蛇【猛襲】\n\n弐の大蛇【疾速】\n\n弐の大蛇【疾速】\n\n弐の大蛇【猛襲】\n\n「霊力ゲージ」と「飛蛇の魂」が上昇し、複数の敵を攻撃することに適した範囲攻撃コンボです。\n【猛襲】は自身の与ダメージが上昇し、【疾速】は自身の攻撃間隔の短縮効果が得られます。\nそれぞれ「弐の大蛇」の直後に、アビリティ「双牙連閃」および「双牙乱閃」を実行することができます。\n\nジョブHUD\n\nヴァイパーシンボル\n\n「ヴァイパーシンボル」はアクションのコンボ状況を示します。\nヴァイパーは「壱の牙【咬創】」と「壱の牙【穿裂】」のように2つのアクションのうち、いずれか1つのアクションを実行し、\n「壱の牙」、「弐の牙」、「参の牙」とコンボを繋げて戦います。\n\n「参の牙」には複数の種類があり、いずれかの「参の牙」を実行すると、異なる「参の牙」にダメージ上昇効果が付与されます。\n効果が付与された「参の牙」を実行するためには、特定のコンボルートでコンボを成功させる必要があります。\n\n「ヴァイパーシンボル」の刀身の強調表現は、ホットバー上のコンボアクションの強調表現と対応しているため、\n刀身の明滅に従ってアクションを実行していくと、ボーナスが付与された「参の牙」のコンボルートへ繋げることができます。\n例えば、「壱の牙【咬創】」が強調された場合は左の刀身が明滅し、「壱の牙【穿裂】」が強調された場合は右の刀身が明滅します。\n刀身の強調表現の色と刀身内部のゲージはコンボの段階を示しています。\n\nレベル82で特性「飛蛇の魂」を修得することで、「ヴァイパーシンボル」に\"飛蛇の魂\"が表示されるようになります。\n飛蛇の魂はアクション「壱の蛇【強砕】」や「壱の大蛇【強砕】」、またはレベル86で修得するアビリティ「蛇の霊気」を実行すると付与され、これを消費して「飛蛇の尾」を実行することができます。\n\nレベル88で特性「飛蛇の魂効果アップ」を修得することで、\"飛蛇の魂\"の最大スタック数が3つに増加します。\n\n霊力ゲージ\n\nレベル90で特性「祖霊の魂」を修得することで、「霊力ゲージ」が表示されるようになります。\n霊力ゲージは特定のウェポンスキルでコンボを成功させると蓄積していき、一定の霊力ゲージを消費して「祖霊降ろし」を実行できます。\n「祖霊降ろし」効果中は自身に\"霊力\"が付与され、霊力を消費して「祖霊降ろし」状態専用のウェポンスキルを実行することができます。\n\nレベル96で特性「祖霊の魂効果アップ」を修得することで、「霊力ゲージ」の\"霊力\"の最大スタック数が5つに増加します。\n\nシンプルモード\n\nヴァイパーシンボル\n\n刀身の強調表現\n\n「飛蛇の魂」スタック時（飛蛇の魂×3）\n\n霊力ゲージ\n\n通常時\n\n「祖霊降ろし」状態\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n壱いちの牙きば【咬創こうそう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの牙きば【猛襲もうしゅう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【咬創】\n\n※このアクションはホットバーに登録することはできない。\n\n参さんの牙きば【咬撃こうげき】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【猛襲】\n\n※このアクションはホットバーに登録することはできない。\n\n壱いちの牙きば【切創せっそう】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\nコンボ条件：参の牙【咬撃】\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの牙きば【疾速しっそく】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：壱の牙【切創】\n\n※このアクションはホットバーに登録することはできない。\n\n参さんの牙きば【噛砕ごうさい】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：弐の牙【疾速】\n\n※このアクションはホットバーに登録することはできない。\n\n壱いちの蛇へび【血宴けつえん】\n\nウェポン\nスキル\nInstant\n10秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのアクションを実行すると弐の蛇【血宴】に変化する。\n\n飛蛇とびへびの尾お\n\nウェポン\nスキル\nInstant\n20秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n最大チャージ数：2\n\n追ついの牙きば\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n発動条件を満たすと蛇尾撃、双牙連撃、双牙乱撃、飛蛇連尾撃、飛蛇乱尾撃、祖霊の蛇【壱】、祖霊の蛇【弐】、祖霊の蛇【参】、祖霊の蛇【肆】のいずれかに変化する。\n\n蛇行だこう\n\nアビリティ\nInstant\n12秒\n-\n\n20m\n\n0m\n\n対象の目前まで素早く移動する。\n追加効果：自身の移動速度を50％上昇させる。\n効果時間：4秒\n最大チャージ数：2\nバインド中は実行不可。\n\n蛇鱗術じゃりんじゅつ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身に「蛇鱗」を付与する。\n効果時間：4秒\n蛇鱗効果：被ダメージを50％軽減させ、さらに浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nまた、効果中はこのアクションが「蛇鱗撃」に変化する。\n効果中は移動できない。\n追加効果：自身に一定量のダメージを防ぐバリアの「蛇鱗［バリア］」を付与する。\nバリア量：回復力4000相当\n効果時間：4秒\nバリアがダメージを完全に吸収して消滅すると、ヴァイパー自身に「蛇血」を付与する。\n効果時間が経過するか、効果時間中に「蛇鱗撃」を実行すると、周囲6m以内の敵に範囲物理攻撃を実行する。\n威力：12000\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。\n\n飛蛇とびへびの魂たましい\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n飛蛇の尾と蛇鱗術のリキャストタイムを解消する。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが15秒短縮される。\n\n祖霊それいの牙きば【壱いち】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：大空喰らう蛇\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【弐に】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【壱】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【参さん】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【弐】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの牙きば【肆し】\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\nコンボ条件：祖霊の牙【参】\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n弐にの蛇へび【血宴けつえん】\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\nコンボ条件：壱の蛇【血宴】\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの大蛇牙だいじゃが\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの100％分のＨＰを吸収する。\n実行時に「祖霊降ろし」の効果が切れる。\n発動条件：「祖霊降ろし」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n蛇尾撃じゃびげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：参の牙【咬撃】または参の牙【噛砕】の命中時\n\n※このアクションはホットバーに登録することはできない。\n\n双牙連撃そうがれんげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：壱の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n双牙乱撃そうがらんげき\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：弐の蛇【血宴】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n飛蛇連尾撃とびへびれんびげき\n\nアビリティ\nInstant\n0.7秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇の尾命中時\n\n※このアクションはホットバーに登録することはできない。\n\n飛蛇乱尾撃とびへびらんびげき\n\nアビリティ\nInstant\n0.7秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：飛蛇連尾撃命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【壱いち】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【壱】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【弐に】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【弐】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【参さん】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【参】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n祖霊それいの蛇へび【肆し】\n\nアビリティ\nInstant\n1秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に物理攻撃。\n威力：4000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身のリミットゲージを3秒分増加させる。\n発動条件：祖霊の牙【肆】命中時\n\n※このアクションはホットバーに登録することはできない。\n\n蛇鱗撃じゃりんげき\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：12000\n追加効果：与ダメージの50％分のＨＰを吸収する。\n自身に「蛇血」が付与されている場合は、効果範囲が15mに延長され、さらに6m以内の敵への威力が1.5倍になる。\n実行時に「蛇鱗」と「蛇血」の効果が切れる。\n発動条件：「蛇鱗」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n大空おおぞら喰くらう蛇へび\n\nInstant\n10秒\n-\n\n20m\n\n5m\n\n対象に飛びかかりつつ、対象とその周囲の敵に範囲物理攻撃。\n威力：15000\n追加効果：自身に「祖霊降ろし」を付与する。\nさらに、自身の移動速度を50％上昇させる。\n効果時間：20秒\n効果中は「コンボ：牙の構え」が祖霊の牙【壱】に、壱の蛇【血宴】が祖霊の大蛇牙にそれぞれ変化する。\n追加効果：与ダメージの50％分のＨＰを吸収する。\n追加効果：対象に「惨毒」を付与する。\n効果時間：12秒\n惨毒効果：自身から対象に与えるダメージを25％上昇させる。\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：5秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

@@ -1,0 +1,1982 @@
+{
+ "job": "astrologian",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/astrologian/",
+ "pageTitle": "Job Guide: Astrologian | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nArcana\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nEver has man coveted knowledge, and none more so than that of his fate. Thus did he labor to master the skill of foresight—but initial efforts bore little fruit. That is, until he looked to the stars above, which foretell the coming seasons, and learned to read the heavens.\n\nThough this gift is known today as astrology, the people of Sharlayan saw fit to not only read the stars, but to write their movements as well. By attuning their aetherial energies to that of constellations, they learned to wield magicks with heretofore unseen properties.\n\nThus was astromancy born—a new form of magick which grants its users power over fate. Employing a star globe and divining deck in their miraculous deeds, fortune always smiles upon these masters of arcana.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/183ab49e5ed43f37889be8427bf9a4c308cfa748.png",
+   "https://lds-img.finalfantasyxiv.com/d/23d16903c44b621e2e0d68f608a813fc2a5b1055.png",
+   "https://lds-img.finalfantasyxiv.com/d/b5a34001aef4b3dad1eaf5864146d890464e3163.png",
+   "https://lds-img.finalfantasyxiv.com/d/8a41b60865844ff8a5eeb76aaf885b8e8b0ad5b6.png",
+   "https://lds-img.finalfantasyxiv.com/d/4de44df1a7ba71fdd94b5e4d26b378c8895c594a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d7284036ab2b7f0eb020ef471eb9b1de1ccbb02d.png",
+   "https://lds-img.finalfantasyxiv.com/d/6900c041afabd698273f5ca3c99d64574bdfacf6.png",
+   "https://lds-img.finalfantasyxiv.com/d/f77f8fb51548637c94db4f1b8e90fc7b1a4ee55f.png",
+   "https://lds-img.finalfantasyxiv.com/d/ca9495b5dd2708d088f8180b433b812580622dcb.png",
+   "https://lds-img.finalfantasyxiv.com/d/3a5badd54650309c03a120ea6906ad51276e8c6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/aa32f90984104b56be403963081f119244df50a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/1d7b124a1b665b5be6db3759a2f5060eef40b89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/59c09c6f090fb75d16bb4f906793b951fd58b4cf.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bef02f2854edbe020ce99626c711e66d18e5f85.png",
+   "https://lds-img.finalfantasyxiv.com/d/c4b31e905fbbbd9b79d5afc5c5aed9a89d46f788.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5048acc0cf1b937307241ff27f77ad032505872.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f1ca32d6772490ce1a8cbf36fc80c4596dec7ee.png",
+   "https://lds-img.finalfantasyxiv.com/d/556bdf27e11b05ed3d2c48c9ab895af933d07ab9.png",
+   "https://lds-img.finalfantasyxiv.com/d/4df3bcac0369619901583d1b18c13e1cf160e8b5.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3b405ffabff79b88db294cae3aff6296d9f743a.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c6c1d8dd2025d1019e16133be9b5c8bc9871201.png",
+   "https://lds-img.finalfantasyxiv.com/d/b0fa77347891a32179c547797e6deed79e9ef47a.png",
+   "https://lds-img.finalfantasyxiv.com/d/7012ee74c18fa7f0e6a087d778701560a5553322.png",
+   "https://lds-img.finalfantasyxiv.com/d/5d3bd4b689787c566897a86b425e9e5149123df2.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1a9eac4e36df41bc621c096cfb001e32a970fd7.png",
+   "https://lds-img.finalfantasyxiv.com/d/c853db515158ad161d5ef8b9a84cdc5af02b6850.png",
+   "https://lds-img.finalfantasyxiv.com/d/e349d6ef0e8f566a09bc7c1220876e25707ae721.png",
+   "https://lds-img.finalfantasyxiv.com/d/ff7d87f8fcd5c702dc0723ba9fb286b2050e968c.png",
+   "https://lds-img.finalfantasyxiv.com/d/5ee8bc24d9a8ee766b7dda50cbcb29be15727990.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c87d9b89ed28f32863f8c094717d53ceeba741a.png",
+   "https://lds-img.finalfantasyxiv.com/d/304809845293aaad1c232a7d143732b182e34197.png",
+   "https://lds-img.finalfantasyxiv.com/d/5a81be793ffaa939b52917ef026f6652a2227498.png",
+   "https://lds-img.finalfantasyxiv.com/d/06b9d2b4c1b2e0aae4f345dfeeaefd76e86ec789.png",
+   "https://lds-img.finalfantasyxiv.com/d/7a5cfc1f8baa06ffb818bee6f8cde7cd0db857fa.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b48700e107bcfe9620f773da5896b514e89f9a2.png",
+   "https://lds-img.finalfantasyxiv.com/d/69474c8e5dfbf0236360e4982bed44a0ea9b523f.png",
+   "https://lds-img.finalfantasyxiv.com/d/96ad13792128386a54c9a3d5215b0f6bbb0af2aa.png",
+   "https://lds-img.finalfantasyxiv.com/d/7c826ef697cd5d5934661e9238dd5ba0ad607e9d.png",
+   "https://lds-img.finalfantasyxiv.com/d/20768aed61f83aeae04632231cba41ae889e187f.png",
+   "https://lds-img.finalfantasyxiv.com/d/9b0527d5ad6cdb263a912b463d4ff12bd13e9fea.png",
+   "https://lds-img.finalfantasyxiv.com/d/84a1d24b31fad8d635a42725679138891a380389.png",
+   "https://lds-img.finalfantasyxiv.com/d/95ee719b5b94cf10273ef9fc21827c7df45d57ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/a367b1927bdd52461ad5be58631c2df03d7e21ff.png",
+   "https://lds-img.finalfantasyxiv.com/d/b9aa0aa071e7f2153894c59c5505c95572378905.png",
+   "https://lds-img.finalfantasyxiv.com/d/15cd4aec7df896b1c1c10069ba807d2ea5aeee59.png",
+   "https://lds-img.finalfantasyxiv.com/d/43a2825d898ea1ec47249261e3d07d261f38a01c.png",
+   "https://lds-img.finalfantasyxiv.com/d/186a64e044b7a6781a8c1756d53ff437fd2df3bc.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b357cc86628e66d2ff722219a541d075aa67643.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+   "https://lds-img.finalfantasyxiv.com/d/7e78194d327e6a89ecb90f3eae608c085346e1f4.png",
+   "https://lds-img.finalfantasyxiv.com/d/4d933fcf783650927195ec4b1814e9609eeddc58.png",
+   "https://lds-img.finalfantasyxiv.com/d/65bf868f9e1117ac27da24bca3b88022fca4eb89.png",
+   "https://lds-img.finalfantasyxiv.com/d/9ba6e1a43826a71c5520b5f322440ca88b85b809.png",
+   "https://lds-img.finalfantasyxiv.com/d/7817118e58d798cb0801a5847e512401ba5db3cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/bbddf9b46af564ac6f2c1ca17e11f44782b8ce21.png",
+   "https://lds-img.finalfantasyxiv.com/d/1562a3a0b694560ec44c95e63db10db4f164b0e5.png",
+   "https://lds-img.finalfantasyxiv.com/d/55c0d5fd227200d651cee3672b6bda3fb7382681.png",
+   "https://lds-img.finalfantasyxiv.com/d/48ee68a54dd44c50b1219e48ce274297345b5810.png",
+   "https://lds-img.finalfantasyxiv.com/d/0fe6f9752dfe8ff3a411794e31bac9bceec3c618.png",
+   "https://lds-img.finalfantasyxiv.com/d/727601c35b12c8cf610a619bffea557c4eae6140.png",
+   "https://lds-img.finalfantasyxiv.com/d/64d75230bf3fc7b9e8c52b4a8e8b9a7458ebdf4e.png",
+   "https://lds-img.finalfantasyxiv.com/d/184ffb6c90cb6ab81b25f68ba19510ee469ce306.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+   "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/fdDeo2rH_cvk-lvVieQ1UU6fMk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Malefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/183ab49e5ed43f37889be8427bf9a4c308cfa748.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 150.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 150."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Benefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23d16903c44b621e2e0d68f608a813fc2a5b1055.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Benefic II will restore critical HP\nDuration: 15s",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 500<br/>Additional Effect: 15% chance next Benefic II will restore critical HP<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Combust",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b5a34001aef4b3dad1eaf5864146d890464e3163.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 50\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 50<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Lightspeed",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8a41b60865844ff8a5eeb76aaf885b8e8b0ad5b6.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces cast times for spells by 2.5 seconds.\nDuration: 15s\nMaximum Charges: 2",
+     "descriptionHtml": "Reduces cast times for spells by 2.5 seconds.<br/>Duration: 15s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Helios",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4de44df1a7ba71fdd94b5e4d26b378c8895c594a.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "700 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 400",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 400"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Ascend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d7284036ab2b7f0eb020ef471eb9b1de1ccbb02d.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Spell",
+     "cast": "8s",
+     "recast": "2.5s",
+     "cost": "2400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Resurrects target to a weakened state.",
+     "descriptionHtml": "Resurrects target to a weakened state."
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Essential Dignity",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6900c041afabd698273f5ca3c99d64574bdfacf6.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 400\nPotency increases up to 900 as the target's HP decreases, reaching its maximum value when the target has 30% HP or less.\nMaximum Charges: 3",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 400<br/>Potency increases up to 900 as the target's HP decreases, reaching its maximum value when the target has 30% HP or less.<br/>Maximum Charges: 3"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Benefic II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f77f8fb51548637c94db4f1b8e90fc7b1a4ee55f.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "700 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 800",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Astral Draw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ca9495b5dd2708d088f8180b433b812580622dcb.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "55s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Draws the Balance, the Arrow, the Spire, and the Lord of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Balance, Play II changes to The Arrow, Play III changes to The Spire, Minor Arcana changes to Lord of Crowns, and Astral Draw changes to Umbral Draw.\nShares a recast timer with Umbral Draw.",
+     "descriptionHtml": "Draws the Balance, the Arrow, the Spire, and the Lord of Crowns from your divining deck.<br/>Additional Effect: Restores 20% of maximum MP<br/>Upon execution, Play I changes to The Balance, Play II changes to The Arrow, Play III changes to The Spire, Minor Arcana changes to Lord of Crowns, and Astral Draw changes to Umbral Draw.<br/>Shares a recast timer with Umbral Draw."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Umbral Draw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3a5badd54650309c03a120ea6906ad51276e8c6e.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "55s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Draws the Spear, the Bole, the Ewer, and the Lady of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Spear, Play II changes to The Bole, Play III changes to The Ewer, Minor Arcana changes to Lady of Crowns, and Umbral Draw changes to Astral Draw.\nShares a recast timer with Astral Draw.\n\n※This action cannot be assigned to a hotbar.\n※Astral Draw changes to Umbral Draw when requirements for execution are met.",
+     "descriptionHtml": "Draws the Spear, the Bole, the Ewer, and the Lady of Crowns from your divining deck.<br/>Additional Effect: Restores 20% of maximum MP<br/>Upon execution, Play I changes to The Spear, Play II changes to The Bole, Play III changes to The Ewer, Minor Arcana changes to Lady of Crowns, and Umbral Draw changes to Astral Draw.<br/>Shares a recast timer with Astral Draw.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Astral Draw changes to Umbral Draw when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Play I",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/aa32f90984104b56be403963081f119244df50a8.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Balance\nUmbral Draw Effect: Action changes to The Spear",
+     "descriptionHtml": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.<br/>Astral Draw Effect: Action changes to The Balance<br/>Umbral Draw Effect: Action changes to The Spear"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Play II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1d7b124a1b665b5be6db3759a2f5060eef40b89d.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Arrow\nUmbral Draw Effect: Action changes to The Bole",
+     "descriptionHtml": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.<br/>Astral Draw Effect: Action changes to The Arrow<br/>Umbral Draw Effect: Action changes to The Bole"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Play III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/59c09c6f090fb75d16bb4f906793b951fd58b4cf.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Spire\nUmbral Draw Effect: Action changes to The Ewer",
+     "descriptionHtml": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.<br/>Astral Draw Effect: Action changes to The Spire<br/>Umbral Draw Effect: Action changes to The Ewer"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Aspected Benefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bef02f2854edbe020ce99626c711e66d18e5f85.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 34",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 250\nDuration: 15s",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 250<br/>Additional Effect: Regen<br/>Cure Potency: 250<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Aspected Helios",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c4b31e905fbbbd9b79d5afc5c5aed9a89d46f788.png",
+     "skillCellText": "Aspected Helios\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "800 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 250<br/>Additional Effect: Regen<br/>Cure Potency: 150<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Gravity",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5048acc0cf1b937307241ff27f77ad032505872.png",
+     "skillCellText": "Gravity\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 120 to target and all enemies nearby it.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 120 to target and all enemies nearby it."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Combust II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f1ca32d6772490ce1a8cbf36fc80c4596dec7ee.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 46",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 60\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 60<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Synastry",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/556bdf27e11b05ed3d2c48c9ab895af933d07ab9.png",
+     "skillCellText": "Synastry\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Generate an aetheric bond with target party member. Each time you cast a single-target healing spell on yourself or a party member, the party member with whom you have the bond will also recover HP equaling 40% of the original spell.\nDuration: 20s",
+     "descriptionHtml": "Generate an aetheric bond with target party member. Each time you cast a single-target healing spell on yourself or a party member, the party member with whom you have the bond will also recover HP equaling 40% of the original spell.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Divination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4df3bcac0369619901583d1b18c13e1cf160e8b5.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases damage dealt by self and nearby party members by 6%.\nDuration: 20s\nAdditional Effect: Grants Divining\nDuration: 30s",
+     "descriptionHtml": "Increases damage dealt by self and nearby party members by 6%.<br/>Duration: 20s<br/>Additional Effect: Grants Divining<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Malefic II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3b405ffabff79b88db294cae3aff6296d9f743a.png",
+     "skillCellText": "Malefic II\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 160.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 160."
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Collective Unconscious",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c6c1d8dd2025d1019e16133be9b5c8bc9871201.png",
+     "skillCellText": "Collective Unconscious\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 58",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Creates a celestial ring 8 yalms around the caster.\nDuration: 18s\nAdditional Effect: Reduces damage taken by 10% for self and any party members within 30 yalms and applies Wheel of Fortune to self and any party members within 8 yalms\nDuration: 10s\nWheel of Fortune Effect: Regen\nCure Potency: 100\nDuration: 15s\nWheel of Fortune will be applied continuously to self and all party members standing within the celestial ring.\nCollective Unconscious effect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.",
+     "descriptionHtml": "Creates a celestial ring 8 yalms around the caster.<br/>Duration: 18s<br/>Additional Effect: Reduces damage taken by 10% for self and any party members within 30 yalms and applies Wheel of Fortune to self and any party members within 8 yalms<br/>Duration: 10s<br/>Wheel of Fortune Effect: Regen<br/>Cure Potency: 100<br/>Duration: 15s<br/>Wheel of Fortune will be applied continuously to self and all party members standing within the celestial ring.<br/>Collective Unconscious effect ends upon using another action or moving (including facing a different direction).<br/>Cancels auto-attack upon execution."
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Celestial Opposition",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b0fa77347891a32179c547797e6deed79e9ef47a.png",
+     "skillCellText": "Celestial Opposition\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Regen\nCure Potency: 100\nDuration: 15s",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 200<br/>Additional Effect: Regen<br/>Cure Potency: 100<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Earthly Star",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7012ee74c18fa7f0e6a087d778701560a5553322.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "20y",
+     "description": "Deploys an Earthly Star in the designated area and grants the effect of Earthly Dominance.\nDuration: 10s\nExecuting Stellar Detonation while under the effect of Earthly Dominance creates a Stellar Burst dealing unaspected damage with a potency of 205 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 540\nAfter 10s, Earthly Dominance effect is changed to Giant Dominance.\nDuration: 10s\nWaiting 10s or executing Stellar Detonation while under the effect of Giant Dominance creates a Stellar Explosion dealing unaspected damage with a potency of 310 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 720",
+     "descriptionHtml": "Deploys an Earthly Star in the designated area and grants the effect of Earthly Dominance.<br/>Duration: 10s<br/>Executing Stellar Detonation while under the effect of Earthly Dominance creates a Stellar Burst dealing unaspected damage with a potency of 205 to all nearby enemies. Also restores own HP and the HP of all nearby party members.<br/>Cure Potency: 540<br/>After 10s, Earthly Dominance effect is changed to Giant Dominance.<br/>Duration: 10s<br/>Waiting 10s or executing Stellar Detonation while under the effect of Giant Dominance creates a Stellar Explosion dealing unaspected damage with a potency of 310 to all nearby enemies. Also restores own HP and the HP of all nearby party members.<br/>Cure Potency: 720"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Stellar Detonation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5d3bd4b689787c566897a86b425e9e5149123df2.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "3s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "While under the effect of Earthly Dominance, detonates the currently deployed Earthly Star, creating a Stellar Burst that deals unaspected damage with a potency of 205 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 540\nWhile under the effect of Giant Dominance, detonates the currently deployed Earthly Star, creating a Stellar Explosion that deals unaspected damage with a potency of 310 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 720",
+     "descriptionHtml": "While under the effect of Earthly Dominance, detonates the currently deployed Earthly Star, creating a Stellar Burst that deals unaspected damage with a potency of 205 to all nearby enemies.<br/>Additional Effect: Restores own HP and the HP of all nearby party members<br/>Cure Potency: 540<br/>While under the effect of Giant Dominance, detonates the currently deployed Earthly Star, creating a Stellar Explosion that deals unaspected damage with a potency of 310 to all nearby enemies.<br/>Additional Effect: Restores own HP and the HP of all nearby party members<br/>Cure Potency: 720"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Malefic III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1a9eac4e36df41bc621c096cfb001e32a970fd7.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 190.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 190."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Minor Arcana",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c853db515158ad161d5ef8b9a84cdc5af02b6850.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to Lord of Crowns\nUmbral Draw Effect: Action changes to Lady of Crowns",
+     "descriptionHtml": "Plays the drawn arcanum after executing Astral Draw or Umbral Draw.<br/>Astral Draw Effect: Action changes to Lord of Crowns<br/>Umbral Draw Effect: Action changes to Lady of Crowns"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Combust III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e349d6ef0e8f566a09bc7c1220876e25707ae721.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 70\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 70<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Malefic IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ff7d87f8fcd5c702dc0723ba9fb286b2050e968c.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 230.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 230."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Celestial Intersection",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ee8bc24d9a8ee766b7dda50cbcb29be15727990.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores own or target party member's HP.\nCure Potency: 200\nAdditional Sect Effect: Erects a magicked barrier which nullifies damage equaling 200% of the amount of HP restored\nDuration: 30s\nMaximum Charges: 2",
+     "descriptionHtml": "Restores own or target party member's HP.<br/>Cure Potency: 200<br/>Additional Sect Effect: Erects a magicked barrier which nullifies damage equaling 200% of the amount of HP restored<br/>Duration: 30s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Horoscope",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c87d9b89ed28f32863f8c094717d53ceeba741a.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reads your fortune and those of nearby party members, granting them Horoscope.\nDuration: 10s\nEffect upgraded to Horoscope Helios upon receiving the effects of Helios or Helios Conjunction.\nDuration: 30s\nRestores the HP of those under either effect when the cards are read a second time or the effect expires.\nHoroscope Cure Potency: 200\nHoroscope Helios Cure Potency: 400",
+     "descriptionHtml": "Reads your fortune and those of nearby party members, granting them Horoscope.<br/>Duration: 10s<br/>Effect upgraded to Horoscope Helios upon receiving the effects of Helios or Helios Conjunction.<br/>Duration: 30s<br/>Restores the HP of those under either effect when the cards are read a second time or the effect expires.<br/>Horoscope Cure Potency: 200<br/>Horoscope Helios Cure Potency: 400"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Horoscope",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/304809845293aaad1c232a7d143732b182e34197.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Restores own HP and the HP of all nearby party members.\nPotency is determined by the Horoscope effect of party members. Effect expires upon execution.\nHoroscope Potency: 200\nHoroscope Helios Potency: 400",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Potency is determined by the Horoscope effect of party members. Effect expires upon execution.<br/>Horoscope Potency: 200<br/>Horoscope Helios Potency: 400"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Neutral Sect",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a81be793ffaa939b52917ef026f6652a2227498.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases healing magic potency by 20%.\nDuration: 20s\nAdditional Effect: When casting Aspected Benefic or Helios Conjunction, erects a magicked barrier which nullifies damage\nAspected Benefic Effect: Nullifies damage equaling 250% of the amount of HP restored\nHelios Conjunction Effect: Nullifies damage equaling 125% of the amount of HP restored\nDuration: 30s\nAdditional Effect: Grants Suntouched\nDuration: 30s",
+     "descriptionHtml": "Increases healing magic potency by 20%.<br/>Duration: 20s<br/>Additional Effect: When casting Aspected Benefic or Helios Conjunction, erects a magicked barrier which nullifies damage<br/>Aspected Benefic Effect: Nullifies damage equaling 250% of the amount of HP restored<br/>Helios Conjunction Effect: Nullifies damage equaling 125% of the amount of HP restored<br/>Duration: 30s<br/>Additional Effect: Grants Suntouched<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Fall Malefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/06b9d2b4c1b2e0aae4f345dfeeaefd76e86ec789.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 270.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 270."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Gravity II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7a5cfc1f8baa06ffb818bee6f8cde7cd0db857fa.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 140 to target and all enemies nearby it.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 140 to target and all enemies nearby it."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Exaltation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b48700e107bcfe9620f773da5896b514e89f9a2.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by self or target party member by 10%.\nDuration: 8s\nAdditional Effect: Restores HP at the end of the effect's duration\nCure Potency: 500",
+     "descriptionHtml": "Reduces damage taken by self or target party member by 10%.<br/>Duration: 8s<br/>Additional Effect: Restores HP at the end of the effect's duration<br/>Cure Potency: 500"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Macrocosmos",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/69474c8e5dfbf0236360e4982bed44a0ea9b523f.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "180s",
+     "cost": "600 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Deals unaspected damage to all nearby enemies with a potency of 270 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 15s\nFor the effect's duration, 50% of damage taken is compiled.\nRestores HP equal to a cure of 200 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nAmount restored cannot exceed the target's maximum HP.\nRecast timer cannot be affected by status effects or gear attributes.",
+     "descriptionHtml": "Deals unaspected damage to all nearby enemies with a potency of 270 for the first enemy, and 40% less for all remaining enemies.<br/>Additional Effect: Grants Macrocosmos to self and all nearby party members<br/>Duration: 15s<br/>For the effect's duration, 50% of damage taken is compiled.<br/>Restores HP equal to a cure of 200 potency plus compiled damage when the effect expires or upon execution of Microcosmos.<br/>Amount restored cannot exceed the target's maximum HP.<br/>Recast timer cannot be affected by status effects or gear attributes."
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Microcosmos",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/96ad13792128386a54c9a3d5215b0f6bbb0af2aa.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Triggers the healing effect of Macrocosmos, restoring HP equal to a cure of 200 potency plus 50% of compiled damage.\nAmount restored cannot exceed the target's maximum HP.",
+     "descriptionHtml": "Triggers the healing effect of Macrocosmos, restoring HP equal to a cure of 200 potency plus 50% of compiled damage.<br/>Amount restored cannot exceed the target's maximum HP."
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Oracle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c826ef697cd5d5934661e9238dd5ba0ad607e9d.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 860 for the first enemy and 50% less for all remaining enemies.\nCan only be executed while Divining.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 860 for the first enemy and 50% less for all remaining enemies.<br/>Can only be executed while Divining."
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "Helios Conjunction",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20768aed61f83aeae04632231cba41ae889e187f.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "800 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 250<br/>Additional Effect: Regen<br/>Cure Potency: 175<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "Sun Sign",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9b0527d5ad6cdb263a912b463d4ff12bd13e9fea.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces damage taken by self and nearby party members by 10%.\nDuration: 15s\nCan only be executed while Suntouched.",
+     "descriptionHtml": "Reduces damage taken by self and nearby party members by 10%.<br/>Duration: 15s<br/>Can only be executed while Suntouched."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__card_action",
+   "title": "Arcana",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_card_action__01",
+     "name": "The Balance",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84a1d24b31fad8d635a42725679138891a380389.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases damage dealt by a party member or self by 6% if target is melee DPS or tank, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Balance when requirements for execution are met.",
+     "descriptionHtml": "Increases damage dealt by a party member or self by 6% if target is melee DPS or tank, or 3% for all other roles.<br/>Duration: 15s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play I changes to The Balance when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__02",
+     "name": "The Arrow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/95ee719b5b94cf10273ef9fc21827c7df45d57ac.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases HP recovery via healing actions for a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Arrow when requirements for execution are met.",
+     "descriptionHtml": "Increases HP recovery via healing actions for a party member or self by 10%.<br/>Duration: 15s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play II changes to The Arrow when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__03",
+     "name": "The Spire",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a367b1927bdd52461ad5be58631c2df03d7e21ff.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 400 potency.\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Spire when requirements for execution are met.",
+     "descriptionHtml": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 400 potency.<br/>Duration: 30s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play III changes to The Spire when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__04",
+     "name": "The Spear",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b9aa0aa071e7f2153894c59c5505c95572378905.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases damage dealt by a party member or self by 6% if target is ranged DPS or healer, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Spear when requirements for execution are met.",
+     "descriptionHtml": "Increases damage dealt by a party member or self by 6% if target is ranged DPS or healer, or 3% for all other roles.<br/>Duration: 15s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play I changes to The Spear when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__05",
+     "name": "The Bole",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/15cd4aec7df896b1c1c10069ba807d2ea5aeee59.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Bole when requirements for execution are met.",
+     "descriptionHtml": "Reduces damage taken by a party member or self by 10%.<br/>Duration: 15s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play II changes to The Bole when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__06",
+     "name": "The Ewer",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/43a2825d898ea1ec47249261e3d07d261f38a01c.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Grants healing over time effect to a party member or self.\nCure Potency: 200\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Ewer when requirements for execution are met.",
+     "descriptionHtml": "Grants healing over time effect to a party member or self.<br/>Cure Potency: 200<br/>Duration: 15s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Play III changes to The Ewer when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__07",
+     "name": "Lord of Crowns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/186a64e044b7a6781a8c1756d53ff437fd2df3bc.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Deals unaspected damage with a potency of 400 to all nearby enemies.\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lord of Crowns when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 400 to all nearby enemies.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Minor Arcana changes to Lord of Crowns when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_card_action__08",
+     "name": "Lady of Crowns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b357cc86628e66d2ff722219a541d075aa67643.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 400\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lady of Crowns when requirements for execution are met.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 400<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Minor Arcana changes to Lady of Crowns when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Repose",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Spell",
+     "cast": "2.5s",
+     "recast": "2.5s",
+     "cost": "600 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Afflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.",
+     "descriptionHtml": "Afflicts target with Sleep.<br/>Duration: 30s<br/>Cancels auto-attack upon execution."
+    },
+    {
+     "rowId": "healer_action__02",
+     "name": "Esuna",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Removes a single detrimental effect from target.",
+     "descriptionHtml": "Removes a single detrimental effect from target."
+    },
+    {
+     "rowId": "healer_action__03",
+     "name": "Lucid Dreaming",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 14",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Gradually restores own MP.\nPotency: 55\nDuration: 21s",
+     "descriptionHtml": "Gradually restores own MP.<br/>Potency: 55<br/>Duration: 21s"
+    },
+    {
+     "rowId": "healer_action__04",
+     "name": "Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Next spell is cast immediately.\nDuration: 10s",
+     "descriptionHtml": "Next spell is cast immediately.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "healer_action__05",
+     "name": "Surecast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 44",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Spells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s",
+     "descriptionHtml": "Spells can be cast without interruption.<br/>Additional Effect: Nullifies most knockback and draw-in effects<br/>Duration: 6s"
+    },
+    {
+     "rowId": "healer_action__06",
+     "name": "Rescue",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 48",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.",
+     "descriptionHtml": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Maim and Mend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/099b8ce7dff9d154a1ae5ac6ba70e7b77530491b.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage and HP restoration by 10%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 10%."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Enhanced Benefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7753c5b2adf795e504d26c97452f03dbd9ad4ae6.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 36",
+     "description": "Grants a 15% chance that your next Benefic II will restore critical HP.\nDuration: 15s",
+     "descriptionHtml": "Grants a 15% chance that your next Benefic II will restore critical HP.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Maim and Mend II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea011d893abd8a39efff14c7da1e9cac613b33da.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage and HP restoration by 30%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 30%."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Combust Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f89557c8a060b5202436b06ce55c414930a87824.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 46",
+     "description": "Upgrades Combust to Combust II.",
+     "descriptionHtml": "Upgrades Combust to Combust II."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Malefic Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/096c90be485edbee28599286d9aa506904bfedc1.png",
+     "skillCellText": "Malefic Mastery\nJob Quest",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "description": "Upgrades Malefic to Malefic II.",
+     "descriptionHtml": "Upgrades Malefic to Malefic II."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Malefic Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f519d617a33b436f8bfae128cafb433fa5b4de01.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Upgrades Malefic II to Malefic III.",
+     "descriptionHtml": "Upgrades Malefic II to Malefic III."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Hyper Lightspeed",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/97aa38c611b5b28a96f41040e8369f9d662c0398.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "description": "Reduces Lightspeed recast time to 60 seconds.",
+     "descriptionHtml": "Reduces Lightspeed recast time to 60 seconds."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Minor Arcana Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a090c83cbfb2beec994dca8843649936ddf0a42d.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "description": "Lord of Crowns can be drawn when executing Astral Draw, and Lady of Crowns can be drawn when executing Umbral Draw.",
+     "descriptionHtml": "Lord of Crowns can be drawn when executing Astral Draw, and Lady of Crowns can be drawn when executing Umbral Draw."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Combust Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa5c279e7998444bf41ef52dd540e514040310ba.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Combust II to Combust III.",
+     "descriptionHtml": "Upgrades Combust II to Combust III."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Malefic Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/79a6019f3f36d87224dcb1621917ede36f53a0eb.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Malefic III to Malefic IV.",
+     "descriptionHtml": "Upgrades Malefic III to Malefic IV."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Enhanced Essential Dignity",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/71147ac7d1019955a8347d94d8f419ebac254f88.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Allows the accumulation of charges for consecutive uses of Essential Dignity.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Essential Dignity.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Malefic Mastery IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/263e46f4c7940ee1681d0f15582ac7a32af7fc6a.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Malefic IV to Fall Malefic.",
+     "descriptionHtml": "Upgrades Malefic IV to Fall Malefic."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Gravity Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e458835a8f922a7e95c1ca5e325e3498007798b6.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Gravity to Gravity II.",
+     "descriptionHtml": "Upgrades Gravity to Gravity II."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Healing Magic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889c5ea6067c8a9f387840a91f54c110ca6f023e.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 85",
+     "description": "Increases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150.",
+     "descriptionHtml": "Increases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Celestial Intersection",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f43bd4d97118a07e9521573ace0ca9f5cebfb4a5.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Allows the accumulation of charges for consecutive uses of Celestial Intersection.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Celestial Intersection.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Enhanced Divination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c830c636c71c4ad906fb4cf3f5a5d2ce684f34f.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Grants Divining upon executing Divination.\nDuration: 30s",
+     "descriptionHtml": "Grants Divining upon executing Divination.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "Magick Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Combust III's damage over time to 70, Fall Malefic to 270, Gravity II to 140, and Macrocosmos to 270.",
+     "descriptionHtml": "Increases the potency of Combust III's damage over time to 70, Fall Malefic to 270, Gravity II to 140, and Macrocosmos to 270."
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "Aspected Helios Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2cba14df39809f3229349749785e64eb391bed15.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Upgrades Aspected Helios to Helios Conjunction.",
+     "descriptionHtml": "Upgrades Aspected Helios to Helios Conjunction."
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "Enhanced Essential Dignity II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2836e6ebf3b7d82144fbc5a8ea04c58aa7dff5da.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Allows a third charge of Essential Dignity.",
+     "descriptionHtml": "Allows a third charge of Essential Dignity."
+    },
+    {
+     "rowId": "trait_action__20",
+     "name": "Enhanced Neutral Sect",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/874220e311422fcc32177900e58af6b005976cb2.png",
+     "acquired": [
+      {
+       "class": "Astrologian",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Suntouched upon executing Neutral Sect.\nDuration: 30s",
+     "descriptionHtml": "Grants Suntouched upon executing Neutral Sect.<br/>Duration: 30s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Enhanced Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Reduces Swiftcast recast time to 40 seconds.",
+     "descriptionHtml": "Reduces Swiftcast recast time to 40 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Fall Malefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e78194d327e6a89ecb90f3eae608c085346e1f4.png",
+     "type": "Spell",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 6,000.\nWhen cast via Double Cast, reduces the recast time of Double Cast by 6 seconds.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000.<br/>When cast via Double Cast, reduces the recast time of Double Cast by 6 seconds."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Aspected Benefic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4d933fcf783650927195ec4b1814e9609eeddc58.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 6,000\nPotency increases up to 9,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Grants Diurnal Benefic to target\nDiurnal Benefic Effect: Gradually restores HP\nCure Potency: 3,000\nDuration: 6s\nWhen cast via Double Cast, grants Nocturnal Benefic.\nNocturnal Benefic Effect: Creates a barrier around target that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 6,000<br/>Potency increases up to 9,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.<br/>Additional Effect: Grants Diurnal Benefic to target<br/>Diurnal Benefic Effect: Gradually restores HP<br/>Cure Potency: 3,000<br/>Duration: 6s<br/>When cast via Double Cast, grants Nocturnal Benefic.<br/>Nocturnal Benefic Effect: Creates a barrier around target that absorbs damage equivalent to a heal of 6,000 potency<br/>Duration: 12s<br/>Maximum Charges: 2<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Gravity II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/65bf868f9e1117ac27da24bca3b88022fca4eb89.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nAdditional Effect: Afflicts first target with Heavy +75%\nDuration: 3s\nWhen cast via Double Cast, Binds first target.\nDuration: 3s\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.<br/>Additional Effect: Afflicts first target with Heavy +75%<br/>Duration: 3s<br/>When cast via Double Cast, Binds first target.<br/>Duration: 3s<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Double Cast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9ba6e1a43826a71c5520b5f322440ca88b85b809.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Repeats the Fall Malefic, Aspected Benefic, or Gravity II you previously cast.\nMaximum Charges: 2\nCan only be executed following Fall Malefic, Aspected Benefic, or Gravity II.",
+     "descriptionHtml": "Repeats the Fall Malefic, Aspected Benefic, or Gravity II you previously cast.<br/>Maximum Charges: 2<br/>Can only be executed following Fall Malefic, Aspected Benefic, or Gravity II."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Minor Arcana",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7817118e58d798cb0801a5847e512401ba5db3cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Draws either the Lord of Crowns or the Lady of Crowns from your divining deck.\nAction changes to the drawn arcanum.\nDuration: 10s",
+     "descriptionHtml": "Draws either the Lord of Crowns or the Lady of Crowns from your divining deck.<br/>Action changes to the drawn arcanum.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Macrocosmos",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bbddf9b46af564ac6f2c1ca17e11f44782b8ce21.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Deals unaspected damage with a potency of 10,000 to all nearby enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 10s\nAction changes to Microcosmos upon execution.\nFor the effect's duration, 20% of damage taken is compiled.\nRestores HP equal to a cure of 4,000 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 10,000 to all nearby enemies.<br/>Additional Effect: Grants Macrocosmos to self and all nearby party members<br/>Duration: 10s<br/>Action changes to Microcosmos upon execution.<br/>For the effect's duration, 20% of damage taken is compiled.<br/>Restores HP equal to a cure of 4,000 potency plus compiled damage when the effect expires or upon execution of Microcosmos.<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Epicycle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1562a3a0b694560ec44c95e63db10db4f164b0e5.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Quickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Pole Star at point of origin, and grants Retrograde Ready to self\nDuration: 10s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Retrograde upon execution.",
+     "descriptionHtml": "Quickly dash 15 yalms forward.<br/>Additional Effect: Leaves behind a Pole Star at point of origin, and grants Retrograde Ready to self<br/>Duration: 10s<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency<br/>Duration: 5s<br/>Cannot be executed while bound.<br/><br/>※Action changes to Retrograde upon execution."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Lady of Crowns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55c0d5fd227200d651cee3672b6bda3fb7382681.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 6,000\nAdditional Effect: Reduces target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lady of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 6,000<br/>Additional Effect: Reduces target's damage taken by 10%<br/>Duration: 10s<br/>Can only be executed while the Lady of Crowns is drawn.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Lord of Crowns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/48ee68a54dd44c50b1219e48ce274297345b5810.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Deals unaspected damage with a potency of 6,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lord of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000 to all nearby enemies.<br/>Additional Effect: Increases target's damage taken by 10%<br/>Duration: 10s<br/>Can only be executed while the Lord of Crowns is drawn.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Retrograde",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0fe6f9752dfe8ff3a411794e31bac9bceec3c618.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Move instantly to the Pole Star left behind by you.\nCan only be executed while under the effect of Retrograde Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Move instantly to the Pole Star left behind by you.<br/>Can only be executed while under the effect of Retrograde Ready.<br/>Cannot be executed while bound.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Microcosmos",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/727601c35b12c8cf610a619bffea557c4eae6140.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Triggers the healing effect of Macrocosmos, restoring HP equal to a cure of 4,000 potency plus 20% of compiled damage.\nThis action's effects extend through obstructions.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Triggers the healing effect of Macrocosmos, restoring HP equal to a cure of 4,000 potency plus 20% of compiled damage.<br/>This action's effects extend through obstructions.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Oracle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/64d75230bf3fc7b9e8c52b4a8e8b9a7458ebdf4e.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 6,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while Divining.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000 to target and all enemies nearby it.<br/>Additional Effect: Stun<br/>Duration: 2s<br/>Can only be executed while Divining.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Celestial River",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/184ffb6c90cb6ab81b25f68ba19510ee469ce306.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Increases damage dealt and healing potency of self and nearby party members by 30%, while reducing damage dealt by nearby enemies by 30%.\nEffect is reduced by 10% every 5 seconds.\nDuration: 15s\nAdditional Effect: Grants Divining to self\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Oracle upon execution.",
+     "descriptionHtml": "Increases damage dealt and healing potency of self and nearby party members by 30%, while reducing damage dealt by nearby enemies by 30%.<br/>Effect is reduced by 10% every 5 seconds.<br/>Duration: 15s<br/>Additional Effect: Grants Divining to self<br/>Duration: 15s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 105s<br/><br/>※Action changes to Oracle upon execution."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Haelan",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "2000 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 16,000<br/>Potency reduced to 8,000 when targeting self."
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Stoneskin II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s",
+     "descriptionHtml": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.<br/>This action's effects extend through obstructions.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Diabrosis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.<br/>Additional Effect: Reduces target's HP recovered by healing actions by 33%<br/>Duration: 10s"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "Arcana Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/B/3z8WY3AOZfrbOQZKGvgl3nidgI.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/H/92-aRKuilav6nsKXjKhfV7oPro.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/x/_QqSRtr2-53c4k1LfXaEZNEM7M.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nArcana Gauge\n\nUsing the actions Astral Draw or Umbral Draw will replace Play I, Play II, and Play III with their respective arcanum, which will be represented in the Arcana Gauge.\n\nUpon learning the action Minor Arcana, a new card will appear on the Arcana Gauge when using Astral Draw or Umbral Draw. Using the action Astral Draw will replace Minor Arcana with Lord of Crowns, while Umbral Draw will replace it with Lady of Crowns.\n\nSimple Mode\n\nArcana Gauge\n\nAstral Draw\n\nUmbral Draw",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Arcana Gauge</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/B/3z8WY3AOZfrbOQZKGvgl3nidgI.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">Using the actions <span class=\"txt_red\">Astral Draw</span> or <span class=\"txt_red\">Umbral Draw</span> will replace <span class=\"txt_red\">Play I</span>, <span class=\"txt_red\">Play II</span>, and <span class=\"txt_red\">Play III</span> with their respective arcanum, which will be represented in the <span class=\"txt_red\">Arcana Gauge</span>.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/I/dmSiiTz9fm7BUXYfL7ZKLRmckU.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">Upon learning the action <span class=\"txt_red\">Minor Arcana</span>, a new card will appear on the <span class=\"txt_red\">Arcana Gauge</span> when using <span class=\"txt_red\">Astral Draw</span> or <span class=\"txt_red\">Umbral Draw</span>. Using the action <span class=\"txt_red\">Astral Draw</span> will replace Minor Arcana with <span class=\"txt_red\">Lord of Crowns</span>, while <span class=\"txt_red\">Umbral Draw</span> will replace it with <span class=\"txt_red\">Lady of Crowns</span>.</p>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve astrologian\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">Arcana Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/H/92-aRKuilav6nsKXjKhfV7oPro.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Astral Draw</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/x/_QqSRtr2-53c4k1LfXaEZNEM7M.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Umbral Draw</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/B/3z8WY3AOZfrbOQZKGvgl3nidgI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/I/dmSiiTz9fm7BUXYfL7ZKLRmckU.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/H/92-aRKuilav6nsKXjKhfV7oPro.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/x/_QqSRtr2-53c4k1LfXaEZNEM7M.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nMalefic\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 150.\n\nBenefic\n\nLv. 2\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Benefic II will restore critical HP\nDuration: 15s\n\nCombust\n\nLv. 4\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 50\nDuration: 30s\n\nLightspeed\n\nLv. 6\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces cast times for spells by 2.5 seconds.\nDuration: 15s\nMaximum Charges: 2\n\nHelios\n\nLv. 10\n\nSpell\n\n1.5s\n\n2.5s\n700 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\nAscend\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nEssential Dignity\n\nLv. 15\n\nAbility\nInstant\n40s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 400\nPotency increases up to 900 as the target's HP decreases, reaching its maximum value when the target has 30% HP or less.\nMaximum Charges: 3\n\nBenefic II\n\nLv. 26\n\nSpell\n\n1.5s\n\n2.5s\n700 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\n\nAstral Draw\n\nLv. 30\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nDraws the Balance, the Arrow, the Spire, and the Lord of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Balance, Play II changes to The Arrow, Play III changes to The Spire, Minor Arcana changes to Lord of Crowns, and Astral Draw changes to Umbral Draw.\nShares a recast timer with Umbral Draw.\n\nUmbral Draw\n\nLv. 30\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nDraws the Spear, the Bole, the Ewer, and the Lady of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Spear, Play II changes to The Bole, Play III changes to The Ewer, Minor Arcana changes to Lady of Crowns, and Umbral Draw changes to Astral Draw.\nShares a recast timer with Astral Draw.\n\n※This action cannot be assigned to a hotbar.\n※Astral Draw changes to Umbral Draw when requirements for execution are met.\n\nPlay I\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Balance\nUmbral Draw Effect: Action changes to The Spear\n\nPlay II\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Arrow\nUmbral Draw Effect: Action changes to The Bole\n\nPlay III\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Spire\nUmbral Draw Effect: Action changes to The Ewer\n\nAspected Benefic\n\nLv. 34\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 250\nDuration: 15s\n\nAspected Helios\n\nJob Quest\n\nLv. 40\n\nSpell\n\n1.5s\n\n2.5s\n800 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s\n\nGravity\n\nJob Quest\n\nLv. 45\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 120 to target and all enemies nearby it.\n\nCombust II\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 60\nDuration: 30s\n\nSynastry\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nGenerate an aetheric bond with target party member. Each time you cast a single-target healing spell on yourself or a party member, the party member with whom you have the bond will also recover HP equaling 40% of the original spell.\nDuration: 20s\n\nDivination\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 6%.\nDuration: 20s\nAdditional Effect: Grants Divining\nDuration: 30s\n\nMalefic II\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 160.\n\nCollective Unconscious\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nCreates a celestial ring 8 yalms around the caster.\nDuration: 18s\nAdditional Effect: Reduces damage taken by 10% for self and any party members within 30 yalms and applies Wheel of Fortune to self and any party members within 8 yalms\nDuration: 10s\nWheel of Fortune Effect: Regen\nCure Potency: 100\nDuration: 15s\nWheel of Fortune will be applied continuously to self and all party members standing within the celestial ring.\nCollective Unconscious effect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.\n\nCelestial Opposition\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Regen\nCure Potency: 100\nDuration: 15s\n\nEarthly Star\n\nLv. 62\n\nAbility\nInstant\n60s\n-\n\n30y\n\n20y\n\nDeploys an Earthly Star in the designated area and grants the effect of Earthly Dominance.\nDuration: 10s\nExecuting Stellar Detonation while under the effect of Earthly Dominance creates a Stellar Burst dealing unaspected damage with a potency of 205 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 540\nAfter 10s, Earthly Dominance effect is changed to Giant Dominance.\nDuration: 10s\nWaiting 10s or executing Stellar Detonation while under the effect of Giant Dominance creates a Stellar Explosion dealing unaspected damage with a potency of 310 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 720\n\nStellar Detonation\n\nLv. 62\n\nAbility\nInstant\n3s\n-\n\n0y\n\n20y\n\nWhile under the effect of Earthly Dominance, detonates the currently deployed Earthly Star, creating a Stellar Burst that deals unaspected damage with a potency of 205 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 540\nWhile under the effect of Giant Dominance, detonates the currently deployed Earthly Star, creating a Stellar Explosion that deals unaspected damage with a potency of 310 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 720\n\nMalefic III\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 190.\n\nMinor Arcana\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to Lord of Crowns\nUmbral Draw Effect: Action changes to Lady of Crowns\n\nCombust III\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 70\nDuration: 30s\n\nMalefic IV\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 230.\n\nCelestial Intersection\n\nLv. 74\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nRestores own or target party member's HP.\nCure Potency: 200\nAdditional Sect Effect: Erects a magicked barrier which nullifies damage equaling 200% of the amount of HP restored\nDuration: 30s\nMaximum Charges: 2\n\nHoroscope\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nReads your fortune and those of nearby party members, granting them Horoscope.\nDuration: 10s\nEffect upgraded to Horoscope Helios upon receiving the effects of Helios or Helios Conjunction.\nDuration: 30s\nRestores the HP of those under either effect when the cards are read a second time or the effect expires.\nHoroscope Cure Potency: 200\nHoroscope Helios Cure Potency: 400\n\nHoroscope\n\nLv. 76\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nRestores own HP and the HP of all nearby party members.\nPotency is determined by the Horoscope effect of party members. Effect expires upon execution.\nHoroscope Potency: 200\nHoroscope Helios Potency: 400\n\nNeutral Sect\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases healing magic potency by 20%.\nDuration: 20s\nAdditional Effect: When casting Aspected Benefic or Helios Conjunction, erects a magicked barrier which nullifies damage\nAspected Benefic Effect: Nullifies damage equaling 250% of the amount of HP restored\nHelios Conjunction Effect: Nullifies damage equaling 125% of the amount of HP restored\nDuration: 30s\nAdditional Effect: Grants Suntouched\nDuration: 30s\n\nFall Malefic\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 270.\n\nGravity II\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 140 to target and all enemies nearby it.\n\nExaltation\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by self or target party member by 10%.\nDuration: 8s\nAdditional Effect: Restores HP at the end of the effect's duration\nCure Potency: 500\n\nMacrocosmos\n\nLv. 90\n\nSpell\nInstant\n\n180s\n600 MP\n\n0y\n\n20y\n\nDeals unaspected damage to all nearby enemies with a potency of 270 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 15s\nFor the effect's duration, 50% of damage taken is compiled.\nRestores HP equal to a cure of 200 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nAmount restored cannot exceed the target's maximum HP.\nRecast timer cannot be affected by status effects or gear attributes.\n\nMicrocosmos\n\nLv. 90\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nTriggers the healing effect of Macrocosmos, restoring HP equal to a cure of 200 potency plus 50% of compiled damage.\nAmount restored cannot exceed the target's maximum HP.\n\nOracle\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 860 for the first enemy and 50% less for all remaining enemies.\nCan only be executed while Divining.\n\nHelios Conjunction\n\nLv. 96\n\nSpell\n\n1.5s\n\n2.5s\n800 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s\n\nSun Sign\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 10%.\nDuration: 15s\nCan only be executed while Suntouched."
+  },
+  {
+   "heading": "Arcana",
+   "anchor": "anchor__card_action",
+   "text": "Arcana\n\nAction Name\nType\nCast\nRecast\nRangeRadius\nEffect\n\nThe Balance\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 6% if target is melee DPS or tank, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Balance when requirements for execution are met.\n\nThe Arrow\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases HP recovery via healing actions for a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Arrow when requirements for execution are met.\n\nThe Spire\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 400 potency.\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Spire when requirements for execution are met.\n\nThe Spear\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 6% if target is ranged DPS or healer, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Spear when requirements for execution are met.\n\nThe Bole\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Bole when requirements for execution are met.\n\nThe Ewer\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nGrants healing over time effect to a party member or self.\nCure Potency: 200\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Ewer when requirements for execution are met.\n\nLord of Crowns\n\nAbility\nInstant\n1s\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 400 to all nearby enemies.\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lord of Crowns when requirements for execution are met.\n\nLady of Crowns\n\nAbility\nInstant\n1s\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lady of Crowns when requirements for execution are met."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nEnhanced Benefic\n\nLv. 36\n\nGrants a 15% chance that your next Benefic II will restore critical HP.\nDuration: 15s\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nCombust Mastery\n\nLv. 46\n\nUpgrades Combust to Combust II.\n\nMalefic Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Malefic to Malefic II.\n\nMalefic Mastery II\n\nLv. 64\n\nUpgrades Malefic II to Malefic III.\n\nHyper Lightspeed\n\nLv. 68\n\nReduces Lightspeed recast time to 60 seconds.\n\nMinor Arcana Mastery\n\nLv. 70\n\nLord of Crowns can be drawn when executing Astral Draw, and Lady of Crowns can be drawn when executing Umbral Draw.\n\nCombust Mastery II\n\nLv. 72\n\nUpgrades Combust II to Combust III.\n\nMalefic Mastery III\n\nLv. 72\n\nUpgrades Malefic III to Malefic IV.\n\nEnhanced Essential Dignity\n\nLv. 78\n\nAllows the accumulation of charges for consecutive uses of Essential Dignity.\nMaximum Charges: 2\n\nMalefic Mastery IV\n\nLv. 82\n\nUpgrades Malefic IV to Fall Malefic.\n\nGravity Mastery\n\nLv. 82\n\nUpgrades Gravity to Gravity II.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150.\n\nEnhanced Celestial Intersection\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Celestial Intersection.\nMaximum Charges: 2\n\nEnhanced Divination\n\nLv. 92\n\nGrants Divining upon executing Divination.\nDuration: 30s\n\nMagick Mastery\n\nLv. 94\n\nIncreases the potency of Combust III's damage over time to 70, Fall Malefic to 270, Gravity II to 140, and Macrocosmos to 270.\n\nAspected Helios Mastery\n\nLv. 96\n\nUpgrades Aspected Helios to Helios Conjunction.\n\nEnhanced Essential Dignity II\n\nLv. 98\n\nAllows a third charge of Essential Dignity.\n\nEnhanced Neutral Sect\n\nLv. 100\n\nGrants Suntouched upon executing Neutral Sect.\nDuration: 30s"
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nArcana Gauge\n\nUsing the actions Astral Draw or Umbral Draw will replace Play I, Play II, and Play III with their respective arcanum, which will be represented in the Arcana Gauge.\n\nUpon learning the action Minor Arcana, a new card will appear on the Arcana Gauge when using Astral Draw or Umbral Draw. Using the action Astral Draw will replace Minor Arcana with Lord of Crowns, while Umbral Draw will replace it with Lady of Crowns.\n\nSimple Mode\n\nArcana Gauge\n\nAstral Draw\n\nUmbral Draw"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFall Malefic\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nWhen cast via Double Cast, reduces the recast time of Double Cast by 6 seconds.\n\nAspected Benefic\n\nSpell\nInstant\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 6,000\nPotency increases up to 9,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Grants Diurnal Benefic to target\nDiurnal Benefic Effect: Gradually restores HP\nCure Potency: 3,000\nDuration: 6s\nWhen cast via Double Cast, grants Nocturnal Benefic.\nNocturnal Benefic Effect: Creates a barrier around target that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nGravity II\n\nSpell\nInstant\n16s\n-\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nAdditional Effect: Afflicts first target with Heavy +75%\nDuration: 3s\nWhen cast via Double Cast, Binds first target.\nDuration: 3s\nThis action does not share a recast timer with any other actions.\n\nDouble Cast\n\nAbility\nInstant\n12s\n-\n\n0y\n\n0y\n\nRepeats the Fall Malefic, Aspected Benefic, or Gravity II you previously cast.\nMaximum Charges: 2\nCan only be executed following Fall Malefic, Aspected Benefic, or Gravity II.\n\nMinor Arcana\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nDraws either the Lord of Crowns or the Lady of Crowns from your divining deck.\nAction changes to the drawn arcanum.\nDuration: 10s\n\nMacrocosmos\n\nSpell\nInstant\n30s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 10,000 to all nearby enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 10s\nAction changes to Microcosmos upon execution.\nFor the effect's duration, 20% of damage taken is compiled.\nRestores HP equal to a cure of 4,000 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nThis action does not share a recast timer with any other actions.\n\nEpicycle\n\nAbility\nInstant\n24s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Pole Star at point of origin, and grants Retrograde Ready to self\nDuration: 10s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Retrograde upon execution.\n\nLady of Crowns\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 6,000\nAdditional Effect: Reduces target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lady of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.\n\nLord of Crowns\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 6,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lord of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.\n\nRetrograde\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Pole Star left behind by you.\nCan only be executed while under the effect of Retrograde Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nMicrocosmos\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nTriggers the healing effect of Macrocosmos, restoring HP equal to a cure of 4,000 potency plus 20% of compiled damage.\nThis action's effects extend through obstructions.\n\n※This action cannot be assigned to a hotbar.\n\nOracle\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 6,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while Divining.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nCelestial River\n\nInstant\n10s\n-\n\n0y\n\n15y\n\nIncreases damage dealt and healing potency of self and nearby party members by 30%, while reducing damage dealt by nearby enemies by 30%.\nEffect is reduced by 10% every 5 seconds.\nDuration: 15s\nAdditional Effect: Grants Divining to self\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Oracle upon execution."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nArcana\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nEver has man coveted knowledge, and none more so than that of his fate. Thus did he labor to master the skill of foresight—but initial efforts bore little fruit. That is, until he looked to the stars above, which foretell the coming seasons, and learned to read the heavens.\n\nThough this gift is known today as astrology, the people of Sharlayan saw fit to not only read the stars, but to write their movements as well. By attuning their aetherial energies to that of constellations, they learned to wield magicks with heretofore unseen properties.\n\nThus was astromancy born—a new form of magick which grants its users power over fate. Employing a star globe and divining deck in their miraculous deeds, fortune always smiles upon these masters of arcana.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nMalefic\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 150.\n\nBenefic\n\nLv. 2\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Benefic II will restore critical HP\nDuration: 15s\n\nCombust\n\nLv. 4\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 50\nDuration: 30s\n\nLightspeed\n\nLv. 6\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces cast times for spells by 2.5 seconds.\nDuration: 15s\nMaximum Charges: 2\n\nHelios\n\nLv. 10\n\nSpell\n\n1.5s\n\n2.5s\n700 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\nAscend\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nEssential Dignity\n\nLv. 15\n\nAbility\nInstant\n40s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 400\nPotency increases up to 900 as the target's HP decreases, reaching its maximum value when the target has 30% HP or less.\nMaximum Charges: 3\n\nBenefic II\n\nLv. 26\n\nSpell\n\n1.5s\n\n2.5s\n700 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\n\nAstral Draw\n\nLv. 30\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nDraws the Balance, the Arrow, the Spire, and the Lord of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Balance, Play II changes to The Arrow, Play III changes to The Spire, Minor Arcana changes to Lord of Crowns, and Astral Draw changes to Umbral Draw.\nShares a recast timer with Umbral Draw.\n\nUmbral Draw\n\nLv. 30\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nDraws the Spear, the Bole, the Ewer, and the Lady of Crowns from your divining deck.\nAdditional Effect: Restores 20% of maximum MP\nUpon execution, Play I changes to The Spear, Play II changes to The Bole, Play III changes to The Ewer, Minor Arcana changes to Lady of Crowns, and Umbral Draw changes to Astral Draw.\nShares a recast timer with Astral Draw.\n\n※This action cannot be assigned to a hotbar.\n※Astral Draw changes to Umbral Draw when requirements for execution are met.\n\nPlay I\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Balance\nUmbral Draw Effect: Action changes to The Spear\n\nPlay II\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Arrow\nUmbral Draw Effect: Action changes to The Bole\n\nPlay III\n\nLv. 30\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to The Spire\nUmbral Draw Effect: Action changes to The Ewer\n\nAspected Benefic\n\nLv. 34\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 250\nDuration: 15s\n\nAspected Helios\n\nJob Quest\n\nLv. 40\n\nSpell\n\n1.5s\n\n2.5s\n800 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s\n\nGravity\n\nJob Quest\n\nLv. 45\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 120 to target and all enemies nearby it.\n\nCombust II\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 60\nDuration: 30s\n\nSynastry\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nGenerate an aetheric bond with target party member. Each time you cast a single-target healing spell on yourself or a party member, the party member with whom you have the bond will also recover HP equaling 40% of the original spell.\nDuration: 20s\n\nDivination\n\nLv. 50\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 6%.\nDuration: 20s\nAdditional Effect: Grants Divining\nDuration: 30s\n\nMalefic II\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 160.\n\nCollective Unconscious\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nCreates a celestial ring 8 yalms around the caster.\nDuration: 18s\nAdditional Effect: Reduces damage taken by 10% for self and any party members within 30 yalms and applies Wheel of Fortune to self and any party members within 8 yalms\nDuration: 10s\nWheel of Fortune Effect: Regen\nCure Potency: 100\nDuration: 15s\nWheel of Fortune will be applied continuously to self and all party members standing within the celestial ring.\nCollective Unconscious effect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.\n\nCelestial Opposition\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Regen\nCure Potency: 100\nDuration: 15s\n\nEarthly Star\n\nLv. 62\n\nAbility\nInstant\n60s\n-\n\n30y\n\n20y\n\nDeploys an Earthly Star in the designated area and grants the effect of Earthly Dominance.\nDuration: 10s\nExecuting Stellar Detonation while under the effect of Earthly Dominance creates a Stellar Burst dealing unaspected damage with a potency of 205 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 540\nAfter 10s, Earthly Dominance effect is changed to Giant Dominance.\nDuration: 10s\nWaiting 10s or executing Stellar Detonation while under the effect of Giant Dominance creates a Stellar Explosion dealing unaspected damage with a potency of 310 to all nearby enemies. Also restores own HP and the HP of all nearby party members.\nCure Potency: 720\n\nStellar Detonation\n\nLv. 62\n\nAbility\nInstant\n3s\n-\n\n0y\n\n20y\n\nWhile under the effect of Earthly Dominance, detonates the currently deployed Earthly Star, creating a Stellar Burst that deals unaspected damage with a potency of 205 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 540\nWhile under the effect of Giant Dominance, detonates the currently deployed Earthly Star, creating a Stellar Explosion that deals unaspected damage with a potency of 310 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of all nearby party members\nCure Potency: 720\n\nMalefic III\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 190.\n\nMinor Arcana\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nPlays the drawn arcanum after executing Astral Draw or Umbral Draw.\nAstral Draw Effect: Action changes to Lord of Crowns\nUmbral Draw Effect: Action changes to Lady of Crowns\n\nCombust III\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 70\nDuration: 30s\n\nMalefic IV\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 230.\n\nCelestial Intersection\n\nLv. 74\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nRestores own or target party member's HP.\nCure Potency: 200\nAdditional Sect Effect: Erects a magicked barrier which nullifies damage equaling 200% of the amount of HP restored\nDuration: 30s\nMaximum Charges: 2\n\nHoroscope\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nReads your fortune and those of nearby party members, granting them Horoscope.\nDuration: 10s\nEffect upgraded to Horoscope Helios upon receiving the effects of Helios or Helios Conjunction.\nDuration: 30s\nRestores the HP of those under either effect when the cards are read a second time or the effect expires.\nHoroscope Cure Potency: 200\nHoroscope Helios Cure Potency: 400\n\nHoroscope\n\nLv. 76\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nRestores own HP and the HP of all nearby party members.\nPotency is determined by the Horoscope effect of party members. Effect expires upon execution.\nHoroscope Potency: 200\nHoroscope Helios Potency: 400\n\nNeutral Sect\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases healing magic potency by 20%.\nDuration: 20s\nAdditional Effect: When casting Aspected Benefic or Helios Conjunction, erects a magicked barrier which nullifies damage\nAspected Benefic Effect: Nullifies damage equaling 250% of the amount of HP restored\nHelios Conjunction Effect: Nullifies damage equaling 125% of the amount of HP restored\nDuration: 30s\nAdditional Effect: Grants Suntouched\nDuration: 30s\n\nFall Malefic\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 270.\n\nGravity II\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 140 to target and all enemies nearby it.\n\nExaltation\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by self or target party member by 10%.\nDuration: 8s\nAdditional Effect: Restores HP at the end of the effect's duration\nCure Potency: 500\n\nMacrocosmos\n\nLv. 90\n\nSpell\nInstant\n\n180s\n600 MP\n\n0y\n\n20y\n\nDeals unaspected damage to all nearby enemies with a potency of 270 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 15s\nFor the effect's duration, 50% of damage taken is compiled.\nRestores HP equal to a cure of 200 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nAmount restored cannot exceed the target's maximum HP.\nRecast timer cannot be affected by status effects or gear attributes.\n\nMicrocosmos\n\nLv. 90\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nTriggers the healing effect of Macrocosmos, restoring HP equal to a cure of 200 potency plus 50% of compiled damage.\nAmount restored cannot exceed the target's maximum HP.\n\nOracle\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 860 for the first enemy and 50% less for all remaining enemies.\nCan only be executed while Divining.\n\nHelios Conjunction\n\nLv. 96\n\nSpell\n\n1.5s\n\n2.5s\n800 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s\n\nSun Sign\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 10%.\nDuration: 15s\nCan only be executed while Suntouched.\n\nArcana\n\nAction Name\nType\nCast\nRecast\nRangeRadius\nEffect\n\nThe Balance\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 6% if target is melee DPS or tank, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Balance when requirements for execution are met.\n\nThe Arrow\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases HP recovery via healing actions for a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Arrow when requirements for execution are met.\n\nThe Spire\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 400 potency.\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Spire when requirements for execution are met.\n\nThe Spear\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 6% if target is ranged DPS or healer, or 3% for all other roles.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play I changes to The Spear when requirements for execution are met.\n\nThe Bole\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 10%.\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play II changes to The Bole when requirements for execution are met.\n\nThe Ewer\n\nAbility\nInstant\n1s\n\n30y\n\n0y\n\nGrants healing over time effect to a party member or self.\nCure Potency: 200\nDuration: 15s\n\n※This action cannot be assigned to a hotbar.\n※Play III changes to The Ewer when requirements for execution are met.\n\nLord of Crowns\n\nAbility\nInstant\n1s\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 400 to all nearby enemies.\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lord of Crowns when requirements for execution are met.\n\nLady of Crowns\n\nAbility\nInstant\n1s\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\n※This action cannot be assigned to a hotbar.\n※Minor Arcana changes to Lady of Crowns when requirements for execution are met.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.\n\nTrait\n\nTraits\nAcquired\nEffect\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nEnhanced Benefic\n\nLv. 36\n\nGrants a 15% chance that your next Benefic II will restore critical HP.\nDuration: 15s\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nCombust Mastery\n\nLv. 46\n\nUpgrades Combust to Combust II.\n\nMalefic Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Malefic to Malefic II.\n\nMalefic Mastery II\n\nLv. 64\n\nUpgrades Malefic II to Malefic III.\n\nHyper Lightspeed\n\nLv. 68\n\nReduces Lightspeed recast time to 60 seconds.\n\nMinor Arcana Mastery\n\nLv. 70\n\nLord of Crowns can be drawn when executing Astral Draw, and Lady of Crowns can be drawn when executing Umbral Draw.\n\nCombust Mastery II\n\nLv. 72\n\nUpgrades Combust II to Combust III.\n\nMalefic Mastery III\n\nLv. 72\n\nUpgrades Malefic III to Malefic IV.\n\nEnhanced Essential Dignity\n\nLv. 78\n\nAllows the accumulation of charges for consecutive uses of Essential Dignity.\nMaximum Charges: 2\n\nMalefic Mastery IV\n\nLv. 82\n\nUpgrades Malefic IV to Fall Malefic.\n\nGravity Mastery\n\nLv. 82\n\nUpgrades Gravity to Gravity II.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150.\n\nEnhanced Celestial Intersection\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Celestial Intersection.\nMaximum Charges: 2\n\nEnhanced Divination\n\nLv. 92\n\nGrants Divining upon executing Divination.\nDuration: 30s\n\nMagick Mastery\n\nLv. 94\n\nIncreases the potency of Combust III's damage over time to 70, Fall Malefic to 270, Gravity II to 140, and Macrocosmos to 270.\n\nAspected Helios Mastery\n\nLv. 96\n\nUpgrades Aspected Helios to Helios Conjunction.\n\nEnhanced Essential Dignity II\n\nLv. 98\n\nAllows a third charge of Essential Dignity.\n\nEnhanced Neutral Sect\n\nLv. 100\n\nGrants Suntouched upon executing Neutral Sect.\nDuration: 30s\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds.\n\nJob Gauge\n\nArcana Gauge\n\nUsing the actions Astral Draw or Umbral Draw will replace Play I, Play II, and Play III with their respective arcanum, which will be represented in the Arcana Gauge.\n\nUpon learning the action Minor Arcana, a new card will appear on the Arcana Gauge when using Astral Draw or Umbral Draw. Using the action Astral Draw will replace Minor Arcana with Lord of Crowns, while Umbral Draw will replace it with Lady of Crowns.\n\nSimple Mode\n\nArcana Gauge\n\nAstral Draw\n\nUmbral Draw\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nFall Malefic\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nWhen cast via Double Cast, reduces the recast time of Double Cast by 6 seconds.\n\nAspected Benefic\n\nSpell\nInstant\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 6,000\nPotency increases up to 9,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Grants Diurnal Benefic to target\nDiurnal Benefic Effect: Gradually restores HP\nCure Potency: 3,000\nDuration: 6s\nWhen cast via Double Cast, grants Nocturnal Benefic.\nNocturnal Benefic Effect: Creates a barrier around target that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nGravity II\n\nSpell\nInstant\n16s\n-\n\n25y\n\n8y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nAdditional Effect: Afflicts first target with Heavy +75%\nDuration: 3s\nWhen cast via Double Cast, Binds first target.\nDuration: 3s\nThis action does not share a recast timer with any other actions.\n\nDouble Cast\n\nAbility\nInstant\n12s\n-\n\n0y\n\n0y\n\nRepeats the Fall Malefic, Aspected Benefic, or Gravity II you previously cast.\nMaximum Charges: 2\nCan only be executed following Fall Malefic, Aspected Benefic, or Gravity II.\n\nMinor Arcana\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nDraws either the Lord of Crowns or the Lady of Crowns from your divining deck.\nAction changes to the drawn arcanum.\nDuration: 10s\n\nMacrocosmos\n\nSpell\nInstant\n30s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 10,000 to all nearby enemies.\nAdditional Effect: Grants Macrocosmos to self and all nearby party members\nDuration: 10s\nAction changes to Microcosmos upon execution.\nFor the effect's duration, 20% of damage taken is compiled.\nRestores HP equal to a cure of 4,000 potency plus compiled damage when the effect expires or upon execution of Microcosmos.\nThis action does not share a recast timer with any other actions.\n\nEpicycle\n\nAbility\nInstant\n24s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Pole Star at point of origin, and grants Retrograde Ready to self\nDuration: 10s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Retrograde upon execution.\n\nLady of Crowns\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 6,000\nAdditional Effect: Reduces target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lady of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.\n\nLord of Crowns\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 6,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 10%\nDuration: 10s\nCan only be executed while the Lord of Crowns is drawn.\n\n※This action cannot be assigned to a hotbar.\n\nRetrograde\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Pole Star left behind by you.\nCan only be executed while under the effect of Retrograde Ready.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nMicrocosmos\n\nAbility\nInstant\n1s\n-\n\n0y\n\n20y\n\nTriggers the healing effect of Macrocosmos, restoring HP equal to a cure of 4,000 potency plus 20% of compiled damage.\nThis action's effects extend through obstructions.\n\n※This action cannot be assigned to a hotbar.\n\nOracle\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 6,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while Divining.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nCelestial River\n\nInstant\n10s\n-\n\n0y\n\n15y\n\nIncreases damage dealt and healing potency of self and nearby party members by 30%, while reducing damage dealt by nearby enemies by 30%.\nEffect is reduced by 10% every 5 seconds.\nDuration: 15s\nAdditional Effect: Grants Divining to self\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Oracle upon execution.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

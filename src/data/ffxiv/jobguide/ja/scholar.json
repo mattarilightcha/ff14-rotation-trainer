@@ -1,0 +1,2023 @@
+{
+ "job": "scholar",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/scholar/",
+ "pageTitle": "ジョブガイド「学者」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nペットアクション\n\nペットアクション（指示）\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nHEALER/ヒーラー\n\n魔法文明が花開いた古の時代……バイルブランド島に「ニーム」という都市国家が存在した。\n強力な魔法がもてはやされた戦乱の時代にあって、海兵を主力とする「ニーム」が独立を維持できたのは、軍学を修めた「学者」の指揮があればこそであった。使い魔「フェアリー」を操る学者は、傷ついた味方を癒やしつつ潜在能力を引き出し、小国の自由を守り抜いたと伝えられている。\n\nジョブ開始クエスト\n\n初期クラス：巴術士",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/93f61adcffc6644730a017347d91805359b52bdb.png",
+   "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+   "https://lds-img.finalfantasyxiv.com/d/7e5c03b72c4e181034da8121d6f2bdf2f1aa2a60.png",
+   "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/161dc95f27e69fb5bd4caecfdeab022e3560193d.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea0a5e685172203ac73332f7e1690a5a89b25590.png",
+   "https://lds-img.finalfantasyxiv.com/d/07beea4eb1cc3f24533d045db5b694c939f3a3ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/59ca7d9f2002ba3176f070a023bcfd8fa2129fb9.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/6ed1ace8e31760fa3b042e6d27dac669668196b0.png",
+   "https://lds-img.finalfantasyxiv.com/d/175631d8db5550a7b74a9bc811c3781e083e393e.png",
+   "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+   "https://lds-img.finalfantasyxiv.com/d/a9adc8943d1d8402366c869416b7a9d5ef7fcf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/a414b67652d67ff6707276156d1ce275f188ef07.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c47bdf94dc6c3dcd9b303cfa42a08a5cfd13629.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f80a5bd016eab7200c55dd8d1d6afb07361a0ca.png",
+   "https://lds-img.finalfantasyxiv.com/d/7203f797d2c3dd4148a8cb5fe510c1cfd1ac46a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/307e3a65fff1e38b28235509dd392323642d6965.png",
+   "https://lds-img.finalfantasyxiv.com/d/fbfaa6c46fac537aec9d2903ec64d4f64fc54557.png",
+   "https://lds-img.finalfantasyxiv.com/d/fffbdbce557a09ee3a50f541fac07d432bfc7c89.png",
+   "https://lds-img.finalfantasyxiv.com/d/b46ada85c48a81940953f46eaaba05f1c2f5cfdd.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8d8172feffed42f80d335bb7bedb14cc90fbd56.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f5f538d79932e3bfb3bd5c72af6f13987aa3e6d.png",
+   "https://lds-img.finalfantasyxiv.com/d/eb866b142bd93d46ffa7809e1092aefc48f48f3c.png",
+   "https://lds-img.finalfantasyxiv.com/d/10602136009d5a92a005f0bd127a1a9ec8c1691a.png",
+   "https://lds-img.finalfantasyxiv.com/d/e77ebe8644e35de5bc2d67a4c8365d6d726c9ca4.png",
+   "https://lds-img.finalfantasyxiv.com/d/1f85b58d71471a33c2d35db849b20a681bfd5b56.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1be794db381c20399faf7dec80b7f64eaba2e61.png",
+   "https://lds-img.finalfantasyxiv.com/d/e37b65935298898f61fd4b12a293998ba1258be5.png",
+   "https://lds-img.finalfantasyxiv.com/d/ff070d67e4c75ed8bb06de1f577979e8c69c8ad1.png",
+   "https://lds-img.finalfantasyxiv.com/d/86ce58393104f45f36ef15d9d358a684c4013df4.png",
+   "https://lds-img.finalfantasyxiv.com/d/7bf8e98c4a2078b2a0c1e113deb2ffbecaf125ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/b05c06909651d83ec9806ea19ad6cbf328809a1b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a46c7dccd2bb9a8fe7a472766acf8138f2ada3e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/023d8827b75a8d5d6682a81acf1016371366f8e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/16ca1e2b66efb797ca63394b5f856ab89a709acf.png",
+   "https://lds-img.finalfantasyxiv.com/d/f124b01882a45f5befe10fa82964fc7fb7895e8c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3660e0317ed2aba78b7cfdc526dd174efa94d88d.png",
+   "https://lds-img.finalfantasyxiv.com/d/7244131eba68b8042f1461bf4100deaebe2a7c0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/c859b1042c024b57c646316f1e0e93ff5e5f90fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+   "https://lds-img.finalfantasyxiv.com/d/f6608e86b2f0526d4f9fd593eac7cb7e8a674668.png",
+   "https://lds-img.finalfantasyxiv.com/d/22a3932c3e8625b941a6d65c7bb1985e2244abe7.png",
+   "https://lds-img.finalfantasyxiv.com/d/f1a089378baca67848f466998eaf675ca65b241f.png",
+   "https://lds-img.finalfantasyxiv.com/d/ba157dccbbb4761461ca40b5e03c2a882498cdf3.png",
+   "https://lds-img.finalfantasyxiv.com/d/23a8a3db9390a92f29e6df238044537361682fab.png",
+   "https://lds-img.finalfantasyxiv.com/d/5f98fdab5e9b3c01f61588afd6f60ceeb8fc7966.png",
+   "https://lds-img.finalfantasyxiv.com/d/44de61f43a848bff2f6c8ee8dd37df66746e12d2.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f4ce8d90ce96634d7c028ef2990dfc9f61b8417.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8137bd2178a9071507f4d74e4ce4d1282cacc4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe17c3c2cb39842c9bfe50d5839d2b6a93075ef9.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb3ffdaf3d55f8c9813f1a0d827a7cc736cd8802.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+   "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/3/LA3Jw4-ro53jUsTtOnF03UxuLg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "ルイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：150",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：150"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "バイオ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/93f61adcffc6644730a017347d91805359b52bdb.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：20\n効果時間：30秒",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：20<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "フィジク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：450",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：450"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "サモン・エオス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e5c03b72c4e181034da8121d6f2bdf2f1aa2a60.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "0m",
+     "radius": "0m",
+     "description": "フェアリー・エオスを召喚する。\nフェアリー・エオスの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「光の癒し」を実行する。",
+     "descriptionHtml": "フェアリー・エオスを召喚する。<br/>フェアリー・エオスの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「光の癒し」を実行する。"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "リザレク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "魔法",
+     "cast": "8秒",
+     "recast": "2.5秒",
+     "cost": "MP2400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象を衰弱状態で蘇生する。",
+     "descriptionHtml": "対象を衰弱状態で蘇生する。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "光ひかりの囁ささやき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/161dc95f27e69fb5bd4caecfdeab022e3560193d.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているフェアリーに「光の囁き」を実行させる。\nセラフィムを召喚している場合は「光輝の囁き」を実行させる。\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n発動条件：フェアリーまたはセラフィムが存在する",
+     "descriptionHtml": "召喚しているフェアリーに「光の囁き」を実行させる。<br/>セラフィムを召喚している場合は「光輝の囁き」を実行させる。<br/><br/>周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：80<br/>効果時間：21秒<br/>発動条件：フェアリーまたはセラフィムが存在する"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "バイオラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea0a5e685172203ac73332f7e1690a5a89b25590.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：40<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "鼓舞激励こぶげきれいの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07beea4eb1cc3f24533d045db5b694c939f3a3ac.png",
+     "skillCellText": "鼓舞激励こぶげきれいの策さく\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP900",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：300<br/>追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。<br/>鼓舞効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>賢者の一部のバリア効果とは同時に付与されない。<br/>追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。<br/>激励効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "士気高揚しきこうようの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/59ca7d9f2002ba3176f070a023bcfd8fa2129fb9.png",
+     "skillCellText": "士気高揚しきこうようの策さく\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP900",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の160％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：200<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の160％分のダメージを軽減する。<br/>効果時間：30秒<br/>賢者の一部のバリア効果とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "ルインラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 38,
+     "jobclassText": "Lv38",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：220",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：220"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "フェイイルミネーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6ed1ace8e31760fa3b042e6d27dac669668196b0.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているフェアリーに「フェイイルミネーション」を実行させる。\nセラフィムを召喚している場合は「セラフィックイルミネーション」を実行させる。\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとセラフィムのセラフィックイルミネーションは同時に付与されない。\n発動条件：フェアリーまたはセラフィムが存在する",
+     "descriptionHtml": "召喚しているフェアリーに「フェイイルミネーション」を実行させる。<br/>セラフィムを召喚している場合は「セラフィックイルミネーション」を実行させる。<br/><br/>一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。<br/>効果時間：20秒<br/>フェアリーのフェイイルミネーションとセラフィムのセラフィックイルミネーションは同時に付与されない。<br/>発動条件：フェアリーまたはセラフィムが存在する"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "エーテルフロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/175631d8db5550a7b74a9bc811c3781e083e393e.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを最大ＭＰの20％分回復する。\n追加効果：自身に最大スタック分の「エーテルフロー」を付与する。\n最大スタック数：3\n効果時間：永続\n発動条件：自身が戦闘状態",
+     "descriptionHtml": "自身のＭＰを最大ＭＰの20％分回復する。<br/>追加効果：自身に最大スタック分の「エーテルフロー」を付与する。<br/>最大スタック数：3<br/>効果時間：永続<br/>発動条件：自身が戦闘状態"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "エナジードレイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：100\n追加効果：与えたダメージの一部をＨＰとして吸収する。\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：100<br/>追加効果：与えたダメージの一部をＨＰとして吸収する。<br/>追加効果：「フェイエーテル」を10上昇させる。<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "生命活性法せいめいかっせいほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a9adc8943d1d8402366c869416b7a9d5ef7fcf07.png",
+     "skillCellText": "生命活性法せいめいかっせいほう\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：600\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：600<br/>追加効果：「フェイエーテル」を10上昇させる。<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "破陣法はじんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a414b67652d67ff6707276156d1ce275f188ef07.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 46,
+     "jobclassText": "Lv46",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：165",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：165"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "野戦治療やせんちりょうの陣じん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c47bdf94dc6c3dcd9b303cfa42a08a5cfd13629.png",
+     "skillCellText": "野戦治療やせんちりょうの陣じん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "15m",
+     "description": "指定した地面を中心として被ダメージを軽減するシールドを生成する。\n効果時間中、範囲内にいるパーティメンバーの被ダメージを10％軽減し、かつＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "指定した地面を中心として被ダメージを軽減するシールドを生成する。<br/>効果時間中、範囲内にいるパーティメンバーの被ダメージを10％軽減し、かつＨＰを継続回復する。<br/>回復力：100<br/>効果時間：15秒<br/>追加効果：「フェイエーテル」を10上昇させる。<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "不撓不屈ふとうふくつの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f80a5bd016eab7200c55dd8d1d6afb07361a0ca.png",
+     "skillCellText": "不撓不屈ふとうふくつの策さく\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：400<br/>追加効果：「フェイエーテル」を10上昇させる。<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "気炎法きえんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7203f797d2c3dd4148a8cb5fe510c1cfd1ac46a8.png",
+     "skillCellText": "気炎法きえんほう\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：220",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：220"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "展開戦術てんかいせんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/307e3a65fff1e38b28235509dd392323642d6965.png",
+     "skillCellText": "展開戦術てんかいせんじゅつ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "30m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象に付与した「鼓舞」を対象の周囲のパーティメンバーに拡散させる。\n効果時間：拡散した時点での時間\n自身が対象に鼓舞を付与していない場合は効果無し。",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象に付与した「鼓舞」を対象の周囲のパーティメンバーに拡散させる。<br/>効果時間：拡散した時点での時間<br/>自身が対象に鼓舞を付与していない場合は効果無し。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "応急戦術おうきゅうせんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fbfaa6c46fac537aec9d2903ec64d4f64fc54557.png",
+     "skillCellText": "応急戦術おうきゅうせんじゅつ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "効果時間中に実行する1回の鼓舞効果および激励効果を伴う回復魔法について、鼓舞や激励を付与せずにその分を回復効果に置き換えて実行する。\n効果時間：15秒",
+     "descriptionHtml": "効果時間中に実行する1回の鼓舞効果および激励効果を伴う回復魔法について、鼓舞や激励を付与せずにその分を回復効果に置き換えて実行する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "転化てんか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fffbdbce557a09ee3a50f541fac07d432bfc7c89.png",
+     "skillCellText": "転化てんか\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "180秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているフェアリーを帰還させることと引き換えに、自身に最大スタック分の「エーテルフロー」を付与する。\nさらに、自身の回復魔法の効果を20％上昇させる。\n効果時間：30秒\nただし、効果時間中は「サモン・エオス」を使うことができなくなる。\n効果が終了するとフェアリーが再出現する。\n発動条件：自身が戦闘状態かつフェアリーが存在する",
+     "descriptionHtml": "召喚しているフェアリーを帰還させることと引き換えに、自身に最大スタック分の「エーテルフロー」を付与する。<br/>さらに、自身の回復魔法の効果を20％上昇させる。<br/>効果時間：30秒<br/>ただし、効果時間中は「サモン・エオス」を使うことができなくなる。<br/>効果が終了するとフェアリーが再出現する。<br/>発動条件：自身が戦闘状態かつフェアリーが存在する"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "深謀遠慮しんぼうえんりょの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b46ada85c48a81940953f46eaaba05f1c2f5cfdd.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象に「ＨＰが50％以下に減少するか効果時間が経過すると、回復効果が発動する」というステータスを付与する。\n回復力：800\n効果時間：45秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象に「ＨＰが50％以下に減少するか効果時間が経過すると、回復効果が発動する」というステータスを付与する。<br/>回復力：800<br/>効果時間：45秒<br/>追加効果：「フェイエーテル」を10上昇させる。<br/>発動条件：「エーテルフロー」"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "魔炎法まえんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8d8172feffed42f80d335bb7bedb14cc90fbd56.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：240",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：240"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "連環計れんかんけい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f5f538d79932e3bfb3bd5c72af6f13987aa3e6d.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "一定時間、対象がクリティカルヒットを受ける確率を10％上昇させる。\n効果時間：20秒\n追加効果：自身に「埋伏の毒実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "一定時間、対象がクリティカルヒットを受ける確率を10％上昇させる。<br/>効果時間：20秒<br/>追加効果：自身に「埋伏の毒実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "エーテルパクト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eb866b142bd93d46ffa7809e1092aefc48f48f3c.png",
+     "skillCellText": "エーテルパクト\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n呼び出しているフェアリーに「フェイユニオン」を実行させる。\n再使用で解除する。\n\n指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n発動条件：フェアリーが存在かつ「フェイエーテル」10\nフェイエーテル付与条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在中に「エーテルフロー」を消費するアクションの実行に成功したとき",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>呼び出しているフェアリーに「フェイユニオン」を実行させる。<br/>再使用で解除する。<br/><br/>指定されたパーティメンバーを継続回復し続ける。<br/>回復力：300<br/>実行中は「フェイエーテル」を10ずつ消費し続ける。<br/>対象がフェアリーの30m以内から離れると回復効果は発動しない。<br/>また、フェアリーは他の行動をすることができない。<br/>発動条件：フェアリーが存在かつ「フェイエーテル」10<br/>フェイエーテル付与条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在中に「エーテルフロー」を消費するアクションの実行に成功したとき"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "フェイユニオン解除かいじょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10602136009d5a92a005f0bd127a1a9ec8c1691a.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "フェイユニオンを解除する。",
+     "descriptionHtml": "フェイユニオンを解除する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "蠱毒法こどくほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e77ebe8644e35de5bc2d67a4c8365d6d726c9ca4.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：85\n効果時間：30秒",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：85<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "死炎法しえんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1f85b58d71471a33c2d35db849b20a681bfd5b56.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：255",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：255"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "秘策ひさく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1be794db381c20399faf7dec80b7f64eaba2e61.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "効果時間中に実行する1回の「鼓舞激励の策」「意気軒昂の策」「不撓不屈の策」「深謀遠慮の策」について、ＭＰや「エーテルフロー」を消費することなく実行することができ、かつ必ずクリティカルヒットする。\n効果時間：15秒",
+     "descriptionHtml": "効果時間中に実行する1回の「鼓舞激励の策」「意気軒昂の策」「不撓不屈の策」「深謀遠慮の策」について、ＭＰや「エーテルフロー」を消費することなく実行することができ、かつ必ずクリティカルヒットする。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "フェイブレッシング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e37b65935298898f61fd4b12a293998ba1258be5.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているフェアリーに「フェイブレッシング」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n発動条件：フェアリーが存在する",
+     "descriptionHtml": "召喚しているフェアリーに「フェイブレッシング」を実行させる。<br/><br/>周囲のパーティメンバーのＨＰを回復する。<br/>回復力：320<br/>発動条件：フェアリーが存在する"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "サモン・セラフィム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ff070d67e4c75ed8bb06de1f577979e8c69c8ad1.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているフェアリーを帰還させるとともに、セラフィムを召喚する。\n召喚時間：22秒\nセラフィムの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「セラフィックヴェール」を実行する。\nセラフィムが帰還するとフェアリーが再出現する。\n発動条件：フェアリーが存在する",
+     "descriptionHtml": "召喚しているフェアリーを帰還させるとともに、セラフィムを召喚する。<br/>召喚時間：22秒<br/>セラフィムの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「セラフィックヴェール」を実行する。<br/>セラフィムが帰還するとフェアリーが再出現する。<br/>発動条件：フェアリーが存在する"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "コンソレイション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86ce58393104f45f36ef15d9d358a684c4013df4.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "召喚しているセラフィムに「コンソレイション」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：セラフィムが存在する",
+     "descriptionHtml": "召喚しているセラフィムに「コンソレイション」を実行させる。<br/><br/>周囲のパーティメンバーのＨＰを回復する。<br/>回復力：250<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の100％分のダメージを軽減する。<br/>効果時間：30秒<br/>最大チャージ数：2<br/>発動条件：セラフィムが存在する"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "極炎法ごくえんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7bf8e98c4a2078b2a0c1e113deb2ffbecaf125ac.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：320",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：320"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "裂陣法れつじんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b05c06909651d83ec9806ea19ad6cbf328809a1b.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：180",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：180"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "生命回生法せいめいかいせいほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a46c7dccd2bb9a8fe7a472766acf8138f2ada3e8.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象の受けるＨＰ回復効果と最大ＨＰを10％上昇させる。\nさらに、実行した時点での最大ＨＰの10％分のＨＰを回復する。\n効果時間：10秒",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象の受けるＨＰ回復効果と最大ＨＰを10％上昇させる。<br/>さらに、実行した時点での最大ＨＰの10％分のＨＰを回復する。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "疾風怒濤しっぷうどとうの計けい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/023d8827b75a8d5d6682a81acf1016371366f8e8.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\n疾風の計効果：対象の移動速度を上昇させる。\n効果時間：10秒\n怒涛の計効果：被ダメージを10％軽減させる。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。<br/>疾風の計効果：対象の移動速度を上昇させる。<br/>効果時間：10秒<br/>怒涛の計効果：被ダメージを10％軽減させる。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "埋伏まいふくの毒どく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/16ca1e2b66efb797ca63394b5f856ab89a709acf.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性の継続ダメージを付与する。\n威力：140\n効果時間：15秒\n発動条件：「埋伏の毒実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性の継続ダメージを付与する。<br/>威力：140<br/>効果時間：15秒<br/>発動条件：「埋伏の毒実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "意気軒昂いきけんこうの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f124b01882a45f5befe10fa82964fc7fb7895e8c.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP900",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：200<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>賢者の一部のバリア効果とは同時に付与されない。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "セラフィズム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3660e0317ed2aba78b7cfdc526dd174efa94d88d.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "180秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身と周囲50m以内にいるパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：20秒\n追加効果：鼓舞激励の策がマニフェステーションに、意気軒昂の策がアクセッションにそれぞれ変化する。\nさらに、応急戦術のリキャストタイムをリセットし、かつリキャストタイムを1秒に短縮する。\n転化とは同時に付与されない。\n発動条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在する",
+     "descriptionHtml": "一定時間、自身と周囲50m以内にいるパーティメンバーのＨＰを継続回復する。<br/>回復力：100<br/>効果時間：20秒<br/>追加効果：鼓舞激励の策がマニフェステーションに、意気軒昂の策がアクセッションにそれぞれ変化する。<br/>さらに、応急戦術のリキャストタイムをリセットし、かつリキャストタイムを1秒に短縮する。<br/>転化とは同時に付与されない。<br/>発動条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在する"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "マニフェステーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7244131eba68b8042f1461bf4100deaebe2a7c0d.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP900",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：360\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと鼓舞激励の策がマニフェステーションに変化する。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：360<br/>追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。<br/>鼓舞効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>賢者の一部のバリア効果とは同時に付与されない。<br/>追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。<br/>激励効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>発動条件：「セラフィズム」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと鼓舞激励の策がマニフェステーションに変化する。"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "アクセッション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c859b1042c024b57c646316f1e0e93ff5e5f90fb.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP900",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：240\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと意気軒昂の策がアクセッションに変化する。",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：240<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>賢者の一部のバリア効果とは同時に付与されない。<br/>発動条件：「セラフィズム」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと意気軒昂の策がアクセッションに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pet_eos",
+   "title": "ペットアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_pet_action__01",
+     "name": "光ひかりの癒いやし",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d674990026a72270d2b697fb082a11876075d580.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：180\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：180<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__02",
+     "name": "光ひかりの囁ささやき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b4f6def5e70800aa4fee24c630e0e1c1fb238a7.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：80<br/>効果時間：21秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__03",
+     "name": "フェイイルミネーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23bfb94bb82e70982c73fafd94771c0d522bc326.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nセラフィムのセラフィックイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。<br/>効果時間：20秒<br/>セラフィムのセラフィックイルミネーションとは同時に付与されない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__04",
+     "name": "フェイユニオン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2289de5779836f1b6905349f5031b2421bc9fd01.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "指定されたパーティメンバーを継続回復し続ける。<br/>回復力：300<br/>実行中は「フェイエーテル」を10ずつ消費し続ける。<br/>対象がフェアリーの30m以内から離れると回復効果は発動しない。<br/>また、フェアリーは他の行動をすることができない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__05",
+     "name": "フェイブレッシング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e8ec62242991c3169dad8acbd2663bbc806ba70.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを回復する。<br/>回復力：320<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__06",
+     "name": "セラフィックヴェール",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07f1ba0fbda8b1b69078795da3932089e055e10d.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "3秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：180\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：180<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の100％分のダメージを軽減する。<br/>効果時間：30秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__07",
+     "name": "光輝こうきの囁ささやき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c6732641fcefad97152fbf3fbefa0a4a1d3a5114.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：80<br/>効果時間：21秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__08",
+     "name": "セラフィックイルミネーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f52540afc77b83926b4b31d0c3caacd9147e7af6.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。<br/>効果時間：20秒<br/>フェアリーのフェイイルミネーションとは同時に付与されない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_pet_action__09",
+     "name": "コンソレイション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/49e61f876fbd6dccbebcf0e5d2f979f2472df3f5.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを回復する。<br/>回復力：250<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の100％分のダメージを軽減する。<br/>効果時間：30秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "リポーズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "MP600",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。",
+     "descriptionHtml": "対象に睡眠を付与する。<br/>効果時間：30秒<br/>実行後にオートアタックを停止する。"
+    },
+    {
+     "rowId": "healer_action__02",
+     "name": "エスナ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象にかかった一部の弱体効果を1つ解除する。",
+     "descriptionHtml": "対象にかかった一部の弱体効果を1つ解除する。"
+    },
+    {
+     "rowId": "healer_action__03",
+     "name": "ルーシッドドリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒",
+     "descriptionHtml": "自身のＭＰを継続回復する。<br/>効果量：55<br/>効果時間：21秒"
+    },
+    {
+     "rowId": "healer_action__04",
+     "name": "迅速魔じんそくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "healer_action__05",
+     "name": "堅実魔けんじつま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 44,
+     "jobclassText": "Lv44",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒",
+     "descriptionHtml": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。<br/>さらに、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒"
+    },
+    {
+     "rowId": "healer_action__06",
+     "name": "救出きゅうしゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 48,
+     "jobclassText": "Lv48",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "descriptionHtml": "パーティメンバーひとりを対象とする。<br/>対象を自身の近くに引き寄せる。<br/>対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。<br/>発動条件：自身が戦闘状態"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "アクションダメージ・回復量かいふくりょうアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。<br/>また、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "コラプションマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0f39eba82638e7ec21a71a2dc85a90d16988bcb8.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "description": "バイオがバイオラに変化する。",
+     "descriptionHtml": "バイオがバイオラに変化する。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "アクションダメージ・回復量かいふくりょうアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "巴術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。<br/>また、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "炎法えんほうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/687cae181f73b9e80f3aabf2f8c8ab9941d18389.png",
+     "skillCellText": "炎法えんほうマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "ルインが気炎法に変化する。\nさらに、ルインラの威力を160に、破陣法の威力を165に上昇させる。",
+     "descriptionHtml": "ルインが気炎法に変化する。<br/>さらに、ルインラの威力を160に、破陣法の威力を165に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "炎法えんほうマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/71d1738f45b711c361d800be0b471fe794f057b8.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "description": "気炎法が魔炎法に変化する。\nさらに、ルインラの威力を180に上昇させる。",
+     "descriptionHtml": "気炎法が魔炎法に変化する。<br/>さらに、ルインラの威力を180に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "コラプションマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/138c7127cfe40a93bea3f3e2df53e623251837f3.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "description": "バイオラが蠱毒法に変化する。",
+     "descriptionHtml": "バイオラが蠱毒法に変化する。"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "炎法えんほうマスタリーIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/957954d748a84bfa8f2a0bd28476d3a239e10fad.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "description": "魔炎法が死炎法に変化する。\nさらに、ルインラの威力を200に上昇させる。",
+     "descriptionHtml": "魔炎法が死炎法に変化する。<br/>さらに、ルインラの威力を200に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "野戦治療やせんちりょうの陣じん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85d3a47cfa61348d06257ee6c4110d1d2f92e57e.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 78,
+     "jobclassText": "Lv78",
+     "description": "野戦治療の陣に、「効果範囲内にいるパーティメンバーを継続回復させる効果」が付与される。",
+     "descriptionHtml": "野戦治療の陣に、「効果範囲内にいるパーティメンバーを継続回復させる効果」が付与される。"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "炎法えんほうマスタリーIVふぉー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dd7f6f833033a06f220f34096d3107d3be34d58b.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "死炎法が極炎法に変化する。\nさらに、ルインラの威力を220に上昇させる。",
+     "descriptionHtml": "死炎法が極炎法に変化する。<br/>さらに、ルインラの威力を220に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "破陣法はじんほうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/313a47d2c187d96f10375ab954e71bfc82df59e8.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "破陣法が裂陣法に変化する。",
+     "descriptionHtml": "破陣法が裂陣法に変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "回復かいふくアクション効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889c5ea6067c8a9f387840a91f54c110ca6f023e.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 85,
+     "jobclassText": "Lv85",
+     "description": "特定のアクションの回復力とバリア効果量を上昇させる。\n\nフィジクの回復力：450\n光の癒しの回復力：180\n鼓舞激励の策のバリア効果量：回復量の180％分\n士気高揚の策のバリア効果量：回復量の160％分\nセラフィックヴェールの回復力：180",
+     "descriptionHtml": "特定のアクションの回復力とバリア効果量を上昇させる。<br/><br/>フィジクの回復力：450<br/>光の癒しの回復力：180<br/>鼓舞激励の策のバリア効果量：回復量の180％分<br/>士気高揚の策のバリア効果量：回復量の160％分<br/>セラフィックヴェールの回復力：180"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "展開戦術てんかいせんじゅつ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76b8ce632650a837a520b088ff4cc0eeb9ddc868.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "展開戦術のリキャストタイムを90秒に短縮させる。",
+     "descriptionHtml": "展開戦術のリキャストタイムを90秒に短縮させる。"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "連環計れんかんけい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d7db48ae39f61343dfe40dca1213dfc7cafc7cac.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "自身に「埋伏の毒実行可」が付与される。\n効果時間：30秒\n発動条件：連環計実行時",
+     "descriptionHtml": "自身に「埋伏の毒実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：連環計実行時"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\n蠱毒法の継続ダメージの威力：85\n極炎法の威力：320",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>蠱毒法の継続ダメージの威力：85<br/>極炎法の威力：320"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "士気高揚しきこうようの策さくマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4da1e7f4705cf4f9818dfa7d28dc35814f7b6291.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "士気高揚の策が意気軒昂の策に変化する。",
+     "descriptionHtml": "士気高揚の策が意気軒昂の策に変化する。"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "秘策ひさく効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3dab3b88f599e0456c01548bf94c8bd9895ee004.png",
+     "acquired": [
+      {
+       "class": "学者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "秘策のリキャストタイムを60秒に短縮する。",
+     "descriptionHtml": "秘策のリキャストタイムを60秒に短縮する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "迅速魔じんそくま効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "迅速魔のリキャストタイムを40秒に短縮する。",
+     "descriptionHtml": "迅速魔のリキャストタイムを40秒に短縮する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "極炎法ごくえんほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f6608e86b2f0526d4f9fd593eac7cb7e8a674668.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "鼓舞激励こぶげきれいの策さく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/22a3932c3e8625b941a6d65c7bb1985e2244abe7.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：4000\n追加効果：対象に「鼓舞」と「激励」を付与する。\n鼓舞効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：12秒\n自身に「秘策」が付与されている場合は、バリア量が2倍になる。\n激励効果：被ダメージを10％軽減させる。\n効果時間：12秒\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：4000<br/>追加効果：対象に「鼓舞」と「激励」を付与する。<br/>鼓舞効果：一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力4000相当<br/>効果時間：12秒<br/>自身に「秘策」が付与されている場合は、バリア量が2倍になる。<br/>激励効果：被ダメージを10％軽減させる。<br/>効果時間：12秒<br/>最大チャージ数：2<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "蠱毒法こどくほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f1a089378baca67848f466998eaf675ca65b241f.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に「蠱毒法」と「蠱毒」を付与する。\n蠱毒法効果：対象に継続ダメージを与える。\n威力：3000\n効果時間：12秒\n自身に「秘策」が付与されている場合は、威力が1.5倍になる。\n蠱毒効果：対象が受ける回復効果を15％減少させる。\n効果時間：12秒\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に「蠱毒法」と「蠱毒」を付与する。<br/>蠱毒法効果：対象に継続ダメージを与える。<br/>威力：3000<br/>効果時間：12秒<br/>自身に「秘策」が付与されている場合は、威力が1.5倍になる。<br/>蠱毒効果：対象が受ける回復効果を15％減少させる。<br/>効果時間：12秒<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "展開戦術てんかいせんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ba157dccbbb4761461ca40b5e03c2a882498cdf3.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "15m",
+     "description": "自身またはパーティメンバー、もしくは敵単体を対象とする。\n自身またはパーティメンバーを対象とした場合、対象に付与した「鼓舞」と「激励」の効果を対象の周囲のパーティメンバーに拡散する。\n敵を対象とした場合、対象に付与した「蠱毒法」と「蠱毒」の効果を対象の周囲の敵に拡散する。\n効果時間：拡散した時点での時間\n自身が対象にいずれのステータスも付与していない、もしくは対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は効果無し。\n最大チャージ数：2",
+     "descriptionHtml": "自身またはパーティメンバー、もしくは敵単体を対象とする。<br/>自身またはパーティメンバーを対象とした場合、対象に付与した「鼓舞」と「激励」の効果を対象の周囲のパーティメンバーに拡散する。<br/>敵を対象とした場合、対象に付与した「蠱毒法」と「蠱毒」の効果を対象の周囲の敵に拡散する。<br/>効果時間：拡散した時点での時間<br/>自身が対象にいずれのステータスも付与していない、もしくは対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は効果無し。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "連環計れんかんけい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23a8a3db9390a92f29e6df238044537361682fab.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象の被ダメージを10％増加させる。\n効果時間：10秒\n「防御」効果中の対象に実行すると、上記の追加効果を付与する代わりに「防御」の被ダメージ軽減効果を半減させる。",
+     "descriptionHtml": "対象の被ダメージを10％増加させる。<br/>効果時間：10秒<br/>「防御」効果中の対象に実行すると、上記の追加効果を付与する代わりに「防御」の被ダメージ軽減効果を半減させる。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "疾風怒濤しっぷうどとうの計けい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5f98fdab5e9b3c01f61588afd6f60ceeb8fc7966.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n疾風の計効果：移動速度を25％上昇させる。\n効果時間：10秒\n怒涛の計効果：与ダメージを10％上昇させる。\n効果時間：10秒\n追加効果：自身に「秘策」を付与する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。",
+     "descriptionHtml": "自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>疾風の計効果：移動速度を25％上昇させる。<br/>効果時間：10秒<br/>怒涛の計効果：与ダメージを10％上昇させる。<br/>効果時間：10秒<br/>追加効果：自身に「秘策」を付与する。<br/>効果時間：20秒<br/>秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "サモン・セラフィム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/44de61f43a848bff2f6c8ee8dd37df66746e12d2.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "1m",
+     "description": "指定地点にセラフィムを召喚する。\n召喚時間：20秒\nセラフィムは周囲15m以内にいるパーティメンバーに「セラフィックイルミネーション」を付与し続ける。\nセラフィックイルミネーション効果：受けるＨＰ回復効果を10％上昇させる。\nまた、セラフィムは周囲30m以内にいるＨＰが減少したパーティメンバーを優先対象としてセラフィックヴェールを実行する。",
+     "descriptionHtml": "指定地点にセラフィムを召喚する。<br/>召喚時間：20秒<br/>セラフィムは周囲15m以内にいるパーティメンバーに「セラフィックイルミネーション」を付与し続ける。<br/>セラフィックイルミネーション効果：受けるＨＰ回復効果を10％上昇させる。<br/>また、セラフィムは周囲30m以内にいるＨＰが減少したパーティメンバーを優先対象としてセラフィックヴェールを実行する。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "セラフィックヘイロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f4ce8d90ce96634d7c028ef2990dfc9f61b8417.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：9000<br/>発動条件：「セラフィズム」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "アクセッション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8137bd2178a9071507f4d74e4ce4d1282cacc4c.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "周囲のパーティメンバーのＨＰを回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：8000\n追加効果：対象に「コンソレイション」を付与する。\nコンソレイション効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：20秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "周囲のパーティメンバーのＨＰを回復する。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>回復力：8000<br/>追加効果：対象に「コンソレイション」を付与する。<br/>コンソレイション効果：一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力8000相当<br/>効果時間：20秒<br/>発動条件：「セラフィズム」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "セラフィックヴェール",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe17c3c2cb39842c9bfe50d5839d2b6a93075ef9.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：6000\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力6000相当\n効果時間：10秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：6000<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力6000相当<br/>効果時間：10秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "セラフィズム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb3ffdaf3d55f8c9813f1a0d827a7cc736cd8802.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身に「セラフィズム」と「秘策」を付与する。\nセラフィズム効果：極炎法がセラフィックヘイローに、セラフィズムがアクセッションに変化する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに付与されている浄化で解除可能な状態異常を1つ解除する。\nこの効果が発動しなかった場合、対象が次に受ける浄化で解除可能な状態異常を1つ防ぐバリアを張る。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：20秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとアクセッションに変化する。",
+     "descriptionHtml": "自身に「セラフィズム」と「秘策」を付与する。<br/>セラフィズム効果：極炎法がセラフィックヘイローに、セラフィズムがアクセッションに変化する。<br/>効果時間：20秒<br/>秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。<br/>効果時間：20秒<br/>追加効果：自身と周囲のパーティメンバーに付与されている浄化で解除可能な状態異常を1つ解除する。<br/>この効果が発動しなかった場合、対象が次に受ける浄化で解除可能な状態異常を1つ防ぐバリアを張る。<br/>この追加効果は遮蔽物を越えて効果を発揮する。<br/>効果時間：20秒<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒<br/>このアクションを実行するとアクセッションに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ヒール",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "MP2000",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：16000<br/>自身を対象とした場合は、回復力が8000に減少する。"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ストンラスキン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒",
+     "descriptionHtml": "自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>バリア量：回復力12000相当<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "ディアブロシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "10m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：9000<br/>追加効果：対象が受ける回復効果を33％減少させる。<br/>効果時間：10秒"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "エーテルフローシンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png"
+    ]
+   },
+   {
+    "title": "エーテルゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nエーテルフローシンボル\n\nアクション「エーテルフロー」を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エーテルフロー」を実行することで最大スタック数まで付与され、エーテルフローを消費することで「生命活性法」やレベル62で修得する「深謀遠慮の策」などを発動できます。\n\nエーテルゲージ\n\nレベル70でアクション「エーテルパクト」を修得すると、フェアリーのエーテルである\"フェイエーテル\"を示す「エーテルゲージ」が表示されるようになります。\nフェイエーテルは、自身が戦闘状態かつフェアリーを召喚しているときに、エーテルフローを消費する「生命活性法」や「深謀遠慮の策」などを戦闘中に実行することで蓄積され、エーテルパクトを実行できます。\n\nレベル80でアクション「サモン・セラフィム」を修得し、\"サモン・セラフィム\"を実行することで一時的にフェアリー・エオスやフェアリー・セレネの代わりに、\"セラフィム\"を使役することができます。\nエーテルゲージにはセラフィムの残り滞在時間が表示されます。\n\nシンプルモード\n\nエーテルフローシンボル\n\nエーテルゲージ\n\n通常時\n\n「フェイユニオン」実行中\n\n「サモン・セラフィム」実行中",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">エーテルフローシンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/3/k7_yNXLMnM28HGbJ8EcFEW9RvQ.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「エーテルフロー」</span>を修得すると、<span class=\"txt_red\">\"エーテルフロー\"</span>のスタック数を示す<span class=\"txt_red\">「エーテルフローシンボル」</span>が表示されるようになります。<br/>エーテルフローは<span class=\"txt_red\">「エーテルフロー」</span>を実行することで最大スタック数まで付与され、エーテルフローを消費することで<span class=\"txt_red\">「生命活性法」</span>やレベル62で修得する<span class=\"txt_red\">「深謀遠慮の策」</span>などを発動できます。</p>\n</div>\n<h3 class=\"job__hud__title\">エーテルゲージ</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/n/l6m0_C1JWNm35jkGXPlZFg_2ac.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル70でアクション<span class=\"txt_red\">「エーテルパクト」</span>を修得すると、フェアリーのエーテルである<span class=\"txt_red\">\"フェイエーテル\"</span>を示す<span class=\"txt_red\">「エーテルゲージ」</span>が表示されるようになります。<br/>フェイエーテルは、自身が戦闘状態かつフェアリーを召喚しているときに、エーテルフローを消費する<span class=\"txt_red\">「生命活性法」</span>や<span class=\"txt_red\">「深謀遠慮の策」</span>などを戦闘中に実行することで蓄積され、エーテルパクトを実行できます。</p>\n</div>\n<p class=\"job__hud__text\">レベル80でアクション<span class=\"txt_red\">「サモン・セラフィム」</span>を修得し、\"サモン・セラフィム\"を実行することで一時的にフェアリー・エオスやフェアリー・セレネの代わりに、<span class=\"txt_red\">\"セラフィム\"</span>を使役することができます。<br/>エーテルゲージにはセラフィムの残り滞在時間が表示されます。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">エーテルフローシンボル</p>\n</th>\n</tr>\n<tr>\n<td colspan=\"3\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png\" width=\"290\"/>\n</td>\n</tr><tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">エーテルゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">通常時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「フェイユニオン」実行中</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「サモン・セラフィム」実行中</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/3/k7_yNXLMnM28HGbJ8EcFEW9RvQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/n/l6m0_C1JWNm35jkGXPlZFg_2ac.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルイン\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n\nバイオ\n\nLv2\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：20\n効果時間：30秒\n\nフィジク\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：450\n\nサモン・エオス\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP200\n\n0m\n\n0m\n\nフェアリー・エオスを召喚する。\nフェアリー・エオスの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「光の癒し」を実行する。\n\nリザレク\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\n光ひかりの囁ささやき\n\nLv20\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「光の囁き」を実行させる。\nセラフィムを召喚している場合は「光輝の囁き」を実行させる。\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n発動条件：フェアリーまたはセラフィムが存在する\n\nバイオラ\n\nLv26\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n\n鼓舞激励こぶげきれいの策さく\n\nジョブクエスト\n\nLv30\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n\n士気高揚しきこうようの策さく\n\nジョブクエスト\n\nLv35\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の160％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n\nルインラ\n\nLv38\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：220\n\nフェイイルミネーション\n\nLv40\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「フェイイルミネーション」を実行させる。\nセラフィムを召喚している場合は「セラフィックイルミネーション」を実行させる。\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとセラフィムのセラフィックイルミネーションは同時に付与されない。\n発動条件：フェアリーまたはセラフィムが存在する\n\nエーテルフロー\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを最大ＭＰの20％分回復する。\n追加効果：自身に最大スタック分の「エーテルフロー」を付与する。\n最大スタック数：3\n効果時間：永続\n発動条件：自身が戦闘状態\n\nエナジードレイン\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：100\n追加効果：与えたダメージの一部をＨＰとして吸収する。\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n生命活性法せいめいかっせいほう\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：600\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n破陣法はじんほう\n\nLv46\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：165\n\n野戦治療やせんちりょうの陣じん\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n30秒\n-\n\n30m\n\n15m\n\n指定した地面を中心として被ダメージを軽減するシールドを生成する。\n効果時間中、範囲内にいるパーティメンバーの被ダメージを10％軽減し、かつＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n不撓不屈ふとうふくつの策さく\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n気炎法きえんほう\n\nジョブクエスト\n\nLv54\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：220\n\n展開戦術てんかいせんじゅつ\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n90秒\n-\n\n30m\n\n30m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に付与した「鼓舞」を対象の周囲のパーティメンバーに拡散させる。\n効果時間：拡散した時点での時間\n自身が対象に鼓舞を付与していない場合は効果無し。\n\n応急戦術おうきゅうせんじゅつ\n\nジョブクエスト\n\nLv58\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の鼓舞効果および激励効果を伴う回復魔法について、鼓舞や激励を付与せずにその分を回復効果に置き換えて実行する。\n効果時間：15秒\n\n転化てんか\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーを帰還させることと引き換えに、自身に最大スタック分の「エーテルフロー」を付与する。\nさらに、自身の回復魔法の効果を20％上昇させる。\n効果時間：30秒\nただし、効果時間中は「サモン・エオス」を使うことができなくなる。\n効果が終了するとフェアリーが再出現する。\n発動条件：自身が戦闘状態かつフェアリーが存在する\n\n深謀遠慮しんぼうえんりょの策さく\n\nLv62\n\nアビリティ\nInstant\n45秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に「ＨＰが50％以下に減少するか効果時間が経過すると、回復効果が発動する」というステータスを付与する。\n回復力：800\n効果時間：45秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n魔炎法まえんほう\n\nLv64\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：240\n\n連環計れんかんけい\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n25m\n\n0m\n\n一定時間、対象がクリティカルヒットを受ける確率を10％上昇させる。\n効果時間：20秒\n追加効果：自身に「埋伏の毒実行可」を付与する。\n効果時間：30秒\n\nエーテルパクト\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n3秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n呼び出しているフェアリーに「フェイユニオン」を実行させる。\n再使用で解除する。\n\n指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n発動条件：フェアリーが存在かつ「フェイエーテル」10\nフェイエーテル付与条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在中に「エーテルフロー」を消費するアクションの実行に成功したとき\n\nフェイユニオン解除かいじょ\n\nLv70\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\nフェイユニオンを解除する。\n\n蠱毒法こどくほう\n\nLv72\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：85\n効果時間：30秒\n\n死炎法しえんほう\n\nLv72\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：255\n\n秘策ひさく\n\nLv74\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の「鼓舞激励の策」「意気軒昂の策」「不撓不屈の策」「深謀遠慮の策」について、ＭＰや「エーテルフロー」を消費することなく実行することができ、かつ必ずクリティカルヒットする。\n効果時間：15秒\n\nフェイブレッシング\n\nLv76\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「フェイブレッシング」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n発動条件：フェアリーが存在する\n\nサモン・セラフィム\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーを帰還させるとともに、セラフィムを召喚する。\n召喚時間：22秒\nセラフィムの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「セラフィックヴェール」を実行する。\nセラフィムが帰還するとフェアリーが再出現する。\n発動条件：フェアリーが存在する\n\nコンソレイション\n\nLv80\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n召喚しているセラフィムに「コンソレイション」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：セラフィムが存在する\n\n極炎法ごくえんほう\n\nLv82\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：320\n\n裂陣法れつじんほう\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：180\n\n生命回生法せいめいかいせいほう\n\nLv86\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象の受けるＨＰ回復効果と最大ＨＰを10％上昇させる。\nさらに、実行した時点での最大ＨＰの10％分のＨＰを回復する。\n効果時間：10秒\n\n疾風怒濤しっぷうどとうの計けい\n\nLv90\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\n疾風の計効果：対象の移動速度を上昇させる。\n効果時間：10秒\n怒涛の計効果：被ダメージを10％軽減させる。\n効果時間：20秒\n\n埋伏まいふくの毒どく\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性の継続ダメージを付与する。\n威力：140\n効果時間：15秒\n発動条件：「埋伏の毒実行可」効果中\n\n意気軒昂いきけんこうの策さく\n\nLv96\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n\nセラフィズム\n\nLv100\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n0m\n\n一定時間、自身と周囲50m以内にいるパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：20秒\n追加効果：鼓舞激励の策がマニフェステーションに、意気軒昂の策がアクセッションにそれぞれ変化する。\nさらに、応急戦術のリキャストタイムをリセットし、かつリキャストタイムを1秒に短縮する。\n転化とは同時に付与されない。\n発動条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在する\n\nマニフェステーション\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP900\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：360\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと鼓舞激励の策がマニフェステーションに変化する。\n\nアクセッション\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：240\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと意気軒昂の策がアクセッションに変化する。"
+  },
+  {
+   "heading": "ペットアクション",
+   "anchor": "anchor__pet_eos",
+   "text": "ペットアクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n光ひかりの癒いやし\n\nLv1\n\n魔法\nInstant\n\n3秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：180\n\n※このアクションはホットバーに登録することはできない。\n\n光ひかりの囁ささやき\n\nLv20\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\nフェイイルミネーション\n\nLv40\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nセラフィムのセラフィックイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。\n\nフェイユニオン\n\nLv70\n\nアビリティ\nInstant\n-\n-\n\n30m\n\n0m\n\n指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n\n※このアクションはホットバーに登録することはできない。\n\nフェイブレッシング\n\nLv76\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックヴェール\n\nLv80\n\n魔法\nInstant\n\n3秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：180\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。\n\n光輝こうきの囁ささやき\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックイルミネーション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。\n\nコンソレイション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "ペットアクション（指示）",
+   "anchor": "anchor__pet_instruction",
+   "text": "ペットアクション（指示）\n\nアクション名\n内容\n\n帰還きかん\n\nペットを帰還させる。\n\n追従ついじゅう\n\nペットを自身に追従させる。\n\n移動いどう\n\nペットを指定地点まで移動させる。\n\n待機たいき\n\nペットをその場で待機させる。\n\nインターセプト\n\nペットに、自分が攻撃を行うか、自分が攻撃を受けるまで戦闘しないように命令する。\n\nピース\n\nペットに、自分が指示を出すまで戦闘しないように命令する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポーズ\n\nLv8\n\n魔法\n\n2.5秒\n\n2.5秒\nMP600\n\n30m\n\n0m\n\n対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nエスナ\n\nLv10\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象にかかった一部の弱体効果を1つ解除する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n救出きゅうしゅつ\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\nパーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。\n\nコラプションマスタリー\n\nLv26\n\nバイオがバイオラに変化する。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。\n\n炎法えんほうマスタリー\n\nジョブクエスト\n\nLv54\n\nルインが気炎法に変化する。\nさらに、ルインラの威力を160に、破陣法の威力を165に上昇させる。\n\n炎法えんほうマスタリーIIつー\n\nLv64\n\n気炎法が魔炎法に変化する。\nさらに、ルインラの威力を180に上昇させる。\n\nコラプションマスタリーIIつー\n\nLv72\n\nバイオラが蠱毒法に変化する。\n\n炎法えんほうマスタリーIIIすりー\n\nLv72\n\n魔炎法が死炎法に変化する。\nさらに、ルインラの威力を200に上昇させる。\n\n野戦治療やせんちりょうの陣じん効果こうかアップ\n\nLv78\n\n野戦治療の陣に、「効果範囲内にいるパーティメンバーを継続回復させる効果」が付与される。\n\n炎法えんほうマスタリーIVふぉー\n\nLv82\n\n死炎法が極炎法に変化する。\nさらに、ルインラの威力を220に上昇させる。\n\n破陣法はじんほうマスタリー\n\nLv82\n\n破陣法が裂陣法に変化する。\n\n回復かいふくアクション効果こうかアップ\n\nLv85\n\n特定のアクションの回復力とバリア効果量を上昇させる。\n\nフィジクの回復力：450\n光の癒しの回復力：180\n鼓舞激励の策のバリア効果量：回復量の180％分\n士気高揚の策のバリア効果量：回復量の160％分\nセラフィックヴェールの回復力：180\n\n展開戦術てんかいせんじゅつ効果こうかアップ\n\nLv88\n\n展開戦術のリキャストタイムを90秒に短縮させる。\n\n連環計れんかんけい効果こうかアップ\n\nLv92\n\n自身に「埋伏の毒実行可」が付与される。\n効果時間：30秒\n発動条件：連環計実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n蠱毒法の継続ダメージの威力：85\n極炎法の威力：320\n\n士気高揚しきこうようの策さくマスタリー\n\nLv96\n\n士気高揚の策が意気軒昂の策に変化する。\n\n秘策ひさく効果こうかアップ\n\nLv98\n\n秘策のリキャストタイムを60秒に短縮する。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nエーテルフローシンボル\n\nアクション「エーテルフロー」を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エーテルフロー」を実行することで最大スタック数まで付与され、エーテルフローを消費することで「生命活性法」やレベル62で修得する「深謀遠慮の策」などを発動できます。\n\nエーテルゲージ\n\nレベル70でアクション「エーテルパクト」を修得すると、フェアリーのエーテルである\"フェイエーテル\"を示す「エーテルゲージ」が表示されるようになります。\nフェイエーテルは、自身が戦闘状態かつフェアリーを召喚しているときに、エーテルフローを消費する「生命活性法」や「深謀遠慮の策」などを戦闘中に実行することで蓄積され、エーテルパクトを実行できます。\n\nレベル80でアクション「サモン・セラフィム」を修得し、\"サモン・セラフィム\"を実行することで一時的にフェアリー・エオスやフェアリー・セレネの代わりに、\"セラフィム\"を使役することができます。\nエーテルゲージにはセラフィムの残り滞在時間が表示されます。\n\nシンプルモード\n\nエーテルフローシンボル\n\nエーテルゲージ\n\n通常時\n\n「フェイユニオン」実行中\n\n「サモン・セラフィム」実行中"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n極炎法ごくえんほう\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n\n鼓舞激励こぶげきれいの策さく\n\n魔法\nInstant\n12秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：4000\n追加効果：対象に「鼓舞」と「激励」を付与する。\n鼓舞効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：12秒\n自身に「秘策」が付与されている場合は、バリア量が2倍になる。\n激励効果：被ダメージを10％軽減させる。\n効果時間：12秒\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。\n\n蠱毒法こどくほう\n\n魔法\nInstant\n16秒\n-\n\n25m\n\n0m\n\n対象に「蠱毒法」と「蠱毒」を付与する。\n蠱毒法効果：対象に継続ダメージを与える。\n威力：3000\n効果時間：12秒\n自身に「秘策」が付与されている場合は、威力が1.5倍になる。\n蠱毒効果：対象が受ける回復効果を15％減少させる。\n効果時間：12秒\nこの魔法は固有のリキャストタイマーを持つ。\n\n展開戦術てんかいせんじゅつ\n\nアビリティ\nInstant\n12秒\n-\n\n30m\n\n15m\n\n自身またはパーティメンバー、もしくは敵単体を対象とする。\n自身またはパーティメンバーを対象とした場合、対象に付与した「鼓舞」と「激励」の効果を対象の周囲のパーティメンバーに拡散する。\n敵を対象とした場合、対象に付与した「蠱毒法」と「蠱毒」の効果を対象の周囲の敵に拡散する。\n効果時間：拡散した時点での時間\n自身が対象にいずれのステータスも付与していない、もしくは対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は効果無し。\n最大チャージ数：2\n\n連環計れんかんけい\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n対象の被ダメージを10％増加させる。\n効果時間：10秒\n「防御」効果中の対象に実行すると、上記の追加効果を付与する代わりに「防御」の被ダメージ軽減効果を半減させる。\n\n疾風怒濤しっぷうどとうの計けい\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n疾風の計効果：移動速度を25％上昇させる。\n効果時間：10秒\n怒涛の計効果：与ダメージを10％上昇させる。\n効果時間：10秒\n追加効果：自身に「秘策」を付与する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。\n\nサモン・セラフィム\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n1m\n\n指定地点にセラフィムを召喚する。\n召喚時間：20秒\nセラフィムは周囲15m以内にいるパーティメンバーに「セラフィックイルミネーション」を付与し続ける。\nセラフィックイルミネーション効果：受けるＨＰ回復効果を10％上昇させる。\nまた、セラフィムは周囲30m以内にいるＨＰが減少したパーティメンバーを優先対象としてセラフィックヴェールを実行する。\n\nセラフィックヘイロー\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nアクセッション\n\n魔法\nInstant\n20秒\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：8000\n追加効果：対象に「コンソレイション」を付与する。\nコンソレイション効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：20秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックヴェール\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：6000\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力6000相当\n効果時間：10秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nセラフィズム\n\nInstant\n10秒\n-\n\n0m\n\n30m\n\n自身に「セラフィズム」と「秘策」を付与する。\nセラフィズム効果：極炎法がセラフィックヘイローに、セラフィズムがアクセッションに変化する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに付与されている浄化で解除可能な状態異常を1つ解除する。\nこの効果が発動しなかった場合、対象が次に受ける浄化で解除可能な状態異常を1つ防ぐバリアを張る。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：20秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとアクセッションに変化する。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヒール\n\n魔法\nInstant\n\n2.4秒\nMP2000\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。\n\nストンラスキン\n\n魔法\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒\n\nディアブロシス\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nペットアクション\n\nペットアクション（指示）\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nHEALER/ヒーラー\n\n魔法文明が花開いた古の時代……バイルブランド島に「ニーム」という都市国家が存在した。\n強力な魔法がもてはやされた戦乱の時代にあって、海兵を主力とする「ニーム」が独立を維持できたのは、軍学を修めた「学者」の指揮があればこそであった。使い魔「フェアリー」を操る学者は、傷ついた味方を癒やしつつ潜在能力を引き出し、小国の自由を守り抜いたと伝えられている。\n\nジョブ開始クエスト\n\n初期クラス：巴術士\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nルイン\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n\nバイオ\n\nLv2\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：20\n効果時間：30秒\n\nフィジク\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：450\n\nサモン・エオス\n\nLv4\n\n魔法\n\n1.5秒\n\n2.5秒\nMP200\n\n0m\n\n0m\n\nフェアリー・エオスを召喚する。\nフェアリー・エオスの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「光の癒し」を実行する。\n\nリザレク\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\n光ひかりの囁ささやき\n\nLv20\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「光の囁き」を実行させる。\nセラフィムを召喚している場合は「光輝の囁き」を実行させる。\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n発動条件：フェアリーまたはセラフィムが存在する\n\nバイオラ\n\nLv26\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n\n鼓舞激励こぶげきれいの策さく\n\nジョブクエスト\n\nLv30\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n\n士気高揚しきこうようの策さく\n\nジョブクエスト\n\nLv35\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の160％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n\nルインラ\n\nLv38\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：220\n\nフェイイルミネーション\n\nLv40\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「フェイイルミネーション」を実行させる。\nセラフィムを召喚している場合は「セラフィックイルミネーション」を実行させる。\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとセラフィムのセラフィックイルミネーションは同時に付与されない。\n発動条件：フェアリーまたはセラフィムが存在する\n\nエーテルフロー\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを最大ＭＰの20％分回復する。\n追加効果：自身に最大スタック分の「エーテルフロー」を付与する。\n最大スタック数：3\n効果時間：永続\n発動条件：自身が戦闘状態\n\nエナジードレイン\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：100\n追加効果：与えたダメージの一部をＨＰとして吸収する。\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n生命活性法せいめいかっせいほう\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：600\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n破陣法はじんほう\n\nLv46\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：165\n\n野戦治療やせんちりょうの陣じん\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n30秒\n-\n\n30m\n\n15m\n\n指定した地面を中心として被ダメージを軽減するシールドを生成する。\n効果時間中、範囲内にいるパーティメンバーの被ダメージを10％軽減し、かつＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n不撓不屈ふとうふくつの策さく\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n気炎法きえんほう\n\nジョブクエスト\n\nLv54\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：220\n\n展開戦術てんかいせんじゅつ\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n90秒\n-\n\n30m\n\n30m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に付与した「鼓舞」を対象の周囲のパーティメンバーに拡散させる。\n効果時間：拡散した時点での時間\n自身が対象に鼓舞を付与していない場合は効果無し。\n\n応急戦術おうきゅうせんじゅつ\n\nジョブクエスト\n\nLv58\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の鼓舞効果および激励効果を伴う回復魔法について、鼓舞や激励を付与せずにその分を回復効果に置き換えて実行する。\n効果時間：15秒\n\n転化てんか\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーを帰還させることと引き換えに、自身に最大スタック分の「エーテルフロー」を付与する。\nさらに、自身の回復魔法の効果を20％上昇させる。\n効果時間：30秒\nただし、効果時間中は「サモン・エオス」を使うことができなくなる。\n効果が終了するとフェアリーが再出現する。\n発動条件：自身が戦闘状態かつフェアリーが存在する\n\n深謀遠慮しんぼうえんりょの策さく\n\nLv62\n\nアビリティ\nInstant\n45秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象に「ＨＰが50％以下に減少するか効果時間が経過すると、回復効果が発動する」というステータスを付与する。\n回復力：800\n効果時間：45秒\n追加効果：「フェイエーテル」を10上昇させる。\n発動条件：「エーテルフロー」\n\n魔炎法まえんほう\n\nLv64\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：240\n\n連環計れんかんけい\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n25m\n\n0m\n\n一定時間、対象がクリティカルヒットを受ける確率を10％上昇させる。\n効果時間：20秒\n追加効果：自身に「埋伏の毒実行可」を付与する。\n効果時間：30秒\n\nエーテルパクト\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n3秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n呼び出しているフェアリーに「フェイユニオン」を実行させる。\n再使用で解除する。\n\n指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n発動条件：フェアリーが存在かつ「フェイエーテル」10\nフェイエーテル付与条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在中に「エーテルフロー」を消費するアクションの実行に成功したとき\n\nフェイユニオン解除かいじょ\n\nLv70\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\nフェイユニオンを解除する。\n\n蠱毒法こどくほう\n\nLv72\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：85\n効果時間：30秒\n\n死炎法しえんほう\n\nLv72\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：255\n\n秘策ひさく\n\nLv74\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の「鼓舞激励の策」「意気軒昂の策」「不撓不屈の策」「深謀遠慮の策」について、ＭＰや「エーテルフロー」を消費することなく実行することができ、かつ必ずクリティカルヒットする。\n効果時間：15秒\n\nフェイブレッシング\n\nLv76\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーに「フェイブレッシング」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n発動条件：フェアリーが存在する\n\nサモン・セラフィム\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n召喚しているフェアリーを帰還させるとともに、セラフィムを召喚する。\n召喚時間：22秒\nセラフィムの状態が「インターセプト」の場合、ＨＰが減少したパーティメンバーに対して「セラフィックヴェール」を実行する。\nセラフィムが帰還するとフェアリーが再出現する。\n発動条件：フェアリーが存在する\n\nコンソレイション\n\nLv80\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n召喚しているセラフィムに「コンソレイション」を実行させる。\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：セラフィムが存在する\n\n極炎法ごくえんほう\n\nLv82\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：320\n\n裂陣法れつじんほう\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：180\n\n生命回生法せいめいかいせいほう\n\nLv86\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象の受けるＨＰ回復効果と最大ＨＰを10％上昇させる。\nさらに、実行した時点での最大ＨＰの10％分のＨＰを回復する。\n効果時間：10秒\n\n疾風怒濤しっぷうどとうの計けい\n\nLv90\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\n疾風の計効果：対象の移動速度を上昇させる。\n効果時間：10秒\n怒涛の計効果：被ダメージを10％軽減させる。\n効果時間：20秒\n\n埋伏まいふくの毒どく\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性の継続ダメージを付与する。\n威力：140\n効果時間：15秒\n発動条件：「埋伏の毒実行可」効果中\n\n意気軒昂いきけんこうの策さく\n\nLv96\n\n魔法\n\n2秒\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：200\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n\nセラフィズム\n\nLv100\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n0m\n\n一定時間、自身と周囲50m以内にいるパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：20秒\n追加効果：鼓舞激励の策がマニフェステーションに、意気軒昂の策がアクセッションにそれぞれ変化する。\nさらに、応急戦術のリキャストタイムをリセットし、かつリキャストタイムを1秒に短縮する。\n転化とは同時に付与されない。\n発動条件：自身が戦闘状態かつフェアリーまたはセラフィムが存在する\n\nマニフェステーション\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP900\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：360\n追加効果：対象に一定量のダメージを防ぐバリアである「鼓舞」を付与する。\n鼓舞効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「激励」を付与する。\n激励効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと鼓舞激励の策がマニフェステーションに変化する。\n\nアクセッション\n\nLv100\n\n魔法\nInstant\n\n2.5秒\nMP900\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：240\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の180％分のダメージを軽減する。\n効果時間：30秒\n賢者の一部のバリア効果とは同時に付与されない。\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと意気軒昂の策がアクセッションに変化する。\n\nペットアクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n光ひかりの癒いやし\n\nLv1\n\n魔法\nInstant\n\n3秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：180\n\n※このアクションはホットバーに登録することはできない。\n\n光ひかりの囁ささやき\n\nLv20\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\nフェイイルミネーション\n\nLv40\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nセラフィムのセラフィックイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。\n\nフェイユニオン\n\nLv70\n\nアビリティ\nInstant\n-\n-\n\n30m\n\n0m\n\n指定されたパーティメンバーを継続回復し続ける。\n回復力：300\n実行中は「フェイエーテル」を10ずつ消費し続ける。\n対象がフェアリーの30m以内から離れると回復効果は発動しない。\nまた、フェアリーは他の行動をすることができない。\n\n※このアクションはホットバーに登録することはできない。\n\nフェイブレッシング\n\nLv76\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：320\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックヴェール\n\nLv80\n\n魔法\nInstant\n\n3秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：180\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。\n\n光輝こうきの囁ささやき\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n20m\n\n周囲のパーティメンバーのＨＰを継続回復する。\n回復力：80\n効果時間：21秒\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックイルミネーション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n一定時間、周囲のパーティメンバーの回復魔法の回復量を10％上昇させ、かつ被魔法ダメージを5％軽減させる。\n効果時間：20秒\nフェアリーのフェイイルミネーションとは同時に付与されない。\n\n※このアクションはホットバーに登録することはできない。\n\nコンソレイション\n\nLv80\n\nアビリティ\nInstant\n-\n-\n\n0m\n\n30m\n\n周囲のパーティメンバーのＨＰを回復する。\n回復力：250\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n\n※このアクションはホットバーに登録することはできない。\n\nペットアクション（指示）\n\nアクション名\n内容\n\n帰還きかん\n\nペットを帰還させる。\n\n追従ついじゅう\n\nペットを自身に追従させる。\n\n移動いどう\n\nペットを指定地点まで移動させる。\n\n待機たいき\n\nペットをその場で待機させる。\n\nインターセプト\n\nペットに、自分が攻撃を行うか、自分が攻撃を受けるまで戦闘しないように命令する。\n\nピース\n\nペットに、自分が指示を出すまで戦闘しないように命令する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポーズ\n\nLv8\n\n魔法\n\n2.5秒\n\n2.5秒\nMP600\n\n30m\n\n0m\n\n対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nエスナ\n\nLv10\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象にかかった一部の弱体効果を1つ解除する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n救出きゅうしゅつ\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\nパーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態\n\n特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.1倍にする。\n\nコラプションマスタリー\n\nLv26\n\nバイオがバイオラに変化する。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\nまた、自身のペットによる、ダメージと回復量をベース値の1.3倍にする。\n\n炎法えんほうマスタリー\n\nジョブクエスト\n\nLv54\n\nルインが気炎法に変化する。\nさらに、ルインラの威力を160に、破陣法の威力を165に上昇させる。\n\n炎法えんほうマスタリーIIつー\n\nLv64\n\n気炎法が魔炎法に変化する。\nさらに、ルインラの威力を180に上昇させる。\n\nコラプションマスタリーIIつー\n\nLv72\n\nバイオラが蠱毒法に変化する。\n\n炎法えんほうマスタリーIIIすりー\n\nLv72\n\n魔炎法が死炎法に変化する。\nさらに、ルインラの威力を200に上昇させる。\n\n野戦治療やせんちりょうの陣じん効果こうかアップ\n\nLv78\n\n野戦治療の陣に、「効果範囲内にいるパーティメンバーを継続回復させる効果」が付与される。\n\n炎法えんほうマスタリーIVふぉー\n\nLv82\n\n死炎法が極炎法に変化する。\nさらに、ルインラの威力を220に上昇させる。\n\n破陣法はじんほうマスタリー\n\nLv82\n\n破陣法が裂陣法に変化する。\n\n回復かいふくアクション効果こうかアップ\n\nLv85\n\n特定のアクションの回復力とバリア効果量を上昇させる。\n\nフィジクの回復力：450\n光の癒しの回復力：180\n鼓舞激励の策のバリア効果量：回復量の180％分\n士気高揚の策のバリア効果量：回復量の160％分\nセラフィックヴェールの回復力：180\n\n展開戦術てんかいせんじゅつ効果こうかアップ\n\nLv88\n\n展開戦術のリキャストタイムを90秒に短縮させる。\n\n連環計れんかんけい効果こうかアップ\n\nLv92\n\n自身に「埋伏の毒実行可」が付与される。\n効果時間：30秒\n発動条件：連環計実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n蠱毒法の継続ダメージの威力：85\n極炎法の威力：320\n\n士気高揚しきこうようの策さくマスタリー\n\nLv96\n\n士気高揚の策が意気軒昂の策に変化する。\n\n秘策ひさく効果こうかアップ\n\nLv98\n\n秘策のリキャストタイムを60秒に短縮する。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nジョブHUD\n\nエーテルフローシンボル\n\nアクション「エーテルフロー」を修得すると、\"エーテルフロー\"のスタック数を示す「エーテルフローシンボル」が表示されるようになります。\nエーテルフローは「エーテルフロー」を実行することで最大スタック数まで付与され、エーテルフローを消費することで「生命活性法」やレベル62で修得する「深謀遠慮の策」などを発動できます。\n\nエーテルゲージ\n\nレベル70でアクション「エーテルパクト」を修得すると、フェアリーのエーテルである\"フェイエーテル\"を示す「エーテルゲージ」が表示されるようになります。\nフェイエーテルは、自身が戦闘状態かつフェアリーを召喚しているときに、エーテルフローを消費する「生命活性法」や「深謀遠慮の策」などを戦闘中に実行することで蓄積され、エーテルパクトを実行できます。\n\nレベル80でアクション「サモン・セラフィム」を修得し、\"サモン・セラフィム\"を実行することで一時的にフェアリー・エオスやフェアリー・セレネの代わりに、\"セラフィム\"を使役することができます。\nエーテルゲージにはセラフィムの残り滞在時間が表示されます。\n\nシンプルモード\n\nエーテルフローシンボル\n\nエーテルゲージ\n\n通常時\n\n「フェイユニオン」実行中\n\n「サモン・セラフィム」実行中\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n極炎法ごくえんほう\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n\n鼓舞激励こぶげきれいの策さく\n\n魔法\nInstant\n12秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：4000\n追加効果：対象に「鼓舞」と「激励」を付与する。\n鼓舞効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：12秒\n自身に「秘策」が付与されている場合は、バリア量が2倍になる。\n激励効果：被ダメージを10％軽減させる。\n効果時間：12秒\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。\n\n蠱毒法こどくほう\n\n魔法\nInstant\n16秒\n-\n\n25m\n\n0m\n\n対象に「蠱毒法」と「蠱毒」を付与する。\n蠱毒法効果：対象に継続ダメージを与える。\n威力：3000\n効果時間：12秒\n自身に「秘策」が付与されている場合は、威力が1.5倍になる。\n蠱毒効果：対象が受ける回復効果を15％減少させる。\n効果時間：12秒\nこの魔法は固有のリキャストタイマーを持つ。\n\n展開戦術てんかいせんじゅつ\n\nアビリティ\nInstant\n12秒\n-\n\n30m\n\n15m\n\n自身またはパーティメンバー、もしくは敵単体を対象とする。\n自身またはパーティメンバーを対象とした場合、対象に付与した「鼓舞」と「激励」の効果を対象の周囲のパーティメンバーに拡散する。\n敵を対象とした場合、対象に付与した「蠱毒法」と「蠱毒」の効果を対象の周囲の敵に拡散する。\n効果時間：拡散した時点での時間\n自身が対象にいずれのステータスも付与していない、もしくは対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は効果無し。\n最大チャージ数：2\n\n連環計れんかんけい\n\nアビリティ\nInstant\n20秒\n-\n\n25m\n\n0m\n\n対象の被ダメージを10％増加させる。\n効果時間：10秒\n「防御」効果中の対象に実行すると、上記の追加効果を付与する代わりに「防御」の被ダメージ軽減効果を半減させる。\n\n疾風怒濤しっぷうどとうの計けい\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに「疾風の計」と「怒涛の計」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n疾風の計効果：移動速度を25％上昇させる。\n効果時間：10秒\n怒涛の計効果：与ダメージを10％上昇させる。\n効果時間：10秒\n追加効果：自身に「秘策」を付与する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。\n\nサモン・セラフィム\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n1m\n\n指定地点にセラフィムを召喚する。\n召喚時間：20秒\nセラフィムは周囲15m以内にいるパーティメンバーに「セラフィックイルミネーション」を付与し続ける。\nセラフィックイルミネーション効果：受けるＨＰ回復効果を10％上昇させる。\nまた、セラフィムは周囲30m以内にいるＨＰが減少したパーティメンバーを優先対象としてセラフィックヴェールを実行する。\n\nセラフィックヘイロー\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nアクセッション\n\n魔法\nInstant\n20秒\n-\n\n0m\n\n15m\n\n周囲のパーティメンバーのＨＰを回復する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n回復力：8000\n追加効果：対象に「コンソレイション」を付与する。\nコンソレイション効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：20秒\n発動条件：「セラフィズム」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nセラフィックヴェール\n\n魔法\nInstant\n2.5秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：6000\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力6000相当\n効果時間：10秒\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nセラフィズム\n\nInstant\n10秒\n-\n\n0m\n\n30m\n\n自身に「セラフィズム」と「秘策」を付与する。\nセラフィズム効果：極炎法がセラフィックヘイローに、セラフィズムがアクセッションに変化する。\n効果時間：20秒\n秘策効果：「鼓舞激励の策」と「蠱毒法」の効果が強化される。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに付与されている浄化で解除可能な状態異常を1つ解除する。\nこの効果が発動しなかった場合、対象が次に受ける浄化で解除可能な状態異常を1つ防ぐバリアを張る。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：20秒\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとアクセッションに変化する。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヒール\n\n魔法\nInstant\n\n2.4秒\nMP2000\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。\n\nストンラスキン\n\n魔法\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒\n\nディアブロシス\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

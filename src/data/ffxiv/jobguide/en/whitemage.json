@@ -1,0 +1,1734 @@
+{
+ "job": "whitemage",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/whitemage/",
+ "pageTitle": "Job Guide: White Mage | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nWhite magic, the arcane art of succor, was conceived eras past that the world might know comfort. Alas, man began perverting its powers for self-gain, and by his wickedness brought about the Sixth Umbral catastrophe. Although the art subsequently became forbidden, it is now in the midst of a revival at the hands of the Padjal, chosen of the elementals.\nThose who would walk the path of the white mage are healers without peer, possessed of the power to deliver comrades from the direst of afflictions—even the icy grip of death itself.\n\nStarting Job Quest\n\nPrerequisite Class: Conjurer",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/002aa233f5d570b0e27d55ce38b57a6b06b7cc69.png",
+   "https://lds-img.finalfantasyxiv.com/d/a2d0e0ed56915f523e8a7326bbdd09eff0534eda.png",
+   "https://lds-img.finalfantasyxiv.com/d/78107cd063a81b78b99eb7cb5da15f2bec403c70.png",
+   "https://lds-img.finalfantasyxiv.com/d/6c5fd075bab7c063aef743a1de5e36958354b42b.png",
+   "https://lds-img.finalfantasyxiv.com/d/34bdc3ad370b701a106f32daa68e73055ab72331.png",
+   "https://lds-img.finalfantasyxiv.com/d/ce8e52e199a7d9e548537bc77197f4d7965dea58.png",
+   "https://lds-img.finalfantasyxiv.com/d/a70a8e3dcb347c11047f00945f9435687f21f06d.png",
+   "https://lds-img.finalfantasyxiv.com/d/7be14bf07b21fa5c78cd7f7891279704da6cadb9.png",
+   "https://lds-img.finalfantasyxiv.com/d/53bb0b4fc881c4c06d64c915864968cced6c6201.png",
+   "https://lds-img.finalfantasyxiv.com/d/33c3597ee1004e364a6331f732f077666e798acd.png",
+   "https://lds-img.finalfantasyxiv.com/d/d69b1e0884f3f4edac543210cd9b42d74c2b3f25.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb161bfc68766590d81cb1f7d6049711c949039b.png",
+   "https://lds-img.finalfantasyxiv.com/d/7e4202353c63451702e9944dc93551a18951efcf.png",
+   "https://lds-img.finalfantasyxiv.com/d/530234ed64e2b5b5aaacf978a90d87932734272f.png",
+   "https://lds-img.finalfantasyxiv.com/d/44e09756739b6b8924b82471572e7103ac5ca1fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/a9c7b172b8c82aaa311a578fe3b42f5f30266e93.png",
+   "https://lds-img.finalfantasyxiv.com/d/cf3242dc922e88211cb5b2c4aa67f9ae79fb88fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/f38006e73efc8e122777b9c23097a4c40bc9c9c4.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c9f83b599b37adfa6597ea7e884331cac170a12.png",
+   "https://lds-img.finalfantasyxiv.com/d/539a73220a23fd185c17bed962b140bf7b4673d2.png",
+   "https://lds-img.finalfantasyxiv.com/d/6e00b907b75a6906045955d68cf68af66ba6aa9e.png",
+   "https://lds-img.finalfantasyxiv.com/d/33eacc1401b5fe03a2dd54e317cd60ccbb912c44.png",
+   "https://lds-img.finalfantasyxiv.com/d/065d9df35159a3bc53d59984a18b35581b442a73.png",
+   "https://lds-img.finalfantasyxiv.com/d/2144617daa9bac9ea7bc1f063a9e0cd033fcd363.png",
+   "https://lds-img.finalfantasyxiv.com/d/de737874f0025d808d0bddac1d4156fec9464d00.png",
+   "https://lds-img.finalfantasyxiv.com/d/c1f9bdbca11c2c7944e3e95cf7599a6a3849e5a2.png",
+   "https://lds-img.finalfantasyxiv.com/d/e01507664cb997891de06ec522b71619279969bc.png",
+   "https://lds-img.finalfantasyxiv.com/d/9582c5aa6ffa9abf82db6140916020235a003a20.png",
+   "https://lds-img.finalfantasyxiv.com/d/78e099cba536b64fe978d05487c51b28a66f29df.png",
+   "https://lds-img.finalfantasyxiv.com/d/dfafd20ceefae82548deba9511d3d765c4535b3a.png",
+   "https://lds-img.finalfantasyxiv.com/d/eceb9103dbf8066a8b6c8bce2e84df7552f1a074.png",
+   "https://lds-img.finalfantasyxiv.com/d/f87f8e18282665458cc9c358ff1a2b8a78833491.png",
+   "https://lds-img.finalfantasyxiv.com/d/4d31a93f520e700ac70ab1604bdb6811f124ebb4.png",
+   "https://lds-img.finalfantasyxiv.com/d/8114a12aa7d10fbe87b9edfe0fc6257adec7a06f.png",
+   "https://lds-img.finalfantasyxiv.com/d/afd378388b20cba91d3988c04efeff1256eae7b3.png",
+   "https://lds-img.finalfantasyxiv.com/d/94e9cc4b561ab6fca2c4a92cdbb2c86cd7825df9.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+   "https://lds-img.finalfantasyxiv.com/d/889b00ef7b55083b462b1dc589add79e07e87379.png",
+   "https://lds-img.finalfantasyxiv.com/d/7e7fd985e01134a3f7a76bda607c5cb1a36b3f7c.png",
+   "https://lds-img.finalfantasyxiv.com/d/67c045d9c3c41f736c36022272cefd8c0980f19f.png",
+   "https://lds-img.finalfantasyxiv.com/d/db63ef3d2573abbcb89237b70189beb66d9f08c1.png",
+   "https://lds-img.finalfantasyxiv.com/d/1245aecd31eaf0821a81907c6664946404770339.png",
+   "https://lds-img.finalfantasyxiv.com/d/8f0999ae68bff865ab683d7f1059024d126b013e.png",
+   "https://lds-img.finalfantasyxiv.com/d/928a4cb28079785539b6b24b6c890db6a5691703.png",
+   "https://lds-img.finalfantasyxiv.com/d/3c4b6cbc3b8ae09ebf0dc3c69c16594e211cdfe6.png",
+   "https://lds-img.finalfantasyxiv.com/d/885443eeb029d7cbca537be10edca5eb6c920401.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+   "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/AP2R7P9EFLNoKgGjHTqvi52NUs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Stone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/002aa233f5d570b0e27d55ce38b57a6b06b7cc69.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals earth damage with a potency of 140.",
+     "descriptionHtml": "Deals earth damage with a potency of 140."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Cure",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a2d0e0ed56915f523e8a7326bbdd09eff0534eda.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Cure II will cost no MP\nDuration: 15s",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 500<br/>Additional Effect: 15% chance next Cure II will cost no MP<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Aero",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/78107cd063a81b78b99eb7cb5da15f2bec403c70.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 30\nDuration: 30s",
+     "descriptionHtml": "Deals wind damage with a potency of 50.<br/>Additional Effect: Wind damage over time<br/>Potency: 30<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Medica",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6c5fd075bab7c063aef743a1de5e36958354b42b.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 400",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 400"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Raise",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34bdc3ad370b701a106f32daa68e73055ab72331.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Spell",
+     "cast": "8s",
+     "recast": "2.5s",
+     "cost": "2400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Resurrects target to a weakened state.",
+     "descriptionHtml": "Resurrects target to a weakened state."
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Stone II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce8e52e199a7d9e548537bc77197f4d7965dea58.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals earth damage with a potency of 190.",
+     "descriptionHtml": "Deals earth damage with a potency of 190."
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Cure II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a70a8e3dcb347c11047f00945f9435687f21f06d.png",
+     "skillCellText": "Cure II\nClass Quest",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "1000 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 800",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Presence of Mind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7be14bf07b21fa5c78cd7f7891279704da6cadb9.png",
+     "skillCellText": "Presence of Mind\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces spell cast time and recast time, and auto-attack delay by 20%.\nDuration: 15s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 30s",
+     "descriptionHtml": "Reduces spell cast time and recast time, and auto-attack delay by 20%.<br/>Duration: 15s<br/>Additional Effect: Grants 3 stacks of Sacred Sight<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Regen",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/53bb0b4fc881c4c06d64c915864968cced6c6201.png",
+     "skillCellText": "Regen\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Grants healing over time effect to target.\nCure Potency: 250\nDuration: 18s",
+     "descriptionHtml": "Grants healing over time effect to target.<br/>Cure Potency: 250<br/>Duration: 18s"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Cure III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/33c3597ee1004e364a6331f732f077666e798acd.png",
+     "skillCellText": "Cure III\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "1500 MP",
+     "range": "30y",
+     "radius": "10y",
+     "description": "Restores own or target party member's HP and all party members nearby target.\nCure Potency: 600",
+     "descriptionHtml": "Restores own or target party member's HP and all party members nearby target.<br/>Cure Potency: 600"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Aetherial Shift",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d69b1e0884f3f4edac543210cd9b42d74c2b3f25.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Quickly dash 15 yalms forward.\nCannot be executed while bound.",
+     "descriptionHtml": "Quickly dash 15 yalms forward.<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Holy",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb161bfc68766590d81cb1f7d6049711c949039b.png",
+     "skillCellText": "Holy\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "0y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 140 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 140 to all nearby enemies.<br/>Additional Effect: Stun<br/>Duration: 4s"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Aero II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e4202353c63451702e9944dc93551a18951efcf.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 46",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 50\nDuration: 30s",
+     "descriptionHtml": "Deals wind damage with a potency of 50.<br/>Additional Effect: Wind damage over time<br/>Potency: 50<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Medica II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/530234ed64e2b5b5aaacf978a90d87932734272f.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "1000 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 250<br/>Additional Effect: Regen<br/>Cure Potency: 150<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Benediction",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/44e09756739b6b8924b82471572e7103ac5ca1fb.png",
+     "skillCellText": "Benediction\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "180s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores all of a target's HP.",
+     "descriptionHtml": "Restores all of a target's HP."
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Afflatus Solace",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a9c7b172b8c82aaa311a578fe3b42f5f30266e93.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 800\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 800<br/>Additional Effect: Nourishes the Blood Lily<br/>Healing Gauge Cost: 1 Lily"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Asylum",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cf3242dc922e88211cb5b2c4aa67f9ae79fb88fb.png",
+     "skillCellText": "Asylum\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "15y",
+     "description": "Envelops a designated area in a veil of succor, granting healing over time to self and any party members who enter.\nCure Potency: 100\nDuration: 24s\nAdditional Effect: Increases HP recovery via healing actions on party members in the designated area by 10%",
+     "descriptionHtml": "Envelops a designated area in a veil of succor, granting healing over time to self and any party members who enter.<br/>Cure Potency: 100<br/>Duration: 24s <br/>Additional Effect: Increases HP recovery via healing actions on party members in the designated area by 10%"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Stone III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f38006e73efc8e122777b9c23097a4c40bc9c9c4.png",
+     "skillCellText": "Stone III\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals earth damage with a potency of 220.",
+     "descriptionHtml": "Deals earth damage with a potency of 220."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Assize",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c9f83b599b37adfa6597ea7e884331cac170a12.png",
+     "skillCellText": "Assize\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Deals unaspected damage with a potency of 400 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of nearby party members\nCure Potency: 400\nAdditional Effect: Restores 5% of maximum MP",
+     "descriptionHtml": "Deals unaspected damage with a potency of 400 to all nearby enemies.<br/>Additional Effect: Restores own HP and the HP of nearby party members<br/>Cure Potency: 400<br/>Additional Effect: Restores 5% of maximum MP"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Thin Air",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/539a73220a23fd185c17bed962b140bf7b4673d2.png",
+     "skillCellText": "Thin Air\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 58",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Next action is executed without MP cost.\nDuration: 12s\nMaximum Charges: 2",
+     "descriptionHtml": "Next action is executed without MP cost.<br/>Duration: 12s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Tetragrammaton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6e00b907b75a6906045955d68cf68af66ba6aa9e.png",
+     "skillCellText": "Tetragrammaton\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 700\nMaximum Charges: 2",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 700<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Stone IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/33eacc1401b5fe03a2dd54e317cd60ccbb912c44.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals earth damage with a potency of 260.",
+     "descriptionHtml": "Deals earth damage with a potency of 260."
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Divine Benison",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/065d9df35159a3bc53d59984a18b35581b442a73.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 500 potency.\nDuration: 15s\nMaximum Charges: 2",
+     "descriptionHtml": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 500 potency.<br/>Duration: 15s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Plenary Indulgence",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2144617daa9bac9ea7bc1f063a9e0cd033fcd363.png",
+     "skillCellText": "Plenary Indulgence\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Grants Confession to self and nearby party members, reducing damage taken by 10%.\nDuration: 10s\nParty members under the effect of Confession will receive additional healing upon receiving HP recovery via Medica, Medica III, Cure III, or Afflatus Rapture.\nCure Potency: 200",
+     "descriptionHtml": "Grants Confession to self and nearby party members, reducing damage taken by 10%.<br/>Duration: 10s<br/>Party members under the effect of Confession will receive additional healing upon receiving HP recovery via Medica, Medica III, Cure III, or Afflatus Rapture.<br/>Cure Potency: 200"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Dia",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/de737874f0025d808d0bddac1d4156fec9464d00.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 85.\nAdditional Effect: Unaspected damage over time\nPotency: 85\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 85.<br/>Additional Effect: Unaspected damage over time<br/>Potency: 85<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Glare",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c1f9bdbca11c2c7944e3e95cf7599a6a3849e5a2.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 290.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 290."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Afflatus Misery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e01507664cb997891de06ec522b71619279969bc.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,400 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed when the Blood Lily is in full bloom.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,400 for the first enemy, and 50% less for all remaining enemies.<br/>Can only be executed when the Blood Lily is in full bloom."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Afflatus Rapture",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9582c5aa6ffa9abf82db6140916020235a003a20.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 400<br/>Additional Effect: Nourishes the Blood Lily<br/>Healing Gauge Cost: 1 Lily"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Temperance",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/78e099cba536b64fe978d05487c51b28a66f29df.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases healing magic potency by 20%, while reducing damage taken by self and all party members within a radius of 50 yalms by 10%.\nDuration: 20s\nAdditional Effect: Grants Divine Grace\nDuration: 30s",
+     "descriptionHtml": "Increases healing magic potency by 20%, while reducing damage taken by self and all party members within a radius of 50 yalms by 10%.<br/>Duration: 20s<br/>Additional Effect: Grants Divine Grace<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Glare III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dfafd20ceefae82548deba9511d3d765c4535b3a.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 350.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 350."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Holy III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eceb9103dbf8066a8b6c8bce2e84df7552f1a074.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "0y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 150 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 150 to all nearby enemies.<br/>Additional Effect: Stun<br/>Duration: 4s"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Aquaveil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f87f8e18282665458cc9c358ff1a2b8a78833491.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by a party member or self by 15%.\nDuration: 8s",
+     "descriptionHtml": "Reduces damage taken by a party member or self by 15%.<br/>Duration: 8s"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Liturgy of the Bell",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4d31a93f520e700ac70ab1604bdb6811f124ebb4.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "180s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Places a healing blossom at the designated location and grants 5 stacks of Liturgy of the Bell to self.\nDuration: 20s\nTaking damage will expend 1 stack of Liturgy of the Bell to heal self and all party members within a radius of 20 yalms.\nCure Potency: 400\nThe effect of this action can only be triggered once per second.\nAny remaining stacks of Liturgy of the Bell will trigger an additional healing effect when time expires or upon executing this action a second time.\nCure Potency: 200 for every remaining stack of Liturgy of the Bell\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Places a healing blossom at the designated location and grants 5 stacks of Liturgy of the Bell to self.<br/>Duration: 20s<br/>Taking damage will expend 1 stack of Liturgy of the Bell to heal self and all party members within a radius of 20 yalms.<br/>Cure Potency: 400<br/>The effect of this action can only be triggered once per second.<br/>Any remaining stacks of Liturgy of the Bell will trigger an additional healing effect when time expires or upon executing this action a second time.<br/>Cure Potency: 200 for every remaining stack of Liturgy of the Bell<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Glare IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8114a12aa7d10fbe87b9edfe0fc6257adec7a06f.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 640 for the first enemy, and 40% less for all remaining enemies.\nCan only be executed while Sacred Sight is active.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 640 for the first enemy, and 40% less for all remaining enemies.<br/>Can only be executed while Sacred Sight is active."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Medica III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/afd378388b20cba91d3988c04efeff1256eae7b3.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "1000 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 250<br/>Additional Effect: Regen<br/>Cure Potency: 175<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Divine Caress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/94e9cc4b561ab6fca2c4a92cdbb2c86cd7825df9.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Creates a barrier around self and all party members near you that absorbs damage equivalent to a heal of 400 potency.\nDuration: 10s\nAdditional Effect: Grants Divine Aura when barrier effect expires\nDivine Aura Effect: Healing over time\nCure Potency: 200\nDuration: 15s\nCan only be executed while Divine Grace is active.",
+     "descriptionHtml": "Creates a barrier around self and all party members near you that absorbs damage equivalent to a heal of 400 potency.<br/>Duration: 10s<br/>Additional Effect: Grants Divine Aura when barrier effect expires<br/>Divine Aura Effect: Healing over time<br/>Cure Potency: 200<br/>Duration: 15s<br/>Can only be executed while Divine Grace is active."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Repose",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Spell",
+     "cast": "2.5s",
+     "recast": "2.5s",
+     "cost": "600 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Afflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.",
+     "descriptionHtml": "Afflicts target with Sleep.<br/>Duration: 30s<br/>Cancels auto-attack upon execution."
+    },
+    {
+     "rowId": "healer_action__02",
+     "name": "Esuna",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Removes a single detrimental effect from target.",
+     "descriptionHtml": "Removes a single detrimental effect from target."
+    },
+    {
+     "rowId": "healer_action__03",
+     "name": "Lucid Dreaming",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 14",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Gradually restores own MP.\nPotency: 55\nDuration: 21s",
+     "descriptionHtml": "Gradually restores own MP.<br/>Potency: 55<br/>Duration: 21s"
+    },
+    {
+     "rowId": "healer_action__04",
+     "name": "Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Next spell is cast immediately.\nDuration: 10s",
+     "descriptionHtml": "Next spell is cast immediately.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "healer_action__05",
+     "name": "Surecast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 44",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Spells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s",
+     "descriptionHtml": "Spells can be cast without interruption.<br/>Additional Effect: Nullifies most knockback and draw-in effects<br/>Duration: 6s"
+    },
+    {
+     "rowId": "healer_action__06",
+     "name": "Rescue",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 48",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.",
+     "descriptionHtml": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Stone Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eee743eaa9a48499a802772a8f6e392b02947507.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "description": "Upgrades Stone to Stone II.",
+     "descriptionHtml": "Upgrades Stone to Stone II."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Maim and Mend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage and HP restoration by 10%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 10%."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Freecure",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/084fb61928a402e06ca7fd073a0498ab7d868713.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "description": "Grants a 15% chance that after casting Cure, the MP cost for your next Cure II will be 0.\nDuration: 15s",
+     "descriptionHtml": "Grants a 15% chance that after casting Cure, the MP cost for your next Cure II will be 0.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Maim and Mend II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage and HP restoration by 30%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 30%."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Aero Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9598f5c14059bfdf4cc722d43b802cf597724fb7.png",
+     "acquired": [
+      {
+       "class": "Conjurer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/b/KBrPT1hRA2mY65-3HBOycw4Kn8.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 46",
+     "description": "Upgrades Aero to Aero II.",
+     "descriptionHtml": "Upgrades Aero to Aero II."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Secret of the Lily",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34366bab466583c729548a1a3b38b05e840bfc20.png",
+     "skillCellText": "Secret of the Lily\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "description": "Adds a Lily to your Healing Gauge for every 20 seconds you are engaged in combat, up to a maximum of 3.",
+     "descriptionHtml": "Adds a Lily to your Healing Gauge for every 20 seconds you are engaged in combat, up to a maximum of 3."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Stone Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/79a82ed816d05621ecd85ed4e73d10df427172ea.png",
+     "skillCellText": "Stone Mastery II\nJob Quest",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "description": "Upgrades Stone II to Stone III.",
+     "descriptionHtml": "Upgrades Stone II to Stone III."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Stone Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/03942f4479ece15d8ebcca2d63e59d153d66ca6e.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Upgrades Stone III to Stone IV.",
+     "descriptionHtml": "Upgrades Stone III to Stone IV."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Aero Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a458f1d50b52692a7a8609dd7d25aad886f7a974.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Aero II to Dia.",
+     "descriptionHtml": "Upgrades Aero II to Dia."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Stone Mastery IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d1d3d76f113ecb831b1790ef56d9e8768ba913a0.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Stone IV to Glare.",
+     "descriptionHtml": "Upgrades Stone IV to Glare."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Transcendent Afflatus",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d83b90cfc0c1d31c162ff67ec89a89aa4f132bf9.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Adds a Blood Lily to the Healing Gauge that blooms after three uses of Afflatus Solace or Afflatus Rapture.",
+     "descriptionHtml": "Adds a Blood Lily to the Healing Gauge that blooms after three uses of Afflatus Solace or Afflatus Rapture."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Enhanced Asylum",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dab58a0a13acd49f93a277d3cc5558cadb9556d6.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Adds an additional effect to Asylum that increases HP recovery via healing actions by 10%.",
+     "descriptionHtml": "Adds an additional effect to Asylum that increases HP recovery via healing actions by 10%."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Glare Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/809856fd9785cddf95b3eaddb31349a63eb6b8d0.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Glare to Glare III.",
+     "descriptionHtml": "Upgrades Glare to Glare III."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Holy Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6bb21672dec00d6bdce52caa0bd66e6386e7041d.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Holy to Holy III.",
+     "descriptionHtml": "Upgrades Holy to Holy III."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Healing Magic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889c5ea6067c8a9f387840a91f54c110ca6f023e.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 85",
+     "description": "Increases the healing potency of Cure to 500, Medica to 400, Cure II to 800, Regen to 250, Cure III to 600, Medica II to 250, Medica II's Regen effect to 150, Afflatus Solace to 800, and Afflatus Rapture to 400.",
+     "descriptionHtml": "Increases the healing potency of Cure to 500, Medica to 400, Cure II to 800, Regen to 250, Cure III to 600, Medica II to 250, Medica II's Regen effect to 150, Afflatus Solace to 800, and Afflatus Rapture to 400."
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Enhanced Divine Benison",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5cb0ca9fcdbdab5375317c386ba68cc3885bef0c.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Allows the accumulation of charges for consecutive uses of Divine Benison.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Divine Benison.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "Enhanced Presence of Mind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/522d1367f418f9d9ab9497cb7aac3fd75d75ef16.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Presence of Mind grants 3 stacks of Sacred Sight upon execution.\nDuration: 30s",
+     "descriptionHtml": "Presence of Mind grants 3 stacks of Sacred Sight upon execution.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "White Magic Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Dia and its damage over time to 85, Afflatus Misery to 1,400, and Glare III to 350.",
+     "descriptionHtml": "Increases the potency of Dia and its damage over time to 85, Afflatus Misery to 1,400, and Glare III to 350."
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "Medica Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6e19d26c224d8df136427dc9d65b2b8adcda20d7.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Upgrades Medica II to Medica III.",
+     "descriptionHtml": "Upgrades Medica II to Medica III."
+    },
+    {
+     "rowId": "trait_action__20",
+     "name": "Enhanced Tetragrammaton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2c8d74105960fc4db1162f4bfc05b258cc43adb0.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Allows the accumulation of charges for consecutive uses of Tetragrammaton.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Tetragrammaton.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__21",
+     "name": "Enhanced Temperance",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1617b594d0846dfcbc4a7c258e89bdc2fb10c168.png",
+     "acquired": [
+      {
+       "class": "White Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Temperance grants Divine Grace upon execution.\nDuration: 30s",
+     "descriptionHtml": "Temperance grants Divine Grace upon execution.<br/>Duration: 30s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Enhanced Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Reduces Swiftcast recast time to 40 seconds.",
+     "descriptionHtml": "Reduces Swiftcast recast time to 40 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Glare III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889b00ef7b55083b462b1dc589add79e07e87379.png",
+     "type": "Spell",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 6,000.\n\n※Action changes to Glare IV when under the effect of Sacred Sight.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000.<br/><br/>※Action changes to Glare IV when under the effect of Sacred Sight."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Cure II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e7fd985e01134a3f7a76bda607c5cb1a36b3f7c.png",
+     "type": "Spell",
+     "cast": "1.44s",
+     "recast": "12s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 12,000\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\n※Action changes to Cure III when under the effect of Cure III Ready.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 12,000<br/>Maximum Charges: 2<br/>This action does not share a recast timer with any other actions.<br/><br/>※Action changes to Cure III when under the effect of Cure III Ready."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Afflatus Misery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67c045d9c3c41f736c36022272cefd8c0980f19f.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 12,000 to target and all enemies nearby it.\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 12,000 to target and all enemies nearby it.<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Aquaveil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/db63ef3d2573abbcb89237b70189beb66d9f08c1.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "18s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 10s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nBarrier potency is doubled when successfully nullifying a status affliction.",
+     "descriptionHtml": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.<br/>Duration: 10s<br/>Additional Effect: Nullifies one status affliction that can be removed by Purify<br/>Barrier potency is doubled when successfully nullifying a status affliction."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Miracle of Nature",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1245aecd31eaf0821a81907c6664946404770339.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Forcibly transforms target into a diminutive creature, preventing them from using actions other than Purify.\nDuration: 2s\nAdditional Effect: Increases target's damage taken by 20%\nHas no effect on players under an effect that nullifies status afflictions that can be removed by Purify, Relentless Rush, Honing Dance, players riding machina, or non-player combatants.",
+     "descriptionHtml": "Forcibly transforms target into a diminutive creature, preventing them from using actions other than Purify.<br/>Duration: 2s<br/>Additional Effect: Increases target's damage taken by 20%<br/>Has no effect on players under an effect that nullifies status afflictions that can be removed by Purify, Relentless Rush, Honing Dance, players riding machina, or non-player combatants."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Seraph Strike",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8f0999ae68bff865ab683d7f1059024d126b013e.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "10y",
+     "description": "Delivers a jumping attack that deals unaspected damage to target and all enemies nearby it with a potency of 6,000.\nAdditional Effect: Grants Protect to self and nearby party members, reducing damage taken by 10%\nDuration: 10s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 20s\nAdditional Effect: Grants Cure III Ready\nDuration: 20s\nCannot be executed while bound.\n\n※Glare III changes to Glare IV while under the effect of Sacred Sight.\n※Cure II changes to Cure III while under the effect of Cure III Ready.",
+     "descriptionHtml": "Delivers a jumping attack that deals unaspected damage to target and all enemies nearby it with a potency of 6,000.<br/>Additional Effect: Grants Protect to self and nearby party members, reducing damage taken by 10%<br/>Duration: 10s<br/>Additional Effect: Grants 3 stacks of Sacred Sight<br/>Duration: 20s<br/>Additional Effect: Grants Cure III Ready<br/>Duration: 20s<br/>Cannot be executed while bound.<br/><br/>※Glare III changes to Glare IV while under the effect of Sacred Sight.<br/>※Cure II changes to Cure III while under the effect of Cure III Ready."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Glare IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/928a4cb28079785539b6b24b6c890db6a5691703.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Sacred Sight.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.<br/>Can only be executed while under the effect of Sacred Sight.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Cure III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3c4b6cbc3b8ae09ebf0dc3c69c16594e211cdfe6.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "10y",
+     "description": "Restores own or target party member's HP and all party members nearby target.\nCure Potency: 16,000\nCan only be executed while under the effect of Cure III Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores own or target party member's HP and all party members nearby target.<br/>Cure Potency: 16,000<br/>Can only be executed while under the effect of Cure III Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Afflatus Purgation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/885443eeb029d7cbca537be10edca5eb6c920401.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "40y",
+     "radius": "40y",
+     "description": "Deals unaspected damage with a potency of 18,000 to all enemies in a straight line before you.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Temperance\nTemperance Effect: Grants Regen to self and nearby party members within 30 yalms\nCure Potency: 4,000\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nThis action's effects extend through obstructions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 18,000 to all enemies in a straight line before you.<br/>Additional Effect: Stun<br/>Duration: 2s<br/>Additional Effect: Grants Temperance<br/>Temperance Effect: Grants Regen to self and nearby party members within 30 yalms<br/>Cure Potency: 4,000<br/>Duration: 15s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 60s<br/>This action's effects extend through obstructions."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Haelan",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "2000 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 16,000<br/>Potency reduced to 8,000 when targeting self."
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Stoneskin II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s",
+     "descriptionHtml": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.<br/>This action's effects extend through obstructions.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Diabrosis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.<br/>Additional Effect: Reduces target's HP recovered by healing actions by 33%<br/>Duration: 10s"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "Healing Gauge",
+    "images": []
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/c/hy1QFG6dHUKdL1IYJWzaHa8Gmg.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/K/k2Ag8uoD-I5rtzbhx3YVpWcv_A.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nHealing Gauge\n\nUpon learning the trait Secret of the Lily, a healing gauge will be displayed, indicating the number of Lilies you have accumulated. Lilies are accumulated as time passes while engaged in combat. They may then be consumed to execute certain actions such as Afflatus Solace (acquired at level 52) and Afflatus Rapture (acquired at level 76).\n\nUpon learning the trait Transcendent Afflatus, consumption of Lilies will also nourish the Blood Lily. The Blood Lily will bloom after consuming three Lilies, allowing the execution of Afflatus Misery.\n\nSimple Mode\n\nLilies\n\nBlood Lily",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Healing Gauge</h3>\n<div class=\"job__hud__layout job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/O/jwptpuW59YM3f5xFHPYR08qMCg.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Secret of the Lily</span>, a healing gauge will be displayed, indicating the number of <span class=\"txt_red\">Lilies</span> you have accumulated. Lilies are accumulated as time passes while engaged in combat. They may then be consumed to execute certain actions such as <span class=\"txt_red\">Afflatus Solace</span> (acquired at level 52) and <span class=\"txt_red\">Afflatus Rapture</span> (acquired at level 76).</p>\n</div>\n<div class=\"job__hud__layout job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/Q/XGVUBM4Mjd3eJ5fNjiPfrBw60g.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Transcendent Afflatus</span>, consumption of Lilies will also nourish the <span class=\"txt_red\">Blood Lily</span>. The Blood Lily will bloom after consuming three Lilies, allowing the execution of <span class=\"txt_red\">Afflatus Misery</span>.</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/hy1QFG6dHUKdL1IYJWzaHa8Gmg.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Lilies</p>\n</th>\n<th>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/K/k2Ag8uoD-I5rtzbhx3YVpWcv_A.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Blood Lily</p>\n</th>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/O/jwptpuW59YM3f5xFHPYR08qMCg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Q/XGVUBM4Mjd3eJ5fNjiPfrBw60g.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/hy1QFG6dHUKdL1IYJWzaHa8Gmg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/k2Ag8uoD-I5rtzbhx3YVpWcv_A.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStone\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 140.\n\nCure\n\nLv. 2\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Cure II will cost no MP\nDuration: 15s\n\nAero\n\nLv. 4\n\nSpell\nInstant\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 30\nDuration: 30s\n\nMedica\n\nLv. 10\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\nRaise\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nStone II\n\nLv. 18\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 190.\n\nCure II\n\nClass Quest\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\n\nPresence of Mind\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces spell cast time and recast time, and auto-attack delay by 20%.\nDuration: 15s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 30s\n\nRegen\n\nJob Quest\n\nLv. 35\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nGrants healing over time effect to target.\nCure Potency: 250\nDuration: 18s\n\nCure III\n\nJob Quest\n\nLv. 40\n\nSpell\n\n2s\n\n2.5s\n1500 MP\n\n30y\n\n10y\n\nRestores own or target party member's HP and all party members nearby target.\nCure Potency: 600\n\nAetherial Shift\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nCannot be executed while bound.\n\nHoly\n\nJob Quest\n\nLv. 45\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n0y\n\n8y\n\nDeals unaspected damage with a potency of 140 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s\n\nAero II\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 50\nDuration: 30s\n\nMedica II\n\nLv. 50\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s\n\nBenediction\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n180s\n-\n\n30y\n\n0y\n\nRestores all of a target's HP.\n\nAfflatus Solace\n\nLv. 52\n\nSpell\nInstant\n\n2.5s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily\n\nAsylum\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n90s\n-\n\n30y\n\n15y\n\nEnvelops a designated area in a veil of succor, granting healing over time to self and any party members who enter.\nCure Potency: 100\nDuration: 24s\nAdditional Effect: Increases HP recovery via healing actions on party members in the designated area by 10%\n\nStone III\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 220.\n\nAssize\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n40s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 400 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of nearby party members\nCure Potency: 400\nAdditional Effect: Restores 5% of maximum MP\n\nThin Air\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nNext action is executed without MP cost.\nDuration: 12s\nMaximum Charges: 2\n\nTetragrammaton\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 700\nMaximum Charges: 2\n\nStone IV\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 260.\n\nDivine Benison\n\nLv. 66\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 500 potency.\nDuration: 15s\nMaximum Charges: 2\n\nPlenary Indulgence\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nGrants Confession to self and nearby party members, reducing damage taken by 10%.\nDuration: 10s\nParty members under the effect of Confession will receive additional healing upon receiving HP recovery via Medica, Medica III, Cure III, or Afflatus Rapture.\nCure Potency: 200\n\nDia\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 85.\nAdditional Effect: Unaspected damage over time\nPotency: 85\nDuration: 30s\n\nGlare\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 290.\n\nAfflatus Misery\n\nLv. 74\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,400 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed when the Blood Lily is in full bloom.\n\nAfflatus Rapture\n\nLv. 76\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily\n\nTemperance\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases healing magic potency by 20%, while reducing damage taken by self and all party members within a radius of 50 yalms by 10%.\nDuration: 20s\nAdditional Effect: Grants Divine Grace\nDuration: 30s\n\nGlare III\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 350.\n\nHoly III\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n0y\n\n8y\n\nDeals unaspected damage with a potency of 150 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s\n\nAquaveil\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 15%.\nDuration: 8s\n\nLiturgy of the Bell\n\nLv. 90\n\nAbility\nInstant\n180s\n-\n\n30y\n\n0y\n\nPlaces a healing blossom at the designated location and grants 5 stacks of Liturgy of the Bell to self.\nDuration: 20s\nTaking damage will expend 1 stack of Liturgy of the Bell to heal self and all party members within a radius of 20 yalms.\nCure Potency: 400\nThe effect of this action can only be triggered once per second.\nAny remaining stacks of Liturgy of the Bell will trigger an additional healing effect when time expires or upon executing this action a second time.\nCure Potency: 200 for every remaining stack of Liturgy of the Bell\nThis action does not share a recast timer with any other actions.\n\nGlare IV\n\nLv. 92\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 640 for the first enemy, and 40% less for all remaining enemies.\nCan only be executed while Sacred Sight is active.\n\nMedica III\n\nLv. 96\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s\n\nDivine Caress\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nCreates a barrier around self and all party members near you that absorbs damage equivalent to a heal of 400 potency.\nDuration: 10s\nAdditional Effect: Grants Divine Aura when barrier effect expires\nDivine Aura Effect: Healing over time\nCure Potency: 200\nDuration: 15s\nCan only be executed while Divine Grace is active."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nStone Mastery\n\nLv. 18\n\nUpgrades Stone to Stone II.\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nFreecure\n\nLv. 32\n\nGrants a 15% chance that after casting Cure, the MP cost for your next Cure II will be 0.\nDuration: 15s\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nAero Mastery\n\nLv. 46\n\nUpgrades Aero to Aero II.\n\nSecret of the Lily\n\nJob Quest\n\nLv. 52\n\nAdds a Lily to your Healing Gauge for every 20 seconds you are engaged in combat, up to a maximum of 3.\n\nStone Mastery II\n\nJob Quest\n\nLv. 54\n\nUpgrades Stone II to Stone III.\n\nStone Mastery III\n\nLv. 64\n\nUpgrades Stone III to Stone IV.\n\nAero Mastery II\n\nLv. 72\n\nUpgrades Aero II to Dia.\n\nStone Mastery IV\n\nLv. 72\n\nUpgrades Stone IV to Glare.\n\nTranscendent Afflatus\n\nLv. 74\n\nAdds a Blood Lily to the Healing Gauge that blooms after three uses of Afflatus Solace or Afflatus Rapture.\n\nEnhanced Asylum\n\nLv. 78\n\nAdds an additional effect to Asylum that increases HP recovery via healing actions by 10%.\n\nGlare Mastery\n\nLv. 82\n\nUpgrades Glare to Glare III.\n\nHoly Mastery\n\nLv. 82\n\nUpgrades Holy to Holy III.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Cure to 500, Medica to 400, Cure II to 800, Regen to 250, Cure III to 600, Medica II to 250, Medica II's Regen effect to 150, Afflatus Solace to 800, and Afflatus Rapture to 400.\n\nEnhanced Divine Benison\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Divine Benison.\nMaximum Charges: 2\n\nEnhanced Presence of Mind\n\nLv. 92\n\nPresence of Mind grants 3 stacks of Sacred Sight upon execution.\nDuration: 30s\n\nWhite Magic Mastery\n\nLv. 94\n\nIncreases the potency of Dia and its damage over time to 85, Afflatus Misery to 1,400, and Glare III to 350.\n\nMedica Mastery\n\nLv. 96\n\nUpgrades Medica II to Medica III.\n\nEnhanced Tetragrammaton\n\nLv. 98\n\nAllows the accumulation of charges for consecutive uses of Tetragrammaton.\nMaximum Charges: 2\n\nEnhanced Temperance\n\nLv. 100\n\nTemperance grants Divine Grace upon execution.\nDuration: 30s"
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nHealing Gauge\n\nUpon learning the trait Secret of the Lily, a healing gauge will be displayed, indicating the number of Lilies you have accumulated. Lilies are accumulated as time passes while engaged in combat. They may then be consumed to execute certain actions such as Afflatus Solace (acquired at level 52) and Afflatus Rapture (acquired at level 76).\n\nUpon learning the trait Transcendent Afflatus, consumption of Lilies will also nourish the Blood Lily. The Blood Lily will bloom after consuming three Lilies, allowing the execution of Afflatus Misery.\n\nSimple Mode\n\nLilies\n\nBlood Lily"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nGlare III\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\n\n※Action changes to Glare IV when under the effect of Sacred Sight.\n\nCure II\n\nSpell\n\n1.44s\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 12,000\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\n※Action changes to Cure III when under the effect of Cure III Ready.\n\nAfflatus Misery\n\nSpell\nInstant\n16s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 12,000 to target and all enemies nearby it.\nThis action does not share a recast timer with any other actions.\n\nAquaveil\n\nAbility\nInstant\n18s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 10s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nBarrier potency is doubled when successfully nullifying a status affliction.\n\nMiracle of Nature\n\nAbility\nInstant\n24s\n-\n\n10y\n\n0y\n\nForcibly transforms target into a diminutive creature, preventing them from using actions other than Purify.\nDuration: 2s\nAdditional Effect: Increases target's damage taken by 20%\nHas no effect on players under an effect that nullifies status afflictions that can be removed by Purify, Relentless Rush, Honing Dance, players riding machina, or non-player combatants.\n\nSeraph Strike\n\nAbility\nInstant\n20s\n-\n\n20y\n\n10y\n\nDelivers a jumping attack that deals unaspected damage to target and all enemies nearby it with a potency of 6,000.\nAdditional Effect: Grants Protect to self and nearby party members, reducing damage taken by 10%\nDuration: 10s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 20s\nAdditional Effect: Grants Cure III Ready\nDuration: 20s\nCannot be executed while bound.\n\n※Glare III changes to Glare IV while under the effect of Sacred Sight.\n※Cure II changes to Cure III while under the effect of Cure III Ready.\n\nGlare IV\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Sacred Sight.\n\n※This action cannot be assigned to a hotbar.\n\nCure III\n\nSpell\nInstant\n\n2.4s\n-\n\n30y\n\n10y\n\nRestores own or target party member's HP and all party members nearby target.\nCure Potency: 16,000\nCan only be executed while under the effect of Cure III Ready.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nAfflatus Purgation\n\nInstant\n10s\n-\n\n40y\n\n40y\n\nDeals unaspected damage with a potency of 18,000 to all enemies in a straight line before you.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Temperance\nTemperance Effect: Grants Regen to self and nearby party members within 30 yalms\nCure Potency: 4,000\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nThis action's effects extend through obstructions."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nWhite magic, the arcane art of succor, was conceived eras past that the world might know comfort. Alas, man began perverting its powers for self-gain, and by his wickedness brought about the Sixth Umbral catastrophe. Although the art subsequently became forbidden, it is now in the midst of a revival at the hands of the Padjal, chosen of the elementals.\nThose who would walk the path of the white mage are healers without peer, possessed of the power to deliver comrades from the direst of afflictions—even the icy grip of death itself.\n\nStarting Job Quest\n\nPrerequisite Class: Conjurer\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStone\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 140.\n\nCure\n\nLv. 2\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 500\nAdditional Effect: 15% chance next Cure II will cost no MP\nDuration: 15s\n\nAero\n\nLv. 4\n\nSpell\nInstant\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 30\nDuration: 30s\n\nMedica\n\nLv. 10\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\n\nRaise\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nStone II\n\nLv. 18\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 190.\n\nCure II\n\nClass Quest\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\n\nPresence of Mind\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces spell cast time and recast time, and auto-attack delay by 20%.\nDuration: 15s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 30s\n\nRegen\n\nJob Quest\n\nLv. 35\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nGrants healing over time effect to target.\nCure Potency: 250\nDuration: 18s\n\nCure III\n\nJob Quest\n\nLv. 40\n\nSpell\n\n2s\n\n2.5s\n1500 MP\n\n30y\n\n10y\n\nRestores own or target party member's HP and all party members nearby target.\nCure Potency: 600\n\nAetherial Shift\n\nLv. 40\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nCannot be executed while bound.\n\nHoly\n\nJob Quest\n\nLv. 45\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n0y\n\n8y\n\nDeals unaspected damage with a potency of 140 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s\n\nAero II\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 50.\nAdditional Effect: Wind damage over time\nPotency: 50\nDuration: 30s\n\nMedica II\n\nLv. 50\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 150\nDuration: 15s\n\nBenediction\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n180s\n-\n\n30y\n\n0y\n\nRestores all of a target's HP.\n\nAfflatus Solace\n\nLv. 52\n\nSpell\nInstant\n\n2.5s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 800\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily\n\nAsylum\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n90s\n-\n\n30y\n\n15y\n\nEnvelops a designated area in a veil of succor, granting healing over time to self and any party members who enter.\nCure Potency: 100\nDuration: 24s\nAdditional Effect: Increases HP recovery via healing actions on party members in the designated area by 10%\n\nStone III\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 220.\n\nAssize\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n40s\n-\n\n0y\n\n20y\n\nDeals unaspected damage with a potency of 400 to all nearby enemies.\nAdditional Effect: Restores own HP and the HP of nearby party members\nCure Potency: 400\nAdditional Effect: Restores 5% of maximum MP\n\nThin Air\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nNext action is executed without MP cost.\nDuration: 12s\nMaximum Charges: 2\n\nTetragrammaton\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 700\nMaximum Charges: 2\n\nStone IV\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 260.\n\nDivine Benison\n\nLv. 66\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 500 potency.\nDuration: 15s\nMaximum Charges: 2\n\nPlenary Indulgence\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n60s\n-\n\n0y\n\n30y\n\nGrants Confession to self and nearby party members, reducing damage taken by 10%.\nDuration: 10s\nParty members under the effect of Confession will receive additional healing upon receiving HP recovery via Medica, Medica III, Cure III, or Afflatus Rapture.\nCure Potency: 200\n\nDia\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 85.\nAdditional Effect: Unaspected damage over time\nPotency: 85\nDuration: 30s\n\nGlare\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 290.\n\nAfflatus Misery\n\nLv. 74\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,400 for the first enemy, and 50% less for all remaining enemies.\nCan only be executed when the Blood Lily is in full bloom.\n\nAfflatus Rapture\n\nLv. 76\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Nourishes the Blood Lily\nHealing Gauge Cost: 1 Lily\n\nTemperance\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nIncreases healing magic potency by 20%, while reducing damage taken by self and all party members within a radius of 50 yalms by 10%.\nDuration: 20s\nAdditional Effect: Grants Divine Grace\nDuration: 30s\n\nGlare III\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 350.\n\nHoly III\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n0y\n\n8y\n\nDeals unaspected damage with a potency of 150 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 4s\n\nAquaveil\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 15%.\nDuration: 8s\n\nLiturgy of the Bell\n\nLv. 90\n\nAbility\nInstant\n180s\n-\n\n30y\n\n0y\n\nPlaces a healing blossom at the designated location and grants 5 stacks of Liturgy of the Bell to self.\nDuration: 20s\nTaking damage will expend 1 stack of Liturgy of the Bell to heal self and all party members within a radius of 20 yalms.\nCure Potency: 400\nThe effect of this action can only be triggered once per second.\nAny remaining stacks of Liturgy of the Bell will trigger an additional healing effect when time expires or upon executing this action a second time.\nCure Potency: 200 for every remaining stack of Liturgy of the Bell\nThis action does not share a recast timer with any other actions.\n\nGlare IV\n\nLv. 92\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 640 for the first enemy, and 40% less for all remaining enemies.\nCan only be executed while Sacred Sight is active.\n\nMedica III\n\nLv. 96\n\nSpell\n\n2s\n\n2.5s\n1000 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Regen\nCure Potency: 175\nDuration: 15s\n\nDivine Caress\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n0y\n\n30y\n\nCreates a barrier around self and all party members near you that absorbs damage equivalent to a heal of 400 potency.\nDuration: 10s\nAdditional Effect: Grants Divine Aura when barrier effect expires\nDivine Aura Effect: Healing over time\nCure Potency: 200\nDuration: 15s\nCan only be executed while Divine Grace is active.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.\n\nTrait\n\nTraits\nAcquired\nEffect\n\nStone Mastery\n\nLv. 18\n\nUpgrades Stone to Stone II.\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nFreecure\n\nLv. 32\n\nGrants a 15% chance that after casting Cure, the MP cost for your next Cure II will be 0.\nDuration: 15s\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nAero Mastery\n\nLv. 46\n\nUpgrades Aero to Aero II.\n\nSecret of the Lily\n\nJob Quest\n\nLv. 52\n\nAdds a Lily to your Healing Gauge for every 20 seconds you are engaged in combat, up to a maximum of 3.\n\nStone Mastery II\n\nJob Quest\n\nLv. 54\n\nUpgrades Stone II to Stone III.\n\nStone Mastery III\n\nLv. 64\n\nUpgrades Stone III to Stone IV.\n\nAero Mastery II\n\nLv. 72\n\nUpgrades Aero II to Dia.\n\nStone Mastery IV\n\nLv. 72\n\nUpgrades Stone IV to Glare.\n\nTranscendent Afflatus\n\nLv. 74\n\nAdds a Blood Lily to the Healing Gauge that blooms after three uses of Afflatus Solace or Afflatus Rapture.\n\nEnhanced Asylum\n\nLv. 78\n\nAdds an additional effect to Asylum that increases HP recovery via healing actions by 10%.\n\nGlare Mastery\n\nLv. 82\n\nUpgrades Glare to Glare III.\n\nHoly Mastery\n\nLv. 82\n\nUpgrades Holy to Holy III.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Cure to 500, Medica to 400, Cure II to 800, Regen to 250, Cure III to 600, Medica II to 250, Medica II's Regen effect to 150, Afflatus Solace to 800, and Afflatus Rapture to 400.\n\nEnhanced Divine Benison\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Divine Benison.\nMaximum Charges: 2\n\nEnhanced Presence of Mind\n\nLv. 92\n\nPresence of Mind grants 3 stacks of Sacred Sight upon execution.\nDuration: 30s\n\nWhite Magic Mastery\n\nLv. 94\n\nIncreases the potency of Dia and its damage over time to 85, Afflatus Misery to 1,400, and Glare III to 350.\n\nMedica Mastery\n\nLv. 96\n\nUpgrades Medica II to Medica III.\n\nEnhanced Tetragrammaton\n\nLv. 98\n\nAllows the accumulation of charges for consecutive uses of Tetragrammaton.\nMaximum Charges: 2\n\nEnhanced Temperance\n\nLv. 100\n\nTemperance grants Divine Grace upon execution.\nDuration: 30s\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds.\n\nJob Gauge\n\nHealing Gauge\n\nUpon learning the trait Secret of the Lily, a healing gauge will be displayed, indicating the number of Lilies you have accumulated. Lilies are accumulated as time passes while engaged in combat. They may then be consumed to execute certain actions such as Afflatus Solace (acquired at level 52) and Afflatus Rapture (acquired at level 76).\n\nUpon learning the trait Transcendent Afflatus, consumption of Lilies will also nourish the Blood Lily. The Blood Lily will bloom after consuming three Lilies, allowing the execution of Afflatus Misery.\n\nSimple Mode\n\nLilies\n\nBlood Lily\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nGlare III\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\n\n※Action changes to Glare IV when under the effect of Sacred Sight.\n\nCure II\n\nSpell\n\n1.44s\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 12,000\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\n※Action changes to Cure III when under the effect of Cure III Ready.\n\nAfflatus Misery\n\nSpell\nInstant\n16s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 12,000 to target and all enemies nearby it.\nThis action does not share a recast timer with any other actions.\n\nAquaveil\n\nAbility\nInstant\n18s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 10s\nAdditional Effect: Nullifies one status affliction that can be removed by Purify\nBarrier potency is doubled when successfully nullifying a status affliction.\n\nMiracle of Nature\n\nAbility\nInstant\n24s\n-\n\n10y\n\n0y\n\nForcibly transforms target into a diminutive creature, preventing them from using actions other than Purify.\nDuration: 2s\nAdditional Effect: Increases target's damage taken by 20%\nHas no effect on players under an effect that nullifies status afflictions that can be removed by Purify, Relentless Rush, Honing Dance, players riding machina, or non-player combatants.\n\nSeraph Strike\n\nAbility\nInstant\n20s\n-\n\n20y\n\n10y\n\nDelivers a jumping attack that deals unaspected damage to target and all enemies nearby it with a potency of 6,000.\nAdditional Effect: Grants Protect to self and nearby party members, reducing damage taken by 10%\nDuration: 10s\nAdditional Effect: Grants 3 stacks of Sacred Sight\nDuration: 20s\nAdditional Effect: Grants Cure III Ready\nDuration: 20s\nCannot be executed while bound.\n\n※Glare III changes to Glare IV while under the effect of Sacred Sight.\n※Cure II changes to Cure III while under the effect of Cure III Ready.\n\nGlare IV\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Sacred Sight.\n\n※This action cannot be assigned to a hotbar.\n\nCure III\n\nSpell\nInstant\n\n2.4s\n-\n\n30y\n\n10y\n\nRestores own or target party member's HP and all party members nearby target.\nCure Potency: 16,000\nCan only be executed while under the effect of Cure III Ready.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nAfflatus Purgation\n\nInstant\n10s\n-\n\n40y\n\n40y\n\nDeals unaspected damage with a potency of 18,000 to all enemies in a straight line before you.\nAdditional Effect: Stun\nDuration: 2s\nAdditional Effect: Grants Temperance\nTemperance Effect: Grants Regen to self and nearby party members within 30 yalms\nCure Potency: 4,000\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nThis action's effects extend through obstructions.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

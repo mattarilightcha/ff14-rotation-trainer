@@ -1,0 +1,1903 @@
+{
+ "job": "redmage",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/redmage/",
+ "pageTitle": "ジョブガイド「赤魔道士」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\nアバラシア山脈の東端、峨々たる山岳地帯「ギラバニア」。\n\n第五星暦末期のこと、迫り来る水の災厄「第六霊災」から逃れるため、星の輝きに導かれた人々が、方々から山間を目指して集結したという。その中には、魔大戦で激しく戦い合った魔法都市「マハ」の黒魔道士と、古都「アムダプール」の白魔道士の姿もあった。\n\nそして、滅びの定めに抗うため、かつての敵同志が手を結び、黒魔法でも白魔法でもない新たな魔法体系の確立に挑む。かくして、「細剣」を手に戦う「赤魔道士」が誕生したのである。\n\nジョブ開始クエスト",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png",
+   "https://lds-img.finalfantasyxiv.com/d/9fc8c455d50ec08c721f4674e7e9015f4700debe.png",
+   "https://lds-img.finalfantasyxiv.com/d/f5a91b090922e24a43d172f2cdfb85fc4ff9423a.png",
+   "https://lds-img.finalfantasyxiv.com/d/ca149fa59c97f3ce000ba2cdd143dd181a25def6.png",
+   "https://lds-img.finalfantasyxiv.com/d/a774e32d6c268433b5e2c56dc152cae973605e2e.png",
+   "https://lds-img.finalfantasyxiv.com/d/adbad46ea7684b2e5914b23c4ec7de0ecb19432d.png",
+   "https://lds-img.finalfantasyxiv.com/d/949abe2a408930b92fc5bc34881a60396909e623.png",
+   "https://lds-img.finalfantasyxiv.com/d/272b22305a75f5649d2dbe16e733e2a714b8a1c4.png",
+   "https://lds-img.finalfantasyxiv.com/d/ce7efb90e13d0fef394abb8d2e57a09402452890.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5ddf887a06b23a2ae9426a5a6288b863b92eced.png",
+   "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3a7bcdd99a2d4f40c95c39ce19d97be8ee0a151b.png",
+   "https://lds-img.finalfantasyxiv.com/d/f07faaccae974c9f7fdd16072a406c81db81b3ad.png",
+   "https://lds-img.finalfantasyxiv.com/d/f950d18911258503ab8a8ec2fa28ca3fdb6a8a6d.png",
+   "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png",
+   "https://lds-img.finalfantasyxiv.com/d/831a96d8378a68659074d13e8a1e90e0de2da5a4.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe9877c05ef3a4622f0488b580b6ea36b7446bca.png",
+   "https://lds-img.finalfantasyxiv.com/d/d23f5785bdb0f0c398a14087753ddcedab6d4e78.png",
+   "https://lds-img.finalfantasyxiv.com/d/e9183e5932215335efe798ce4d6422d37befaf27.png",
+   "https://lds-img.finalfantasyxiv.com/d/85d6955ad939bb051fe8b893c194497b9499d89e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5f145a66018e2f197e16b966e30c53bba09e13bd.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2b3cc05547ba6a37ba5e883f190570d32eabb10.png",
+   "https://lds-img.finalfantasyxiv.com/d/6be6c45a105e3890f5390c26a2d5532a7e2eea43.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c5d66100b8539f4dd5779a760ccbc29f5878e6a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d20080ca189b4843d89ac2faab14d42099bd2e4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/34f4be861c3f40879653fef7fe7039f8df1108c1.png",
+   "https://lds-img.finalfantasyxiv.com/d/26403c905bb62b3221f7b1930e64efdd1fe13619.png",
+   "https://lds-img.finalfantasyxiv.com/d/fa744aa271e8cb2fae5bbe2cdb55ccf70d4685e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2798af149d31668d8e35541a3b33422478013f2.png",
+   "https://lds-img.finalfantasyxiv.com/d/1149d6e897c6342f2880c3ad304fc2aef09f93d5.png",
+   "https://lds-img.finalfantasyxiv.com/d/f3be0e80366bd72a864a87e41eadd964f07a5f57.png",
+   "https://lds-img.finalfantasyxiv.com/d/5c95999b6491dcc5714cd7f926b03fc56b5c88dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/cfcb133bdbe85392f1fedadfe93b14ff5aed8b32.png",
+   "https://lds-img.finalfantasyxiv.com/d/23de2734d998406aa25f526147ebbea7f1012d67.png",
+   "https://lds-img.finalfantasyxiv.com/d/5be2009c3bc4bd918ee899e0c6edc953571e93a3.png",
+   "https://lds-img.finalfantasyxiv.com/d/f3988ae5cc17fcf0b655c5820f0c25ef2ac72b43.png",
+   "https://lds-img.finalfantasyxiv.com/d/bc05c7159bffb94c061a5d64130da539350bbc6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5ca771d95d91f9eec6795ec72317da6fc77029f3.png",
+   "https://lds-img.finalfantasyxiv.com/d/ef85b6e60966279a1352b01b582c9bc3bfae5646.png",
+   "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png",
+   "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png",
+   "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png",
+   "https://lds-img.finalfantasyxiv.com/d/18af98a63cd9850c3e064220d9237ec80aad136d.png",
+   "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/33860679da3fbc2e8cf8864ce640f369c13163d4.png",
+   "https://lds-img.finalfantasyxiv.com/d/67f481da4b0a277ad6b06432a130adfe4b986d32.png",
+   "https://lds-img.finalfantasyxiv.com/d/5aae4c251545f2fc478c40be35966398c7ab9b99.png",
+   "https://lds-img.finalfantasyxiv.com/d/54a392e5b56bf4a5030af1f6bc369afd37f91b3a.png",
+   "https://lds-img.finalfantasyxiv.com/d/b524bce7a6b14bd3f524b8c29f5df87cdfc0d955.png",
+   "https://lds-img.finalfantasyxiv.com/d/447cbba6771ca9884e9fdb197d8bf20dd2b2fa15.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea0142f5424d599e39076a6c9bac6ab9aac876ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/69e3cddfaf05c365aa386853c33eb5864aaf4735.png",
+   "https://lds-img.finalfantasyxiv.com/d/e908bf25ba9fac88edf30da9b4edf9b8bcbf1758.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2f8944b29325a91ae300010c1fb774e9d53316e.png",
+   "https://lds-img.finalfantasyxiv.com/d/110f1fc97444637fd2fdc4f35f82cc4da3f4b2de.png",
+   "https://lds-img.finalfantasyxiv.com/d/9cc3b352b38d3b755927fd84d40a923373cd58b2.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2b4a9ae89b7d2b17ec99c36fae1772ad0377d9b.png",
+   "https://lds-img.finalfantasyxiv.com/d/7c93e62e034c1a0d6cfd0dfc01ed9fa386528e9e.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+   "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/i/xB_TcUoRFTFWhzxyFA0W-oaysk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "リポスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：130\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンリポストに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：130<br/>バランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンリポストに変化する。"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "ジョルト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fc8c455d50ec08c721f4674e7e9015f4700debe.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：170<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "ヴァルサンダー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f5a91b090922e24a43d172f2cdfb85fc4ff9423a.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に雷属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に雷属性魔法攻撃。<br/>威力：360<br/>追加効果：「ブラックマナ」を6上昇させる。<br/>追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "コル・ア・コル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ca149fa59c97f3ce000ba2cdd143dd181a25def6.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "35秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：130\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：130<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "ヴァルエアロ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a774e32d6c268433b5e2c56dc152cae973605e2e.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：360\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：360<br/>追加効果：「ホワイトマナ」を6上昇させる。<br/>追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "スキャッター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adbad46ea7684b2e5914b23c4ec7de0ecb19432d.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120\nアクセラレーション時威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：120<br/>アクセラレーション時威力：170<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "ヴァルサンダラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/949abe2a408930b92fc5bc34881a60396909e623.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：140\n追加効果：「ブラックマナ」を7上昇させる。",
+     "descriptionHtml": "対象とその周囲の敵に雷属性範囲魔法攻撃。<br/>威力：140<br/>追加効果：「ブラックマナ」を7上昇させる。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "ヴァルエアロラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/272b22305a75f5649d2dbe16e733e2a714b8a1c4.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：140\n追加効果：「ホワイトマナ」を7上昇させる。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：140<br/>追加効果：「ホワイトマナ」を7上昇させる。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "ヴァルファイア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce7efb90e13d0fef394abb8d2e57a09402452890.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：380\n追加効果：「ブラックマナ」を5上昇させる。\n発動条件：「ヴァルファイア実行可」効果中",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：380<br/>追加効果：「ブラックマナ」を5上昇させる。<br/>発動条件：「ヴァルファイア実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "ヴァルストーン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5ddf887a06b23a2ae9426a5a6288b863b92eced.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：380\n追加効果：「ホワイトマナ」を5上昇させる。\n発動条件：「ヴァルストーン実行可」効果中",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：380<br/>追加効果：「ホワイトマナ」を5上昇させる。<br/>発動条件：「ヴァルストーン実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "ツヴェルクハウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：100\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：150\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンツヴェルクハウに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：100<br/>コンボ条件：リポストまたはエンリポスト<br/>コンボ時威力：150<br/>バランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンツヴェルクハウに変化する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "デプラスマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3a7bcdd99a2d4f40c95c39ce19d97be8ee0a151b.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "35秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：180\n追加効果：15m後方へ飛び退く。\n最大チャージ数：2\nバインド中は実行不可。\nリキャストタイマーを「アンガジェマン」と共有する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：180<br/>追加効果：15m後方へ飛び退く。<br/>最大チャージ数：2<br/>バインド中は実行不可。<br/>リキャストタイマーを「アンガジェマン」と共有する。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "アンガジェマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f07faaccae974c9f7fdd16072a406c81db81b3ad.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "35秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：180\n最大チャージ数：2\nリキャストタイマーを「デプラスマン」と共有する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：180<br/>最大チャージ数：2<br/>リキャストタイマーを「デプラスマン」と共有する。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "フレッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f950d18911258503ab8a8ec2fa28ca3fdb6a8a6d.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "25秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：480",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：480"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "ルドゥブルマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：100\nコンボ条件：ツヴェルクハウまたはエンツヴェルクハウ\nコンボ時威力：230\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンルドゥブルマンに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：100<br/>コンボ条件：ツヴェルクハウまたはエンツヴェルクハウ<br/>コンボ時威力：230<br/>バランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンルドゥブルマンに変化する。"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "アクセラレーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/831a96d8378a68659074d13e8a1e90e0de2da5a4.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "55秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "効果時間中に実行する1回のヴァルサンダガ、ヴァルエアロガ、インパクトを詠唱無しで唱えることができる。\n効果時間：20秒\n追加効果：インパクトの威力を50上昇させる。\n追加効果：ヴァルサンダガとヴァルエアロガの実行時に、「ヴァルファイア実行可」または「ヴァルストーン実行可」が必ず付与される。\n追加効果：自身に「ノーブルインパクト実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2",
+     "descriptionHtml": "効果時間中に実行する1回のヴァルサンダガ、ヴァルエアロガ、インパクトを詠唱無しで唱えることができる。<br/>効果時間：20秒<br/>追加効果：インパクトの威力を50上昇させる。<br/>追加効果：ヴァルサンダガとヴァルエアロガの実行時に、「ヴァルファイア実行可」または「ヴァルストーン実行可」が必ず付与される。<br/>追加効果：自身に「ノーブルインパクト実行可」を付与する。<br/>効果時間：30秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "ムーリネ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe9877c05ef3a4622f0488b580b6ea36b7446bca.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲物理攻撃。\n威力：60\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンムーリネ・アンに変化する。",
+     "descriptionHtml": "対象に向かって前方扇範囲物理攻撃。<br/>威力：60<br/>バランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンムーリネ・アンに変化する。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "ヴァルケアル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d23f5785bdb0f0c398a14087753ddcedab6d4e78.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP500",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：350",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：350"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "コントルシクスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e9183e5932215335efe798ce4d6422d37befaf27.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "35秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "6m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：420",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：420"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "エンボルデン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85d6955ad939bb051fe8b893c194497b9499d89e.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身の与魔法ダメージを10％上昇させる。\n効果時間：20秒\n追加効果：周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "一定時間、自身の与魔法ダメージを10％上昇させる。<br/>効果時間：20秒<br/>追加効果：周囲のパーティメンバーの与ダメージを5％上昇させる。<br/>効果時間：20秒<br/>追加効果：自身に「ブライヤー・クロゼ実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "マナフィケーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5f145a66018e2f197e16b966e30c53bba09e13bd.png",
+     "skillCellText": "マナフィケーション\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "110秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、エンリポスト、エンツヴェルクハウ、エンルドゥブルマンの射程を25mに延長させる。\n効果時間：30秒\n追加効果：自身に3スタックの「魔法剣コンボ実行可」を付与する。\n効果時間：30秒\n魔法剣コンボ実行可効果：「ブラックマナ」と「ホワイトマナ」を消費することなくエンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワを実行できる。\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：30秒\nこのアビリティを実行するとコンボが中断される。\n発動条件：自身が戦闘状態",
+     "descriptionHtml": "一定時間、エンリポスト、エンツヴェルクハウ、エンルドゥブルマンの射程を25mに延長させる。<br/>効果時間：30秒<br/>追加効果：自身に3スタックの「魔法剣コンボ実行可」を付与する。<br/>効果時間：30秒<br/>魔法剣コンボ実行可効果：「ブラックマナ」と「ホワイトマナ」を消費することなくエンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワを実行できる。<br/>追加効果：自身に「プリフルジェンス実行可」を付与する。<br/>効果時間：30秒<br/>このアビリティを実行するとコンボが中断される。<br/>発動条件：自身が戦闘状態"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "ジョルラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2b3cc05547ba6a37ba5e883f190570d32eabb10.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：280\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：280<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "ヴァルレイズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6be6c45a105e3890f5390c26a2d5532a7e2eea43.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "魔法",
+     "cast": "10秒",
+     "recast": "2.5秒",
+     "cost": "MP2400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象を衰弱状態で蘇生する。",
+     "descriptionHtml": "対象を衰弱状態で蘇生する。"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "インパクト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c5d66100b8539f4dd5779a760ccbc29f5878e6a.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：210\nアクセラレーション時威力：260\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：210<br/>アクセラレーション時威力：260<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "ヴァルフレア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d20080ca189b4843d89ac2faab14d42099bd2e4c.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n実行時に「ホワイトマナ」が「ブラックマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルサンダガとヴァルサンダラがヴァルフレアに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：650<br/>2体目以降の対象への威力は55％減少する。<br/>追加効果：「ブラックマナ」を11上昇させる。<br/>追加効果（発動確率20％）：自身に「ヴァルファイア実行可」を付与する。<br/>効果時間：30秒<br/>実行時に「ホワイトマナ」が「ブラックマナ」より高かった場合、追加効果の発動確率が100％になる。<br/>発動条件：「マナスタック」3<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとヴァルサンダガとヴァルサンダラがヴァルフレアに変化する。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "ヴァルホーリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34f4be861c3f40879653fef7fe7039f8df1108c1.png",
+     "skillCellText": "ヴァルホーリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ホワイトマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n実行時に「ブラックマナ」が「ホワイトマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルエアロガとヴァルエアロラがヴァルホーリーに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：650<br/>2体目以降の対象への威力は55％減少する。<br/>追加効果：「ホワイトマナ」を11上昇させる。<br/>追加効果（発動確率20％）：自身に「ヴァルストーン実行可」を付与する。<br/>効果時間：30秒<br/>実行時に「ブラックマナ」が「ホワイトマナ」より高かった場合、追加効果の発動確率が100％になる。<br/>発動条件：「マナスタック」3<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとヴァルエアロガとヴァルエアロラがヴァルホーリーに変化する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "ルプリーズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/26403c905bb62b3221f7b1930e64efdd1fe13619.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：100\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに5以上の場合、エンルプリーズに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：100<br/>バランスゲージの「ブラックマナ」と「ホワイトマナ」がともに5以上の場合、エンルプリーズに変化する。"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "スコーチ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa744aa271e8cb2fae5bbe2cdb55ccf70d4685e8.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：750\n2体目以降の対象への威力は55％減少する。\nコンボ条件：ヴァルフレアおよびヴァルホーリー\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「ヴァルフレア」または「ヴァルホーリー」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがスコーチに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：750<br/>2体目以降の対象への威力は55％減少する。<br/>コンボ条件：ヴァルフレアおよびヴァルホーリー<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。<br/>発動条件：「ヴァルフレア」または「ヴァルホーリー」成功時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジョルガとインパクトがスコーチに変化する。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "ヴァルサンダガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2798af149d31668d8e35541a3b33422478013f2.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に雷属性魔法攻撃。\n威力：440\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に雷属性魔法攻撃。<br/>威力：440<br/>追加効果：「ブラックマナ」を6上昇させる。<br/>追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "ヴァルエアロガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1149d6e897c6342f2880c3ad304fc2aef09f93d5.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：440\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：440<br/>追加効果：「ホワイトマナ」を6上昇させる。<br/>追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "ジョルガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f3be0e80366bd72a864a87e41eadd964f07a5f57.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP200",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：360<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "バマジク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c95999b6491dcc5714cd7f926b03fc56b5c88dc.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーの被魔法ダメージを10％軽減し、さらに受ける回復効果を5％上昇させる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーの被魔法ダメージを10％軽減し、さらに受ける回復効果を5％上昇させる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "レゾリューション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cfcb133bdbe85392f1fedadfe93b14ff5aed8b32.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "25m",
+     "description": "対象に向かって前方直線範囲無属性魔法攻撃。\n威力：850\n2体目以降の対象への威力は55％減少する。\nコンボ条件：スコーチ\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「スコーチ」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとスコーチがレゾリューションに変化する。",
+     "descriptionHtml": "対象に向かって前方直線範囲無属性魔法攻撃。<br/>威力：850<br/>2体目以降の対象への威力は55％減少する。<br/>コンボ条件：スコーチ<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。<br/>発動条件：「スコーチ」成功時<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとスコーチがレゾリューションに変化する。"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "ブライヤー・クロゼ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23de2734d998406aa25f526147ebbea7f1012d67.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：950\n2体目以降の対象への威力は55％減少する。\n発動条件：「ブライヤー・クロゼ実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：950<br/>2体目以降の対象への威力は55％減少する。<br/>発動条件：「ブライヤー・クロゼ実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "ノーブルインパクト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5be2009c3bc4bd918ee899e0c6edc953571e93a3.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n発動条件：「ノーブルインパクト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがノーブルインパクトに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は55％減少する。<br/>追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。<br/>発動条件：「ノーブルインパクト実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとジョルガとインパクトがノーブルインパクトに変化する。"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "プリフルジェンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f3988ae5cc17fcf0b655c5820f0c25ef2ac72b43.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1200\n2体目以降の対象への威力は55％減少する。\n発動条件：「プリフルジェンス実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1200<br/>2体目以降の対象への威力は55％減少する。<br/>発動条件：「プリフルジェンス実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "エンリポスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc05c7159bffb94c061a5d64130da539350bbc6e.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：340\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとリポストがエンリポストに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：340<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」20と「ホワイトマナ」20<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとリポストがエンリポストに変化する。"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "エンツヴェルクハウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ca771d95d91f9eec6795ec72317da6fc77029f3.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：190\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：380\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとツヴェルクハウがエンツヴェルクハウに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：190<br/>コンボ条件：リポストまたはエンリポスト<br/>コンボ時威力：380<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」15と「ホワイトマナ」15<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとツヴェルクハウがエンツヴェルクハウに変化する。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "エンルドゥブルマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ef85b6e60966279a1352b01b582c9bc3bfae5646.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：190\nコンボ条件：エンツヴェルクハウ\nコンボ時威力：560\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルドゥブルマンがエンルドゥブルマンに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：190<br/>コンボ条件：エンツヴェルクハウ<br/>コンボ時威力：560<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」15と「ホワイトマナ」15<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとルドゥブルマンがエンルドゥブルマンに変化する。"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "エンムーリネ・アン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲魔法攻撃。\n威力：130\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとムーリネがエンムーリネ・アンに変化する。",
+     "descriptionHtml": "対象に向かって前方扇範囲魔法攻撃。<br/>威力：130<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」20と「ホワイトマナ」20<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとムーリネがエンムーリネ・アンに変化する。"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "エンムーリネ・ドゥ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲魔法攻撃。\n威力：140\nコンボ条件：エンムーリネ・アン\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・アンがエンムーリネ・ドゥに変化する。",
+     "descriptionHtml": "対象に向かって前方扇範囲魔法攻撃。<br/>威力：140<br/>コンボ条件：エンムーリネ・アン<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」15と「ホワイトマナ」15<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとエンムーリネ・アンがエンムーリネ・ドゥに変化する。"
+    },
+    {
+     "rowId": "pve_action__42",
+     "name": "エンムーリネ・トロワ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲魔法攻撃。\n威力：150\nコンボ条件：エンムーリネ・ドゥ\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・ドゥがエンムーリネ・トロワに変化する。",
+     "descriptionHtml": "対象に向かって前方扇範囲魔法攻撃。<br/>威力：150<br/>コンボ条件：エンムーリネ・ドゥ<br/>追加効果：自身に「マナスタック」を付与する。<br/>発動条件：「ブラックマナ」15と「ホワイトマナ」15<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとエンムーリネ・ドゥがエンムーリネ・トロワに変化する。"
+    },
+    {
+     "rowId": "pve_action__43",
+     "name": "エンルプリーズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/18af98a63cd9850c3e064220d9237ec80aad136d.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：420\n発動条件：「ブラックマナ」5と「ホワイトマナ」5\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルプリーズがエンルプリーズに変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：420<br/>発動条件：「ブラックマナ」5と「ホワイトマナ」5<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとルプリーズがエンルプリーズに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "アドル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "スリプル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "MP800",
+     "range": "30m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。",
+     "descriptionHtml": "対象とその周囲の敵に睡眠を付与する。<br/>効果時間：30秒<br/>実行後にオートアタックを停止する。"
+    },
+    {
+     "rowId": "mrange_action__03",
+     "name": "ルーシッドドリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒",
+     "descriptionHtml": "自身のＭＰを継続回復する。<br/>効果量：55<br/>効果時間：21秒"
+    },
+    {
+     "rowId": "mrange_action__04",
+     "name": "迅速魔じんそくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "mrange_action__05",
+     "name": "堅実魔けんじつま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 44,
+     "jobclassText": "Lv44",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒",
+     "descriptionHtml": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。<br/>さらに、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "連続魔れんぞくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3bfbb2bb1687d4d45f637ed1bfe776eaa4fd6e9f.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "description": "詠唱時間を有する魔法を実行すると、自身に「連続魔」が付与される。\n効果時間：15秒\n連続魔効果：次の魔法を詠唱時間無しで実行することができる。\n効果時間中にオートアタックかアビリティ以外のアクションを実行すると、連続魔は即座に解除される。",
+     "descriptionHtml": "詠唱時間を有する魔法を実行すると、自身に「連続魔」が付与される。<br/>効果時間：15秒<br/>連続魔効果：次の魔法を詠唱時間無しで実行することができる。<br/>効果時間中にオートアタックかアビリティ以外のアクションを実行すると、連続魔は即座に解除される。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "アクションダメージ・回復量かいふくりょうアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "アクションダメージ・回復量かいふくりょうアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "ジョルト効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0bcf53f6181a9ee47995df0cca338005baec2318.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "description": "ジョルトがジョルラに変化する。\nさらに、ヴァルサンダーとヴァルエアロの威力を360に、ヴァルファイアとヴァルストーンの威力を300に上昇させる。",
+     "descriptionHtml": "ジョルトがジョルラに変化する。<br/>さらに、ヴァルサンダーとヴァルエアロの威力を360に、ヴァルファイアとヴァルストーンの威力を300に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "スキャッターマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/01af7d3a73b5bc906c0439b17e8a64cc2ab2bc73.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "description": "スキャッターがインパクトに変化する。",
+     "descriptionHtml": "スキャッターがインパクトに変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "魔法剣まほうけん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/359e1d45af946f0a476487cf20ab183de42ff34e.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "description": "自身に「マナスタック」が付与される。\n最大スタック数：3\n3スタック付与されるとヴァルサンダーとヴァルサンダラがヴァルフレアに変化する。\nさらに、ヴァルホーリーを修得するとヴァルエアロとヴァルエアロラがヴァルホーリーに変化するようになる。\n発動条件：エンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワの命中時",
+     "descriptionHtml": "自身に「マナスタック」が付与される。<br/>最大スタック数：3<br/>3スタック付与されるとヴァルサンダーとヴァルサンダラがヴァルフレアに変化する。<br/>さらに、ヴァルホーリーを修得するとヴァルエアロとヴァルエアロラがヴァルホーリーに変化するようになる。<br/>発動条件：エンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワの命中時"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "デプラスマン効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc3485774e058d8dde933633cdeafe8a63c5e218.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "description": "デプラスマンとアンガジェマンの威力を180に上昇させる。",
+     "descriptionHtml": "デプラスマンとアンガジェマンの威力を180に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "赤魔法あかまほうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7f69a646fa296a753d0506e741a96e06b443537.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "コントルシクストのリキャストタイムを35秒に短縮させる。\nさらに、特定のアクションの威力を上昇させる。\n\nヴァルサンダラの威力：120\nヴァルエアロラの威力：120",
+     "descriptionHtml": "コントルシクストのリキャストタイムを35秒に短縮させる。<br/>さらに、特定のアクションの威力を上昇させる。<br/><br/>ヴァルサンダラの威力：120<br/>ヴァルエアロラの威力：120"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "赤魔法あかまほうマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6867ce5b3d9fe7ff27ac2cf6ed1a184cfc0c8e2c.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "ヴァルサンダーがヴァルサンダガに、ヴァルエアロがヴァルエアロガに変化する。\n自身に「マナスタック」が3スタック付与されると、ヴァルサンダガがヴァルフレアに、ヴァルエアロガがヴァルホーリーに変化するようになる。",
+     "descriptionHtml": "ヴァルサンダーがヴァルサンダガに、ヴァルエアロがヴァルエアロガに変化する。<br/>自身に「マナスタック」が3スタック付与されると、ヴァルサンダガがヴァルフレアに、ヴァルエアロガがヴァルホーリーに変化するようになる。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "赤魔法あかまほうマスタリーIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9b90b4a6a0825caa9de580b9a999f25cfa45ad55.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "ジョルラがジョルガに変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nエンリポストの威力：280\nヴァルサンダラの威力：140\nヴァルエアロラの威力：140\nヴァルファイアの威力：340\nヴァルストーンの威力：340\nエンツヴェルクハウの威力：150\nエンルドゥブルマンの威力：130\nインパクトの威力：210\nエンルプリーズの威力：340",
+     "descriptionHtml": "ジョルラがジョルガに変化する。<br/>さらに、特定のアクションの威力を上昇させる。<br/><br/>エンリポストの威力：280<br/>ヴァルサンダラの威力：140<br/>ヴァルエアロラの威力：140<br/>ヴァルファイアの威力：340<br/>ヴァルストーンの威力：340<br/>エンツヴェルクハウの威力：150<br/>エンルドゥブルマンの威力：130<br/>インパクトの威力：210<br/>エンルプリーズの威力：340"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "アクセラレーション効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0f32677ceba4e0fa7cf2dbbc20db1e95e44d2d5.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "アクセラレーションがチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "アクセラレーションがチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "エンボルデン効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fc6fde931036592d442e3d56e3c0d033f463e11.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "自身に「ブライヤー・クロゼ実行可」が付与される。\n効果時間：30秒\n発動条件：エンボルデン実行時",
+     "descriptionHtml": "自身に「ブライヤー・クロゼ実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：エンボルデン実行時"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\nエンリポストの威力：340\nヴァルファイアの威力：380\nヴァルストーンの威力：380\nエンツヴェルクハウの威力：190\nフレッシュの威力：480\nエンルドゥブルマンの威力：190\nコントルシクストの威力：420\nヴァルフレアの威力：650\nヴァルホーリーの威力：650\nエンルプリーズの威力：420\nスコーチの威力：750\nヴァルエアロガの威力：440\nヴァルサンダガの威力：440\nレゾリューションの威力：850",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>エンリポストの威力：340<br/>ヴァルファイアの威力：380<br/>ヴァルストーンの威力：380<br/>エンツヴェルクハウの威力：190<br/>フレッシュの威力：480<br/>エンルドゥブルマンの威力：190<br/>コントルシクストの威力：420<br/>ヴァルフレアの威力：650<br/>ヴァルホーリーの威力：650<br/>エンルプリーズの威力：420<br/>スコーチの威力：750<br/>ヴァルエアロガの威力：440<br/>ヴァルサンダガの威力：440<br/>レゾリューションの威力：850"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "アクセラレーション効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f88ff137a14d846648c1a350b6927826b0e0c316.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "自身に「ノーブルインパクト実行可」が付与される。\n効果時間：30秒\n発動条件：アクセラレーション実行時\n効果中はジョルガとインパクトがノーブルインパクトに変化する。",
+     "descriptionHtml": "自身に「ノーブルインパクト実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：アクセラレーション実行時<br/>効果中はジョルガとインパクトがノーブルインパクトに変化する。"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "マナフィケーション効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9de3804731a7d8d7b4ddc8d8bc54416263d5a4aa.png",
+     "acquired": [
+      {
+       "class": "赤魔道士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「プリフルジェンス実行可」が付与される。\n効果時間：30秒\n発動条件：マナフィケーション実行時\n効果中はマナフィケーションがプリフルジェンスに変化する。",
+     "descriptionHtml": "自身に「プリフルジェンス実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：マナフィケーション実行時<br/>効果中はマナフィケーションがプリフルジェンスに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "迅速魔じんそくま効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "迅速魔のリキャストタイムを40秒に短縮する。",
+     "descriptionHtml": "迅速魔のリキャストタイムを40秒に短縮する。"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "アドル効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/590a381c0421f33d428c1dd51293c715a1a53ee7.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "アドルの効果時間を15秒に延長する。",
+     "descriptionHtml": "アドルの効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "ジョルガ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/33860679da3fbc2e8cf8864ce640f369c13163d4.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\n追加効果：自身に「連続魔」を付与する。\n効果時間：15秒\nこのアクションを実行するとノーブルインパクトに変化する。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>追加効果：自身に「連続魔」を付与する。<br/>効果時間：15秒<br/>このアクションを実行するとノーブルインパクトに変化する。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "エンリポスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67f481da4b0a277ad6b06432a130adfe4b986d32.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：5000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンツヴェルクハウに変化する。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：5000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：自身に一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力4000相当<br/>効果時間：6秒<br/>このアクションを実行するとエンツヴェルクハウに変化する。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "レゾリューション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5aae4c251545f2fc478c40be35966398c7ab9b99.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "対象に向かって前方直線範囲魔法攻撃。\n威力：8000\n追加効果：対象に「沈黙」を付与する。\n効果時間：2秒\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に向かって前方直線範囲魔法攻撃。<br/>威力：8000<br/>追加効果：対象に「沈黙」を付与する。<br/>効果時間：2秒<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "エンボルデン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/54a392e5b56bf4a5030af1f6bc369afd37f91b3a.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "24秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身と周囲のパーティメンバーの与ダメージを8％上昇させ、被ダメージを8％軽減する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n効果時間：8秒\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：15秒\nこのアクションを実行するとプリフルジェンスに変化する。",
+     "descriptionHtml": "自身と周囲のパーティメンバーの与ダメージを8％上昇させ、被ダメージを8％軽減する。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>効果時間：8秒<br/>追加効果：自身に「プリフルジェンス実行可」を付与する。<br/>効果時間：15秒<br/>このアクションを実行するとプリフルジェンスに変化する。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "コル・ア・コル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b524bce7a6b14bd3f524b8c29f5df87cdfc0d955.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：3000\n追加効果：対象に「モノマキー」を付与する。\n効果時間：8秒\nモノマキー効果：自身から対象に与えるダメージを15％上昇させ、さらに対象から受けるダメージを15％軽減させる。\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：3000<br/>追加効果：対象に「モノマキー」を付与する。<br/>効果時間：8秒<br/>モノマキー効果：自身から対象に与えるダメージを15％上昇させ、さらに対象から受けるダメージを15％軽減させる。<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "デプラスマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/447cbba6771ca9884e9fdb197d8bf20dd2b2fa15.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃を与えつつ15m後方に飛び退く。\n威力：3000\n追加効果：次に実行する魔法のダメージと回復効果を15％上昇させる。\n効果時間：10秒\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象に物理攻撃を与えつつ15m後方に飛び退く。<br/>威力：3000<br/>追加効果：次に実行する魔法のダメージと回復効果を15％上昇させる。<br/>効果時間：10秒<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "フォルテ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea0142f5424d599e39076a6c9bac6ab9aac876ce.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の被ダメージを50％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：5秒\nバリアがダメージを完全に吸収して消滅すると、自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがブライヤー・クロゼに変化する。",
+     "descriptionHtml": "自身の被ダメージを50％軽減し、かつ一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力4000相当<br/>効果時間：5秒<br/>バリアがダメージを完全に吸収して消滅すると、自身に「ブライヤー・クロゼ実行可」を付与する。<br/>効果時間：10秒<br/>効果中はこのアクションがブライヤー・クロゼに変化する。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "ノーブルインパクト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/69e3cddfaf05c365aa386853c33eb5864aaf4735.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n2体目以降の対象への威力は4000に減少する。\n発動条件：「連続魔」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：6000<br/>2体目以降の対象への威力は4000に減少する。<br/>発動条件：「連続魔」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "エンツヴェルクハウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e908bf25ba9fac88edf30da9b4edf9b8bcbf1758.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンリポスト\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンルドゥブルマンに変化する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>コンボ条件：エンリポスト<br/>追加効果：自身に一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力4000相当<br/>効果時間：6秒<br/>このアクションを実行するとエンルドゥブルマンに変化する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "エンルドゥブルマン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2f8944b29325a91ae300010c1fb774e9d53316e.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：7000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンツヴェルクハウ\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとスコーチに変化する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：7000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>コンボ条件：エンツヴェルクハウ<br/>追加効果：自身に一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力4000相当<br/>効果時間：6秒<br/>このアクションを実行するとスコーチに変化する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "スコーチ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/110f1fc97444637fd2fdc4f35f82cc4da3f4b2de.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\nコンボ条件：エンルドゥブルマン\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>コンボ条件：エンルドゥブルマン<br/>追加効果：対象に継続ダメージを付与する。<br/>威力：4000<br/>効果時間：6秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "プリフルジェンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9cc3b352b38d3b755927fd84d40a923373cd58b2.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：自身のＨＰを回復する。\n回復力：10000\n追加効果：攻撃範囲内にいるパーティメンバーのＨＰを回復する。\n回復力：10000\n発動条件：「プリフルジェンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：10000<br/>追加効果：自身のＨＰを回復する。<br/>回復力：10000<br/>追加効果：攻撃範囲内にいるパーティメンバーのＨＰを回復する。<br/>回復力：10000<br/>発動条件：「プリフルジェンス実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "ブライヤー・クロゼ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2b4a9ae89b7d2b17ec99c36fae1772ad0377d9b.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：4000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「ブライヤー・クロゼ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：4000<br/>追加効果：対象をスタンさせる。<br/>効果時間：2秒<br/>発動条件：「ブライヤー・クロゼ実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "サザンクロス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c93e62e034c1a0d6cfd0dfc01ed9fa386528e9e.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "15m",
+     "description": "自身またはパーティメンバーひとり、もしくは敵単体を対象とする。\n対象を中心に発生する十字範囲内にいる、自身またはパーティメンバーおよび敵に、以下の効果を与える。\n自身またはパーティメンバーへの効果：対象のＨＰを回復する。\n回復力：12000\n敵への効果：対象に魔法ダメージを与える。\n威力：12000\n直線が重なる地点にいる対象には2回分の効果を与える。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒",
+     "descriptionHtml": "自身またはパーティメンバーひとり、もしくは敵単体を対象とする。<br/>対象を中心に発生する十字範囲内にいる、自身またはパーティメンバーおよび敵に、以下の効果を与える。<br/>自身またはパーティメンバーへの効果：対象のＨＰを回復する。<br/>回復力：12000<br/>敵への効果：対象に魔法ダメージを与える。<br/>威力：12000<br/>直線が重なる地点にいる対象には2回分の効果を与える。<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "コメット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+     "type": "魔法",
+     "cast": "2.4秒",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "10m",
+     "description": "指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。",
+     "descriptionHtml": "指定した地面の周囲に魔法攻撃。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>威力：20000<br/>このアクションの詠唱中は移動することができず、また詠唱を中断することもできない。"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ファントムダート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：4000<br/>追加効果：対象が受けるダメージを25％増加させる。<br/>効果時間：5秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "ダルウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。<br/>効果時間：10秒"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "アクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__redmage_01",
+    "steps": [
+     {
+      "name": "リポスト\n（エンリポスト）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png"
+     },
+     {
+      "name": "ツヴェルクハウ\n（エンツヴェルクハウ）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png"
+     },
+     {
+      "name": "ルドゥブルマン\n（エンルドゥブルマン）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png"
+     }
+    ],
+    "effect": "「ブラックマナ」と「ホワイトマナ」の値によって、より高い威力が得られるアクションに変化するコンボです。\nアクションが変化すると「マナスタック」が付与されます。"
+   },
+   {
+    "class": "job__combo__root job__combo__redmage_01",
+    "steps": [
+     {
+      "name": "エンムーリネ・アン",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png"
+     },
+     {
+      "name": "エンムーリネ・ドゥ",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png"
+     },
+     {
+      "name": "エンムーリネ・トロワ",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png"
+     }
+    ],
+    "effect": "「ブラックマナ」と「ホワイトマナ」の値によって、実行可能となる範囲攻撃コンボです。\nアクションを実行すると「マナスタック」が付与されます。"
+   }
+  ],
+  "allText": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nリポスト\n（エンリポスト）\n\nツヴェルクハウ\n（エンツヴェルクハウ）\n\nルドゥブルマン\n（エンルドゥブルマン）\n\n「ブラックマナ」と「ホワイトマナ」の値によって、より高い威力が得られるアクションに変化するコンボです。\nアクションが変化すると「マナスタック」が付与されます。\n\nエンムーリネ・アン\n\nエンムーリネ・ドゥ\n\nエンムーリネ・トロワ\n\n「ブラックマナ」と「ホワイトマナ」の値によって、実行可能となる範囲攻撃コンボです。\nアクションを実行すると「マナスタック」が付与されます。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "バランスゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nバランスゲージ\n\n赤魔道士ではその独自の魔法体系の源となる”ホワイトマナ”と”ブラックマナ”の蓄積状態を示す「バランスゲージ」が表示されます。\nホワイトマナとブラックマナは特定の魔法を実行することで蓄積され、それぞれを一定以上蓄積させることで、「リポスト」が「エンリポスト」に、「ツヴェルクハウ」が「エンツヴェルクハウ」に、「ルドゥブルマン」が「エンルドゥブルマン」に、「ムーリネ」が「エンムーリネ・アン」にそれぞれ置き換わります。\nその他にも特定アクションの威力や効果が強化されます。\n\nまた、ホワイトマナとブラックマナの差が一定以上になると上部のクリスタルがそれぞれの色に変わり、少ない方のゲージの上昇量が低下します。\nそれぞれのマナをバランスよく増加させ、攻撃力を高めましょう！\n\nレベル68で特性「魔法剣効果アップ」を修得すると、「マナスタックシンボル」が表示されるようになります。\nマナスタックは、「エンリポスト」、「エンツヴェルクハウ」、「エンルドゥブルマン」、「エンムーリネ・アン」を実行することで付与されます。\nマナスタックを最大値まで付与することで、アクション「ヴァルフレア」やレベル70で修得する「ヴァルホーリー」を実行できます。\nマナスタックは魔法カテゴリのアクションを実行することで消費されます。\n\nシンプルモード\n\nバランスゲージ\n\nバランス良く蓄積している状態\n\nホワイトマナが高い状態\n\nブラックマナが高い状態\n\n「マナスタックシンボル」スタック時",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">バランスゲージ</h3>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/pjhPD-Z5eXWSK3QHe04rpIgBAk.png\" width=\"290\"/>\n<p class=\"job__hud__text\">赤魔道士ではその独自の魔法体系の源となる<span class=\"txt_red\">”ホワイトマナ”</span>と<span class=\"txt_red\">”ブラックマナ”</span>の蓄積状態を示す<span class=\"txt_red\">「バランスゲージ」</span>が表示されます。<br/>ホワイトマナとブラックマナは特定の魔法を実行することで蓄積され、それぞれを一定以上蓄積させることで、<span class=\"txt_red\">「リポスト」</span>が<span class=\"txt_red\">「エンリポスト」</span>に、<span class=\"txt_red\">「ツヴェルクハウ」</span>が<span class=\"txt_red\">「エンツヴェルクハウ」</span>に、<span class=\"txt_red\">「ルドゥブルマン」</span>が<span class=\"txt_red\">「エンルドゥブルマン」</span>に、<span class=\"txt_red\">「ムーリネ」</span>が<span class=\"txt_red\">「エンムーリネ・アン」</span>にそれぞれ置き換わります。<br/>その他にも特定アクションの威力や効果が強化されます。</p>\n</div>\n<p class=\"job__hud__text\">また、ホワイトマナとブラックマナの差が一定以上になると上部のクリスタルがそれぞれの色に変わり、少ない方のゲージの上昇量が低下します。<br/>それぞれのマナをバランスよく増加させ、攻撃力を高めましょう！</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/b/fUEa014CEUvPmc5QMaoHc1bYpY.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル68で特性<span class=\"txt_red\">「魔法剣効果アップ」</span>を修得すると、<span class=\"txt_red\">「マナスタックシンボル」</span>が表示されるようになります。<br/>マナスタックは、<span class=\"txt_red\">「エンリポスト」</span>、<span class=\"txt_red\">「エンツヴェルクハウ」</span>、<span class=\"txt_red\">「エンルドゥブルマン」</span>、<span class=\"txt_red\">「エンムーリネ・アン」</span>を実行することで付与されます。<br/>マナスタックを最大値まで付与することで、アクション<span class=\"txt_red\">「ヴァルフレア」</span>やレベル70で修得する<span class=\"txt_red\">「ヴァルホーリー」</span>を実行できます。<br/>マナスタックは魔法カテゴリのアクションを実行することで消費されます。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">バランスゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">バランス良く蓄積している状態</p>\n</td>\n<td></td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">ホワイトマナが高い状態</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">ブラックマナが高い状態</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「マナスタックシンボル」スタック時</p>\n</td>\n<td></td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/pjhPD-Z5eXWSK3QHe04rpIgBAk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/b/fUEa014CEUvPmc5QMaoHc1bYpY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンリポストに変化する。\n\nジョルト\n\nLv2\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nヴァルサンダー\n\nLv4\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n\nコル・ア・コル\n\nLv6\n\nアビリティ\nInstant\n35秒\n-\n\n25m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：130\n最大チャージ数：2\nバインド中は実行不可。\n\nヴァルエアロ\n\nLv10\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：360\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n\nスキャッター\n\nLv15\n\n魔法\n\n5秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120\nアクセラレーション時威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n\nヴァルサンダラ\n\nLv18\n\n魔法\n\n2秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：140\n追加効果：「ブラックマナ」を7上昇させる。\n\nヴァルエアロラ\n\nLv22\n\n魔法\n\n2秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：140\n追加効果：「ホワイトマナ」を7上昇させる。\n\nヴァルファイア\n\nLv26\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：380\n追加効果：「ブラックマナ」を5上昇させる。\n発動条件：「ヴァルファイア実行可」効果中\n\nヴァルストーン\n\nLv30\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：380\n追加効果：「ホワイトマナ」を5上昇させる。\n発動条件：「ヴァルストーン実行可」効果中\n\nツヴェルクハウ\n\nLv35\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：150\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンツヴェルクハウに変化する。\n\nデプラスマン\n\nLv40\n\nアビリティ\nInstant\n35秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：180\n追加効果：15m後方へ飛び退く。\n最大チャージ数：2\nバインド中は実行不可。\nリキャストタイマーを「アンガジェマン」と共有する。\n\nアンガジェマン\n\nLv40\n\nアビリティ\nInstant\n35秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：180\n最大チャージ数：2\nリキャストタイマーを「デプラスマン」と共有する。\n\nフレッシュ\n\nLv45\n\nアビリティ\nInstant\n25秒\n-\n\n25m\n\n0m\n\n対象に物理攻撃。\n威力：480\n\nルドゥブルマン\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：ツヴェルクハウまたはエンツヴェルクハウ\nコンボ時威力：230\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンルドゥブルマンに変化する。\n\nアクセラレーション\n\nLv50\n\nアビリティ\nInstant\n55秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回のヴァルサンダガ、ヴァルエアロガ、インパクトを詠唱無しで唱えることができる。\n効果時間：20秒\n追加効果：インパクトの威力を50上昇させる。\n追加効果：ヴァルサンダガとヴァルエアロガの実行時に、「ヴァルファイア実行可」または「ヴァルストーン実行可」が必ず付与される。\n追加効果：自身に「ノーブルインパクト実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2\n\nムーリネ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：60\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンムーリネ・アンに変化する。\n\nヴァルケアル\n\nLv54\n\n魔法\n\n2秒\n\n2.5秒\nMP500\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：350\n\nコントルシクスト\n\nLv56\n\nアビリティ\nInstant\n35秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：420\n\nエンボルデン\n\nLv58\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身の与魔法ダメージを10％上昇させる。\n効果時間：20秒\n追加効果：周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：30秒\n\nマナフィケーション\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n110秒\n-\n\n0m\n\n0m\n\n一定時間、エンリポスト、エンツヴェルクハウ、エンルドゥブルマンの射程を25mに延長させる。\n効果時間：30秒\n追加効果：自身に3スタックの「魔法剣コンボ実行可」を付与する。\n効果時間：30秒\n魔法剣コンボ実行可効果：「ブラックマナ」と「ホワイトマナ」を消費することなくエンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワを実行できる。\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：30秒\nこのアビリティを実行するとコンボが中断される。\n発動条件：自身が戦闘状態\n\nジョルラ\n\nLv62\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：280\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nヴァルレイズ\n\nLv64\n\n魔法\n\n10秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nインパクト\n\nLv66\n\n魔法\n\n5秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：210\nアクセラレーション時威力：260\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n\nヴァルフレア\n\nLv68\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n実行時に「ホワイトマナ」が「ブラックマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルサンダガとヴァルサンダラがヴァルフレアに変化する。\n\nヴァルホーリー\n\nジョブクエスト\n\nLv70\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ホワイトマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n実行時に「ブラックマナ」が「ホワイトマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルエアロガとヴァルエアロラがヴァルホーリーに変化する。\n\nルプリーズ\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに5以上の場合、エンルプリーズに変化する。\n\nスコーチ\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：750\n2体目以降の対象への威力は55％減少する。\nコンボ条件：ヴァルフレアおよびヴァルホーリー\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「ヴァルフレア」または「ヴァルホーリー」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがスコーチに変化する。\n\nヴァルサンダガ\n\nLv82\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：440\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n\nヴァルエアロガ\n\nLv82\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：440\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n\nジョルガ\n\nLv84\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nバマジク\n\nLv86\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被魔法ダメージを10％軽減し、さらに受ける回復効果を5％上昇させる。\n効果時間：10秒\n\nレゾリューション\n\nLv90\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：850\n2体目以降の対象への威力は55％減少する。\nコンボ条件：スコーチ\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「スコーチ」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとスコーチがレゾリューションに変化する。\n\nブライヤー・クロゼ\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：950\n2体目以降の対象への威力は55％減少する。\n発動条件：「ブライヤー・クロゼ実行可」効果中\n\nノーブルインパクト\n\nLv96\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n発動条件：「ノーブルインパクト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがノーブルインパクトに変化する。\n\nプリフルジェンス\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1200\n2体目以降の対象への威力は55％減少する。\n発動条件：「プリフルジェンス実行可」効果中\n\nエンリポスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：340\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとリポストがエンリポストに変化する。\n\nエンツヴェルクハウ\n\nLv35\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：190\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：380\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとツヴェルクハウがエンツヴェルクハウに変化する。\n\nエンルドゥブルマン\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.2秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：190\nコンボ条件：エンツヴェルクハウ\nコンボ時威力：560\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルドゥブルマンがエンルドゥブルマンに変化する。\n\nエンムーリネ・アン\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：130\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとムーリネがエンムーリネ・アンに変化する。\n\nエンムーリネ・ドゥ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：140\nコンボ条件：エンムーリネ・アン\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・アンがエンムーリネ・ドゥに変化する。\n\nエンムーリネ・トロワ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：150\nコンボ条件：エンムーリネ・ドゥ\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・ドゥがエンムーリネ・トロワに変化する。\n\nエンルプリーズ\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：420\n発動条件：「ブラックマナ」5と「ホワイトマナ」5\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルプリーズがエンルプリーズに変化する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\n連続魔れんぞくま\n\nLv1\n\n詠唱時間を有する魔法を実行すると、自身に「連続魔」が付与される。\n効果時間：15秒\n連続魔効果：次の魔法を詠唱時間無しで実行することができる。\n効果時間中にオートアタックかアビリティ以外のアクションを実行すると、連続魔は即座に解除される。\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nジョルト効果こうかアップ\n\nLv62\n\nジョルトがジョルラに変化する。\nさらに、ヴァルサンダーとヴァルエアロの威力を360に、ヴァルファイアとヴァルストーンの威力を300に上昇させる。\n\nスキャッターマスタリー\n\nLv66\n\nスキャッターがインパクトに変化する。\n\n魔法剣まほうけん効果こうかアップ\n\nLv68\n\n自身に「マナスタック」が付与される。\n最大スタック数：3\n3スタック付与されるとヴァルサンダーとヴァルサンダラがヴァルフレアに変化する。\nさらに、ヴァルホーリーを修得するとヴァルエアロとヴァルエアロラがヴァルホーリーに変化するようになる。\n発動条件：エンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワの命中時\n\nデプラスマン効果こうかアップ\n\nLv72\n\nデプラスマンとアンガジェマンの威力を180に上昇させる。\n\n赤魔法あかまほうマスタリー\n\nLv74\n\nコントルシクストのリキャストタイムを35秒に短縮させる。\nさらに、特定のアクションの威力を上昇させる。\n\nヴァルサンダラの威力：120\nヴァルエアロラの威力：120\n\n赤魔法あかまほうマスタリーIIつー\n\nLv82\n\nヴァルサンダーがヴァルサンダガに、ヴァルエアロがヴァルエアロガに変化する。\n自身に「マナスタック」が3スタック付与されると、ヴァルサンダガがヴァルフレアに、ヴァルエアロガがヴァルホーリーに変化するようになる。\n\n赤魔法あかまほうマスタリーIIIすりー\n\nLv84\n\nジョルラがジョルガに変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nエンリポストの威力：280\nヴァルサンダラの威力：140\nヴァルエアロラの威力：140\nヴァルファイアの威力：340\nヴァルストーンの威力：340\nエンツヴェルクハウの威力：150\nエンルドゥブルマンの威力：130\nインパクトの威力：210\nエンルプリーズの威力：340\n\nアクセラレーション効果こうかアップ\n\nLv88\n\nアクセラレーションがチャージアクションに変化する。\n最大チャージ数：2\n\nエンボルデン効果こうかアップ\n\nLv92\n\n自身に「ブライヤー・クロゼ実行可」が付与される。\n効果時間：30秒\n発動条件：エンボルデン実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nエンリポストの威力：340\nヴァルファイアの威力：380\nヴァルストーンの威力：380\nエンツヴェルクハウの威力：190\nフレッシュの威力：480\nエンルドゥブルマンの威力：190\nコントルシクストの威力：420\nヴァルフレアの威力：650\nヴァルホーリーの威力：650\nエンルプリーズの威力：420\nスコーチの威力：750\nヴァルエアロガの威力：440\nヴァルサンダガの威力：440\nレゾリューションの威力：850\n\nアクセラレーション効果こうかアップIIつー\n\nLv96\n\n自身に「ノーブルインパクト実行可」が付与される。\n効果時間：30秒\n発動条件：アクセラレーション実行時\n効果中はジョルガとインパクトがノーブルインパクトに変化する。\n\nマナフィケーション効果こうかアップ\n\nLv100\n\n自身に「プリフルジェンス実行可」が付与される。\n効果時間：30秒\n発動条件：マナフィケーション実行時\n効果中はマナフィケーションがプリフルジェンスに変化する。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "コンボ",
+   "anchor": "anchor__pve_combo",
+   "text": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nリポスト\n（エンリポスト）\n\nツヴェルクハウ\n（エンツヴェルクハウ）\n\nルドゥブルマン\n（エンルドゥブルマン）\n\n「ブラックマナ」と「ホワイトマナ」の値によって、より高い威力が得られるアクションに変化するコンボです。\nアクションが変化すると「マナスタック」が付与されます。\n\nエンムーリネ・アン\n\nエンムーリネ・ドゥ\n\nエンムーリネ・トロワ\n\n「ブラックマナ」と「ホワイトマナ」の値によって、実行可能となる範囲攻撃コンボです。\nアクションを実行すると「マナスタック」が付与されます。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nバランスゲージ\n\n赤魔道士ではその独自の魔法体系の源となる”ホワイトマナ”と”ブラックマナ”の蓄積状態を示す「バランスゲージ」が表示されます。\nホワイトマナとブラックマナは特定の魔法を実行することで蓄積され、それぞれを一定以上蓄積させることで、「リポスト」が「エンリポスト」に、「ツヴェルクハウ」が「エンツヴェルクハウ」に、「ルドゥブルマン」が「エンルドゥブルマン」に、「ムーリネ」が「エンムーリネ・アン」にそれぞれ置き換わります。\nその他にも特定アクションの威力や効果が強化されます。\n\nまた、ホワイトマナとブラックマナの差が一定以上になると上部のクリスタルがそれぞれの色に変わり、少ない方のゲージの上昇量が低下します。\nそれぞれのマナをバランスよく増加させ、攻撃力を高めましょう！\n\nレベル68で特性「魔法剣効果アップ」を修得すると、「マナスタックシンボル」が表示されるようになります。\nマナスタックは、「エンリポスト」、「エンツヴェルクハウ」、「エンルドゥブルマン」、「エンムーリネ・アン」を実行することで付与されます。\nマナスタックを最大値まで付与することで、アクション「ヴァルフレア」やレベル70で修得する「ヴァルホーリー」を実行できます。\nマナスタックは魔法カテゴリのアクションを実行することで消費されます。\n\nシンプルモード\n\nバランスゲージ\n\nバランス良く蓄積している状態\n\nホワイトマナが高い状態\n\nブラックマナが高い状態\n\n「マナスタックシンボル」スタック時"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nジョルガ\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：自身に「連続魔」を付与する。\n効果時間：15秒\nこのアクションを実行するとノーブルインパクトに変化する。\n\nエンリポスト\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンツヴェルクハウに変化する。\n\nレゾリューション\n\n魔法\nInstant\n20秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：8000\n追加効果：対象に「沈黙」を付与する。\n効果時間：2秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nエンボルデン\n\nアビリティ\nInstant\n24秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーの与ダメージを8％上昇させ、被ダメージを8％軽減する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n効果時間：8秒\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：15秒\nこのアクションを実行するとプリフルジェンスに変化する。\n\nコル・ア・コル\n\nアビリティ\nInstant\n16秒\n-\n\n25m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：3000\n追加効果：対象に「モノマキー」を付与する。\n効果時間：8秒\nモノマキー効果：自身から対象に与えるダメージを15％上昇させ、さらに対象から受けるダメージを15％軽減させる。\n最大チャージ数：2\nバインド中は実行不可。\n\nデプラスマン\n\nアビリティ\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃を与えつつ15m後方に飛び退く。\n威力：3000\n追加効果：次に実行する魔法のダメージと回復効果を15％上昇させる。\n効果時間：10秒\n最大チャージ数：2\nバインド中は実行不可。\n\nフォルテ\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の被ダメージを50％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：5秒\nバリアがダメージを完全に吸収して消滅すると、自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがブライヤー・クロゼに変化する。\n\nノーブルインパクト\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n2体目以降の対象への威力は4000に減少する。\n発動条件：「連続魔」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nエンツヴェルクハウ\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンリポスト\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンルドゥブルマンに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nエンルドゥブルマン\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンツヴェルクハウ\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとスコーチに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nスコーチ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\nコンボ条件：エンルドゥブルマン\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。\n\nプリフルジェンス\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：自身のＨＰを回復する。\n回復力：10000\n追加効果：攻撃範囲内にいるパーティメンバーのＨＰを回復する。\n回復力：10000\n発動条件：「プリフルジェンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブライヤー・クロゼ\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：4000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「ブライヤー・クロゼ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nサザンクロス\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n自身またはパーティメンバーひとり、もしくは敵単体を対象とする。\n対象を中心に発生する十字範囲内にいる、自身またはパーティメンバーおよび敵に、以下の効果を与える。\n自身またはパーティメンバーへの効果：対象のＨＰを回復する。\n回復力：12000\n敵への効果：対象に魔法ダメージを与える。\n威力：12000\n直線が重なる地点にいる対象には2回分の効果を与える。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\nアバラシア山脈の東端、峨々たる山岳地帯「ギラバニア」。\n\n第五星暦末期のこと、迫り来る水の災厄「第六霊災」から逃れるため、星の輝きに導かれた人々が、方々から山間を目指して集結したという。その中には、魔大戦で激しく戦い合った魔法都市「マハ」の黒魔道士と、古都「アムダプール」の白魔道士の姿もあった。\n\nそして、滅びの定めに抗うため、かつての敵同志が手を結び、黒魔法でも白魔法でもない新たな魔法体系の確立に挑む。かくして、「細剣」を手に戦う「赤魔道士」が誕生したのである。\n\nジョブ開始クエスト\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンリポストに変化する。\n\nジョルト\n\nLv2\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nヴァルサンダー\n\nLv4\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n\nコル・ア・コル\n\nLv6\n\nアビリティ\nInstant\n35秒\n-\n\n25m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：130\n最大チャージ数：2\nバインド中は実行不可。\n\nヴァルエアロ\n\nLv10\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：360\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n\nスキャッター\n\nLv15\n\n魔法\n\n5秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：120\nアクセラレーション時威力：170\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n\nヴァルサンダラ\n\nLv18\n\n魔法\n\n2秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：140\n追加効果：「ブラックマナ」を7上昇させる。\n\nヴァルエアロラ\n\nLv22\n\n魔法\n\n2秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：140\n追加効果：「ホワイトマナ」を7上昇させる。\n\nヴァルファイア\n\nLv26\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：380\n追加効果：「ブラックマナ」を5上昇させる。\n発動条件：「ヴァルファイア実行可」効果中\n\nヴァルストーン\n\nLv30\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：380\n追加効果：「ホワイトマナ」を5上昇させる。\n発動条件：「ヴァルストーン実行可」効果中\n\nツヴェルクハウ\n\nLv35\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：150\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンツヴェルクハウに変化する。\n\nデプラスマン\n\nLv40\n\nアビリティ\nInstant\n35秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：180\n追加効果：15m後方へ飛び退く。\n最大チャージ数：2\nバインド中は実行不可。\nリキャストタイマーを「アンガジェマン」と共有する。\n\nアンガジェマン\n\nLv40\n\nアビリティ\nInstant\n35秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：180\n最大チャージ数：2\nリキャストタイマーを「デプラスマン」と共有する。\n\nフレッシュ\n\nLv45\n\nアビリティ\nInstant\n25秒\n-\n\n25m\n\n0m\n\n対象に物理攻撃。\n威力：480\n\nルドゥブルマン\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：ツヴェルクハウまたはエンツヴェルクハウ\nコンボ時威力：230\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに15以上の場合、エンルドゥブルマンに変化する。\n\nアクセラレーション\n\nLv50\n\nアビリティ\nInstant\n55秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回のヴァルサンダガ、ヴァルエアロガ、インパクトを詠唱無しで唱えることができる。\n効果時間：20秒\n追加効果：インパクトの威力を50上昇させる。\n追加効果：ヴァルサンダガとヴァルエアロガの実行時に、「ヴァルファイア実行可」または「ヴァルストーン実行可」が必ず付与される。\n追加効果：自身に「ノーブルインパクト実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2\n\nムーリネ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：60\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに20以上の場合、エンムーリネ・アンに変化する。\n\nヴァルケアル\n\nLv54\n\n魔法\n\n2秒\n\n2.5秒\nMP500\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：350\n\nコントルシクスト\n\nLv56\n\nアビリティ\nInstant\n35秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：420\n\nエンボルデン\n\nLv58\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身の与魔法ダメージを10％上昇させる。\n効果時間：20秒\n追加効果：周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：30秒\n\nマナフィケーション\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n110秒\n-\n\n0m\n\n0m\n\n一定時間、エンリポスト、エンツヴェルクハウ、エンルドゥブルマンの射程を25mに延長させる。\n効果時間：30秒\n追加効果：自身に3スタックの「魔法剣コンボ実行可」を付与する。\n効果時間：30秒\n魔法剣コンボ実行可効果：「ブラックマナ」と「ホワイトマナ」を消費することなくエンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワを実行できる。\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：30秒\nこのアビリティを実行するとコンボが中断される。\n発動条件：自身が戦闘状態\n\nジョルラ\n\nLv62\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：280\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nヴァルレイズ\n\nLv64\n\n魔法\n\n10秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nインパクト\n\nLv66\n\n魔法\n\n5秒\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：210\nアクセラレーション時威力：260\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n\nヴァルフレア\n\nLv68\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n実行時に「ホワイトマナ」が「ブラックマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルサンダガとヴァルサンダラがヴァルフレアに変化する。\n\nヴァルホーリー\n\nジョブクエスト\n\nLv70\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：650\n2体目以降の対象への威力は55％減少する。\n追加効果：「ホワイトマナ」を11上昇させる。\n追加効果（発動確率20％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n実行時に「ブラックマナ」が「ホワイトマナ」より高かった場合、追加効果の発動確率が100％になる。\n発動条件：「マナスタック」3\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとヴァルエアロガとヴァルエアロラがヴァルホーリーに変化する。\n\nルプリーズ\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nバランスゲージの「ブラックマナ」と「ホワイトマナ」がともに5以上の場合、エンルプリーズに変化する。\n\nスコーチ\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：750\n2体目以降の対象への威力は55％減少する。\nコンボ条件：ヴァルフレアおよびヴァルホーリー\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「ヴァルフレア」または「ヴァルホーリー」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがスコーチに変化する。\n\nヴァルサンダガ\n\nLv82\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：440\n追加効果：「ブラックマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルファイア実行可」を付与する。\n効果時間：30秒\n\nヴァルエアロガ\n\nLv82\n\n魔法\n\n5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：440\n追加効果：「ホワイトマナ」を6上昇させる。\n追加効果（発動確率50％）：自身に「ヴァルストーン実行可」を付与する。\n効果時間：30秒\n\nジョルガ\n\nLv84\n\n魔法\n\n2秒\n\n2.5秒\nMP200\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：360\n追加効果：「ブラックマナ」と「ホワイトマナ」を2上昇させる。\n\nバマジク\n\nLv86\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被魔法ダメージを10％軽減し、さらに受ける回復効果を5％上昇させる。\n効果時間：10秒\n\nレゾリューション\n\nLv90\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：850\n2体目以降の対象への威力は55％減少する。\nコンボ条件：スコーチ\n追加効果：「ブラックマナ」と「ホワイトマナ」を4上昇させる。\n発動条件：「スコーチ」成功時\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとスコーチがレゾリューションに変化する。\n\nブライヤー・クロゼ\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：950\n2体目以降の対象への威力は55％減少する。\n発動条件：「ブライヤー・クロゼ実行可」効果中\n\nノーブルインパクト\n\nLv96\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は55％減少する。\n追加効果：「ブラックマナ」と「ホワイトマナ」を3上昇させる。\n発動条件：「ノーブルインパクト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとジョルガとインパクトがノーブルインパクトに変化する。\n\nプリフルジェンス\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1200\n2体目以降の対象への威力は55％減少する。\n発動条件：「プリフルジェンス実行可」効果中\n\nエンリポスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：340\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとリポストがエンリポストに変化する。\n\nエンツヴェルクハウ\n\nLv35\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：190\nコンボ条件：リポストまたはエンリポスト\nコンボ時威力：380\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとツヴェルクハウがエンツヴェルクハウに変化する。\n\nエンルドゥブルマン\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.2秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：190\nコンボ条件：エンツヴェルクハウ\nコンボ時威力：560\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルドゥブルマンがエンルドゥブルマンに変化する。\n\nエンムーリネ・アン\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：130\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」20と「ホワイトマナ」20\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとムーリネがエンムーリネ・アンに変化する。\n\nエンムーリネ・ドゥ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：140\nコンボ条件：エンムーリネ・アン\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・アンがエンムーリネ・ドゥに変化する。\n\nエンムーリネ・トロワ\n\nLv52\n\nウェポン\nスキル\nInstant\n\n1.5秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲魔法攻撃。\n威力：150\nコンボ条件：エンムーリネ・ドゥ\n追加効果：自身に「マナスタック」を付与する。\n発動条件：「ブラックマナ」15と「ホワイトマナ」15\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとエンムーリネ・ドゥがエンムーリネ・トロワに変化する。\n\nエンルプリーズ\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：420\n発動条件：「ブラックマナ」5と「ホワイトマナ」5\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとルプリーズがエンルプリーズに変化する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n特性\n\n特性名\n修得\n効果\n\n連続魔れんぞくま\n\nLv1\n\n詠唱時間を有する魔法を実行すると、自身に「連続魔」が付与される。\n効果時間：15秒\n連続魔効果：次の魔法を詠唱時間無しで実行することができる。\n効果時間中にオートアタックかアビリティ以外のアクションを実行すると、連続魔は即座に解除される。\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nジョルト効果こうかアップ\n\nLv62\n\nジョルトがジョルラに変化する。\nさらに、ヴァルサンダーとヴァルエアロの威力を360に、ヴァルファイアとヴァルストーンの威力を300に上昇させる。\n\nスキャッターマスタリー\n\nLv66\n\nスキャッターがインパクトに変化する。\n\n魔法剣まほうけん効果こうかアップ\n\nLv68\n\n自身に「マナスタック」が付与される。\n最大スタック数：3\n3スタック付与されるとヴァルサンダーとヴァルサンダラがヴァルフレアに変化する。\nさらに、ヴァルホーリーを修得するとヴァルエアロとヴァルエアロラがヴァルホーリーに変化するようになる。\n発動条件：エンリポスト、エンツヴェルクハウ、エンルドゥブルマン、エンムーリネ・アン、エンムーリネ・ドゥ、エンムーリネ・トロワの命中時\n\nデプラスマン効果こうかアップ\n\nLv72\n\nデプラスマンとアンガジェマンの威力を180に上昇させる。\n\n赤魔法あかまほうマスタリー\n\nLv74\n\nコントルシクストのリキャストタイムを35秒に短縮させる。\nさらに、特定のアクションの威力を上昇させる。\n\nヴァルサンダラの威力：120\nヴァルエアロラの威力：120\n\n赤魔法あかまほうマスタリーIIつー\n\nLv82\n\nヴァルサンダーがヴァルサンダガに、ヴァルエアロがヴァルエアロガに変化する。\n自身に「マナスタック」が3スタック付与されると、ヴァルサンダガがヴァルフレアに、ヴァルエアロガがヴァルホーリーに変化するようになる。\n\n赤魔法あかまほうマスタリーIIIすりー\n\nLv84\n\nジョルラがジョルガに変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nエンリポストの威力：280\nヴァルサンダラの威力：140\nヴァルエアロラの威力：140\nヴァルファイアの威力：340\nヴァルストーンの威力：340\nエンツヴェルクハウの威力：150\nエンルドゥブルマンの威力：130\nインパクトの威力：210\nエンルプリーズの威力：340\n\nアクセラレーション効果こうかアップ\n\nLv88\n\nアクセラレーションがチャージアクションに変化する。\n最大チャージ数：2\n\nエンボルデン効果こうかアップ\n\nLv92\n\n自身に「ブライヤー・クロゼ実行可」が付与される。\n効果時間：30秒\n発動条件：エンボルデン実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nエンリポストの威力：340\nヴァルファイアの威力：380\nヴァルストーンの威力：380\nエンツヴェルクハウの威力：190\nフレッシュの威力：480\nエンルドゥブルマンの威力：190\nコントルシクストの威力：420\nヴァルフレアの威力：650\nヴァルホーリーの威力：650\nエンルプリーズの威力：420\nスコーチの威力：750\nヴァルエアロガの威力：440\nヴァルサンダガの威力：440\nレゾリューションの威力：850\n\nアクセラレーション効果こうかアップIIつー\n\nLv96\n\n自身に「ノーブルインパクト実行可」が付与される。\n効果時間：30秒\n発動条件：アクセラレーション実行時\n効果中はジョルガとインパクトがノーブルインパクトに変化する。\n\nマナフィケーション効果こうかアップ\n\nLv100\n\n自身に「プリフルジェンス実行可」が付与される。\n効果時間：30秒\n発動条件：マナフィケーション実行時\n効果中はマナフィケーションがプリフルジェンスに変化する。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。\n\nコンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nリポスト\n（エンリポスト）\n\nツヴェルクハウ\n（エンツヴェルクハウ）\n\nルドゥブルマン\n（エンルドゥブルマン）\n\n「ブラックマナ」と「ホワイトマナ」の値によって、より高い威力が得られるアクションに変化するコンボです。\nアクションが変化すると「マナスタック」が付与されます。\n\nエンムーリネ・アン\n\nエンムーリネ・ドゥ\n\nエンムーリネ・トロワ\n\n「ブラックマナ」と「ホワイトマナ」の値によって、実行可能となる範囲攻撃コンボです。\nアクションを実行すると「マナスタック」が付与されます。\n\nジョブHUD\n\nバランスゲージ\n\n赤魔道士ではその独自の魔法体系の源となる”ホワイトマナ”と”ブラックマナ”の蓄積状態を示す「バランスゲージ」が表示されます。\nホワイトマナとブラックマナは特定の魔法を実行することで蓄積され、それぞれを一定以上蓄積させることで、「リポスト」が「エンリポスト」に、「ツヴェルクハウ」が「エンツヴェルクハウ」に、「ルドゥブルマン」が「エンルドゥブルマン」に、「ムーリネ」が「エンムーリネ・アン」にそれぞれ置き換わります。\nその他にも特定アクションの威力や効果が強化されます。\n\nまた、ホワイトマナとブラックマナの差が一定以上になると上部のクリスタルがそれぞれの色に変わり、少ない方のゲージの上昇量が低下します。\nそれぞれのマナをバランスよく増加させ、攻撃力を高めましょう！\n\nレベル68で特性「魔法剣効果アップ」を修得すると、「マナスタックシンボル」が表示されるようになります。\nマナスタックは、「エンリポスト」、「エンツヴェルクハウ」、「エンルドゥブルマン」、「エンムーリネ・アン」を実行することで付与されます。\nマナスタックを最大値まで付与することで、アクション「ヴァルフレア」やレベル70で修得する「ヴァルホーリー」を実行できます。\nマナスタックは魔法カテゴリのアクションを実行することで消費されます。\n\nシンプルモード\n\nバランスゲージ\n\nバランス良く蓄積している状態\n\nホワイトマナが高い状態\n\nブラックマナが高い状態\n\n「マナスタックシンボル」スタック時\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nジョルガ\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：自身に「連続魔」を付与する。\n効果時間：15秒\nこのアクションを実行するとノーブルインパクトに変化する。\n\nエンリポスト\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンツヴェルクハウに変化する。\n\nレゾリューション\n\n魔法\nInstant\n20秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：8000\n追加効果：対象に「沈黙」を付与する。\n効果時間：2秒\nこの魔法は固有のリキャストタイマーを持つ。\n\nエンボルデン\n\nアビリティ\nInstant\n24秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーの与ダメージを8％上昇させ、被ダメージを8％軽減する。\nこのアクションは遮蔽物を越えて効果を発揮する。\n効果時間：8秒\n追加効果：自身に「プリフルジェンス実行可」を付与する。\n効果時間：15秒\nこのアクションを実行するとプリフルジェンスに変化する。\n\nコル・ア・コル\n\nアビリティ\nInstant\n16秒\n-\n\n25m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：3000\n追加効果：対象に「モノマキー」を付与する。\n効果時間：8秒\nモノマキー効果：自身から対象に与えるダメージを15％上昇させ、さらに対象から受けるダメージを15％軽減させる。\n最大チャージ数：2\nバインド中は実行不可。\n\nデプラスマン\n\nアビリティ\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃を与えつつ15m後方に飛び退く。\n威力：3000\n追加効果：次に実行する魔法のダメージと回復効果を15％上昇させる。\n効果時間：10秒\n最大チャージ数：2\nバインド中は実行不可。\n\nフォルテ\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の被ダメージを50％軽減し、かつ一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：5秒\nバリアがダメージを完全に吸収して消滅すると、自身に「ブライヤー・クロゼ実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがブライヤー・クロゼに変化する。\n\nノーブルインパクト\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：6000\n2体目以降の対象への威力は4000に減少する。\n発動条件：「連続魔」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nエンツヴェルクハウ\n\nウェポン\nスキル\nInstant\n1.5秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンリポスト\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとエンルドゥブルマンに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nエンルドゥブルマン\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\nコンボ条件：エンツヴェルクハウ\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力4000相当\n効果時間：6秒\nこのアクションを実行するとスコーチに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nスコーチ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\nコンボ条件：エンルドゥブルマン\n追加効果：対象に継続ダメージを付与する。\n威力：4000\n効果時間：6秒\n\n※このアクションはホットバーに登録することはできない。\n\nプリフルジェンス\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：自身のＨＰを回復する。\n回復力：10000\n追加効果：攻撃範囲内にいるパーティメンバーのＨＰを回復する。\n回復力：10000\n発動条件：「プリフルジェンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブライヤー・クロゼ\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：4000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「ブライヤー・クロゼ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nサザンクロス\n\nInstant\n10秒\n-\n\n30m\n\n15m\n\n自身またはパーティメンバーひとり、もしくは敵単体を対象とする。\n対象を中心に発生する十字範囲内にいる、自身またはパーティメンバーおよび敵に、以下の効果を与える。\n自身またはパーティメンバーへの効果：対象のＨＰを回復する。\n回復力：12000\n敵への効果：対象に魔法ダメージを与える。\n威力：12000\n直線が重なる地点にいる対象には2回分の効果を与える。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

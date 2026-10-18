@@ -1,0 +1,1721 @@
+{
+ "job": "dragoon",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/dragoon/",
+ "pageTitle": "ジョブガイド「竜騎士」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\n竜を屠る者……「竜騎士」。\n建国以来、ドラゴン族との果て無き戦いを続ける宗教都市「イシュガルド」において、その言葉が持つ意味は限りなく重い。\n\nドラゴン族を倒す。その目的のためだけに発展した槍術は、硬き鱗に隠されたドラゴン族の急所を狙うため、独特の跳躍攻撃を生み出した。天高く跳び、槍と一体となって舞い降りる……その貫通力は攻撃の要となるだろう。\n\nジョブ開始クエスト\n\n初期クラス：槍術士",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/a456526b20c613a31c9ff03a7cd8d69ab328a4c8.png",
+   "https://lds-img.finalfantasyxiv.com/d/85a78cf7b49d80ab94aa206b385563ffa0222346.png",
+   "https://lds-img.finalfantasyxiv.com/d/eb7e59cbec93afbdf7a3cecd0e164c545ea8dec2.png",
+   "https://lds-img.finalfantasyxiv.com/d/b34933ec0ea122c75fd1deeb69f3b9df942dbdc1.png",
+   "https://lds-img.finalfantasyxiv.com/d/d5052c9c0d1bf846c9a4fb70497dd1cea97ceca6.png",
+   "https://lds-img.finalfantasyxiv.com/d/34a78b866a4906267ee8f0e93457cb22b5550b9d.png",
+   "https://lds-img.finalfantasyxiv.com/d/cb90fa2f691cd58f5b068f6088550b3d56c2bd73.png",
+   "https://lds-img.finalfantasyxiv.com/d/15919e7dd2c5589a71f3c5115c3cb1e5b02f7572.png",
+   "https://lds-img.finalfantasyxiv.com/d/a13b9738eba1cfa6331a577992a05fbf8e29b12e.png",
+   "https://lds-img.finalfantasyxiv.com/d/1e6e09c76f8847d3caf2ee330400848219460dfa.png",
+   "https://lds-img.finalfantasyxiv.com/d/970713e35721fcecc8fce83a6064c984bdeb22c3.png",
+   "https://lds-img.finalfantasyxiv.com/d/b77850f0a67953c4b4a13228788bdc1ec41c20fc.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2d62c093eb2ccde88c41512eba79a759d3b1731.png",
+   "https://lds-img.finalfantasyxiv.com/d/705282791cafca1896aafcb629217ccf272fa317.png",
+   "https://lds-img.finalfantasyxiv.com/d/bcf8b96ea7064ae0c532cb80fa44d59ec5fa9208.png",
+   "https://lds-img.finalfantasyxiv.com/d/85d31ee98aca28156e6dbfcfc17473bb90d1c044.png",
+   "https://lds-img.finalfantasyxiv.com/d/9fd17ed870b46d4f1cb7dfbbfe36232a69ffab25.png",
+   "https://lds-img.finalfantasyxiv.com/d/86993377c3b82442fd98d9ccaf2c8e007b110d3e.png",
+   "https://lds-img.finalfantasyxiv.com/d/1bc31e46fb90bda5697cf272e0df8b9ac8086b13.png",
+   "https://lds-img.finalfantasyxiv.com/d/838933d8bbe091490defd8b0c455c1b6cd553f21.png",
+   "https://lds-img.finalfantasyxiv.com/d/8e8ee9ce030d0945ab1983fa282569bf9359e77b.png",
+   "https://lds-img.finalfantasyxiv.com/d/27c2b3ef23b6bbe6b322b8a0bade3e00e04727b1.png",
+   "https://lds-img.finalfantasyxiv.com/d/43bde23e743d27c8dd8c0a29020671f33fbb1ac6.png",
+   "https://lds-img.finalfantasyxiv.com/d/e6c9b8537cca3034858fb078bb6100232c6e23c7.png",
+   "https://lds-img.finalfantasyxiv.com/d/65fe43d4e61e67defd885819e6f7d1c8fb1c9ea8.png",
+   "https://lds-img.finalfantasyxiv.com/d/8d26d75ca622ec9c3ebdb2c9810f3a8981f04710.png",
+   "https://lds-img.finalfantasyxiv.com/d/d710d7f61fe3638ab7d5bb12c6e58c2585c4faa7.png",
+   "https://lds-img.finalfantasyxiv.com/d/fa6d2bfbf0b127a283fa2ca3679b3dcb23515ee0.png",
+   "https://lds-img.finalfantasyxiv.com/d/40c1c2685a3b7778e1afe54476cfc68e6f2745fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/4d7cca717dd43f7598d848d99886ccaec3835bad.png",
+   "https://lds-img.finalfantasyxiv.com/d/a5743cd6a29dd664a044690a6e98f3ddeb05eb5a.png",
+   "https://lds-img.finalfantasyxiv.com/d/b87f6aa2ebc0b8c4a858b76c6be82094738a6247.png",
+   "https://lds-img.finalfantasyxiv.com/d/fa02faafe16ebea100212e1ae3b89298bc249a7f.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/69697b76c80e8029d46328c3572547055f18e601.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f0a2f77c976f12ddcb056cbfa85e58f298cc85b.png",
+   "https://lds-img.finalfantasyxiv.com/d/4fa45b91f8400b979b436964d31b6c98ce0a40b6.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c1c583a49110fe9ee0c120bb8ef84470d72e1fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/beed1dd5940d6a1c73a65d2df23e0bba94553e70.png",
+   "https://lds-img.finalfantasyxiv.com/d/40d9f18cff0687b38369f777aa53289e7b9fbdec.png",
+   "https://lds-img.finalfantasyxiv.com/d/bbb6cc31f11ffe457f6e893d48924739c1ded02a.png",
+   "https://lds-img.finalfantasyxiv.com/d/c8b07f7484cef5f2ea4a7a3b11fd71d2526a7eb6.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1f27df2db64f7037b01bd9bd45118f4f6a68411.png",
+   "https://lds-img.finalfantasyxiv.com/d/fae7c03f0a715ea2494d384a5a4b38fd3a7a558b.png",
+   "https://lds-img.finalfantasyxiv.com/d/3fe6e2871437862b13263261354d1e9b0432a96f.png",
+   "https://lds-img.finalfantasyxiv.com/d/077f033d215fc2852c0a24294344701a413d7fc6.png",
+   "https://lds-img.finalfantasyxiv.com/d/82a09097dac30def5de8b72764c3858736210818.png",
+   "https://lds-img.finalfantasyxiv.com/d/7024a69ca8e1a03ac68e8680380d47e443f6e6a3.png",
+   "https://lds-img.finalfantasyxiv.com/d/82f321a762fc70566c427f2e2dfda71ce4e0718b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/gvfgWwdxX8k5DopnZESHB-hxJQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "トゥルースラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a456526b20c613a31c9ff03a7cd8d69ab328a4c8.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：230",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：230"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "ボーパルスラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85a78cf7b49d80ab94aa206b385563ffa0222346.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：280",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：130<br/>コンボ条件：トゥルースラストおよび竜眼雷電<br/>コンボ時威力：280"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "ライフサージ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eb7e59cbec93afbdf7a3cecd0e164c545ea8dec2.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "効果時間中に実行する1回のウェポンスキルが必ずクリティカルヒットし、かつＨＰを吸収する。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nこの効果は、継続ダメージなどのステータスには適用されない。\n効果時間：5秒\n最大チャージ数：2",
+     "descriptionHtml": "効果時間中に実行する1回のウェポンスキルが必ずクリティカルヒットし、かつＨＰを吸収する。<br/>クリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>この効果は、継続ダメージなどのステータスには適用されない。<br/>効果時間：5秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "ピアシングタロン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b34933ec0ea122c75fd1deeb69f3b9df942dbdc1.png",
+     "skillCellText": "ピアシングタロン\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に遠隔物理攻撃。\n威力：200\nピアシングタロン効果アップ時威力：350",
+     "descriptionHtml": "対象に遠隔物理攻撃。<br/>威力：200<br/>ピアシングタロン効果アップ時威力：350"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "ディセムボウル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d5052c9c0d1bf846c9a4fb70497dd1cea97ceca6.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：250\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：140<br/>コンボ条件：トゥルースラストおよび竜眼雷電<br/>コンボ時威力：250<br/>コンボボーナス：自身に「竜槍」を付与する。<br/>効果時間：30秒<br/>竜槍効果：自身の与ダメージを10％上昇させる。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "フルスラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34a78b866a4906267ee8f0e93457cb22b5550b9d.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：100\nコンボ条件：ボーパルスラスト\nコンボ時威力：380",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：100<br/>コンボ条件：ボーパルスラスト<br/>コンボ時威力：380"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "ランスチャージ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cb90fa2f691cd58f5b068f6088550b3d56c2bd73.png",
+     "skillCellText": "ランスチャージ\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の与ダメージを10％上昇させる。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の与ダメージを10％上昇させる。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "ジャンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/15919e7dd2c5589a71f3c5115c3cb1e5b02f7572.png",
+     "skillCellText": "ジャンプ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象にジャンプで近づきつつ物理攻撃。\n威力：320\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒",
+     "descriptionHtml": "対象にジャンプで近づきつつ物理攻撃。<br/>威力：320<br/>攻撃後は元の位置に戻る。<br/>追加効果：自身に「ミラージュダイブ実行可」を付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "イルーシブジャンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a13b9738eba1cfa6331a577992a05fbf8e29b12e.png",
+     "skillCellText": "イルーシブジャンプ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の15m後方に大きくジャンプする。\n追加効果：自身に「ピアシングタロン効果アップ」を付与する。\n効果時間：15秒\nバインド中は実行不可。",
+     "descriptionHtml": "自身の15m後方に大きくジャンプする。<br/>追加効果：自身に「ピアシングタロン効果アップ」を付与する。<br/>効果時間：15秒<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "ドゥームスパイク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1e6e09c76f8847d3caf2ee330400848219460dfa.png",
+     "skillCellText": "ドゥームスパイク\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：110",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：110"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "ウィンググライド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/970713e35721fcecc8fce83a6064c984bdeb22c3.png",
+     "skillCellText": "ウィンググライド\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "敵単体を対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "敵単体を対象とする。<br/>対象の目前まで素早く移動する。<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "桜華狂咲おうかきょうしょう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b77850f0a67953c4b4a13228788bdc1ec41c20fc.png",
+     "acquired": [
+      {
+       "class": "槍術士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/u/k_Q1zZVmdBmR240Xj6jDJGMiMA.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：100\n背面攻撃時威力：140\nコンボ条件：ディセムボウル\nコンボ時威力：220\nコンボ時かつ背面攻撃時威力：260\nコンボボーナス：対象に継続ダメージを付与する。\n威力：40\n効果時間：24秒",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：100<br/>背面攻撃時威力：140<br/>コンボ条件：ディセムボウル<br/>コンボ時威力：220<br/>コンボ時かつ背面攻撃時威力：260<br/>コンボボーナス：対象に継続ダメージを付与する。<br/>威力：40<br/>効果時間：24秒"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "ドラゴンダイブ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2d62c093eb2ccde88c41512eba79a759d3b1731.png",
+     "skillCellText": "ドラゴンダイブ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に「ドラゴンライズ実行可」を付与する。\n効果時間：30秒\nバインド中は実行不可。",
+     "descriptionHtml": "対象にジャンプで近づきつつ火属性範囲物理攻撃。<br/>威力：500<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身に「ドラゴンライズ実行可」を付与する。<br/>効果時間：30秒<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "バトルリタニー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/705282791cafca1896aafcb629217ccf272fa317.png",
+     "skillCellText": "バトルリタニー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーのクリティカル発動率を10％上昇させる。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーのクリティカル発動率を10％上昇させる。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "竜牙竜爪りゅうがりゅうそう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bcf8b96ea7064ae0c532cb80fa44d59ec5fa9208.png",
+     "skillCellText": "竜牙竜爪りゅうがりゅうそう\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：140\n側面攻撃時威力：180\nコンボ条件：ヘヴンスラスト\nコンボ時威力：300\nコンボ時かつ側面攻撃時威力：340",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：140<br/>側面攻撃時威力：180<br/>コンボ条件：ヘヴンスラスト<br/>コンボ時威力：300<br/>コンボ時かつ側面攻撃時威力：340"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "竜尾大車輪りゅうびだいしゃりん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85d31ee98aca28156e6dbfcfc17473bb90d1c044.png",
+     "skillCellText": "竜尾大車輪りゅうびだいしゃりん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：桜華繚乱\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：140<br/>背面攻撃時威力：180<br/>コンボ条件：桜華繚乱<br/>コンボ時威力：300<br/>コンボ時かつ背面攻撃時威力：340"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "ゲイルスコグル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fd17ed870b46d4f1cb7dfbbfe36232a69ffab25.png",
+     "skillCellText": "ゲイルスコグル\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "15m",
+     "radius": "15m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：280\n2体目以降の対象への威力は50％減少する。\n追加効果：自身が「紅の竜血」状態に変化する。\n効果時間：20秒\n紅の竜血効果：自身の与ダメージを15％上昇させる。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：280<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：自身が「紅の竜血」状態に変化する。<br/>効果時間：20秒<br/>紅の竜血効果：自身の与ダメージを15％上昇させる。<br/>追加効果：自身に「ナーストレンド実行可」を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "ソニックスラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86993377c3b82442fd98d9ccaf2c8e007b110d3e.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ドゥームスパイクおよび竜眼蒼穹\nコンボ時威力：120\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：100<br/>コンボ条件：ドゥームスパイクおよび竜眼蒼穹<br/>コンボ時威力：120<br/>コンボボーナス：自身に「竜槍」を付与する。<br/>効果時間：30秒<br/>竜槍効果：自身の与ダメージを10％上昇させる。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "雲蒸竜変うんじょうりゅうへん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1bc31e46fb90bda5697cf272e0df8b9ac8086b13.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：460\nコンボ条件：竜尾大車輪および竜牙竜爪\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n発動条件：竜牙竜爪または竜尾大車輪をコンボ状態で実行したとき\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：460<br/>コンボ条件：竜尾大車輪および竜牙竜爪<br/>コンボボーナス：自身に「竜眼」を付与する。<br/>効果時間：30秒<br/>発動条件：竜牙竜爪または竜尾大車輪をコンボ状態で実行したとき<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "ミラージュダイブ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/838933d8bbe091490defd8b0c455c1b6cd553f21.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：380\n発動条件：ジャンプ、ハイジャンプの実行後に付与される「ミラージュダイブ実行可」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：380<br/>発動条件：ジャンプ、ハイジャンプの実行後に付与される「ミラージュダイブ実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "ナーストレンド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8e8ee9ce030d0945ab1983fa282569bf9359e77b.png",
+     "skillCellText": "ナーストレンド\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "15m",
+     "radius": "15m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：720\n2体目以降の対象への威力は50％減少する。\n発動条件：「ナーストレンド実行可」効果中",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：720<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：「ナーストレンド実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "クルザントーメント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27c2b3ef23b6bbe6b322b8a0bade3e00e04727b1.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ソニックスラスト\nコンボ時威力：150\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：100<br/>コンボ条件：ソニックスラスト<br/>コンボ時威力：150<br/>コンボボーナス：自身に「竜眼」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "ハイジャンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/43bde23e743d27c8dd8c0a29020671f33fbb1ac6.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象にジャンプで近づきつつ物理攻撃。\n威力：400\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒",
+     "descriptionHtml": "対象にジャンプで近づきつつ物理攻撃。<br/>威力：400<br/>攻撃後は元の位置に戻る。<br/>追加効果：自身に「ミラージュダイブ実行可」を付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "竜眼雷電りゅうがんらいでん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e6c9b8537cca3034858fb078bb6100232c6e23c7.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：320\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトゥルースラストが竜眼雷電に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：320<br/>追加効果：自身に「天竜眼」を付与する。<br/>発動条件：「竜眼」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとトゥルースラストが竜眼雷電に変化する。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "スターダイバー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/65fe43d4e61e67defd885819e6f7d1c8fb1c9ea8.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：840\n2体目以降の対象への威力は40％減少する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：「紅の竜血」効果中\nバインド中は実行不可。",
+     "descriptionHtml": "対象にジャンプで近づきつつ火属性範囲物理攻撃。<br/>威力：840<br/>2体目以降の対象への威力は40％減少する。<br/>追加効果：自身に「スタークロッサー実行可」を付与する。<br/>効果時間：20秒<br/>この効果は「紅の竜血」の効果が切れると解除される。<br/>発動条件：「紅の竜血」効果中<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "竜眼蒼穹りゅうがんそうきゅう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8d26d75ca622ec9c3ebdb2c9810f3a8981f04710.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：130\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドゥームスパイクが竜眼蒼穹に変化する。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：130<br/>追加効果：自身に「天竜眼」を付与する。<br/>発動条件：「竜眼」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとドゥームスパイクが竜眼蒼穹に変化する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "ヘヴンスラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d710d7f61fe3638ab7d5bb12c6e58c2585c4faa7.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：160\nコンボ条件：スラストラッシュ\nコンボ時威力：460",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：160<br/>コンボ条件：スラストラッシュ<br/>コンボ時威力：460"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "桜華繚乱おうかりょうらん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa6d2bfbf0b127a283fa2ca3679b3dcb23515ee0.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：スパイラルブロウ\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\nコンボボーナス：対象に継続ダメージを付与する。\n威力：45\n効果時間：24秒",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：140<br/>背面攻撃時威力：180<br/>コンボ条件：スパイラルブロウ<br/>コンボ時威力：300<br/>コンボ時かつ背面攻撃時威力：340<br/>コンボボーナス：対象に継続ダメージを付与する。<br/>威力：45<br/>効果時間：24秒"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "天竜点睛てんりゅうてんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/40c1c2685a3b7778e1afe54476cfc68e6f2745fd.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "15m",
+     "radius": "15m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：440\n2体目以降の対象への威力は50％減少する。\n発動条件：「天竜眼」2",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：440<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：「天竜眼」2"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "ドラゴンライズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4d7cca717dd43f7598d848d99886ccaec3835bad.png",
+     "skillCellText": "ドラゴンライズ\n前提クエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：550\n2体目以降の対象への威力は50％減少する。\n発動条件：「ドラゴンライズ実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：550<br/>2体目以降の対象への威力は50％減少する。<br/>発動条件：「ドラゴンライズ実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "スラストラッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a5743cd6a29dd664a044690a6e98f3ddeb05eb5a.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：340",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：130<br/>コンボ条件：トゥルースラストおよび竜眼雷電<br/>コンボ時威力：340"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "スパイラルブロウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b87f6aa2ebc0b8c4a858b76c6be82094738a6247.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：300\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：140<br/>コンボ条件：トゥルースラストおよび竜眼雷電<br/>コンボ時威力：300<br/>コンボボーナス：自身に「竜槍」を付与する。<br/>効果時間：30秒<br/>竜槍効果：自身の与ダメージを10％上昇させる。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "スタークロッサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa02faafe16ebea100212e1ae3b89298bc249a7f.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は40％減少する。\n発動条件：「スタークロッサー実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：1000<br/>2体目以降の対象への威力は40％減少する。<br/>発動条件：「スタークロッサー実行可」効果中"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：800",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "レッグスウィープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象をスタンさせる。\n効果時間：3秒",
+     "descriptionHtml": "対象をスタンさせる。<br/>効果時間：3秒"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "牽制けんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "アームズレングス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 32,
+     "jobclassText": "Lv32",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒<br/>追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "トゥルーノース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "ジャンプ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c5dedb70ceeba4055bd3ae73297953f986e4019.png",
+     "skillCellText": "ジャンプ効果こうかアップ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "ジャンプの威力を320に上昇させる。",
+     "descriptionHtml": "ジャンプの威力を320に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "紅あかの竜血りゅうけつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c9d5b7f74c9107188eec0bb2cad21e3081113382.png",
+     "skillCellText": "紅あかの竜血りゅうけつ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "description": "自身に付与される「蒼の竜血」が「紅の竜血」に変化する。\n紅の竜血効果：自身の与ダメージを15％上昇させる。\nさらに、自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n発動条件：ゲイルスコグルの命中時",
+     "descriptionHtml": "自身に付与される「蒼の竜血」が「紅の竜血」に変化する。<br/>紅の竜血効果：自身の与ダメージを15％上昇させる。<br/>さらに、自身に「ナーストレンド実行可」を付与する。<br/>効果時間：20秒<br/>発動条件：ゲイルスコグルの命中時"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "ジャンプマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/487203b1d939fa5da7aaec335a10c30bae150ca5.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "ジャンプがハイジャンプに変化する。",
+     "descriptionHtml": "ジャンプがハイジャンプに変化する。"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "ランスマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4da1e6e139afd6c3c1d6db696410641aab50b31d.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "description": "竜牙竜爪または竜尾大車輪の命中直後に雲蒸竜変の実行に成功すると、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はトゥルースラストが「竜眼雷電」に変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nトゥルースラストの威力：230\nボーパルスラストの威力：130\nピアシングタロンの威力：200\nピアシングタロン効果アップ時のピアシングタロンの威力：350\nディセムボウルの威力：140",
+     "descriptionHtml": "竜牙竜爪または竜尾大車輪の命中直後に雲蒸竜変の実行に成功すると、自身に「竜眼」を付与する。<br/>効果時間：30秒<br/>この効果はウェポンスキルによる近接攻撃を実行すると解除される。<br/>効果時間中はトゥルースラストが「竜眼雷電」に変化する。<br/>さらに、特定のアクションの威力を上昇させる。<br/><br/>トゥルースラストの威力：230<br/>ボーパルスラストの威力：130<br/>ピアシングタロンの威力：200<br/>ピアシングタロン効果アップ時のピアシングタロンの威力：350<br/>ディセムボウルの威力：140"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "クルザントーメント効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a5cb24b338a7fda93626df156a3a6ef0352103a0.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "クルザントーメントのコンボ成功時に、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はドゥームスパイクが「竜眼蒼穹」に変化する。",
+     "descriptionHtml": "クルザントーメントのコンボ成功時に、自身に「竜眼」を付与する。<br/>効果時間：30秒<br/>この効果はウェポンスキルによる近接攻撃を実行すると解除される。<br/>効果時間中はドゥームスパイクが「竜眼蒼穹」に変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "ウィンググライド効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ccdadc18ab7137d11372e01419e8589ef06a94e8.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "ウィンググライドがチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "ウィンググライドがチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "ランスマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1d331630aba68af2ef45a7c0b7270529c9b7b9ea.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "description": "フルスラストがヘヴンスラストに変化し、桜華狂咲が桜華繚乱に変化する。\nさらに、雲蒸竜変の威力を400に上昇させる。",
+     "descriptionHtml": "フルスラストがヘヴンスラストに変化し、桜華狂咲が桜華繚乱に変化する。<br/>さらに、雲蒸竜変の威力を400に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "ライフサージ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/518467072242157cd4a519d8f99ee64cc2a51769.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "ライフサージがチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "ライフサージがチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "ランスマスタリーIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f3e1a3378cc09d6e54c6be2a920c432b47845cc.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "竜眼雷電および竜眼蒼穹の実行に成功すると、自身に「天竜眼」を付与する。\n最大スタック数：2\nさらに、特定のアクションの威力を上昇させる。\n\nゲイルスコグルの威力：280\nナーストレンドの威力：720",
+     "descriptionHtml": "竜眼雷電および竜眼蒼穹の実行に成功すると、自身に「天竜眼」を付与する。<br/>最大スタック数：2<br/>さらに、特定のアクションの威力を上昇させる。<br/><br/>ゲイルスコグルの威力：280<br/>ナーストレンドの威力：720"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "ドラゴンダイブ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9620c52ce9377062039809fc58e3b38a00872b97.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "自身に「ドラゴンライズ実行可」が付与される。\n効果時間：30秒\n発動条件：ドラゴンダイブ実行時",
+     "descriptionHtml": "自身に「ドラゴンライズ実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：ドラゴンダイブ実行時"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c948f409f459cc6cc4983962f78d071f06ef5b8.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\n竜牙竜爪の威力：140\n竜尾大車輪の威力：140\n雲蒸竜変の威力：460\n竜眼雷電の威力：320\nスターダイバーの威力：840\nヘヴンスラストの威力：160\n桜華繚乱の威力：140\n天竜点睛の威力：440",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>竜牙竜爪の威力：140<br/>竜尾大車輪の威力：140<br/>雲蒸竜変の威力：460<br/>竜眼雷電の威力：320<br/>スターダイバーの威力：840<br/>ヘヴンスラストの威力：160<br/>桜華繚乱の威力：140<br/>天竜点睛の威力：440"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "ランスマスタリーIVふぉー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/846403f0c92dee00d9b075f5133f9eb5096afdc1.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "ボーパルスラストがスラストラッシュに、ディセムボウルがスパイラルブロウに変化する。",
+     "descriptionHtml": "ボーパルスラストがスラストラッシュに、ディセムボウルがスパイラルブロウに変化する。"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "スターダイバー効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73946f68f294a53d5bcdbeca5e43b9016e07d91f.png",
+     "acquired": [
+      {
+       "class": "竜騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/1/zWRkXGJIJhN7WHGGv1gVscRxmA.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「スタークロッサー実行可」が付与される。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：スターダイバー実行時",
+     "descriptionHtml": "自身に「スタークロッサー実行可」が付与される。<br/>効果時間：20秒<br/>この効果は「紅の竜血」の効果が切れると解除される。<br/>発動条件：スターダイバー実行時"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "内丹の回復力を800に上昇させる。",
+     "descriptionHtml": "内丹の回復力を800に上昇させる。"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "牽制けんせい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "牽制の効果時間を15秒に延長する。",
+     "descriptionHtml": "牽制の効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "竜眼雷電りゅうがんらいでん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/69697b76c80e8029d46328c3572547055f18e601.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：5000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "竜牙竜爪りゅうがりゅうそう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f0a2f77c976f12ddcb056cbfa85e58f298cc85b.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\nコンボ条件：竜眼雷電\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/>コンボ条件：竜眼雷電<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "竜尾大車輪りゅうびだいしゃりん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4fa45b91f8400b979b436964d31b6c98ce0a40b6.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：竜牙竜爪\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：竜牙竜爪<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "雲蒸竜変うんじょうりゅうへん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c1c583a49110fe9ee0c120bb8ef84470d72e1fd.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：8000\nコンボ条件：竜尾大車輪\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：8000<br/>コンボ条件：竜尾大車輪<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "桜華繚乱おうかりょうらん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/beed1dd5940d6a1c73a65d2df23e0bba94553e70.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：9000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：与ダメージの200％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：9000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>追加効果：与ダメージの200％分のＨＰを吸収する。<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "ゲイルスコグル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/40d9f18cff0687b38369f777aa53289e7b9fbdec.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "15m",
+     "radius": "15m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：5000\n追加効果：自身に「紅の竜血」を付与する。\n効果時間：10秒\n紅の竜血効果：自身の与ダメージを25％上昇させる代わりに被ダメージが15％上昇する。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがナーストレンドに変化する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がスタークロッサーに変化する。\nこの効果は紅の竜血の効果が切れると解除される。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：5000<br/>追加効果：自身に「紅の竜血」を付与する。<br/>効果時間：10秒<br/>紅の竜血効果：自身の与ダメージを25％上昇させる代わりに被ダメージが15％上昇する。<br/>追加効果：自身に「ナーストレンド実行可」を付与する。<br/>効果時間：10秒<br/>効果中はこのアクションがナーストレンドに変化する。<br/>追加効果：自身に「スタークロッサー実行可」を付与する。<br/>効果時間：10秒<br/>効果中は「コンボ：雲蒸竜変」がスタークロッサーに変化する。<br/>この効果は紅の竜血の効果が切れると解除される。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "ハイジャンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bbb6cc31f11ffe457f6e893d48924739c1ded02a.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象にジャンプで近づきつつ物理攻撃。\n威力：6000\n追加効果：自身に「ヘヴンスラスト実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がヘヴンスラストに変化する。\nバインド中は実行不可。",
+     "descriptionHtml": "対象にジャンプで近づきつつ物理攻撃。<br/>威力：6000<br/>追加効果：自身に「ヘヴンスラスト実行可」を付与する。<br/>効果時間：10秒<br/>効果中は「コンボ：雲蒸竜変」がヘヴンスラストに変化する。<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "イルーシブジャンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c8b07f7484cef5f2ea4a7a3b11fd71d2526a7eb6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の15m後方に大きくジャンプする。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：5秒\n追加効果：自身に「天竜眼」を付与する。\n効果時間：10秒\nこのアクションを実行すると天竜点睛に変化する。",
+     "descriptionHtml": "自身の15m後方に大きくジャンプする。<br/>ヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。<br/>追加効果：自身の移動速度を25％上昇させる。<br/>効果時間：5秒<br/>追加効果：自身に「天竜眼」を付与する。<br/>効果時間：10秒<br/>このアクションを実行すると天竜点睛に変化する。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "ホリッドロア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1f27df2db64f7037b01bd9bd45118f4f6a68411.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "10m",
+     "description": "自身の周囲の敵に範囲魔法攻撃。\n威力：3000\n追加効果：対象から自身へのダメージを50％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "自身の周囲の敵に範囲魔法攻撃。<br/>威力：3000<br/>追加効果：対象から自身へのダメージを50％減少させる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "ヘヴンスラスト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fae7c03f0a715ea2494d384a5a4b38fd3a7a558b.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：10000\n発動条件：「ヘヴンスラスト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：10000<br/>発動条件：「ヘヴンスラスト実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "スタークロッサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3fe6e2871437862b13263261354d1e9b0432a96f.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n発動条件：「スタークロッサー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：12000<br/>発動条件：「スタークロッサー実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "ナーストレンド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/077f033d215fc2852c0a24294344701a413d7fc6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "15m",
+     "radius": "15m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：5000～10000\n対象の残りＨＰが少ないほど威力が上昇し、50％以下だと最大になる。\n実行時に「紅の竜血」の効果が切れる。\n発動条件：「ナーストレンド実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：5000～10000<br/>対象の残りＨＰが少ないほど威力が上昇し、50％以下だと最大になる。<br/>実行時に「紅の竜血」の効果が切れる。<br/>発動条件：「ナーストレンド実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "天竜点睛てんりゅうてんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/82a09097dac30def5de8b72764c3858736210818.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "20m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：8000～16000\n対象との距離が離れているほど威力が上昇し、15mで最大になる。\n発動条件：「天竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：8000～16000<br/>対象との距離が離れているほど威力が上昇し、15mで最大になる。<br/>発動条件：「天竜眼」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "スカイハイ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7024a69ca8e1a03ac68e8680380d47e443f6e6a3.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "上空に高く飛び上がり、ターゲットをされない状態になる。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\nまた、効果中は移動することができ、移動速度が50％上昇する。\n効果時間：4秒\n効果時間が経過するか、効果時間中に「スカイシャッター」を実行すると、周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5ｍ以内の場合は、威力が2倍になる。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとスカイシャッターに変化する。",
+     "descriptionHtml": "上空に高く飛び上がり、ターゲットをされない状態になる。<br/>ヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。<br/>また、効果中は移動することができ、移動速度が50％上昇する。<br/>効果時間：4秒<br/>効果時間が経過するか、効果時間中に「スカイシャッター」を実行すると、周囲の敵に範囲物理攻撃を実行する。<br/>威力：16000<br/>対象との距離が5ｍ以内の場合は、威力が2倍になる。<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：90秒<br/>このアクションを実行するとスカイシャッターに変化する。"
+    },
+    {
+     "rowId": "pvplimitbreakaction_02",
+     "name": "スカイシャッター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/82f321a762fc70566c427f2e2dfda71ce4e0718b.png",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "10m",
+     "description": "自身に付与した「スカイハイ」の効果を終了させて周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5m以内の場合は、威力が2倍になる。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力24000相当\n効果時間：10秒\n発動条件：「スカイハイ」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身に付与した「スカイハイ」の効果を終了させて周囲の敵に範囲物理攻撃を実行する。<br/>威力：16000<br/>対象との距離が5m以内の場合は、威力が2倍になる。<br/>追加効果：自身に一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力24000相当<br/>効果時間：10秒<br/>発動条件：「スカイハイ」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒",
+     "descriptionHtml": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "スウィフト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。",
+     "descriptionHtml": "自身の移動速度を100％上昇させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>この効果はマウントに騎乗すると解除される。"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "スマイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000～18000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。<br/>自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "アクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__dragoon_04",
+    "steps": [
+     {
+      "name": "トゥルースラスト",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a456526b20c613a31c9ff03a7cd8d69ab328a4c8.png"
+     },
+     {
+      "name": "竜眼雷電\n※「竜眼」効果中",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e6c9b8537cca3034858fb078bb6100232c6e23c7.png"
+     },
+     {
+      "name": "スラストラッシュ\n（ボーパルスラスト）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a5743cd6a29dd664a044690a6e98f3ddeb05eb5a.png"
+     },
+     {
+      "name": "ヘヴンスラスト\n（フルスラスト）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/d710d7f61fe3638ab7d5bb12c6e58c2585c4faa7.png"
+     },
+     {
+      "name": "竜牙竜爪",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/bcf8b96ea7064ae0c532cb80fa44d59ec5fa9208.png"
+     },
+     {
+      "name": "スパイラルブロウ\n（ディセムボウル）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/b87f6aa2ebc0b8c4a858b76c6be82094738a6247.png"
+     },
+     {
+      "name": "桜華繚乱\n（桜華狂咲）",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/fa6d2bfbf0b127a283fa2ca3679b3dcb23515ee0.png"
+     },
+     {
+      "name": "竜尾大車輪",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/85d31ee98aca28156e6dbfcfc17473bb90d1c044.png"
+     },
+     {
+      "name": "雲蒸竜変",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/1bc31e46fb90bda5697cf272e0df8b9ac8086b13.png"
+     }
+    ],
+    "effect": "瞬発的な総威力が最も大きいコンボです。\nレベル86で修得する特性によって「フルスラスト」が「ヘヴンスラスト」に変化し、Lv96で修得する特性によって「ボーパルスラスト」が「スラストラッシュ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。"
+   },
+   {
+    "class": "job__combo__root job__combo__dragoon_03",
+    "steps": [
+     {
+      "name": "ドゥームスパイク",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/1e6e09c76f8847d3caf2ee330400848219460dfa.png"
+     },
+     {
+      "name": "ソニックスラスト",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/86993377c3b82442fd98d9ccaf2c8e007b110d3e.png"
+     },
+     {
+      "name": "クルザントーメント",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/27c2b3ef23b6bbe6b322b8a0bade3e00e04727b1.png"
+     }
+    ],
+    "effect": "自身の与ダメージを上昇する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n「竜眼」が付与されます。"
+   }
+  ],
+  "allText": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nトゥルースラスト\n\n竜眼雷電\n※「竜眼」効果中\n\nスラストラッシュ\n（ボーパルスラスト）\n\nヘヴンスラスト\n（フルスラスト）\n\n竜牙竜爪\n\n瞬発的な総威力が最も大きいコンボです。\nレベル86で修得する特性によって「フルスラスト」が「ヘヴンスラスト」に変化し、Lv96で修得する特性によって「ボーパルスラスト」が「スラストラッシュ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\nスパイラルブロウ\n（ディセムボウル）\n\n桜華繚乱\n（桜華狂咲）\n\n竜尾大車輪\n\n自身の与ダメージを上昇する効果を得られるコンボです。\nレベル86で修得する特性によって「桜華狂咲」が「桜華繚乱」に変化し、Lv96で修得する特性によって「ディセムボウル」が「スパイラルブロウ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\n雲蒸竜変\n\nドゥームスパイク\n\nソニックスラスト\n\nクルザントーメント\n\n自身の与ダメージを上昇する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n「竜眼」が付与されます。\n\n※カッコ（）内は特性修得前のアクションです。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "竜血ゲージ",
+    "images": []
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/j/r_EMLbj61FGx5sEAaDiFvcFFF4.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/T/r50M7FweJEDdmOIEc_WgCleyJ0.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/s/QbVrhBMBq-VUi7fkPZO3U7BWQU.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\n竜血ゲージ\n\nアクション「ゲイルスコグル」を修得すると、\"蒼の竜血\"の効果時間が確認できる「竜血ゲージ」が表示されるようになります。\n「ゲイルスコグル」を実行し、蒼の竜血状態に移行することで、自身の与ダメージを上昇させることができます。\n\nレベル70で特性「紅の竜血」を修得すると、「竜血ゲージ」で\"紅の竜血\"の効果時間が確認できるようになります。\n「ゲイルスコグル」を実行すると紅の竜血状態となり、自身の与ダメージが上昇し、強力なアクション「ナーストレンド」やレベル80で修得する「スターダイバー」を実行できます。\n\nレベル90で特性「ランスマスタリーIII」を修得すると、「竜眼雷電」および「竜眼蒼穹」の実行時に\"天竜眼\"が付与されるようになります。\n天竜眼を最大値まで付与することで、アクション「天竜点睛」を実行できます。\n\nシンプルモード\n\n「蒼の竜血」状態\n\n「紅の竜血」状態\n\n「天竜眼」付与状態",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">竜血ゲージ</h3>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/U/T2yaxEHbVnDGfaX5N2wsmxFmgM.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「ゲイルスコグル」</span>を修得すると、<span class=\"txt_red\">\"蒼の竜血\"</span>の効果時間が確認できる<span class=\"txt_red\">「竜血ゲージ」</span>が表示されるようになります。<br/>「ゲイルスコグル」を実行し、蒼の竜血状態に移行することで、自身の与ダメージを上昇させることができます。</p>\n</div>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/G/-im224XA8oWWSknUM7c4je-E1I.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル70で特性<span class=\"txt_red\">「紅の竜血」</span>を修得すると、「竜血ゲージ」で<span class=\"txt_red\">\"紅の竜血\"</span>の効果時間が確認できるようになります。<br/><span class=\"txt_red\">「ゲイルスコグル」</span>を実行すると紅の竜血状態となり、自身の与ダメージが上昇し、強力なアクション<span class=\"txt_red\">「ナーストレンド」</span>やレベル80で修得する<span class=\"txt_red\">「スターダイバー」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/t/5PRCK8_YSpn6Pj6WeIeicnurUs.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル90で特性<span class=\"txt_red\">「ランスマスタリーIII」</span>を修得すると、<span class=\"txt_red\">「竜眼雷電」</span>および<span class=\"txt_red\">「竜眼蒼穹」</span>の実行時に\"天竜眼\"が付与されるようになります。<br/>天竜眼を最大値まで付与することで、アクション<span class=\"txt_red\">「天竜点睛」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/j/r_EMLbj61FGx5sEAaDiFvcFFF4.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「蒼の竜血」状態</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/T/r50M7FweJEDdmOIEc_WgCleyJ0.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「紅の竜血」状態</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/s/QbVrhBMBq-VUi7fkPZO3U7BWQU.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「天竜眼」付与状態</p>\n</td>\n<td></td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/U/T2yaxEHbVnDGfaX5N2wsmxFmgM.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/G/-im224XA8oWWSknUM7c4je-E1I.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/5PRCK8_YSpn6Pj6WeIeicnurUs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/j/r_EMLbj61FGx5sEAaDiFvcFFF4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/T/r50M7FweJEDdmOIEc_WgCleyJ0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/s/QbVrhBMBq-VUi7fkPZO3U7BWQU.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nトゥルースラスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：230\n\nボーパルスラスト\n\nLv4\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：280\n\nライフサージ\n\nLv6\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回のウェポンスキルが必ずクリティカルヒットし、かつＨＰを吸収する。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nこの効果は、継続ダメージなどのステータスには適用されない。\n効果時間：5秒\n最大チャージ数：2\n\nピアシングタロン\n\nクラスクエスト\n\nLv15\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\nピアシングタロン効果アップ時威力：350\n\nディセムボウル\n\nLv18\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：250\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\nフルスラスト\n\nLv26\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：ボーパルスラスト\nコンボ時威力：380\n\nランスチャージ\n\nクラスクエスト\n\nLv30\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の与ダメージを10％上昇させる。\n効果時間：20秒\n\nジャンプ\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：320\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒\n\nイルーシブジャンプ\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の15m後方に大きくジャンプする。\n追加効果：自身に「ピアシングタロン効果アップ」を付与する。\n効果時間：15秒\nバインド中は実行不可。\n\nドゥームスパイク\n\nジョブクエスト\n\nLv40\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：110\n\nウィンググライド\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n0m\n\n敵単体を対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\n桜華狂咲おうかきょうしょう\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\n背面攻撃時威力：140\nコンボ条件：ディセムボウル\nコンボ時威力：220\nコンボ時かつ背面攻撃時威力：260\nコンボボーナス：対象に継続ダメージを付与する。\n威力：40\n効果時間：24秒\n\nドラゴンダイブ\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n120秒\n-\n\n20m\n\n5m\n\n対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に「ドラゴンライズ実行可」を付与する。\n効果時間：30秒\nバインド中は実行不可。\n\nバトルリタニー\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーのクリティカル発動率を10％上昇させる。\n効果時間：20秒\n\n竜牙竜爪りゅうがりゅうそう\n\nジョブクエスト\n\nLv56\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n側面攻撃時威力：180\nコンボ条件：ヘヴンスラスト\nコンボ時威力：300\nコンボ時かつ側面攻撃時威力：340\n\n竜尾大車輪りゅうびだいしゃりん\n\nジョブクエスト\n\nLv58\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：桜華繚乱\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\n\nゲイルスコグル\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：280\n2体目以降の対象への威力は50％減少する。\n追加効果：自身が「紅の竜血」状態に変化する。\n効果時間：20秒\n紅の竜血効果：自身の与ダメージを15％上昇させる。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n\nソニックスラスト\n\nLv62\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ドゥームスパイクおよび竜眼蒼穹\nコンボ時威力：120\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\n雲蒸竜変うんじょうりゅうへん\n\nLv64\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：460\nコンボ条件：竜尾大車輪および竜牙竜爪\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n発動条件：竜牙竜爪または竜尾大車輪をコンボ状態で実行したとき\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する。\n\nミラージュダイブ\n\nLv68\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n0m\n\n対象に物理攻撃。\n威力：380\n発動条件：ジャンプ、ハイジャンプの実行後に付与される「ミラージュダイブ実行可」効果中\n\nナーストレンド\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n2秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：720\n2体目以降の対象への威力は50％減少する。\n発動条件：「ナーストレンド実行可」効果中\n\nクルザントーメント\n\nLv72\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ソニックスラスト\nコンボ時威力：150\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n\nハイジャンプ\n\nLv74\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：400\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒\n\n竜眼雷電りゅうがんらいでん\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：320\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトゥルースラストが竜眼雷電に変化する。\n\nスターダイバー\n\nLv80\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n5m\n\n対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：840\n2体目以降の対象への威力は40％減少する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：「紅の竜血」効果中\nバインド中は実行不可。\n\n竜眼蒼穹りゅうがんそうきゅう\n\nLv82\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：130\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドゥームスパイクが竜眼蒼穹に変化する。\n\nヘヴンスラスト\n\nLv86\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：160\nコンボ条件：スラストラッシュ\nコンボ時威力：460\n\n桜華繚乱おうかりょうらん\n\nLv86\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：スパイラルブロウ\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\nコンボボーナス：対象に継続ダメージを付与する。\n威力：45\n効果時間：24秒\n\n天竜点睛てんりゅうてんせい\n\nLv90\n\nアビリティ\nInstant\n10秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：440\n2体目以降の対象への威力は50％減少する。\n発動条件：「天竜眼」2\n\nドラゴンライズ\n\n前提クエスト\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：550\n2体目以降の対象への威力は50％減少する。\n発動条件：「ドラゴンライズ実行可」効果中\n\nスラストラッシュ\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：340\n\nスパイラルブロウ\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：300\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\nスタークロッサー\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は40％減少する。\n発動条件：「スタークロッサー実行可」効果中"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nジャンプ効果こうかアップ\n\nジョブクエスト\n\nLv54\n\nジャンプの威力を320に上昇させる。\n\n紅あかの竜血りゅうけつ\n\nジョブクエスト\n\nLv70\n\n自身に付与される「蒼の竜血」が「紅の竜血」に変化する。\n紅の竜血効果：自身の与ダメージを15％上昇させる。\nさらに、自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n発動条件：ゲイルスコグルの命中時\n\nジャンプマスタリー\n\nLv74\n\nジャンプがハイジャンプに変化する。\n\nランスマスタリー\n\nLv76\n\n竜牙竜爪または竜尾大車輪の命中直後に雲蒸竜変の実行に成功すると、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はトゥルースラストが「竜眼雷電」に変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nトゥルースラストの威力：230\nボーパルスラストの威力：130\nピアシングタロンの威力：200\nピアシングタロン効果アップ時のピアシングタロンの威力：350\nディセムボウルの威力：140\n\nクルザントーメント効果こうかアップ\n\nLv82\n\nクルザントーメントのコンボ成功時に、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はドゥームスパイクが「竜眼蒼穹」に変化する。\n\nウィンググライド効果こうかアップ\n\nLv84\n\nウィンググライドがチャージアクションに変化する。\n最大チャージ数：2\n\nランスマスタリーIIつー\n\nLv86\n\nフルスラストがヘヴンスラストに変化し、桜華狂咲が桜華繚乱に変化する。\nさらに、雲蒸竜変の威力を400に上昇させる。\n\nライフサージ効果こうかアップ\n\nLv88\n\nライフサージがチャージアクションに変化する。\n最大チャージ数：2\n\nランスマスタリーIIIすりー\n\nLv90\n\n竜眼雷電および竜眼蒼穹の実行に成功すると、自身に「天竜眼」を付与する。\n最大スタック数：2\nさらに、特定のアクションの威力を上昇させる。\n\nゲイルスコグルの威力：280\nナーストレンドの威力：720\n\nドラゴンダイブ効果こうかアップ\n\nLv92\n\n自身に「ドラゴンライズ実行可」が付与される。\n効果時間：30秒\n発動条件：ドラゴンダイブ実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n竜牙竜爪の威力：140\n竜尾大車輪の威力：140\n雲蒸竜変の威力：460\n竜眼雷電の威力：320\nスターダイバーの威力：840\nヘヴンスラストの威力：160\n桜華繚乱の威力：140\n天竜点睛の威力：440\n\nランスマスタリーIVふぉー\n\nLv96\n\nボーパルスラストがスラストラッシュに、ディセムボウルがスパイラルブロウに変化する。\n\nスターダイバー効果こうかアップ\n\nLv100\n\n自身に「スタークロッサー実行可」が付与される。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：スターダイバー実行時"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "コンボ",
+   "anchor": "anchor__pve_combo",
+   "text": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nトゥルースラスト\n\n竜眼雷電\n※「竜眼」効果中\n\nスラストラッシュ\n（ボーパルスラスト）\n\nヘヴンスラスト\n（フルスラスト）\n\n竜牙竜爪\n\n瞬発的な総威力が最も大きいコンボです。\nレベル86で修得する特性によって「フルスラスト」が「ヘヴンスラスト」に変化し、Lv96で修得する特性によって「ボーパルスラスト」が「スラストラッシュ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\nスパイラルブロウ\n（ディセムボウル）\n\n桜華繚乱\n（桜華狂咲）\n\n竜尾大車輪\n\n自身の与ダメージを上昇する効果を得られるコンボです。\nレベル86で修得する特性によって「桜華狂咲」が「桜華繚乱」に変化し、Lv96で修得する特性によって「ディセムボウル」が「スパイラルブロウ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\n雲蒸竜変\n\nドゥームスパイク\n\nソニックスラスト\n\nクルザントーメント\n\n自身の与ダメージを上昇する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n「竜眼」が付与されます。\n\n※カッコ（）内は特性修得前のアクションです。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\n竜血ゲージ\n\nアクション「ゲイルスコグル」を修得すると、\"蒼の竜血\"の効果時間が確認できる「竜血ゲージ」が表示されるようになります。\n「ゲイルスコグル」を実行し、蒼の竜血状態に移行することで、自身の与ダメージを上昇させることができます。\n\nレベル70で特性「紅の竜血」を修得すると、「竜血ゲージ」で\"紅の竜血\"の効果時間が確認できるようになります。\n「ゲイルスコグル」を実行すると紅の竜血状態となり、自身の与ダメージが上昇し、強力なアクション「ナーストレンド」やレベル80で修得する「スターダイバー」を実行できます。\n\nレベル90で特性「ランスマスタリーIII」を修得すると、「竜眼雷電」および「竜眼蒼穹」の実行時に\"天竜眼\"が付与されるようになります。\n天竜眼を最大値まで付与することで、アクション「天竜点睛」を実行できます。\n\nシンプルモード\n\n「蒼の竜血」状態\n\n「紅の竜血」状態\n\n「天竜眼」付与状態"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n竜眼雷電りゅうがんらいでん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n竜牙竜爪りゅうがりゅうそう\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：竜眼雷電\n\n※このアクションはホットバーに登録することはできない。\n\n竜尾大車輪りゅうびだいしゃりん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：竜牙竜爪\n\n※このアクションはホットバーに登録することはできない。\n\n雲蒸竜変うんじょうりゅうへん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\nコンボ条件：竜尾大車輪\n\n※このアクションはホットバーに登録することはできない。\n\n桜華繚乱おうかりょうらん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：9000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：与ダメージの200％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\nゲイルスコグル\n\nアビリティ\nInstant\n20秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：5000\n追加効果：自身に「紅の竜血」を付与する。\n効果時間：10秒\n紅の竜血効果：自身の与ダメージを25％上昇させる代わりに被ダメージが15％上昇する。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがナーストレンドに変化する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がスタークロッサーに変化する。\nこの効果は紅の竜血の効果が切れると解除される。\n\nハイジャンプ\n\nアビリティ\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：6000\n追加効果：自身に「ヘヴンスラスト実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がヘヴンスラストに変化する。\nバインド中は実行不可。\n\nイルーシブジャンプ\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の15m後方に大きくジャンプする。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：5秒\n追加効果：自身に「天竜眼」を付与する。\n効果時間：10秒\nこのアクションを実行すると天竜点睛に変化する。\n\nホリッドロア\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n10m\n\n自身の周囲の敵に範囲魔法攻撃。\n威力：3000\n追加効果：対象から自身へのダメージを50％減少させる。\n効果時間：10秒\n\nヘヴンスラスト\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\n発動条件：「ヘヴンスラスト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nスタークロッサー\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n発動条件：「スタークロッサー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nナーストレンド\n\nアビリティ\nInstant\n1秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：5000～10000\n対象の残りＨＰが少ないほど威力が上昇し、50％以下だと最大になる。\n実行時に「紅の竜血」の効果が切れる。\n発動条件：「ナーストレンド実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n天竜点睛てんりゅうてんせい\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n20m\n\n20m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：8000～16000\n対象との距離が離れているほど威力が上昇し、15mで最大になる。\n発動条件：「天竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nスカイハイ\n\nInstant\n10秒\n-\n\n0m\n\n0m\n\n上空に高く飛び上がり、ターゲットをされない状態になる。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\nまた、効果中は移動することができ、移動速度が50％上昇する。\n効果時間：4秒\n効果時間が経過するか、効果時間中に「スカイシャッター」を実行すると、周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5ｍ以内の場合は、威力が2倍になる。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとスカイシャッターに変化する。\n\nスカイシャッター\n\nInstant\n1秒\n-\n\n0m\n\n10m\n\n自身に付与した「スカイハイ」の効果を終了させて周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5m以内の場合は、威力が2倍になる。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力24000相当\n効果時間：10秒\n発動条件：「スカイハイ」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\n竜を屠る者……「竜騎士」。\n建国以来、ドラゴン族との果て無き戦いを続ける宗教都市「イシュガルド」において、その言葉が持つ意味は限りなく重い。\n\nドラゴン族を倒す。その目的のためだけに発展した槍術は、硬き鱗に隠されたドラゴン族の急所を狙うため、独特の跳躍攻撃を生み出した。天高く跳び、槍と一体となって舞い降りる……その貫通力は攻撃の要となるだろう。\n\nジョブ開始クエスト\n\n初期クラス：槍術士\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nトゥルースラスト\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：230\n\nボーパルスラスト\n\nLv4\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：280\n\nライフサージ\n\nLv6\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回のウェポンスキルが必ずクリティカルヒットし、かつＨＰを吸収する。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nこの効果は、継続ダメージなどのステータスには適用されない。\n効果時間：5秒\n最大チャージ数：2\n\nピアシングタロン\n\nクラスクエスト\n\nLv15\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\nピアシングタロン効果アップ時威力：350\n\nディセムボウル\n\nLv18\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：250\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\nフルスラスト\n\nLv26\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\nコンボ条件：ボーパルスラスト\nコンボ時威力：380\n\nランスチャージ\n\nクラスクエスト\n\nLv30\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の与ダメージを10％上昇させる。\n効果時間：20秒\n\nジャンプ\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：320\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒\n\nイルーシブジャンプ\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の15m後方に大きくジャンプする。\n追加効果：自身に「ピアシングタロン効果アップ」を付与する。\n効果時間：15秒\nバインド中は実行不可。\n\nドゥームスパイク\n\nジョブクエスト\n\nLv40\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：110\n\nウィンググライド\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n0m\n\n敵単体を対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\n桜華狂咲おうかきょうしょう\n\nLv50\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：100\n背面攻撃時威力：140\nコンボ条件：ディセムボウル\nコンボ時威力：220\nコンボ時かつ背面攻撃時威力：260\nコンボボーナス：対象に継続ダメージを付与する。\n威力：40\n効果時間：24秒\n\nドラゴンダイブ\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n120秒\n-\n\n20m\n\n5m\n\n対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：500\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に「ドラゴンライズ実行可」を付与する。\n効果時間：30秒\nバインド中は実行不可。\n\nバトルリタニー\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーのクリティカル発動率を10％上昇させる。\n効果時間：20秒\n\n竜牙竜爪りゅうがりゅうそう\n\nジョブクエスト\n\nLv56\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n側面攻撃時威力：180\nコンボ条件：ヘヴンスラスト\nコンボ時威力：300\nコンボ時かつ側面攻撃時威力：340\n\n竜尾大車輪りゅうびだいしゃりん\n\nジョブクエスト\n\nLv58\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：桜華繚乱\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\n\nゲイルスコグル\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：280\n2体目以降の対象への威力は50％減少する。\n追加効果：自身が「紅の竜血」状態に変化する。\n効果時間：20秒\n紅の竜血効果：自身の与ダメージを15％上昇させる。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n\nソニックスラスト\n\nLv62\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ドゥームスパイクおよび竜眼蒼穹\nコンボ時威力：120\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\n雲蒸竜変うんじょうりゅうへん\n\nLv64\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：460\nコンボ条件：竜尾大車輪および竜牙竜爪\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n発動条件：竜牙竜爪または竜尾大車輪をコンボ状態で実行したとき\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する。\n\nミラージュダイブ\n\nLv68\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n0m\n\n対象に物理攻撃。\n威力：380\n発動条件：ジャンプ、ハイジャンプの実行後に付与される「ミラージュダイブ実行可」効果中\n\nナーストレンド\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n2秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：720\n2体目以降の対象への威力は50％減少する。\n発動条件：「ナーストレンド実行可」効果中\n\nクルザントーメント\n\nLv72\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\nコンボ条件：ソニックスラスト\nコンボ時威力：150\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n\nハイジャンプ\n\nLv74\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：400\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒\n\n竜眼雷電りゅうがんらいでん\n\nLv76\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：320\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとトゥルースラストが竜眼雷電に変化する。\n\nスターダイバー\n\nLv80\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n5m\n\n対象にジャンプで近づきつつ火属性範囲物理攻撃。\n威力：840\n2体目以降の対象への威力は40％減少する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：「紅の竜血」効果中\nバインド中は実行不可。\n\n竜眼蒼穹りゅうがんそうきゅう\n\nLv82\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：130\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドゥームスパイクが竜眼蒼穹に変化する。\n\nヘヴンスラスト\n\nLv86\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：160\nコンボ条件：スラストラッシュ\nコンボ時威力：460\n\n桜華繚乱おうかりょうらん\n\nLv86\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\n背面攻撃時威力：180\nコンボ条件：スパイラルブロウ\nコンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\nコンボボーナス：対象に継続ダメージを付与する。\n威力：45\n効果時間：24秒\n\n天竜点睛てんりゅうてんせい\n\nLv90\n\nアビリティ\nInstant\n10秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：440\n2体目以降の対象への威力は50％減少する。\n発動条件：「天竜眼」2\n\nドラゴンライズ\n\n前提クエスト\n\nLv92\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：550\n2体目以降の対象への威力は50％減少する。\n発動条件：「ドラゴンライズ実行可」効果中\n\nスラストラッシュ\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：340\n\nスパイラルブロウ\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：300\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。\n\nスタークロッサー\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は40％減少する。\n発動条件：「スタークロッサー実行可」効果中\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2\n\n特性\n\n特性名\n修得\n効果\n\nジャンプ効果こうかアップ\n\nジョブクエスト\n\nLv54\n\nジャンプの威力を320に上昇させる。\n\n紅あかの竜血りゅうけつ\n\nジョブクエスト\n\nLv70\n\n自身に付与される「蒼の竜血」が「紅の竜血」に変化する。\n紅の竜血効果：自身の与ダメージを15％上昇させる。\nさらに、自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n発動条件：ゲイルスコグルの命中時\n\nジャンプマスタリー\n\nLv74\n\nジャンプがハイジャンプに変化する。\n\nランスマスタリー\n\nLv76\n\n竜牙竜爪または竜尾大車輪の命中直後に雲蒸竜変の実行に成功すると、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はトゥルースラストが「竜眼雷電」に変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nトゥルースラストの威力：230\nボーパルスラストの威力：130\nピアシングタロンの威力：200\nピアシングタロン効果アップ時のピアシングタロンの威力：350\nディセムボウルの威力：140\n\nクルザントーメント効果こうかアップ\n\nLv82\n\nクルザントーメントのコンボ成功時に、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はドゥームスパイクが「竜眼蒼穹」に変化する。\n\nウィンググライド効果こうかアップ\n\nLv84\n\nウィンググライドがチャージアクションに変化する。\n最大チャージ数：2\n\nランスマスタリーIIつー\n\nLv86\n\nフルスラストがヘヴンスラストに変化し、桜華狂咲が桜華繚乱に変化する。\nさらに、雲蒸竜変の威力を400に上昇させる。\n\nライフサージ効果こうかアップ\n\nLv88\n\nライフサージがチャージアクションに変化する。\n最大チャージ数：2\n\nランスマスタリーIIIすりー\n\nLv90\n\n竜眼雷電および竜眼蒼穹の実行に成功すると、自身に「天竜眼」を付与する。\n最大スタック数：2\nさらに、特定のアクションの威力を上昇させる。\n\nゲイルスコグルの威力：280\nナーストレンドの威力：720\n\nドラゴンダイブ効果こうかアップ\n\nLv92\n\n自身に「ドラゴンライズ実行可」が付与される。\n効果時間：30秒\n発動条件：ドラゴンダイブ実行時\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n竜牙竜爪の威力：140\n竜尾大車輪の威力：140\n雲蒸竜変の威力：460\n竜眼雷電の威力：320\nスターダイバーの威力：840\nヘヴンスラストの威力：160\n桜華繚乱の威力：140\n天竜点睛の威力：440\n\nランスマスタリーIVふぉー\n\nLv96\n\nボーパルスラストがスラストラッシュに、ディセムボウルがスパイラルブロウに変化する。\n\nスターダイバー効果こうかアップ\n\nLv100\n\n自身に「スタークロッサー実行可」が付与される。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：スターダイバー実行時\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。\n\nコンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nトゥルースラスト\n\n竜眼雷電\n※「竜眼」効果中\n\nスラストラッシュ\n（ボーパルスラスト）\n\nヘヴンスラスト\n（フルスラスト）\n\n竜牙竜爪\n\n瞬発的な総威力が最も大きいコンボです。\nレベル86で修得する特性によって「フルスラスト」が「ヘヴンスラスト」に変化し、Lv96で修得する特性によって「ボーパルスラスト」が「スラストラッシュ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\nスパイラルブロウ\n（ディセムボウル）\n\n桜華繚乱\n（桜華狂咲）\n\n竜尾大車輪\n\n自身の与ダメージを上昇する効果を得られるコンボです。\nレベル86で修得する特性によって「桜華狂咲」が「桜華繚乱」に変化し、Lv96で修得する特性によって「ディセムボウル」が「スパイラルブロウ」に変化することで総威力がアップします。\n※「竜眼」効果中は、トゥルースラストが竜眼雷電に変化します。\n\n雲蒸竜変\n\nドゥームスパイク\n\nソニックスラスト\n\nクルザントーメント\n\n自身の与ダメージを上昇する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n「竜眼」が付与されます。\n\n※カッコ（）内は特性修得前のアクションです。\n\nジョブHUD\n\n竜血ゲージ\n\nアクション「ゲイルスコグル」を修得すると、\"蒼の竜血\"の効果時間が確認できる「竜血ゲージ」が表示されるようになります。\n「ゲイルスコグル」を実行し、蒼の竜血状態に移行することで、自身の与ダメージを上昇させることができます。\n\nレベル70で特性「紅の竜血」を修得すると、「竜血ゲージ」で\"紅の竜血\"の効果時間が確認できるようになります。\n「ゲイルスコグル」を実行すると紅の竜血状態となり、自身の与ダメージが上昇し、強力なアクション「ナーストレンド」やレベル80で修得する「スターダイバー」を実行できます。\n\nレベル90で特性「ランスマスタリーIII」を修得すると、「竜眼雷電」および「竜眼蒼穹」の実行時に\"天竜眼\"が付与されるようになります。\n天竜眼を最大値まで付与することで、アクション「天竜点睛」を実行できます。\n\nシンプルモード\n\n「蒼の竜血」状態\n\n「紅の竜血」状態\n\n「天竜眼」付与状態\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n竜眼雷電りゅうがんらいでん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n竜牙竜爪りゅうがりゅうそう\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：竜眼雷電\n\n※このアクションはホットバーに登録することはできない。\n\n竜尾大車輪りゅうびだいしゃりん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：竜牙竜爪\n\n※このアクションはホットバーに登録することはできない。\n\n雲蒸竜変うんじょうりゅうへん\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\nコンボ条件：竜尾大車輪\n\n※このアクションはホットバーに登録することはできない。\n\n桜華繚乱おうかりょうらん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：9000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n追加効果：与ダメージの200％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\nゲイルスコグル\n\nアビリティ\nInstant\n20秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：5000\n追加効果：自身に「紅の竜血」を付与する。\n効果時間：10秒\n紅の竜血効果：自身の与ダメージを25％上昇させる代わりに被ダメージが15％上昇する。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：10秒\n効果中はこのアクションがナーストレンドに変化する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がスタークロッサーに変化する。\nこの効果は紅の竜血の効果が切れると解除される。\n\nハイジャンプ\n\nアビリティ\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象にジャンプで近づきつつ物理攻撃。\n威力：6000\n追加効果：自身に「ヘヴンスラスト実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：雲蒸竜変」がヘヴンスラストに変化する。\nバインド中は実行不可。\n\nイルーシブジャンプ\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の15m後方に大きくジャンプする。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：5秒\n追加効果：自身に「天竜眼」を付与する。\n効果時間：10秒\nこのアクションを実行すると天竜点睛に変化する。\n\nホリッドロア\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n10m\n\n自身の周囲の敵に範囲魔法攻撃。\n威力：3000\n追加効果：対象から自身へのダメージを50％減少させる。\n効果時間：10秒\n\nヘヴンスラスト\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：10000\n発動条件：「ヘヴンスラスト実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nスタークロッサー\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\n発動条件：「スタークロッサー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nナーストレンド\n\nアビリティ\nInstant\n1秒\n-\n\n15m\n\n15m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：5000～10000\n対象の残りＨＰが少ないほど威力が上昇し、50％以下だと最大になる。\n実行時に「紅の竜血」の効果が切れる。\n発動条件：「ナーストレンド実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n天竜点睛てんりゅうてんせい\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n20m\n\n20m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：8000～16000\n対象との距離が離れているほど威力が上昇し、15mで最大になる。\n発動条件：「天竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nスカイハイ\n\nInstant\n10秒\n-\n\n0m\n\n0m\n\n上空に高く飛び上がり、ターゲットをされない状態になる。\nヘヴィ、バインドを受けている場合、それらを解除しつつ実行する。\nまた、効果中は移動することができ、移動速度が50％上昇する。\n効果時間：4秒\n効果時間が経過するか、効果時間中に「スカイシャッター」を実行すると、周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5ｍ以内の場合は、威力が2倍になる。\n発動条件：「リミットゲージ」最大\n蓄積時間：90秒\nこのアクションを実行するとスカイシャッターに変化する。\n\nスカイシャッター\n\nInstant\n1秒\n-\n\n0m\n\n10m\n\n自身に付与した「スカイハイ」の効果を終了させて周囲の敵に範囲物理攻撃を実行する。\n威力：16000\n対象との距離が5m以内の場合は、威力が2倍になる。\n追加効果：自身に一定量のダメージを防ぐバリアを張る。\nバリア量：回復力24000相当\n効果時間：10秒\n発動条件：「スカイハイ」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}
