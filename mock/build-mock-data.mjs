@@ -60,7 +60,7 @@ function guideFor(rows, a) {
 }
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100], ['VPR', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -348,10 +348,11 @@ function buildJob(JOB, LEVEL) {
 
   const role = { 1: 'tank', 2: 'melee', 3: 'ranged', 4: 'healer' }[job.role] ?? 'melee';
   const actionsOut = Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))]));
-  // コンボ元を説明文からも足す（「コンボ条件：竜尾大車輪および竜牙竜爪」。Action シートのコンボ元は 1 つだけ）
+  // コンボ元を説明文からも足す（「コンボ条件：竜尾大車輪および竜牙竜爪」。Action シートのコンボ元は 1 つだけ）。
+  // Action シートにコンボ元がある技は「発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時」「発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後」の書き方も読む（ヴァイパー）
   const idByName = new Map(Object.values(actionsOut).filter((x) => x.forJob).map((x) => [x.name, x.id]));
   for (const x of Object.values(actionsOut)) {
-    const m = /コンボ条件：([^\n　]+)/.exec(x.desc ?? '');
+    const m = /コンボ条件：([^\n　]+)/.exec(x.desc ?? '') ?? (x.comboFrom.length ? /発動条件：([^\n　]+?)(?:の)?(?:命中時|実行後)/.exec(x.desc ?? '') : null);
     if (!m) continue;
     for (const n of m[1].split(/および|または|、/)) { const id = idByName.get(n.trim()); if (id && !x.comboFrom.includes(id)) x.comboFrom.push(id); }
   }

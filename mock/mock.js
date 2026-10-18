@@ -1373,6 +1373,9 @@
   function highlight(id) {
     const a = A[id];
     if (!a || !a.forJob) return false;
+    // コンボの次の技のうち、どれを光らせるかをジョブの決まりが決める（ヴァイパー: 鋭牙の付いている参の牙へ続く方だけ）。null なら共通の決まり
+    const cg = J.comboHighlight?.(id);
+    if (cg != null) return cg;
     if (a.comboFrom.length && S.combo != null && S.t <= S.comboUntil && a.comboFrom.includes(S.combo)) return true;
     if (a.comboFrom.length && S.chain != null && S.t <= S.chainUntil && a.comboFrom.includes(S.chain)) return true;
     const st = J.procStatus[a.proc];

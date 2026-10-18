@@ -341,5 +341,122 @@
     };
   }
 
-  window.MockGauge2.add({ MNK: mnk, NIN: nin, DRG: drg, RPR: rpr });
+  // ---------------- ヴァイパー ----------------
+  // ヴァイパーサイト（JobHudRDB0）: 左右の刀身（#7 左・#8 右。右は左右反転）と中央の紋章（#9）。
+  //   刀身の中のゲージはコンボの段階（1 段目のあと = 柄の側の橙 #8、2 段目のあと = 切っ先の側の青 #10）、光る刀身（#5）はホットバーで光っているコンボの技の側。
+  //   飛蛇の魂は紋章の下の赤い菱形（#3 の #4〜#6。ある数だけ、真ん中にそろえて出す）。シンプル表示（#10）は左右の棒（#16・#18）と菱形（#12〜#14）
+  // 霊力ゲージ（JobHudRDB1）: 玉（#26。50 未満は橙 #32、50 以上は青 #33）と数字（#24）、霊力の小さな玉（#16〜#20）と祖霊降ろしの残り秒（#14）。
+  //   シンプル表示（#2）は棒（#12）と数字（#11）、菱形（#5〜#9）と残り秒（#4）
+  // 霊力の玉の位置: ULD の値（10・30・50・70）は 4 つ（Lv90）のときの並び。5 つ（Lv96〜）は 0〜80 で、紋章の真ん中にそろう（公式の絵 05.png）
+  const VPR_TRIB = [16, 17, 18, 19, 20], VPR_TRIB_X = [0, 20, 40, 60, 80], VPR_SDIA = [5, 6, 7, 8, 9];
+  const VPR_ORB = 64, VPR_SBAR_W = 160, VPR_BAR_HALF = 43;
+  function vpr(G) {
+    const L0 = G.layouts.JobHudRDB0, L1 = G.layouts.JobHudRDB1;
+    const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
+    const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    const C = window.MockUld.colorFilter;
+    let simple = false, prev = {};
+    // ヴァイパーサイト: 演出の部品（稲妻・光の縁・きらめき）は隠す
+    for (const b of [7, 8]) {
+      for (const c of [3, 4, 7, 9]) set(k(`${b}/${c}`), { opacity: 0 });
+      set(k(`${b}/8`), { opacity: 0 }); set(k(`${b}/10`), { opacity: 0 });
+    }
+    for (const q of [4, 5, 6]) {
+      for (const c of [5, 6]) set(k(`${q}/${c}`), { opacity: 0 });
+      set(k(`${q}/8`), { opacity: 0 });
+    }
+    // 光る刀身の色: 1・2 段目は赤（公式の絵）、3 段目（参の牙）は ULD の色（黄）
+    const GLOW_RED = C([0, 0, 0]), GLOW_GOLD = C([200, 200, 50]);
+    // シンプル表示の棒: 外側の半分が青（2 段目）、内側の半分が橙（1 段目）
+    for (const b of [16, 18]) { set(k(`${b}/3`), { opacity: 0 }); }
+    for (const q of [12, 13, 14]) set(k(q), { opacity: 0 });
+    // 飛蛇の魂の菱形: 光る縁と薄い光（公式の絵 02・03.png に合わせた濃さ）
+    for (const q of [4, 5, 6]) { set(k(`${q}/2`), { opacity: 0.25 }); set(k(`${q}/4`), { opacity: 0.7 }); }
+    k(10).hidden = true;
+    // 霊力ゲージ
+    for (const id of [21, 22, 23, 27, 30, 31]) set(k1(id), { opacity: 0 });
+    for (const q of VPR_TRIB) { for (const c of [3, 4, 5]) set(k1(`${q}/${c}`), { opacity: 0 }); set(k1(`${q}/6`), { opacity: 0, transform: 'none' }); }
+    VPR_TRIB.forEach((q, i) => set(k1(q), { left: `${VPR_TRIB_X[i]}px` }));
+    for (const q of VPR_SDIA) set(k1(`${q}/3`), { opacity: 0, transform: 'none' });
+    for (const id of ['24/2']) { const n = k1(id); if (n) { n.classList.add('g2-num'); set(n, { fontSize: '24px', letterSpacing: '1px' }); } }
+    for (const id of ['14/2', '11/2', '4/2']) k1(id)?.classList.add('g2-snum');
+    // 祖霊降ろしの残り秒・シンプル表示の数字: 公式の絵（05・08・09.png）の位置と大きさ
+    set(k1(14), { left: '109px' }); set(k1('14/2'), { fontSize: '21px', letterSpacing: '2px' });
+    set(k1(11), { left: '97px' }); set(k1(4), { left: '-21px' });
+    for (const id of ['11/2', '4/2']) set(k1(id), { fontSize: '24px', letterSpacing: '1px', left: '4px', width: '40px', justifyContent: 'flex-end' }); // 右そろえ（0 と 50 の右端が同じ）
+    // 中身の水面の光（ULD の演出の部品 #27 を水面に置く。色は水色）
+    const surf = K1.img(29); if (surf) surf.style.filter = C([-120, 40, 80]);
+    set(k1(28), { filter: 'none' });
+    k1(2).hidden = true;
+    function apply(st, instant) {
+      const t = st.t ?? 0, sg = st.sight ?? { stage: 0, side: '' };
+      const coil = Math.max(0, Math.min(3, st.coil ?? 0));
+      // コンボの段階と光る側
+      if (instant || sg.stage !== prev.stage || sg.side !== prev.side) {
+        for (const [b, sb, side] of [[7, 16, 'L'], [8, 18, 'R']]) {
+          const lit = sg.side.includes(side);
+          set(k(`${b}/8`), { opacity: sg.stage >= 1 ? 1 : 0 }); set(k(`${b}/10`), { opacity: sg.stage >= 2 ? 1 : 0 });
+          set(k(`${b}/5`), { opacity: lit ? 1 : 0 });
+          if (K.img(`${b}/5`)) K.img(`${b}/5`).style.filter = sg.stage >= 2 ? GLOW_GOLD : GLOW_RED;
+          // シンプル表示: 内側の半分（橙）・外側の半分（青）・光る縁
+          set(k(`${sb}/6`), { opacity: sg.stage >= 1 ? 1 : 0, left: `${VPR_BAR_HALF}px`, width: `${VPR_BAR_HALF + 7}px`, transform: 'none' });
+          set(k(`${sb}/7`), { opacity: sg.stage >= 2 ? 1 : 0, left: '0px', width: `${VPR_BAR_HALF + 7}px` });
+          set(k(`${sb}/3`), { opacity: lit ? 1 : 0 });
+          if (K.img(`${sb}/3`)) K.img(`${sb}/3`).style.filter = sg.stage >= 2 ? C([60, 30, -200]) : C([60, -200, -200]);
+          if (!instant && lit && !prev.side?.includes(side)) anim(k(`${b}/5`), [{ opacity: 0.2 }, { opacity: 1 }], { duration: 260 });
+        }
+      }
+      // 飛蛇の魂: ある数だけ、真ん中にそろえる
+      if (instant || coil !== prev.coil) {
+        const x0 = 38 - (coil * 23 - 0) / 2 - 3.5;
+        [4, 5, 6].forEach((q, i) => {
+          set(k(q), { opacity: i < coil ? 1 : 0, left: `${Math.round(x0 + i * 23)}px` });
+          set(k(12 + i), { opacity: i < coil ? 1 : 0 });
+        });
+        if (!instant && coil > (prev.coil ?? 0)) anim(k(3 + coil), [{ transform: 'scale(1.6)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 320 });
+      }
+      // 霊力ゲージ・霊力・祖霊降ろし
+      const off = Math.max(0, Math.min(100, st.offering ?? 0));
+      const ra = st.st?.reawakened, on = !!ra && ra.until > t && (st.tribute ?? 0) > 0;
+      const ready = !!st.st?.readyReawaken && st.st.readyReawaken.until > t;
+      const trib = on ? Math.max(0, Math.min(5, st.tribute ?? 0)) : 0;
+      const sec = on ? Math.ceil((ra.until - t) / 1000) : 0;
+      if (instant || off !== prev.off || ready !== prev.ready) {
+        // 玉の中身: 霊力ゲージの量だけ下から満ちる（公式の絵 05.png: 50 で半分）。50 以上は青（50 未満は ULD の橙）。
+        // 中身の絵は上下反転で置かれている（ULD の scaleY -1）ので、切り取りも反転した向きで
+        const full = off >= 50 || ready, h = Math.round((VPR_ORB * off) / 100), clip = `inset(0 0 ${VPR_ORB - h}px 0)`;
+        set(k1(32), { opacity: off < 50 ? 1 : 0, clipPath: clip });
+        set(k1(33), { opacity: off >= 50 ? 1 : 0, clipPath: clip });
+        set(k1(22), { opacity: full ? 1 : 0 });
+        set(k1(27), { opacity: h > 2 && h < VPR_ORB - 2 ? 0.9 : 0, transform: 'scale(0.75, 0.6)', transformOrigin: '46px 16px', top: `${VPR_ORB - h - 16}px` });
+        const n = k1('24/2'); if (n) n.textContent = String(off);
+        const ns = k1('11/2'); if (ns) ns.textContent = String(off);
+        const w = Math.round((VPR_SBAR_W * off) / 100);
+        set(k1('12/5'), { opacity: off < 50 ? 1 : 0, clipPath: clipW(w, VPR_SBAR_W) });
+        set(k1('12/6'), { opacity: off >= 50 ? 1 : 0, clipPath: clipW(w, VPR_SBAR_W) });
+        set(k1('12/4'), { opacity: 0 });
+        if (!instant && full && !prev.full) anim(k1(22), [{ opacity: 0, transform: 'scale(1.3)' }, { opacity: 1, transform: 'none' }], { duration: 420 });
+        prev.full = full;
+      }
+      if (instant || trib !== prev.trib || on !== prev.on) {
+        // 点いた霊力: 青い玉（#6）。手前の灰色の印（#2）は隠す
+        VPR_TRIB.forEach((q, i) => { set(k1(`${q}/6`), { opacity: i < trib ? 1 : 0 }); set(k1(`${q}/2`), { opacity: i < trib ? 0 : 1 }); set(k1(`${q}/5`), { opacity: i < trib ? 0.5 : 0 }); });
+        VPR_SDIA.forEach((q, i) => { set(k1(`${q}/3`), { opacity: i < trib ? 1 : 0 }); set(k1(`${q}/2`), { opacity: i < trib ? 0 : 1 }); });
+        set(k1(14), { opacity: on ? 1 : 0 }); set(k1(4), { opacity: on ? 1 : 0 });
+      }
+      if (instant || sec !== prev.sec) { for (const id of ['14/2', '4/2']) { const n = k1(id); if (n) n.textContent = on ? String(sec) : ''; } }
+      prev = { ...prev, stage: sg.stage, side: sg.side, coil, off, ready, trib, on, sec };
+    }
+    function setSimple(v) { simple = !!v; k(2).hidden = simple; k(10).hidden = !simple; k1(13).hidden = simple; k1(2).hidden = !simple; }
+    apply({ t: 0, offering: 0, coil: 0 }, true);
+    return {
+      windows: [
+        { name: 'JobHudRDB0', label: 'ヴァイパーサイト', el: K.el, w: K.w, h: K.h },
+        { name: 'JobHudRDB1', label: '霊力ゲージ', el: K1.el, w: K1.w, h: K1.h },
+      ],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  window.MockGauge2.add({ MNK: mnk, NIN: nin, DRG: drg, RPR: rpr, VPR: vpr });
 })();

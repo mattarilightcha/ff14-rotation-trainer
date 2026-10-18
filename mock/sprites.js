@@ -58,6 +58,7 @@
     drgCloth: ['#e890a0', '#b04058', '#842a44', '#5a1a30', '#340e1e'], // 竜騎士の紅の前垂れ
     rprRobe: ['#a49cb4', '#615a72', '#423c50', '#2b2736', '#17141e'], // リーパーの黒紫のコートとフード
     rprCloth: ['#d88a9a', '#9a3448', '#6e2236', '#4a1626', '#2a0c16'], // リーパーの葡萄色の前垂れ
+    vprTop: ['#a6e6c6', '#44a07e', '#2c725a', '#1d4c3e', '#102c24'], // ヴァイパーの深緑の装束
   };
   // 3D で光らせる素材（光のにじみの対象）
   const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
@@ -324,6 +325,7 @@
     mnk: { top: 'mnkTop', pants: 'woodD', foot: 'leather', belt: 'red', trim: 'gold', knot: 'gold', collar: 'skin', collarTrim: 'gold', mark: false, band: 'red', topknot: true, hair: 'hair', sleeve: false, weapon: 'fist' },
     nin: { top: 'navy', pants: 'black', foot: 'black', belt: 'red', trim: 'iron', knot: 'red', collar: 'black', collarTrim: 'iron', mark: false, band: 'red', topknot: false, hair: 'hair', mask: 'black', sleeve: false, weapon: 'dagger' },
     bunshin: { top: 'shade', pants: 'shade', foot: 'shade', belt: 'shade', trim: 'shade', knot: 'shade', collar: 'shade', collarTrim: 'shade', mark: false, band: 'shade', topknot: false, hair: 'shade', mask: 'shade', sleeve: false, weapon: 'dagger' },
+    vpr: { top: 'vprTop', pants: 'black', foot: 'leather', belt: 'black', trim: 'gold', knot: 'gold', collar: 'black', collarTrim: 'gold', mark: false, band: null, topknot: false, hair: 'hair', sleeve: false, weapon: 'twin' },
   };
   // 近接の武器（手 h・向き dir・長さ len）。dual: 両手に持つ武器の、もう一方の手
   function meleeWeapon(F, h, dir, len, st, dual = false) {
@@ -340,6 +342,16 @@
       F.fill('black', (m) => m.capsule(t0.x, t0.y, b0.x, b0.y, 0.9), { k: 1.2 });
       F.fill('blade', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 0.9, 0.4), { k: 1.1 });
       F.deco('blade', 0, (m) => { const a = add(b0, n, -0.3), e = add(b1, dir, -1); m.line(a.x, a.y, e.x, e.y); });
+      return;
+    }
+    if (st.weapon === 'twin') {
+      // 二刀（ヴァイパー）: 両手に少し反った剣。黒い柄と金の鍔
+      const n = perp(dir), L = dual ? 11 : Math.min(len, 14), t0 = add(h, dir, -2.2), g = add(h, dir, 1.4), b0 = add(h, dir, 2), b1 = add(h, dir, 2 + L);
+      const mid = add(add(h, dir, 2 + L * 0.55), n, 0.8);
+      F.fill('black', (m) => m.capsule(t0.x, t0.y, g.x, g.y, 0.9), { k: 1.2 });
+      F.fill('blade', (m) => m.poly([b0.x + n.x * 1.1, b0.y + n.y * 1.1, mid.x + n.x * 1.0, mid.y + n.y * 1.0, b1.x, b1.y, mid.x - n.x * 0.7, mid.y - n.y * 0.7, b0.x - n.x * 0.9, b0.y - n.y * 0.9]), { k: 1.1 });
+      F.deco('blade', 0, (m) => { const a = add(b0, n, 0.6), e = add(b1, dir, -1.5); m.line(a.x, a.y, e.x, e.y); });
+      F.fill(st.trim, (m) => m.capsule(g.x - n.x * 1.8, g.y - n.y * 1.8, g.x + n.x * 1.8, g.y + n.y * 1.8, 0.7), { k: 1 });
       return;
     }
   }
@@ -1783,6 +1795,7 @@
     player: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
     mnk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.mnk) : samFB(F, p, v === 'up', MELEE_STYLE.mnk)), anims: MNK_ANIMS }),
     nin: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.nin) : samFB(F, p, v === 'up', MELEE_STYLE.nin)), anims: SAM_ANIMS }),
+    vpr: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.vpr) : samFB(F, p, v === 'up', MELEE_STYLE.vpr)), anims: SAM_ANIMS }),
     tank: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
     war: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
     drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),

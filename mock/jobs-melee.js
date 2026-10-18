@@ -915,5 +915,316 @@
     },
   };
 
-  Object.assign(window.MockJobs, { MNK, NIN, DRG, RPR });
+  // ---------------- ヴァイパー ----------------
+  // 説明文から:
+  //   二刀のコンボ: 壱の牙【咬創】/【穿裂】→ 弐の牙【猛襲】/【疾速】（どちらの壱のあとでも）→ 参の牙。猛襲のあとは参の牙【側撃】/【側裂】（側面）、
+  //     疾速のあとは参の牙【背撃】/【背裂】（背面）。ボタンは説明文の「発動条件を満たすとXがYに変化する」のとおり:
+  //     咬創のボタン → 弐の牙【猛襲】→ 参の牙【側撃】（猛襲のあと）/ 参の牙【背撃】（疾速のあと）、穿裂のボタン → 弐の牙【疾速】→ 参の牙【側裂】/【背裂】。
+  //     範囲も同じ（壱の大牙 → 弐の大牙 → 参の大牙【乱撃】（咬創のボタン）/【乱裂】（穿裂のボタン）。参はどちらの弐のあとでも）
+  //   蛇鋭牙: 壱の牙【咬創】で蛇鋭牙【穿裂】（穿裂の威力 +100）、穿裂で蛇鋭牙【咬創】。同時に付かない。範囲の壱の大牙も同じ（+20）
+  //   猛襲: 与ダメージ +10%（40 秒）。疾速: ウェポンスキルのリキャスト 15% 短縮（40 秒）
+  //   鋭牙: 参の牙を使うと、別の参の牙が +100（側撃 → 鋭牙【背撃】、背撃 → 【側裂】、側裂 → 【背裂】、背裂 → 【側撃】）。
+  //     大鋭牙: 参の大牙の乱撃 ↔ 乱裂 で +40。鋭牙と大鋭牙はどれか 1 つだけ付く
+  //   霊力ゲージ: 参の牙・参の大牙で +10、弐の蛇・弐の大蛇で +5。参の牙のあとは蛇尾術が蛇尾撃、参の大牙のあとは蛇尾閃
+  //   壱の蛇【強砕】（40 秒・2 チャージ。壱の大蛇と共有）→ 弐の蛇【猛襲】（側面）/【疾速】（背面）を 1 回ずつ（もう一方の弐の蛇のあとにも使える）。
+  //     弐の蛇のあとは双牙連術・双牙乱術が双牙連撃・双牙乱撃に変わり、1 回ずつ使える。猛襲の直後の双牙連撃で双鋭牙【乱撃】、疾速の直後の双牙乱撃で双鋭牙【連撃】
+  //   飛蛇の尾（飛蛇の魂 1）: 双牙連術・双牙乱術が飛蛇連尾撃・飛蛇乱尾撃に。飛鋭尾【連尾】→ 飛蛇連尾撃 → 飛鋭尾【乱尾】→ 飛蛇乱尾撃
+  //   祖霊降ろし（霊力ゲージ 50。祖霊降ろし実行可なら消費なし）: 霊力 5（30 秒）。咬創・穿裂・弐の蛇【猛襲】・弐の蛇【疾速】（と範囲のもの）のボタンが
+  //     祖霊の牙【壱〜肆】、祖霊降ろしのボタンが祖霊の大蛇牙に変わる。祖霊の牙は順に使うと威力 680（順でなければ 480）。
+  //     祖霊の牙のあとは蛇尾術が祖霊の蛇【壱〜肆】。祖霊の大蛇牙で祖霊降ろしが切れる
+  //   蛇の霊気（戦闘中だけ）: 飛蛇の魂 +1 と祖霊降ろし実行可（30 秒）
+  // 公式ジョブガイドの特性・ジョブ HUD の説明から: 壱の蛇・壱の大蛇で飛蛇の魂 +1（最大 3）。霊力の最大 5。蛇行の最大チャージ 3。
+  //   ヴァイパーサイトは、ホットバーで光っているコンボの技の側（咬創の側 = 左、穿裂の側 = 右）の刀身が光り、刀身の中のゲージがコンボの段階を表す
+  // 仮（GAME-81）: 光る技 — 壱は蛇鋭牙の付いている方、弐は鋭牙の付いている参の牙へ続く方（鋭牙がなければ、猛襲・疾速の残りの短い方）、参は鋭牙の付いている方。
+  //   蛇尾術・双牙の続きは、次のウェポンスキルを使うと消える。壱の蛇のあとの弐の蛇は 30 秒以内。祖霊の牙はどの順でも使える（威力だけ変わる）
+  const VPR = {
+    abbr: 'VPR',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        STEEL: 34606, REAVING: 34607, HUNTERS_STING: 34608, SWIFTSKINS_STING: 34609, FLANKSTING: 34610, FLANKSBANE: 34611, HINDSTING: 34612, HINDSBANE: 34613,
+        STEEL_MAW: 34614, REAVING_MAW: 34615, HUNTERS_BITE: 34616, SWIFTSKINS_BITE: 34617, JAGGED_MAW: 34618, BLOODIED_MAW: 34619,
+        VICEWINDER: 34620, HUNTERS_COIL: 34621, SWIFTSKINS_COIL: 34622, VICEPIT: 34623, HUNTERS_DEN: 34624, SWIFTSKINS_DEN: 34625,
+        REAWAKEN: 34626, GEN1: 34627, GEN2: 34628, GEN3: 34629, GEN4: 34630, OUROBOROS: 34631, SNAP: 34632, UNCOILED: 34633,
+        DEATH_RATTLE: 34634, LAST_LASH: 34635, TWINFANG_BITE: 34636, TWINBLOOD_BITE: 34637, TWINFANG_THRESH: 34638, TWINBLOOD_THRESH: 34639,
+        LEGACY1: 34640, LEGACY2: 34641, LEGACY3: 34642, LEGACY4: 34643, U_TWINFANG: 34644, U_TWINBLOOD: 34645, SLITHER: 34646, IRE: 34647,
+        TAIL: 35920, TWINFANG: 35921, TWINBLOOD: 35922,
+        SECONDWIND: 7541, BLOODBATH: 7542, TN: 7546, ARMS: 7548, FEINT: 7549, SWEEP: 7863,
+      };
+      const STATUS = {
+        honedSteel: { name: '蛇鋭牙【咬創】' }, honedReavers: { name: '蛇鋭牙【穿裂】' },
+        hunters: { name: '猛襲', tracked: true }, swift: { name: '疾速', tracked: true },
+        vFlankstung: { name: '鋭牙【側撃】' }, vFlanksbane: { name: '鋭牙【側裂】' }, vHindstung: { name: '鋭牙【背撃】' }, vHindsbane: { name: '鋭牙【背裂】' },
+        vGrimhunter: { name: '大鋭牙【乱撃】' }, vGrimskin: { name: '大鋭牙【乱裂】' },
+        hVenom: { name: '双鋭牙【連撃】' }, sVenom: { name: '双鋭牙【乱撃】' }, fhVenom: { name: '双鋭牙【連閃】' }, fsVenom: { name: '双鋭牙【乱閃】' },
+        poisedFang: { name: '飛鋭尾【連尾】' }, poisedBlood: { name: '飛鋭尾【乱尾】' },
+        reawakened: { name: '祖霊降ろし' }, readyReawaken: { name: '祖霊降ろし実行可' },
+        tn: { name: 'トゥルーノース' },
+        bloodbath: { name: 'ブラッドバス' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const COIL_MAX = numIn(A[ID.VICEWINDER]?.desc, /最大スタック数：(\d+)/, 3);
+      const TRIBUTE_MAX = numIn(A[ID.REAWAKEN]?.desc, /(\d+)スタックの「霊力」/, 5);
+      const SWIFT = 1 - numIn(A[ID.SWIFTSKINS_STING]?.desc, /リキャストタイムを(\d+)％短縮/, 15) / 100;
+      const GEN_UP = numIn(A[ID.GEN1]?.desc, /威力が(\d+)に上昇/, 680);
+      const DUAL1 = new Set([ID.STEEL, ID.REAVING]), DUAL2 = new Set([ID.HUNTERS_STING, ID.SWIFTSKINS_STING]);
+      const MAW1 = new Set([ID.STEEL_MAW, ID.REAVING_MAW]), MAW2 = new Set([ID.HUNTERS_BITE, ID.SWIFTSKINS_BITE]);
+      const FINISHERS = new Set([ID.FLANKSTING, ID.FLANKSBANE, ID.HINDSTING, ID.HINDSBANE]), MAW3 = new Set([ID.JAGGED_MAW, ID.BLOODIED_MAW]);
+      const GENS = [ID.GEN1, ID.GEN2, ID.GEN3, ID.GEN4];
+      const GEN_PREV = { [ID.GEN1]: ID.REAWAKEN, [ID.GEN2]: ID.GEN1, [ID.GEN3]: ID.GEN2, [ID.GEN4]: ID.GEN3 };
+      // 参の牙・参の大牙と、それを強める鋭牙・大鋭牙（説明文「〜が付与されている場合は（全ての）威力がN上昇する」）
+      const VENOM_OF = { [ID.FLANKSTING]: 'vFlankstung', [ID.FLANKSBANE]: 'vFlanksbane', [ID.HINDSTING]: 'vHindstung', [ID.HINDSBANE]: 'vHindsbane', [ID.JAGGED_MAW]: 'vGrimhunter', [ID.BLOODIED_MAW]: 'vGrimskin' };
+      const VENOMS = Object.values(VENOM_OF);
+      const VENOM_TARGET = Object.fromEntries(Object.entries(VENOM_OF).map(([id, k]) => [k, Number(id)]));
+      const venomUp = (id) => numIn(A[id]?.desc, /付与されている場合は(?:全ての)?威力が(\d+)上昇/, 0);
+      // 続き（オフ GCD）: 参の牙 → 蛇尾撃、参の大牙 → 蛇尾閃、祖霊の牙 → 祖霊の蛇
+      const TAIL_OF = { [ID.GEN1]: ID.LEGACY1, [ID.GEN2]: ID.LEGACY2, [ID.GEN3]: ID.LEGACY3, [ID.GEN4]: ID.LEGACY4 };
+      for (const f of FINISHERS) TAIL_OF[f] = ID.DEATH_RATTLE;
+      for (const f of MAW3) TAIL_OF[f] = ID.LAST_LASH;
+      const TAILS = new Set(Object.values(TAIL_OF));
+      const LEGACIES = new Set([ID.LEGACY1, ID.LEGACY2, ID.LEGACY3, ID.LEGACY4]);
+      // 双牙の続き: 弐の蛇 → 双牙連撃・双牙乱撃、弐の大蛇 → 双牙連閃・双牙乱閃、飛蛇の尾 → 飛蛇連尾撃・飛蛇乱尾撃
+      const TWIN_OF = {
+        [ID.HUNTERS_COIL]: [ID.TWINFANG_BITE, ID.TWINBLOOD_BITE], [ID.SWIFTSKINS_COIL]: [ID.TWINFANG_BITE, ID.TWINBLOOD_BITE],
+        [ID.HUNTERS_DEN]: [ID.TWINFANG_THRESH, ID.TWINBLOOD_THRESH], [ID.SWIFTSKINS_DEN]: [ID.TWINFANG_THRESH, ID.TWINBLOOD_THRESH],
+        [ID.UNCOILED]: [ID.U_TWINFANG, ID.U_TWINBLOOD],
+      };
+      // 双牙の技 → 強める双鋭牙・飛鋭尾、「〜の直後に実行すると」付く双鋭牙（説明文）
+      const TWIN_VENOM = { [ID.TWINFANG_BITE]: 'hVenom', [ID.TWINBLOOD_BITE]: 'sVenom', [ID.TWINFANG_THRESH]: 'fhVenom', [ID.TWINBLOOD_THRESH]: 'fsVenom', [ID.U_TWINFANG]: 'poisedFang', [ID.U_TWINBLOOD]: 'poisedBlood' };
+      const TWIN_NEXT = { [ID.TWINFANG_BITE]: [ID.HUNTERS_COIL, 'sVenom'], [ID.TWINBLOOD_BITE]: [ID.SWIFTSKINS_COIL, 'hVenom'], [ID.TWINFANG_THRESH]: [ID.HUNTERS_DEN, 'fsVenom'], [ID.TWINBLOOD_THRESH]: [ID.SWIFTSKINS_DEN, 'fhVenom'] };
+      const DREAD = { [ID.VICEWINDER]: [ID.HUNTERS_COIL, ID.SWIFTSKINS_COIL], [ID.VICEPIT]: [ID.HUNTERS_DEN, ID.SWIFTSKINS_DEN] };
+      const COILS = new Set([ID.HUNTERS_COIL, ID.SWIFTSKINS_COIL, ID.HUNTERS_DEN, ID.SWIFTSKINS_DEN]);
+      const COMBO_MS = 30000;
+      const gauges = {
+        霊力ゲージ: { get: () => S().offering, set: (v) => { S().offering = Math.max(0, Math.min(100, v)); }, max: 100 },
+        飛蛇の魂: { get: () => S().coil, set: (v) => { S().coil = Math.max(0, Math.min(COIL_MAX, v)); }, max: COIL_MAX },
+        霊力: { get: () => S().tribute, set: (v) => { S().tribute = Math.max(0, Math.min(TRIBUTE_MAX, v)); }, max: TRIBUTE_MAX },
+      };
+      const reawakened = () => has('reawakened') && S().tribute > 0;
+      const comboNow = () => { const s = S(); return s.combo != null && s.t <= s.comboUntil ? s.combo : null; };
+      const venomNow = () => VENOMS.find((k) => has(k)) ?? null;
+      const left = (k) => Math.max(0, (S().st[k]?.until ?? 0) - S().t);
+      // 弐の牙のどちらを光らせるか: 鋭牙の付いている参の牙へ続く方（側撃・側裂 → 猛襲、背撃・背裂 → 疾速）。なければ（範囲の弐の大牙も）猛襲・疾速の残りの短い方
+      function secondPick(hunter, swift, routed) {
+        const v = routed ? venomNow() : null;
+        if (v === 'vFlankstung' || v === 'vFlanksbane') return hunter;
+        if (v === 'vHindstung' || v === 'vHindsbane') return swift;
+        return left('hunters') <= left('swift') ? hunter : swift;
+      }
+      function gainCoil(n) {
+        const s = S(), v = s.coil + n;
+        if (v > COIL_MAX && s.phase === 'combat') s.stats.coilOver += v - COIL_MAX;
+        s.coil = Math.min(COIL_MAX, v);
+      }
+      function gainOffering(n) {
+        const s = S(), v = s.offering + n;
+        if (v > 100 && s.phase === 'combat') s.stats.offeringOver += v - 100;
+        s.offering = Math.min(100, v);
+      }
+      // 次のウェポンスキルで消える続き（蛇尾術・双牙）を数える
+      function dropFollowUps(a) {
+        const s = S();
+        if (s.tail) { s.stats.followLost++; R.addLog('warn', `${A[s.tail.id].name}を使わずに${a.name}を使いました`); R.ev('ミス', { action: a.name, result: `${A[s.tail.id].name}を使わずに次のウェポンスキル`, note: '蛇尾術の続き' }); s.tail = null; }
+        if (s.twin && (s.twin.fang || s.twin.blood)) {
+          const n = (s.twin.fang ? 1 : 0) + (s.twin.blood ? 1 : 0);
+          s.stats.followLost += n; R.addLog('warn', `双牙の続き ${n} つを使わずに${a.name}を使いました`); R.ev('ミス', { action: a.name, result: `双牙の続き ${n} つを使わずに次のウェポンスキル`, note: '双牙連術・双牙乱術' });
+        }
+        s.twin = null;
+      }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // 壱の蛇【強砕】2・蛇行 3・トゥルーノース 2（説明文「最大チャージ数」）
+        prepull: new Set([ID.TN]),
+        comboStarters: new Set([ID.STEEL, ID.REAVING, ID.STEEL_MAW, ID.REAVING_MAW]),
+        procStatus: {},
+        initState(s) {
+          s.offering = 0; s.coil = 0; s.tribute = 0; s.tail = null; s.twin = null; s.dread = null; s.lastGen = null;
+          s.stats.offeringOver = 0; s.stats.coilOver = 0; s.stats.followLost = 0; s.stats.venomMiss = 0; s.stats.genMiss = 0; s.stats.tributeLost = 0; s.stats.reawakens = 0;
+        },
+        gaugeCols: [['霊力ゲージ', (s) => s.offering], ['飛蛇の魂', (s) => s.coil], ['霊力', (s) => (R.has('reawakened') ? s.tribute : '')]],
+        tracked: [['猛襲', 'hunters', '#ff9a52', '40 秒。弐の牙【猛襲】・弐の蛇【猛襲】で付け直す'], ['疾速', 'swift', '#6ad0f0', '40 秒。弐の牙【疾速】・弐の蛇【疾速】で付け直す']],
+        // 疾速: ウェポンスキルのリキャスト（と詠唱）が 15% 短い
+        speed: () => (has('swift') ? SWIFT : 1),
+        comboFree: () => false,
+        resolve(id) {
+          const s = S(), c = comboNow();
+          if (reawakened()) {
+            const gen = { [ID.STEEL]: ID.GEN1, [ID.STEEL_MAW]: ID.GEN1, [ID.REAVING]: ID.GEN2, [ID.REAVING_MAW]: ID.GEN2, [ID.HUNTERS_COIL]: ID.GEN3, [ID.HUNTERS_DEN]: ID.GEN3, [ID.SWIFTSKINS_COIL]: ID.GEN4, [ID.SWIFTSKINS_DEN]: ID.GEN4, [ID.REAWAKEN]: ID.OUROBOROS }[id];
+            if (gen) return gen;
+          }
+          if (id === ID.STEEL) return c === ID.HUNTERS_STING ? ID.FLANKSTING : c === ID.SWIFTSKINS_STING ? ID.HINDSTING : DUAL1.has(c) ? ID.HUNTERS_STING : id;
+          if (id === ID.REAVING) return c === ID.HUNTERS_STING ? ID.FLANKSBANE : c === ID.SWIFTSKINS_STING ? ID.HINDSBANE : DUAL1.has(c) ? ID.SWIFTSKINS_STING : id;
+          if (id === ID.STEEL_MAW) return MAW2.has(c) ? ID.JAGGED_MAW : MAW1.has(c) ? ID.HUNTERS_BITE : id;
+          if (id === ID.REAVING_MAW) return MAW2.has(c) ? ID.BLOODIED_MAW : MAW1.has(c) ? ID.SWIFTSKINS_BITE : id;
+          if (id === ID.TAIL) return s.tail?.id ?? id;
+          if (id === ID.TWINFANG) return s.twin?.fang ?? id;
+          if (id === ID.TWINBLOOD) return s.twin?.blood ?? id;
+          return id;
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          if (id === ID.TAIL || id === ID.TWINFANG || id === ID.TWINBLOOD) return `${a.name}は、変化先の発動条件を満たしたときだけ使えます`;
+          if (COILS.has(id) && !(s.dread?.left.includes(id) && s.t <= s.dread.until)) return `${A[id === ID.HUNTERS_COIL || id === ID.SWIFTSKINS_COIL ? ID.VICEWINDER : ID.VICEPIT].name}のあとに使えます`;
+          if (id === ID.UNCOILED && s.coil < 1) return '「飛蛇の魂」がありません';
+          if (id === ID.REAWAKEN && !has('readyReawaken') && s.offering < 50) return `霊力ゲージが足りません（必要 50 / 現在 ${s.offering}）`;
+          if ((GENS.includes(id) || id === ID.OUROBOROS) && !reawakened()) return '「霊力」がありません';
+          if (id === ID.IRE && s.phase !== 'combat') return '戦闘中だけ使えます';
+          return null;
+        },
+        castMs: (a, base) => base,
+        // 威力: 参の牙・参の大牙は鋭牙・大鋭牙で上乗せ。祖霊の牙は順に使うと上がる
+        potOverride(a) {
+          if (GENS.includes(a.id)) return S().lastGen === GEN_PREV[a.id] ? GEN_UP : a.pot?.base ?? 480;
+          return null;
+        },
+        potAdd: (a) => (VENOM_OF[a.id] && has(VENOM_OF[a.id]) ? venomUp(a.id) : 0),
+        dmgMult: () => 1,
+        effects(id, ok) {
+          const a = A[id], s = S();
+          if (a.isGcd) {
+            dropFollowUps(a);
+            if (!GENS.includes(id) && id !== ID.REAWAKEN) s.lastGen = null;
+          }
+          // 霊力ゲージ（説明文「「霊力ゲージ」をN上昇させる」）
+          const og = descGain(a, '霊力ゲージ', ok); if (og) gainOffering(og);
+          // 蛇鋭牙: 壱の牙・壱の大牙で付け替える
+          if (id === ID.STEEL || id === ID.STEEL_MAW) { R.remove('honedSteel'); R.buff('honedReavers', 60000); }
+          if (id === ID.REAVING || id === ID.REAVING_MAW) { R.remove('honedReavers'); R.buff('honedSteel', 60000); }
+          // 猛襲・疾速（弐の牙・弐の大牙・弐の蛇・弐の大蛇）と、双鋭牙（弐の蛇・弐の大蛇）・飛鋭尾（飛蛇の尾）: 説明文の付与
+          if (DUAL2.has(id) || MAW2.has(id) || COILS.has(id) || id === ID.UNCOILED) tooltipEffects(R, J, { ...a, eff: { ...(a.eff ?? {}), cost: null, requires: null } }, ok, {});
+          // 参の牙・参の大牙: 今の鋭牙を使って（消して）、次の鋭牙を付ける。強めていない参の牙を使ったら数える
+          if (FINISHERS.has(id) || MAW3.has(id)) {
+            const v = venomNow();
+            if (v && v !== VENOM_OF[id] && FINISHERS.has(VENOM_TARGET[v]) === FINISHERS.has(id)) { s.stats.venomMiss++; R.ev('ミス', { action: a.name, result: '鋭牙の付いていない参の牙', note: `${STATUS[v].name}が付いていた` }); }
+            for (const k of VENOMS) R.remove(k);
+            for (const g of a.eff?.grant ?? []) { const k = Object.keys(STATUS).find((x) => STATUS[x].name === g.status); if (k) R.buff(k, (g.sec ?? 60) * 1000); }
+          }
+          if (TAIL_OF[id]) s.tail = { id: TAIL_OF[id] };
+          if (TAILS.has(id)) s.tail = null;
+          // 壱の蛇・壱の大蛇: 飛蛇の魂 +1（特性）と、弐の蛇・弐の大蛇を 1 回ずつ
+          if (DREAD[id]) { gainCoil(1); s.dread = { left: [...DREAD[id]], until: s.t + COMBO_MS }; }
+          // 2 つ目の弐の蛇で終わり（共通のコンボの続き（S.chain）も消す。残すと受付時間切れをコンボ切れと数えてしまう）
+          if (COILS.has(id) && s.dread) { s.dread.left = s.dread.left.filter((x) => x !== id); if (!s.dread.left.length) { s.dread = null; s.chain = null; } }
+          if (TWIN_OF[id]) s.twin = { fang: TWIN_OF[id][0], blood: TWIN_OF[id][1], from: id, first: true };
+          if (TWIN_VENOM[id]) {
+            const t = s.twin;
+            R.remove(TWIN_VENOM[id]);
+            if (TWIN_NEXT[id] && t?.first && t.from === TWIN_NEXT[id][0]) R.buff(TWIN_NEXT[id][1], 30000);
+            if (id === ID.U_TWINFANG) R.buff('poisedBlood', 60000);
+            if (t) { if (t.fang === id) t.fang = null; if (t.blood === id) t.blood = null; t.first = false; if (!t.fang && !t.blood) s.twin = null; }
+          }
+          if (id === ID.UNCOILED) s.coil -= 1;
+          // 祖霊降ろし: 霊力 5。祖霊の牙・祖霊の大蛇牙で 1 つずつ使う
+          if (id === ID.REAWAKEN) {
+            if (has('readyReawaken')) R.remove('readyReawaken'); else s.offering -= 50;
+            R.buff('reawakened', 30000); s.tribute = TRIBUTE_MAX; s.lastGen = ID.REAWAKEN; s.stats.reawakens++;
+            Au()?.surge();
+          }
+          if (GENS.includes(id)) {
+            if (s.lastGen !== GEN_PREV[id]) { s.stats.genMiss++; R.ev('ミス', { action: a.name, result: '祖霊の牙の順番違い', note: '威力が下がる' }); }
+            s.tribute -= 1; s.lastGen = id;
+          }
+          if (id === ID.OUROBOROS) { s.tribute = 0; R.remove('reawakened'); s.lastGen = null; }
+          if (id === ID.IRE) { gainCoil(1); R.buff('readyReawaken', 30000); Au()?.surge(); }
+          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
+          if (id === ID.TN) R.buff('tn', 10000);
+        },
+        tick() {
+          const s = S();
+          if (s.tribute > 0 && !has('reawakened')) { if (s.phase === 'combat') s.stats.tributeLost += s.tribute; s.tribute = 0; s.lastGen = null; } // 祖霊降ろしの時間切れ
+          if (s.dread && s.t > s.dread.until) s.dread = null;
+          s.sight = J.sight(); // ヴァイパーサイト（ゲージ）に出すコンボの段階と光る側
+        },
+        highlightOk: () => true,
+        // コンボの次の技のうち光らせるもの（ヴァイパーサイトの刀身の光と同じ）
+        comboHighlight(id) {
+          const s = S(), c = comboNow();
+          if (DUAL2.has(id)) return DUAL1.has(c) ? secondPick(ID.HUNTERS_STING, ID.SWIFTSKINS_STING, true) === id : false;
+          if (FINISHERS.has(id)) {
+            if (!DUAL2.has(c)) return false;
+            const v = venomNow(), mine = id === ID.FLANKSTING || id === ID.FLANKSBANE ? c === ID.HUNTERS_STING : c === ID.SWIFTSKINS_STING;
+            return mine && (v ? VENOM_OF[id] === v : id === (c === ID.HUNTERS_STING ? ID.FLANKSTING : ID.HINDSTING));
+          }
+          if (MAW2.has(id)) return MAW1.has(c) ? secondPick(ID.HUNTERS_BITE, ID.SWIFTSKINS_BITE, false) === id : false;
+          if (MAW3.has(id)) return MAW2.has(c) ? (has('vGrimskin') ? id === ID.BLOODIED_MAW : id === ID.JAGGED_MAW) : false;
+          if (COILS.has(id)) return !!(s.dread?.left.includes(id) && s.t <= s.dread.until);
+          return null;
+        },
+        glow(id) {
+          const s = S(), c = comboNow();
+          if (reawakened()) {
+            const next = [null, ID.OUROBOROS, ID.GEN4, ID.GEN3, ID.GEN2, ID.GEN1][Math.min(5, s.tribute)];
+            if (GENS.includes(id) || id === ID.OUROBOROS) return id === next;
+          }
+          if (TAILS.has(id)) return s.tail?.id === id;
+          // 双牙の続き: 双鋭牙・飛鋭尾の付いている方。どちらにも付いていなければ両方
+          if (TWIN_VENOM[id]) {
+            const t = s.twin;
+            if (!t || (t.fang !== id && t.blood !== id)) return false;
+            const boosted = [t.fang, t.blood].filter((x) => x && has(TWIN_VENOM[x]));
+            return !boosted.length || boosted.includes(id);
+          }
+          if (c == null || !(DUAL1.has(c) || DUAL2.has(c) || MAW1.has(c) || MAW2.has(c))) {
+            if (id === ID.STEEL) return has('honedSteel');
+            if (id === ID.REAVING) return has('honedReavers');
+          }
+          if (id === ID.REAWAKEN) return !reawakened() && (s.offering >= 50 || has('readyReawaken'));
+          return false;
+        },
+        // 方向指定のガイド: 光っている参の牙・弐の蛇の向き。弐の牙の段では、その先の参の牙の向き（猛襲 → 側面、疾速 → 背面）
+        guide(highlight) {
+          for (const id of [ID.FLANKSTING, ID.FLANKSBANE, ID.HINDSTING, ID.HINDSBANE, ID.HUNTERS_COIL, ID.SWIFTSKINS_COIL]) if (highlight(id)) return A[id].positional;
+          if (highlight(ID.HUNTERS_STING)) return 'flank';
+          if (highlight(ID.SWIFTSKINS_STING)) return 'rear';
+          return null;
+        },
+        positional: () => has('tn') && 'トゥルーノース',
+        // ヴァイパーサイト（ゲージ）用: コンボの段階（0〜2）・範囲か・光る側（'L' / 'R' / 'LR' / ''）
+        sight() {
+          const s = S(), c = comboNow(), hl = (x) => J.comboHighlight(x) || J.glow(x);
+          const stage = DUAL2.has(c) || MAW2.has(c) ? 2 : DUAL1.has(c) || MAW1.has(c) ? 1 : 0;
+          const aoe = MAW1.has(c) || MAW2.has(c);
+          if (reawakened()) return { stage: 0, aoe: false, side: '' };
+          let L = false, Rt = false;
+          // 弐の蛇の待ちは、二刀のコンボの途中でないときだけ光らせる（コンボの途中はコンボの技の側）
+          if (stage === 0 && s.dread && s.t <= s.dread.until) { L = s.dread.left.includes(DREAD[ID.VICEWINDER][0]) || s.dread.left.includes(DREAD[ID.VICEPIT][0]); Rt = s.dread.left.includes(DREAD[ID.VICEWINDER][1]) || s.dread.left.includes(DREAD[ID.VICEPIT][1]); }
+          else if (stage === 0) { L = hl(ID.STEEL); Rt = hl(ID.REAVING); }
+          else if (aoe) { L = hl(stage === 1 ? ID.HUNTERS_BITE : ID.JAGGED_MAW); Rt = hl(stage === 1 ? ID.SWIFTSKINS_BITE : ID.BLOODIED_MAW); }
+          else if (stage === 1) { L = hl(ID.HUNTERS_STING); Rt = hl(ID.SWIFTSKINS_STING); }
+          else { L = hl(ID.FLANKSTING) || hl(ID.HINDSTING); Rt = hl(ID.FLANKSBANE) || hl(ID.HINDSBANE); }
+          return { stage, aoe, side: `${L ? 'L' : ''}${Rt ? 'R' : ''}` };
+        },
+        fxColor: (id) => (GENS.includes(id) || id === ID.OUROBOROS || LEGACIES.has(id) ? 'getsu' : COILS.has(id) || TWIN_VENOM[id] || id === ID.UNCOILED ? 'shoha' : FINISHERS.has(id) || MAW3.has(id) ? 'kenki' : 'steel'),
+        fxPower: (id) => (id === ID.OUROBOROS ? 1.6 : GENS.includes(id) || id === ID.REAWAKEN ? 1.3 : 1),
+        fxCount: (id) => (TWIN_VENOM[id] ? 2 : 1),
+        castColor: () => 'shoha',
+        gcdColor: (id) => (GENS.includes(id) || id === ID.OUROBOROS || id === ID.REAWAKEN ? '#6ad0f0' : COILS.has(id) || id === ID.UNCOILED ? '#ff7a5a' : null),
+        hotOgcd: (id) => [ID.IRE].includes(id),
+        weapon: 'slash', magicTone: 'dark',
+        tipCost: (id) => (A[id]?.eff?.cost?.gauge && gauges[A[id].eff.cost.gauge] ? [A[id].eff.cost.gauge, A[id].eff.cost.n] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.offeringOver) issues.push({ loss: Math.min(100, s.stats.offeringOver) * 0.1, rate: s.stats.offeringOver > 30 ? 'bad' : 'ok', title: `霊力ゲージが ${s.stats.offeringOver} あふれた`, advice: '霊力ゲージが 50 以上なら、あふれる前に祖霊降ろし' });
+          if (s.stats.coilOver) issues.push({ loss: s.stats.coilOver * 3, rate: 'bad', title: `飛蛇の魂が ${s.stats.coilOver} あふれた`, advice: '飛蛇の魂が 3 のときは、壱の蛇【強砕】・蛇の霊気の前に飛蛇の尾で使う' });
+          if (s.stats.followLost) issues.push({ loss: s.stats.followLost * 2, rate: 'bad', title: `使わずに消えた続き（蛇尾術・双牙）${s.stats.followLost}`, advice: '参の牙・弐の蛇・祖霊の牙のあとは、次のウェポンスキルの前に蛇尾術・双牙連術・双牙乱術を使う' });
+          if (s.stats.venomMiss) issues.push({ loss: s.stats.venomMiss * 2, rate: 'bad', title: `鋭牙の付いていない参の牙 ${s.stats.venomMiss} 回`, advice: '弐の牙は光っている方（ヴァイパーサイトの光る刀身の側）を選び、参の牙も光っている方を使う' });
+          if (s.stats.genMiss) issues.push({ loss: s.stats.genMiss * 2, rate: 'bad', title: `祖霊の牙の順番違い ${s.stats.genMiss} 回`, advice: '祖霊降ろしのあとは 壱 → 弐 → 参 → 肆 → 祖霊の大蛇牙 の順に' });
+          if (s.stats.tributeLost) issues.push({ loss: s.stats.tributeLost * 3, rate: 'bad', title: `使わずに消えた霊力 ${s.stats.tributeLost}`, advice: '祖霊降ろしの 30 秒のうちに、祖霊の牙 4 つと祖霊の大蛇牙を使い切る' });
+          metrics.push({ label: '祖霊降ろし', value: `${s.stats.reawakens} 回`, rate: null });
+          if (!s.stats.venomMiss && !s.stats.followLost && s.stats.gcds > 10) goods.push('鋭牙の参の牙と続きの技を無駄にしていない');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.venomMiss * 5 - s.stats.followLost * 5 - Math.min(40, (s.stats.offeringOver) / 3)), posAdvice: '参の牙【側撃】・【側裂】と弐の蛇【猛襲】は側面、参の牙【背撃】・【背裂】と弐の蛇【疾速】は背面。弐の牙を選んだ時点で次の向きが決まる。間に合わないときはトゥルーノース', castAdvice: 'ヴァイパーに詠唱はない', rangeAdvice: '離れたら飛蛇の尾（飛蛇の魂）か飛蛇の牙でつなぐ。蛇行で近づく', comboAdvice: '壱の牙 → 弐の牙 → 参の牙 の順に。壱の蛇・祖霊降ろしなどはコンボを切らない' };
+        },
+        howto: 'ヴァイパー: 壱の牙 → 弐の牙 → 参の牙 を光っている方から（ヴァイパーサイトの光る刀身の側）。参の牙は側面か背面。参の牙のあとは蛇尾術（蛇尾撃）。猛襲と疾速を切らさない。壱の蛇【強砕】→ 弐の蛇【猛襲】/【疾速】→ 双牙連術・双牙乱術。霊力ゲージ 50 で祖霊降ろし → 祖霊の牙 壱・弐・参・肆（それぞれ蛇尾術）→ 祖霊の大蛇牙。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'VPR'),
+        gaugeDefault: { JobHudRDB0: { x: 62, y: 64, anchor: 4, scale: 1 }, JobHudRDB1: { x: 78, y: 64, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { MNK, NIN, DRG, RPR, VPR });
 })();
