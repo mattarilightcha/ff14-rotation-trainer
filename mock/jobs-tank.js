@@ -418,5 +418,166 @@
     },
   };
 
-  Object.assign(window.MockJobs, { WAR, DRK });
+  // ---------------- ガンブレイカー ----------------
+  // 説明文から:
+  //   ソイル: ソリッドバレル・デーモンスローターのコンボ時に 1 つ。ビートファング・バーストストライク・フェイテッドサークルは 1、ダブルダウンは 2 を使う。
+  //     ブラッドソイル: ソイルの最大スタック数を 6 に増やし、ソイル 3 つ（30 秒）＋ハートコンボ実行可（30 秒）
+  //   ビートファング（固有のリキャスト 30 秒・チャージ 2）→ サベッジクロウ → ウィケッドタロン（コンボ条件を満たした場合のみ）。
+  //     それぞれジャギュラーリップ / アブドメンテアー / アイガウジ実行可、バーストストライクでハイパーヴェロシティ実行可、フェイテッドサークルでフェイテッドブランド実行可（10 秒）。
+  //     どれも「ウェポンスキルを実行すると解除される」。コンティニュエーションが実行可のものに変わる
+  //   ノー・マーシー: 与ダメージ 20%（20 秒）＋ソニックブレイク実行可（30 秒）。ソニックブレイク・バウショックは継続ダメージ（15 秒）
+  //   ライズ・オブ・ハート（ハートコンボ実行可）→ ルーラー・オブ・ハート → エンド・オブ・ハート
+  //   ブルータルシェル: コンボ時に回復力 200 と、回復量の 100% のバリア（30 秒）。ハート・オブ・コランダム: 被ダメージ 15%（8 秒）・
+  //     クラリティー・オブ・コランダム 15%（4 秒）・カタルシス・オブ・コランダム（20 秒。HP 50% 以下か時間切れで回復力 900）
+  // 仮（説明文にない: GAME-74）: ソイルの上限はふだん 3（ブラッドソイルの 30 秒が過ぎたら 3 を超えた分は消える）。継続ダメージは 3 秒ごと。
+  //   ボーライドの「HP を 50% にする」は入れず、10 秒間の被ダメージ 100% 軽減だけ。ハート・オブ・ライトは被魔法の 10% を使う。
+  //   ライズ・オブ・ハートはサンプルのホットバーに無いので「未配置」のボタン。続きのルーラー / エンド・オブ・ハートは、抽出データのとおり
+  //   ブラッドソイルのボタンが変わる（ライズ・オブ・ハートのボタンを押しても続きが出るようにした）
+  const GNB = {
+    abbr: 'GNB',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        KEEN: 16137, BRUTAL: 16139, SOLID: 16145, SLICE: 16141, SLAUGHTER: 16149, LIGHTNING: 16143, NO_MERCY: 16138, CAMO: 16140, GUARD: 16142,
+        GNASH: 16146, SAVAGE: 16147, WICKED: 16150, SONIC: 16153, CONT: 16155, RIP: 16156, TEAR: 16157, GOUGE: 16158, HYPER: 25759, BRAND: 36936,
+        BOW: 16159, LIGHT: 16160, BURST: 16162, FATED: 16163, BLOODFEST: 16164, ZONE: 16165, AURORA: 16151, BOLIDE: 16152, CORUNDUM: 25758,
+        DOUBLE: 25760, TRAJECTORY: 36934, NEBULA: 36935, REIGN: 36937, NOBLE: 36938, LION: 36939, RAMPART: 7531,
+      };
+      const STATUS = {
+        noMercy: { name: 'ノー・マーシー', tracked: true },
+        sonicReady: { name: 'ソニックブレイク実行可' },
+        rip: { name: 'ジャギュラーリップ実行可' },
+        tear: { name: 'アブドメンテアー実行可' },
+        gouge: { name: 'アイガウジ実行可' },
+        hyper: { name: 'ハイパーヴェロシティ実行可' },
+        brand: { name: 'フェイテッドブランド実行可' },
+        reignReady: { name: 'ハートコンボ実行可' },
+        guard: { name: 'ロイヤルガード' },
+        sonic: { name: 'ソニックブレイク', target: true, tracked: true },
+        bow: { name: 'バウショック', target: true },
+        camo: { name: 'カモフラージュ' },
+        nebula: { name: 'グレートネビュラ' },
+        bolide: { name: 'ボーライド' },
+        corundum: { name: 'ハート・オブ・コランダム' },
+        catharsis: { name: 'カタルシス・オブ・コランダム' },
+        brutal: { name: 'ブルータルシェル' },
+        rampart: { name: 'ランパート' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const READIES = ['rip', 'tear', 'gouge', 'hyper', 'brand'];
+      const SOIL_BASE = 3; // 仮（GAME-74）
+      const soilMax = () => (S().soilBig && S().soilBig > S().t ? 6 : SOIL_BASE);
+      function soil(n) {
+        const s = S(), mx = soilMax(), v = s.soil + n;
+        if (v > mx) {
+          s.stats.soilOver += v - mx;
+          R.addLog('warn', `ソイルが ${v - mx} あふれました`);
+          R.ev('ミス', { result: 'あふれ', note: `ソイルが ${v - mx} あふれた` });
+        }
+        s.soil = Math.max(0, Math.min(mx, v));
+      }
+      const gauges = { ソイル: { get: () => S().soil, set: (v) => { S().soil = Math.max(0, Math.min(soilMax(), v)); }, max: 6 } };
+      const isWs = (a) => a.category === 3;
+      const DOTS = { [ID.SONIC]: 'sonic', [ID.BOW]: 'bow' };
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // ビートファング・オーロラ・トラジェクトリー「最大チャージ数：2」
+        prepull: new Set([ID.GUARD]), // スタンスは戦闘前に入れる（自己バフのため仮で許可: GAME-30）
+        comboStarters: new Set([ID.KEEN, ID.SLICE]),
+        // 光る条件: ActionProcStatus の行 → ステータス
+        procStatus: { 33: 'rip', 34: 'tear', 35: 'gouge', 52: 'hyper', 156: 'brand', 157: 'reignReady', 210: 'sonicReady' },
+        ownDots: true, // 継続ダメージが 2 つ（ソニックブレイク・バウショック）
+        initState(s) { s.soil = 0; s.soilBig = 0; s.dots = {}; s.corundum = null; s.stats.soilOver = 0; s.stats.gnash = 0; s.stats.contUsed = 0; s.stats.contLost = 0; },
+        gaugeCols: [['ソイル', (s) => s.soil]],
+        tracked: [['ノー・マーシー', 'noMercy', '#ffb45a', '60 秒ごとに。ビートファングの 3 連・ダブルダウン・ソニックブレイクをこの中に'], ['ソニックブレイク', 'sonic', '#7fd0ff', '']],
+        speed: () => 1,
+        comboFree: () => false,
+        resolve(id) {
+          const s = S();
+          // ライズ・オブ・ハートのボタン: 続き（ルーラー → エンド）も出す（仮。データではブラッドソイルのボタンが変わる）
+          if (id === ID.REIGN && s.chain != null && s.t <= s.chainUntil) { if (s.chain === ID.REIGN) return ID.NOBLE; if (s.chain === ID.NOBLE) return ID.LION; }
+          return tooltipResolve(R, J, id);
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          if (id === ID.CONT) return 'コンティニュエーションの変化先がありません（ビートファング・バーストストライクなどの後に使う）';
+          if ((id === ID.SAVAGE || id === ID.WICKED || id === ID.NOBLE || id === ID.LION) && !(a.comboFrom.includes(s.chain) && s.t <= s.chainUntil)) return 'コンボ条件を満たしていません';
+          return tooltipBlocked(R, J, a, gauges);
+        },
+        castMs: (a, base) => base,
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // 「この効果はウェポンスキルを実行すると解除される」: 前の実行可を消してから、この技の分を付ける
+          if (isWs(a)) for (const k of READIES) if (has(k)) { R.remove(k); s.stats.contLost++; R.addLog('warn', `${STATUS[k].name}を使わずにウェポンスキルを実行しました`); }
+          // ソイル: コンボ時に 1 つ（説明文の付与。あふれを数えるため、ここで足す）
+          const eff = a.eff?.grant ? { ...a, eff: { ...a.eff, grant: a.eff.grant.filter((g) => g.status !== 'ソイル') } } : a;
+          tooltipEffects(R, J, eff, ok, gauges);
+          if (ok && a.eff?.grant?.some((g) => g.status === 'ソイル' && g.combo)) soil(1);
+          if (id === ID.BLOODFEST) { s.soilBig = s.t + 30000; soil(3); }
+          if ([ID.RIP, ID.TEAR, ID.GOUGE, ID.HYPER, ID.BRAND].includes(id)) s.stats.contUsed++;
+          if (id === ID.GNASH) s.stats.gnash++;
+          // 継続ダメージ（付けたときの与ダメージ上昇で計算）
+          if (DOTS[id] && a.pot?.dot) { const k = DOTS[id]; s.dots[k] = { until: s.t + a.pot.dot.sec * 1000, next: s.t + 3000, potency: a.pot.dot.potency, mult: R.mult, name: a.name }; R.buff(k, a.pot.dot.sec * 1000); }
+          // 防御
+          if (id === ID.BRUTAL && ok) { R.heal('self', (a.eff?.heal ?? 200) * HEAL_K); R.shield('self', (a.eff?.heal ?? 200) * HEAL_K, 30, 'ブルータルシェル'); R.buff('brutal', 30000); }
+          if (id === ID.CAMO) { R.mitigate('self', 0.1, 20, 'カモフラージュ'); R.buff('camo', 20000); }
+          if (id === ID.NEBULA) { R.mitigate('self', 0.4, 15, 'グレートネビュラ'); R.heal('self', 0.2); R.buff('nebula', 15000); }
+          if (id === ID.BOLIDE) { R.mitigate('self', 1, 10, 'ボーライド'); R.buff('bolide', 10000); } // 仮（GAME-74）
+          if (id === ID.LIGHT) R.mitigate('party', 0.1, 15, 'ハート・オブ・ライト'); // 被魔法 10%（仮 GAME-74）
+          if (id === ID.CORUNDUM) {
+            const who = R.who ?? 'self';
+            R.mitigate(who, 0.15, 8, 'ハート・オブ・コランダム'); R.mitigate(who, 0.15, 4, 'クラリティー・オブ・コランダム');
+            s.corundum = { who, until: s.t + 20000 };
+            if (who === 'self') { R.buff('corundum', 8000); R.buff('catharsis', 20000); }
+          }
+          if (id === ID.AURORA) support(R, a);
+          if (id === ID.RAMPART) { support(R, a); R.buff('rampart', 20000); }
+          if (id === ID.GUARD) toggleStance(R, 'guard');
+        },
+        tick() {
+          const s = S();
+          // ブラッドソイルの 30 秒が過ぎたら、3 を超えた分は消える（仮）
+          if (s.soilBig && s.t >= s.soilBig) { s.soilBig = 0; if (s.soil > SOIL_BASE) { R.addLog('warn', `ソイルが ${s.soil - SOIL_BASE} 消えました（ブラッドソイルの時間切れ）`); s.stats.soilOver += s.soil - SOIL_BASE; s.soil = SOIL_BASE; } }
+          // カタルシス・オブ・コランダム: HP 50% 以下か時間切れで回復力 900
+          if (s.corundum && (R.hpOf(s.corundum.who) <= 0.5 || s.t >= s.corundum.until)) { R.heal(s.corundum.who, 900 * HEAL_K); R.remove('catharsis'); s.corundum = null; }
+          // 継続ダメージ（3 秒ごと）
+          for (const k of Object.keys(s.dots)) {
+            const d = s.dots[k];
+            while (d.next <= s.t && d.next <= d.until) { d.next += 3000; if (s.phase === 'combat') R.dotTick(d.potency, d.mult, d.name); }
+            if (d.until < s.t) delete s.dots[k];
+          }
+        },
+        highlightOk: () => true,
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => ([ID.GNASH, ID.SAVAGE, ID.WICKED, ID.DOUBLE, ID.ZONE].includes(id) ? 'kenki' : [ID.RIP, ID.TEAR, ID.GOUGE, ID.HYPER, ID.BRAND].includes(id) ? 'iai' : [ID.REIGN, ID.NOBLE, ID.LION].includes(id) ? 'namikiri' : [ID.SONIC, ID.BOW].includes(id) ? 'setsu' : id === ID.BURST || id === ID.FATED ? 'kenki' : id === ID.NO_MERCY || id === ID.BLOODFEST ? 'kenki' : 'steel'),
+        fxPower: (id, a, ok) => ([ID.DOUBLE, ID.LION, ID.ZONE, ID.WICKED].includes(id) ? 1.5 : [ID.GNASH, ID.SAVAGE, ID.BURST, ID.NOBLE, ID.REIGN].includes(id) ? 1.25 : ok && a.comboFrom.length ? 1.15 : 1),
+        fxCount: (id) => ([ID.RIP, ID.TEAR, ID.GOUGE, ID.HYPER].includes(id) ? 2 : 1),
+        castColor: () => 'kenki',
+        gcdColor: (id) => ([ID.GNASH, ID.SAVAGE, ID.WICKED].includes(id) ? '#ffb45a' : id === ID.DOUBLE ? '#ff7a5a' : [ID.REIGN, ID.NOBLE, ID.LION].includes(id) ? '#7fe8ff' : id === ID.BURST ? '#ffd27a' : id === ID.SONIC ? '#7fd0ff' : null),
+        hotOgcd: (id) => [ID.ZONE, ID.BOW, ID.RIP, ID.TEAR, ID.GOUGE, ID.HYPER, ID.BRAND, ID.NO_MERCY, ID.BLOODFEST].includes(id),
+        // 効果音: ガンブレードの斬撃（コンティニュエーションは撃ち出す音を重ねる）。ノー・マーシーは自分の強化
+        weapon: 'slash',
+        sfxKind: (id) => (id === ID.NO_MERCY || id === ID.BLOODFEST ? { g: 'boost', v: 'self' } : null),
+        tipCost: (id) => (A[id]?.eff?.cost?.gauge === 'ソイル' ? ['ソイル', A[id].eff.cost.n] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.soilOver) issues.push({ loss: s.stats.soilOver * 3, rate: s.stats.soilOver > 2 ? 'bad' : 'ok', title: `ソイルのあふれ ${s.stats.soilOver}`, advice: 'ソイルが 3 つのときにソリッドバレルを使う前に、バーストストライクで使う。ブラッドソイルの前は 0 にしておく' });
+          if (s.stats.contLost) issues.push({ loss: s.stats.contLost * 3, rate: 'bad', title: `コンティニュエーションの使い忘れ ${s.stats.contLost} 回`, advice: 'ビートファング・バーストストライクなどの後は、次のウェポンスキルの前にコンティニュエーション（光る）' });
+          metrics.push({ label: 'ソイルのあふれ', value: `${s.stats.soilOver}`, rate: Math.max(0, 100 - s.stats.soilOver * 20) });
+          metrics.push({ label: 'コンティニュエーション', value: `${s.stats.contUsed} 回（使い忘れ ${s.stats.contLost}）`, rate: Math.max(0, 100 - s.stats.contLost * 20) });
+          if (!s.stats.soilOver && !s.stats.contLost && s.stats.gcds > 5) goods.push('ソイルのあふれ・コンティニュエーションの使い忘れなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.soilOver * 15 - s.stats.contLost * 15), posAdvice: '', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたらトラジェクトリー・サンダーバレット', comboAdvice: 'キーンエッジ → ブルータルシェル → ソリッドバレルの順に。ビートファング → サベッジクロウ → ウィケッドタロンは通常のコンボを切らない' };
+        },
+        howto: 'ガンブレイカー: キーンエッジ→ブルータルシェル→ソリッドバレル（ソイル +1）。ノー・マーシーの間にビートファング→サベッジクロウ→ウィケッドタロン、ダブルダウン、ソニックブレイク。ビートファング・バーストストライクなどの後はすぐコンティニュエーション（次のウェポンスキルで消える）。ブラッドソイルのあとライズ・オブ・ハート→ルーラー→エンド・オブ・ハート。あなたが敵を引きつけます。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'GNB'),
+        gaugeDefault: { JobHudGNB0: { x: 70, y: 62, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { WAR, DRK, GNB });
 })();

@@ -170,5 +170,50 @@
     };
   }
 
-  window.MockGauge2.add({ WAR: war, DRK: drk });
+  // ---------------- ガンブレイカー: パウダーゲージ（JobHudGNB0。ソイル）----------------
+  // #2 = 通常表示: 回転式の弾倉。#16〜#18 が弾の穴（部品 1001: #10 の子 #12 青い玉・#11 白い光 = 弾が入っている、#13 金の輪、
+  //   #2〜#9 は撃ったときの煙・火花・光の演出）。#7 の子 #8 橙の紋章（ロイヤルガード。仮）・#10 赤い玉・#11 黒い紋章・#13 枠
+  //   穴は 3 つしかないので、ブラッドソイルで 4〜6 になった分は、穴の金の輪で見せる（仮）
+  // #22 = シンプル表示: #24・#26・#27 ひし形（部品 1003: #2 金のひし形 = 弾、#3 は光の演出の層）、#28 赤い紋章のアイコン（ロイヤルガード）
+  const GN = { normal: 2, simple: 22, slots: [16, 17, 18], sSlots: [24, 26, 27], emblem: 8, sIcon: 28 };
+  function gnb(G) {
+    const L = G.layouts.JobHudGNB0;
+    const K = U.build(L, G.textures);
+    const k = (id) => K.get(id);
+    let simple = false, prev = {};
+    for (const sl of GN.slots) for (const c of [2, 3, 4, 5, 6, 7, 8, 9, 13]) set(k(`${sl}/${c}`), { opacity: 0 });
+    for (const id of [8, 9]) set(k(id), { opacity: 0 });
+    for (const sl of GN.sSlots) set(k(`${sl}/3`), { opacity: 0 });
+    k(GN.simple).hidden = true;
+    function apply(st, instant) {
+      const t = st.t ?? 0, n = Math.max(0, Math.min(6, st.soil ?? 0));
+      const guard = !!st.st?.guard && st.st.guard.until > t;
+      if (instant || n !== prev.n) {
+        GN.slots.forEach((sl, i) => {
+          const on = i < Math.min(3, n), extra = i < n - 3;
+          set(k(`${sl}/12`), { opacity: on ? 1 : 0.15, filter: on ? 'none' : 'grayscale(1) brightness(0.5)' });
+          set(k(`${sl}/11`), { opacity: on ? 1 : 0 });
+          set(k(`${sl}/13`), { opacity: extra ? 1 : 0 });
+          // 使った: 撃ち出す火花と煙 / 増えた: 光る
+          if (!instant && (prev.n ?? 0) > n && i >= Math.min(3, n) && i < Math.min(3, prev.n)) { for (const c of [6, 4]) anim(k(`${sl}/${c}`), [{ opacity: 0.9 }, { opacity: 0 }], { duration: 420 }); anim(k(`${sl}/3`), [{ opacity: 0.6 }, { opacity: 0 }], { duration: 700 }); }
+          if (!instant && n > (prev.n ?? 0) && i === Math.min(3, n) - 1) anim(k(`${sl}/10`), [{ transform: 'scale(1.35)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 400 });
+        });
+        GN.sSlots.forEach((sl, i) => set(k(`${sl}/2`), { opacity: i < Math.min(3, n) ? 1 : 0, filter: i < n - 3 ? 'brightness(1.5) hue-rotate(-25deg)' : 'none' }));
+      }
+      if (instant || guard !== prev.guard) {
+        set(k(GN.emblem), { opacity: guard ? 1 : 0 });
+        set(k(`${GN.sIcon}/2`), { opacity: guard ? 1 : 0.25 });
+        if (!instant && guard) anim(k(9), [{ opacity: 0.9, transform: 'scale(0.8)' }, { opacity: 0, transform: 'scale(1.3)' }], { duration: 600 });
+      }
+      prev = { n, guard };
+    }
+    function setSimple(v) { simple = !!v; k(GN.normal).hidden = simple; k(GN.simple).hidden = !simple; }
+    apply({ soil: 0, st: {}, t: 0 }, true);
+    return {
+      windows: [{ name: 'JobHudGNB0', label: 'パウダーゲージ', el: K.el, w: K.w, h: K.h }],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  window.MockGauge2.add({ WAR: war, DRK: drk, GNB: gnb });
 })();
