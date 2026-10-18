@@ -45,9 +45,10 @@
     fur: ['#ece2d0', '#c4b296', '#93826a', '#685a46', '#3e3428'], // 戦士の毛皮の襟とマント
     navy: ['#8ea0cc', '#4e6092', '#34426c', '#232d4c', '#151b30'], // ガンブレイカーの紺のコート
     bloodGlow: ['#ffffff', '#ffc4bc', '#ff5a4c', '#d0222c', '#6e1018'], // 暗黒騎士の兜の目・剣の筋（赤く光る）
+    shade: ['#e6ccff', '#9c6cdc', '#6040a4', '#3c226c', '#200f40'], // 暗黒騎士の影身（紫に光る影）
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -515,6 +516,8 @@
     war: { armor: 'iron', tabard: 'red', trim: 'brass', cape: 'fur', helm: 'horn', weapon: 'axe', fur: true },
     drk: { armor: 'black', tabard: 'blmRobe', trim: 'iron', cape: 'black', helm: 'dark', weapon: 'greatsword', gem: true },
     gnb: { armor: 'iron', tabard: 'navy', trim: 'steel', cape: 'navy', helm: 'hair', weapon: 'gunblade' },
+    // 暗黒騎士の影身具現（英雄の影身）: 暗黒騎士と同じ姿を、紫に光る影で
+    shadow: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'dark', weapon: 'greatsword', gem: true },
   };
   // タンクの武器（手 h、刃先への向き d）。side: 片刃の向き（1 = 刃先へ向かって右手側 perp(d)、-1 = 反対）
   function tankWeapon(F, h, d, st, side = 1) {
@@ -760,6 +763,8 @@
     hurt: { fps: 1, loop: false, poses: [{ bob: -1 }] },
     buff: { fps: 8, loop: false, poses: [{ atk: 1 }, { atk: 1, bob: -1 }] },
   };
+  // 影身（ペット）: 待機と攻撃（ペットの攻撃の動きは spell の名前で読む）
+  const SHADOW_ANIMS = { idle: TANK_ANIMS.idle, spell: HEAVY_ANIMS.slash };
 
   // ---------------- 白魔道士（白いフードのローブと杖。64×64、足元 y=59）----------------
   // p: { bob, sway, fl, fr, staff, free, orb（杖の玉の光）, tail（フードの先の揺れ）, jump, headDy }
@@ -1522,33 +1527,44 @@
     return c;
   }
 
+  // 人物・ペット・木人の組。どれも使うときに初めて作る（ジョブが増えて全部を作ると起動が遅くなるため）
+  const SETS = {
+    player: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
+    tank: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
+    war: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
+    drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
+    gnb: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.gnb) : tankFB(F, p, v === 'up', TANK_STYLE.gnb)), anims: HEAVY_ANIMS }),
+    whm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
+    ast: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
+    brd: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
+    blm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
+    smn: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
+    // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
+    pet_carbuncle: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
+    pet_ifrit: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),
+    pet_titan: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.065, draw: titan, anims: PET_ANIMS }),
+    pet_garuda: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: garuda, anims: PET_ANIMS }),
+    pet_bahamut: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'bahamut'), anims: PET_ANIMS }),
+    pet_phoenix: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'phoenix'), anims: PET_ANIMS }),
+    pet_shadow: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.shadow) : tankFB(F, p, v === 'up', TANK_STYLE.shadow)), anims: SHADOW_ANIMS }),
+    pet_solar: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
+    boss: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),
+  };
   let cache = null;
   function build() {
     if (cache) return cache;
     const t0 = performance.now();
     cache = {
-      player: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
-      tank: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
-      war: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
-      drk: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
-      gnb: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.gnb) : tankFB(F, p, v === 'up', TANK_STYLE.gnb)), anims: HEAVY_ANIMS }),
-      whm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
-      ast: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
-      brd: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
-      blm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.blm) : whmFB(F, p, v === 'up', ROBE_STYLE.blm)), anims: WHM_ANIMS }),
-      smn: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
-      // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
-      pet_carbuncle: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
-      pet_ifrit: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),
-      pet_titan: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.065, draw: titan, anims: PET_ANIMS }),
-      pet_garuda: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: garuda, anims: PET_ANIMS }),
-      pet_bahamut: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'bahamut'), anims: PET_ANIMS }),
-      pet_phoenix: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'phoenix'), anims: PET_ANIMS }),
-      pet_solar: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
-      boss: buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),
       props: buildProps(),
       vfx: { lilyHeart: lilyHeartCanvas(), lilyFlower: lilyFlowerCanvas(), lilyBubble: lilyBubbleCanvas(), glint: glintCanvas(), star: starCanvas(), LILY },
     };
+    // 組は、最初に読まれたときに作って置き換える（Object.entries で並べると全部作られるので、使う側は名前で読む）
+    for (const [k, make] of Object.entries(SETS)) {
+      Object.defineProperty(cache, k, {
+        enumerable: true, configurable: true,
+        get() { const t1 = performance.now(), v = make(); Object.defineProperty(cache, k, { value: v, enumerable: true }); cache.ms += Math.round(performance.now() - t1); return v; },
+      });
+    }
     cache.ms = Math.round(performance.now() - t0);
     return cache;
   }

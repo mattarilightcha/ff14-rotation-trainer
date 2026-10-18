@@ -60,6 +60,8 @@
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
     zoneSet: (kind, o) => Arena.zoneSet(kind, o), zoneHitsBoss: (kind) => Arena.zoneHitsBoss(kind),
+    // バリアの残り（暗黒騎士のブラックナイト: 全部吸収されたらダークアーツ）。'self' / 'npc'
+    shieldLeft: (who) => Arena.shieldLeft?.(who) ?? 0,
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
@@ -2200,7 +2202,7 @@
   $('ptTankIcon').src = NPC.icon;
   $('ptTank').querySelector('.pt-name').lastChild.textContent = ROLE === 'tank' ? 'ヒーラー' : 'タンク';
   loadSaved();
-  Arena.init({ canvas: $('arena'), canvas3d: $('arena3d'), overlay: $('overlay'), view: '3d', quality: VIEW.quality ?? 'high' }); // 表示は 3D だけ（2D は WebGL が使えないときの予備）
+  Arena.init({ canvas: $('arena'), canvas3d: $('arena3d'), overlay: $('overlay'), view: '3d', quality: VIEW.quality ?? 'high', job: JOB, role: ROLE }); // 表示は 3D だけ（2D は WebGL が使えないときの予備）
   reset();
   if (Arena.error3d()) addLog('sys', `3D で表示できないため 2D にしました（${Arena.error3d()}）`);
   buildStart();

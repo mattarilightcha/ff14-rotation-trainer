@@ -83,7 +83,7 @@
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -104,6 +104,9 @@
   function init(o) {
     canvas2d = o.canvas; canvas3d = o.canvas3d ?? null;
     overlay = o.overlay;
+    // ジョブと役割は最初に決めておく（3D の板を作るときに、自分と相方の見た目の組が要るため）
+    if (o.job) opts.job = o.job;
+    if (o.role) opts.role = o.role;
     SPR = window.MockSprites.build();
     R2D.init(canvas2d);
     bossName = document.createElement('div'); bossName.className = 'wname boss'; bossName.innerHTML = '<span class="cursor">▼</span>からくり木人';
@@ -657,12 +660,19 @@
     for (const z of zones) if (z.kind === kind && !z.dying) { z.dying = true; z.endAt = clock; } // 置き直すと前のものは消える
     // リタージー・オブ・ベルは自分の横（自分が攻撃を受けると鳴り、20m 以内を回復するため）。アサイラムは自分と相方の間
     // o.at: クリックで選んだ場所（なければ自動: パッドなど）
-    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : kind === 'ley' ? { x: player.x, y: player.y } : zonePlace(r);
-    const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [] };
+    // o.ring: 床の色付きの輪だけの範囲（暗黒騎士のソルトアースなど。o.col の 2 色で描き、時間が来たら消える）、o.self: 自分の足元に置く
+    const r = o.r ?? 10, at = o.at ? ST.clamp(STG, { x: o.at.x, y: o.at.y }, 1) : kind === 'bell' ? besidePlayer(2.6) : kind === 'star' ? ST.clamp(STG, { x: (player.x + boss.x) / 2, y: (player.y + boss.y) / 2 }, 1) : kind === 'ley' || o.self ? { x: player.x, y: player.y } : zonePlace(r);
+    const z = { kind, x: at.x, y: at.y, r, until: simNow + (o.sec ?? 20) * 1000, frac: o.frac ?? 0, next: simNow + 3000, born: clock, dying: false, endAt: 0, ringAt: -9, pops: [], ring: !!o.ring, col: o.col ?? null };
     zones.push(z);
-    const col = kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : kind === 'ley' ? COLORS.getsu : COLORS.dome;
+    const col = z.col ?? (kind === 'bell' ? COLORS.lily : kind === 'star' ? COLORS.star : kind === 'ley' ? COLORS.getsu : COLORS.dome);
     fx.push({ type: 'ring', at: { x: z.x, y: z.y }, col, t: 0, dur: 750, r0: 0.5, r1: kind === 'bell' ? 4 : r, thick: true });
-    if (kind === 'bell') {
+    if (z.ring) {
+      // 床の輪: 縁から色の粒が昇る
+      for (let i = 0; i < 40; i++) {
+        const a = rand(0, Math.PI * 2);
+        spark({ x: z.x + Math.cos(a) * r, y: z.y + Math.sin(a) * r, z: 0.1, vz: rand(1, 3), g: 0, drag: 1, life: rand(0.5, 1), max: 1, col: i % 2 ? col[0] : col[1], size: i % 4 ? 1 : 2 });
+      }
+    } else if (kind === 'bell') {
       // すずらんが生える: 足元から水色の光の粒が噴き上がる
       fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: BELL_H }, col, t: 0, dur: 600, power: 1.4 });
       for (let i = 0; i < 48; i++) {
@@ -723,8 +733,15 @@
         while (live && z.next <= simT && z.next <= z.until) { z.next += 3000; zoneHeal('asylum', z.frac, 'tick'); }
         if (simT >= z.until) { z.dying = true; z.endAt = clock; continue; }
       }
+      if (z.ring && simT >= z.until) { z.dying = true; z.endAt = clock; continue; }
       if (vdt <= 0) continue;
-      if (z.kind === 'asylum') {
+      if (z.ring) {
+        const n = Math.round(vdt * 9 + Math.random() * 0.6);
+        for (let i = 0; i < n; i++) {
+          const a = rand(0, Math.PI * 2), rr = Math.sqrt(Math.random()) * z.r;
+          spark({ x: z.x + Math.cos(a) * rr, y: z.y + Math.sin(a) * rr, z: 0.05, vz: rand(0.3, 1), g: 0, drag: 0.2, life: rand(0.8, 1.4), max: 1.4, col: i % 3 ? z.col[1] : z.col[0], size: 1, rot: rand(0, 6.28) });
+        }
+      } else if (z.kind === 'asylum') {
         const n = Math.round(vdt * 16 + Math.random() * 0.6);
         for (let i = 0; i < n; i++) {
           const a = rand(0, Math.PI * 2), rr = Math.sqrt(Math.random()) * z.r * 0.95;
@@ -856,7 +873,7 @@
   function petGoal() {
     const k = pet.temp ?? pet.base;
     if (DEMIS.has(k)) { const a = player.face + Math.PI * 0.75; return { x: player.x + Math.cos(a) * 2, y: player.y + Math.sin(a) * 2, z: 2.3 + Math.sin(clock * 1.6) * 0.15 }; } // 自分の右後ろの上空
-    if (k === 'ifrit' || k === 'titan' || k === 'garuda') {
+    if (k === 'ifrit' || k === 'titan' || k === 'garuda' || k === 'shadow') {
       const d = dist(player, boss) || 1, ux = (boss.x - player.x) / d, uy = (boss.y - player.y) / d, f = Math.min(2.4, d * 0.5);
       return { x: player.x + ux * f - uy * 1.2, y: player.y + uy * f + ux * 1.2, z: k === 'garuda' ? 0.7 : 0 };
     }
@@ -872,7 +889,7 @@
       pet.kind = k; pet.born = clock; pet.act = clock;
       const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z;
       if (k) {
-        const c = k === 'ifrit' || k === 'phoenix' ? '#ff9a52' : k === 'titan' ? '#ffd84a' : k === 'garuda' ? '#c8f070' : k === 'solar' ? '#eef4ff' : '#8ae8ff';
+        const c = k === 'ifrit' || k === 'phoenix' ? '#ff9a52' : k === 'titan' ? '#ffd84a' : k === 'garuda' ? '#c8f070' : k === 'solar' ? '#eef4ff' : k === 'shadow' ? '#b07aff' : '#8ae8ff';
         fx.push({ type: 'flash', at: { x: pet.x, y: pet.y, z: pet.z + 1 }, col: [c, c], t: 0, dur: 500, power: DEMIS.has(k) ? 1.6 : 1 });
         for (let i = 0; i < 24; i++) { const a = rand(0, Math.PI * 2), r = rand(0.2, 1.6); spark({ x: pet.x + Math.cos(a) * r, y: pet.y + Math.sin(a) * r, z: rand(0, 1.5) + pet.z, vz: rand(0.6, 2), g: 0, drag: 0.8, life: rand(0.5, 1), max: 1, col: c, size: 1, shape: 2, rot: rand(0, 6.28), spin: rand(-3, 3) }); }
       }
@@ -1227,6 +1244,10 @@
         // ドームの丸み（上から見た光の映り込み）
         g.strokeStyle = 'rgba(200,230,255,.35)'; g.lineWidth = 3;
         g.beginPath(); g.arc(cx - R * 0.18, cy - R * 0.2, R * 0.62, Math.PI * 1.05, Math.PI * 1.6); g.stroke();
+      } else if (z.ring) {
+        // 床の輪（ソルトアースなど）: 範囲ごとの色の塗りと縁
+        g.globalAlpha = f * 0.35; g.fillStyle = z.col[1]; g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); g.fill();
+        g.globalAlpha = f * 0.9; g.strokeStyle = z.col[0]; g.lineWidth = 1.5; g.stroke();
       } else {
         g.globalAlpha = f * 0.8;
         g.setLineDash([6, 6]); g.lineDashOffset = -clock * 6;
@@ -1469,6 +1490,8 @@
     distTo: (k) => (k === 'tank' ? dist(player, tank) : k === 'boss' ? Math.max(0, dist(player, boss) - POL.hitbox) : 0),
     heal: (who, frac) => healNow(who, frac), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
     // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
+    // バリアの残り（最大 HP に対する割合）。'self' / 'npc'
+    shieldLeft: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? e.shield : 0; },
     zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
     inZone: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(player.x - z.x, player.y - z.y) <= z.r; },
     zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },

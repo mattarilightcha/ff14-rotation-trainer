@@ -3,7 +3,7 @@
 // 値は説明文（抽出データの description と、build-mock-data.mjs が読み取った eff / pot）から。説明文にない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, descGain, extendBuff, support } = window.MockJobs.lib;
+  const { tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, descGain, extendBuff, support, actorTickPhase, mpTicks, naturalMp } = window.MockJobs.lib;
 
   // タンクのスタンス（ディフェンダーなど）: 説明文「再使用で解除する。効果時間：永続」
   const toggleStance = (R, k) => { if (R.has(k)) R.remove(k); else R.buff(k, 1e9); };
@@ -158,6 +158,8 @@
             s.damn = null;
           }
         },
+        // ダムネーションの威力 55 は反撃の分なので、使ったときには攻撃しない
+        noHit: (id) => id === ID.DAMNATION,
         // 自分がダメージを受けたとき: ダムネーションの反撃（威力 55）と、最初の 1 回でダムネーション［被］（継続回復 回復力 300・15 秒）
         onHurt() {
           const s = S();
@@ -195,5 +197,226 @@
     },
   };
 
-  Object.assign(window.MockJobs, { WAR });
+  // ---------------- 暗黒騎士 ----------------
+  // 説明文から:
+  //   ブラックブラッド: ソウルイーター・ストルワートソウル +20（コンボ時）。ブラッドスピラー・クワイタスは 50 を使う
+  //   暗黒（与ダメージ 10%）: 漆黒の剣 / 漆黒の波動で 30 秒。付いていれば 30 秒延長（最大 60 秒）。シャドウブリンガーは暗黒の間だけ
+  //   漆黒の剣・漆黒の波動・ブラックナイトは MP 3000（Action の消費 MP）。ブラックナイトのバリア（最大 HP の 25%・7 秒）が全部吸収されると
+  //     ダークアーツ（MP の代わりにダークアーツで漆黒の剣 / 漆黒の波動を出せる）
+  //   ブラッドデリリアム: ブラッドデリリアム・ブラッドウェポン（3 スタック・15 秒）。ブラッドスピラーがレッドデリリアム → カマパンス → トアクリーバー、
+  //     クワイタスがインペイルメントに変わる（スタックを 1 つ使う）。ブラッドウェポン: ウェポンスキル・魔法が当たると MP 回復とブラックブラッド +10
+  //   影身具現: 英雄の影身が 22 秒戦う（攻撃の威力 420、シャドウブリンガー 570、ディセスティーム 620）＋ディセスティーム実行可（30 秒）
+  //   ソルトアース: 足元の範囲（威力 50・15 秒）。ソルト・アンド・ダークはソルトアースの効果中に、範囲の中の敵へ（威力 500）
+  //   シャドウヴィジル: 被ダメージ 40%（15 秒）＋シャドウヴィジル［被］（20 秒。HP 50% 未満か時間切れで回復力 1200）。アンメンドはシャドウストライドのリキャスト −5 秒
+  // 仮（説明文にない: GAME-73）: ブラックブラッドの上限は 100。MP の回復量（サイフォンストライク・ストルワートソウルのコンボ時・カーヴ・アンド・スピット・
+  //   アビサルドレイン・ブラッドウェポンは 600、レッドデリリアム以降とインペイルメントは 200）。ダークアーツは使うまで消えない。
+  //   英雄の影身の攻撃は、具現から 3 秒後に始まり 2.2 秒ごとに 6 回（420・420・シャドウブリンガー 570・420・420・ディセスティーム 620）。
+  //   リビングデッドは、練習では 10 秒間の被ダメージ 100% 軽減とみなす（HP が 0 にならないため）。ダークマインドは被物理（10%）、ダークミッショナリーは被魔法（10%）の値を使う
+  const DRK = {
+    abbr: 'DRK',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        HARD: 3617, SYPHON: 3623, SOULEATER: 3632, UNLEASH: 3621, STALWART: 16468, UNMEND: 3624, GRIT: 3629, DARK_MIND: 3634, LIVING_DEAD: 3638,
+        SALTED: 3639, DRAIN: 3641, CARVE: 3643, DELIRIUM: 7390, QUIETUS: 7391, SPILLER: 7392, TBN: 7393, RAMPART: 7531, EDGE: 16470, FLOOD: 16469,
+        MISSIONARY: 16471, SHADOW: 16472, OBLATION: 25754, SALT_DARK: 25755, BRINGER: 25757, STRIDE: 36926, VIGIL: 36927,
+        SCARLET: 36928, COMEUPPANCE: 36929, TORCLEAVER: 36930, IMPALEMENT: 36931, DISESTEEM: 36932,
+      };
+      const STATUS = {
+        darkside: { name: '暗黒', tracked: true },
+        darkArts: { name: 'ダークアーツ' },
+        delirium: { name: 'ブラッドデリリアム' },
+        bloodWeapon: { name: 'ブラッドウェポン' },
+        grit: { name: 'グリットスタンス' },
+        tbn: { name: 'ブラックナイト' },
+        livingDead: { name: 'リビングデッド' },
+        saltEarth: { name: 'ソルトアース' },
+        disesteemReady: { name: 'ディセスティーム実行可' },
+        vigil: { name: 'シャドウヴィジル' },
+        vigilProc: { name: 'シャドウヴィジル［被］' },
+        darkMind: { name: 'ダークマインド' },
+        oblation: { name: 'オブレーション' },
+        rampart: { name: 'ランパート' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const MP_MAX = 10000, BLOOD_MAX = 100; // ブラックブラッドの上限は仮（GAME-73）
+      const MP_GAIN = { [ID.SYPHON]: 600, [ID.STALWART]: 600, [ID.CARVE]: 600, [ID.DRAIN]: 600, [ID.SCARLET]: 200, [ID.COMEUPPANCE]: 200, [ID.TORCLEAVER]: 200, [ID.IMPALEMENT]: 200 }; // 仮（GAME-73）
+      const COMBO_MP = new Set([ID.SYPHON, ID.STALWART]); // 「コンボボーナス：自身のＭＰを回復する」
+      const BW_MP = 600; // ブラッドウェポンの MP 回復（仮 GAME-73）
+      const BW_BLOOD = Number(/ブラッドウェポン効果：[^]*?「ブラックブラッド」を(\d+)上昇/.exec(A[ID.DELIRIUM]?.desc ?? '')?.[1] ?? 10); // ブラッドウェポンの「ブラックブラッド」を10上昇
+      const DELIRIUM_OF = { [ID.SPILLER]: ID.SCARLET, [ID.QUIETUS]: ID.IMPALEMENT };
+      const SHADOW_HITS = [[420, '英雄の影身'], [420, '英雄の影身'], [570, 'シャドウブリンガー（影身）'], [420, '英雄の影身'], [420, '英雄の影身'], [620, 'ディセスティーム（影身）']]; // 仮（GAME-73）
+      const isSpell = (a) => a.category === 2;
+      const isWs = (a) => a.category === 3;
+      const mpCost = (a) => ((a.id === ID.EDGE || a.id === ID.FLOOD) && has('darkArts') ? 0 : a.mp ?? 0);
+      function blood(n) {
+        const s = S(), v = s.blood + n;
+        if (v > BLOOD_MAX) {
+          const over = v - BLOOD_MAX;
+          s.stats.bloodOver += over;
+          R.addLog('warn', `ブラックブラッドが ${over} あふれました`);
+          R.ev('ミス', { result: 'あふれ', note: `ブラックブラッドが ${over} あふれた` });
+        }
+        s.blood = Math.max(0, Math.min(BLOOD_MAX, v));
+      }
+      const mp = (n) => { const s = S(); s.mp = Math.max(0, Math.min(MP_MAX, s.mp + n)); };
+      const gauges = {
+        ブラックブラッド: { get: () => S().blood, set: (v) => { S().blood = Math.max(0, Math.min(BLOOD_MAX, v)); }, max: BLOOD_MAX },
+        // ブラッドデリリアムのスタック（説明文「発動条件：「ブラッドデリリアム」」= 1 つ使う）
+        ブラッドデリリアム: { get: () => (has('delirium') ? S().st.delirium.stacks ?? 1 : 0), set: (v) => { if (v <= 0) R.remove('delirium'); else S().st.delirium.stacks = v; }, max: 3 },
+      };
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // シャドウストライド・オブレーション・シャドウブリンガー「最大チャージ数：2」
+        prepull: new Set([ID.GRIT, ID.TBN]), // スタンスと自分へのバリアは戦闘前に入れる（自己バフのため仮で許可: GAME-30）
+        comboStarters: new Set([ID.HARD, ID.UNLEASH]),
+        // 光る条件: ActionProcStatus の行 → ステータス（54 ブラッドスピラー・クワイタス = ブラッドデリリアム、154 インペイルメント、155 ディセスティーム）
+        procStatus: { 54: 'delirium', 154: 'delirium', 155: 'disesteemReady' },
+        ownDots: true, // ソルトアースの範囲は自分で持つ
+        initState(s) {
+          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.blood = 0; s.tbn = null; s.shadow = null; s.vigil = false; s.dots = {};
+          s.stats.bloodOver = 0; s.stats.edges = 0; s.stats.darkArtsUsed = 0; s.stats.tbnBroken = 0; s.stats.delirium = 0;
+        },
+        gaugeCols: [['ブラックブラッド', (s) => s.blood], ['MP', (s) => Math.floor(s.mp)], ['暗黒（秒）', (s) => (s.st.darkside && s.st.darkside.until > s.t ? Math.ceil((s.st.darkside.until - s.t) / 1000) : 0)]],
+        tracked: [['暗黒', 'darkside', '#b07aff', '切れる前に漆黒の剣（最大 60 秒まで延長できる）']],
+        speed: () => 1,
+        comboFree: () => false,
+        resolve(id) {
+          // ブラッドデリリアムの間: ブラッドスピラー → レッドデリリアム（→ カマパンス → トアクリーバー）、クワイタス → インペイルメント
+          if (DELIRIUM_OF[id] && has('delirium')) { const t = tooltipResolve(R, J, id); return t !== id ? t : DELIRIUM_OF[id]; }
+          if (DELIRIUM_OF[id]) return id;
+          return tooltipResolve(R, J, id);
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          if ((id === ID.EDGE || id === ID.FLOOD || id === ID.TBN) && s.mp < mpCost(a)) return `MP が足りません（必要 ${mpCost(a)} / 現在 ${Math.floor(s.mp)}）`;
+          if (id === ID.SALT_DARK && !has('saltEarth')) return '「ソルトアース」の効果中ではありません';
+          return tooltipBlocked(R, J, a, gauges);
+        },
+        castMs: (a, base) => base,
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // 説明文の効果（発動条件のステータス・付与・ゲージの消費）。暗黒は延長の決まりがあるので除いて下で付ける。
+          // シャドウブリンガー（暗黒の間）とソルト・アンド・ダーク（ソルトアースの間）は、発動条件のステータスを使わない
+          const keep = id === ID.BRINGER || id === ID.SALT_DARK;
+          const eff = a.eff ? { ...a, eff: { ...a.eff, grant: a.eff.grant?.filter((g) => g.status !== '暗黒'), requires: keep ? undefined : a.eff.requires } } : a;
+          tooltipEffects(R, J, eff, ok, gauges);
+          // MP
+          const cost = mpCost(a);
+          if ((id === ID.EDGE || id === ID.FLOOD) && has('darkArts')) { R.remove('darkArts'); s.stats.darkArtsUsed++; R.addLog('ok', 'ダークアーツを使いました（MP なし）'); }
+          else if (cost > 0) mp(-cost);
+          if (MP_GAIN[id] && (!COMBO_MP.has(id) || ok)) mp(MP_GAIN[id]);
+          // ブラックブラッド（説明文「「ブラックブラッド」を20上昇」。コンボ時）。ブラッドデリリアムの説明文の +10 はブラッドウェポンの分なので除く
+          if (id !== ID.DELIRIUM) blood(descGain(a, 'ブラックブラッド', ok));
+          // 暗黒: 付与と延長（説明文「既に付与されている場合は、その効果時間を30秒延長する。最大60秒まで」）
+          if (id === ID.EDGE || id === ID.FLOOD) { extendBuff(R, 'darkside', 30000, 60000, 30000); s.stats.edges++; }
+          // ブラッドウェポン: ウェポンスキル・魔法が当たるたびに MP と ブラックブラッド（スタックを 1 つ使う。仮）
+          if ((isWs(a) || isSpell(a)) && has('bloodWeapon')) {
+            mp(BW_MP); blood(BW_BLOOD);
+            const st = s.st.bloodWeapon; if ((st.stacks ?? 1) > 1) st.stacks -= 1; else R.remove('bloodWeapon');
+          }
+          if (id === ID.DELIRIUM) { R.buff('delirium', 15000, 3); R.buff('bloodWeapon', 15000, 3); s.stats.delirium++; }
+          // 回復（ソウルイーター「コンボボーナス：自身のＨＰを回復する」・アビサルドレイン・カーヴ・アンド・スピット）。
+          // リビングデッドの回復力 1500 はウォーキングデッドの間の分なので、ここでは回復しない
+          if ([ID.SOULEATER, ID.DRAIN, ID.CARVE].includes(id) && a.eff?.heal > 0 && (id !== ID.SOULEATER || ok)) R.heal('self', a.eff.heal * HEAL_K);
+          if (id === ID.UNMEND) R.cdShift(ID.STRIDE, 5000); // アンメンド「シャドウストライドのリキャストタイムを5秒短縮する」
+          // 防御
+          if (id === ID.TBN) {
+            const who = R.who ?? 'self';
+            R.shield(who, 0.25, 7, 'ブラックナイト');
+            s.tbn = { who, until: s.t + 7000 };
+            if (who === 'self') R.buff('tbn', 7000);
+          }
+          if (id === ID.DARK_MIND) { R.mitigate('self', 0.1, 10, 'ダークマインド'); R.buff('darkMind', 10000); } // 被物理 10%（仮 GAME-73）
+          if (id === ID.MISSIONARY) R.mitigate('party', 0.1, 15, 'ダークミッショナリー'); // 被魔法 10%（仮 GAME-73）
+          if (id === ID.OBLATION) { const who = R.who ?? 'self'; R.mitigate(who, 0.1, 10, 'オブレーション'); if (who === 'self') R.buff('oblation', 10000); }
+          if (id === ID.RAMPART) { support(R, a); R.buff('rampart', 20000); }
+          if (id === ID.LIVING_DEAD) R.mitigate('self', 1, 10, 'リビングデッド'); // 仮（GAME-73）
+          if (id === ID.VIGIL) { R.mitigate('self', 0.4, 15, 'シャドウヴィジル'); R.buff('vigil', 15000); s.vigil = true; }
+          if (id === ID.GRIT) toggleStance(R, 'grit');
+          // ソルトアース: 足元に範囲（15 秒）。範囲の中の敵に 3 秒ごとに威力 50
+          if (id === ID.SALTED) {
+            const sec = Number(/効果時間：(\d+)秒/.exec(a.desc)?.[1] ?? 15);
+            R.zone('salt', { r: a.effectRange || 5, sec, ring: true, self: true, col: ['#f0dcff', '#8a40d0'] });
+            R.buff('saltEarth', sec * 1000);
+            s.dots.salt = { until: s.t + sec * 1000, next: s.t + 3000, potency: a.pot?.base ?? 50, mult: R.mult, name: a.name };
+          }
+          // ソルト・アンド・ダーク: ソルトアースの範囲に敵がいるときだけ当たる（威力は説明文のとおり上で計算済み）
+          if (id === ID.SALT_DARK && !R.zoneHitsBoss('salt')) R.addLog('warn', 'ソルト・アンド・ダーク: ソルトアースの範囲に敵がいません');
+          // 影身具現: 英雄の影身が 22 秒（攻撃の予定は仮 GAME-73）
+          if (id === ID.SHADOW) {
+            s.shadow = { at: s.t, until: s.t + 22000, i: 0 };
+            R.pet('shadow', 22);
+            R.addLog('ok', '英雄の影身を具現化（22 秒）');
+          }
+        },
+        // 使ったときには攻撃しない技: 影身具現（威力は影身の攻撃）・ソルトアース（威力は範囲の 1 回分）。
+        // ソルト・アンド・ダークは、ソルトアースの範囲に敵がいないと当たらない
+        noHit: (id) => id === ID.SHADOW || id === ID.SALTED || (id === ID.SALT_DARK && !R.zoneHitsBoss('salt')),
+        tick(dt) {
+          const s = S();
+          // ブラックナイトのバリアを全部吸収した → ダークアーツ（説明文）
+          if (s.tbn) {
+            if (R.shieldLeft(s.tbn.who) <= 0.0005 && s.t < s.tbn.until) {
+              R.buff('darkArts', 1e9); s.stats.tbnBroken++; s.tbn = null;
+              R.addLog('ok', 'ブラックナイトのバリアが吸収されて消えました → ダークアーツ');
+            } else if (s.t >= s.tbn.until) s.tbn = null;
+          }
+          // シャドウヴィジル［被］: HP 50% 未満か時間切れで回復力 1200
+          if (s.vigil && has('vigilProc') && R.hpOf('self') < 0.5) { R.heal('self', 1200 * HEAL_K); R.remove('vigilProc'); s.vigil = false; }
+          if (s.vigil && !has('vigilProc')) { R.heal('self', 1200 * HEAL_K); s.vigil = false; }
+          // ソルトアースの範囲（3 秒ごと。範囲の中に敵がいるときだけ）
+          const d = s.dots.salt;
+          if (d) {
+            while (d.next <= s.t && d.next <= d.until) { d.next += 3000; if (s.phase === 'combat' && R.zoneHitsBoss('salt')) R.dotTick(d.potency, d.mult, d.name); }
+            if (d.until < s.t) delete s.dots.salt;
+          }
+          // 英雄の影身の攻撃
+          const sh = s.shadow;
+          if (sh) {
+            while (sh.i < SHADOW_HITS.length && s.t >= sh.at + 3000 + sh.i * 2200) {
+              const [pot, name] = SHADOW_HITS[sh.i++];
+              if (s.phase === 'combat') { R.hit(pot, name); R.pet('act'); }
+            }
+            if (s.t >= sh.until) s.shadow = null;
+          }
+          if (s.phase !== 'combat' && s.phase !== 'countdown') return;
+          // MP の自然回復（ジョブ共通の 3 秒周期）
+          for (let n = mpTicks(s, dt); n > 0; n--) mp(naturalMp(s));
+        },
+        highlightOk: (id, st) => st !== 'delirium' || has('delirium'),
+        // 光る: 暗黒の間のシャドウブリンガー、ソルトアースの間のソルト・アンド・ダーク、ダークアーツの漆黒の剣
+        glow: (id) => (id === ID.BRINGER ? has('darkside') : id === ID.SALT_DARK ? has('saltEarth') : (id === ID.EDGE || id === ID.FLOOD) ? has('darkArts') : false),
+        guide: () => null,
+        positional: () => null,
+        fxColor: (id) => ([ID.EDGE, ID.FLOOD, ID.BRINGER, ID.SALT_DARK, ID.DISESTEEM, ID.UNMEND, ID.UNLEASH, ID.STALWART, ID.DRAIN, ID.SALTED, ID.SHADOW].includes(id) ? 'shoha' : [ID.SPILLER, ID.QUIETUS, ID.SCARLET, ID.COMEUPPANCE, ID.TORCLEAVER, ID.IMPALEMENT, ID.CARVE].includes(id) ? 'blood' : id === ID.DELIRIUM ? 'blood' : 'steel'),
+        fxPower: (id, a, ok) => ([ID.DISESTEEM, ID.TORCLEAVER, ID.BRINGER].includes(id) ? 1.5 : [ID.SPILLER, ID.SCARLET, ID.COMEUPPANCE, ID.EDGE].includes(id) ? 1.25 : ok && a.comboFrom.length ? 1.15 : 1),
+        fxCount: () => 1,
+        castColor: () => 'shoha',
+        gcdColor: (id) => ([ID.SCARLET, ID.COMEUPPANCE, ID.TORCLEAVER, ID.IMPALEMENT].includes(id) ? '#ff3b5a' : id === ID.SPILLER || id === ID.QUIETUS ? '#ff7a6a' : id === ID.DISESTEEM ? '#c08aff' : null),
+        hotOgcd: (id) => [ID.EDGE, ID.FLOOD, ID.BRINGER, ID.CARVE, ID.DRAIN, ID.SALT_DARK, ID.SHADOW, ID.DELIRIUM].includes(id),
+        // 効果音: 両手剣の斬撃、無属性の魔法（漆黒の剣など）は闇
+        weapon: 'slash', magicTone: 'dark',
+        sfxKind: (id) => (id === ID.DELIRIUM ? { g: 'boost', v: 'self' } : id === ID.SHADOW ? { g: 'boost', v: 'summon' } : null),
+        tipCost: (id) => (id === ID.EDGE || id === ID.FLOOD ? ['MP', has('darkArts') ? '0（ダークアーツ）' : 3000] : id === ID.TBN ? ['MP', 3000] : id === ID.SPILLER || id === ID.QUIETUS ? ['ブラックブラッド', 50] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.bloodOver) issues.push({ loss: Math.min(100, s.stats.bloodOver * 2) * 0.1, rate: s.stats.bloodOver > 30 ? 'bad' : 'ok', title: `ブラックブラッドが ${s.stats.bloodOver} あふれた`, advice: '50 以上たまったらブラッドスピラーで使う。ブラッドデリリアムの前には使っておく' });
+          metrics.push({ label: 'ブラックブラッドのあふれ', value: `${s.stats.bloodOver}`, rate: Math.max(0, 100 - s.stats.bloodOver * 2) });
+          metrics.push({ label: '漆黒の剣・漆黒の波動', value: `${s.stats.edges} 回（ダークアーツ ${s.stats.darkArtsUsed} 回）`, rate: null });
+          metrics.push({ label: 'MP（終了時）', value: `${Math.floor(s.mp)}`, rate: null });
+          if (!s.stats.bloodOver && s.stats.gcds > 5) goods.push('ブラックブラッドのあふれなし');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.bloodOver * 2), posAdvice: '', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたらシャドウストライド・アンメンド', comboAdvice: 'ハードスラッシュ → サイフォンストライク → ソウルイーターの順に。ブラッドスピラーや漆黒の剣はコンボを切らない' };
+        },
+        howto: '暗黒騎士: ハードスラッシュ→サイフォンストライク→ソウルイーター。漆黒の剣（MP 3000）で「暗黒」を切らさない。ブラックブラッド 50 でブラッドスピラー。ブラッドデリリアムの間はレッドデリリアム→カマパンス→トアクリーバー。影身具現のあとディセスティーム。ブラックナイトのバリアが全部吸収されるとダークアーツ（MP なしで漆黒の剣）。あなたが敵を引きつけます。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'DRK'),
+        gaugeDefault: { JobHudDRK0: { x: 66, y: 62, anchor: 4, scale: 1 }, JobHudDRK1: { x: 78, y: 62, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { WAR, DRK });
 })();
