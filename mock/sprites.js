@@ -56,6 +56,8 @@
     mnkTop: ['#ffd8a8', '#eb9a52', '#c4702e', '#8c4a20', '#552c14'], // モンクの橙の道着
     drgArmor: ['#c4d0f0', '#7a8cc4', '#52649c', '#36446e', '#1e2644'], // 竜騎士の青黒い鎧
     drgCloth: ['#e890a0', '#b04058', '#842a44', '#5a1a30', '#340e1e'], // 竜騎士の紅の前垂れ
+    rprRobe: ['#a49cb4', '#615a72', '#423c50', '#2b2736', '#17141e'], // リーパーの黒紫のコートとフード
+    rprCloth: ['#d88a9a', '#9a3448', '#6e2236', '#4a1626', '#2a0c16'], // リーパーの葡萄色の前垂れ
   };
   // 3D で光らせる素材（光のにじみの対象）
   const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
@@ -315,8 +317,8 @@
   // ---------------- 侍とほかの軽装の近接（64×64、足元 y=59）----------------
   // p: { bob, crouch, fl, fr, sway, arm, free, smear, tail, lean, headDy, jump }
   // st: 見た目（MELEE_STYLE）。top 上着・pants 袴（ズボン）・foot 足・belt 帯と trim 縁・knot 帯の結び・collar 襟と collarTrim 縁・mark 背中の紋・
-  //   band 鉢巻（null で無し）・topknot 髷・hair 髪の色・mask 口元の覆面・hood フード・sleeve 袖・
-  //   weapon 武器（katana 刀と鞘 / fist 籠手 / dagger 両手の短剣 / twin 両手の剣 / scythe 大鎌）
+  //   band 鉢巻（null で無し）・topknot 髷・hair 髪の色・mask 口元の覆面・sleeve 袖・
+  //   weapon 武器（katana 刀と鞘 / fist 籠手 / dagger 両手の短剣 / twin 両手の剣）
   const MELEE_STYLE = {
     sam: { top: 'red', pants: 'hakama', foot: 'black', belt: 'black', trim: 'gold', knot: 'red', collar: 'white', collarTrim: 'gold', mark: true, band: 'white', topknot: true, hair: 'hair', sleeve: true, weapon: 'katana' },
     mnk: { top: 'mnkTop', pants: 'woodD', foot: 'leather', belt: 'red', trim: 'gold', knot: 'gold', collar: 'skin', collarTrim: 'gold', mark: false, band: 'red', topknot: true, hair: 'hair', sleeve: false, weapon: 'fist' },
@@ -562,17 +564,21 @@
 
   // ---------------- タンク（ナイト・戦士・暗黒騎士・ガンブレイカー。64×64）----------------
   // st: 見た目（TANK_STYLE）。armor 鎧・tabard 前垂れ・trim 縁と鍔・cape マント（null で無し）・
-  //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪 / dragon 鼻先と後ろへ伸びる角の竜の兜）・
-  //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード / spear 槍）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮
-  //   竜騎士はこの体を使う（槍は突きの構え: spearGrip）
+  //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪 / dragon 鼻先と後ろへ伸びる角の竜の兜 / hood フードと顔）・
+  //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード / spear 槍 / scythe 大鎌）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮・
+  //   ghost フードの中が顔でなく暗がりと光る目・blade 大鎌の刃の素材
+  //   竜騎士（槍は突きの構え: spearGrip）とリーパー（大鎌は両手武器の構え）もこの体を使う
   const TANK_STYLE = {
     pld: { armor: 'steel', tabard: 'blue', trim: 'gold', cape: 'red', helm: 'plume', weapon: 'sword', shield: true, emblem: true },
     war: { armor: 'iron', tabard: 'red', trim: 'brass', cape: 'fur', helm: 'horn', weapon: 'axe', fur: true },
     drk: { armor: 'black', tabard: 'blmRobe', trim: 'iron', cape: 'black', helm: 'dark', weapon: 'greatsword', gem: true },
     gnb: { armor: 'iron', tabard: 'navy', trim: 'steel', cape: 'navy', helm: 'hair', weapon: 'gunblade' },
     drg: { armor: 'drgArmor', tabard: 'drgCloth', trim: 'steel', cape: null, helm: 'dragon', weapon: 'spear' },
+    rpr: { armor: 'rprRobe', tabard: 'rprCloth', trim: 'iron', cape: 'rprRobe', helm: 'hood', weapon: 'scythe', blade: 'steel' },
     // 暗黒騎士の影身具現（英雄の影身）: 暗黒騎士と同じ姿を、紫に光る影で
     shadow: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'dark', weapon: 'greatsword', gem: true },
+    // リーパーのアバター（妖異）: フードの中が暗がりの、紫に光る影の大鎌使い
+    avatar: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'hood', ghost: true, weapon: 'scythe', blade: 'shade' },
   };
   // タンクの武器（手 h、刃先への向き d）。side: 片刃の向き（1 = 刃先へ向かって右手側 perp(d)、-1 = 反対）
   function tankWeapon(F, h, d, st, side = 1) {
@@ -614,6 +620,18 @@
       F.fill(st.trim, (m) => m.capsule(g.x - n.x * 2.6, g.y - n.y * 2.6, g.x + n.x * 2.6, g.y + n.y * 2.6, 0.9), { k: 1 });
       const tr = q(0.2, -2.2);
       F.fill('black', (m) => m.ellipse(tr.x, tr.y, 0.8, 0.8), { k: 1, line: false });
+      return;
+    }
+    if (st.weapon === 'scythe') {
+      // 大鎌: 長い黒い柄と、柄の先から外へ張り出して手の側へ反る大きな刃（内側が刃）。付け根に金具
+      const bl = st.blade ?? 'steel', b0 = add(h, d, -10), b1 = add(h, d, 24), g = add(h, d, 22.5);
+      F.fill('black', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 0.85), { k: 1.1 });
+      F.deco(st.trim, 1, (m) => { for (const t of [-9, 6]) { const r = add(h, d, t); m.dot(r.x, r.y); } });
+      const r0 = q(24, 0.6), r1 = q(25, 5.5), r2 = q(23.4, 11), tip = q(18.6, 15.2), e2 = q(20.4, 9.8), e1 = q(21, 4.8), e0 = q(20.8, 0.6);
+      F.fill(bl, (m) => m.poly([r0.x, r0.y, r1.x, r1.y, r2.x, r2.y, tip.x, tip.y, e2.x, e2.y, e1.x, e1.y, e0.x, e0.y]), { k: 1.3 });
+      const blade = F.last;
+      F.deco(bl, 0, (m) => { m.line(e0.x, e0.y, e1.x, e1.y); m.line(e1.x, e1.y, e2.x, e2.y); m.line(e2.x, e2.y, tip.x, tip.y); }, { only: blade });
+      F.fill(st.trim, (m) => m.ellipse(g.x, g.y, 1.5, 1.5), { k: 1.2 });
       return;
     }
     if (st.weapon === 'spear') {
@@ -670,6 +688,33 @@
       }
       return;
     }
+    if (st.helm === 'hood') {
+      // フード: 頭の後ろと肩に掛かり、先が少しとがる。正面は顔のまわりが影になる（ghost: 顔の代わりに暗がりと光る目）
+      F.fill(st.armor, (m) => {
+        m.ellipse(cx, hy - 0.5, 7.8, 8.2);
+        m.poly([cx - 7.5, hy + 1, cx + 7.5, hy + 1, cx + 9, hy + 8, cx - 9, hy + 8]);
+        m.poly([cx - 2.8, hy - 7, cx + 2.8, hy - 7, cx + 0.8 + (p.cape ?? 0) * 0.4, hy - 11]);
+      }, { k: 1.5 });
+      const hood = F.last;
+      if (!back) {
+        F.fill(st.armor, (m) => m.ellipse(cx, hy + 1.6, 5.8, 6.2), { k: 1.2, dark: 2, line: false });
+        if (st.ghost) {
+          F.fill('black', (m) => m.ellipse(cx, hy + 2.2, 4.6, 4.8), { k: 1, flat: true, line: false });
+          F.fill(st.trim, (m) => { m.ellipse(cx - 2.2, hy + 1.5, 1, 0.7); m.ellipse(cx + 2.2, hy + 1.5, 1, 0.7); }, { flat: true, line: false, k: 1 });
+        } else {
+          F.fill('skin', (m) => m.ellipse(cx, hy + 2.4, 4.6, 4.8), { k: 1.8 });
+          F.fill('hair', (m) => { m.ellipse(cx, hy - 0.4, 5, 2.6); m.cut().rect(0, hy + 0.8, 64, 20).add(); m.poly([cx - 4.6, hy, cx - 1.6, hy, cx - 3.4, hy + 2.6]); m.poly([cx + 1.4, hy, cx + 4.6, hy, cx + 3.2, hy + 2.8]); }, { k: 1.4 });
+          F.deco('black', 4, (m) => { m.rect(cx - 2.6, hy + 2.4, 1, 1.6); m.rect(cx + 1.6, hy + 2.4, 1, 1.6); });
+          F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.6, cx + 0.5, hy + 5.6));
+        }
+        F.deco(st.trim, 1, (m) => m.band(cx, hy + 1.8, 5.6, 6.6, Math.PI * 0.96, Math.PI * 2.04), { only: hood });
+      } else {
+        // 背面: フードの先が背中に垂れる
+        F.fill(st.armor, (m) => m.poly([cx - 4, hy + 3, cx + 4, hy + 3, cx + 1 + (p.cape ?? 0) * 0.5, hy + 13, cx - 1 + (p.cape ?? 0) * 0.5, hy + 13]), { k: 1.3 });
+        F.deco(st.trim, 1, (m) => m.line(cx, hy - 6, cx, hy + 4), { only: hood });
+      }
+      return;
+    }
     F.fill(st.armor, (m) => { m.ellipse(cx, hy, 7, 7.4); m.rect(cx - 6, hy, 12, 6); }, { k: 1.8 });
     if (!back) {
       F.fill('black', (m) => m.rect(cx - 4.5, hy + 0.5, 9, 2), { k: 1, flat: true, line: false });
@@ -703,6 +748,27 @@
       F.fill('hair', (m) => { m.ellipse(ux - 0.5, hy - 0.8, 6.2, 5.8); m.cut().ellipse(ux + 3.6, hy + 2.6, 3.4, 4.4).add(); m.poly([ux + 1, hy - 2, ux + 6, hy - 2, ux + 4.6, hy + 0.8]); }, { k: 1.4 });
       F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
       F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
+      return;
+    }
+    if (st.helm === 'hood') {
+      // フード（横から）: 後ろへ垂れる裾と頭頂のとがり。顔は前の開きから見える
+      F.fill(st.armor, (m) => {
+        m.ellipse(ux - 0.5, hy - 0.3, 7.2, 8);
+        m.poly([ux - 6.5, hy - 1, ux - 3, hy + 6, ux - 8.5 - (p.cape ?? 0) * 0.5, hy + 10]);
+        m.poly([ux - 6, hy + 2, ux + 4, hy + 2, ux + 5, hy + 8, ux - 7, hy + 8]);
+        m.poly([ux - 3.5, hy - 7, ux + 1.5, hy - 7.6, ux - 3.4 - (p.cape ?? 0) * 0.3, hy - 10.6]);
+      }, { k: 1.5 });
+      const hood = F.last;
+      F.fill(st.armor, (m) => m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4), { k: 1.2, dark: 2, line: false });
+      if (st.ghost) {
+        F.fill('black', (m) => m.ellipse(ux + 3.2, hy + 2.2, 3, 4.2), { k: 1, flat: true, line: false });
+        F.fill(st.trim, (m) => m.ellipse(ux + 4.4, hy + 2, 0.9, 0.6), { flat: true, line: false, k: 1 });
+      } else {
+        F.fill('skin', (m) => { m.ellipse(ux + 3.2, hy + 2.2, 3.4, 4.6); m.rect(ux + 5.8, hy + 2.4, 1, 1.2); }, { k: 1.8 });
+        F.fill('hair', (m) => { m.ellipse(ux + 3, hy - 0.4, 3.8, 2.4); m.cut().rect(0, hy + 0.8, 64, 20).add(); m.poly([ux + 3, hy, ux + 6.2, hy, ux + 5, hy + 2.6]); }, { k: 1.4 });
+        F.deco('black', 4, (m) => m.rect(ux + 4.4, hy + 2.4, 1, 1.6));
+      }
+      F.deco(st.trim, 1, (m) => m.band(ux + 2.6, hy + 1.8, 4.8, 5.8, Math.PI * 0.55, Math.PI * 1.9), { only: hood });
       return;
     }
     F.fill(st.armor, (m) => { m.ellipse(ux, hy, 6.8, 7.4); m.rect(ux - 5.5, hy, 11, 6); }, { k: 1.8 });
@@ -1722,6 +1788,7 @@
     drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
     gnb: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.gnb) : tankFB(F, p, v === 'up', TANK_STYLE.gnb)), anims: HEAVY_ANIMS }),
     drg: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drg) : tankFB(F, p, v === 'up', TANK_STYLE.drg)), anims: DRG_ANIMS }),
+    rpr: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.rpr) : tankFB(F, p, v === 'up', TANK_STYLE.rpr)), anims: HEAVY_ANIMS }),
     whm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
     ast: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
     brd: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
@@ -1739,6 +1806,8 @@
     pet_eos: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'eos'), anims: PET_ANIMS }),
     pet_seraph: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'seraph'), anims: PET_ANIMS }),
     pet_bunshin: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.bunshin) : samFB(F, p, v === 'up', MELEE_STYLE.bunshin)), anims: { idle: SAM_ANIMS.idle, spell: SAM_ANIMS.slash } }),
+    // リーパーのアバター: 自分より大きい（1 ドットを大きく）
+    pet_avatar: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.07, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.avatar) : tankFB(F, p, v === 'up', TANK_STYLE.avatar)), anims: { idle: HEAVY_ANIMS.idle, spell: HEAVY_ANIMS.slash } }),
     pet_shadow: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.shadow) : tankFB(F, p, v === 'up', TANK_STYLE.shadow)), anims: SHADOW_ANIMS }),
     pet_solar: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.06, draw: (F, p, v) => demi(F, p, v, 'solar'), anims: PET_ANIMS }),
     boss: () => buildSet({ fw: 96, fh: 96, ax: 48, ay: 90, m: 0.055, draw: (F, p, v) => dummy(F, p, v), anims: DUMMY_ANIMS }),

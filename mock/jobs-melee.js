@@ -3,7 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, descCharges, descGain, guideTrait, numIn } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, extendBuff, guideTrait, numIn } = window.MockJobs.lib;
   // クリティカルの代わり（仮 GAME-77）: クリティカルの発動率。乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
   const CRIT_RATE = 0.25;
   const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
@@ -655,5 +655,265 @@
     },
   };
 
-  Object.assign(window.MockJobs, { MNK, NIN, DRG });
+  // ---------------- リーパー ----------------
+  // 説明文から:
+  //   コンボ: スライス → ワクシングスライス → インファナルスライス（範囲: スピニングサイズ → ナイトメアサイズ）。ソウルゲージ +10 ずつ（2 段目からはコンボ時）
+  //   ソウルスライス / ソウルサイズ: ソウル +50（固有のリキャスト 30 秒・チャージ 2）。ハルパー・ハーベストムーン: ソウル +10
+  //   ソウル 50: ストークスウェーズ / シーフスウェーズ → 妖異の鎌（1 スタック・30 秒）。グラトニー（60 秒）→ 処刑人（2 スタック・30 秒）。妖異の鎌と処刑人は同時に付かない
+  //   妖異の鎌でジビトゥ（側面）/ ギャロウズ（背面）/ ギロティン、処刑人でエクスジビトゥ / エクスギャロウズ / エクスギロティン。シュラウド +10。
+  //     ジビトゥ → ギャロウズ効果アップ（ストークスウェーズがギャロウズクロウに）、ギャロウズ → ジビトゥ効果アップ（60 秒）
+  //   シュラウド 50: レムールシュラウド → レムール（30 秒。レムールソウル 5）とサクリフィキウム実行可。レムールの間はボタンが変わる:
+  //     ジビトゥ → ヴォイドリーパー・ギャロウズ → クロスリーパー・ギロティン → グリムリーパー（レムールソウル 1 → ヴォイドソウル 1。GCD 1.5 秒）、
+  //     ストークスウェーズ → レムールスライス（ヴォイドソウル 2）、グラトニー → サクリフィキウム、コムニオ（レムールの最後。レムールが切れる）
+  //   シャドウ・オブ・デス: デスデザイン（与ダメージ +10%・30 秒。最大 60 秒まで延長）
+  //   アルケインサークル: 与ダメージ +3%（20 秒）と死の供儀（6 秒）。死の供物（最大 8）でプレンティフルハーベスト（威力 720〜1000）
+  //     → レムールシュラウド実行可（シュラウドなしでレムール）とペルフェクティオ待機（コムニオ → ペルフェクティオ実行可 → ペルフェクティオ）
+  //   ソウルソウ（詠唱 5 秒。戦闘外は詠唱なし）→ ハーベストムーン。ヘルズイングレス / イーグレス: 15m 移動・ハルパー効果アップ（ハルパーが詠唱なし）・
+  //     リターン（ヘルズゲートへ戻る）。アルケインクレスト: 最大 HP 10% のバリア（5 秒）。吸収しきると活性のクレスト（継続回復 回復力 50・15 秒）
+  // 公式ジョブガイドの特性から: 妖異の鎌と処刑人は「ウェポンスキルや魔法を実行すると解除される」。イングレスのあとはイーグレスが、
+  //   イーグレスのあとはイングレスがリターンに変わる。レムールになるとペルフェクティオ実行可が消える。レムールソウルの最大 5（ステータスの最大スタック数）
+  // 仮（GAME-80）: 死の供物は、8 人パーティが供儀のサークルの間に攻撃を当てた想定で、アルケインサークルのときに 8 スタック付ける（練習場の味方は 1 人のため）。
+  //   プレンティフルハーベストの威力は死の供物 1 つで 720、1 つ増えるごとに +40（8 つで 1000）。レムールの間はソウルスライス・ソウルサイズを使えない。
+  //   レムールソウルが 0 になるとレムールが切れ、ヴォイドソウルも消える。ヴォイドソウルの最大は 5
+  const RPR = {
+    abbr: 'RPR',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        SLICE: 24373, WAXING: 24374, INFERNAL: 24375, SPINNING: 24376, NIGHTMARE: 24377, SHADOW: 24378, WHORL: 24379, SOUL_SLICE: 24380, SOUL_SCYTHE: 24381,
+        GIBBET: 24382, GALLOWS: 24383, GUILLOTINE: 24384, PLENTIFUL: 24385, HARPE: 24386, SOULSOW: 24387, HARVEST: 24388,
+        BLOOD_STALK: 24389, GIBBET_CLAW: 24390, GALLOWS_CLAW: 24391, GRIM_SWATHE: 24392, GLUTTONY: 24393, ENSHROUD: 24394,
+        VOID: 24395, CROSS: 24396, GRIM: 24397, COMMUNIO: 24398, LEMURE_SLICE: 24399, LEMURE_SCYTHE: 24400,
+        INGRESS: 24401, EGRESS: 24402, RETURN: 24403, CREST: 24404, CIRCLE: 24405, SACRIFICIUM: 36969,
+        EXEC_GIBBET: 36970, EXEC_GALLOWS: 36971, EXEC_GUILLOTINE: 36972, PERFECTIO: 36973,
+        SECONDWIND: 7541, BLOODBATH: 7542, TN: 7546, ARMS: 7548, FEINT: 7549, SWEEP: 7863,
+      };
+      const STATUS = {
+        deathsDesign: { name: 'デスデザイン', target: true, tracked: true },
+        soulReaver: { name: '妖異の鎌' },
+        executioner: { name: '処刑人' },
+        enhGibbet: { name: 'ジビトゥ効果アップ' }, enhGallows: { name: 'ギャロウズ効果アップ' },
+        enhVoid: { name: 'ヴォイドリーパー効果アップ' }, enhCross: { name: 'クロスリーパー効果アップ' },
+        enshroud: { name: 'レムール' },
+        oblatio: { name: 'サクリフィキウム実行可' },
+        idealHost: { name: 'レムールシュラウド実行可' },
+        perfectioOcculta: { name: 'ペルフェクティオ待機' }, perfectioParata: { name: 'ペルフェクティオ実行可' },
+        soulsow: { name: 'ソウルソウ' },
+        enhHarpe: { name: 'ハルパー効果アップ' },
+        returnReady: { name: 'リターン実行可' },
+        circle: { name: 'アルケインサークル' },
+        circleSacrifice: { name: '死の供儀' },
+        immortal: { name: '死の供物' },
+        crest: { name: '守護のクレスト' },
+        tn: { name: 'トゥルーノース' },
+        bloodbath: { name: 'ブラッドバス' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      const LEMURE_MAX = 5, VOID_MAX = 5;
+      const SOUL_REAVER = new Set([ID.GIBBET, ID.GALLOWS, ID.GUILLOTINE]); // 妖異の鎌を使う
+      const EXEC = new Set([ID.EXEC_GIBBET, ID.EXEC_GALLOWS, ID.EXEC_GUILLOTINE]); // 処刑人を使う
+      const REAPING = new Set([ID.VOID, ID.CROSS, ID.GRIM]);
+      const AVATAR = new Set([ID.BLOOD_STALK, ID.GRIM_SWATHE, ID.GIBBET_CLAW, ID.GALLOWS_CLAW, ID.GLUTTONY]); // アヴァターを呼び出す
+      const DD_MS = 30000, DD_MAX = numIn(A[ID.SHADOW]?.desc, /最大(\d+)秒まで延長/, 60) * 1000;
+      const CIRCLE_UP = 1 + numIn(A[ID.CIRCLE]?.desc, /与ダメージを(\d+)％上昇/, 3) / 100;
+      const DD_UP = 1 + numIn(A[ID.SHADOW]?.desc, /ダメージを(\d+)％上昇/, 10) / 100;
+      const PH_MIN = numIn(A[ID.PLENTIFUL]?.desc, /威力：(\d+)～/, 720), PH_MAX = numIn(A[ID.PLENTIFUL]?.desc, /～(\d+)/, 1000);
+      const IMMORTAL_MAX = numIn(A[ID.CIRCLE]?.desc, /最大スタック数：(\d+)/, 8);
+      function gain(key, n, overKey) {
+        const s = S(), v = s[key] + n, over = Math.max(0, v - 100);
+        if (over > 0 && s.phase === 'combat') s.stats[overKey] += over;
+        s[key] = Math.max(0, Math.min(100, v));
+      }
+      const gauges = {
+        ソウルゲージ: { get: () => S().soul, set: (v) => { S().soul = Math.max(0, Math.min(100, v)); }, max: 100 },
+        シュラウドゲージ: { get: () => S().shroud, set: (v) => { S().shroud = Math.max(0, Math.min(100, v)); }, max: 100 },
+        レムールソウル: { get: () => S().lemure, set: (v) => { S().lemure = Math.max(0, v); }, max: LEMURE_MAX },
+        ヴォイドソウル: { get: () => S().void, set: (v) => { S().void = Math.max(0, Math.min(VOID_MAX, v)); }, max: VOID_MAX },
+      };
+      const enshrouded = () => has('enshroud');
+      function endEnshroud() { const s = S(); R.remove('enshroud'); s.lemure = 0; s.void = 0; }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // ソウルスライス・ソウルサイズ・トゥルーノース「最大チャージ数：2」
+        prepull: new Set([ID.SOULSOW, ID.TN, ID.CREST]),
+        comboStarters: new Set([ID.SLICE, ID.SPINNING]),
+        procStatus: { 56: 'enhHarpe', 57: 'soulsow', 47: 'returnReady', 167: 'oblatio', 169: 'perfectioParata' },
+        initState(s) {
+          s.soul = 0; s.shroud = 0; s.lemure = 0; s.void = 0; s.gateFrom = null; s.crest = null;
+          s.stats.soulOver = 0; s.stats.shroudOver = 0; s.stats.reaverLost = 0; s.stats.enshrouds = 0; s.stats.communio = 0; s.stats.perfectio = 0; s.stats.ph = 0;
+        },
+        gaugeCols: [['ソウル', (s) => s.soul], ['シュラウド', (s) => s.shroud], ['レムール', (s) => (R.has('enshroud') ? `${s.lemure}/${s.void}` : '')]],
+        tracked: [['デスデザイン', 'deathsDesign', '#c86aff', '切れる前にシャドウ・オブ・デスで延長する（最大 60 秒）']],
+        speed: () => 1,
+        // ヴォイドリーパー・クロスリーパー・グリムリーパーは 1.5 秒（説明文「実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する」）
+        gcdMs: (a) => (REAPING.has(a.id) ? a.recastMs : null),
+        comboFree: () => false,
+        resolve(id) {
+          const s = S();
+          if (enshrouded()) {
+            if (id === ID.GIBBET) return ID.VOID;
+            if (id === ID.GALLOWS) return ID.CROSS;
+            if (id === ID.GUILLOTINE) return ID.GRIM;
+            if (id === ID.BLOOD_STALK) return ID.LEMURE_SLICE;
+            if (id === ID.GRIM_SWATHE) return ID.LEMURE_SCYTHE;
+            if (id === ID.GLUTTONY && has('oblatio')) return ID.SACRIFICIUM;
+          }
+          if (id === ID.SOULSOW && has('soulsow')) return ID.HARVEST;
+          // リターン: イングレスのあとはイーグレスのボタン、イーグレスのあとはイングレスのボタンが変わる（特性）
+          if (has('returnReady') && ((id === ID.EGRESS && s.gateFrom === ID.INGRESS) || (id === ID.INGRESS && s.gateFrom === ID.EGRESS))) return ID.RETURN;
+          if (id === ID.INGRESS || id === ID.EGRESS) return id;
+          return tooltipResolve(R, J, id);
+        },
+        blocked(id) {
+          const s = S(), a = A[id];
+          if (!a) return null;
+          if ((id === ID.SOUL_SLICE || id === ID.SOUL_SCYTHE) && enshrouded()) return 'レムールの間は使えません';
+          if ((id === ID.BLOOD_STALK || id === ID.GRIM_SWATHE || id === ID.GLUTTONY || id === ID.ENSHROUD) && enshrouded()) return 'レムールの間は使えません';
+          if ((id === ID.GIBBET_CLAW || id === ID.GALLOWS_CLAW) && s.soul < 50) return `ソウルゲージが足りません（必要 50 / 現在 ${s.soul}）`;
+          if (id === ID.ENSHROUD) return has('idealHost') || s.shroud >= 50 ? null : `シュラウドゲージが足りません（必要 50 / 現在 ${s.shroud}）`;
+          if ((REAPING.has(id) || id === ID.COMMUNIO) && (!enshrouded() || s.lemure < 1)) return '「レムールソウル」がありません';
+          if ((id === ID.LEMURE_SLICE || id === ID.LEMURE_SCYTHE) && s.void < 2) return `ヴォイドソウルが足りません（必要 2 / 現在 ${s.void}）`;
+          if (id === ID.SACRIFICIUM && !(enshrouded() && has('oblatio'))) return '「レムール」かつ「サクリフィキウム実行可」の効果中ではありません';
+          if (id === ID.HARVEST && !has('soulsow')) return '「ソウルソウ」の効果中ではありません';
+          if (id === ID.SOULSOW && has('soulsow')) return '「ソウルソウ」の効果中です';
+          if (id === ID.PLENTIFUL) {
+            if (has('circleSacrifice')) return '「死の供儀」の効果中は使えません';
+            if (!has('immortal')) return '「死の供物」がありません';
+          }
+          if (id === ID.RETURN && !has('returnReady')) return '「リターン実行可」の効果中ではありません';
+          if ([...SOUL_REAVER, ...EXEC, ID.BLOOD_STALK, ID.GRIM_SWATHE, ID.GLUTTONY, ID.GIBBET_CLAW, ID.GALLOWS_CLAW, ID.PERFECTIO].includes(id)) return tooltipBlocked(R, J, a, gauges);
+          return null;
+        },
+        // ソウルソウは戦闘外なら詠唱なし。ハルパーはハルパー効果アップで詠唱なし
+        castMs: (a, base) => ((a.id === ID.SOULSOW && S().phase !== 'combat') || (a.id === ID.HARPE && has('enhHarpe')) ? 0 : base),
+        instantNow: (id) => id === ID.RETURN, // リターンはヘルズゲートの中心へ動くだけ（データは地面指定だが、置く場所は選ばない）
+        // 威力: ジビトゥ・ギャロウズは「効果アップかつ方向指定」がある。プレンティフルハーベストは死の供物の数
+        potOverride(a) {
+          const pair = { [ID.GIBBET]: ['enhGibbet', 'flank'], [ID.EXEC_GIBBET]: ['enhGibbet', 'flank'], [ID.GALLOWS]: ['enhGallows', 'rear'], [ID.EXEC_GALLOWS]: ['enhGallows', 'rear'] }[a.id];
+          if (pair) {
+            const [enh, dir] = pair, posOk = R.posNow() === dir || has('tn'), c = a.pot.cond ?? [];
+            if (!has(enh)) return null; // 効果アップがなければ通常の計算（方向指定の威力）
+            return posOk ? c.find((x) => /かつ/.test(x.status))?.potency ?? a.pot.base : c.find((x) => !/かつ/.test(x.status))?.potency ?? a.pot.base;
+          }
+          if (a.id === ID.PLENTIFUL) { const n = Math.max(1, Math.min(IMMORTAL_MAX, S().st.immortal?.stacks ?? 1)); return PH_MIN + ((PH_MAX - PH_MIN) * (n - 1)) / (IMMORTAL_MAX - 1); }
+          return null;
+        },
+        dmgMult: () => (has('deathsDesign') ? DD_UP : 1) * (has('circle') ? CIRCLE_UP : 1),
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // 妖異の鎌・処刑人: 対応する技で 1 つ使う。ほかのウェポンスキル・魔法では解除される（特性）
+          if (a.isGcd) {
+            for (const [k, set] of [['soulReaver', SOUL_REAVER], ['executioner', EXEC]]) {
+              const cur = s.st[k];
+              if (!cur || cur.until <= s.t) continue;
+              if (set.has(id)) { if ((cur.stacks ?? 1) > 1) cur.stacks -= 1; else R.remove(k); }
+              else { s.stats.reaverLost += cur.stacks ?? 1; R.remove(k); R.addLog('warn', `${STATUS[k].name}が${a.name}で解除されました`); R.ev('ミス', { action: a.name, result: `${STATUS[k].name}を無駄に`, note: 'ジビトゥ・ギャロウズ・ギロティンの前に別の技' }); }
+            }
+          }
+          // ゲージ（説明文の「「ソウルゲージ」をN上昇」「「シュラウドゲージ」をN上昇」。コンボボーナスはコンボ時だけ）
+          const sg = descGain(a, 'ソウルゲージ', ok); if (sg) gain('soul', sg, 'soulOver');
+          const hg = descGain(a, 'シュラウドゲージ', ok); if (hg) gain('shroud', hg, 'shroudOver');
+          // 消費と付与（説明文）。効果アップは使うと消える
+          if (id === ID.GIBBET || id === ID.EXEC_GIBBET) R.remove('enhGibbet');
+          if (id === ID.GALLOWS || id === ID.EXEC_GALLOWS) R.remove('enhGallows');
+          if (id === ID.VOID) R.remove('enhVoid');
+          if (id === ID.CROSS) R.remove('enhCross');
+          if (id === ID.GIBBET_CLAW) R.remove('enhGibbet');
+          if (id === ID.GALLOWS_CLAW) R.remove('enhGallows');
+          if (AVATAR.has(id)) {
+            if (a.eff?.cost?.gauge === 'ソウルゲージ' || id === ID.GIBBET_CLAW || id === ID.GALLOWS_CLAW) s.soul -= 50;
+            if (id === ID.GLUTTONY) { R.remove('soulReaver'); R.buff('executioner', 30000, 2); }
+            else { R.remove('executioner'); R.buff('soulReaver', 30000, 1); }
+            R.pet('avatar', 1.6);
+          }
+          if ([...SOUL_REAVER, ...EXEC, ...REAPING, ID.COMMUNIO, ID.LEMURE_SLICE, ID.LEMURE_SCYTHE, ID.SACRIFICIUM, ID.PERFECTIO, ID.HARVEST, ID.PLENTIFUL].includes(id)) {
+            if (id === ID.PLENTIFUL) { R.remove('immortal'); s.stats.ph++; }
+            if (id === ID.HARVEST) R.remove('soulsow');
+            if (id === ID.SACRIFICIUM) R.remove('oblatio');
+            if (id === ID.PERFECTIO) { R.remove('perfectioParata'); s.stats.perfectio++; }
+            tooltipEffects(R, J, { ...a, eff: { ...(a.eff ?? {}), cost: a.eff?.cost && gauges[a.eff.cost.gauge] ? a.eff.cost : null, requires: null } }, ok, gauges);
+          }
+          if (id === ID.COMMUNIO) {
+            s.stats.communio++;
+            if (has('perfectioOcculta')) { R.remove('perfectioOcculta'); R.buff('perfectioParata', 30000); }
+            endEnshroud();
+          }
+          if (REAPING.has(id) && s.lemure <= 0) endEnshroud();
+          if (id === ID.ENSHROUD) {
+            if (has('idealHost')) R.remove('idealHost'); else s.shroud -= 50;
+            R.buff('enshroud', 30000); s.lemure = LEMURE_MAX; s.void = 0; s.stats.enshrouds++;
+            R.buff('oblatio', 30000); R.remove('perfectioParata');
+            R.pet('avatar', 1.2); Au()?.surge();
+          }
+          if (id === ID.SHADOW || id === ID.WHORL) extendBuff(R, 'deathsDesign', DD_MS, DD_MAX);
+          if (id === ID.CIRCLE) { R.buff('circle', 20000); R.buff('circleSacrifice', 6000); R.buff('immortal', 30000, IMMORTAL_MAX); Au()?.surge(); }
+          if (id === ID.SOULSOW) R.buff('soulsow', 1e9);
+          if (id === ID.HARPE && has('enhHarpe')) { R.remove('enhHarpe'); R.cdShift(ID.INGRESS, 5000); }
+          if (id === ID.INGRESS || id === ID.EGRESS) {
+            R.zone('gate', { r: 1.2, sec: 10, ring: true, self: true, col: ['#ff9ad8', '#8a2a6a'] });
+            s.gateFrom = id; R.buff('returnReady', 10000); R.buff('enhHarpe', 10000);
+          }
+          if (id === ID.RETURN) { R.remove('returnReady'); if (R.toZone('gate')) Au()?.whoosh?.(); R.zoneEnd('gate'); }
+          if (id === ID.CREST) { R.shieldSelf(0.1, 5, '守護のクレスト'); R.buff('crest', 5000); s.crest = { until: s.t + 5000 }; }
+          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
+          if (id === ID.TN) R.buff('tn', 10000);
+        },
+        tick() {
+          const s = S();
+          if (s.lemure > 0 && !enshrouded()) { s.lemure = 0; s.void = 0; } // レムールの時間切れ
+          // 守護のクレストを吸収しきった → 活性のクレスト（継続回復）
+          if (s.crest) {
+            if (R.shieldLeft('self') <= 0.0005 && s.t < s.crest.until) { R.hot('party', 50 * 0.0004, 15, '活性のクレスト'); R.remove('crest'); s.crest = null; R.addLog('ok', '守護のクレストが吸収されて消えました → 活性のクレスト'); }
+            else if (s.t >= s.crest.until) s.crest = null;
+          }
+        },
+        highlightOk: () => true,
+        glow(id) {
+          const s = S();
+          if (id === ID.GIBBET || id === ID.EXEC_GIBBET) return (has('soulReaver') || has('executioner')) && !has('enhGallows');
+          if (id === ID.GALLOWS || id === ID.EXEC_GALLOWS) return (has('soulReaver') || has('executioner')) && has('enhGallows');
+          if (id === ID.VOID) return enshrouded() && s.lemure > 1 && !has('enhCross');
+          if (id === ID.CROSS) return enshrouded() && s.lemure > 1 && has('enhCross');
+          if (id === ID.COMMUNIO) return enshrouded() && s.lemure === 1;
+          if (id === ID.LEMURE_SLICE) return s.void >= 2;
+          if (id === ID.ENSHROUD) return !enshrouded() && (s.shroud >= 50 || has('idealHost'));
+          if (id === ID.PLENTIFUL) return has('immortal') && !has('circleSacrifice');
+          return false;
+        },
+        // 方向指定のガイド: 次のジビトゥ（側面）/ ギャロウズ（背面）。効果アップの付いている方
+        guide(highlight) {
+          if (!(has('soulReaver') || has('executioner')) && !highlight(ID.BLOOD_STALK)) return null;
+          return has('enhGallows') ? A[ID.GALLOWS].positional : A[ID.GIBBET].positional;
+        },
+        positional: () => has('tn') && 'トゥルーノース',
+        fxColor: (id) => (REAPING.has(id) || id === ID.COMMUNIO || id === ID.LEMURE_SLICE || id === ID.SACRIFICIUM ? 'shoha' : EXEC.has(id) || SOUL_REAVER.has(id) || id === ID.PERFECTIO ? 'kenki' : id === ID.HARVEST || id === ID.PLENTIFUL ? 'holy' : AVATAR.has(id) ? 'getsu' : 'steel'),
+        fxPower: (id) => (id === ID.COMMUNIO || id === ID.PERFECTIO || id === ID.PLENTIFUL ? 1.6 : EXEC.has(id) || id === ID.SACRIFICIUM ? 1.4 : 1),
+        fxCount: (id) => (id === ID.PERFECTIO || id === ID.COMMUNIO ? 3 : 1),
+        castColor: () => 'shoha',
+        gcdColor: (id) => (REAPING.has(id) ? '#c86aff' : EXEC.has(id) || SOUL_REAVER.has(id) ? '#ff5a7a' : null),
+        hotOgcd: (id) => [ID.CIRCLE, ID.GLUTTONY, ID.ENSHROUD, ID.SACRIFICIUM].includes(id),
+        weapon: 'slash', magicTone: 'dark',
+        tipCost: (id) => (A[id]?.eff?.cost?.gauge && gauges[A[id].eff.cost.gauge] ? [A[id].eff.cost.gauge, A[id].eff.cost.n] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          if (s.stats.soulOver) issues.push({ loss: Math.min(100, s.stats.soulOver) * 0.1, rate: s.stats.soulOver > 30 ? 'bad' : 'ok', title: `ソウルゲージが ${s.stats.soulOver} あふれた`, advice: 'ソウルが 50 以上でソウルスライスを使う前に、ストークスウェーズ（グラトニー）で使う' });
+          if (s.stats.shroudOver) issues.push({ loss: Math.min(100, s.stats.shroudOver) * 0.1, rate: s.stats.shroudOver > 30 ? 'bad' : 'ok', title: `シュラウドゲージが ${s.stats.shroudOver} あふれた`, advice: 'シュラウドが 90 を超える前にレムールシュラウド' });
+          if (s.stats.reaverLost) issues.push({ loss: s.stats.reaverLost * 3, rate: 'bad', title: `使わずに消えた妖異の鎌・処刑人 ${s.stats.reaverLost}`, advice: 'ストークスウェーズ・グラトニーのあとは、ほかのウェポンスキルより先にジビトゥ / ギャロウズを使う' });
+          metrics.push({ label: 'レムールシュラウド', value: `${s.stats.enshrouds} 回（コムニオ ${s.stats.communio}）`, rate: null });
+          metrics.push({ label: 'プレンティフルハーベスト', value: `${s.stats.ph} 回（ペルフェクティオ ${s.stats.perfectio}）`, rate: null });
+          if (!s.stats.reaverLost && s.stats.gcds > 10) goods.push('妖異の鎌・処刑人を無駄にしていない');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.reaverLost * 10 - Math.min(40, (s.stats.soulOver + s.stats.shroudOver) / 3)), posAdvice: 'ジビトゥは側面、ギャロウズは背面。効果アップの付いている方（光っている方）を使う。間に合わないときはトゥルーノース', castAdvice: 'ハルパー・ソウルソウ・コムニオは詠唱がある。動く前にヘルズイングレス（ハルパー効果アップ）を使う', rangeAdvice: '離れたらハーベストムーンかハルパーでつなぐ', comboAdvice: 'スライス → ワクシングスライス → インファナルスライス の順に。ソウルスライス・ジビトゥなどはコンボを切らない' };
+        },
+        howto: 'リーパー: スライス → ワクシングスライス → インファナルスライス でソウルをためる。ソウル 50 でストークスウェーズ → ジビトゥ（側面）/ ギャロウズ（背面）を光っている方から。シュラウド 50 でレムールシュラウド → ヴォイドリーパー / クロスリーパーを交互に 4 回 → コムニオ。デスデザインは切らさない。120 秒ごとにアルケインサークル → プレンティフルハーベスト。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'RPR'),
+        gaugeDefault: { JobHudRRP0: { x: 64, y: 64, anchor: 4, scale: 1 }, JobHudRRP1: { x: 78, y: 64, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { MNK, NIN, DRG, RPR });
 })();

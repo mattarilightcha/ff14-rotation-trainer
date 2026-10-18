@@ -60,7 +60,7 @@ function guideFor(rows, a) {
 }
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));

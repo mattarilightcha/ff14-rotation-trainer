@@ -92,6 +92,12 @@ window.MOCK_DATA = {
    "name": "竜騎士",
    "icon": "../public/icons/jobs/DRG.png",
    "role": "melee"
+  },
+  {
+   "abbr": "RPR",
+   "name": "リーパー",
+   "icon": "../public/icons/jobs/RPR.png",
+   "role": "melee"
   }
  ],
  "jobs": {
@@ -2504,6 +2510,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -2540,6 +2548,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -2574,6 +2583,7 @@ window.MOCK_DATA = {
     "連環計": "../public/icons/statuses/212809.png",
     "星の支配者": "../public/icons/statuses/213241.png",
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "レクイエスカット": {
@@ -2590,6 +2600,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -2653,6 +2666,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -2660,6 +2674,7 @@ window.MOCK_DATA = {
     "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -2679,6 +2694,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -8407,6 +8425,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -8442,6 +8462,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -8482,6 +8503,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -8497,6 +8519,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -8558,6 +8583,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -8565,6 +8591,7 @@ window.MOCK_DATA = {
     "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ダムネーション": "../public/icons/statuses/212568.png",
     "原初の鼓動": {
@@ -8581,6 +8608,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
     "秘技実行可": "../public/icons/statuses/212921.png",
@@ -12462,6 +12492,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -12495,6 +12527,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -12532,6 +12565,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -12552,6 +12586,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
     "ディヴィネーション": "../public/icons/statuses/213245.png",
     "コンバガ": "../public/icons/statuses/213248.png",
@@ -12608,6 +12645,7 @@ window.MOCK_DATA = {
     "シアリングライト": "../public/icons/statuses/212699.png",
     "スリップストリーム": "../public/icons/statuses/212695.png",
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -12616,6 +12654,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -12635,6 +12674,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -17302,6 +17344,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -17336,6 +17380,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -17371,6 +17416,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -17391,6 +17437,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -17448,6 +17497,7 @@ window.MOCK_DATA = {
      "max": 5,
      "base": 218373
     },
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -17456,6 +17506,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -17475,6 +17526,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -22807,6 +22861,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -22839,6 +22895,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -22873,6 +22930,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -22893,6 +22951,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -22956,6 +23017,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -22964,6 +23026,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -22983,6 +23046,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -29465,6 +29531,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
     "神速魔": "../public/icons/statuses/212627.png",
     "堅実魔": "../public/icons/statuses/210452.png",
@@ -29495,6 +29563,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -29531,6 +29600,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -29551,6 +29621,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -29610,6 +29683,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
     "スリップストリーム実行可": "../public/icons/statuses/212697.png",
@@ -29617,6 +29691,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -29636,6 +29711,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -37319,6 +37397,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -37350,6 +37430,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "リビングデッド": "../public/icons/statuses/213115.png",
@@ -37388,6 +37469,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -37408,6 +37490,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -37467,11 +37552,13 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
     "ブレード・オブ・オナー実行可": "../public/icons/statuses/213052.png",
@@ -37490,6 +37577,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -45099,6 +45189,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -45135,6 +45227,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -45170,6 +45263,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -45189,6 +45283,9 @@ window.MOCK_DATA = {
     "ジャギュラーリップ実行可": "../public/icons/statuses/213611.png",
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -45247,6 +45344,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -45255,6 +45353,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -45267,6 +45366,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -49173,6 +49275,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -49200,6 +49304,7 @@ window.MOCK_DATA = {
     "かくれる": "../public/icons/statuses/210607.png",
     "黒魔紋": "../public/icons/statuses/212653.png",
     "暗黒": "../public/icons/statuses/213106.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -49239,6 +49344,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -49259,6 +49365,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -49316,6 +49425,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -49324,6 +49434,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "デッドリバース": "../public/icons/statuses/213124.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
@@ -49342,6 +49453,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -54424,6 +54538,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -54459,6 +54575,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -54499,6 +54616,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -54511,6 +54629,9 @@ window.MOCK_DATA = {
      "base": 218345
     },
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -54570,6 +54691,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -54578,6 +54700,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -54594,6 +54717,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -58681,6 +58807,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -58709,6 +58837,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
     "リビングデッド": "../public/icons/statuses/213115.png",
     "アーゼマの均衡": "../public/icons/statuses/213204.png",
@@ -58746,6 +58875,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -58766,6 +58896,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "光輝の囁き": "../public/icons/statuses/212846.png",
@@ -58827,6 +58960,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -58834,6 +58968,7 @@ window.MOCK_DATA = {
     "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -58853,6 +58988,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -63312,6 +63450,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -63346,6 +63486,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -63385,6 +63526,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "トゥルーノース": "../public/icons/statuses/213903.png",
@@ -63405,6 +63547,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -63459,6 +63604,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -63467,6 +63613,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -63486,6 +63633,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -69138,6 +69288,8 @@ window.MOCK_DATA = {
     "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
     "ホルムギャング": "../public/icons/statuses/210255.png",
     "ディフェンダー": "../public/icons/statuses/212551.png",
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -69174,6 +69326,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "闘気": "../public/icons/statuses/218301.png",
@@ -69211,6 +69364,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "風月": "../public/icons/statuses/213311.png",
     "風花": "../public/icons/statuses/213312.png",
@@ -69229,6 +69383,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -69291,6 +69448,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
@@ -69299,6 +69457,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -69315,6 +69474,9 @@ window.MOCK_DATA = {
     "グレートネビュラ": "../public/icons/statuses/213619.png",
     "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
     "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "忍隠": "../public/icons/statuses/212919.png",
     "毒盛の術": "../public/icons/statuses/212920.png",
@@ -76282,6 +76444,8 @@ window.MOCK_DATA = {
      "max": 3,
      "base": 217564
     },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
     "ホークアイ": "../public/icons/statuses/210351.png",
     "猛者の撃": "../public/icons/statuses/210354.png",
     "乱れ撃ち": "../public/icons/statuses/210356.png",
@@ -76313,6 +76477,7 @@ window.MOCK_DATA = {
     "ソルトアース": "../public/icons/statuses/213104.png",
     "暗黒": "../public/icons/statuses/213106.png",
     "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
     "転化": "../public/icons/statuses/212805.png",
     "応急戦術": "../public/icons/statuses/212806.png",
     "トランス・バハムート": "../public/icons/statuses/212680.png",
@@ -76352,6 +76517,7 @@ window.MOCK_DATA = {
      "base": 219641
     },
     "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
     "疾風の極意": "../public/icons/statuses/212530.png",
     "巨星の支配者": "../public/icons/statuses/213242.png",
     "風月": "../public/icons/statuses/213311.png",
@@ -76371,6 +76537,9 @@ window.MOCK_DATA = {
     "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
     "アイガウジ実行可": "../public/icons/statuses/213613.png",
     "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
     "ディア": "../public/icons/statuses/212635.png",
     "テンパランス": "../public/icons/statuses/212634.png",
     "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
@@ -76423,6 +76592,7 @@ window.MOCK_DATA = {
      "base": 218373
     },
     "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
     "光神のフィナーレ": "../public/icons/statuses/212622.png",
     "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
     "スリップストリーム実行可": "../public/icons/statuses/212697.png",
@@ -76430,6 +76600,7 @@ window.MOCK_DATA = {
     "奥義波切実行可": "../public/icons/statuses/213313.png",
     "コンフィテオル実行可": "../public/icons/statuses/212520.png",
     "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
     "トランス・フェニックス": "../public/icons/statuses/214965.png",
     "ゲベート実行可": "../public/icons/statuses/212523.png",
     "グラブカッマー実行可": "../public/icons/statuses/212524.png",
@@ -76449,6 +76620,9 @@ window.MOCK_DATA = {
     "金剛周天実行可": "../public/icons/statuses/212539.png",
     "絶空拳実行可": "../public/icons/statuses/212540.png",
     "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
     "ゴアブレード実行可": "../public/icons/statuses/213053.png",
     "燕返し実行可": "../public/icons/statuses/213315.png",
     "天道": "../public/icons/statuses/213319.png",
@@ -83991,6 +84165,6498 @@ window.MOCK_DATA = {
     ],
     "3556": [
      36952
+    ]
+   },
+   "splitDetected": []
+  },
+  "RPR": {
+   "job": {
+    "abbr": "RPR",
+    "name": "リーパー",
+    "icon": "../public/icons/jobs/RPR.png",
+    "level": 100,
+    "role": "melee"
+   },
+   "guide": {
+    "traits": [
+     {
+      "en": "Soul Gauge",
+      "level": null,
+      "desc": "「ソウルゲージ」が上昇するようになる。\n発動条件：特定のウェポンスキルおよび魔法の命中時と、自身が付与した「デスデザイン」の効果時間中に対象が倒されたとき。"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nスライスの威力：300\nワクシングスライスの威力：140\nシャドウ・オブ・デスの威力：300\nハルパーの威力：300\nスピニングサイズの威力：140\nインファナルスライスの威力：140\nワーラル・オブ・デスの威力：100\nナイトメアサイズの威力：120"
+     },
+     {
+      "en": "Enhanced Avatar",
+      "level": null,
+      "desc": "自身に「妖異の鎌」が付与される。\n効果時間：30秒\nこの効果はウェポンスキルや魔法を実行すると解除される。\n発動条件：ストークスウェーズおよびシーフスウェーズの命中時"
+     },
+     {
+      "en": "Hellsgate",
+      "level": null,
+      "desc": "ヘルズイングレスとヘルズイーグレスを実行した地点に「ヘルズゲート」を生成し、自身に「リターン実行可」を付与する。\n効果時間：10秒\nヘルズイングレス実行後はヘルズイーグレスがリターンに変化し、ヘルズイーグレス実行後はヘルズイングレスがリターンに変化する。"
+     },
+     {
+      "en": "Tempered Soul",
+      "level": null,
+      "desc": "ソウルスライスとソウルサイズがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Shroud Gauge",
+      "level": null,
+      "desc": "「シュラウドゲージ」が上昇するようになる。\n発動条件：ジビトゥ、ギャロウズ、ギロティンの命中時"
+     },
+     {
+      "en": "Enhanced Arcane Crest",
+      "level": null,
+      "desc": "自身と周囲15m以内のパーティメンバーに「活性のクレスト」を付与する。\n活性のクレスト効果：対象のＨＰを継続回復する。\n回復力：50\n効果時間：15秒\n発動条件：自身に付与された「守護のクレスト」がダメージを完全に吸収して消滅したとき。"
+     },
+     {
+      "en": "Melee Mastery II",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nスライスの威力：320\nワクシングスライスの威力：160\nインファナルスライスの威力：180"
+     },
+     {
+      "en": "Void Soul",
+      "level": null,
+      "desc": "自身に「ヴォイドソウル」が付与される。\n発動条件：ヴォイドリーパー、クロスリーパー、グリムリーパーの命中時"
+     },
+     {
+      "en": "Enhanced Arcane Circle",
+      "level": null,
+      "desc": "自身と周囲のパーティメンバーに「供儀のサークル」を付与する。\n効果時間：5秒\n供儀のサークル効果：効果中に対象者がウェポンスキルか魔法による攻撃を命中させると、供儀のサークルを付与したリーパーに「死の供物」が付与される。\n最大スタック数：8\n効果時間：30秒\n追加効果：自身に「死の供儀」を付与する。\n効果時間：6秒\n死の供儀効果：自身が供儀のサークルを付与した対象から死の供物を得ることができる。\n発動条件：アルケインサークル実行時"
+     },
+     {
+      "en": "Enhanced Enshroud",
+      "level": null,
+      "desc": "自身に「サクリフィキウム実行可」が付与される。\n効果時間：30秒\n発動条件：レムールシュラウド実行時"
+     },
+     {
+      "en": "Melee Mastery III",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\nスライスの威力：420\nワクシングスライスの威力：260\nインファナルスライスの威力：280\nソウルスライスの威力：520\nジビトゥの威力：500\nギャロウズの威力：500\nジビトゥクロウの威力：440\nギャロウズクロウの威力：440\nヴォイドリーパーの威力：580\nクロスリーパーの威力：580\nハーベストムーンの威力：800\nレムールスライスの威力：280"
+     },
+     {
+      "en": "Enhanced Gluttony",
+      "level": null,
+      "desc": "自身に2スタックの「処刑人」が付与される。\n効果時間：30秒\n「妖異の鎌」とは同時に付与されない。\nこの効果はウェポンスキルや魔法を実行すると解除される。\n発動条件：グラトニーの命中時\n効果中はジビトゥ、ギャロウズ、ギロティンがそれぞれエクスジビトゥ、エクスギャロウズ、エクスギロティンに変化する。"
+     },
+     {
+      "en": "Enhanced Plentiful Harvest",
+      "level": null,
+      "desc": "自身に「ペルフェクティオ待機」が付与される。\n効果時間：30秒\nペルフェクティオ待機効果：効果中にコムニオを実行すると「ペルフェクティオ実行可」に変化する。\nペルフェクティオ実行可の効果中にレムール状態になると、ペルフェクティオ実行可が解除される。\n発動条件：プレンティフルハーベスト実行時"
+     },
+     {
+      "en": "Enhanced Second Wind",
+      "level": null,
+      "desc": "内丹の回復力を800に上昇させる。"
+     },
+     {
+      "en": "Enhanced Feint",
+      "level": null,
+      "desc": "牽制の効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
+   "actions": {
+    "7541": {
+     "id": 7541,
+     "name": "内丹",
+     "desc": "自身のＨＰを回復する。　回復力：800",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/Second_Wind.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 8,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 800,
+      "party": false
+     },
+     "replaces": []
+    },
+    "7542": {
+     "id": 7542,
+     "name": "ブラッドバス",
+     "desc": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。　効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/Bloodbath.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 47,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 12,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7546": {
+     "id": 7546,
+     "name": "トゥルーノース",
+     "desc": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。　効果時間：10秒\n最大チャージ数：2",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/True_North.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 45000,
+     "cooldownGroup": 46,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7548": {
+     "id": 7548,
+     "name": "アームズレングス",
+     "desc": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/Arm's_Length.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 32,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7549": {
+     "id": 7549,
+     "name": "牽制",
+     "desc": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/Feint.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 48,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 22,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7559": {
+     "id": 7559,
+     "name": "堅実魔",
+     "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Surecast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 44,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7561": {
+     "id": 7561,
+     "name": "迅速魔",
+     "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Swiftcast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 18,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7571": {
+     "id": 7571,
+     "name": "救出",
+     "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "icon": "../public/fankit/battle-pve/18_WHM/Role_Actions/Rescue.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 48,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7863": {
+     "id": 7863,
+     "name": "レッグスウィープ",
+     "desc": "対象をスタンさせる。　効果時間：3秒",
+     "icon": "../public/fankit/battle-pve/08_RPR/Role_Actions/Leg_Sweep.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 10,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "16472": {
+     "id": 16472,
+     "name": "影身具現",
+     "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+     "icon": "../public/fankit/battle-pve/03_DRK/Living_Shadow.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ディセスティーム実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "24373": {
+     "id": 24373,
+     "name": "スライス",
+     "desc": "対象に物理攻撃。　威力：420\n追加効果：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Slice.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 1,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24374": {
+     "id": 24374,
+     "name": "ワクシングスライス",
+     "desc": "対象に物理攻撃。　威力：260\nコンボ条件：スライス　コンボ時威力：500\nコンボボーナス：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Waxing_Slice.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      24373
+     ],
+     "preservesCombo": false,
+     "level": 5,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 260,
+      "combo": 500
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24375": {
+     "id": 24375,
+     "name": "インファナルスライス",
+     "desc": "対象に物理攻撃。　威力：280\nコンボ条件：ワクシングスライス　コンボ時威力：600\nコンボボーナス：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Infernal_Slice.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      24374
+     ],
+     "preservesCombo": false,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 280,
+      "combo": 600
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24376": {
+     "id": 24376,
+     "name": "スピニングサイズ",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：140\n追加効果：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Spinning_Scythe.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 25,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24377": {
+     "id": 24377,
+     "name": "ナイトメアサイズ",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：120\nコンボ条件：スピニングサイズ　コンボ時威力：180\nコンボボーナス：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Nightmare_Scythe.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      24376
+     ],
+     "preservesCombo": false,
+     "level": 45,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 120,
+      "combo": 180
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24378": {
+     "id": 24378,
+     "name": "シャドウ・オブ・デス",
+     "desc": "対象に物理攻撃。　威力：300\n追加効果：対象に「デスデザイン」を付与する。\n効果時間：30秒\nデスデザイン効果：自身から対象に与えるダメージを10％上昇させる。\n効果時間中に対象が倒されると、自身の「ソウルゲージ」が10上昇する。\n既に「デスデザイン」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Shadow_of_Death.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 10,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 300
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24379": {
+     "id": 24379,
+     "name": "ワーラル・オブ・デス",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：100\n追加効果：対象に「デスデザイン」を付与する。\n効果時間：30秒\nデスデザイン効果：自身から対象に与えるダメージを10％上昇させる。\n効果時間中に対象が倒されると、自身の「ソウルゲージ」が10上昇する。\n既に「デスデザイン」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Whorl_of_Death.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 35,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 100
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24380": {
+     "id": 24380,
+     "name": "ソウルスライス",
+     "desc": "対象に物理攻撃。　威力：520\n追加効果：「ソウルゲージ」を50上昇させる。\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nリキャストタイマーを「ソウルサイズ」と共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Soul_Slice.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 9,
+     "maxCharges": 1,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 520
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24381": {
+     "id": 24381,
+     "name": "ソウルサイズ",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：180\n追加効果：「ソウルゲージ」を50上昇させる。\n最大チャージ数：2\nこのウェポンスキルは固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nリキャストタイマーを「ソウルスライス」と共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Soul_Scythe.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 9,
+     "maxCharges": 1,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 65,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 180
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24382": {
+     "id": 24382,
+     "name": "ジビトゥ",
+     "desc": "対象に物理攻撃。　威力：500\nジビトゥ効果アップ時威力：560\n側面攻撃時威力：560\nジビトゥ効果アップかつ側面攻撃時威力：620\n追加効果：自身に「ギャロウズ効果アップ」を付与する。\n効果時間：60秒\n効果中はストークスウェーズがギャロウズクロウに変化する。\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「妖異の鎌」効果中",
+     "icon": "../public/fankit/battle-pve/08_RPR/Gibbet.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 74,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "flank",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 500,
+      "cond": [
+       {
+        "status": "ジビトゥ効果アップ",
+        "potency": 560
+       },
+       {
+        "status": "ジビトゥ効果アップかつ側面攻撃",
+        "potency": 620
+       }
+      ],
+      "flank": 560
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ギャロウズ効果アップ",
+        "sec": 60,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "妖異の鎌"
+     },
+     "replaces": []
+    },
+    "24383": {
+     "id": 24383,
+     "name": "ギャロウズ",
+     "desc": "対象に物理攻撃。　威力：500\nギャロウズ効果アップ時威力：560\n背面攻撃時威力：560\nギャロウズ効果アップかつ背面攻撃時威力：620\n追加効果：自身に「ジビトゥ効果アップ」を付与する。\n効果時間：60秒\n効果中はストークスウェーズがジビトゥクロウに変化する。\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「妖異の鎌」効果中",
+     "icon": "../public/fankit/battle-pve/08_RPR/Gallows.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 75,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "rear",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 500,
+      "cond": [
+       {
+        "status": "ギャロウズ効果アップ",
+        "potency": 560
+       },
+       {
+        "status": "ギャロウズ効果アップかつ背面攻撃",
+        "potency": 620
+       }
+      ],
+      "rear": 560
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ジビトゥ効果アップ",
+        "sec": 60,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "妖異の鎌"
+     },
+     "replaces": []
+    },
+    "24384": {
+     "id": 24384,
+     "name": "ギロティン",
+     "desc": "対象に向かって前方扇範囲物理攻撃。　威力：200\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「妖異の鎌」効果中",
+     "icon": "../public/fankit/battle-pve/08_RPR/Guillotine.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 45,
+     "procStatus": null,
+     "shape": 3,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 8,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 8,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 200
+     },
+     "eff": {
+      "requires": "妖異の鎌"
+     },
+     "replaces": []
+    },
+    "24385": {
+     "id": 24385,
+     "name": "プレンティフルハーベスト",
+     "desc": "対象に向かって前方直線範囲物理攻撃。\nこのアクションの威力は、自身に付与されている「死の供物」のスタック数により変化する。\n威力：720～1000\n2体目以降の対象への威力は20％減少する。\n実行時に「死の供物」を全て消費する。\n追加効果：自身に「レムールシュラウド実行可」を付与する。\n効果時間：30秒\n追加効果：自身に「ペルフェクティオ待機」を付与する。\n効果時間：30秒\nペルフェクティオ待機効果：効果中にコムニオを実行すると「ペルフェクティオ実行可」に変化する。\n発動条件：「死の供儀」非効果中かつ「死の供物」1以上",
+     "icon": "../public/fankit/battle-pve/08_RPR/Plentiful_Harvest.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 88,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 15,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 15,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 720
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "レムールシュラウド実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "ペルフェクティオ待機",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "死の供儀",
+       "n": 1
+      }
+     },
+     "replaces": []
+    },
+    "24386": {
+     "id": 24386,
+     "name": "ハルパー",
+     "desc": "対象に無属性魔法攻撃。　威力：300\n追加効果：「ソウルゲージ」を10上昇させる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Harpe.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 1300,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 15,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": 56,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 300
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "24387": {
+     "id": 24387,
+     "name": "ソウルソウ",
+     "desc": "自身に「ソウルソウ」を付与し、このアクションが「ハーベストムーン」に変化する。　効果時間：永続\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Soulsow.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 5000,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "24388": {
+     "id": 24388,
+     "name": "ハーベストムーン",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：800\n2体目以降の対象への威力は40％減少する。\n追加効果：「ソウルゲージ」を10上昇させる。\n発動条件：「ソウルソウ」\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとソウルソウがハーベストムーンに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Harvest_Moon.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": 57,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 800
+     },
+     "eff": {
+      "cost": {
+       "gauge": "ソウルソウ",
+       "n": 1
+      }
+     },
+     "replaces": [
+      24387
+     ]
+    },
+    "24389": {
+     "id": 24389,
+     "name": "ストークスウェーズ",
+     "desc": "アヴァターを呼び出し、対象に物理攻撃を実行させる。\n威力：340\n追加効果：自身に「妖異の鎌」を付与する。\n効果時間：30秒\n既に「妖異の鎌」が付与されている場合、そのスタック数に関わらず1スタックになる。\n「処刑人」とは同時に付与されない。\n発動条件：「ソウルゲージ」50\nリキャストタイマーを「グラトニー」以外のアヴァターを呼び出すアクションと共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Blood_Stalk.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 340
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "妖異の鎌",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "ソウルゲージ",
+       "n": 50
+      }
+     },
+     "replaces": []
+    },
+    "24390": {
+     "id": 24390,
+     "name": "ジビトゥクロウ",
+     "desc": "アヴァターを呼び出し、対象に物理攻撃を実行させる。\n威力：440\n追加効果：自身に「妖異の鎌」を付与する。\n効果時間：30秒\n既に「妖異の鎌」が付与されている場合、そのスタック数に関わらず1スタックになる。\n「処刑人」とは同時に付与されない。\n発動条件：「ジビトゥ効果アップ」効果中かつ「ソウルゲージ」50\nリキャストタイマーを「グラトニー」以外のアヴァターを呼び出すアクションと共有する。\n\n※このアクションはホットバーに登録することはできない。\n　ジビトゥ効果アップの効果中はストークスウェーズがジビトゥクロウに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Unveiled_Gibbet.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 440
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "妖異の鎌",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "ジビトゥ効果アップ"
+     },
+     "replaces": [
+      24389
+     ]
+    },
+    "24391": {
+     "id": 24391,
+     "name": "ギャロウズクロウ",
+     "desc": "アヴァターを呼び出し、対象に物理攻撃を実行させる。\n威力：440\n追加効果：自身に「妖異の鎌」を付与する。\n効果時間：30秒\n既に「妖異の鎌」が付与されている場合、そのスタック数に関わらず1スタックになる。\n「処刑人」とは同時に付与されない。\n発動条件：「ギャロウズ効果アップ」効果中かつ「ソウルゲージ」50\nリキャストタイマーを「グラトニー」以外のアヴァターを呼び出すアクションと共有する。\n\n※このアクションはホットバーに登録することはできない。\n　ギャロウズ効果アップの効果中はストークスウェーズがギャロウズクロウに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Unveiled_Gallows.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 440
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "妖異の鎌",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "ギャロウズ効果アップ"
+     },
+     "replaces": [
+      24389
+     ]
+    },
+    "24392": {
+     "id": 24392,
+     "name": "シーフスウェーズ",
+     "desc": "アヴァターを呼び出し、対象に向かって前方扇範囲物理攻撃を実行させる。　威力：140\n追加効果：自身に「妖異の鎌」を付与する。\n効果時間：30秒\n既に「妖異の鎌」が付与されている場合、そのスタック数に関わらず1スタックになる。\n「処刑人」とは同時に付与されない。\n発動条件：「ソウルゲージ」50\nリキャストタイマーを「グラトニー」以外のアヴァターを呼び出すアクションと共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Grim_Swathe.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 55,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 3,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 8,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 8,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "妖異の鎌",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "ソウルゲージ",
+       "n": 50
+      }
+     },
+     "replaces": []
+    },
+    "24393": {
+     "id": 24393,
+     "name": "グラトニー",
+     "desc": "アヴァターを呼び出し、対象とその周囲の敵に無属性範囲魔法攻撃を実行させる。　威力：560\n2体目以降の対象への威力は25％減少する。\n追加効果：自身に2スタックの「処刑人」を付与する。\n効果時間：30秒\n「妖異の鎌」とは同時に付与されない。\n発動条件：「ソウルゲージ」50",
+     "icon": "../public/fankit/battle-pve/08_RPR/Gluttony.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 13,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 76,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 560
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "処刑人",
+        "sec": 30,
+        "stacks": 2,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "ソウルゲージ",
+       "n": 50
+      }
+     },
+     "replaces": []
+    },
+    "24394": {
+     "id": 24394,
+     "name": "レムールシュラウド",
+     "desc": "自身にアヴァターを憑依させて「レムール」状態になり、自身に最大スタック分の「レムールソウル」を付与する。\n効果時間：30秒\n効果中はアヴァターを呼び出すアクションと一部のウェポンスキルを実行することができなくなる。\n追加効果：自身に「サクリフィキウム実行可」を付与する。\n効果時間：30秒\n発動条件：「シュラウドゲージ」50",
+     "icon": "../public/fankit/battle-pve/08_RPR/Enshroud.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 5000,
+     "cooldownGroup": 4,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "サクリフィキウム実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "シュラウドゲージ",
+       "n": 50
+      }
+     },
+     "replaces": []
+    },
+    "24395": {
+     "id": 24395,
+     "name": "ヴォイドリーパー",
+     "desc": "対象に物理攻撃。　威力：580\nヴォイドリーパー効果アップ時威力：640\n追加効果：自身に「クロスリーパー効果アップ」を付与する。\n効果時間：30秒\n追加効果：自身に「ヴォイドソウル」を付与する。\n発動条件：「レムールソウル」\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとジビトゥがヴォイドリーパーに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Void_Reaping.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 2.5→1.5"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 580,
+      "cond": [
+       {
+        "status": "ヴォイドリーパー効果アップ",
+        "potency": 640
+       }
+      ]
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "クロスリーパー効果アップ",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "ヴォイドソウル",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "レムールソウル",
+       "n": 1
+      }
+     },
+     "replaces": [
+      24382
+     ]
+    },
+    "24396": {
+     "id": 24396,
+     "name": "クロスリーパー",
+     "desc": "対象に物理攻撃。　威力：580\nクロスリーパー効果アップ時威力：640\n追加効果：自身に「ヴォイドリーパー効果アップ」を付与する。\n効果時間：30秒\n追加効果：自身に「ヴォイドソウル」を付与する。\n発動条件：「レムールソウル」\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとギャロウズがクロスリーパーに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Cross_Reaping.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 2.5→1.5"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 580,
+      "cond": [
+       {
+        "status": "クロスリーパー効果アップ",
+        "potency": 640
+       }
+      ]
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ヴォイドリーパー効果アップ",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "ヴォイドソウル",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "レムールソウル",
+       "n": 1
+      }
+     },
+     "replaces": [
+      24383
+     ]
+    },
+    "24397": {
+     "id": 24397,
+     "name": "グリムリーパー",
+     "desc": "対象に向かって前方扇範囲物理攻撃。　威力：220\n追加効果：自身に「ヴォイドソウル」を付与する。\n発動条件：「レムールソウル」\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとギロティンがグリムリーパーに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Grim_Reaping.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 1500,
+     "fromGuide": [
+      "リキャスト 2.5→1.5"
+     ],
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 3,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 8,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 8,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 220
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ヴォイドソウル",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "cost": {
+       "gauge": "レムールソウル",
+       "n": 1
+      }
+     },
+     "replaces": [
+      24384
+     ]
+    },
+    "24398": {
+     "id": 24398,
+     "name": "コムニオ",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：1100\n2体目以降の対象への威力は20％減少する。\n追加効果：「ペルフェクティオ待機」の効果時間中に実行すると「ペルフェクティオ実行可」を付与する。　効果時間：30秒\n実行時に「レムール」の効果が切れる。\n発動条件：「レムールソウル」1以上",
+     "icon": "../public/fankit/battle-pve/08_RPR/Communio.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 1300,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": true,
+     "isRole": false,
+     "category": 2,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1100
+     },
+     "eff": {
+      "cost": {
+       "gauge": "レムールソウル",
+       "n": 1
+      }
+     },
+     "replaces": []
+    },
+    "24399": {
+     "id": 24399,
+     "name": "レムールスライス",
+     "desc": "対象に物理攻撃。　威力：280\n発動条件：「ヴォイドソウル」2\nリキャストタイマーを「レムールサイズ」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n　レムール効果中はストークスウェーズがレムールスライスに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Lemure's_Slice.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 280
+     },
+     "eff": {
+      "cost": {
+       "gauge": "ヴォイドソウル",
+       "n": 2
+      }
+     },
+     "replaces": [
+      24389
+     ]
+    },
+    "24400": {
+     "id": 24400,
+     "name": "レムールサイズ",
+     "desc": "対象に向かって前方扇範囲物理攻撃。　威力：100\n発動条件：「ヴォイドソウル」2\nリキャストタイマーを「レムールスライス」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n　レムール効果中はシーフスウェーズがレムールサイズに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Lemure's_Scythe.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 3,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 8,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 8,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 100
+     },
+     "eff": {
+      "cost": {
+       "gauge": "ヴォイドソウル",
+       "n": 2
+      }
+     },
+     "replaces": [
+      24392
+     ]
+    },
+    "24401": {
+     "id": 24401,
+     "name": "ヘルズイングレス",
+     "desc": "自身の15m前方に向かって素早く移動する。\n追加効果：自身に「ハルパー効果アップ」を付与する。\nハルパー効果アップ効果：次に実行するハルパーを詠唱時間無しで詠唱できる。\nさらに、実行時にヘルズイングレスのリキャストタイムを5秒短縮する。　効果時間：10秒\n追加効果：移動する直前の地点に「ヘルズゲート」を生成し、自身に「リターン実行可」を付与する。　効果時間：10秒\nバインド中は実行不可。\nリキャストタイマーを「ヘルズイーグレス」と共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Hell's_Ingress.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 20000,
+     "cooldownGroup": 5,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 20,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 15,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "ハルパー効果アップ",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "リターン実行可",
+        "sec": 10,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "24402": {
+     "id": 24402,
+     "name": "ヘルズイーグレス",
+     "desc": "自身の15m後方に向かって素早く移動する。\n追加効果：自身に「ハルパー効果アップ」を付与する。\nハルパー効果アップ効果：次に実行するハルパーを詠唱時間無しで詠唱できる。\nさらに、実行時にヘルズイーグレスのリキャストタイムを5秒短縮する。　効果時間：10秒\n追加効果：移動する直前の地点に「ヘルズゲート」を生成し、自身に「リターン実行可」を付与する。　効果時間：10秒\nバインド中は実行不可。\nリキャストタイマーを「ヘルズイングレス」と共有する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Hell's_Egress.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 20000,
+     "cooldownGroup": 5,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 20,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 15,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "ハルパー効果アップ",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       },
+       {
+        "status": "リターン実行可",
+        "sec": 10,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "24403": {
+     "id": 24403,
+     "name": "リターン",
+     "desc": "自身が生成した「ヘルズゲート」の中心へ素早く移動する。\nバインド中は実行不可。\n発動条件：「リターン実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとヘルズイングレスまたはヘルズイーグレスがリターンに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Regress.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 2,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 74,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 47,
+     "procStatus": null,
+     "shape": 7,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": true,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "requires": "リターン実行可"
+     },
+     "replaces": [
+      24401
+     ]
+    },
+    "24404": {
+     "id": 24404,
+     "name": "アルケインクレスト",
+     "desc": "自身に一定量のダメージを防ぐバリアである「守護のクレスト」を付与する。\nバリア量：自身の最大ＨＰの10％分　効果時間：5秒\nバリアがダメージを完全に吸収して消滅すると、自身と周囲15ｍ以内のパーティメンバーに「活性のクレスト」を付与する。\n活性のクレスト効果：対象のＨＰを継続回復する。\n回復力：50　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/08_RPR/Arcane_Crest.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 7,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 40,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "hot": {
+       "potency": 50,
+       "sec": 15
+      }
+     },
+     "replaces": []
+    },
+    "24405": {
+     "id": 24405,
+     "name": "アルケインサークル",
+     "desc": "自身と周囲のパーティメンバーの与ダメージを3％上昇させる。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに「供儀のサークル」を付与する。　効果時間：5秒\n供儀のサークル効果：効果中に対象者がウェポンスキル、魔法、アビリティによる攻撃を命中させると、供儀のサークルを付与したリーパーに「死の供物」が付与される。\n最大スタック数：8　効果時間：30秒\n追加効果：自身に「死の供儀」を付与する。　効果時間：6秒\n死の供儀効果：自身が供儀のサークルを付与した対象から死の供物を得ることができる。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Arcane_Circle.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 72,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "死の供儀",
+        "sec": 6,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "25757": {
+     "id": 25757,
+     "name": "シャドウブリンガー",
+     "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+     "icon": "../public/fankit/battle-pve/03_DRK/Shadowbringer.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 23,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 600
+     },
+     "eff": {
+      "requires": "暗黒"
+     },
+     "replaces": []
+    },
+    "36969": {
+     "id": 36969,
+     "name": "サクリフィキウム",
+     "desc": "対象とその周囲の敵に無属性範囲魔法攻撃。　威力：700\n2体目以降の対象への威力は20％減少する。\n発動条件：「レムール」かつ「サクリフィキウム実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとグラトニーがサクリフィキウムに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Sacrificium.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 3,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 167,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 700
+     },
+     "eff": {
+      "cost": {
+       "gauge": "レムール",
+       "n": 1
+      }
+     },
+     "replaces": [
+      24393
+     ]
+    },
+    "36970": {
+     "id": 36970,
+     "name": "エクスジビトゥ",
+     "desc": "対象に物理攻撃。　威力：700\nジビトゥ効果アップ時威力：760\n側面攻撃時威力：760\nジビトゥ効果アップかつ側面攻撃時威力：820\n追加効果：自身に「ギャロウズ効果アップ」を付与する。\n効果時間：60秒\n効果中はストークスウェーズがギャロウズクロウに変化する。\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「処刑人」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとジビトゥがエクスジビトゥに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Executioner's_Gibbet.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 74,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "flank",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 700,
+      "cond": [
+       {
+        "status": "ジビトゥ効果アップ",
+        "potency": 760
+       },
+       {
+        "status": "ジビトゥ効果アップかつ側面攻撃",
+        "potency": 820
+       }
+      ],
+      "flank": 760
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ギャロウズ効果アップ",
+        "sec": 60,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "処刑人"
+     },
+     "replaces": [
+      24382
+     ]
+    },
+    "36971": {
+     "id": 36971,
+     "name": "エクスギャロウズ",
+     "desc": "対象に物理攻撃。　威力：700\nギャロウズ効果アップ時威力：760\n背面攻撃時威力：760\nギャロウズ効果アップかつ背面攻撃時威力：820\n追加効果：自身に「ジビトゥ効果アップ」を付与する。\n効果時間：60秒\n効果中はストークスウェーズがジビトゥクロウに変化する。\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「処刑人」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとギャロウズがエクスギャロウズに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Executioner's_Gallows.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 75,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "rear",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 700,
+      "cond": [
+       {
+        "status": "ギャロウズ効果アップ",
+        "potency": 760
+       },
+       {
+        "status": "ギャロウズ効果アップかつ背面攻撃",
+        "potency": 820
+       }
+      ],
+      "rear": 760
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ジビトゥ効果アップ",
+        "sec": 60,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "処刑人"
+     },
+     "replaces": [
+      24383
+     ]
+    },
+    "36972": {
+     "id": 36972,
+     "name": "エクスギロティン",
+     "desc": "対象に向かって前方扇範囲物理攻撃。　威力：260\n追加効果：「シュラウドゲージ」を10上昇させる。\n発動条件：「処刑人」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとギロティンがエクスギロティンに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Executioner's_Guillotine.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 168,
+     "procStatus": null,
+     "shape": 3,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 8,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 8,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 260
+     },
+     "eff": {
+      "requires": "処刑人"
+     },
+     "replaces": [
+      24384
+     ]
+    },
+    "36973": {
+     "id": 36973,
+     "name": "ペルフェクティオ",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1300\n2体目以降の対象への威力は20％減少する。\n発動条件：「ペルフェクティオ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとコムニオがペルフェクティオに変化する。",
+     "icon": "../public/fankit/battle-pve/08_RPR/Perfectio.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 100,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 169,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 25,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1300
+     },
+     "eff": {
+      "requires": "ペルフェクティオ実行可"
+     },
+     "replaces": [
+      24398
+     ]
+    }
+   },
+   "statuses": {
+    "2959": {
+     "id": 2959,
+     "name": "奥義波切実行可",
+     "icon": "../public/icons/statuses/213313.png"
+    },
+    "3855": {
+     "id": 3855,
+     "name": "残心実行可",
+     "icon": "../public/icons/statuses/213318.png"
+    },
+    "3856": {
+     "id": 3856,
+     "name": "天道",
+     "icon": "../public/icons/statuses/213319.png"
+    }
+   },
+   "statusIcons": {
+    "ブラッドバス": "../public/icons/statuses/213913.png",
+    "シールドウォール": "../public/icons/statuses/216306.png",
+    "ストロングホールド": "../public/icons/statuses/216306.png",
+    "ラストバスティオン": "../public/icons/statuses/216306.png",
+    "叱咤": "../public/icons/statuses/210608.png",
+    "原初の大地": "../public/icons/statuses/216306.png",
+    "ダークフォース": "../public/icons/statuses/216306.png",
+    "牽制": "../public/icons/statuses/213904.png",
+    "アームズレングス": "../public/icons/statuses/213915.png",
+    "トゥルーノース": "../public/icons/statuses/213903.png",
+    "ソウルガンメタル": "../public/icons/statuses/216306.png",
+    "捨身": "../public/icons/statuses/210304.png",
+    "フェターウォード": "../public/icons/statuses/214867.png",
+    "アームズレングス：効果": "../public/icons/statuses/214885.png",
+    "リターン": "../public/icons/statuses/215304.png",
+    "デスデザイン": "../public/icons/statuses/212926.png",
+    "妖異の鎌": {
+     "icon": "../public/icons/statuses/217097.png",
+     "max": 2,
+     "base": 217097
+    },
+    "ジビトゥ効果アップ": "../public/icons/statuses/212927.png",
+    "ギャロウズ効果アップ": "../public/icons/statuses/212928.png",
+    "ヴォイドリーパー効果アップ": "../public/icons/statuses/212929.png",
+    "クロスリーパー効果アップ": "../public/icons/statuses/212930.png",
+    "死の供物": {
+     "icon": "../public/icons/statuses/217287.png",
+     "max": 8,
+     "base": 217287
+    },
+    "レムール": "../public/icons/statuses/212931.png",
+    "ソウルソウ": "../public/icons/statuses/212932.png",
+    "リターン実行可": "../public/icons/statuses/212933.png",
+    "守護のクレスト": "../public/icons/statuses/212934.png",
+    "活性のクレスト": "../public/icons/statuses/212935.png",
+    "アルケインサークル": "../public/icons/statuses/212936.png",
+    "供儀のサークル": "../public/icons/statuses/212937.png",
+    "供物のサークル": "../public/icons/statuses/212938.png",
+    "ハルパー効果アップ": "../public/icons/statuses/212939.png",
+    "ギャロウズ実行可": "../public/icons/statuses/212928.png",
+    "クロスリーパー実行可": "../public/icons/statuses/212930.png",
+    "死の供儀": "../public/icons/statuses/212938.png",
+    "プレンティフルハーベスト": "../public/icons/statuses/214956.png",
+    "デスワラント": "../public/icons/statuses/212926.png",
+    "ヘルズイングレス": "../public/icons/statuses/214957.png",
+    "ハーベストマーク": "../public/icons/statuses/216412.png",
+    "サクリフィキウム実行可": "../public/icons/statuses/212941.png",
+    "処刑人": {
+     "icon": "../public/icons/statuses/217198.png",
+     "max": 2,
+     "base": 217198
+    },
+    "ペルフェクティオ待機": "../public/icons/statuses/212942.png",
+    "ペルフェクティオ実行可": "../public/icons/statuses/212943.png",
+    "レムールシュラウド実行可": "../public/icons/statuses/212944.png",
+    "エクスギロティン実行可": "../public/icons/statuses/214747.png",
+    "スウィフト": "../public/icons/statuses/216678.png",
+    "ランパート": "../public/icons/statuses/210152.png",
+    "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
+    "アイアンウィル": "../public/icons/statuses/212506.png",
+    "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
+    "ホルムギャング": "../public/icons/statuses/210255.png",
+    "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "竜槍": "../public/icons/statuses/210303.png",
+    "ホークアイ": "../public/icons/statuses/210351.png",
+    "猛者の撃": "../public/icons/statuses/210354.png",
+    "乱れ撃ち": "../public/icons/statuses/210356.png",
+    "賢人のバラード": "../public/icons/statuses/212603.png",
+    "軍神のパイオン": "../public/icons/statuses/212605.png",
+    "バトルボイス": "../public/icons/statuses/212601.png",
+    "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
+    "神速魔": "../public/icons/statuses/212627.png",
+    "堅実魔": "../public/icons/statuses/210452.png",
+    "ファイガ効果アップ": "../public/icons/statuses/210460.png",
+    "迅速魔": "../public/icons/statuses/210454.png",
+    "マバリア": "../public/icons/statuses/210456.png",
+    "サークル・オブ・ドゥーム": "../public/icons/statuses/210158.png",
+    "エーテルフロー": {
+     "icon": "../public/icons/statuses/210501.png",
+     "max": 3,
+     "base": 210501
+    },
+    "フェイイルミネーション": "../public/icons/statuses/212828.png",
+    "ロイヤルガード": "../public/icons/statuses/213603.png",
+    "残影": "../public/icons/statuses/210605.png",
+    "印": "../public/icons/statuses/212901.png",
+    "活殺自在": "../public/icons/statuses/212902.png",
+    "土遁の術": "../public/icons/statuses/212904.png",
+    "かくれる": "../public/icons/statuses/210607.png",
+    "黒魔紋": "../public/icons/statuses/212653.png",
+    "ブラッドウェポン": {
+     "icon": "../public/icons/statuses/217926.png",
+     "max": 5,
+     "base": 217926
+    },
+    "グリットスタンス": "../public/icons/statuses/213108.png",
+    "ダークマインド": "../public/icons/statuses/213114.png",
+    "ソルトアース": "../public/icons/statuses/213104.png",
+    "暗黒": "../public/icons/statuses/213106.png",
+    "ダークアーツ": "../public/icons/statuses/213107.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
+    "転化": "../public/icons/statuses/212805.png",
+    "応急戦術": "../public/icons/statuses/212806.png",
+    "トランス・バハムート": "../public/icons/statuses/212680.png",
+    "リビングデッド": "../public/icons/statuses/213115.png",
+    "アーゼマの均衡": "../public/icons/statuses/213204.png",
+    "ハルオーネの槍": "../public/icons/statuses/213207.png",
+    "ライトスピード": "../public/icons/statuses/213220.png",
+    "シナストリー": "../public/icons/statuses/213223.png",
+    "旅神のメヌエット": "../public/icons/statuses/212610.png",
+    "原初の解放": {
+     "icon": "../public/icons/statuses/217247.png",
+     "max": 3,
+     "base": 217247
+    },
+    "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
+    "天地人": "../public/icons/statuses/212911.png",
+    "コースティックバイト": "../public/icons/statuses/212616.png",
+    "ストームバイト": "../public/icons/statuses/212617.png",
+    "地神のミンネ": "../public/icons/statuses/212618.png",
+    "ルーシッドドリーム": "../public/icons/statuses/213909.png",
+    "三連魔": {
+     "icon": "../public/icons/statuses/219621.png",
+     "max": 3,
+     "base": 219621
+    },
+    "シンエアー": "../public/icons/statuses/212631.png",
+    "インドゥルゲンティア": "../public/icons/statuses/212637.png",
+    "連環計": "../public/icons/statuses/212809.png",
+    "星の支配者": "../public/icons/statuses/213241.png",
+    "彼岸花": "../public/icons/statuses/213304.png",
+    "明鏡止水": {
+     "icon": "../public/icons/statuses/219641.png",
+     "max": 3,
+     "base": 219641
+    },
+    "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
+    "巨星の支配者": "../public/icons/statuses/213242.png",
+    "風月": "../public/icons/statuses/213311.png",
+    "風花": "../public/icons/statuses/213312.png",
+    "残心実行可": "../public/icons/statuses/213318.png",
+    "レクイエスカット": {
+     "icon": "../public/icons/statuses/218345.png",
+     "max": 4,
+     "base": 218345
+    },
+    "ノー・マーシー": "../public/icons/statuses/213601.png",
+    "カモフラージュ": "../public/icons/statuses/213602.png",
+    "ボーライド": "../public/icons/statuses/213606.png",
+    "ソニックブレイク": "../public/icons/statuses/213607.png",
+    "バウショック": "../public/icons/statuses/213608.png",
+    "ジャギュラーリップ実行可": "../public/icons/statuses/213611.png",
+    "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
+    "アイガウジ実行可": "../public/icons/statuses/213613.png",
+    "原初の猛り": "../public/icons/statuses/212558.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
+    "ディア": "../public/icons/statuses/212635.png",
+    "テンパランス": "../public/icons/statuses/212634.png",
+    "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
+    "ディヴィネーション": "../public/icons/statuses/213245.png",
+    "コンバガ": "../public/icons/statuses/213248.png",
+    "ホロスコープ": "../public/icons/statuses/213251.png",
+    "ホロスコープ・ヘリオス": "../public/icons/statuses/213252.png",
+    "ニュートラルセクト": "../public/icons/statuses/213253.png",
+    "蠱毒法": "../public/icons/statuses/212812.png",
+    "秘策": "../public/icons/statuses/212813.png",
+    "原初の混沌": "../public/icons/statuses/212560.png",
+    "ブルータルシェル": "../public/icons/statuses/213614.png",
+    "ロイエ実行可": "../public/icons/statuses/212522.png",
+    "軍神の加護": "../public/icons/statuses/212619.png",
+    "軍神の契約": "../public/icons/statuses/212620.png",
+    "トルバドゥール": "../public/icons/statuses/212615.png",
+    "分身の術": {
+     "icon": "../public/icons/statuses/219681.png",
+     "max": 5,
+     "base": 219681
+    },
+    "ブラッドデリリアム": {
+     "icon": "../public/icons/statuses/217147.png",
+     "max": 3,
+     "base": 217147
+    },
+    "零の型": "../public/icons/statuses/212535.png",
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
+    "プライマルレンド実行可": "../public/icons/statuses/212566.png",
+    "原初の覚悟": "../public/icons/statuses/212556.png",
+    "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
+    "戦嵐": "../public/icons/statuses/212561.png",
+    "原初の血気": "../public/icons/statuses/212562.png",
+    "原初の血潮": "../public/icons/statuses/212563.png",
+    "オブレーション": "../public/icons/statuses/213123.png",
+    "ハート・オブ・コランダム": "../public/icons/statuses/213615.png",
+    "カタルシス・オブ・コランダム": "../public/icons/statuses/213617.png",
+    "ハイパーヴェロシティ実行可": "../public/icons/statuses/213618.png",
+    "命水": "../public/icons/statuses/212914.png",
+    "月影雷獣実行可": {
+     "icon": "../public/icons/statuses/217597.png",
+     "max": 3,
+     "base": 217597
+    },
+    "ブラストアロー実行可": "../public/icons/statuses/212621.png",
+    "ルインジャ実行可": "../public/icons/statuses/212690.png",
+    "守りの光": "../public/icons/statuses/212691.png",
+    "シアリングライト": "../public/icons/statuses/212699.png",
+    "スリップストリーム": "../public/icons/statuses/212695.png",
+    "リタージー・オブ・ベル": {
+     "icon": "../public/icons/statuses/218373.png",
+     "max": 5,
+     "base": 218373
+    },
+    "マクロコスモス": "../public/icons/statuses/213263.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
+    "光神のフィナーレ": "../public/icons/statuses/212622.png",
+    "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
+    "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
+    "スリップストリーム実行可": "../public/icons/statuses/212697.png",
+    "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
+    "奥義波切実行可": "../public/icons/statuses/213313.png",
+    "コンフィテオル実行可": "../public/icons/statuses/212520.png",
+    "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
+    "トランス・フェニックス": "../public/icons/statuses/214965.png",
+    "ゲベート実行可": "../public/icons/statuses/212523.png",
+    "グラブカッマー実行可": "../public/icons/statuses/212524.png",
+    "ブレード・オブ・オナー実行可": "../public/icons/statuses/213052.png",
+    "ダムネーション": "../public/icons/statuses/212568.png",
+    "原初の鼓動": {
+     "icon": "../public/icons/statuses/218147.png",
+     "max": 3,
+     "base": 218147
+    },
+    "ルイネーター実行可": "../public/icons/statuses/212569.png",
+    "シャドウヴィジル": "../public/icons/statuses/213125.png",
+    "ディセスティーム実行可": "../public/icons/statuses/213126.png",
+    "グレートネビュラ": "../public/icons/statuses/213619.png",
+    "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
+    "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
+    "ゴアブレード実行可": "../public/icons/statuses/213053.png",
+    "忍隠": "../public/icons/statuses/212919.png",
+    "毒盛の術": "../public/icons/statuses/212920.png",
+    "秘技実行可": "../public/icons/statuses/212921.png",
+    "天理人道実行可": "../public/icons/statuses/212922.png",
+    "燕返し実行可": "../public/icons/statuses/213315.png",
+    "天道": "../public/icons/statuses/213319.png",
+    "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
+    "光神のアンコール実行可": "../public/icons/statuses/213077.png",
+    "サンダー系魔法実行可": "../public/icons/statuses/212660.png",
+    "ハイサンダー": "../public/icons/statuses/212661.png",
+    "シアリングスパーク実行可": "../public/icons/statuses/212750.png",
+    "ルクス・ソラリス実行可": "../public/icons/statuses/212751.png",
+    "グレアジャ実行可": {
+     "icon": "../public/icons/statuses/218669.png",
+     "max": 3,
+     "base": 218669
+    },
+    "ディヴァインカレス実行可": "../public/icons/statuses/212640.png",
+    "埋伏の毒実行可": "../public/icons/statuses/212818.png",
+    "埋伏の毒": "../public/icons/statuses/212819.png",
+    "セラフィズム": "../public/icons/statuses/212820.png",
+    "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
+    "オラクル実行可": "../public/icons/statuses/213264.png",
+    "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
+    "原初の激震実行可": "../public/icons/statuses/212571.png",
+    "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
+    "百雷銃": "../public/icons/statuses/212923.png",
+    "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
+   },
+   "bars": {
+    "hb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24373
+      },
+      {
+       "kind": "action",
+       "id": 24374
+      },
+      {
+       "kind": "action",
+       "id": 24375
+      },
+      {
+       "kind": "action",
+       "id": 24389
+      },
+      {
+       "kind": "action",
+       "id": 24386
+      },
+      {
+       "kind": "action",
+       "id": 24387
+      },
+      {
+       "kind": "action",
+       "id": 24393
+      },
+      {
+       "kind": "action",
+       "id": 24405
+      },
+      {
+       "kind": "action",
+       "id": 24394
+      },
+      {
+       "kind": "action",
+       "id": 24382
+      },
+      {
+       "kind": "action",
+       "id": 24380
+      },
+      {
+       "kind": "action",
+       "id": 24383
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24376
+      },
+      {
+       "kind": "action",
+       "id": 24377
+      },
+      {
+       "kind": "action",
+       "id": 24381
+      },
+      {
+       "kind": "action",
+       "id": 24392
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7548
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24398
+      },
+      {
+       "kind": "action",
+       "id": 24384
+      },
+      {
+       "kind": "action",
+       "id": 24401
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb3": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24378
+      },
+      {
+       "kind": "action",
+       "id": 24379
+      },
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 24385
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb4": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 7542
+      },
+      {
+       "kind": "action",
+       "id": 7863
+      },
+      {
+       "kind": "action",
+       "id": 7549
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "action",
+       "id": 24404
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 7546
+      },
+      {
+       "kind": "action",
+       "id": 24402
+      },
+      {
+       "kind": "action",
+       "id": 7541
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 17
+      }
+     ],
+     "shared": [
+      {
+       "kind": "action",
+       "id": 7571
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 2
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "hb5": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 16472
+      },
+      {
+       "kind": "action",
+       "id": 25757
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb6": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "macro",
+       "no": 346
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb7": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 30
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "macro",
+       "no": 296
+      },
+      {
+       "kind": "macro",
+       "no": 297
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 307
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "macro",
+       "no": 309
+      },
+      {
+       "kind": "macro",
+       "no": 310
+      },
+      {
+       "kind": "macro",
+       "no": 298
+      },
+      {
+       "kind": "macro",
+       "no": 299
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb9": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 11
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 258
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb10": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "macro",
+       "no": 257
+      },
+      {
+       "kind": "macro",
+       "no": 256
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24376
+      },
+      {
+       "kind": "action",
+       "id": 24375
+      },
+      {
+       "kind": "action",
+       "id": 24402
+      },
+      {
+       "kind": "action",
+       "id": 7549
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "action",
+       "id": 24386
+      },
+      {
+       "kind": "action",
+       "id": 24401
+      },
+      {
+       "kind": "action",
+       "id": 7863
+      },
+      {
+       "kind": "action",
+       "id": 7542
+      },
+      {
+       "kind": "action",
+       "id": 7541
+      },
+      {
+       "kind": "action",
+       "id": 24378
+      },
+      {
+       "kind": "action",
+       "id": 24373
+      },
+      {
+       "kind": "action",
+       "id": 24374
+      }
+     ],
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 24394
+      },
+      {
+       "kind": "action",
+       "id": 24398
+      },
+      {
+       "kind": "action",
+       "id": 24405
+      },
+      {
+       "kind": "action",
+       "id": 24393
+      },
+      {
+       "kind": "action",
+       "id": 24383
+      },
+      {
+       "kind": "action",
+       "id": 24384
+      },
+      {
+       "kind": "action",
+       "id": 24381
+      },
+      {
+       "kind": "action",
+       "id": 24382
+      },
+      {
+       "kind": "action",
+       "id": 24392
+      },
+      {
+       "kind": "action",
+       "id": 24380
+      },
+      {
+       "kind": "action",
+       "id": 24389
+      },
+      {
+       "kind": "action",
+       "id": 7546
+      },
+      {
+       "kind": "action",
+       "id": 24404
+      },
+      {
+       "kind": "action",
+       "id": 24377
+      },
+      {
+       "kind": "action",
+       "id": 7548
+      },
+      {
+       "kind": "action",
+       "id": 24379
+      }
+     ],
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb3": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb7": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 24
+      },
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    }
+   },
+   "gauges": {
+    "JobHudRRP0": {
+     "index": 361,
+     "name": "ソウルゲージ",
+     "x": 41.22395706176758,
+     "y": 45.64814758300781,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 274,
+     "h": 100
+    },
+    "JobHudRRP1": {
+     "index": 362,
+     "name": "デスゲージ",
+     "x": 39.54426956176758,
+     "y": 37.4305534362793,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 154,
+     "h": 130
+    }
+   },
+   "gauge": {
+    "names": [
+     "JobHudRRP0",
+     "JobHudRRP1"
+    ],
+    "layouts": {
+     "JobHudRRP0": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 96,
+          "w": 264,
+          "h": 100
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 42,
+          "w": 206,
+          "h": 54
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 206,
+          "v": 0,
+          "w": 10,
+          "h": 42
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 216,
+          "v": 0,
+          "w": 34,
+          "h": 38
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 216,
+          "v": 38,
+          "w": 10,
+          "h": 4
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 250,
+          "v": 0,
+          "w": 12,
+          "h": 12
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 205,
+          "v": 70,
+          "w": 18,
+          "h": 12
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 0,
+          "w": 184,
+          "h": 14
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 14,
+          "w": 184,
+          "h": 14
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 28,
+          "w": 184,
+          "h": 14
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 250,
+          "v": 12,
+          "w": 14,
+          "h": 16
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 206,
+          "v": 42,
+          "w": 28,
+          "h": 28
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 196,
+          "w": 184,
+          "h": 14
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 234,
+          "v": 38,
+          "w": 10,
+          "h": 12
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 210,
+          "w": 188,
+          "h": 30
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 0,
+          "v": 240,
+          "w": 162,
+          "h": 56
+         },
+         {
+          "texture": "JobHudRRP0",
+          "u": 206,
+          "v": 82,
+          "w": 58,
+          "h": 14
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudNumBg",
+          "u": 0,
+          "v": 0,
+          "w": 60,
+          "h": 40
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 0,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 20,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 40,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 60,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 80,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 100,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 120,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 4,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": -7,
+          "y": -2,
+          "w": 14,
+          "h": 16,
+          "alpha": 204,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "rotation": 0,
+          "originX": 7,
+          "originY": 8,
+          "add": [
+           150,
+           -50,
+           0
+          ],
+          "partListId": 1,
+          "partId": 10,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": -6,
+          "y": 0,
+          "w": 10,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 5,
+          "originY": 6,
+          "add": [
+           250,
+           -150,
+           -100
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": -19,
+          "y": 0,
+          "w": 18,
+          "h": 12,
+          "alpha": 42,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 6,
+          "add": [
+           200,
+           -200,
+           -100
+          ],
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 4,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": -7,
+          "y": -2,
+          "w": 14,
+          "h": 16,
+          "alpha": 204,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "rotation": 0,
+          "originX": 7,
+          "originY": 8,
+          "add": [
+           -200,
+           -50,
+           200
+          ],
+          "partListId": 1,
+          "partId": 10,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 2,
+          "x": -6,
+          "y": 0,
+          "w": 10,
+          "h": 12,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 5,
+          "originY": 6,
+          "add": [
+           -200,
+           -50,
+           200
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": -19,
+          "y": 0,
+          "w": 18,
+          "h": 12,
+          "alpha": 42,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 6,
+          "add": [
+           -200,
+           -50,
+           200
+          ],
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1003,
+        "type": 5,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "multiply": [
+           90,
+           80,
+           50
+          ],
+          "add": [
+           180,
+           -50,
+           50
+          ],
+          "partListId": 3,
+          "partId": 2,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 4,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 3,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1004,
+        "type": 5,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "multiply": [
+           90,
+           80,
+           50
+          ],
+          "add": [
+           -255,
+           150,
+           180
+          ],
+          "partListId": 3,
+          "partId": 2,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 4,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 3,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 6,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1005,
+        "type": 19,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 3,
+          "x": 14,
+          "y": 5,
+          "w": 30,
+          "h": 30,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 2,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           28,
+           28
+          ]
+         }
+        ]
+       },
+       {
+        "id": 1006,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 3,
+          "x": 15,
+          "y": 5,
+          "w": 30,
+          "h": 30,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 2,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           20,
+           20
+          ]
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 274,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 274,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 274,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 4,
+        "parent": 3,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 274,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 5,
+        "parent": 4,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 264,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 6,
+        "parent": 5,
+        "type": 4,
+        "x": 120,
+        "y": 50,
+        "w": 58,
+        "h": 14,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 7,
+        "add": [
+         200,
+         -200,
+         -100
+        ],
+        "partListId": 1,
+        "partId": 16,
+        "nineGrid": [
+         0,
+         0,
+         20,
+         20
+        ]
+       },
+       {
+        "id": 7,
+        "parent": 5,
+        "type": 4,
+        "x": 20,
+        "y": 38,
+        "w": 58,
+        "h": 14,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 7,
+        "add": [
+         200,
+         -200,
+         -100
+        ],
+        "partListId": 1,
+        "partId": 16,
+        "nineGrid": [
+         0,
+         0,
+         20,
+         20
+        ]
+       },
+       {
+        "id": 8,
+        "parent": 5,
+        "type": 2,
+        "x": 0,
+        "y": 24,
+        "w": 164,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1.2,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 82,
+        "originY": 28,
+        "add": [
+         80,
+         -50,
+         0
+        ],
+        "partListId": 1,
+        "partId": 15,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 9,
+        "parent": 4,
+        "type": 4,
+        "x": 35,
+        "y": 36,
+        "w": 192,
+        "h": 28,
+        "alpha": 89,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 96,
+        "originY": 14,
+        "add": [
+         150,
+         -50,
+         -30
+        ],
+        "partListId": 1,
+        "partId": 14,
+        "nineGrid": [
+         14,
+         14,
+         14,
+         14
+        ]
+       },
+       {
+        "id": 10,
+        "parent": 3,
+        "type": 1,
+        "x": 0,
+        "y": 13,
+        "w": 274,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 11,
+        "parent": 10,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 178,
+        "h": 80,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 12,
+        "parent": 11,
+        "type": 4,
+        "x": 120,
+        "y": 50,
+        "w": 58,
+        "h": 14,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 7,
+        "add": [
+         -200,
+         20,
+         10
+        ],
+        "partListId": 1,
+        "partId": 16,
+        "nineGrid": [
+         0,
+         0,
+         20,
+         20
+        ]
+       },
+       {
+        "id": 13,
+        "parent": 11,
+        "type": 4,
+        "x": 20,
+        "y": 38,
+        "w": 58,
+        "h": 14,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 7,
+        "add": [
+         -200,
+         -10,
+         10
+        ],
+        "partListId": 1,
+        "partId": 16,
+        "nineGrid": [
+         0,
+         0,
+         20,
+         20
+        ]
+       },
+       {
+        "id": 14,
+        "parent": 11,
+        "type": 2,
+        "x": 0,
+        "y": 24,
+        "w": 164,
+        "h": 56,
+        "alpha": 0,
+        "scaleX": 1.2,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 82,
+        "originY": 28,
+        "add": [
+         -200,
+         -80,
+         20
+        ],
+        "partListId": 1,
+        "partId": 15,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 15,
+        "parent": 10,
+        "type": 4,
+        "x": 35,
+        "y": 36,
+        "w": 192,
+        "h": 28,
+        "alpha": 76,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 96,
+        "originY": 14,
+        "add": [
+         -50,
+         50,
+         80
+        ],
+        "partListId": 1,
+        "partId": 14,
+        "nineGrid": [
+         14,
+         14,
+         14,
+         14
+        ]
+       },
+       {
+        "id": 16,
+        "parent": 3,
+        "type": 1006,
+        "x": 218,
+        "y": 30,
+        "w": 50,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 17,
+        "parent": 3,
+        "type": 1006,
+        "x": 218,
+        "y": 49,
+        "w": 50,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 18,
+        "parent": 3,
+        "type": 4,
+        "x": 40,
+        "y": 55,
+        "w": 183,
+        "h": 4,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 4,
+        "nineGrid": [
+         0,
+         0,
+         2,
+         2
+        ]
+       },
+       {
+        "id": 19,
+        "parent": 3,
+        "type": 4,
+        "x": 31,
+        "y": 35,
+        "w": 201,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 3,
+        "nineGrid": [
+         14,
+         14,
+         14,
+         14
+        ]
+       },
+       {
+        "id": 20,
+        "parent": 3,
+        "type": 4,
+        "x": 31,
+        "y": 35,
+        "w": 201,
+        "h": 44,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 3,
+        "nineGrid": [
+         14,
+         14,
+         14,
+         14
+        ]
+       },
+       {
+        "id": 21,
+        "parent": 3,
+        "type": 4,
+        "x": 126,
+        "y": 34,
+        "w": 10,
+        "h": 34,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 2,
+        "nineGrid": [
+         16,
+         16,
+         0,
+         0
+        ]
+       },
+       {
+        "id": 22,
+        "parent": 3,
+        "type": 4,
+        "x": 126,
+        "y": 34,
+        "w": 10,
+        "h": 48,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 2,
+        "nineGrid": [
+         16,
+         16,
+         0,
+         0
+        ]
+       },
+       {
+        "id": 23,
+        "parent": 3,
+        "type": 1,
+        "x": 39,
+        "y": 43,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 24,
+        "parent": 23,
+        "type": 1001,
+        "x": 0,
+        "y": 1,
+        "w": 4,
+        "h": 12,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 6
+       },
+       {
+        "id": 25,
+        "parent": 23,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 26,
+        "parent": 23,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "add": [
+         200,
+         80,
+         150
+        ],
+        "partListId": 1,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 27,
+        "parent": 23,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "add": [
+         -50,
+         -50,
+         20
+        ],
+        "partListId": 1,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 28,
+        "parent": 23,
+        "type": 4,
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 7,
+        "nineGrid": [
+         0,
+         0,
+         10,
+         10
+        ]
+       },
+       {
+        "id": 29,
+        "parent": 3,
+        "type": 1,
+        "x": 39,
+        "y": 56,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 30,
+        "parent": 29,
+        "type": 1002,
+        "x": 0,
+        "y": 1,
+        "w": 4,
+        "h": 12,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 6
+       },
+       {
+        "id": 31,
+        "parent": 29,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 9,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 32,
+        "parent": 29,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "add": [
+         0,
+         150,
+         150
+        ],
+        "partListId": 1,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 33,
+        "parent": 29,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 184,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 2,
+        "originY": 0,
+        "add": [
+         -50,
+         -50,
+         20
+        ],
+        "partListId": 1,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 34,
+        "parent": 29,
+        "type": 4,
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 14,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 7,
+        "nineGrid": [
+         0,
+         0,
+         10,
+         10
+        ]
+       },
+       {
+        "id": 35,
+        "parent": 3,
+        "type": 4,
+        "x": 36,
+        "y": 40,
+        "w": 191,
+        "h": 22,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 11,
+        "nineGrid": [
+         8,
+         8,
+         8,
+         8
+        ]
+       },
+       {
+        "id": 36,
+        "parent": 3,
+        "type": 4,
+        "x": 36,
+        "y": 40,
+        "w": 191,
+        "h": 35,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 11,
+        "nineGrid": [
+         8,
+         8,
+         8,
+         8
+        ]
+       },
+       {
+        "id": 37,
+        "parent": 3,
+        "type": 2,
+        "x": 42,
+        "y": 37,
+        "w": 206,
+        "h": 54,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 38,
+        "parent": 3,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 264,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 39,
+        "parent": 1,
+        "type": 1,
+        "x": 57,
+        "y": 4,
+        "w": 160,
+        "h": 92,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 40,
+        "parent": 39,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 72,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 41,
+        "parent": 40,
+        "type": 1005,
+        "x": 112,
+        "y": 6,
+        "w": 47,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 42,
+        "parent": 40,
+        "type": 1003,
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 20,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 43,
+        "parent": 39,
+        "type": 1,
+        "x": 0,
+        "y": 46,
+        "w": 160,
+        "h": 46,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 44,
+        "parent": 43,
+        "type": 1005,
+        "x": 112,
+        "y": 6,
+        "w": 47,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 45,
+        "parent": 43,
+        "type": 1004,
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 20,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     },
+     "JobHudRRP1": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudRRP1",
+          "u": 0,
+          "v": 0,
+          "w": 154,
+          "h": 130
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 154,
+          "v": 0,
+          "w": 88,
+          "h": 88
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 154,
+          "v": 88,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 186,
+          "v": 88,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 0,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 36,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 72,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 108,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 0,
+          "v": 174,
+          "w": 154,
+          "h": 130
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 154,
+          "v": 238,
+          "w": 60,
+          "h": 34
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 154,
+          "v": 174,
+          "w": 64,
+          "h": 64
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 144,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 180,
+          "v": 130,
+          "w": 36,
+          "h": 44
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 154,
+          "v": 272,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudRRP1",
+          "u": 218,
+          "v": 88,
+          "w": 30,
+          "h": 30
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 32,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackA",
+          "u": 0,
+          "v": 32,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudNumBg",
+          "u": 0,
+          "v": 0,
+          "w": 60,
+          "h": 40
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 2,
+          "x": -14,
+          "y": -1,
+          "w": 60,
+          "h": 34,
+          "alpha": 255,
+          "scaleX": 1.2,
+          "scaleY": 0.5,
+          "rotation": 0,
+          "originX": 30,
+          "originY": 17,
+          "partListId": 1,
+          "partId": 9,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           50,
+           -120,
+           0
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 2,
+          "type": 1,
+          "x": -1,
+          "y": -18,
+          "w": 36,
+          "h": 44,
+          "alpha": 127,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           150,
+           -255,
+           150
+          ]
+         },
+         {
+          "id": 6,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 12,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 7,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 8,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 9,
+          "parent": 5,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 7,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 10,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           150,
+           150,
+           150
+          ],
+          "partListId": 1,
+          "partId": 3,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 11,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 12,
+          "parent": 11,
+          "type": 2,
+          "x": -14,
+          "y": -1,
+          "w": 60,
+          "h": 34,
+          "alpha": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.55,
+          "rotation": 0,
+          "originX": 30,
+          "originY": 17,
+          "partListId": 1,
+          "partId": 9,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 13,
+          "parent": 11,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 36,
+          "scaleX": 1.4285715,
+          "scaleY": 1.4285715,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -120,
+           -50,
+           0
+          ],
+          "partListId": 1,
+          "partId": 13,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 14,
+          "parent": 11,
+          "type": 1,
+          "x": -1,
+          "y": -18,
+          "w": 36,
+          "h": 44,
+          "alpha": 127,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           -150,
+           20,
+           150
+          ]
+         },
+         {
+          "id": 15,
+          "parent": 14,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 11,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 16,
+          "parent": 14,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 17,
+          "parent": 14,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 6,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 18,
+          "parent": 14,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 44,
+          "alpha": 0,
+          "scaleX": 1.5,
+          "scaleY": 1.5,
+          "rotation": 0,
+          "originX": 18,
+          "originY": 44,
+          "partListId": 1,
+          "partId": 7,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 19,
+          "parent": 11,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "partListId": 1,
+          "partId": 2,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           -60,
+           -10,
+           190
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 3,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           -100,
+           0,
+           -50
+          ],
+          "partListId": 2,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 2,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1003,
+        "type": 19,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 3,
+          "x": 14,
+          "y": 5,
+          "w": 30,
+          "h": 30,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           28,
+           28
+          ]
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 154,
+        "h": 130,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 154,
+        "h": 130,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 1001,
+        "x": 71,
+        "y": 6,
+        "w": 32,
+        "h": 32,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 4,
+        "parent": 2,
+        "type": 1001,
+        "x": 75,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 5,
+        "parent": 2,
+        "type": 1001,
+        "x": 72,
+        "y": 48,
+        "w": 32,
+        "h": 32,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 6,
+        "parent": 2,
+        "type": 1001,
+        "x": 58,
+        "y": 64,
+        "w": 32,
+        "h": 32,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 7,
+        "parent": 2,
+        "type": 1001,
+        "x": 40,
+        "y": 72,
+        "w": 32,
+        "h": 32,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 8,
+        "parent": 2,
+        "type": 1003,
+        "x": -6,
+        "y": 74,
+        "w": 64,
+        "h": 40,
+        "alpha": 25,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 9,
+        "parent": 2,
+        "type": 2,
+        "x": -8,
+        "y": -10,
+        "w": 88,
+        "h": 88,
+        "alpha": 0,
+        "scaleX": 0,
+        "scaleY": 0,
+        "rotation": 0,
+        "originX": 44,
+        "originY": 44,
+        "partListId": 1,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 10,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 4,
+        "w": 154,
+        "h": 130,
+        "alpha": 0,
+        "scaleX": 1.1,
+        "scaleY": 1.1,
+        "rotation": 0,
+        "originX": 77,
+        "originY": 65,
+        "partListId": 1,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 11,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 3,
+        "w": 154,
+        "h": 130,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 77,
+        "originY": 65,
+        "partListId": 1,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 12,
+        "parent": 2,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 154,
+        "h": 130,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 13,
+        "parent": 1,
+        "type": 1,
+        "x": 21,
+        "y": 36,
+        "w": 112,
+        "h": 58,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 56,
+        "originY": 29
+       },
+       {
+        "id": 14,
+        "parent": 13,
+        "type": 1,
+        "x": 5,
+        "y": 0,
+        "w": 82,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 15,
+        "parent": 14,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 1,
+        "partId": 14,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 16,
+        "parent": 14,
+        "type": 1003,
+        "x": 18,
+        "y": -4,
+        "w": 64,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 17,
+        "parent": 13,
+        "type": 1002,
+        "x": 80,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 18,
+        "parent": 13,
+        "type": 1002,
+        "x": 60,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 19,
+        "parent": 13,
+        "type": 1002,
+        "x": 40,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 20,
+        "parent": 13,
+        "type": 1002,
+        "x": 20,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 21,
+        "parent": 13,
+        "type": 1002,
+        "x": 0,
+        "y": 26,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     }
+    },
+    "textures": {
+     "JobHudRRP0": {
+      "path": "../public/icons/job-gauges/textures/JobHudRRP0.png",
+      "w": 528,
+      "h": 592,
+      "scale": 2
+     },
+     "JobHudNumBg": {
+      "path": "../public/icons/job-gauges/textures/JobHudNumBg.png",
+      "w": 120,
+      "h": 80,
+      "scale": 2
+     },
+     "Parameter_Gauge": {
+      "path": "../public/icons/job-gauges/textures/Parameter_Gauge.png",
+      "w": 320,
+      "h": 304,
+      "scale": 2
+     },
+     "JobHudRRP1": {
+      "path": "../public/icons/job-gauges/textures/JobHudRRP1.png",
+      "w": 496,
+      "h": 608,
+      "scale": 2
+     },
+     "JobHudSimple_StackA": {
+      "path": "../public/icons/job-gauges/textures/JobHudSimple_StackA.png",
+      "w": 128,
+      "h": 128,
+      "scale": 2
+     }
+    },
+    "sizes": {
+     "JobHudRRP0": [
+      274,
+      100
+     ],
+     "JobHudRRP1": [
+      154,
+      130
+     ]
+    }
+   },
+   "dmgUp": {},
+   "upgrade": {},
+   "jobSet": 39,
+   "buttonsAll": [
+    24373,
+    24374,
+    24375,
+    24376,
+    24377,
+    24378,
+    24379,
+    24380,
+    24381,
+    24382,
+    24383,
+    24384,
+    24385,
+    24386,
+    24387,
+    24389,
+    24392,
+    24393,
+    24394,
+    24398,
+    24401,
+    24402,
+    24404,
+    24405
+   ],
+   "unplaced": [],
+   "replaceGroups": {
+    "24382": [
+     24395,
+     36970
+    ],
+    "24383": [
+     24396,
+     36971
+    ],
+    "24384": [
+     24397,
+     36972
+    ],
+    "24387": [
+     24388
+    ],
+    "24389": [
+     24390,
+     24391,
+     24399
+    ],
+    "24392": [
+     24400
+    ],
+    "24393": [
+     36969
+    ],
+    "24398": [
+     36973
+    ],
+    "24401": [
+     24403
     ]
    },
    "splitDetected": []

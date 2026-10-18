@@ -260,5 +260,86 @@
     };
   }
 
-  window.MockGauge2.add({ MNK: mnk, NIN: nin, DRG: drg });
+  // ---------------- リーパー: ソウルゲージ（JobHudRRP0）とレムールシンボル（JobHudRRP1）----------------
+  // 公式ジョブガイドの HUD の絵（public/jobguide/hud/reaper/）に合わせた:
+  // ソウルゲージ（通常 #3）: 大鎌の刃（#38）と柄（#37）の中に 2 本の棒。上がソウル（#23: #25 赤の塗り・#28 暗い地・#24 塗りの先の光）、
+  //   下がシュラウド（#29: #31 水色の塗り・#34 地・#30 先の光）。数字は右の #16（ソウル）・#17（シュラウド）。
+  //   枠は 2 本用の高い方（#20・#22・#36）を使い、1 本用（#19・#21・#35）は隠す（Lv80 からシュラウドの棒が出る）。#18 は 2 本の棒の間の線。
+  //   #5〜#15 の光（ゲージが増えたときの演出）は出さない
+  //   シンプル表示（#39）: #42 ソウルの棒（部品 1003 の #3）と #41 数字、#45 シュラウドの棒（部品 1004 の #3）と #44 数字
+  // レムールシンボル（通常 #2）: 暗いアヴァターの影（#12）の右に 5 つの炎（#3〜#7。部品 1001: #11 の組 = レムールソウルの青い炎、#2 の組 = ヴォイドソウルの紫の炎）。
+  //   ヴォイドソウルは上（#3）から、レムールソウルは下（#7）から並ぶ（絵の「13 秒・紫 2・青 3」）。レムールの間は赤く光るアヴァター（#9）と残り秒（#8）を出す
+  //   シンプル表示（#13）: #15 アイコン・#16 残り秒・#17〜#21 菱形（部品 1002 の #3 の組。レムールソウルは左（#21）から水色、ヴォイドソウルは右（#17）から桃色）
+  const RPR_BAR_W = 184, RPR_SBAR_W = 160, RPR_FLAMES = [3, 4, 5, 6, 7], RPR_SDIA = [21, 20, 19, 18, 17];
+  function rpr(G) {
+    const L0 = G.layouts.JobHudRRP0, L1 = G.layouts.JobHudRRP1;
+    const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
+    const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    const C = window.MockUld.colorFilter;
+    let simple = false, prev = {};
+    for (const id of [5, 9, 10, 15, 19, 21, 35, 26, 27, 32, 33]) set(k(id), { opacity: 0 });
+    for (const id of [16, 17]) { const n = k(`${id}/2`); if (n) n.classList.add('g2-snum'); }
+    for (const id of ['41/2', '44/2']) k(id)?.classList.add('g2-snum');
+    for (const c of [4, 5]) { set(k(`42/${c}`), { opacity: 0 }); set(k(`45/${c}`), { opacity: 0 }); }
+    k(39).hidden = true;
+    // レムールシンボル: 炎の置き場は ULD の値で薄い（a25）ので、点いた炎は不透明に。演出の部品は隠す
+    for (const q of RPR_FLAMES) {
+      for (const c of [3, 7, 8, 9, 12, 13, 16, 17, 18]) set(k1(`${q}/${c}`), { opacity: 0 });
+      if (K1.img(`${q}/10`)) K1.img(`${q}/10`).style.filter = 'none'; // ヴォイドソウルの玉: ULD の加算色（+150）では白くなるので外す（絵は濃い紫）
+    }
+    for (const id of [9, 10, 11]) set(k1(id), { opacity: 0, transform: 'none' });
+    const n8 = k1('8/2'); if (n8) n8.classList.add('g2-num');
+    const n16 = k1('16/2'); if (n16) n16.classList.add('g2-snum');
+    // 菱形の色: ULD では入れ物（#3）の加算色 -60,-10,190 と絵（#4）の -100,0,-50 を重ねる（入れ物の色はこの組み立てでは掛からないので足して付ける）。
+    // ヴォイドソウルは絵（08.png）の濃い桃色
+    const SLEM = C([-160, -10, 140]), SVOID = C([40, -170, 90]);
+    for (const q of RPR_SDIA) set(k1(`${q}/3`), { opacity: 0 });
+    k1(13).hidden = true;
+    function apply(st, instant) {
+      const t = st.t ?? 0;
+      const soul = Math.max(0, Math.min(100, st.soul ?? 0)), shroud = Math.max(0, Math.min(100, st.shroud ?? 0));
+      if (instant || soul !== prev.soul || shroud !== prev.shroud) {
+        const ws = Math.round((RPR_BAR_W * soul) / 100), wh = Math.round((RPR_BAR_W * shroud) / 100);
+        set(k(25), { clipPath: clipW(ws, RPR_BAR_W) }); set(k(31), { clipPath: clipW(wh, RPR_BAR_W) });
+        set(k(24), { transform: `translateX(${ws}px)`, opacity: ws > 2 && ws < RPR_BAR_W ? 1 : 0 });
+        set(k(30), { transform: `translateX(${wh}px)`, opacity: wh > 2 && wh < RPR_BAR_W ? 1 : 0 });
+        for (const [id, v] of [['16/2', soul], ['17/2', shroud], ['41/2', soul], ['44/2', shroud]]) { const n = k(id); if (n) n.textContent = String(v); }
+        set(k('42/3'), { clipPath: clipW(Math.round((RPR_SBAR_W * soul) / 100), RPR_SBAR_W) });
+        set(k('45/3'), { clipPath: clipW(Math.round((RPR_SBAR_W * shroud) / 100), RPR_SBAR_W) });
+        if (!instant && soul > (prev.soul ?? 0)) anim(k(25), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 380 });
+        if (!instant && shroud > (prev.shroud ?? 0)) anim(k(31), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 380 });
+      }
+      const es = st.st?.enshroud, on = !!es && es.until > t;
+      const lem = on ? Math.max(0, Math.min(5, st.lemure ?? 0)) : 0, vd = on ? Math.max(0, Math.min(5 - lem, st.void ?? 0)) : 0;
+      const sec = on ? Math.ceil((es.until - t) / 1000) : 0;
+      if (instant || on !== prev.on || lem !== prev.lem || vd !== prev.vd) {
+        RPR_FLAMES.forEach((q, i) => {
+          const isVoid = i < vd, isLem = i >= 5 - lem;
+          set(k1(q), { opacity: isVoid || isLem ? 1 : 0.25 });
+          set(k1(`${q}/2`), { opacity: isVoid ? 1 : 0 }); set(k1(`${q}/11`), { opacity: isLem || !(isVoid) ? 1 : 0 });
+        });
+        RPR_SDIA.forEach((q, i) => {
+          const isLem = i < lem, isVoid = i >= 5 - vd;
+          set(k1(`${q}/3`), { opacity: isLem || isVoid ? 1 : 0 });
+          if (K1.img(`${q}/4`)) K1.img(`${q}/4`).style.filter = isVoid ? SVOID : SLEM;
+        });
+        set(k1(9), { opacity: on ? 1 : 0 }); set(k1(11), { opacity: on ? 0.8 : 0 });
+        set(k1(8), { opacity: on ? 1 : 0 }); set(k1(16), { opacity: on ? 1 : 0 });
+        if (!instant && on && !prev.on) anim(k1(9), [{ opacity: 0, transform: 'scale(0.7)' }, { opacity: 1, transform: 'none' }], { duration: 500 });
+      }
+      if (instant || sec !== prev.sec) { for (const id of ['8/2', '16/2']) { const n = k1(id); if (n) n.textContent = on ? String(sec) : ''; } }
+      prev = { soul, shroud, on, lem, vd, sec };
+    }
+    function setSimple(v) { simple = !!v; k(2).hidden = simple; k(39).hidden = !simple; k1(2).hidden = simple; k1(13).hidden = !simple; }
+    apply({ t: 0, soul: 0, shroud: 0 }, true);
+    return {
+      windows: [
+        { name: 'JobHudRRP0', label: 'ソウルゲージ', el: K.el, w: K.w, h: K.h },
+        { name: 'JobHudRRP1', label: 'レムールシンボル', el: K1.el, w: K1.w, h: K1.h },
+      ],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  window.MockGauge2.add({ MNK: mnk, NIN: nin, DRG: drg, RPR: rpr });
 })();

@@ -77,6 +77,8 @@
     pet: (kind, sec) => Arena.pet?.(kind, sec),
     // 技の跳躍の見た目（竜騎士のハイジャンプなど）。高さ h メートル・sec 秒
     leap: (h, sec) => Arena.leap?.(h, sec),
+    // 置いた範囲の中心へ移動する（リーパーのリターン: ヘルズゲートへ）
+    toZone: (kind) => Arena.dashToZone?.(kind),
     dotTick(potency, mult, name) {
       const dmg = dealDamage(potency, mult);
       Arena.dotTick(dmg); Au?.dot();
