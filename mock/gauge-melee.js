@@ -9,14 +9,16 @@
   // ---------------- モンク: 象形拳シンボル（JobHudMNK0）と闘気シンボル（JobHudMNK1）----------------
   // 象形拳シンボル（通常 #2）:
   //   功力: #4 魔猿（玉 #5）・#7 走竜（#8）・#11 猛虎（#12・#13）。部品 1005 の #5 の中の #6 が功力の玉・#4 が空の玉。
-  //     玉の色は型ごと（パーツ 6/5 桃・6/6 紫・6/7 緑。ジョブガイドの HUD の絵と同じ）。走竜の #9・猛虎の #14 は使わない（功力の上限が 1 / 2）
-  //   陰陽の闘気: #25 陰・#26 陽の輪（部品 1001）と、#21 青・#23 橙の炎（#19 の組）。無いときは #27・#28 の暗い玉
+  //     玉の色は公式ジョブガイドの HUD の絵（public/jobguide/hud/monk/）に合わせた: 魔猿・走竜は ULD のまま（桃）、猛虎は水色（玉に加算色を足す）。
+  //     走竜の #9・猛虎の #14 は使わない（功力の上限が 1 / 2）
+  //   陰陽の闘気: #25 陰・#26 陽（部品 1001 の #5 の中の #6 = 暗い玉に紫の加算色）。陰は ULD のまま紫、陽は白（公式の絵）。無いときは #27・#28 の暗い玉。#19 の炎は出さない
+  //   #35 の数字（#36）は公式の絵（踏鳴のチャクラが 3 つのとき）に出ているが、何の数かの説明が無いので出さない
   //   チャクラ（踏鳴）: #31〜#33（部品 1002 の #6 の中の #7。パーツ 1/3 魔猿・1/4 猛虎・1/5 走竜）。#34 は枠
-  //   シンプル表示（#38）: 功力 #41 / #44 / #48・#49（部品 1004 の #3 が点いた菱形）、陰陽 #54・#57、チャクラ #61〜#63（部品 1003 の #4 にパーツ 3/1〜3）
+  //   シンプル表示（#38）: 功力 #41 / #44 / #48・#49（部品 1004 の #3 が点いた菱形。魔猿は ULD のまま桃・走竜は紫・猛虎は水色: 公式の絵）、陰陽 #54・#57、
+  //     チャクラ #61〜#63（部品 1003 の #4 にパーツ 3/1〜3）
   // 闘気シンボル（通常 #2）: 虎の頭の 5 つの穴に闘気の玉（#7〜#11。部品 1001 の #5 = パーツ 1/2）。6 つ目からは玉をパーツ 1/3（強い玉）に替えて数える。
   //   桃園結義（上限 10）の間は輪（#5 パーツ 1/1）を出す。シンプル表示（#19）: #22〜#26（部品 1002 の #3 の組: #5 橙・6 つ目からは #4 赤）
   const MNK_FURY = { opo: { slots: [5], s: [41] }, raptor: { slots: [8], s: [44] }, coeurl: { slots: [12, 13], s: [48, 49] } };
-  const MNK_ORB = { opo: 5, raptor: 6, coeurl: 7 };
   const MNK_BEAST = { opo: 3, coeurl: 4, raptor: 5 }, MNK_SBEAST = { opo: 1, coeurl: 2, raptor: 3 };
   const MNK_CH = [7, 8, 9, 10, 11], MNK_SCH = [22, 23, 24, 25, 26];
   function mnk(G) {
@@ -24,15 +26,20 @@
     const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
     const k = (id) => K.get(id), k1 = (id) => K1.get(id);
     const tex0 = G.textures.JobHudMNK0, tex1 = G.textures.JobHudMNK1;
-    const P1 = partsOf(L0, 1), P3 = partsOf(L0, 3), P6 = partsOf(L0, 6), Q1 = partsOf(L1, 1);
+    const P1 = partsOf(L0, 1), P3 = partsOf(L0, 3), Q1 = partsOf(L1, 1);
     let simple = false, prev = {};
-    // 功力: 玉の色を型ごとに。光の部品と、使わない枠は隠す
-    // 玉の加算色（ULD の値）は桃の玉に合わせたものなので、紫・緑の玉では外す
-    for (const [f, o] of Object.entries(MNK_FURY)) for (const q of o.slots) { usePart(K.img(`${q}/6`), tex0, P6[MNK_ORB[f]]); if (f !== 'opo') K.img(`${q}/6`).style.filter = 'none'; set(k(`${q}/2`), { opacity: 0 }); set(k(`${q}/3`), { opacity: 0 }); }
+    // 功力: 玉の色（公式の絵）。光の部品と、使わない枠は隠す
+    const C = window.MockUld.colorFilter;
+    const FURY_LOOK = { coeurl: C([-60, 150, 100]) }, SFURY_LOOK = { raptor: C([-50, -70, 150]), coeurl: C([-170, 90, 70]) };
+    for (const [f, o] of Object.entries(MNK_FURY)) {
+      for (const q of o.slots) { if (FURY_LOOK[f]) K.img(`${q}/6`).style.filter = FURY_LOOK[f]; set(k(`${q}/2`), { opacity: 0 }); set(k(`${q}/3`), { opacity: 0 }); }
+      for (const q of o.s) if (SFURY_LOOK[f]) K.img(`${q}/5`).style.filter = SFURY_LOOK[f];
+    }
     for (const q of [9, 14, 45, 50]) set(k(q), { opacity: 0 });
-    // 陰陽: 炎の組 #19 は見えるように（ULD の初期値はほぼ透明）。輪の光は隠す
-    set(k(19), { opacity: 1 }); for (const id of [20, 22, 29]) set(k(id), { opacity: 0 });
-    for (const q of [25, 26]) for (const c of [2, 3]) set(k(`${q}/${c}`), { opacity: 0 });
+    // 陰陽: 玉（#25・#26 の #5）を出し、陽は白に。輪の光と炎（#19）は隠す
+    for (const id of [19, 29]) set(k(id), { opacity: 0 });
+    for (const q of [25, 26]) { for (const c of [2, 3]) set(k(`${q}/${c}`), { opacity: 0 }); set(k(`${q}/5`), { opacity: 1 }); }
+    K.img('26/6').style.filter = C([170, 170, 170]);
     // チャクラ: 稲妻（部品の #2〜#5）は隠す
     for (const q of [31, 32, 33]) for (const c of [2, 3, 4, 5]) set(k(`${q}/${c}`), { opacity: 0 });
     for (const id of [35, 65]) set(k(id), { opacity: 0 });
@@ -61,8 +68,8 @@
       // 陰陽の闘気
       const lunar = !!st.lunar, solar = !!st.solar;
       if (instant || lunar !== prev.lunar || solar !== prev.solar) {
-        set(k(25), { opacity: lunar ? 1 : 0 }); set(k(21), { opacity: lunar ? 1 : 0 }); set(k(27), { opacity: lunar ? 0 : 1 });
-        set(k(26), { opacity: solar ? 1 : 0 }); set(k(23), { opacity: solar ? 1 : 0 }); set(k(28), { opacity: solar ? 0 : 1 });
+        set(k(25), { opacity: lunar ? 1 : 0 }); set(k(27), { opacity: lunar ? 0 : 1 });
+        set(k(26), { opacity: solar ? 1 : 0 }); set(k(28), { opacity: solar ? 0 : 1 });
         set(k(54), { opacity: lunar ? 1 : 0, transform: 'none' }); set(k(57), { opacity: solar ? 1 : 0, transform: 'none' });
         if (!instant && lunar && !prev.lunar) pop(k(25));
         if (!instant && solar && !prev.solar) pop(k(26));
@@ -104,36 +111,49 @@
 
 
   // ---------------- 忍者: 忍気ゲージ（JobHudNIN0）と風纏シンボル（JobHudNIN1）----------------
-  // 忍気ゲージ（通常 #2）: 巻物 #13 の上の棒（#14。部品 1002 の #2 が紫の塗り・#5 が暗い下地）。忍気 50 以上（使える）ときは文字の光（#6・#8）を出す。
-  //   右の筒（#15）は以前の風遁の残り時間の表示で、今は使わない（ジョブガイドの HUD の説明に無い）。シンプル表示（#16）: #19 棒（部品 1003 の #4）・#18 数字
+  // 忍気ゲージ（通常 #2）: 巻物 #13 の上の棒（#14。部品 1002 の #2 が紫の塗り・#4 が赤橙の塗り・#5 が暗い下地）。右下の #3 が数字。
+  //   公式ジョブガイドの HUD の絵（public/jobguide/hud/ninja/）: 忍気が使えるとき（50 以上。シンプル表示の絵の「使用可能時」）は文字が赤橙になり、
+  //   右の筒（#15。縦の棒の部品 1001 の #3 が橙の塗り）が光る。筒をいっぱいに光らせるのは仮（絵は忍気 100 の 1 枚だけ）。
+  //   赤橙の塗り（#4）の色は公式の絵に合わせて明るくする。文字の光（#6・#8）は巻物が赤く濁るので出さない
+  //   シンプル表示（#16）: #19 棒（部品 1003 の #4。使えるときは赤）・#18 数字
   // 風纏シンボル（通常 #2）: 5 本のクナイ（#4〜#8。部品 1002 の #5 が光るクナイ・#4 が光）。空は #11〜#15 の暗いクナイ。
-  //   背景の渦（#9・#10）はゲームでは型抜き（JobHudNIN1Mask）で切り抜くもので、型抜きを再現できないので出さない。シンプル表示（#17）: #19〜#23（部品 1004 の #4）
+  //   後ろの渦は #16（パーツ 2/1 の紫の渦。公式の絵）。風纏が無いときは暗い渦（パーツ 2/0）にする（仮）。
+  //   公式の絵ではクナイが渦の真ん中を横切る位置にあるので、クナイ（#4〜#8・#11〜#15）を左下へずらす（ULD の位置のタイムラインは抽出していない）
+  //   渦の中を流れる光（#9・#10）はゲームでは型抜き（JobHudNIN1Mask）で切り抜く演出なので出さない。シンプル表示（#17）: #19〜#23（部品 1004 の #4）
   const NIN_BAR_W = 174, NIN_SBAR_W = 160, NIN_KUNAI = [4, 5, 6, 7, 8], NIN_EMPTY = [11, 12, 13, 14, 15], NIN_SK = [19, 20, 21, 22, 23];
   function nin(G) {
     const L0 = G.layouts.JobHudNIN0, L1 = G.layouts.JobHudNIN1;
     const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
     const k = (id) => K.get(id), k1 = (id) => K1.get(id);
+    const C = window.MockUld.colorFilter, tex1 = G.textures.JobHudNIN1, Q2 = partsOf(L1, 2);
     let simple = false, prev = {};
-    for (const id of [3, 4, 5, 6, 8, 9, 10, 11, 12]) set(k(id), { opacity: 0 });
+    const sbar = { normal: K.img('19/4')?.style.filter ?? '', ready: C([150, -40, -50], [100, 45, 40]) };
+    for (const id of [4, 5, 6, 8, 9, 10, 11, 12]) set(k(id), { opacity: 0 });
     for (const c of [3, 4]) set(k(`14/${c}`), { opacity: 0 });
+    if (K.img('14/4')) K.img('14/4').style.filter = C([150, -120, -160]);
     for (const c of [3, 4, 5]) set(k(`15/${c}`), { opacity: 0 });
     for (const c of [5, 6]) set(k(`19/${c}`), { opacity: 0 });
+    const num = k(3); if (num) { num.classList.add('g2-num'); set(num, { textShadow: '0 0 2px #000, 0 0 2px #000, 0 1px 3px #000, 0 0 8px rgba(180, 120, 255, .8)' }); }
     const n18 = k('18/2'); if (n18) n18.classList.add('g2-snum');
     for (const q of NIN_KUNAI) for (const c of [2, 3, 4, 5]) set(k1(`${q}/${c}`), { opacity: 0 });
-    for (const id of [9, 10, 16]) set(k1(id), { opacity: 0 });
+    for (const id of [9, 10]) set(k1(id), { opacity: 0 });
+    set(k1(16), { opacity: 1 }); if (K1.img(16)) K1.img(16).style.filter = 'none';
+    for (const q of [...NIN_KUNAI, ...NIN_EMPTY]) set(k1(q), { transform: 'translate(-19px, 30px)' });
     k(16).hidden = true; k1(17).hidden = true;
     function apply(st, instant) {
       const ninki = Math.max(0, Math.min(100, st.ninki ?? 0));
       if (instant || ninki !== prev.ninki) {
-        set(k('14/2'), { clipPath: clipW(Math.round((NIN_BAR_W * ninki) / 100), NIN_BAR_W) });
-        set(k('19/4'), { clipPath: clipW(Math.round((NIN_SBAR_W * ninki) / 100), NIN_SBAR_W) });
+        const ok = ninki >= 50, clip = clipW(Math.round((NIN_BAR_W * ninki) / 100), NIN_BAR_W);
+        set(k('14/2'), { clipPath: clip, opacity: ok ? 0 : 1 }); set(k('14/4'), { clipPath: clip, opacity: ok ? 1 : 0 });
+        set(k('15/3'), { opacity: ok ? 1 : 0 });
+        set(k('19/4'), { clipPath: clipW(Math.round((NIN_SBAR_W * ninki) / 100), NIN_SBAR_W) }); if (K.img('19/4')) K.img('19/4').style.filter = ok ? sbar.ready : sbar.normal;
         const n = k('18/2'); if (n) n.textContent = String(ninki);
-        const ok = ninki >= 50;
-        set(k(6), { opacity: ok ? 0.75 : 0 }); set(k(8), { opacity: ok ? 0.35 : 0 });
+        if (num) num.textContent = String(ninki);
         if (!instant && ok && (prev.ninki ?? 0) < 50) anim(k(13), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 450 });
       }
       const kaze = Math.max(0, Math.min(5, st.kaze ?? 0));
       if (instant || kaze !== prev.kaze) {
+        usePart(K1.img(16), tex1, Q2[kaze > 0 ? 1 : 0]);
         NIN_KUNAI.forEach((q, i) => {
           const lit = i < kaze;
           set(k1(`${q}/5`), { opacity: lit ? 1 : 0 }); set(k1(NIN_EMPTY[i]), { opacity: lit ? 0 : 1 });

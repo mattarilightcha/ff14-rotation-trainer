@@ -4,14 +4,16 @@
 //   光り方などの動きは、ゲームのアニメーション定義（ULD のタイムライン）を抽出していないため仮（docs/SPEC.md §10 UI-01）
 (function () {
   'use strict';
-  const { U, set, anim, clipW } = window.MockGauge2.lib;
+  const { U, set, anim, clipW, usePart, partsOf } = window.MockGauge2.lib;
 
   // ---------------- 戦士: インナービーストゲージ（JobHudWAR0。インナービースト 0〜100 とディフェンダー）----------------
   // #2 = 通常表示: #10 枠（鎖の付いた棒）、#11 棒（部品 1002: #2 塗り・#3 明るい塗り・#4 減った分の暗い塗り・#5 地）、#9 数字、
-  //   #12 中央の紋章（部品 1001: #8 黒い鉄の紋章・#7 赤い結晶・#6 黄色い光・#3 #4 上下の角の光）。#4〜#7 は煙の演出の部品（最初は隠す）
-  //   赤い結晶はディフェンダー（ナイトの盾の石と同じく、スタンスの印。仮）。上下の角はゲージの外（上 80px・下 164px）に置かれた
-  //   動きの部品で、止めた絵では外にはみ出すので使わない。原初の解放の間は、紋章の後ろの光と煙を出す（仮）
-  // #13 = シンプル表示: #14 小さな紋章のアイコン（ディフェンダーで明るく）、#16 数字、#17 棒（Parameter_Gauge: #5 橙の塗り。#4・#6 は演出の層）
+  //   #12 部品 1001: #3 上の角・#4 下の爪、#5 の組が中央の紋章（#8 黒い鉄の紋章・#7 赤い結晶・#6 黄色い光）。#4〜#7（#2 の直下）は煙の演出の部品
+  //   公式ジョブガイドの HUD の絵（public/jobguide/hud/warrior/）: 紋章はインナービーストを覚える前（Lv35 未満）のディフェンダーの印で、
+  //   ビーストゲージの絵では、棒の上に角（#3）・下に爪（#4）が出て紋章は出ていない。角と爪はディフェンダーの印として出す（ディフェンダーの間だけ出すのは仮）。
+  //   角と爪は ULD ではゲージの外（上 -80・下 164）に置かれた動きの部品なので、公式の絵から測った位置（上 -4・下 104）に置き、1.1 倍にする。
+  //   原初の解放の間は煙を出す（仮）
+  // #13 = シンプル表示: #14 小さな角のアイコン（ディフェンダーで明るく）、#16 数字、#17 棒（Parameter_Gauge: #5 の塗り。公式の絵に合わせて赤。#4・#6 は演出の層）
   const WN = { normal: 2, simple: 13, num: 9, bar: 11, crest: 12, fx: [4, 5, 6, 7], sIcon: 14, sNum: 16, sBar: 17 };
   const BEAST_W = 172, SBAR_W = 160;
   function war(G) {
@@ -20,7 +22,10 @@
     const k = (id) => K.get(id);
     let simple = false, prev = { v: 0, def: false, ir: false };
     for (const id of WN.fx) set(k(id), { opacity: 0 });
-    for (const c of [3, 4, 6, 7]) set(k(`${WN.crest}/${c}`), { opacity: 0 });
+    set(k(`${WN.crest}/5`), { opacity: 0 });
+    set(k(`${WN.crest}/3`), { opacity: 0, top: '-4px', transform: 'scale(1.1)', transformOrigin: '118px 98px' });
+    set(k(`${WN.crest}/4`), { opacity: 0, top: '104px', transform: 'scale(1.1)', transformOrigin: '73px 0px' });
+    if (K.img(`${WN.sBar}/5`)) K.img(`${WN.sBar}/5`).style.filter = window.MockUld.colorFilter([90, -130, -120]);
     set(k(`${WN.bar}/3`), { opacity: 0 }); set(k(`${WN.bar}/4`), { opacity: 0 });
     for (const c of [4, 6]) set(k(`${WN.sBar}/${c}`), { opacity: 0 });
     k(WN.num)?.classList.add('g2-num');
@@ -38,7 +43,6 @@
       if (b > a) {
         anim(k(`${WN.bar}/2`), [{ filter: 'brightness(1.9)' }, { filter: 'brightness(1)' }], { duration: 500 });
         anim(k(`${WN.sBar}/5`), [{ filter: 'brightness(1.9)' }, { filter: 'brightness(1)' }], { duration: 420 });
-        if (b >= 50 && a < 50) anim(k(`${WN.crest}/8`), [{ filter: 'brightness(1.8)' }, { filter: 'brightness(1)' }], { duration: 500 });
         if (b >= 100 && a < 100) anim(k(5), [{ opacity: 0 }, { opacity: 0.8, offset: 0.3 }, { opacity: 0 }], { duration: 700 });
       } else {
         // 使った分: 暗い塗りが残ってから消える
@@ -47,17 +51,17 @@
       }
     }
     function defiance(on, instant) {
-      set(k(`${WN.crest}/7`), { opacity: on ? 1 : 0 });
+      set(k(`${WN.crest}/3`), { opacity: on ? 1 : 0 }); set(k(`${WN.crest}/4`), { opacity: on ? 1 : 0 });
       set(k(`${WN.sIcon}/2`), { opacity: on ? 1 : 0.25 });
       if (instant || !on) return;
-      anim(k(`${WN.crest}/7`), [{ filter: 'brightness(2.2)', transform: 'scale(1.15)' }, { filter: 'brightness(1)', transform: 'none' }], { duration: 450 });
+      anim(k(`${WN.crest}/3`), [{ filter: 'brightness(2.2)', opacity: 0 }, { filter: 'brightness(1)', opacity: 1 }], { duration: 450 });
+      anim(k(`${WN.crest}/4`), [{ filter: 'brightness(2.2)', opacity: 0 }, { filter: 'brightness(1)', opacity: 1 }], { duration: 450 });
       anim(k(`${WN.sIcon}/2`), [{ opacity: 0, transform: 'scale(2)' }, { opacity: 1, transform: 'none' }], { duration: 260 });
     }
-    // 原初の解放の間: 紋章の後ろの光と、まわりの煙（仮）
+    // 原初の解放の間: まわりの煙（仮）
     function inner(on, instant) {
-      set(k(`${WN.crest}/6`), { opacity: on ? 0.6 : 0 });
       set(k(6), { opacity: on ? 0.55 : 0 }); set(k(4), { opacity: on ? 0.35 : 0 });
-      if (!instant && on) anim(k(`${WN.crest}/6`), [{ opacity: 0, transform: 'scale(0.6)' }, { opacity: 0.95, transform: 'scale(1.1)', offset: 0.35 }, { opacity: 0.6, transform: 'none' }], { duration: 650 });
+      if (!instant && on) anim(k(6), [{ opacity: 0 }, { opacity: 0.9, offset: 0.35 }, { opacity: 0.55 }], { duration: 650 });
     }
     function apply(st, instant) {
       const t = st.t ?? 0, v = Math.max(0, Math.min(100, Math.round(st.beast ?? 0)));
@@ -76,14 +80,18 @@
   }
 
   // ---------------- 暗黒騎士: ブラッドゲージ（JobHudDRK0）と暗黒ゲージ（JobHudDRK1）----------------
+  // 公式ジョブガイドの HUD の絵（public/jobguide/hud/darkknight/）に合わせた:
   // DRK0 #2 = 通常表示: #13 棒（部品 1001: #2 とげの枠・#3 赤い塗り・#4 増えた分の明るい赤・#5 青・#6 地）、#4 左の結晶
-  //   （#7 灰色の結晶・#8 青い光・#5 輪の光・#9 枠）、#10 の子は煙（#11）と紫の稲妻（#12）。#3 は大きさのない文字（使わない）
-  //   左の結晶はダークアーツの印（ブラックナイトのバリアが消えると青く光る。仮）。煙はブラックブラッド 50 以上、稲妻はブラッドデリリアムの間（仮）
-  // DRK0 #14 = シンプル表示: #15 青い光のアイコン（ダークアーツ）、#17 数字、#18 棒（Parameter_Gauge: #4 赤い塗り。#5・#6 は演出の層）
-  // DRK1 #2 = 通常表示: #9 の子 #14 兜の紋章（いつも）・#11 紫紅の紋・#12 #16 赤い玉・#13 #8 紫の渦（暗黒の間）・#10 暗黒の残り秒、
-  //   #17 の子 #19 赤い悪魔・#18 残り秒（影身具現の間）、#3 の子 #7 黒いとげ（いつも）・#6 赤いとげ・#5 橙の光（影身具現の間）
-  // DRK1 #20 = シンプル表示: #21（#22 赤い悪魔のアイコン・#23 数字。影身具現の間）、#24 ひし形（#4 が点いた絵。暗黒の間）、#26 数字・#27 棒（暗黒の残り。60 秒で満タン）
-  // どの部品が何を表すかは、絵と並びからの推定（仮。UI-01）
+  //   （#7 結晶・#8 青いとげの光・#5 輪の影・#9 枠）、#10 の子は煙（#11）と紫の稲妻（#12）
+  //   左の結晶はグリットスタンスの印（グリットスタンスの間は赤い結晶（パーツ 1/11）と青いとげ、無いときは灰色の結晶）。
+  //   結晶の中の #3（大きさのない文字）がブラックブラッドの数字。煙はブラックブラッド 50 以上、稲妻はブラッドデリリアムの間（仮）
+  // DRK0 #14 = シンプル表示: #15 青い光のアイコン（グリットスタンス）、#17 数字、#18 棒（Parameter_Gauge: #4 の塗り。公式の絵は青紫）
+  // DRK1 #2 = 通常表示: #9 の子 #14 兜の紋章（いつも）・#13 紫の稲妻（暗黒の間）・#10 暗黒の残り秒、
+  //   #17 の子 #19 赤い悪魔・#18 残り秒（影身具現の間）、#3 の子が右下の四つ角の星（ダークアーツの印）: #7 黒い星（いつも）・#6 橙の星（ダークアーツの間）・#5 光。
+  //   星のパーツ（2/2・2/3）は左半分だけの絵で、ゲームは左右に折り返して描いていると見られる（ラップ方式は抽出データに無い）ので、左右反転の写しを右半分に置く。
+  //   #11（桃色の紋）・#12・#16（赤い玉）・#8（赤みの稲妻）は公式の絵に無いので出さない
+  // DRK1 #20 = シンプル表示: #21（#22 赤い悪魔のアイコン・#23 数字。影身具現の間）、#24 ひし形（#4 が点いた絵。ダークアーツの間）、#26 数字・#27 棒（暗黒の残り。60 秒で満タン。桃紫）
+  // どの部品が何を表すかは、公式の絵・ULD の絵と並びからの推定（UI-01）
   const DN = { normal: 2, simple: 14, bar: 13, sIcon: 15, sNum: 17, sBar: 18 };
   const BLOOD_W = 173; // シンプル表示の棒の幅（SBAR_W）は戦士と同じ
   function drk(G) {
@@ -91,7 +99,9 @@
     const K = U.build(L0, G.textures), K1 = U.build(L1, G.textures);
     const k = (id) => K.get(id), k1 = (id) => K1.get(id);
     let simple = false, prev = {};
-    set(k(3), { opacity: 0 });
+    const C = window.MockUld.colorFilter, P1 = partsOf(L0, 1), tex0 = G.textures.JobHudDRK0;
+    const num = k(3); if (num) { num.classList.add('g2-num'); set(num, { width: '60px', height: '24px', marginLeft: '-30px', marginTop: '-12px', textShadow: '0 0 2px #600, 0 0 2px #600, 0 0 3px #a00, 0 1px 3px #000' }); }
+    if (K.img(`${DN.sBar}/4`)) K.img(`${DN.sBar}/4`).style.filter = C([60, 20, 200], [55, 50, 15]);
     for (const c of [4, 5]) set(k(`${DN.bar}/${c}`), { opacity: 0 });
     for (const c of [5, 6]) set(k(`${DN.sBar}/${c}`), { opacity: 0 });
     set(k(5), { opacity: 0 }); // 結晶のまわりの輪の光（入れ子のノードは番号だけで指す。部品の中だけが「置いたノード/中のノード」）
@@ -99,6 +109,14 @@
     k(`${DN.sNum}/2`)?.classList.add('g2-snum');
     k(DN.simple).hidden = true;
     for (const id of [5, 6, 8, 11, 12, 13, 15, 16, 19]) set(k1(id), { opacity: 0 });
+    // 星（左半分の絵）を左右反転して右半分に足す
+    for (const id of [6, 7]) {
+      const im = K1.img(id); if (!im) continue;
+      const mirror = im.cloneNode(true);
+      mirror.style.left = `${im.offsetWidth || parseFloat(im.style.width)}px`; mirror.style.position = 'absolute'; mirror.style.top = '0'; mirror.style.transform = 'scaleX(-1)';
+      im.parentElement.appendChild(mirror);
+    }
+    if (K1.img('27/4')) K1.img('27/4').style.filter = C([200, -150, 60], [100, 50, 100]);
     for (const id of [10, 18]) { const n = k1(id); if (n) { n.classList.add('g2-num'); n.style.width = '40px'; n.style.marginLeft = '-10px'; n.style.textAlign = 'center'; } }
     k1('23/2')?.classList.add('g2-snum'); k1('26/2')?.classList.add('g2-snum');
     set(k1('24/4'), { opacity: 0 }); // ひし形の点いた絵（暗黒の間に出す）
@@ -109,6 +127,7 @@
       set(k(`${DN.bar}/3`), { clipPath: clipW(w, BLOOD_W) });
       set(k(`${DN.sBar}/4`), { clipPath: clipW(Math.round((SBAR_W * b) / 100), SBAR_W) });
       const sn = k(`${DN.sNum}/2`); if (sn) sn.textContent = String(b);
+      if (num) num.textContent = String(b);
       set(k(11), { opacity: b >= 50 ? 0.6 : 0 });
       if (instant) return;
       if (b > a) {
@@ -120,16 +139,25 @@
         anim(k(`${DN.bar}/5`), [{ opacity: 1 }, { opacity: 1, offset: 0.3 }, { opacity: 0 }], { duration: 600, easing: 'ease-in' });
       }
     }
-    function darkArts(on, instant) {
+    // グリットスタンス: 赤い結晶と青いとげ（無いときは灰色の結晶）
+    function grit(on, instant) {
+      usePart(K.img(7), tex0, P1[on ? 11 : 12]);
       set(k(8), { opacity: on ? 1 : 0 });
-      set(k(7), { filter: on ? 'brightness(1.35) saturate(1.2)' : 'brightness(0.75)' });
       set(k(`${DN.sIcon}/2`), { opacity: on ? 1 : 0 });
       if (!instant && on) anim(k(6), [{ transform: 'scale(1.25)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 500 });
+    }
+    // ダークアーツ: 右下の星が橙に
+    function darkArts(on, instant) {
+      set(k1(6), { opacity: on ? 1 : 0 }); set(k1(5), { opacity: on ? 0.45 : 0 });
+      set(k1('24/4'), { opacity: on ? 1 : 0 });
+      if (!instant && on) anim(k1(6), [{ transform: 'scale(1.3)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 450 });
     }
     function apply(st, instant) {
       const t = st.t ?? 0, has = (key) => !!st.st?.[key] && st.st[key].until > t;
       const b = Math.max(0, Math.min(100, Math.round(st.blood ?? 0)));
       if (instant || b !== prev.b) bloodBar(prev.b ?? 0, b, instant);
+      const gr = has('grit');
+      if (instant || gr !== prev.gr) grit(gr, instant);
       const da = has('darkArts');
       if (instant || da !== prev.da) darkArts(da, instant);
       const del = has('delirium');
@@ -137,11 +165,8 @@
       // 暗黒
       const dk = has('darkside'), left = dk ? Math.ceil((st.st.darkside.until - t) / 1000) : 0;
       if (instant || dk !== prev.dk) {
-        for (const id of [11, 13, 16]) set(k1(id), { opacity: dk ? 1 : 0 });
-        set(k1(12), { opacity: dk ? 0.8 : 0 }); set(k1(8), { opacity: dk ? 0.55 : 0 });
-        set(k1(14), { filter: dk ? 'none' : 'brightness(0.6) saturate(0.6)' });
-        set(k1('24/4'), { opacity: dk ? 1 : 0 });
-        if (!instant && dk) anim(k1(11), [{ transform: 'scale(1.3)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 500 });
+        set(k1(13), { opacity: dk ? 1 : 0 });
+        if (!instant && dk) anim(k1(13), [{ opacity: 0, filter: 'brightness(2)' }, { opacity: 1, filter: 'none' }], { duration: 500 });
       }
       if (instant || left !== prev.left) {
         const n = k1(10); if (n) n.textContent = dk ? String(left) : '';
@@ -151,13 +176,12 @@
       // 影身具現（英雄の影身）
       const sh = st.shadow && st.shadow.until > t ? Math.ceil((st.shadow.until - t) / 1000) : 0;
       if (instant || !!sh !== !!prev.sh) {
-        for (const id of [19, 6]) set(k1(id), { opacity: sh ? 1 : 0 });
-        set(k1(5), { opacity: sh ? 0.6 : 0 });
+        set(k1(19), { opacity: sh ? 1 : 0 });
         set(k1(21), { opacity: sh ? 1 : 0 });
         if (!instant && sh) anim(k1(19), [{ transform: 'scale(1.2)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 500 });
       }
       if (instant || sh !== prev.sh) { const n = k1(18); if (n) n.textContent = sh ? String(sh) : ''; const sn = k1('23/2'); if (sn) sn.textContent = sh ? String(sh) : ''; }
-      prev = { b, da, del, dk, left, sh };
+      prev = { b, gr, da, del, dk, left, sh };
     }
     function setSimple(v) { simple = !!v; k(DN.normal).hidden = simple; k(DN.simple).hidden = !simple; k1(2).hidden = simple; k1(20).hidden = !simple; }
     apply({ blood: 0, st: {}, t: 0 }, true);
@@ -171,41 +195,52 @@
   }
 
   // ---------------- ガンブレイカー: パウダーゲージ（JobHudGNB0。ソイル）----------------
+  // 公式ジョブガイドの HUD の絵（public/jobguide/hud/gunbreaker/）に合わせた:
   // #2 = 通常表示: 回転式の弾倉。#16〜#18 が弾の穴（部品 1001: #10 の子 #12 青い玉・#11 白い光 = 弾が入っている、#13 金の輪、
-  //   #2〜#9 は撃ったときの煙・火花・光の演出）。#7 の子 #8 橙の紋章（ロイヤルガード。仮）・#10 赤い玉・#11 黒い紋章・#13 枠
-  //   穴は 3 つしかないので、ブラッドソイルで 4〜6 になった分は、穴の金の輪で見せる（仮）
-  // #22 = シンプル表示: #24・#26・#27 ひし形（部品 1003: #2 金のひし形 = 弾、#3 は光の演出の層）、#28 赤い紋章のアイコン（ロイヤルガード）
+  //   #2〜#9 は撃ったときの煙・火花・光の演出）。中央はロイヤルガードの印: ロイヤルガードの間は赤い玉に橙の紋章（#11 をパーツ 1/2 に替え、#8 橙の紋章・#10 赤い光）、
+  //   無いときは黒い紋章（パーツ 1/1）。右下の撃鉄（#6）は ULD では右横にあり、ゲームはアニメーションで回すと見られるので、公式の絵の位置（右下・50°）に置く
+  //   ブラッドソイルの間は弾倉の金属が金色になり、4〜6 発目は黄色い玉で 1〜3 番目の穴に重ねて数える（絵は「ソイル×5」で黄 2・青 1）
+  // #22 = シンプル表示: #24・#26・#27 ひし形（部品 1003: #3 の組の #4 水色 = 弾・#5 黄 = 4〜6 発目・#6 金の縁、#7 空の枠）、#28 赤い紋章のアイコン（ロイヤルガード）
   const GN = { normal: 2, simple: 22, slots: [16, 17, 18], sSlots: [24, 26, 27], emblem: 8, sIcon: 28 };
+  const GNB_GOLD = 'sepia(1) saturate(2.6) brightness(1.08) hue-rotate(-8deg)', GNB_YELLOW = 'sepia(1) saturate(10) brightness(1.9) hue-rotate(12deg)';
   function gnb(G) {
     const L = G.layouts.JobHudGNB0;
     const K = U.build(L, G.textures);
     const k = (id) => K.get(id);
+    const P1 = partsOf(L, 1), tex = G.textures[P1[0]?.texture];
     let simple = false, prev = {};
     for (const sl of GN.slots) for (const c of [2, 3, 4, 5, 6, 7, 8, 9, 13]) set(k(`${sl}/${c}`), { opacity: 0 });
-    for (const id of [8, 9]) set(k(id), { opacity: 0 });
-    for (const sl of GN.sSlots) set(k(`${sl}/3`), { opacity: 0 });
+    for (const id of [8, 9, 10]) set(k(id), { opacity: 0 });
+    set(k(6), { left: '79px', top: '126px', transform: 'rotate(50deg)', transformOrigin: '31px 15px' });
+    for (const sl of GN.sSlots) { set(k(`${sl}/2`), { opacity: 0 }); set(k(`${sl}/3`), { opacity: 0, transform: 'none' }); }
     k(GN.simple).hidden = true;
     function apply(st, instant) {
       const t = st.t ?? 0, n = Math.max(0, Math.min(6, st.soil ?? 0));
       const guard = !!st.st?.guard && st.st.guard.until > t;
-      if (instant || n !== prev.n) {
+      const big = !!st.soilBig && st.soilBig > t;
+      if (instant || n !== prev.n || big !== prev.big) {
         GN.slots.forEach((sl, i) => {
           const on = i < Math.min(3, n), extra = i < n - 3;
-          set(k(`${sl}/12`), { opacity: on ? 1 : 0.15, filter: on ? 'none' : 'grayscale(1) brightness(0.5)' });
+          set(k(`${sl}/12`), { opacity: on ? 1 : 0.15, filter: extra ? GNB_YELLOW : on ? 'none' : 'grayscale(1) brightness(0.5)' });
           set(k(`${sl}/11`), { opacity: on ? 1 : 0 });
-          set(k(`${sl}/13`), { opacity: extra ? 1 : 0 });
           // 使った: 撃ち出す火花と煙 / 増えた: 光る
           if (!instant && (prev.n ?? 0) > n && i >= Math.min(3, n) && i < Math.min(3, prev.n)) { for (const c of [6, 4]) anim(k(`${sl}/${c}`), [{ opacity: 0.9 }, { opacity: 0 }], { duration: 420 }); anim(k(`${sl}/3`), [{ opacity: 0.6 }, { opacity: 0 }], { duration: 700 }); }
           if (!instant && n > (prev.n ?? 0) && i === Math.min(3, n) - 1) anim(k(`${sl}/10`), [{ transform: 'scale(1.35)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 400 });
         });
-        GN.sSlots.forEach((sl, i) => set(k(`${sl}/2`), { opacity: i < Math.min(3, n) ? 1 : 0, filter: i < n - 3 ? 'brightness(1.5) hue-rotate(-25deg)' : 'none' }));
+        GN.sSlots.forEach((sl, i) => {
+          const on = i < Math.min(3, n), extra = i < n - 3;
+          set(k(`${sl}/3`), { opacity: on ? 1 : 0 });
+          set(k(`${sl}/4`), { opacity: extra ? 0 : 1 }); set(k(`${sl}/5`), { opacity: extra ? 1 : 0 }); set(k(`${sl}/6`), { opacity: extra ? 1 : 0 });
+        });
+        for (const id of [4, 6, 13, 20, 21]) set(k(id), { filter: big ? GNB_GOLD : 'none' });
       }
       if (instant || guard !== prev.guard) {
-        set(k(GN.emblem), { opacity: guard ? 1 : 0 });
+        usePart(K.img(11), tex, P1[guard ? 2 : 1]);
+        set(k(GN.emblem), { opacity: guard ? 1 : 0 }); set(k(10), { opacity: guard ? 0.4 : 0 });
         set(k(`${GN.sIcon}/2`), { opacity: guard ? 1 : 0.25 });
         if (!instant && guard) anim(k(9), [{ opacity: 0.9, transform: 'scale(0.8)' }, { opacity: 0, transform: 'scale(1.3)' }], { duration: 600 });
       }
-      prev = { n, guard };
+      prev = { n, guard, big };
     }
     function setSimple(v) { simple = !!v; k(GN.normal).hidden = simple; k(GN.simple).hidden = !simple; }
     apply({ soil: 0, st: {}, t: 0 }, true);

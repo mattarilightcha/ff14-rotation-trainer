@@ -10,9 +10,11 @@
   //   シンプル表示（#7）: #8〜#10（部品 1002: 点いた菱形の組 #2。ULD の初期値は拡大・透明なので、点いたら等倍・不透明にする）
   // フェアリーゲージ（通常 #2）: 棒（#20 塗り・#21 暗い下地）・数字（#3 の文字 #4）・枠 #24（暗いフェアリーの影が描いてある）
   //   エオス: 黄緑のフェアリー（#13）と葉の翼（#14）。セラフィム: 白いセラフィム（#18）と青い羽根（#19）、残り秒（文字 #16）
-  //   フェイユニオン中: 棒の青い光（#7）と光の帯（#11）
+  //   フェイユニオン中: 黄緑に光る翼と光の帯（#11 をパーツ 2/3 に替える。ULD の 2/8 は青緑）。棒は加算色を外した薄い緑。
+  //     公式ジョブガイドの HUD の絵（public/jobguide/hud/scholar/02.png。シンプル表示の「フェイユニオン実行中」の棒も黄緑）に合わせた
   //   #19 はノードの幅と高さがパーツと縦横逆（188×76 と 76×188）。パーツの大きさで描き、回転で横にする
-  //   シンプル表示（#26）: #29 アイコン・#30 数字・#31 セラフィムの残り秒・#32 棒（部品 1001: #6 を塗りにする）
+  //   シンプル表示（#26）: #31 が数字（フェイエーテル）、#32 が棒（部品 1001 の #6）。棒の色は公式の絵に合わせる: ふだん青緑・フェイユニオン中は黄緑・
+  //     セラフィムの間は白。セラフィムの間だけ左上に羽のアイコン（#29）と残り秒（#30）を出す
   const SCH_FLOW = [3, 4, 5], SCH_SFLOW = [8, 9, 10];
   const FEY_W = 174, SCH_SBAR_W = 160;
   function sch(G) {
@@ -31,6 +33,9 @@
     for (const id of ['30/2', '31/2']) k1(id)?.classList.add('g2-snum');
     for (const id of [4, 5]) set(k1(`32/${id}`), { opacity: 0 });
     k1(26).hidden = true;
+    const C = window.MockUld.colorFilter, P2 = partsOf(L1, 2), tex1 = G.textures.JobHudSCH1;
+    const look = { bar: K1.img(20)?.style.filter ?? '', sbar: C([-20, 30, -60]), sbarUnion: C([170, 80, -220]), sbarSeraph: C([215, 120, 10]) };
+    usePart(K1.img(11), tex1, P2[3]);
     function apply(st, instant) {
       const t = st.t ?? 0;
       // エーテルフロー
@@ -54,7 +59,7 @@
         const w = Math.round((FEY_W * fey) / 100);
         set(k1(20), { clipPath: clipW(w, FEY_W) });
         set(k1('32/6'), { clipPath: clipW(Math.round((SCH_SBAR_W * fey) / 100), SCH_SBAR_W) });
-        for (const id of [4, '30/2']) { const n = k1(id); if (n) n.textContent = String(fey); }
+        for (const id of [4, '31/2']) { const n = k1(id); if (n) n.textContent = String(fey); }
         if (!instant && fey > (prev.fey ?? 0)) anim(k1(20), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 400 });
       }
       // フェアリー: eos / seraph / null（転化中・召喚していない）
@@ -65,8 +70,7 @@
         for (const id of [13, 14]) set(k1(id), { opacity: who === 'eos' ? 1 : 0 });
         for (const id of [18, 19]) set(k1(id), { opacity: who === 'seraph' ? 1 : 0 });
         set(k1(16), { opacity: who === 'seraph' ? 1 : 0 });
-        set(k1(29), { filter: who ? 'none' : 'brightness(0.35) saturate(0.3)' });
-        set(k1(31), { opacity: who === 'seraph' ? 1 : 0 });
+        set(k1(28), { opacity: who === 'seraph' ? 1 : 0 });
         set(k1(20), { filter: who ? 'none' : 'saturate(0.35) brightness(0.7)' });
         if (!instant && who) {
           anim(k1(who === 'seraph' ? 19 : 14), [{ opacity: 0, transform: 'scale(0.6)' }, { opacity: 1, transform: 'none' }], { duration: 450 });
@@ -74,12 +78,14 @@
         }
       }
       const left = ser ? String(Math.ceil((ser.until - t) / 1000)) : '';
-      if (left !== prev.left) for (const id of [16, '31/2']) { const n = k1(id); if (n) n.textContent = left; }
+      if (left !== prev.left) for (const id of [16, '30/2']) { const n = k1(id); if (n) n.textContent = left; }
       // フェイユニオン
       const uni = !!st.union;
-      if (instant || uni !== prev.uni) {
-        set(k1(7), { opacity: uni ? 0.85 : 0 }); set(k1(11), { opacity: uni ? 0.75 : 0 });
-        if (uni && !instant) anim(k1(11), [{ opacity: 0.2 }, { opacity: 0.75 }], { duration: 500 });
+      if (instant || uni !== prev.uni || who !== prev.who) {
+        set(k1(11), { opacity: uni ? 1 : 0 });
+        if (K1.img(20)) K1.img(20).style.filter = uni ? 'none' : look.bar;
+        if (K1.img('32/6')) K1.img('32/6').style.filter = who === 'seraph' ? look.sbarSeraph : uni ? look.sbarUnion : look.sbar;
+        if (uni && !instant) anim(k1(11), [{ opacity: 0.2 }, { opacity: 1 }], { duration: 500 });
       }
       prev = { flow, fey, who, left, uni };
     }
@@ -98,7 +104,8 @@
   // ---------------- 賢者: エウクラシア（JobHudGFF0）とアダーガルゲージ（JobHudGFF1）----------------
   // エウクラシア（通常 #2）: 中央の紋章（#15: #16 青く光る / #17 暗い）と、まわりの 4 枚のノウリス（#8〜#11 暗い / #4〜#7 青く光る。部品 1001 の #5 と稲妻 #2〜#4）。
   //   #12 青い光の輪・#13・#14 灰色の輪（左右の半分）・#3 中央の青い輪。シンプル表示は中央の紋章（#15）だけ
-  // アダーガルゲージ（通常 #2）: 上のアダーガル 3 つ（#4〜#6。部品 1002: #13 の中の #15 が青い宝石・#16 が空の灰色・#11 が枠）、
+  // アダーガルゲージ（通常 #2）: 上のアダーガル 3 つ（#4〜#6。部品 1002: #13 の中の #15 が青い宝石・#16 が空の暗い宝石・#11 が枠）、
+  //   公式ジョブガイドの HUD の絵（public/jobguide/hud/sage/）に合わせ、空の宝石は加算色（ULD の値では白くなる）を外して黒く、点いた宝石は明るい水色にする。
   //   次のアダーガルまでの棒（#8: #19 塗り・#20 暗い下地・#9 塗りの先の光）、下のアダースティング 3 つ（#22〜#24。部品 1001: #6 の中の #8 が紫の菱形・#9 が空）、#7 は枠。
   //   シンプル表示（#25）: #27〜#29 アダーガル・#31〜#33 アダースティング（点いた菱形の組 #2）・#35 棒（部品 1003 の #3）
   const GALL_Q = [4, 5, 6], STING_Q = [22, 23, 24], GALL_S = [27, 28, 29], STING_S = [31, 32, 33];
@@ -111,7 +118,14 @@
     // エウクラシア: 光る部品は隠しておく
     for (const q of [4, 5, 6, 7]) { set(k(q), { opacity: 0 }); for (const c of [2, 3, 4]) set(k(`${q}/${c}`), { opacity: 0 }); }
     // アダーガル・アダースティング: 演出の部品は隠す
-    for (const q of GALL_Q) { for (const c of [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]) set(k1(`${q}/${c}`), { opacity: 0 }); set(k1(`${q}/14`), { opacity: 0.4 }); }
+    const C = window.MockUld.colorFilter;
+    for (const q of GALL_Q) {
+      for (const c of [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]) set(k1(`${q}/${c}`), { opacity: 0 });
+      set(k1(`${q}/14`), { opacity: 0 });
+      if (K1.img(`${q}/16`)) K1.img(`${q}/16`).style.filter = 'none';
+      if (K1.img(`${q}/15`)) K1.img(`${q}/15`).style.filter = C([60, 110, 60]);
+    }
+    if (K1.img(19)) K1.img(19).style.filter = 'none'; // 棒の塗り（ULD の加算色 -20 を外して、公式の絵の明るさに）
     for (const q of STING_Q) { for (const c of [2, 3, 4, 5, 7]) set(k1(`${q}/${c}`), { opacity: 0 }); }
     for (const q of STING_S) set(k1(`${q}/2`), { transform: 'none', opacity: 0 });
     set(k1(18), { opacity: 0 });
