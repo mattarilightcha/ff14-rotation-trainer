@@ -147,7 +147,7 @@
           }
           if (id === ID.OVERDRIVE && s.queen && !s.queen.ending) { s.queen.until = s.t; s.queen.next = s.t; }
           if (id === ID.FLAMETHROWER) s.flame = { next: s.t + 1000, until: s.t + 10000, mult: R.mult };
-          if (id === ID.TACTICIAN) { R.mitigate('party', 15, 15, 'タクティシャン'); R.buff('tactician', 15000); }
+          if (id === ID.TACTICIAN) { R.mitigate('party', 0.15, 15, 'タクティシャン'); R.buff('tactician', 15000); }
           if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
         },
         // ワイルドファイアの爆発（時間切れかデトネーター）
@@ -194,7 +194,7 @@
         },
         guide: () => null,
         positional: () => null,
-        fxColor: (id) => (id === ID.BLAZING || id === ID.AUTO_CROSSBOW ? 'kenki' : id === ID.WILDFIRE || id === ID.DETONATOR || id === ID.FLAMETHROWER ? 'fire' : id === ID.FMF || id === ID.CHAINSAW || id === ID.EXCAVATOR ? 'namikiri' : id === ID.DRILL || id === ID.AIR_ANCHOR ? 'iai' : 'steel'),
+        fxColor: (id) => (id === ID.BLAZING || id === ID.AUTO_CROSSBOW ? 'kenki' : id === ID.WILDFIRE || id === ID.DETONATOR || id === ID.FLAMETHROWER ? 'blood' : id === ID.FMF || id === ID.CHAINSAW || id === ID.EXCAVATOR ? 'namikiri' : id === ID.DRILL || id === ID.AIR_ANCHOR ? 'iai' : 'steel'),
         fxPower: (id) => (id === ID.FMF || id === ID.DETONATOR ? 1.6 : BIG.has(id) ? 1.3 : 1),
         fxCount: () => 1,
         castColor: () => 'steel',
@@ -413,7 +413,7 @@
           if (id === ID.DEVILMENT) { R.buff('devilment', 20000); R.buff('starfall', 20000); Au()?.surge(); }
           if (id === ID.CLOSED) { if (has('closed')) R.remove('closed'); else R.buff('closed', 1e9); }
           if (id === ID.WALTZ) R.heal('party', 300 * 0.0004);
-          if (id === ID.SAMBA) { R.mitigate('party', 15, 15, '守りのサンバ'); R.buff('samba', 15000); }
+          if (id === ID.SAMBA) { R.mitigate('party', 0.15, 15, '守りのサンバ'); R.buff('samba', 15000); }
           if (id === ID.IMPROV) { s.improv = { at: s.t, until: s.t + 15000 }; R.buff('improv', 15000, 0); R.hot('party', 100 * 0.0004, 15, 'インプロビゼーション'); }
           if (id === ID.IMPROV_FINISH && s.improv) {
             const n = Math.min(4, Math.floor((s.t - s.improv.at) / 3000));
