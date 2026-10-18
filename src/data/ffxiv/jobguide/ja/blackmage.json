@@ -1850,6 +1850,23 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/9/D-YoUvDYD2YW9pnjSB_jzaOUfI.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/Q/71X0HNy3ZbcufmXqpeHq1bCXl8.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/E/mF_-QzUuG17sYgTUTx15HMFu5g.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/blackmage/01.png",
+   "public/jobguide/hud/blackmage/02.png",
+   "public/jobguide/hud/blackmage/03.png",
+   "public/jobguide/hud/blackmage/04.png",
+   "public/jobguide/hud/blackmage/05.png",
+   "public/jobguide/hud/blackmage/06.png",
+   "public/jobguide/hud/blackmage/07.png",
+   "public/jobguide/hud/blackmage/08.png",
+   "public/jobguide/hud/blackmage/09.png",
+   "public/jobguide/hud/blackmage/10.png",
+   "public/jobguide/hud/blackmage/11.png",
+   "public/jobguide/hud/blackmage/12.png",
+   "public/jobguide/hud/blackmage/13.png",
+   "public/jobguide/hud/blackmage/14.png",
+   "public/jobguide/hud/blackmage/15.png"
   ]
  },
  "contentBlocks": [

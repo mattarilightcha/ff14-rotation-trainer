@@ -1713,6 +1713,13 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/7/Dj5guxNBiGuHgfgp0kX69Oxkng.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/O/-2KIQ-gbsrO0JGJsOX8eC062Qo.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/8/8bh_auJPB8txbwwwN-8FnTHreg.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/sage/01.png",
+   "public/jobguide/hud/sage/02.png",
+   "public/jobguide/hud/sage/03.png",
+   "public/jobguide/hud/sage/04.png",
+   "public/jobguide/hud/sage/05.png"
   ]
  },
  "contentBlocks": [

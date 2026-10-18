@@ -2007,6 +2007,19 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/z/6dRUltVuy55iy6u02Fk_vHX58I.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/w/9CNiT9qrs11R05OnnCC63ncadM.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/R/KXPuoaVRqWOQO5Ysr9nCeE0tlA.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/pictomancer/01.png",
+   "public/jobguide/hud/pictomancer/02.png",
+   "public/jobguide/hud/pictomancer/03.png",
+   "public/jobguide/hud/pictomancer/04.png",
+   "public/jobguide/hud/pictomancer/05.png",
+   "public/jobguide/hud/pictomancer/06.png",
+   "public/jobguide/hud/pictomancer/07.png",
+   "public/jobguide/hud/pictomancer/08.png",
+   "public/jobguide/hud/pictomancer/09.png",
+   "public/jobguide/hud/pictomancer/10.png",
+   "public/jobguide/hud/pictomancer/11.png"
   ]
  },
  "contentBlocks": [

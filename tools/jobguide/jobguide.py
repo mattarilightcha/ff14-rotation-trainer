@@ -1,7 +1,9 @@
 """公式ジョブガイド（jp / na.finalfantasyxiv.com/jobguide/）の全ジョブを取り、JSON に読み解く。
 
   python tools/jobguide/jobguide.py fetch   # raw/{ja,en}/<job>.html を取り直す（2 秒おき。既にあるファイルは --force で上書き）
+  python tools/jobguide/jobguide.py images  # ジョブHUD（ジョブゲージ）の絵を public/jobguide/hud/<job>/ へ
   python tools/jobguide/jobguide.py parse   # raw → src/data/ffxiv/jobguide/{ja,en}/<job>.json と index.json
+                                            # （images を先に回すと、JSON の hud.imageFiles に絵の場所が付く）
 
 要るもの: Python 3.9+、beautifulsoup4、lxml（ページの入れ子が壊れているので html.parser では行が落ちる）。
 """
@@ -14,6 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 RAW = os.path.join(HERE, "raw")
 OUT = os.path.join(ROOT, "src", "data", "ffxiv", "jobguide")
+PUB = os.path.join(ROOT, "public", "jobguide")
+MANIFEST = os.path.join(OUT, "images.json")
 
 JOBS = ("battle paladin warrior darkknight gunbreaker whitemage scholar astrologian sage monk dragoon ninja "
         "samurai reaper viper bard machinist dancer blackmage summoner redmage pictomancer").split()  # リミテッドジョブ（青魔道士・魔獣使い）は入れない
@@ -24,7 +28,11 @@ def url(lang, job):
     return "https://%s/jobguide/%s/" % (HOSTS[lang], job)
 
 
+STAMPS = os.path.join(RAW, "fetched.json")  # "<lang>/<job>" → 取った時刻（UTC）。ファイルの更新時刻は git の取り出しで変わるので使わない
+
+
 def fetch(force=False):
+    stamps = json.load(open(STAMPS, encoding="utf-8")) if os.path.exists(STAMPS) else {}
     for lang in HOSTS:
         os.makedirs(os.path.join(RAW, lang), exist_ok=True)
         for job in JOBS:
@@ -34,8 +42,74 @@ def fetch(force=False):
             req = urllib.request.Request(url(lang, job), headers={"User-Agent": "Mozilla/5.0", "Accept-Language": lang})
             body = urllib.request.urlopen(req, timeout=60).read()
             open(p, "wb").write(body)
+            stamps["%s/%s" % (lang, job)] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+            json.dump(stamps, open(STAMPS, "w", encoding="utf-8"), indent=1, sort_keys=True)
             print(lang, job, len(body), flush=True)
             time.sleep(2)
+
+
+# 本文の絵のうち、サイトの飾り（メニュー・フッター・NEW の札・タブ）は取らない
+SKIP_PARENTS = (".nav__floating, .jobguide__menu, .job__nav--pve, .job__nav--pvp, footer, .l__footer, "
+                ".brand__logo, .js__jobguide_new_or_update, .js__jobguide_new_one, .js__jobguide_update_one, "
+                ".job__tab--pve, .job__tab--pvp, .jobguide__lodestone, .job__social, .jobguide__social")
+
+
+def image_kind(i):
+    return "hud" if i.find_parent(class_=re.compile(r"^job__hud")) is not None else "other"
+
+
+def images():
+    """raw のページからジョブHUD の絵を集め、public/jobguide/hud/<job>/ に落とす。対応表は src/data/ffxiv/jobguide/images.json。"""
+    man = json.load(open(MANIFEST, encoding="utf-8")) if os.path.exists(MANIFEST) else {}
+    found = {}
+    for lang in HOSTS:
+        for job in JOBS:
+            s = BeautifulSoup(open(os.path.join(RAW, lang, job + ".html"), encoding="utf-8").read(), "lxml")
+            for el in s.select(SKIP_PARENTS):
+                el.decompose()
+            for i in s.find_all("img"):
+                src = i.get("src") or ""
+                if not src.startswith("https://lds-img.finalfantasyxiv.com/") or image_kind(i) != "hud":
+                    continue
+                e = found.setdefault(src, {"kind": "hud", "jobs": [], "langs": [], "order": len(found)})
+                h = i.find_previous("h3", class_="job__hud__title")
+                e.setdefault("title", {})[lang] = text(h) if h is not None else None
+                cap = i.find_parent("table")
+                cap = cap.find_next_sibling("p", class_=re.compile("caption")) if cap is not None else None
+                if cap is not None:
+                    e.setdefault("caption", {})[lang] = text(cap)
+                if job not in e["jobs"]:
+                    e["jobs"].append(job)
+                if lang not in e["langs"]:
+                    e["langs"].append(lang)
+    per_job = {}
+    for src, e in sorted(found.items(), key=lambda x: x[1]["order"]):  # ページに載っている順に 01, 02, …
+        job = e["jobs"][0]
+        per_job[job] = per_job.get(job, 0) + 1
+        e["file"] = "public/jobguide/hud/%s/%02d.%s" % (job, per_job[job], src.rsplit(".", 1)[1])
+        del e["order"]
+    for n, (src, e) in enumerate(sorted(found.items())):
+        p = os.path.join(ROOT, e["file"])
+        if not os.path.exists(p):
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})
+            body = urllib.request.urlopen(req, timeout=60).read()
+            open(p, "wb").write(body)
+            time.sleep(0.2)
+        if n % 200 == 0:
+            print(n, "/", len(found), flush=True)
+    json.dump(dict(sorted(found.items(), key=lambda x: x[1]["file"])), open(MANIFEST, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print("images", len(found))
+
+
+_FILES = None
+
+
+def file_of(src):
+    global _FILES
+    if _FILES is None:
+        _FILES = {k: v["file"] for k, v in json.load(open(MANIFEST, encoding="utf-8")).items()} if os.path.exists(MANIFEST) else {}
+    return _FILES.get(src)
 
 
 def text(el):
@@ -153,6 +227,7 @@ def parse_page(html, lang, job):
             "blocks": [{"title": text(t), "images": [i.get("src") for i in
                         (t.find_next_sibling("table") or t).find_all("img")]} for t in w.select("h3.job__hud__title")],
             "allText": text(w), "allHtml": inner_html(w), "images": [i.get("src") for i in w.find_all("img")],
+            "imageFiles": [f for f in (file_of(i.get("src")) for i in w.find_all("img")) if f],
         }
 
     # 表・コンボ・HUD に入らなかった物も落とさないように、本文の節ごとの文字を全部残す
@@ -166,6 +241,7 @@ def parse_page(html, lang, job):
 
 
 def parse():
+    stamps = json.load(open(STAMPS, encoding="utf-8")) if os.path.exists(STAMPS) else {}
     stamp = {}
     index = {"source": "公式ジョブガイド（© SQUARE ENIX）", "hosts": HOSTS, "jobs": []}
     for lang in HOSTS:
@@ -174,7 +250,7 @@ def parse():
             p = os.path.join(RAW, lang, job + ".html")
             html = open(p, encoding="utf-8").read()
             page = parse_page(html, lang, job)
-            page["fetchedAt"] = datetime.fromtimestamp(os.path.getmtime(p), timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+            page["fetchedAt"] = stamps.get("%s/%s" % (lang, job))
             json.dump(page, open(os.path.join(OUT, lang, job + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             counts = {"%s:%s" % (sec["mode"], sec["anchor"]): len(sec["rows"]) for sec in page["sections"]}
             stamp.setdefault(job, {})[lang] = {"title": page["pageTitle"], "fetchedAt": page["fetchedAt"], "rows": counts}
@@ -187,6 +263,8 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "fetch":
         fetch(force="--force" in sys.argv)
+    elif cmd == "images":
+        images()
     elif cmd == "parse":
         parse()
     else:

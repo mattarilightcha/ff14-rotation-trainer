@@ -2018,6 +2018,13 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/ninja/01.png",
+   "public/jobguide/hud/ninja/02.png",
+   "public/jobguide/hud/ninja/03.png",
+   "public/jobguide/hud/ninja/04.png",
+   "public/jobguide/hud/ninja/05.png"
   ]
  },
  "contentBlocks": [

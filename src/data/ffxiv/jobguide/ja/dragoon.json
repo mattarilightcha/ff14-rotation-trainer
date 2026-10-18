@@ -1662,6 +1662,14 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/j/r_EMLbj61FGx5sEAaDiFvcFFF4.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/T/r50M7FweJEDdmOIEc_WgCleyJ0.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/s/QbVrhBMBq-VUi7fkPZO3U7BWQU.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/dragoon/01.png",
+   "public/jobguide/hud/dragoon/02.png",
+   "public/jobguide/hud/dragoon/03.png",
+   "public/jobguide/hud/dragoon/04.png",
+   "public/jobguide/hud/dragoon/05.png",
+   "public/jobguide/hud/dragoon/06.png"
   ]
  },
  "contentBlocks": [

@@ -1708,6 +1708,17 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/darkknight/01.png",
+   "public/jobguide/hud/darkknight/02.png",
+   "public/jobguide/hud/darkknight/03.png",
+   "public/jobguide/hud/darkknight/04.png",
+   "public/jobguide/hud/darkknight/05.png",
+   "public/jobguide/hud/darkknight/06.png",
+   "public/jobguide/hud/darkknight/07.png",
+   "public/jobguide/hud/darkknight/08.png",
+   "public/jobguide/hud/darkknight/09.png"
   ]
  },
  "contentBlocks": [

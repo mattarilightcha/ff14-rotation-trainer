@@ -1844,6 +1844,15 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/redmage/01.png",
+   "public/jobguide/hud/redmage/02.png",
+   "public/jobguide/hud/redmage/03.png",
+   "public/jobguide/hud/redmage/04.png",
+   "public/jobguide/hud/redmage/05.png",
+   "public/jobguide/hud/redmage/06.png",
+   "public/jobguide/hud/redmage/07.png"
   ]
  },
  "contentBlocks": [

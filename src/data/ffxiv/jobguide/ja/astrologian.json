@@ -1923,6 +1923,12 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/I/dmSiiTz9fm7BUXYfL7ZKLRmckU.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/H/92-aRKuilav6nsKXjKhfV7oPro.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/x/_QqSRtr2-53c4k1LfXaEZNEM7M.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/astrologian/01.png",
+   "public/jobguide/hud/astrologian/02.png",
+   "public/jobguide/hud/astrologian/03.png",
+   "public/jobguide/hud/astrologian/04.png"
   ]
  },
  "contentBlocks": [

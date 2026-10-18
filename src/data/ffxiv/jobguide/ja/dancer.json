@@ -1779,6 +1779,16 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/F/6VDBotMC28RxUFCs3ZQXztVOzQ.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/6L150FIk2Y99ZNjMkWBBrkLnVs.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/u/oOv709RAUY_-YOXddZOUu5npSo.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/dancer/01.png",
+   "public/jobguide/hud/dancer/02.png",
+   "public/jobguide/hud/dancer/03.png",
+   "public/jobguide/hud/dancer/04.png",
+   "public/jobguide/hud/dancer/05.png",
+   "public/jobguide/hud/dancer/06.png",
+   "public/jobguide/hud/dancer/07.png",
+   "public/jobguide/hud/dancer/08.png"
   ]
  },
  "contentBlocks": [

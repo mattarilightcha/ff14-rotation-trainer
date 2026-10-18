@@ -1844,6 +1844,14 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/3/CywmPRbCiJMjYNjdBlu1e-1FXA.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/a/SSYB8YzSAd0VfUMwSZqbNGGRWY.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/z/jX-6pBLvkFZaJgnGcte1HBe8jM.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/machinist/01.png",
+   "public/jobguide/hud/machinist/02.png",
+   "public/jobguide/hud/machinist/03.png",
+   "public/jobguide/hud/machinist/04.png",
+   "public/jobguide/hud/machinist/05.png",
+   "public/jobguide/hud/machinist/06.png"
   ]
  },
  "contentBlocks": [

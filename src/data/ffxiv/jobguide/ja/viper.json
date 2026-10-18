@@ -2204,6 +2204,17 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/M/Ah71mlnDubOTcu5YWkcDXfRvVo.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/n/8BELXKcihCR4GnJDU987mowoYM.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/C0FqrLuPrCVLAoJyhd7YlgU0xc.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/viper/01.png",
+   "public/jobguide/hud/viper/02.png",
+   "public/jobguide/hud/viper/03.png",
+   "public/jobguide/hud/viper/04.png",
+   "public/jobguide/hud/viper/05.png",
+   "public/jobguide/hud/viper/06.png",
+   "public/jobguide/hud/viper/07.png",
+   "public/jobguide/hud/viper/08.png",
+   "public/jobguide/hud/viper/09.png"
   ]
  },
  "contentBlocks": [

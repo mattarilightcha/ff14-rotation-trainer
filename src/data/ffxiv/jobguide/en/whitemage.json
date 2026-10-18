@@ -1680,6 +1680,12 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/Q/XGVUBM4Mjd3eJ5fNjiPfrBw60g.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/c/hy1QFG6dHUKdL1IYJWzaHa8Gmg.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/k2Ag8uoD-I5rtzbhx3YVpWcv_A.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/whitemage/01.png",
+   "public/jobguide/hud/whitemage/02.png",
+   "public/jobguide/hud/whitemage/03.png",
+   "public/jobguide/hud/whitemage/04.png"
   ]
  },
  "contentBlocks": [

@@ -2877,6 +2877,28 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/l/35fTAvRf1103OVjLLU5xzRe6X0.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/ZA9rsYQaW8AM1XA3iBeLl9dWyk.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/w/2-OhVK4tGy4qXReYEqNre0mBlk.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/summoner/01.png",
+   "public/jobguide/hud/summoner/02.png",
+   "public/jobguide/hud/summoner/03.png",
+   "public/jobguide/hud/summoner/04.png",
+   "public/jobguide/hud/summoner/05.png",
+   "public/jobguide/hud/summoner/06.png",
+   "public/jobguide/hud/summoner/07.png",
+   "public/jobguide/hud/summoner/08.png",
+   "public/jobguide/hud/summoner/09.png",
+   "public/jobguide/hud/summoner/10.png",
+   "public/jobguide/hud/summoner/11.png",
+   "public/jobguide/hud/summoner/12.png",
+   "public/jobguide/hud/summoner/13.png",
+   "public/jobguide/hud/summoner/14.png",
+   "public/jobguide/hud/summoner/15.png",
+   "public/jobguide/hud/summoner/16.png",
+   "public/jobguide/hud/summoner/17.png",
+   "public/jobguide/hud/summoner/18.png",
+   "public/jobguide/hud/summoner/19.png",
+   "public/jobguide/hud/summoner/20.png"
   ]
  },
  "contentBlocks": [

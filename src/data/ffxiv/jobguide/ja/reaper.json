@@ -1804,6 +1804,16 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/Z/Hb74WVXwsWuLDBzampI59njz20.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/Q/xzi1yleg6LE8pNblc_Qjwyj19M.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/4/tkpNcxUMgkVhofvLRjYnY7e0EM.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/reaper/01.png",
+   "public/jobguide/hud/reaper/02.png",
+   "public/jobguide/hud/reaper/03.png",
+   "public/jobguide/hud/reaper/04.png",
+   "public/jobguide/hud/reaper/05.png",
+   "public/jobguide/hud/reaper/06.png",
+   "public/jobguide/hud/reaper/07.png",
+   "public/jobguide/hud/reaper/08.png"
   ]
  },
  "contentBlocks": [

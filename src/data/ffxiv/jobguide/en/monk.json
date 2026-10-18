@@ -1860,6 +1860,16 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/T/pd7OXWddvRCSSoxHCUsn9yXtto.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/L/EfDdDnsLVPh1OXbXB7afMM_RZI.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/F/YqHaU4s50GVrJ_fg6RLWTswzpc.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/monk/01.png",
+   "public/jobguide/hud/monk/02.png",
+   "public/jobguide/hud/monk/03.png",
+   "public/jobguide/hud/monk/04.png",
+   "public/jobguide/hud/monk/05.png",
+   "public/jobguide/hud/monk/06.png",
+   "public/jobguide/hud/monk/07.png",
+   "public/jobguide/hud/monk/08.png"
   ]
  },
  "contentBlocks": [

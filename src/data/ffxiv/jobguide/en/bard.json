@@ -1673,6 +1673,17 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/a/N6xiUu_sM0buay4CIOLe_1NhkI.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/6/lg3gqIHbIPmaBukFXl_0yk5Ru4.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/V/KrC5hrQ2S6dmIcrDVWL6E67wnw.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/bard/01.png",
+   "public/jobguide/hud/bard/02.png",
+   "public/jobguide/hud/bard/03.png",
+   "public/jobguide/hud/bard/04.png",
+   "public/jobguide/hud/bard/05.png",
+   "public/jobguide/hud/bard/06.png",
+   "public/jobguide/hud/bard/07.png",
+   "public/jobguide/hud/bard/08.png",
+   "public/jobguide/hud/bard/09.png"
   ]
  },
  "contentBlocks": [

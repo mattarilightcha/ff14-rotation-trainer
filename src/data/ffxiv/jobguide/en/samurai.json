@@ -1885,6 +1885,13 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/q/yFiAv8XFU-4LYxEsIoLtfECEnk.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/J3AavRpo8P39uToG2RVsA1UU04.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/K/3YapYT4nugoVjZLcHZZ5baIp8U.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/samurai/01.png",
+   "public/jobguide/hud/samurai/02.png",
+   "public/jobguide/hud/samurai/03.png",
+   "public/jobguide/hud/samurai/04.png",
+   "public/jobguide/hud/samurai/05.png"
   ]
  },
  "contentBlocks": [

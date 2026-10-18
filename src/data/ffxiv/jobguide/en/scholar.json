@@ -1959,6 +1959,15 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/scholar/01.png",
+   "public/jobguide/hud/scholar/02.png",
+   "public/jobguide/hud/scholar/03.png",
+   "public/jobguide/hud/scholar/04.png",
+   "public/jobguide/hud/scholar/05.png",
+   "public/jobguide/hud/scholar/06.png",
+   "public/jobguide/hud/scholar/07.png"
   ]
  },
  "contentBlocks": [

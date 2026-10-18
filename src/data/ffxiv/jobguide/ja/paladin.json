@@ -1936,6 +1936,11 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/5/7CubTw07gyzi5TXmVHjzejYGmw.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/z/W9JnpVtHtXJtcYOmFSMqiUA-d0.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/b/hL5wqhPwALYOoBR_wDEf5wu1vY.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/paladin/01.png",
+   "public/jobguide/hud/paladin/02.png",
+   "public/jobguide/hud/paladin/03.png"
   ]
  },
  "contentBlocks": [

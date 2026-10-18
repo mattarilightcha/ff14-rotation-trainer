@@ -1744,6 +1744,11 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/l/MHqKEsbF1agx5wFLFrlrjb40XM.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/G/8mnBmkrAJdhB7ZPLG812UiFhxk.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/k/3GHiS3XIjitdQYTykl4K02V_Kw.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/warrior/01.png",
+   "public/jobguide/hud/warrior/02.png",
+   "public/jobguide/hud/warrior/03.png"
   ]
  },
  "contentBlocks": [

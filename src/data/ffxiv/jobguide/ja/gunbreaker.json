@@ -1891,6 +1891,13 @@
    "https://lds-img.finalfantasyxiv.com/promo/h/5/XLkM5VoT3OPxb71IOPujqoUzzs.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/o/fztNh8k74_dg41itWzSnoWv9HI.png",
    "https://lds-img.finalfantasyxiv.com/promo/h/J/698tVXfHraTAE6SLzp9wdUh7eI.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/gunbreaker/01.png",
+   "public/jobguide/hud/gunbreaker/02.png",
+   "public/jobguide/hud/gunbreaker/03.png",
+   "public/jobguide/hud/gunbreaker/04.png",
+   "public/jobguide/hud/gunbreaker/05.png"
   ]
  },
  "contentBlocks": [
