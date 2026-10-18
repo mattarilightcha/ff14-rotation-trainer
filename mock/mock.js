@@ -69,6 +69,8 @@
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // 今の自分の向き（敵から見て 'rear' / 'flank' / 'front'）。方向指定と状態の組み合わせで威力が変わる技（モンクの虎襲崩拳）に使う
     posNow: () => Arena.positional(),
+    // 自分が動いているか（機工士のフレイムスロアー・踊り子のインプロビゼーション: 動くと止まる）
+    moving: () => !!Arena.isMoving?.(),
     // その技の相手（'self' / 'npc'。敵や対象なしは null）と、味方の HP
     get who() { return actWho; }, hpOf: (who) => Arena.hpOf(who),
     // 継続ダメージを自分で持つジョブ（吟遊詩人の 2 つの毒）: 1 回分。mult は付けたときの与ダメージ上昇

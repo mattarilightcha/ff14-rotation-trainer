@@ -60,7 +60,7 @@ function guideFor(rows, a) {
 }
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100], ['VPR', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100], ['VPR', 100], ['MCH', 100], ['DNC', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -361,6 +361,8 @@ function buildJob(JOB, LEVEL) {
     job: { abbr: JOB, name: job.name.ja, icon: `../public${job.iconPath}`, level: LEVEL, role },
     guide: guideExtra(JOB, LEVEL), // 公式ジョブガイドの特性・ペットの技（traits / pets）
     actions: actionsOut,
+    // ペットの技（機工士のオートマトン・クイーンの技など。ホットバーに置けない）: 名前と説明文だけ（威力の幅を説明文から読む）
+    petActions: Object.fromEntries(actions.filter((a) => a.jobs?.length === 1 && a.jobs[0] === JOB && a.category !== 9 && a.isPlayerAction === false && a.level <= LEVEL && !actionsOut[a.id]).map((a) => [a.id, { name: a.name.ja, desc: a.description.ja }])),
     statuses: Object.fromEntries(
       statuses
         .filter((s) => [3856, 2959, 3855].includes(s.id))

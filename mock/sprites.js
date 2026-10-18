@@ -59,6 +59,9 @@
     rprRobe: ['#a49cb4', '#615a72', '#423c50', '#2b2736', '#17141e'], // リーパーの黒紫のコートとフード
     rprCloth: ['#d88a9a', '#9a3448', '#6e2236', '#4a1626', '#2a0c16'], // リーパーの葡萄色の前垂れ
     vprTop: ['#a6e6c6', '#44a07e', '#2c725a', '#1d4c3e', '#102c24'], // ヴァイパーの深緑の装束
+    mchCoat: ['#d8b890', '#9a7650', '#6e5236', '#4a3624', '#2a1e14'], // 機工士の革のコート
+    dncTop: ['#ffb4c4', '#e0506c', '#b02e4c', '#781c36', '#440e20'], // 踊り子の紅の衣装
+    queenMetal: ['#a4aec4', '#5e6a84', '#3e465c', '#292e40', '#161a28'], // オートマトン・クイーンの黒鉄
   };
   // 3D で光らせる素材（光のにじみの対象）
   const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
@@ -319,13 +322,15 @@
   // p: { bob, crouch, fl, fr, sway, arm, free, smear, tail, lean, headDy, jump }
   // st: 見た目（MELEE_STYLE）。top 上着・pants 袴（ズボン）・foot 足・belt 帯と trim 縁・knot 帯の結び・collar 襟と collarTrim 縁・mark 背中の紋・
   //   band 鉢巻（null で無し）・topknot 髷・hair 髪の色・mask 口元の覆面・sleeve 袖・
-  //   weapon 武器（katana 刀と鞘 / fist 籠手 / dagger 両手の短剣 / twin 両手の剣）
+  //   weapon 武器（katana 刀と鞘 / fist 籠手 / dagger 両手の短剣 / twin 両手の剣 / chakram 両手の輪）
   const MELEE_STYLE = {
     sam: { top: 'red', pants: 'hakama', foot: 'black', belt: 'black', trim: 'gold', knot: 'red', collar: 'white', collarTrim: 'gold', mark: true, band: 'white', topknot: true, hair: 'hair', sleeve: true, weapon: 'katana' },
     mnk: { top: 'mnkTop', pants: 'woodD', foot: 'leather', belt: 'red', trim: 'gold', knot: 'gold', collar: 'skin', collarTrim: 'gold', mark: false, band: 'red', topknot: true, hair: 'hair', sleeve: false, weapon: 'fist' },
     nin: { top: 'navy', pants: 'black', foot: 'black', belt: 'red', trim: 'iron', knot: 'red', collar: 'black', collarTrim: 'iron', mark: false, band: 'red', topknot: false, hair: 'hair', mask: 'black', sleeve: false, weapon: 'dagger' },
     bunshin: { top: 'shade', pants: 'shade', foot: 'shade', belt: 'shade', trim: 'shade', knot: 'shade', collar: 'shade', collarTrim: 'shade', mark: false, band: 'shade', topknot: false, hair: 'shade', mask: 'shade', sleeve: false, weapon: 'dagger' },
     vpr: { top: 'vprTop', pants: 'black', foot: 'leather', belt: 'black', trim: 'gold', knot: 'gold', collar: 'black', collarTrim: 'gold', mark: false, band: null, topknot: false, hair: 'hair', sleeve: false, weapon: 'twin' },
+    // 踊り子（遠隔だが軽装の体を使う）: 紅の衣装と白いゆったりした袴、両手のチャクラム
+    dnc: { top: 'dncTop', pants: 'white', foot: 'gold', belt: 'gold', trim: 'gold', knot: 'dncTop', collar: 'skin', collarTrim: 'gold', mark: false, band: null, topknot: false, hair: 'hair', sleeve: false, weapon: 'chakram' },
   };
   // 近接の武器（手 h・向き dir・長さ len）。dual: 両手に持つ武器の、もう一方の手
   function meleeWeapon(F, h, dir, len, st, dual = false) {
@@ -342,6 +347,13 @@
       F.fill('black', (m) => m.capsule(t0.x, t0.y, b0.x, b0.y, 0.9), { k: 1.2 });
       F.fill('blade', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 0.9, 0.4), { k: 1.1 });
       F.deco('blade', 0, (m) => { const a = add(b0, n, -0.3), e = add(b1, dir, -1); m.line(a.x, a.y, e.x, e.y); });
+      return;
+    }
+    if (st.weapon === 'chakram') {
+      // チャクラム（踊り子）: 手に持つ鋼の輪と金の飾り。両手に持つ
+      const c = add(h, dir, 1.5), r = dual ? 3 : 3.4;
+      F.fill('steel', (m) => { m.ellipse(c.x, c.y, r, r); m.cut().ellipse(c.x, c.y, r - 1.3, r - 1.3).add(); }, { k: 1.3 });
+      F.deco('gold', 1, (m) => { m.dot(c.x, c.y - r + 0.4); m.dot(c.x - r + 0.4, c.y); m.dot(c.x + r - 0.4, c.y); });
       return;
     }
     if (st.weapon === 'twin') {
@@ -578,7 +590,7 @@
   // st: 見た目（TANK_STYLE）。armor 鎧・tabard 前垂れ・trim 縁と鍔・cape マント（null で無し）・
   //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪 / dragon 鼻先と後ろへ伸びる角の竜の兜 / hood フードと顔）・
   //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード / spear 槍 / scythe 大鎌）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮・
-  //   ghost フードの中が顔でなく暗がりと光る目・blade 大鎌の刃の素材
+  //   ghost フードの中が顔でなく暗がりと光る目・blade 大鎌の刃の素材。visor（頭）は水色に光る面頬、pile（武器）は大きな拳と杭（クイーン）
   //   竜騎士（槍は突きの構え: spearGrip）とリーパー（大鎌は両手武器の構え）もこの体を使う
   const TANK_STYLE = {
     pld: { armor: 'steel', tabard: 'blue', trim: 'gold', cape: 'red', helm: 'plume', weapon: 'sword', shield: true, emblem: true },
@@ -589,6 +601,8 @@
     rpr: { armor: 'rprRobe', tabard: 'rprCloth', trim: 'iron', cape: 'rprRobe', helm: 'hood', weapon: 'scythe', blade: 'steel' },
     // 暗黒騎士の影身具現（英雄の影身）: 暗黒騎士と同じ姿を、紫に光る影で
     shadow: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'dark', weapon: 'greatsword', gem: true },
+    // 機工士のオートマトン・クイーン: 黒鉄の体に水色に光る面頬、大きな拳（パイルバンカー）
+    queen: { armor: 'queenMetal', tabard: 'queenMetal', trim: 'brass', cape: null, helm: 'visor', weapon: 'pile' },
     // リーパーのアバター（妖異）: フードの中が暗がりの、紫に光る影の大鎌使い
     avatar: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'hood', ghost: true, weapon: 'scythe', blade: 'shade' },
   };
@@ -632,6 +646,15 @@
       F.fill(st.trim, (m) => m.capsule(g.x - n.x * 2.6, g.y - n.y * 2.6, g.x + n.x * 2.6, g.y + n.y * 2.6, 0.9), { k: 1 });
       const tr = q(0.2, -2.2);
       F.fill('black', (m) => m.ellipse(tr.x, tr.y, 0.8, 0.8), { k: 1, line: false });
+      return;
+    }
+    if (st.weapon === 'pile') {
+      // パイルバンカー（クイーン）: 拳を覆う大きな鉄の筒と、その先の杭。付け根に水色の光
+      const c0 = add(h, d, -1), c1 = add(h, d, 6), tip = add(h, d, 11);
+      F.fill(st.armor, (m) => m.capsule(c0.x, c0.y, c1.x, c1.y, 3.2, 2.8), { k: 1.4 });
+      F.fill('steel', (m) => m.capsule(c1.x, c1.y, tip.x, tip.y, 1.2, 0.5), { k: 1.1 });
+      F.fill('demi', (m) => { const g = add(h, d, 2.5); m.ellipse(g.x, g.y, 1.2, 1.2); }, { flat: true, line: false, k: 1 });
+      F.deco(st.trim, 1, (m) => { const a = add(h, d, 5); m.dot(a.x, a.y); });
       return;
     }
     if (st.weapon === 'scythe') {
@@ -728,7 +751,7 @@
       return;
     }
     F.fill(st.armor, (m) => { m.ellipse(cx, hy, 7, 7.4); m.rect(cx - 6, hy, 12, 6); }, { k: 1.8 });
-    if (!back) {
+    if (!back && st.helm !== 'visor') {
       F.fill('black', (m) => m.rect(cx - 4.5, hy + 0.5, 9, 2), { k: 1, flat: true, line: false });
       if (st.helm === 'dark') F.fill('bloodGlow', (m) => { m.ellipse(cx - 2.2, hy + 1.5, 1, 0.7); m.ellipse(cx + 2.2, hy + 1.5, 1, 0.7); }, { flat: true, line: false, k: 1 });
       else F.deco(st.armor, 1, (m) => m.line(cx, hy - 6, cx, hy + 5));
@@ -742,6 +765,12 @@
       // 頭頂のとがりと、両脇の小さな角
       F.fill(st.armor, (m) => { m.poly([cx - 2.2, hy - 6.2, cx + 2.2, hy - 6.2, cx, hy - 12]); for (const s of [-1, 1]) m.poly([cx + s * 5.5, hy - 3.5, cx + s * 6.8, hy - 1, cx + s * 9.6, hy - 6.5]); }, { k: 1.3 });
       F.deco(st.trim, 1, (m) => { m.line(cx - 6, hy + 3.5, cx - 3, hy + 5.5); m.line(cx + 6, hy + 3.5, cx + 3, hy + 5.5); });
+    }
+    if (st.helm === 'visor') {
+      // 面頬（クイーン）: 兜の上に冠のような突起、正面は横に長い水色の光の筋
+      F.fill(st.armor, (m) => { for (const sg of [-1, 0, 1]) m.poly([cx + sg * 3.6 - 1.3, hy - 6.4, cx + sg * 3.6 + 1.3, hy - 6.4, cx + sg * 3.6, hy - (sg ? 9.4 : 10.6)]); }, { k: 1.3 });
+      if (!back) F.fill('demi', (m) => m.rect(cx - 4.5, hy + 0.3, 9, 1.8), { flat: true, line: false, k: 1 });
+      else F.deco(st.trim, 1, (m) => m.line(cx, hy - 6, cx, hy + 5));
     }
     if (st.helm === 'dragon') {
       // 竜の兜: 後ろへ反って伸びる 2 本の角・頭頂の鶏冠。正面は下へとがる鼻先の面頬
@@ -784,11 +813,15 @@
       return;
     }
     F.fill(st.armor, (m) => { m.ellipse(ux, hy, 6.8, 7.4); m.rect(ux - 5.5, hy, 11, 6); }, { k: 1.8 });
-    F.fill('black', (m) => m.rect(ux + 2.5, hy + 0.5, 4, 2), { k: 1, flat: true, line: false });
+    if (st.helm !== 'visor') F.fill('black', (m) => m.rect(ux + 2.5, hy + 0.5, 4, 2), { k: 1, flat: true, line: false });
     if (st.helm === 'dark') F.fill('bloodGlow', (m) => m.ellipse(ux + 4.4, hy + 1.5, 1, 0.7), { flat: true, line: false, k: 1 });
     if (st.helm === 'plume') F.fill('red', (m) => { m.capsule(ux, hy - 7, ux - 1, hy - 11, 1.8, 1.4); m.capsule(ux - 1, hy - 11, ux - 6 - (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
     if (st.helm === 'horn') F.fill('marble', (m) => { m.capsule(ux + 0.5, hy - 3, ux + 4.2, hy - 5.6, 1.6, 1.2); m.capsule(ux + 4.2, hy - 5.6, ux + 3.6, hy - 11, 1.2, 0.45); }, { k: 1.3 });
     if (st.helm === 'dark') F.fill(st.armor, (m) => { m.poly([ux - 2.6, hy - 6, ux + 1.6, hy - 6.4, ux - 1.5, hy - 12]); m.poly([ux - 4.5, hy - 3, ux - 3, hy - 0.5, ux - 8.5, hy - 5]); }, { k: 1.3 });
+    if (st.helm === 'visor') {
+      F.fill(st.armor, (m) => { m.poly([ux - 2, hy - 6.2, ux + 1, hy - 6.2, ux - 0.5, hy - 10.4]); m.poly([ux - 5.5, hy - 5, ux - 3, hy - 5.6, ux - 5.8, hy - 8.6]); }, { k: 1.3 });
+      F.fill('demi', (m) => m.rect(ux + 2.2, hy + 0.3, 4.4, 1.8), { flat: true, line: false, k: 1 });
+    }
     if (st.helm === 'dragon') {
       // 前へ突き出す鼻先と、後ろへ流れる角
       F.fill(st.armor, (m) => m.poly([ux + 3.5, hy - 1.5, ux + 10.5, hy + 2.4, ux + 4.5, hy + 5.2]), { k: 1.5 });
@@ -976,6 +1009,7 @@
     if (st.item === 'bow') { bow(F, h, dir, o); return; }
     if (st.item === 'book') { book(F, h, dir, o, st); return; }
     if (st.item === 'noulith') { nouliths(F, h, dir, o, st); return; }
+    if (st.item === 'gun') { gun(F, h, dir, up, o, st); return; }
     const b = add(h, dir, -down), t = add(h, dir, up), head = add(t, dir, 2.6);
     F.fill('wood', (m) => m.capsule(b.x, b.y, t.x, t.y, 0.9, 1.0), { k: 1.1 });
     const r = 1.9 + (o.orb ?? 0) * 0.8;
@@ -997,6 +1031,14 @@
     const c = add(h, dir, 6), r = 3.2 + (o.orb ?? 0) * 0.7;
     F.fill(st.orb, (m) => m.ellipse(c.x, c.y, r, r), { flat: true, line: false, k: 1 });
     F.fill('gold', (m) => { m.ellipse(c.x, c.y, r + 2.2, 1.6 + r * 0.25); m.cut().ellipse(c.x, c.y, r + 1.1, 0.8 + r * 0.18).add(); m.ellipse(c.x, c.y - r - 1.4, 0.9, 0.9); }, { k: 1.3 });
+  }
+  // 機工士の長銃: 手の後ろに木の銃床、先へ鉄の銃身と真鍮の口金。撃つ（o.orb が大きい）と銃口が光る
+  function gun(F, h, dir, up, o, st) {
+    const n = perp(dir), s0 = add(add(h, dir, -5), n, 1.2), s1 = add(h, dir, 1), b1 = add(h, dir, Math.min(up, 16)), mz = add(b1, dir, 1.2);
+    F.fill('wood', (m) => m.capsule(s0.x, s0.y, s1.x, s1.y, 1.6, 1.1), { k: 1.2 });
+    F.fill('iron', (m) => m.capsule(s1.x, s1.y, b1.x, b1.y, 1.0, 0.85), { k: 1.1 });
+    F.fill('brass', (m) => { m.ellipse(mz.x, mz.y, 1.2, 1.2); const r = add(h, dir, 3); m.capsule(r.x - n.x * 1.4, r.y - n.y * 1.4, r.x + n.x * 1.4, r.y + n.y * 1.4, 0.6); }, { k: 1.3 });
+    if ((o.orb ?? 0) > 1) F.fill(st.orb, (m) => { const f = add(mz, dir, 2.2); m.ellipse(f.x, f.y, 1.2 + o.orb * 0.6, 1.2 + o.orb * 0.6); }, { flat: true, line: false, k: 1 });
   }
   // 吟遊詩人の弓: 手を中心に、杖の向きに沿って弧を描く（弦は白い細い線）
   function bow(F, h, dir, o) {
@@ -1034,6 +1076,7 @@
     smn: { robe: 'smnRobe', trim: 'gold', head: 'hair', item: 'book', orb: 'demi' },
     sch: { robe: 'schRobe', trim: 'gold', head: 'board', item: 'book', orb: 'fey', noCirclet: true }, // board: 角帽
     sge: { robe: 'sgeRobe', trim: 'blue', head: 'hair', item: 'noulith', orb: 'noulith' }, // noulith: 手のまわりに浮かぶ 4 枚の刃
+    mch: { robe: 'mchCoat', trim: 'brass', head: 'hair', item: 'gun', orb: 'fire', noCirclet: true, goggles: true }, // gun: 長銃（撃つと銃口が光る）、goggles: 額のゴーグル
   };
   // ローブの腕（肩 s → 手 h）。袖は手に向かって広がり、袖口が赤い。手は杖を描いた後に別に描く
   function robeArm(F, s, h, bend, o = {}, st = ROBE_STYLE.whm) {
@@ -1112,6 +1155,11 @@
       else { m.cut().rect(0, hy - 0.4, 64, 20).add(); m.poly([cx - 6.2, hy - 1, cx - 3.5, hy - 1, cx - 5.4, hy + 5]); m.poly([cx + 3.5, hy - 1, cx + 6.2, hy - 1, cx + 5.4, hy + 5]); }
     }, { k: 1.4 });
     if (!st.noCirclet) F.fill('gold', (m) => { m.band(cx, hy + 2, 6.4, 7.2, Math.PI * 1.15, Math.PI * 1.85); if (!back) m.poly([cx - 1.2, hy - 4.6, cx + 1.2, hy - 4.6, cx, hy - 7]); }, { k: 1.3 });
+    // ゴーグル（機工士）: 額に革の帯と真鍮の縁の 2 つのレンズ
+    if (st.goggles) {
+      F.fill('leather', (m) => m.rect(cx - 6.6, hy - 3.6, 13.2, 1.6), { k: 1, flat: true });
+      if (!back) { F.fill('brass', (m) => { m.ellipse(cx - 2.6, hy - 3.4, 2, 1.8); m.ellipse(cx + 2.6, hy - 3.4, 2, 1.8); }, { k: 1.3 }); F.fill('demi', (m) => { m.ellipse(cx - 2.6, hy - 3.4, 1, 0.9); m.ellipse(cx + 2.6, hy - 3.4, 1, 0.9); }, { flat: true, line: false, k: 1 }); }
+    }
     if (!back) {
       if (!st.noCirclet) F.fill('star', (m) => m.ellipse(cx, hy - 4.6, 0.9, 0.9), { flat: true, line: false, k: 1 });
       F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
@@ -1124,6 +1172,11 @@
     F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); }, { k: 1.8 });
     F.fill('hair', (m) => { m.ellipse(ux - 0.5, hy - 0.5, 6, 6); m.cut().ellipse(ux + 3.5, hy + 2.5, 3.5, 4.5).add(); m.poly([ux - 4, hy + 2, ux - 1, hy + 3, ux - 5 - tail * 0.6, sy + 5]); }, { k: 1.4 });
     if (!st.noCirclet) F.fill('gold', (m) => m.line(ux - 4, hy - 3.2, ux + 5.5, hy - 2.2), { k: 1.3 });
+    if (st.goggles) {
+      F.fill('leather', (m) => m.poly([ux - 5.5, hy - 3.8, ux + 5, hy - 3.4, ux + 5, hy - 1.9, ux - 5.5, hy - 2.3]), { k: 1, flat: true });
+      F.fill('brass', (m) => m.ellipse(ux + 3.6, hy - 2.8, 1.8, 1.7), { k: 1.3 });
+      F.fill('demi', (m) => m.ellipse(ux + 3.8, hy - 2.8, 0.9, 0.8), { flat: true, line: false, k: 1 });
+    }
     F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
     F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
   }
@@ -1809,6 +1862,8 @@
     smn: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.smn) : whmFB(F, p, v === 'up', ROBE_STYLE.smn)), anims: WHM_ANIMS }),
     sch: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.sch) : whmFB(F, p, v === 'up', ROBE_STYLE.sch)), anims: WHM_ANIMS }),
     sge: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.sge) : whmFB(F, p, v === 'up', ROBE_STYLE.sge)), anims: WHM_ANIMS }),
+    mch: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.mch) : whmFB(F, p, v === 'up', ROBE_STYLE.mch)), anims: WHM_ANIMS }),
+    dnc: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.dnc) : samFB(F, p, v === 'up', MELEE_STYLE.dnc)), anims: SAM_ANIMS }),
     // 召喚士のペット（1 ドットの大きさで実際の大きさを変える）
     pet_carbuncle: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: carbuncle, anims: PET_ANIMS }),
     pet_ifrit: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.06, draw: ifrit, anims: PET_ANIMS }),
@@ -1819,6 +1874,8 @@
     pet_eos: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'eos'), anims: PET_ANIMS }),
     pet_seraph: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => fairy(F, p, v, 'seraph'), anims: PET_ANIMS }),
     pet_bunshin: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p, MELEE_STYLE.bunshin) : samFB(F, p, v === 'up', MELEE_STYLE.bunshin)), anims: { idle: SAM_ANIMS.idle, spell: SAM_ANIMS.slash } }),
+    // 機工士のオートマトン・クイーン: 自分より大きい
+    pet_queen: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.075, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.queen) : tankFB(F, p, v === 'up', TANK_STYLE.queen)), anims: { idle: HEAVY_ANIMS.idle, spell: HEAVY_ANIMS.slash } }),
     // リーパーのアバター: 自分より大きい（1 ドットを大きく）
     pet_avatar: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.07, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.avatar) : tankFB(F, p, v === 'up', TANK_STYLE.avatar)), anims: { idle: HEAVY_ANIMS.idle, spell: HEAVY_ANIMS.slash } }),
     pet_shadow: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.shadow) : tankFB(F, p, v === 'up', TANK_STYLE.shadow)), anims: SHADOW_ANIMS }),
