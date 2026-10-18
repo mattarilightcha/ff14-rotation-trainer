@@ -376,7 +376,8 @@
     if (a.dash) { Arena.dashToTarget(); Au?.whoosh(); }
     if (a.backstep) { Arena.backstep(a.backstep); Au?.whoosh(); }
     if (a.forward) { Arena.forward(a.forward); Au?.whoosh(); }
-    if (a.toAlly) { if (Arena.dashToAlly(actWho)) Au?.whoosh(); else addLog('warn', `${a.name}: 移動先の味方がいません`); }
+    // 「対象の目前まで素早く移動」: 味方が相手なら味方の前へ、敵が相手（シャドウストライド・トラジェクトリーなど）なら敵の前へ
+    if (a.toAlly) { if (actWho ? Arena.dashToAlly(actWho) : a.hostile && (Arena.dashToTarget(), true)) Au?.whoosh(); else addLog('warn', `${a.name}: 移動先の味方がいません`); }
     if (a.toZone) { if (Arena.dashToZone(a.toZone)) Au?.whoosh(); }
     playFx(id, ok, pos, true, dmg);
   }

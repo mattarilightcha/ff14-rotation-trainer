@@ -15,8 +15,9 @@ const actions = read('src/data/ffxiv/actions.json');
 const statuses = read('src/data/ffxiv/statuses.json');
 // 全件（敵へのデバフ・食事なども入る）。説明文の「」の名前が statuses.json にないとき（燕飛効果アップなど）に引く
 const statusesAll = read('src/data/ffxiv/statuses-all.json');
-// モックのジョブの決まり（mock/jobs.js の STATUS）に書いたステータスの名前。説明文に「」で出てこないもの（ケアルラ効果アップなど）もアイコンを引けるように
-const MOCK_STATUS_NAMES = new Set([...readFileSync(new URL('./jobs.js', import.meta.url), 'utf8').matchAll(/\{ name: '([^']+)'/g)].map((m) => m[1]));
+// モックのジョブの決まり（mock/jobs.js と役割ごとの jobs-*.js の STATUS）に書いたステータスの名前。説明文に「」で出てこないもの（ケアルラ効果アップなど）もアイコンを引けるように
+const JOB_FILES = readdirSync(new URL('.', import.meta.url)).filter((f) => /^jobs(-\w+)?\.js$/.test(f));
+const MOCK_STATUS_NAMES = new Set(JOB_FILES.flatMap((f) => [...readFileSync(new URL(`./${f}`, import.meta.url), 'utf8').matchAll(/\{ name: '([^']+)'/g)].map((m) => m[1])));
 const jobs = read('src/data/ffxiv/jobs.json');
 const meta = read('src/data/ffxiv/meta.json');
 const jobGauges = read('src/data/ffxiv/job-gauges.json');
@@ -25,7 +26,7 @@ const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -272,10 +273,10 @@ function buildJob(JOB, LEVEL) {
     ground: !!a.targetArea, // 地面指定（先行入力されない: docs/SPEC.md GAME-05）
     // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から
     positional: /背面攻撃時/.test(a.description.ja) ? 'rear' : /側面攻撃時/.test(a.description.ja) ? 'flank' : null,
-    // 移動を伴う技: 説明文「対象に急接近」「N m後方へ（に）飛び退く」「自身の N m前方に向かって素早く移動」
+    // 移動を伴う技: 説明文「対象に急接近」「対象に飛び掛かりつつ」「N m後方へ（に）飛び退く」「自身の N m後方（前方）に向かって素早く移動」
     // 「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
-    dash: /対象に急接近/.test(a.description.ja),
-    backstep: Number(/(\d+)m後方[へに]飛び退く/.exec(a.description.ja)?.[1] ?? 0),
+    dash: /対象に急接近|対象に飛び掛かり/.test(a.description.ja),
+    backstep: Number(/(\d+)m後方[へに]飛び退く|自身の(\d+)m後方に向かって素早く移動/.exec(a.description.ja)?.slice(1).find(Boolean) ?? 0),
     forward: Number(/自身の(\d+)m前方に向かって素早く移動/.exec(a.description.ja)?.[1] ?? 0),
     toAlly: /対象の目前まで素早く移動/.test(a.description.ja),
     toZone: /黒魔紋の中心へ素早く移動/.test(a.description.ja) ? 'ley' : null,

@@ -500,5 +500,6 @@
   }
 
   const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm, BRD: brd, SMN: smn };
-  window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
+  // add: ほかのジョブのゲージ（gauge-tank.js などの役割ごとのファイル）を登録する。lib はそのファイルが使う共通の部品
+  window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G), add: (o) => Object.assign(JOBS, o), lib: { U, reduce, set, anim, clipW, usePart, partsOf } };
 })();

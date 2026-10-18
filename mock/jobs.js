@@ -74,6 +74,18 @@
   const naturalMp = (s) => (s.phase === 'combat' ? 200 : 600);
   // 効果時間: 語のあとで最初に出てくる「効果時間：N秒」
   const secAfter = (d, i) => Number(/効果時間：(\d+)秒/.exec(d.slice(i))?.[1] ?? 10);
+  // 説明文の「「ゲージ名」をN上昇させる」の合計（前に「コンボボーナス：」があればコンボ時だけ）。戦士のインナービーストなど
+  function descGain(a, gauge, ok) {
+    let n = 0;
+    for (const m of (a?.desc ?? '').matchAll(new RegExp(`(コンボボーナス：)?「${gauge}」を(\\d+)上昇`, 'g'))) if (!m[1] || ok) n += Number(m[2]);
+    return n;
+  }
+  // 付いているステータスの効果時間を延ばす（説明文「既に付与されている場合は、その効果時間をN秒延長する。最大M秒まで」）。付いていなければ ms で付ける
+  function extendBuff(R, k, ms, maxMs, addMs = ms) {
+    const cur = R.S.st[k];
+    if (cur && cur.until > R.S.t) cur.until = Math.min(R.S.t + maxMs, cur.until + addMs);
+    else R.buff(k, ms);
+  }
   // 相手: 「自身と周囲」「範囲内」→ 全員、「自身の」→ 自分、それ以外（「対象の」）→ HP の低い方
   function supportWho(d, i, party) {
     const head = d.slice(Math.max(0, d.lastIndexOf('。', i) + 1), i + 1);
@@ -1509,4 +1521,8 @@
   };
 
   window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
+  // ほかのジョブの決まり（jobs-tank.js などの役割ごとのファイル）が使う共通の部品。ジョブの一覧に出ないよう列挙しない
+  Object.defineProperty(window.MockJobs, 'lib', {
+    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, secAfter, descGain, extendBuff, supportWho, support },
+  });
 })();

@@ -42,9 +42,12 @@
     demi: ['#ffffff', '#c8f4ff', '#6ad0f0', '#2a88b8', '#123e60'], // デミ・バハムートの光る翼
     solar: ['#f4f8ff', '#c8d4ec', '#94a4c8', '#5e6c96', '#323c62'], // ソルバハムートの白銀
     ruby: ['#ffffff', '#ffd0d0', '#ff5a6a', '#c82040', '#6a1024'], // 額の宝石
+    fur: ['#ece2d0', '#c4b296', '#93826a', '#685a46', '#3e3428'], // 戦士の毛皮の襟とマント
+    navy: ['#8ea0cc', '#4e6092', '#34426c', '#232d4c', '#151b30'], // ガンブレイカーの紺のコート
+    bloodGlow: ['#ffffff', '#ffc4bc', '#ff5a4c', '#d0222c', '#6e1018'], // 暗黒騎士の兜の目・剣の筋（赤く光る）
   };
   // 3D で光らせる素材（光のにじみの対象）
-  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby']);
+  const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow']);
   const OUTLINE = [18, 14, 22];
 
   const MATS = Object.keys(MAT);
@@ -503,14 +506,134 @@
     buff: { fps: 8, loop: false, poses: [{ arm: 'up', free: 'up', tail: 1 }, { arm: 'up', free: 'up', tail: 1.8, bob: -1 }] },
   };
 
-  // ---------------- タンク（ナイト風。64×64）----------------
-  function tankFB(F, p, back) {
+  // ---------------- タンク（ナイト・戦士・暗黒騎士・ガンブレイカー。64×64）----------------
+  // st: 見た目（TANK_STYLE）。armor 鎧・tabard 前垂れ・trim 縁と鍔・cape マント（null で無し）・
+  //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪）・
+  //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮
+  const TANK_STYLE = {
+    pld: { armor: 'steel', tabard: 'blue', trim: 'gold', cape: 'red', helm: 'plume', weapon: 'sword', shield: true, emblem: true },
+    war: { armor: 'iron', tabard: 'red', trim: 'brass', cape: 'fur', helm: 'horn', weapon: 'axe', fur: true },
+    drk: { armor: 'black', tabard: 'blmRobe', trim: 'iron', cape: 'black', helm: 'dark', weapon: 'greatsword', gem: true },
+    gnb: { armor: 'iron', tabard: 'navy', trim: 'steel', cape: 'navy', helm: 'hair', weapon: 'gunblade' },
+  };
+  // タンクの武器（手 h、刃先への向き d）。side: 片刃の向き（1 = 刃先へ向かって右手側 perp(d)、-1 = 反対）
+  function tankWeapon(F, h, d, st, side = 1) {
+    const n = perp(d), q = (t, s) => add(add(h, d, t), n, s * side);
+    if (st.weapon === 'axe') {
+      // 両手斧: 木の柄・先の大きな片刃（外へ張り出す）・反対側の突起・刃の付け根の金具
+      const b0 = add(h, d, -5), b1 = add(h, d, 19);
+      F.fill('woodD', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 1.0, 0.9), { k: 1.1 });
+      const p0 = q(11.5, 0.8), e0 = q(9.5, 6.2), em = q(14.6, 8.6), e1 = q(20, 6.8), p1 = q(18, 0.8);
+      F.fill('steel', (m) => m.poly([p0.x, p0.y, e0.x, e0.y, em.x, em.y, e1.x, e1.y, p1.x, p1.y]), { k: 1.3 });
+      F.deco('steel', 0, (m) => { m.line(e0.x, e0.y, em.x, em.y); m.line(em.x, em.y, e1.x, e1.y); });
+      const s0 = q(13.4, -0.8), s1 = q(15, -4.6), s2 = q(16.6, -0.8);
+      F.fill('iron', (m) => m.poly([s0.x, s0.y, s1.x, s1.y, s2.x, s2.y]), { k: 1.2 });
+      const c0 = add(h, d, 12.6), c1 = add(h, d, 17.2);
+      F.fill(st.trim, (m) => m.capsule(c0.x, c0.y, c1.x, c1.y, 1.35), { k: 1.2 });
+      return;
+    }
+    if (st.weapon === 'greatsword') {
+      // 両手剣: 長い柄と大きな鍔、幅の広い黒鉄の刃に赤く光る筋
+      const t0 = add(h, d, -5.5), g = add(h, d, 1.8), b0 = add(h, d, 2.6), mid = add(h, d, 17), b1 = add(h, d, 24.5);
+      F.fill('black', (m) => m.capsule(t0.x, t0.y, g.x, g.y, 0.95), { k: 1.1 });
+      F.fill(st.trim, (m) => m.ellipse(t0.x, t0.y, 1.4, 1.4), { k: 1.2 });
+      F.fill('iron', (m) => m.poly([b0.x + n.x * 2.6, b0.y + n.y * 2.6, mid.x + n.x * 2.3, mid.y + n.y * 2.3, b1.x, b1.y, mid.x - n.x * 2.3, mid.y - n.y * 2.3, b0.x - n.x * 2.6, b0.y - n.y * 2.6]), { k: 1.3 });
+      const blade = F.last, f0 = add(b0, d, 1.2), f1 = add(b1, d, -4);
+      F.deco('bloodGlow', 2, (m) => m.line(f0.x, f0.y, f1.x, f1.y), { only: blade });
+      F.fill('black', (m) => m.capsule(g.x - n.x * 4.4, g.y - n.y * 4.4, g.x + n.x * 4.4, g.y + n.y * 4.4, 1.2), { k: 1.1 });
+      F.fill('bloodGlow', (m) => m.ellipse(g.x, g.y, 0.9, 0.9), { flat: true, line: false, k: 1 });
+      return;
+    }
+    if (st.weapon === 'gunblade') {
+      // ガンブレード: 片刃の剣身と、鍔元の回転式の弾倉・引き金
+      const t0 = add(h, d, -3.8), g = add(h, d, 1.6), b0 = add(h, d, 2.4), b1 = add(h, d, 19.5), e = add(b1, d, -2.2);
+      F.fill('black', (m) => m.capsule(t0.x, t0.y, g.x, g.y, 0.9), { k: 1.1 });
+      F.fill('steel', (m) => m.poly([b0.x + n.x * 1.7, b0.y + n.y * 1.7, e.x + n.x * 1.3, e.y + n.y * 1.3, b1.x, b1.y, e.x - n.x * 0.9, e.y - n.y * 0.9, b0.x - n.x * 1.2, b0.y - n.y * 1.2]), { k: 1.2 });
+      F.deco('steel', 0, (m) => { const a = add(b0, n, 1.2), c = add(e, n, 0.9); m.line(a.x, a.y, c.x, c.y); });
+      const cyl = q(3.4, -1.9);
+      F.fill('iron', (m) => m.ellipse(cyl.x, cyl.y, 2.1, 2.1), { k: 1.4 });
+      F.deco('black', 3, (m) => m.dot(cyl.x, cyl.y));
+      F.fill(st.trim, (m) => m.capsule(g.x - n.x * 2.6, g.y - n.y * 2.6, g.x + n.x * 2.6, g.y + n.y * 2.6, 0.9), { k: 1 });
+      const tr = q(0.2, -2.2);
+      F.fill('black', (m) => m.ellipse(tr.x, tr.y, 0.8, 0.8), { k: 1, line: false });
+      return;
+    }
+    // 片手剣（ナイト）
+    const g = add(h, d, 1.5), b0 = add(h, d, 2.5), b1 = add(h, d, 17);
+    F.fill('steel', (m) => { m.capsule(b0.x, b0.y, b1.x, b1.y, 1.3, 0.7); }, { k: 1.1 });
+    F.deco('steel', 0, (m) => m.line(b0.x, b0.y, b1.x - d.x * 2, b1.y - d.y * 2));
+    F.fill(st.trim, (m) => m.capsule(g.x - n.x * 3, g.y - n.y * 3, g.x + n.x * 3, g.y + n.y * 3, 0.9), { k: 1 });
+  }
+  // 両手武器の構え（正面・背面。as: 武器を持つ手の側）: 1 振りかぶり / 2 振り下ろし / それ以外 肩に担ぐ。
+  // 3 つ目は片刃の向き: 担ぐときは外側、振るときは振る向き（正面は時計回り、背面は反時計回り）
+  function heavyGrip(p, cx, sy, hipY, as) {
+    if (p.atk === 1) return [V(cx + as * 3, sy - 7), unit(-as * 0.25, -1), -as];
+    if (p.atk === 2) return [V(cx - as * 3, hipY + 1), unit(-as * 0.85, 0.5), -as];
+    return [V(cx + as * 4, hipY - 2), unit(as * 0.42, -0.9), as];
+  }
+  // 兜と顔（正面・背面）
+  function tankHeadFB(F, p, st, cx, hy, back) {
+    if (st.helm === 'hair') {
+      // 兜なし: 短い黒髪と顔
+      if (!back) F.fill('skin', (m) => { m.ellipse(cx, hy + 1.6, 5.4, 5.8); m.rect(cx - 1.5, hy + 6, 3, 2.5); }, { k: 1.8 });
+      F.fill('hair', (m) => {
+        m.ellipse(cx, hy - 1.2, 6.8, 5.6);
+        if (back) m.ellipse(cx, hy + 1.5, 6.4, 5.8);
+        else { m.cut().rect(0, hy - 0.2, 64, 20).add(); m.poly([cx - 6.4, hy - 1, cx - 3.2, hy - 1, cx - 5.6, hy + 4]); m.poly([cx + 3.2, hy - 1, cx + 6.4, hy - 1, cx + 5.6, hy + 4]); m.poly([cx - 2, hy - 1, cx + 1.5, hy - 1, cx - 0.5, hy + 1.6]); }
+      }, { k: 1.4 });
+      if (!back) {
+        F.deco('black', 4, (m) => { m.rect(cx - 3, hy + 2, 1, 2); m.rect(cx + 2, hy + 2, 1, 2); });
+        F.deco('white', 0, (m) => { m.dot(cx - 2, hy + 2); m.dot(cx + 3, hy + 2); });
+        F.deco('skin', 3, (m) => m.line(cx - 0.5, hy + 5.3, cx + 0.5, hy + 5.3));
+      }
+      return;
+    }
+    F.fill(st.armor, (m) => { m.ellipse(cx, hy, 7, 7.4); m.rect(cx - 6, hy, 12, 6); }, { k: 1.8 });
+    if (!back) {
+      F.fill('black', (m) => m.rect(cx - 4.5, hy + 0.5, 9, 2), { k: 1, flat: true, line: false });
+      if (st.helm === 'dark') F.fill('bloodGlow', (m) => { m.ellipse(cx - 2.2, hy + 1.5, 1, 0.7); m.ellipse(cx + 2.2, hy + 1.5, 1, 0.7); }, { flat: true, line: false, k: 1 });
+      else F.deco(st.armor, 1, (m) => m.line(cx, hy - 6, cx, hy + 5));
+    }
+    if (st.helm === 'plume') F.fill('red', (m) => { m.capsule(cx, hy - 7, cx + 1, hy - 11, 1.8, 1.4); m.capsule(cx + 1, hy - 11, cx + 5 + (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
+    if (st.helm === 'horn') {
+      // 角: 兜の横から外へ張り出して上へ曲がる
+      F.fill('marble', (m) => { for (const s of [-1, 1]) { m.capsule(cx + s * 5.8, hy - 1.5, cx + s * 9.4, hy - 3.6, 1.6, 1.25); m.capsule(cx + s * 9.4, hy - 3.6, cx + s * 10.4, hy - 9.5, 1.25, 0.45); } }, { k: 1.3 });
+    }
+    if (st.helm === 'dark') {
+      // 頭頂のとがりと、両脇の小さな角
+      F.fill(st.armor, (m) => { m.poly([cx - 2.2, hy - 6.2, cx + 2.2, hy - 6.2, cx, hy - 12]); for (const s of [-1, 1]) m.poly([cx + s * 5.5, hy - 3.5, cx + s * 6.8, hy - 1, cx + s * 9.6, hy - 6.5]); }, { k: 1.3 });
+      F.deco(st.trim, 1, (m) => { m.line(cx - 6, hy + 3.5, cx - 3, hy + 5.5); m.line(cx + 6, hy + 3.5, cx + 3, hy + 5.5); });
+    }
+  }
+  // 兜と顔（横向き）
+  function tankHeadSide(F, p, st, ux, hy) {
+    if (st.helm === 'hair') {
+      F.fill('skin', (m) => { m.ellipse(ux + 2.6, hy + 1.8, 4.2, 5.4); m.rect(ux + 5.8, hy + 2, 1.1, 1.3); m.rect(ux - 0.5, hy + 6, 3, 2.5); }, { k: 1.8 });
+      F.fill('hair', (m) => { m.ellipse(ux - 0.5, hy - 0.8, 6.2, 5.8); m.cut().ellipse(ux + 3.6, hy + 2.6, 3.4, 4.4).add(); m.poly([ux + 1, hy - 2, ux + 6, hy - 2, ux + 4.6, hy + 0.8]); }, { k: 1.4 });
+      F.deco('black', 4, (m) => m.rect(ux + 4, hy + 2, 1, 2));
+      F.deco('white', 0, (m) => m.dot(ux + 5, hy + 2));
+      return;
+    }
+    F.fill(st.armor, (m) => { m.ellipse(ux, hy, 6.8, 7.4); m.rect(ux - 5.5, hy, 11, 6); }, { k: 1.8 });
+    F.fill('black', (m) => m.rect(ux + 2.5, hy + 0.5, 4, 2), { k: 1, flat: true, line: false });
+    if (st.helm === 'dark') F.fill('bloodGlow', (m) => m.ellipse(ux + 4.4, hy + 1.5, 1, 0.7), { flat: true, line: false, k: 1 });
+    if (st.helm === 'plume') F.fill('red', (m) => { m.capsule(ux, hy - 7, ux - 1, hy - 11, 1.8, 1.4); m.capsule(ux - 1, hy - 11, ux - 6 - (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
+    if (st.helm === 'horn') F.fill('marble', (m) => { m.capsule(ux + 0.5, hy - 3, ux + 4.2, hy - 5.6, 1.6, 1.2); m.capsule(ux + 4.2, hy - 5.6, ux + 3.6, hy - 11, 1.2, 0.45); }, { k: 1.3 });
+    if (st.helm === 'dark') F.fill(st.armor, (m) => { m.poly([ux - 2.6, hy - 6, ux + 1.6, hy - 6.4, ux - 1.5, hy - 12]); m.poly([ux - 4.5, hy - 3, ux - 3, hy - 0.5, ux - 8.5, hy - 5]); }, { k: 1.3 });
+  }
+  // 振りの残像（両手武器。正面: 振りかぶった側の上から、反対側の下へ）
+  function heavySmear(F, cx, sy, back, k) {
+    const a0 = -1.95, a1 = 0.6;
+    smear(F, back ? [cx, sy + 5, 19, 6 * k, Math.PI - a0, Math.PI - a1, 0.72, 0] : [cx, sy + 5, 19, 6 * k, a0, a1, 0.72, 0]);
+  }
+  function tankFB(F, p, back, st = TANK_STYLE.pld) {
     const b = p.bob ?? 0, cx = 32, c = p.crouch ?? 0;
     const hipY = 37 + c, sy = 24 + b + c * 0.8, hy = 16 + b + c * 0.8;
     const sway = p.sway ?? 0;
     const sh = back ? -1 : 1; // 盾の側（本人の左腕 = 正面では画面の右）
+    const as = back ? 1 : -1; // 武器を持つ腕（本人の右 = 正面では画面の左）
     // マント（背中）
-    F.fill('red', (m) => m.poly([cx - 8, sy, cx + 8, sy, cx + 10 + (p.cape ?? 0), 55, cx - 10 + (p.cape ?? 0), 55]), { k: 1.2, dark: back ? 0 : 1 });
+    if (st.cape) F.fill(st.cape, (m) => m.poly([cx - 8, sy, cx + 8, sy, cx + 10 + (p.cape ?? 0), 55, cx - 10 + (p.cape ?? 0), 55]), { k: 1.2, dark: back ? 0 : 1 });
     // 盾（背面では体の奥）
     const shield = () => {
       const sc = V(cx + sh * 11, sy + 10 + (p.shieldDy ?? 0));
@@ -520,76 +643,92 @@
         F.deco('white', 1, (m) => { m.rect(sc.x - 0.5, sc.y - 5, 2, 10); m.rect(sc.x - 3, sc.y - 2, 7, 2); });
       } else F.deco('leather', 2, (m) => { m.rect(sc.x - 3, sc.y - 4, 7, 2); m.rect(sc.x - 3, sc.y + 1, 7, 2); });
     };
-    if (back) shield();
+    if (back && st.shield) shield();
+    // 両手武器: 構え。背面では武器と腕を体の奥に描く（振りかぶった武器だけが見える）
+    const heavy = !st.shield;
+    const [hh, hd, hs] = heavy ? heavyGrip(p, cx, sy, hipY, as) : [null, null, 1];
+    const heavyArms = () => {
+      const off = add(hh, hd, -3.6);
+      if (p.smear) heavySmear(F, cx, sy, back, p.smear);
+      F.fill(st.armor, (m) => m.capsule(cx + as * 8.5, sy + 3, hh.x, hh.y, 2.3, 2), { k: 1.6 });
+      F.fill('leather', (m) => m.ellipse(hh.x, hh.y, 2, 2), { k: 1.3 });
+      tankWeapon(F, hh, hd, st, hs);
+      F.fill(st.armor, (m) => m.capsule(cx - as * 8.5, sy + 3, off.x, off.y, 2.3, 2), { k: 1.6 });
+      F.fill('leather', (m) => m.ellipse(off.x, off.y, 2, 2), { k: 1.3 });
+    };
+    if (heavy && back) heavyArms();
     // 脚（すね当て）
-    const leg = (s, lift) => F.fill('steel', (m) => { m.capsule(cx + s * 4 + sway, hipY + 2, cx + s * 4.5 + sway, 55 - lift, 2.6, 2.3); m.ellipse(cx + s * 4.8 + sway, 57 - lift, 3, 1.8); }, { k: 1.5 });
+    const leg = (s, lift) => F.fill(st.armor, (m) => { m.capsule(cx + s * 4 + sway, hipY + 2, cx + s * 4.5 + sway, 55 - lift, 2.6, 2.3); m.ellipse(cx + s * 4.8 + sway, 57 - lift, 3, 1.8); }, { k: 1.5 });
     leg(-1, p.fl ?? 0); leg(1, p.fr ?? 0);
-    // 胴（鎧）と陣羽織（青）
-    F.fill('steel', (m) => m.poly([cx - 8, sy + 1, cx - 6, sy - 1, cx + 6, sy - 1, cx + 8, sy + 1, cx + 7, hipY + 2, cx - 7, hipY + 2]), { k: 1.6 });
-    F.fill('blue', (m) => m.poly([cx - 5.5, sy + 3, cx + 5.5, sy + 3, cx + 6, hipY + 9, cx - 6, hipY + 9]), { k: 1.3 });
-    F.deco('gold', 1, (m) => { m.line(cx - 5.5, sy + 3, cx - 6, hipY + 8.5); m.line(cx + 5.5, sy + 3, cx + 6, hipY + 8.5); m.line(cx - 6, hipY + 8.5, cx + 6, hipY + 8.5); });
-    if (!back) F.deco('gold', 2, (m) => { m.rect(cx - 0.5, sy + 6, 2, 6); m.rect(cx - 2.5, sy + 8, 6, 2); });
+    // 胴（鎧）と前垂れ
+    F.fill(st.armor, (m) => m.poly([cx - 8, sy + 1, cx - 6, sy - 1, cx + 6, sy - 1, cx + 8, sy + 1, cx + 7, hipY + 2, cx - 7, hipY + 2]), { k: 1.6 });
+    F.fill(st.tabard, (m) => m.poly([cx - 5.5, sy + 3, cx + 5.5, sy + 3, cx + 6, hipY + 9, cx - 6, hipY + 9]), { k: 1.3 });
+    F.deco(st.trim, 1, (m) => { m.line(cx - 5.5, sy + 3, cx - 6, hipY + 8.5); m.line(cx + 5.5, sy + 3, cx + 6, hipY + 8.5); m.line(cx - 6, hipY + 8.5, cx + 6, hipY + 8.5); });
+    if (!back && st.emblem) F.deco(st.trim, 2, (m) => { m.rect(cx - 0.5, sy + 6, 2, 6); m.rect(cx - 2.5, sy + 8, 6, 2); });
+    if (!back && st.gem) F.fill('bloodGlow', (m) => m.ellipse(cx, sy + 7.5, 1.3, 1.7), { flat: true, line: false, k: 1 });
     F.fill('leather', (m) => m.rect(cx - 7.5, hipY - 1, 15, 2.5), { k: 1, flat: true });
-    F.deco('gold', 1, (m) => m.rect(cx - 1, hipY - 1, 2, 2));
-    // 肩当て
-    F.fill('steel', (m) => { m.ellipse(cx - 8.5, sy + 1.5, 4.2, 3.4); m.ellipse(cx + 8.5, sy + 1.5, 4.2, 3.4); }, { k: 1.8 });
-    F.deco('gold', 1, (m) => { m.line(cx - 12, sy + 3.5, cx - 5, sy + 3.5); m.line(cx + 5, sy + 3.5, cx + 12, sy + 3.5); });
+    F.deco(st.trim, 1, (m) => m.rect(cx - 1, hipY - 1, 2, 2));
+    // 肩当て（戦士は毛皮の襟）
+    F.fill(st.armor, (m) => { m.ellipse(cx - 8.5, sy + 1.5, 4.2, 3.4); m.ellipse(cx + 8.5, sy + 1.5, 4.2, 3.4); }, { k: 1.8 });
+    F.deco(st.trim, 1, (m) => { m.line(cx - 12, sy + 3.5, cx - 5, sy + 3.5); m.line(cx + 5, sy + 3.5, cx + 12, sy + 3.5); });
+    if (st.fur) F.fill('fur', (m) => { m.ellipse(cx, sy + 0.5, 8.6, 3.2); m.ellipse(cx - 7, sy + 0.2, 3, 2.4); m.ellipse(cx + 7, sy + 0.2, 3, 2.4); }, { k: 1.6 });
+    if (heavy) {
+      if (!back) heavyArms();
+      tankHeadFB(F, p, st, cx, hy, back);
+      return;
+    }
     // 剣の腕（本人の右 = 正面では画面の左）
-    const as = back ? 1 : -1;
     const hand = p.atk === 1 ? V(cx + as * 5, sy - 6) : p.atk === 2 ? V(cx - as * 4, hipY + 2) : V(cx + as * 10, hipY + 1);
     const sw = p.atk === 1 ? unit(-as * 0.3, -1) : p.atk === 2 ? unit(-as * 0.9, 0.4) : unit(as * 0.25, 1);
-    const swordDraw = () => {
-      const g = add(hand, sw, 1.5), b0 = add(hand, sw, 2.5), b1 = add(hand, sw, 17);
-      F.fill('steel', (m) => { m.capsule(b0.x, b0.y, b1.x, b1.y, 1.3, 0.7); }, { k: 1.1 });
-      F.deco('steel', 0, (m) => m.line(b0.x, b0.y, b1.x - sw.x * 2, b1.y - sw.y * 2));
-      const n = perp(sw);
-      F.fill('gold', (m) => m.capsule(g.x - n.x * 3, g.y - n.y * 3, g.x + n.x * 3, g.y + n.y * 3, 0.9), { k: 1 });
-    };
-    if (back) swordDraw();
-    F.fill('steel', (m) => { m.capsule(cx + as * 8.5, sy + 3, hand.x, hand.y, 2.3, 2); }, { k: 1.6 });
+    if (back) tankWeapon(F, hand, sw, st);
+    F.fill(st.armor, (m) => { m.capsule(cx + as * 8.5, sy + 3, hand.x, hand.y, 2.3, 2); }, { k: 1.6 });
     F.fill('leather', (m) => m.ellipse(hand.x, hand.y, 2, 2), { k: 1.3 });
-    if (!back) swordDraw();
+    if (!back) tankWeapon(F, hand, sw, st);
     // 盾の腕
-    F.fill('steel', (m) => m.capsule(cx - as * 8.5, sy + 3, cx - as * 10, sy + 10 + (p.shieldDy ?? 0), 2.3, 2), { k: 1.6 });
-    // 兜
-    F.fill('steel', (m) => { m.ellipse(cx, hy, 7, 7.4); m.rect(cx - 6, hy, 12, 6); }, { k: 1.8 });
-    if (!back) {
-      F.fill('black', (m) => m.rect(cx - 4.5, hy + 0.5, 9, 2), { k: 1, flat: true, line: false });
-      F.deco('steel', 1, (m) => m.line(cx, hy - 6, cx, hy + 5));
-    }
-    F.fill('red', (m) => { m.capsule(cx, hy - 7, cx - (p.plume ?? 0) * (back ? -1 : 1) * 0 + 1, hy - 11, 1.8, 1.4); m.capsule(cx + 1, hy - 11, cx + 5 + (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
+    F.fill(st.armor, (m) => m.capsule(cx - as * 8.5, sy + 3, cx - as * 10, sy + 10 + (p.shieldDy ?? 0), 2.3, 2), { k: 1.6 });
+    tankHeadFB(F, p, st, cx, hy, back);
     if (!back) shield();
   }
-  function tankSide(F, p) {
+  // 両手武器の構え（横向き。右向き）
+  function heavyGripSide(p, ux, sy, hipY) {
+    if (p.atk === 1) return [V(ux - 2, sy - 7), unit(-0.45, -0.9)];
+    if (p.atk === 2) return [V(ux + 10, sy + 7), unit(1, 0.35)];
+    return [V(ux + 3, hipY - 1), unit(0.5, -0.86)];
+  }
+  function tankSide(F, p, st = TANK_STYLE.pld) {
     const b = p.bob ?? 0, cx = 31, c = p.crouch ?? 0;
     const hipY = 37 + c, sy = 24 + b + c * 0.8, hy = 16 + b + c * 0.8, lean = p.lean ?? 0, ux = cx + lean;
+    const heavy = !st.shield;
     // マント
-    F.fill('red', (m) => m.poly([ux - 3, sy, ux + 1, sy, ux - 5 + (p.cape ?? 0), 54, ux - 10 + (p.cape ?? 0) * 1.5, 53]), { k: 1.2, dark: 1 });
+    if (st.cape) F.fill(st.cape, (m) => m.poly([ux - 3, sy, ux + 1, sy, ux - 5 + (p.cape ?? 0), 54, ux - 10 + (p.cape ?? 0) * 1.5, 53]), { k: 1.2, dark: 1 });
     // 奥の脚・手前の脚
-    F.fill('steel', (m) => { m.capsule(cx + (p.fb ?? 0) * 0.6, hipY + 2, cx + (p.fb ?? 0), 55 - (p.lb ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fb ?? 0), 57 - (p.lb ?? 0), 3.2, 1.8); }, { k: 1.5, dark: 1 });
-    F.fill('steel', (m) => { m.capsule(cx + (p.fa ?? 0) * 0.6, hipY + 2, cx + (p.fa ?? 0), 55 - (p.la ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fa ?? 0), 57 - (p.la ?? 0), 3.2, 1.8); }, { k: 1.5 });
-    // 剣の腕（奥 = 本人の右。右向きでは奥）
-    const hand = p.atk === 1 ? V(ux - 3, sy - 7) : p.atk === 2 ? V(ux + 11, sy + 6) : V(ux + 2, hipY + 1);
-    const sw = p.atk === 1 ? unit(-0.5, -0.9) : p.atk === 2 ? unit(1, 0.25) : unit(0.9, 0.45);
-    F.fill('steel', (m) => m.capsule(ux, sy + 3, hand.x, hand.y, 2.2, 2), { k: 1.6, dark: 1 });
-    const b0 = add(hand, sw, 2.5), b1 = add(hand, sw, 17);
-    F.fill('steel', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 1.3, 0.7), { k: 1.1 });
-    F.deco('steel', 0, (m) => m.line(b0.x, b0.y, b1.x - sw.x * 2, b1.y - sw.y * 2));
-    const n = perp(sw), g = add(hand, sw, 1.5);
-    F.fill('gold', (m) => m.capsule(g.x - n.x * 3, g.y - n.y * 3, g.x + n.x * 3, g.y + n.y * 3, 0.9), { k: 1 });
+    F.fill(st.armor, (m) => { m.capsule(cx + (p.fb ?? 0) * 0.6, hipY + 2, cx + (p.fb ?? 0), 55 - (p.lb ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fb ?? 0), 57 - (p.lb ?? 0), 3.2, 1.8); }, { k: 1.5, dark: 1 });
+    F.fill(st.armor, (m) => { m.capsule(cx + (p.fa ?? 0) * 0.6, hipY + 2, cx + (p.fa ?? 0), 55 - (p.la ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fa ?? 0), 57 - (p.la ?? 0), 3.2, 1.8); }, { k: 1.5 });
+    // 武器を持つ腕（奥 = 本人の右。右向きでは奥）
+    const [hand, sw] = heavy ? heavyGripSide(p, ux, sy, hipY) : [p.atk === 1 ? V(ux - 3, sy - 7) : p.atk === 2 ? V(ux + 11, sy + 6) : V(ux + 2, hipY + 1), p.atk === 1 ? unit(-0.5, -0.9) : p.atk === 2 ? unit(1, 0.25) : unit(0.9, 0.45)];
+    if (heavy && p.smear) smear(F, [ux + 3, sy + 3, 18, 6 * p.smear, -2.3, 0.45, 0.9, 0]);
+    F.fill(st.armor, (m) => m.capsule(ux, sy + 3, hand.x, hand.y, 2.2, 2), { k: 1.6, dark: 1 });
+    if (!heavy) tankWeapon(F, hand, sw, st);
     // 胴
-    F.fill('steel', (m) => m.poly([ux - 5, sy + 1, ux - 3, sy - 1, ux + 4, sy - 1, ux + 6, sy + 1, ux + 5, hipY + 2, ux - 5, hipY + 2]), { k: 1.6 });
-    F.fill('blue', (m) => m.poly([ux + 1, sy + 3, ux + 5.5, sy + 3, ux + 6, hipY + 9, ux + 0.5, hipY + 9]), { k: 1.3 });
-    F.deco('gold', 1, (m) => { m.line(ux + 5.5, sy + 3, ux + 6, hipY + 8.5); m.line(ux + 0.5, hipY + 8.5, ux + 6, hipY + 8.5); });
+    F.fill(st.armor, (m) => m.poly([ux - 5, sy + 1, ux - 3, sy - 1, ux + 4, sy - 1, ux + 6, sy + 1, ux + 5, hipY + 2, ux - 5, hipY + 2]), { k: 1.6 });
+    F.fill(st.tabard, (m) => m.poly([ux + 1, sy + 3, ux + 5.5, sy + 3, ux + 6, hipY + 9, ux + 0.5, hipY + 9]), { k: 1.3 });
+    F.deco(st.trim, 1, (m) => { m.line(ux + 5.5, sy + 3, ux + 6, hipY + 8.5); m.line(ux + 0.5, hipY + 8.5, ux + 6, hipY + 8.5); });
     F.fill('leather', (m) => m.rect(ux - 5, hipY - 1, 11, 2.5), { k: 1, flat: true });
-    F.fill('steel', (m) => m.ellipse(ux - 0.5, sy + 1.5, 4.4, 3.6), { k: 1.8 });
+    F.fill(st.armor, (m) => m.ellipse(ux - 0.5, sy + 1.5, 4.4, 3.6), { k: 1.8 });
+    if (st.fur) F.fill('fur', (m) => { m.ellipse(ux, sy + 0.4, 5.6, 2.8); m.ellipse(ux - 3.5, sy + 1, 2.6, 2.2); }, { k: 1.6 });
     // 兜
-    F.fill('steel', (m) => { m.ellipse(ux, hy, 6.8, 7.4); m.rect(ux - 5.5, hy, 11, 6); }, { k: 1.8 });
-    F.fill('black', (m) => m.rect(ux + 2.5, hy + 0.5, 4, 2), { k: 1, flat: true, line: false });
-    F.fill('red', (m) => { m.capsule(ux, hy - 7, ux - 1, hy - 11, 1.8, 1.4); m.capsule(ux - 1, hy - 11, ux - 6 - (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
+    tankHeadSide(F, p, st, ux, hy);
+    if (heavy) {
+      // 両手武器: 体の前で両手で持つ（手前の腕は柄の下側に添える）
+      const off = add(hand, sw, -3.6);
+      tankWeapon(F, hand, sw, st);
+      F.fill(st.armor, (m) => m.capsule(ux + 0.5, sy + 3, off.x, off.y, 2.3, 2), { k: 1.6 });
+      F.fill('leather', (m) => m.ellipse(off.x, off.y, 2, 2), { k: 1.3 });
+      return;
+    }
     // 盾（手前 = 本人の左腕。右向きでは手前）
     const sc = V(ux + 6 + (p.block ? 2 : 0), sy + 9 + (p.shieldDy ?? 0));
-    F.fill('steel', (m) => m.capsule(ux + 0.5, sy + 3, sc.x - 2, sc.y, 2.3, 2), { k: 1.6 });
+    F.fill(st.armor, (m) => m.capsule(ux + 0.5, sy + 3, sc.x - 2, sc.y, 2.3, 2), { k: 1.6 });
     F.fill('gold', (m) => m.poly([sc.x - 2.2, sc.y - 8, sc.x + 2.2, sc.y - 8, sc.x + 2.2, sc.y + 2, sc.x, sc.y + 9, sc.x - 2.2, sc.y + 2]), { k: 1.3 });
     F.fill('blue', (m) => m.poly([sc.x - 1, sc.y - 6.5, sc.x + 1, sc.y - 6.5, sc.x + 1, sc.y + 1.5, sc.x, sc.y + 6.5, sc.x - 1, sc.y + 1.5]), { k: 1, line: false });
   }
@@ -612,6 +751,14 @@
     spell: { fps: 12, loop: false, poses: [{ atk: 1, crouch: -1 }, { atk: 2, crouch: 1 }, { atk: 2, crouch: 1 }, { atk: 0 }] },
     buff: { fps: 8, loop: false, poses: [{ atk: 1, shieldDy: -4 }, { atk: 1, shieldDy: -5, bob: -1 }] },
     jump: { fps: 1, loop: false, poses: [{ fl: 3, fr: 3, la: 3, lb: 3, fa: 3, fb: -3, bob: -1, cape: -2 }, { fl: 1, fr: 2, la: 1, lb: 2, cape: -1 }] },
+  };
+  // 両手武器のタンク（戦士・暗黒騎士・ガンブレイカー）: 振り下ろしに残像を付ける
+  const HEAVY_ANIMS = {
+    ...TANK_ANIMS,
+    slash: { fps: 12, loop: false, poses: [{ atk: 1 }, { atk: 2, crouch: 1, smear: 1 }, { atk: 2, crouch: 1, smear: 0.55 }, { atk: 0 }] },
+    spell: { fps: 12, loop: false, poses: [{ atk: 1, crouch: -1 }, { atk: 2, crouch: 1, smear: 1 }, { atk: 2, crouch: 1 }, { atk: 0 }] },
+    hurt: { fps: 1, loop: false, poses: [{ bob: -1 }] },
+    buff: { fps: 8, loop: false, poses: [{ atk: 1 }, { atk: 1, bob: -1 }] },
   };
 
   // ---------------- 白魔道士（白いフードのローブと杖。64×64、足元 y=59）----------------
@@ -1382,6 +1529,9 @@
     cache = {
       player: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? samSide(F, p) : samFB(F, p, v === 'up')), anims: SAM_ANIMS }),
       tank: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p) : tankFB(F, p, v === 'up')), anims: TANK_ANIMS }),
+      war: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
+      drk: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
+      gnb: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.gnb) : tankFB(F, p, v === 'up', TANK_STYLE.gnb)), anims: HEAVY_ANIMS }),
       whm: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
       ast: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
       brd: buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),
