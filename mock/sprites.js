@@ -54,6 +54,8 @@
     sgeRobe: ['#ffffff', '#eef4f6', '#ccdce2', '#94aab4', '#5a6c76'], // 賢者の白いローブ
     noulith: ['#ffffff', '#d8f8ff', '#8ae0f8', '#3aa8d8', '#1a5a88'], // 賢者のノウリス（青く光る刃）
     mnkTop: ['#ffd8a8', '#eb9a52', '#c4702e', '#8c4a20', '#552c14'], // モンクの橙の道着
+    drgArmor: ['#c4d0f0', '#7a8cc4', '#52649c', '#36446e', '#1e2644'], // 竜騎士の青黒い鎧
+    drgCloth: ['#e890a0', '#b04058', '#842a44', '#5a1a30', '#340e1e'], // 竜騎士の紅の前垂れ
   };
   // 3D で光らせる素材（光のにじみの対象）
   const EMIT = new Set(['glow', 'smear', 'aura', 'star', 'fire', 'carby', 'topaz', 'wind', 'demi', 'ruby', 'bloodGlow', 'shade', 'fey', 'feyWing', 'seraph', 'seraphWing', 'noulith']);
@@ -560,13 +562,15 @@
 
   // ---------------- タンク（ナイト・戦士・暗黒騎士・ガンブレイカー。64×64）----------------
   // st: 見た目（TANK_STYLE）。armor 鎧・tabard 前垂れ・trim 縁と鍔・cape マント（null で無し）・
-  //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪）・
-  //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮
+  //   helm 頭（plume 羽根飾りの兜 / horn 角の兜 / dark 目が赤く光る黒い兜 / hair 兜なしで髪 / dragon 鼻先と後ろへ伸びる角の竜の兜）・
+  //   weapon 武器（sword 片手剣と盾 / axe 両手斧 / greatsword 両手剣 / gunblade ガンブレード / spear 槍）・shield 盾・emblem 胸の十字・gem 胸の赤い石・fur 肩の毛皮
+  //   竜騎士はこの体を使う（槍は突きの構え: spearGrip）
   const TANK_STYLE = {
     pld: { armor: 'steel', tabard: 'blue', trim: 'gold', cape: 'red', helm: 'plume', weapon: 'sword', shield: true, emblem: true },
     war: { armor: 'iron', tabard: 'red', trim: 'brass', cape: 'fur', helm: 'horn', weapon: 'axe', fur: true },
     drk: { armor: 'black', tabard: 'blmRobe', trim: 'iron', cape: 'black', helm: 'dark', weapon: 'greatsword', gem: true },
     gnb: { armor: 'iron', tabard: 'navy', trim: 'steel', cape: 'navy', helm: 'hair', weapon: 'gunblade' },
+    drg: { armor: 'drgArmor', tabard: 'drgCloth', trim: 'steel', cape: null, helm: 'dragon', weapon: 'spear' },
     // 暗黒騎士の影身具現（英雄の影身）: 暗黒騎士と同じ姿を、紫に光る影で
     shadow: { armor: 'shade', tabard: 'shade', trim: 'bloodGlow', cape: 'shade', helm: 'dark', weapon: 'greatsword', gem: true },
   };
@@ -612,6 +616,19 @@
       F.fill('black', (m) => m.ellipse(tr.x, tr.y, 0.8, 0.8), { k: 1, line: false });
       return;
     }
+    if (st.weapon === 'spear') {
+      // 槍: 長い鉄の柄・葉の形の穂先・付け根の左右へ張り出す鍔（竜の翼）と紅の房
+      const b0 = add(h, d, -15), b1 = add(h, d, 17.5), s0 = add(h, d, 17), sm = add(h, d, 21), tip = add(h, d, 26), g = add(h, d, 16.4);
+      F.fill('iron', (m) => m.capsule(b0.x, b0.y, b1.x, b1.y, 0.8), { k: 1.1 });
+      F.deco(st.trim, 1, (m) => { for (const t of [-14, -8, 8]) { const r = add(h, d, t); m.dot(r.x, r.y); } });
+      F.fill(st.tabard, (m) => { const t0 = add(g, d, -1.2), t1 = add(add(g, d, -4.5), n, side * 1.6); m.capsule(t0.x, t0.y, t1.x, t1.y, 0.9, 0.5); }, { k: 1.1 });
+      F.fill('steel', (m) => {
+        m.poly([s0.x + n.x * 1.1, s0.y + n.y * 1.1, sm.x + n.x * 2.1, sm.y + n.y * 2.1, tip.x, tip.y, sm.x - n.x * 2.1, sm.y - n.y * 2.1, s0.x - n.x * 1.1, s0.y - n.y * 1.1]);
+        for (const sg of [-1, 1]) { const w0 = add(g, n, sg * 0.8), w1 = add(add(g, n, sg * 4), d, -2.6), w2 = add(add(g, n, sg * 1.6), d, -1); m.poly([w0.x, w0.y, w1.x, w1.y, w2.x, w2.y]); }
+      }, { k: 1.3 });
+      F.deco('steel', 0, (m) => { const a = add(s0, d, 0.6), e = add(tip, d, -1.4); m.line(a.x, a.y, e.x, e.y); });
+      return;
+    }
     // 片手剣（ナイト）
     const g = add(h, d, 1.5), b0 = add(h, d, 2.5), b1 = add(h, d, 17);
     F.fill('steel', (m) => { m.capsule(b0.x, b0.y, b1.x, b1.y, 1.3, 0.7); }, { k: 1.1 });
@@ -624,6 +641,17 @@
     if (p.atk === 1) return [V(cx + as * 3, sy - 7), unit(-as * 0.25, -1), -as];
     if (p.atk === 2) return [V(cx - as * 3, hipY + 1), unit(-as * 0.85, 0.5), -as];
     return [V(cx + as * 4, hipY - 2), unit(as * 0.42, -0.9), as];
+  }
+  // 槍の構え（正面・背面。as: 槍を持つ手の側）: 1 引き / 2 突き / それ以外 体の横に立てる。突きは斜め下の前へ
+  function spearGrip(p, cx, sy, hipY, as) {
+    if (p.atk === 1) return [V(cx + as * 6, sy + 1), unit(-as * 0.85, 0.52), -as];
+    if (p.atk === 2) return [V(cx - as * 2, sy + 6), unit(-as * 0.85, 0.52), -as];
+    return [V(cx + as * 9.5, hipY - 3), unit(as * 0.06, -1), as];
+  }
+  // 突きの残像: 穂先の先に、柄と同じ向きの筋
+  function thrustSmear(F, h, d, k) {
+    const n = perp(d);
+    F.fill('smear', (m) => { for (const [o, a, b, w] of [[0, 24, 36, 1.6], [2.6, 18, 31, 0.9], [-2.6, 18, 31, 0.9]]) { const p0 = add(add(h, d, a), n, o), p1 = add(add(h, d, b), n, o * 0.6); m.capsule(p0.x, p0.y, p1.x, p1.y, w * k, 0.3); } }, { flat: true, line: false, noHi: true });
   }
   // 兜と顔（正面・背面）
   function tankHeadFB(F, p, st, cx, hy, back) {
@@ -658,6 +686,15 @@
       F.fill(st.armor, (m) => { m.poly([cx - 2.2, hy - 6.2, cx + 2.2, hy - 6.2, cx, hy - 12]); for (const s of [-1, 1]) m.poly([cx + s * 5.5, hy - 3.5, cx + s * 6.8, hy - 1, cx + s * 9.6, hy - 6.5]); }, { k: 1.3 });
       F.deco(st.trim, 1, (m) => { m.line(cx - 6, hy + 3.5, cx - 3, hy + 5.5); m.line(cx + 6, hy + 3.5, cx + 3, hy + 5.5); });
     }
+    if (st.helm === 'dragon') {
+      // 竜の兜: 後ろへ反って伸びる 2 本の角・頭頂の鶏冠。正面は下へとがる鼻先の面頬
+      F.fill(st.trim, (m) => { for (const s of [-1, 1]) { m.capsule(cx + s * 4.2, hy - 4.5, cx + s * 7.4, hy - 9.5, 1.3, 0.9); m.capsule(cx + s * 7.4, hy - 9.5, cx + s * 7, hy - 14, 0.9, 0.35); } }, { k: 1.3 });
+      F.fill(st.armor, (m) => m.poly([cx - 1.3, hy - 6.8, cx + 1.3, hy - 6.8, cx, hy - 11.5]), { k: 1.3 });
+      if (!back) {
+        F.fill(st.armor, (m) => m.poly([cx - 4.2, hy + 2.6, cx + 4.2, hy + 2.6, cx + 2.2, hy + 6.4, cx, hy + 8.4, cx - 2.2, hy + 6.4]), { k: 1.5 });
+        F.deco(st.trim, 1, (m) => { m.line(cx - 3.6, hy + 2.8, cx, hy + 8); m.line(cx + 3.6, hy + 2.8, cx, hy + 8); });
+      } else F.deco(st.trim, 1, (m) => m.line(cx, hy - 6, cx, hy + 5));
+    }
   }
   // 兜と顔（横向き）
   function tankHeadSide(F, p, st, ux, hy) {
@@ -674,6 +711,12 @@
     if (st.helm === 'plume') F.fill('red', (m) => { m.capsule(ux, hy - 7, ux - 1, hy - 11, 1.8, 1.4); m.capsule(ux - 1, hy - 11, ux - 6 - (p.plume ?? 0), hy - 8, 1.4, 0.8); }, { k: 1.3 });
     if (st.helm === 'horn') F.fill('marble', (m) => { m.capsule(ux + 0.5, hy - 3, ux + 4.2, hy - 5.6, 1.6, 1.2); m.capsule(ux + 4.2, hy - 5.6, ux + 3.6, hy - 11, 1.2, 0.45); }, { k: 1.3 });
     if (st.helm === 'dark') F.fill(st.armor, (m) => { m.poly([ux - 2.6, hy - 6, ux + 1.6, hy - 6.4, ux - 1.5, hy - 12]); m.poly([ux - 4.5, hy - 3, ux - 3, hy - 0.5, ux - 8.5, hy - 5]); }, { k: 1.3 });
+    if (st.helm === 'dragon') {
+      // 前へ突き出す鼻先と、後ろへ流れる角
+      F.fill(st.armor, (m) => m.poly([ux + 3.5, hy - 1.5, ux + 10.5, hy + 2.4, ux + 4.5, hy + 5.2]), { k: 1.5 });
+      F.deco(st.trim, 1, (m) => m.line(ux + 4.5, hy - 0.8, ux + 10, hy + 2.3));
+      F.fill(st.trim, (m) => { m.capsule(ux - 0.5, hy - 4.8, ux - 6.5, hy - 9.6, 1.4, 0.9); m.capsule(ux - 6.5, hy - 9.6, ux - 10.8, hy - 10.6, 0.9, 0.35); }, { k: 1.3 });
+    }
   }
   // 振りの残像（両手武器。正面: 振りかぶった側の上から、反対側の下へ）
   function heavySmear(F, cx, sy, back, k) {
@@ -700,10 +743,12 @@
     if (back && st.shield) shield();
     // 両手武器: 構え。背面では武器と腕を体の奥に描く（振りかぶった武器だけが見える）
     const heavy = !st.shield;
-    const [hh, hd, hs] = heavy ? heavyGrip(p, cx, sy, hipY, as) : [null, null, 1];
+    const spear = st.weapon === 'spear';
+    const [hh, hd, hs] = heavy ? (spear ? spearGrip : heavyGrip)(p, cx, sy, hipY, as) : [null, null, 1];
     const heavyArms = () => {
-      const off = add(hh, hd, -3.6);
-      if (p.smear) heavySmear(F, cx, sy, back, p.smear);
+      // 槍を立てているときは、もう一方の腕は体の横に下ろす
+      const off = spear && !p.atk ? V(cx - as * 9.5, hipY + 1) : add(hh, hd, -3.6);
+      if (p.smear) { if (spear) thrustSmear(F, hh, hd, p.smear); else heavySmear(F, cx, sy, back, p.smear); }
       F.fill(st.armor, (m) => m.capsule(cx + as * 8.5, sy + 3, hh.x, hh.y, 2.3, 2), { k: 1.6 });
       F.fill('leather', (m) => m.ellipse(hh.x, hh.y, 2, 2), { k: 1.3 });
       tankWeapon(F, hh, hd, st, hs);
@@ -749,18 +794,24 @@
     if (p.atk === 2) return [V(ux + 10, sy + 7), unit(1, 0.35)];
     return [V(ux + 3, hipY - 1), unit(0.5, -0.86)];
   }
+  // 槍の構え（横向き）: 1 引き / 2 突き（前へまっすぐ）/ それ以外 体の前に立てる
+  function spearGripSide(p, ux, sy, hipY) {
+    if (p.atk === 1) return [V(ux - 2, sy + 4), unit(1, 0.12)];
+    if (p.atk === 2) return [V(ux + 5, sy + 5), unit(1, 0.12)];
+    return [V(ux + 3, hipY - 1), unit(0.1, -1)];
+  }
   function tankSide(F, p, st = TANK_STYLE.pld) {
     const b = p.bob ?? 0, cx = 31, c = p.crouch ?? 0;
     const hipY = 37 + c, sy = 24 + b + c * 0.8, hy = 16 + b + c * 0.8, lean = p.lean ?? 0, ux = cx + lean;
-    const heavy = !st.shield;
+    const heavy = !st.shield, spear = st.weapon === 'spear';
     // マント
     if (st.cape) F.fill(st.cape, (m) => m.poly([ux - 3, sy, ux + 1, sy, ux - 5 + (p.cape ?? 0), 54, ux - 10 + (p.cape ?? 0) * 1.5, 53]), { k: 1.2, dark: 1 });
     // 奥の脚・手前の脚
     F.fill(st.armor, (m) => { m.capsule(cx + (p.fb ?? 0) * 0.6, hipY + 2, cx + (p.fb ?? 0), 55 - (p.lb ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fb ?? 0), 57 - (p.lb ?? 0), 3.2, 1.8); }, { k: 1.5, dark: 1 });
     F.fill(st.armor, (m) => { m.capsule(cx + (p.fa ?? 0) * 0.6, hipY + 2, cx + (p.fa ?? 0), 55 - (p.la ?? 0), 2.5, 2.2); m.ellipse(cx + 1.5 + (p.fa ?? 0), 57 - (p.la ?? 0), 3.2, 1.8); }, { k: 1.5 });
     // 武器を持つ腕（奥 = 本人の右。右向きでは奥）
-    const [hand, sw] = heavy ? heavyGripSide(p, ux, sy, hipY) : [p.atk === 1 ? V(ux - 3, sy - 7) : p.atk === 2 ? V(ux + 11, sy + 6) : V(ux + 2, hipY + 1), p.atk === 1 ? unit(-0.5, -0.9) : p.atk === 2 ? unit(1, 0.25) : unit(0.9, 0.45)];
-    if (heavy && p.smear) smear(F, [ux + 3, sy + 3, 18, 6 * p.smear, -2.3, 0.45, 0.9, 0]);
+    const [hand, sw] = heavy ? (spear ? spearGripSide : heavyGripSide)(p, ux, sy, hipY) : [p.atk === 1 ? V(ux - 3, sy - 7) : p.atk === 2 ? V(ux + 11, sy + 6) : V(ux + 2, hipY + 1), p.atk === 1 ? unit(-0.5, -0.9) : p.atk === 2 ? unit(1, 0.25) : unit(0.9, 0.45)];
+    if (heavy && p.smear) { if (spear) thrustSmear(F, hand, sw, p.smear); else smear(F, [ux + 3, sy + 3, 18, 6 * p.smear, -2.3, 0.45, 0.9, 0]); }
     F.fill(st.armor, (m) => m.capsule(ux, sy + 3, hand.x, hand.y, 2.2, 2), { k: 1.6, dark: 1 });
     if (!heavy) tankWeapon(F, hand, sw, st);
     // 胴
@@ -813,6 +864,12 @@
     spell: { fps: 12, loop: false, poses: [{ atk: 1, crouch: -1 }, { atk: 2, crouch: 1, smear: 1 }, { atk: 2, crouch: 1 }, { atk: 0 }] },
     hurt: { fps: 1, loop: false, poses: [{ bob: -1 }] },
     buff: { fps: 8, loop: false, poses: [{ atk: 1 }, { atk: 1, bob: -1 }] },
+  };
+  // 竜騎士: 突き（引いてから前へ。残像は穂先の先の筋）。ジャンプは脚をたたむ
+  const DRG_ANIMS = {
+    ...HEAVY_ANIMS,
+    slash: { fps: 14, loop: false, poses: [{ atk: 1 }, { atk: 2, smear: 1 }, { atk: 2, smear: 0.5 }, { atk: 0 }] },
+    spell: { fps: 14, loop: false, poses: [{ atk: 1, crouch: 1 }, { atk: 2, smear: 1 }, { atk: 2, smear: 0.5 }, { atk: 0 }] },
   };
   // 影身（ペット）: 待機と攻撃（ペットの攻撃の動きは spell の名前で読む）
   const SHADOW_ANIMS = { idle: TANK_ANIMS.idle, spell: HEAVY_ANIMS.slash };
@@ -1664,6 +1721,7 @@
     war: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.war) : tankFB(F, p, v === 'up', TANK_STYLE.war)), anims: HEAVY_ANIMS }),
     drk: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drk) : tankFB(F, p, v === 'up', TANK_STYLE.drk)), anims: HEAVY_ANIMS }),
     gnb: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.gnb) : tankFB(F, p, v === 'up', TANK_STYLE.gnb)), anims: HEAVY_ANIMS }),
+    drg: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? tankSide(F, p, TANK_STYLE.drg) : tankFB(F, p, v === 'up', TANK_STYLE.drg)), anims: DRG_ANIMS }),
     whm: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p) : whmFB(F, p, v === 'up')), anims: WHM_ANIMS }),
     ast: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.ast) : whmFB(F, p, v === 'up', ROBE_STYLE.ast)), anims: WHM_ANIMS }),
     brd: () => buildSet({ fw: 64, fh: 64, ax: 32, ay: 59, m: 0.05, draw: (F, p, v) => (v === 'right' ? whmSide(F, p, ROBE_STYLE.brd) : whmFB(F, p, v === 'up', ROBE_STYLE.brd)), anims: WHM_ANIMS }),

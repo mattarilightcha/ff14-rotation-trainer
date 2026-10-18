@@ -154,5 +154,91 @@
     };
   }
 
-  window.MockGauge2.add({ MNK: mnk, NIN: nin });
+  // ---------------- 竜騎士: 竜血ゲージ（JobHudDRG0）----------------
+  // 公式ジョブガイドの HUD の絵（public/jobguide/hud/dragoon/01〜06.png）に合わせた:
+  //   ふだん: 青い竜（#29 の線画・#30 の影）・槍（#26 = パーツ 2/15）・矢羽根の模様（#27 = 2/16）・天竜眼の枠（#13）
+  //   紅の竜血の間: 竜が赤くなる（#30 の青い影の代わりに #32 の赤い影。#29 の線画も赤く）。槍と模様の代わりに棘の付いた枠が出て、
+  //     その中の棒（#28。部品 1003 の #2 が塗り・#4 が地、幅 152）が残り時間。左の黒い棘の上に残り秒の数字（#4）。
+  //     色は公式の絵に合わせた（ULD の加算色のままだと、竜の影は薄い桃色・棒は青。ゲームはアニメーションで色を変えていると見られる）
+  //     棘の枠は上下 2 つのパーツ（2/2 が上・2/14 が下。アトラスで隣り合う 244×80 の 1 枚絵）で、#26・#27 と同じ大きさ（244×40）なので、この 2 つのパーツを差し替えて上下に並べる。
+  //     枠の位置（左上 23,45）は公式の絵から測った（ULD の位置のタイムラインは抽出していない）
+  //   天竜眼: 枠（#13）の中の紫の玉 #11・#12（パーツ 7/1・7/2）。公式の絵では点いた玉は明るい桃色で、枠の縁も桃色がかるので、その色を足す。増えたときに #9・#10 の光
+  //   竜の目（#20 の組）・目の上の炎（#14〜#17）・#7・#8・#18・#19 は公式の絵に無い（以前の版の部品）ので出さない
+  // シンプル表示（#33）: 天竜眼は #39・#40（部品 1002 の #2 が点いた菱形）、紅の竜血は #43 の棒（部品 1004 の #3、幅 160。赤にする）と #42 の数字（残り秒）。
+  //   紅の竜血でないときは数字（#42）を出さない。#36・#37（部品 1001）は公式の絵に無いので隠す
+  const DRG_BAR_W = 152, DRG_SBAR_W = 160, DRG_FOCUS = [11, 12], DRG_SFOCUS = [39, 40];
+  const DRG_FRAME = { x: 23, y: 45 };
+  function drg(G) {
+    const L = G.layouts.JobHudDRG0;
+    const K = U.build(L, G.textures);
+    const k = (id) => K.get(id);
+    const tex = G.textures.JobHudDRG0, P2 = partsOf(L, 2);
+    let simple = false, prev = {};
+    const LOTD_MS = 20000;
+    const C = window.MockUld.colorFilter;
+    const paint = (el, f) => { if (el) el.style.filter = f; };
+    const look = {
+      blue: { lines: K.img(29)?.style.filter ?? '', bar: K.img('28/2')?.style.filter ?? '', sbar: K.img('43/3')?.style.filter ?? '' },
+      red: { lines: C([60, -120, -80]), bar: C([198, 14, 5], [23, 59, 55]), sbar: C([110, -20, -25], [60, 45, 40]) },
+    };
+    paint(K.img(32), C([150, -255, -255])); // 紅の竜血の竜の影（ULD の加算色 100,-20,-20 では薄い桃色になる）
+    const focusLook = { orb: C([80, 10, 50]), rim: C([30, -30, -10]) };
+    for (const q of DRG_FOCUS) paint(K.img(q), focusLook.orb);
+    // 槍・模様と棘の枠の差し替え（位置も）
+    const spear = { el: k(26), part: P2[15], x: 30, y: 64 }, marks = { el: k(27), part: P2[16], x: 44, y: 64 };
+    function frame(on) {
+      usePart(K.img(26), tex, on ? P2[2] : spear.part); usePart(K.img(27), tex, on ? P2[14] : marks.part);
+      set(spear.el, { left: `${on ? DRG_FRAME.x : spear.x}px`, top: `${on ? DRG_FRAME.y : spear.y}px` });
+      set(marks.el, { left: `${on ? DRG_FRAME.x : marks.x}px`, top: `${on ? DRG_FRAME.y + 40 : marks.y}px` });
+    }
+    for (const id of [7, 8, 9, 10, 14, 15, 16, 17, 18, 19, 20, 32]) set(k(id), { opacity: 0 });
+    set(k('28/3'), { opacity: 0 }); set(k('43/4'), { opacity: 0 }); set(k(35), { opacity: 0 });
+    // 数字（#4）: 左の黒い棘の上に、右寄せで。公式の絵の数字は横に広いので、横に伸ばす
+    const num = k(4);
+    if (num) {
+      num.classList.add('g2-num');
+      set(num, { left: '18px', top: '74px', width: '55px', height: '22px', justifyContent: 'flex-end', fontSize: '18px', letterSpacing: '3px', transform: 'scaleX(1.35)', transformOrigin: 'right center', textShadow: '0 0 2px #000, 0 0 2px #000, 0 1px 3px #000' });
+    }
+    const n42 = k('42/2'); if (n42) { n42.classList.add('g2-snum'); set(n42, { fontSize: '19px', letterSpacing: '2px', transform: 'scaleX(1.3)' }); }
+    k(33).hidden = true;
+    function apply(st, instant) {
+      const t = st.t ?? 0;
+      const lotdSt = st.st?.lotd, lotd = !!lotdSt && lotdSt.until > t;
+      const left = lotd ? Math.max(0, lotdSt.until - t) : 0, frac = Math.min(1, left / LOTD_MS);
+      if (instant || lotd !== prev.lotd) {
+        const lk = lotd ? look.red : look.blue;
+        set(k(30), { opacity: lotd ? 0 : 1 }); set(k(32), { opacity: lotd ? 1 : 0 });
+        paint(K.img(29), lk.lines); paint(K.img('28/2'), lk.bar); paint(K.img('43/3'), lk.sbar);
+        frame(lotd);
+        set(k(28), { opacity: lotd ? 1 : 0 }); set(num, { opacity: lotd ? 1 : 0 }); set(k(42), { opacity: lotd ? 1 : 0 });
+        if (!instant && lotd) anim(k(3), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 600 });
+      }
+      const w = Math.round(DRG_BAR_W * frac), sw = Math.round(DRG_SBAR_W * frac), sec = Math.ceil(left / 1000);
+      if (instant || w !== prev.w || sec !== prev.sec) {
+        set(k('28/2'), { clipPath: clipW(w, DRG_BAR_W) });
+        set(k('43/3'), { clipPath: clipW(sw, DRG_SBAR_W) });
+        if (num) num.textContent = String(sec);
+        const n = k('42/2'); if (n) n.textContent = String(sec);
+      }
+      const focus = Math.max(0, Math.min(2, st.focus ?? 0));
+      if (instant || focus !== prev.focus) {
+        paint(K.img(13), focus > 0 ? focusLook.rim : '');
+        DRG_FOCUS.forEach((q, i) => {
+          const lit = i < focus;
+          set(k(q), { opacity: lit ? 1 : 0, transform: 'none' });
+          set(k(`${DRG_SFOCUS[i]}/2`), { opacity: lit ? 1 : 0, transform: 'none' });
+          if (!instant && lit && i >= (prev.focus ?? 0)) { pop(k(q)); anim(k(q === 11 ? 9 : 10), [{ opacity: 0.9 }, { opacity: 0 }], { duration: 500 }); }
+        });
+      }
+      prev = { lotd, w, sec, focus };
+    }
+    function setSimple(v) { simple = !!v; k(2).hidden = simple; k(33).hidden = !simple; }
+    apply({ t: 0, focus: 0 }, true);
+    return {
+      windows: [{ name: 'JobHudDRG0', label: '竜血ゲージ', el: K.el, w: K.w, h: K.h }],
+      update: (st) => apply(st, false), reset: (st) => apply(st, true), setSimple, isSimple: () => simple,
+    };
+  }
+
+  window.MockGauge2.add({ MNK: mnk, NIN: nin, DRG: drg });
 })();

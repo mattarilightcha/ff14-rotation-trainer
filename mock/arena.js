@@ -85,7 +85,7 @@
   let aim = null; // 地面指定の技を置く場所を選んでいる間のターゲットサークル: { x, y, r, ok }
   const BELL_H = 2.7; // リタージー・オブ・ベルの花の中心の高さ（m。見た目。sprites.js の LILY と合わせる）
   // 見た目の組（sprites.js）: 自分はジョブ、相方は役割で決まる
-  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch', SGE: 'sge', MNK: 'mnk', NIN: 'nin' };
+  const PLAYER_SET = { SAM: 'player', PLD: 'tank', WHM: 'whm', AST: 'ast', BLM: 'blm', BRD: 'brd', SMN: 'smn', WAR: 'war', DRK: 'drk', GNB: 'gnb', SCH: 'sch', SGE: 'sge', MNK: 'mnk', NIN: 'nin', DRG: 'drg' };
   const setName = (kind) => (kind === 'boss' ? 'boss' : kind === 'player' ? PLAYER_SET[opts.job] ?? 'player' : npcHealer() ? 'whm' : 'tank');
   const npcHealer = () => opts.role === 'tank'; // 自分がタンクなら、相方は回復役
   const hasNpc = () => opts.role !== 'melee' || opts.tank; // 回復役・タンクのときは相方がいつもいる
@@ -215,7 +215,9 @@
     const l = Math.hypot(mx, my);
     player.mx = l > 1 ? mx / l : mx; player.my = l > 1 ? my / l : my;
   }
-  function jump() { if (player.jumpT < 0 && player.down <= 0) player.jumpT = 0; }
+  function jump() { if (player.jumpT < 0 && player.down <= 0) { player.jumpT = 0; player.jumpDur = 0.5; player.jumpH = 1.1; } }
+  // 技の跳躍（竜騎士のハイジャンプ・スターダイバーなど）: 高さ h メートル・sec 秒。見た目だけ（移動は dashToTarget などが別に行う）
+  function leap(h, sec) { if (player.down <= 0) { player.jumpT = 0; player.jumpDur = sec; player.jumpH = h; } }
   const viewYaw = () => (view3d() ? cam.yaw : CAM0.yaw);
 
   // カメラの操作（3D のときだけ）: dyaw（ラジアン。+ で右を向く）、dpitch（度。+ で見下ろす）
@@ -255,8 +257,8 @@
       player.face = Math.atan2(wy, wx);
       player.walkT += dt;
     }
-    if (player.jumpT >= 0) { player.jumpT += dt / 0.5; if (player.jumpT >= 1) player.jumpT = -1; }
-    player.z = player.jumpT >= 0 ? Math.sin(Math.PI * player.jumpT) * 1.1 : 0;
+    if (player.jumpT >= 0) { player.jumpT += dt / (player.jumpDur ?? 0.5); if (player.jumpT >= 1) player.jumpT = -1; }
+    player.z = player.jumpT >= 0 ? Math.sin(Math.PI * player.jumpT) * (player.jumpH ?? 1.1) : 0;
     if (player.down > 0) { player.down -= dtMs; if (player.down <= 0) { player.hp = 0.6; emit('revive'); } }
     else if (live && (opts.role === 'melee' || opts.role === 'ranged')) player.hp = Math.min(1, player.hp + POL.regen * dt); // 近接・遠隔: ヒーラーの回復の代わりに少しずつ戻る
     // 継続回復（リジェネなど。3 秒ごと）
@@ -1482,7 +1484,7 @@
   })();
 
   window.MockArena = {
-    init, resize, reset, setInput, jump, update, render, setView,
+    init, resize, reset, setInput, jump, leap, update, render, setView,
     view: () => (view3d() ? '3d' : '2d'), error3d: () => r3err, camera,
     edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, bossCast, pet: petSet, petKind: () => pet.kind,
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,

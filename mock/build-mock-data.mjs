@@ -60,7 +60,7 @@ function guideFor(rows, a) {
 }
 
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -226,9 +226,21 @@ function buildJob(JOB, LEVEL) {
   }
 
   // アクションの変化（ボタン置き換え）のグループ。「変化させない」設定（CFG-11）のときは、変化先を別のボタンにする
+  // 抽出データに変化元が無いものは、説明文「発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する」から読む（変化元はこのジョブの技の名前）
+  const jobByName = new Map(job.actionIds.map((id) => byId.get(id)).filter((a) => a && a.level <= LEVEL).map((a) => [a.name.ja, resolve(a.id)]));
+  const descReplaces = new Map();
+  for (const id of job.actionIds) {
+    const a = byId.get(id);
+    if (!a || a.replacesAction?.length || a.level > LEVEL) continue;
+    const m = /発動条件を満たすと(.+?)が(.+?)に変化する/.exec(a.description?.ja ?? '');
+    if (!m || m[2] !== a.name.ja) continue;
+    const bases = (jobByName.has(m[1]) ? [m[1]] : m[1].split(/または|と|、/)).map((n) => jobByName.get(n.trim())).filter(Boolean);
+    if (bases.length) descReplaces.set(a.id, bases);
+  }
+  const replacesOf = (a) => (a.replacesAction?.length ? a.replacesAction : descReplaces.get(a.id) ?? []);
   const replaceGroups = {};
   for (const a of actions) {
-    for (const base of a.replacesAction ?? []) {
+    for (const base of replacesOf(a)) {
       if (!jobIds.has(base) || a.level > LEVEL) continue;
       (replaceGroups[base] ??= []).push(a.id);
     }
@@ -245,7 +257,7 @@ function buildJob(JOB, LEVEL) {
   const unplaced = job.actionIds
     .map((id) => byId.get(id))
     .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id] && !used.has(a.id))
-    .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
+    .filter((a) => !replacesOf(a).length && a.category !== 9)
     .map((a) => a.id);
   for (const id of unplaced) used.add(id);
   // 召喚士: サンプルの HOTBAR.DAT は古い配置（今はないアクション）で、主な技が未配置になる。1 本目のバーの空きに未配置の技を順に置く
@@ -259,7 +271,7 @@ function buildJob(JOB, LEVEL) {
   const buttonsAll = job.actionIds
     .map((id) => byId.get(id))
     .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id])
-    .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
+    .filter((a) => !replacesOf(a).length && a.category !== 9)
     .map((a) => a.id);
   // このジョブが使えるロールアクション（読み込んだホットバーに置かれていても表示できるように）
   for (const a of actions) if (a.isRoleAction && a.jobs?.includes(JOB) && a.level <= LEVEL && !upgrade[a.id]) used.add(a.id);
@@ -322,20 +334,27 @@ function buildJob(JOB, LEVEL) {
     ground: !!a.targetArea, // 地面指定（先行入力されない: docs/SPEC.md GAME-05）
     // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から
     positional: /背面攻撃時/.test(a.description.ja) ? 'rear' : /側面攻撃時/.test(a.description.ja) ? 'flank' : null,
-    // 移動を伴う技: 説明文「対象に急接近」「対象に飛び掛かりつつ」「N m後方へ（に）飛び退く」「自身の N m後方（前方）に向かって素早く移動」
-    // 「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
-    dash: /対象に急接近|対象に飛び掛かり/.test(a.description.ja),
-    backstep: Number(/(\d+)m後方[へに]飛び退く|自身の(\d+)m後方に向かって素早く移動/.exec(a.description.ja)?.slice(1).find(Boolean) ?? 0),
+    // 移動を伴う技: 説明文「対象に急接近」「対象に飛び掛かりつつ」「対象にジャンプで近づきつつ」（「攻撃後は元の位置に戻る」なら動かない）
+    // 「N m後方へ（に）飛び退く」「自身の N m後方（前方）に向かって素早く移動」「自身の N m後方に大きくジャンプ」「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
+    dash: /対象に急接近|対象に飛び掛かり|対象にジャンプで近づきつつ/.test(a.description.ja) && !/攻撃後は元の位置に戻る/.test(a.description.ja),
+    backstep: Number(/(\d+)m後方[へに]飛び退く|自身の(\d+)m後方に向かって素早く移動|自身の(\d+)m後方に大きくジャンプ/.exec(a.description.ja)?.slice(1).find(Boolean) ?? 0),
     forward: Number(/自身の(\d+)m前方に向かって素早く移動/.exec(a.description.ja)?.[1] ?? 0),
     toAlly: /対象の目前まで素早く移動/.test(a.description.ja),
     toZone: /黒魔紋の中心へ素早く移動/.test(a.description.ja) ? 'ley' : null,
     pot: parsePotency(a.description.ja),
     eff: parseEffects(a.description.ja),
-    replaces: a.replacesAction ?? [],
+    replaces: replacesOf(a),
   });
 
   const role = { 1: 'tank', 2: 'melee', 3: 'ranged', 4: 'healer' }[job.role] ?? 'melee';
   const actionsOut = Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))]));
+  // コンボ元を説明文からも足す（「コンボ条件：竜尾大車輪および竜牙竜爪」。Action シートのコンボ元は 1 つだけ）
+  const idByName = new Map(Object.values(actionsOut).filter((x) => x.forJob).map((x) => [x.name, x.id]));
+  for (const x of Object.values(actionsOut)) {
+    const m = /コンボ条件：([^\n　]+)/.exec(x.desc ?? '');
+    if (!m) continue;
+    for (const n of m[1].split(/および|または|、/)) { const id = idByName.get(n.trim()); if (id && !x.comboFrom.includes(id)) x.comboFrom.push(id); }
+  }
   if (fromGuide.length) console.log(`  ジョブガイドの値にした: ${fromGuide.join(' / ')}`);
   return {
     job: { abbr: JOB, name: job.name.ja, icon: `../public${job.iconPath}`, level: LEVEL, role },

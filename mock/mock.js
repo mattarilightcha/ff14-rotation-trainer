@@ -75,6 +75,8 @@
     get mult() { return dmgMult(); },
     // ペット（召喚士のカーバンクル・エギ・デミ召喚）を練習場に出す。kind: carbuncle / ifrit / titan / garuda / bahamut / phoenix / solar、sec: 出ている時間
     pet: (kind, sec) => Arena.pet?.(kind, sec),
+    // 技の跳躍の見た目（竜騎士のハイジャンプなど）。高さ h メートル・sec 秒
+    leap: (h, sec) => Arena.leap?.(h, sec),
     dotTick(potency, mult, name) {
       const dmg = dealDamage(potency, mult);
       Arena.dotTick(dmg); Au?.dot();

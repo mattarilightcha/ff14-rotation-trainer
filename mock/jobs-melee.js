@@ -3,7 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, descCharges, descGain, guideTrait, numIn } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, descCharges, descGain, guideTrait, numIn } = window.MockJobs.lib;
   // クリティカルの代わり（仮 GAME-77）: クリティカルの発動率。乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
   const CRIT_RATE = 0.25;
   const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
@@ -475,5 +475,185 @@
     },
   };
 
-  Object.assign(window.MockJobs, { MNK, NIN });
+  // ---------------- 竜騎士 ----------------
+  // 説明文から:
+  //   コンボ 2 本: トゥルースラスト → スラストラッシュ → ヘヴンスラスト → 竜牙竜爪（側面）→ 雲蒸竜変
+  //               トゥルースラスト → スパイラルブロウ（竜槍）→ 桜華繚乱（背面・継続ダメージ）→ 竜尾大車輪（背面）→ 雲蒸竜変
+  //     雲蒸竜変は、竜牙竜爪・竜尾大車輪をコンボで使った直後に、そのボタンが変わる。コンボボーナスで竜眼（30 秒）
+  //   範囲: ドゥームスパイク → ソニックスラスト（竜槍）→ クルザントーメント（竜眼）
+  //   竜眼の間はトゥルースラストが竜眼雷電、ドゥームスパイクが竜眼蒼穹に変わる（竜眼を使い、天竜眼 +1。最大 2）。天竜点睛は天竜眼 2 を使う
+  //   竜槍: 与ダメージ 10%（30 秒）。ランスチャージ: 10%（20 秒）。ゲイルスコグル: 紅の竜血（与ダメージ 15%・20 秒）とナーストレンド実行可（20 秒）
+  //   スターダイバー: 紅の竜血の間だけ。スタークロッサー実行可（20 秒。紅の竜血が切れると消える）
+  //   ハイジャンプ → ミラージュダイブ実行可（15 秒）。ドラゴンダイブ → ドラゴンライズ実行可（30 秒）
+  //   イルーシブジャンプ: 15m 後ろへ跳び、ピアシングタロン効果アップ（15 秒。ピアシングタロンの威力 350）
+  //   ライフサージ: 次のウェポンスキル 1 回が必ずクリティカル（5 秒）。バトルリタニー: クリティカル発動率 +10%（20 秒）
+  // 公式ジョブガイドの特性から（ランスマスタリー）: 竜眼は「ウェポンスキルによる近接攻撃を実行すると解除される」
+  // 前提・仮（GAME-79）: クリティカルは扱わないので、ライフサージ・バトルリタニーはダメージを変えない（ライフサージを乗せた技は結果に出す）。
+  //   竜眼が消える近接のウェポンスキルは、竜眼雷電・竜眼蒼穹（竜眼を使う）とピアシングタロン（遠隔）以外のウェポンスキル。
+  //   ナーストレンド・ドラゴンライズ・スタークロッサーは、抽出データに変化元が無く、サンプルのホットバーにも無いので「未配置」のボタン
+  const DRG = {
+    abbr: 'DRG',
+    create(R) {
+      const { A } = R;
+      const ID = {
+        TRUE: 75, LANCE_BARRAGE: 36954, HEAVENS: 25771, SPIRAL: 36955, CHAOTIC: 25772, FANG: 3554, WHEELING: 3556, DRAKESBANE: 36952, RAIDEN: 16479,
+        DOOM: 86, SONIC: 7397, COERTHAN: 16477, DRACONIAN: 25770, PIERCING: 90,
+        LIFE_SURGE: 83, LANCE_CHARGE: 85, LITANY: 3557, GEIRSKOGUL: 3555, NASTROND: 7400, HIGH_JUMP: 16478, MIRAGE: 7399,
+        DRAGONFIRE: 96, RISE: 36953, STARDIVER: 16480, STARCROSS: 36956, WYRMWIND: 25773, ELUSIVE: 94, WINGED: 36951,
+        SECONDWIND: 7541, BLOODBATH: 7542, TN: 7546, ARMS: 7548, FEINT: 7549, SWEEP: 7863,
+      };
+      const STATUS = {
+        lanceCharge: { name: 'ランスチャージ' },
+        powerSurge: { name: '竜槍', tracked: true },
+        lotd: { name: '紅の竜血' },
+        draconianFire: { name: '竜眼' },
+        nastrondReady: { name: 'ナーストレンド実行可' },
+        starcrossReady: { name: 'スタークロッサー実行可' },
+        mirageReady: { name: 'ミラージュダイブ実行可' },
+        riseReady: { name: 'ドラゴンライズ実行可' },
+        talonUp: { name: 'ピアシングタロン効果アップ' },
+        lifeSurge: { name: 'ライフサージ' },
+        litany: { name: 'バトルリタニー' },
+        chaotic: { name: '桜華繚乱', target: true, tracked: true },
+        tn: { name: 'トゥルーノース' },
+        bloodbath: { name: 'ブラッドバス' },
+      };
+      const S = () => R.S;
+      const has = R.has;
+      const Au = () => window.MockAudio;
+      // 付与の効果時間（説明文の「自身に「◯」を付与する。効果時間：N秒」）
+      const grantMs = (id, st, d) => (A[id]?.eff?.grant?.find((g) => g.status === st)?.sec ?? d) * 1000;
+      const LOTD_MS = numIn(A[ID.GEIRSKOGUL]?.desc, /「紅の竜血」状態に変化する。\s*効果時間：(\d+)秒/, 20) * 1000;
+      const SURGE_MS = numIn(A[ID.LIFE_SURGE]?.desc, /効果時間：(\d+)秒/, 5) * 1000;
+      const FOCUS_MAX = numIn(guideTrait(R, 'Lance Mastery III'), /最大スタック数：(\d+)/, 2);
+      // ライフサージを乗せるとよい技: ウェポンスキルで一番威力の高いもの（ヘヴンスラスト 460・雲蒸竜変 460）
+      const wsPot = (a) => Math.max(a.pot?.base ?? 0, a.pot?.combo ?? 0);
+      const TOP_POT = Math.max(...Object.values(A).filter((a) => a.forJob && a.isGcd).map(wsPot));
+      const SURGE_BEST = new Set(Object.values(A).filter((a) => a.forJob && a.isGcd && wsPot(a) === TOP_POT).map((a) => a.id));
+      // 使わずに切れたら数える実行可（と竜眼）
+      const PROCS = ['nastrondReady', 'starcrossReady', 'mirageReady', 'riseReady', 'draconianFire'];
+      const gauges = { 天竜眼: { get: () => S().focus, set: (v) => { S().focus = v; }, max: FOCUS_MAX } };
+      const comboAt = (...ids) => { const s = S(); return s.combo != null && ids.includes(s.combo) && s.t <= s.comboUntil; };
+      function grant(k, ms) { R.buff(k, ms); S().procOn[k] = true; }
+      function consume(k) { S().procOn[k] = false; R.remove(k); }
+      const J = {
+        ids: ID, STATUS,
+        charges: descCharges(A), // ライフサージ・ウィンググライド・トゥルーノース「最大チャージ数：2」
+        prepull: new Set([ID.TN, ID.ELUSIVE]),
+        comboStarters: new Set([ID.TRUE, ID.RAIDEN, ID.DOOM, ID.DRACONIAN]),
+        procStatus: { 6: 'talonUp', 13: 'mirageReady', 32: 'draconianFire', 161: 'riseReady', 162: 'starcrossReady', 187: 'nastrondReady' },
+        ownDots: true, // 桜華繚乱の継続ダメージは「コンボボーナス」なので、コンボのときだけ付ける
+        initState(s) {
+          s.focus = 0; s.procOn = {};
+          s.stats.focusOver = 0; s.stats.fireLost = 0; s.stats.procLost = 0; s.stats.surge = 0; s.stats.surgeGood = 0; s.stats.wyrmwind = 0; s.stats.lotd = 0;
+        },
+        gaugeCols: [['天竜眼', (s) => s.focus], ['紅の竜血', (s) => (R.has('lotd') ? `${Math.ceil((s.st.lotd.until - s.t) / 1000)} 秒` : '')]],
+        tracked: [['竜槍', 'powerSurge', '#7fb4ff', '切れる前にスパイラルブロウのコンボで更新（30 秒）'], ['桜華繚乱', 'chaotic', '#ff7a6a', 'スパイラルブロウ → 桜華繚乱のコンボで付け直す（24 秒）']],
+        speed: () => 1,
+        comboFree: () => false,
+        // 竜眼の間はトゥルースラスト → 竜眼雷電・ドゥームスパイク → 竜眼蒼穹。竜牙竜爪・竜尾大車輪をコンボで使った直後は雲蒸竜変
+        resolve: (id) => tooltipResolve(R, J, id),
+        blocked(id) {
+          const a = A[id];
+          if (!a) return null;
+          if (id === ID.DRAKESBANE && !comboAt(ID.FANG, ID.WHEELING)) return '竜牙竜爪か竜尾大車輪をコンボで使った直後だけ使えます';
+          if (id === ID.MIRAGE && !has('mirageReady')) return '「ミラージュダイブ実行可」の効果中ではありません';
+          if ([ID.RAIDEN, ID.DRACONIAN, ID.NASTROND, ID.RISE, ID.STARCROSS, ID.STARDIVER, ID.WYRMWIND].includes(id)) return tooltipBlocked(R, J, a, gauges);
+          return null;
+        },
+        castMs: (a, base) => base,
+        effects(id, ok) {
+          const a = A[id], s = S();
+          // ライフサージ: 次のウェポンスキル 1 回
+          if (a.isGcd && a.pot?.base && has('lifeSurge')) {
+            R.remove('lifeSurge'); s.stats.surge++;
+            if (SURGE_BEST.has(id)) s.stats.surgeGood++;
+            else R.addLog('warn', `ライフサージを${a.name}に使いました（${[...SURGE_BEST].map((x) => A[x].name).join('・')}がおすすめ）`);
+          }
+          // 竜眼: 竜眼雷電・竜眼蒼穹で使う。ほかの近接のウェポンスキルでは消える
+          if (a.isGcd && id !== ID.PIERCING && has('draconianFire')) {
+            if (id !== ID.RAIDEN && id !== ID.DRACONIAN) { s.stats.fireLost++; R.addLog('warn', `竜眼が${a.name}で消えました（先に竜眼雷電を）`); R.ev('ミス', { action: a.name, result: '竜眼を無駄に', note: '竜眼雷電の前に別のウェポンスキル' }); }
+            consume('draconianFire');
+          }
+          if ((id === ID.DRAKESBANE || id === ID.COERTHAN) && ok) grant('draconianFire', grantMs(id, '竜眼', 30));
+          if ((id === ID.SPIRAL || id === ID.SONIC) && ok) R.buff('powerSurge', grantMs(id, '竜槍', 30));
+          if (id === ID.RAIDEN || id === ID.DRACONIAN) {
+            if (s.focus >= FOCUS_MAX) { s.stats.focusOver++; R.addLog('warn', '天竜眼があふれました（2 つで天竜点睛）'); }
+            s.focus = Math.min(FOCUS_MAX, s.focus + 1);
+          }
+          if (id === ID.WYRMWIND) { s.focus -= A[id].eff?.cost?.n ?? 2; s.stats.wyrmwind++; }
+          // 桜華繚乱の継続ダメージ（コンボボーナス）
+          if (id === ID.CHAOTIC && ok && a.pot?.dot) {
+            s.dot = { next: s.t + 3000, until: s.t + a.pot.dot.sec * 1000, potency: a.pot.dot.potency, mult: R.mult, name: a.name };
+            R.buff('chaotic', a.pot.dot.sec * 1000);
+          }
+          // アビリティ
+          if (id === ID.LANCE_CHARGE) R.buff('lanceCharge', (a.eff?.dmgUp?.sec ?? 20) * 1000);
+          if (id === ID.LITANY) R.buff('litany', numIn(a.desc, /効果時間：(\d+)秒/, 20) * 1000);
+          if (id === ID.LIFE_SURGE) R.buff('lifeSurge', SURGE_MS);
+          if (id === ID.GEIRSKOGUL) { R.buff('lotd', LOTD_MS); grant('nastrondReady', grantMs(id, 'ナーストレンド実行可', 20)); s.stats.lotd++; Au()?.surge(); }
+          if (id === ID.NASTROND) consume('nastrondReady');
+          if (id === ID.STARDIVER) { grant('starcrossReady', grantMs(id, 'スタークロッサー実行可', 20)); R.leap?.(3.2, 1); Au()?.surge(); }
+          if (id === ID.STARCROSS) consume('starcrossReady');
+          if (id === ID.HIGH_JUMP) { grant('mirageReady', grantMs(id, 'ミラージュダイブ実行可', 15)); R.leap?.(2.4, 0.8); }
+          if (id === ID.MIRAGE) consume('mirageReady');
+          if (id === ID.DRAGONFIRE) { grant('riseReady', grantMs(id, 'ドラゴンライズ実行可', 30)); R.leap?.(2.8, 0.9); }
+          if (id === ID.RISE) consume('riseReady');
+          if (id === ID.ELUSIVE) { R.buff('talonUp', grantMs(id, 'ピアシングタロン効果アップ', 15)); R.leap?.(1.6, 0.6); }
+          if (id === ID.PIERCING) R.remove('talonUp');
+          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
+          if (id === ID.TN) R.buff('tn', 10000);
+        },
+        tick() {
+          const s = S();
+          if (!has('lotd') && has('starcrossReady')) R.remove('starcrossReady'); // 紅の竜血が切れると消える
+          // 使わずに切れた実行可
+          for (const k of PROCS) {
+            if (!s.procOn[k] || has(k)) continue;
+            s.procOn[k] = false;
+            if (s.phase !== 'combat') continue;
+            if (k === 'draconianFire') s.stats.fireLost++; else s.stats.procLost++;
+            R.addLog('ng', `${STATUS[k].name}を使わずに切らしました`); R.ev('ミス', { result: '効果切れ', note: `${STATUS[k].name}を使わなかった` });
+          }
+        },
+        highlightOk: () => true,
+        glow: (id) => id === ID.WYRMWIND && S().focus >= FOCUS_MAX,
+        // 方向指定のガイド: 次の方向指定の技（竜牙竜爪 = 側面、桜華繚乱・竜尾大車輪 = 背面）。ヘヴンスラストの次は竜牙竜爪なので側面
+        guide(highlight) {
+          for (const id of [ID.CHAOTIC, ID.WHEELING, ID.FANG]) if (highlight(id)) return A[id].positional;
+          if (highlight(ID.HEAVENS)) return A[ID.FANG].positional;
+          return null;
+        },
+        positional: () => has('tn') && 'トゥルーノース',
+        fxColor: (id) => ([ID.GEIRSKOGUL, ID.NASTROND, ID.STARDIVER, ID.STARCROSS, ID.DRAGONFIRE, ID.RISE].includes(id) ? 'kenki' : [ID.RAIDEN, ID.DRACONIAN, ID.WYRMWIND].includes(id) ? 'shoha' : [ID.CHAOTIC, ID.DRAKESBANE].includes(id) ? 'ka' : [ID.HIGH_JUMP, ID.MIRAGE].includes(id) ? 'setsu' : 'steel'),
+        fxPower: (id) => (id === ID.STARCROSS || id === ID.STARDIVER ? 1.6 : id === ID.NASTROND || id === ID.RISE || id === ID.WYRMWIND ? 1.4 : 1),
+        fxCount: (id) => (id === ID.STARCROSS ? 3 : id === ID.STARDIVER ? 2 : 1),
+        castColor: () => 'steel',
+        gcdColor: (id) => (id === ID.RAIDEN || id === ID.DRACONIAN ? '#b070ff' : id === ID.DRAKESBANE ? '#ff78b6' : null),
+        hotOgcd: (id) => [ID.LANCE_CHARGE, ID.LITANY, ID.GEIRSKOGUL, ID.STARDIVER].includes(id),
+        weapon: 'slash',
+        tipCost: (id) => (id === ID.WYRMWIND ? ['天竜眼', A[id].eff?.cost?.n ?? 2] : null),
+        report(s) {
+          const issues = [], metrics = [], goods = [];
+          const best = [...SURGE_BEST].map((x) => A[x].name).join('・');
+          if (s.stats.fireLost) issues.push({ loss: s.stats.fireLost * 3, rate: 'bad', title: `使わずに消えた竜眼 ${s.stats.fireLost}`, advice: '雲蒸竜変のあとの GCD は竜眼雷電（トゥルースラストのボタン）。ほかのウェポンスキルを先に使うと消える' });
+          if (s.stats.procLost) issues.push({ loss: s.stats.procLost * 3, rate: 'bad', title: `使わずに切らした実行可 ${s.stats.procLost}`, advice: '紅の竜血の間にナーストレンドとスターダイバー → スタークロッサー。ハイジャンプのあとはミラージュダイブ、ドラゴンダイブのあとはドラゴンライズ' });
+          if (s.stats.focusOver) issues.push({ loss: s.stats.focusOver * 2, rate: 'ok', title: `天竜眼のあふれ ${s.stats.focusOver}`, advice: '天竜眼が 2 つたまったら天竜点睛（光っている）を使う' });
+          if (s.stats.surge > s.stats.surgeGood) issues.push({ loss: (s.stats.surge - s.stats.surgeGood) * 1.5, rate: 'ok', title: `ライフサージを弱い技に ${s.stats.surge - s.stats.surgeGood} 回`, advice: `ライフサージは${best}の直前に使う` });
+          metrics.push({ label: 'ライフサージ', value: `${s.stats.surge} 回（${best} ${s.stats.surgeGood}）`, rate: null });
+          metrics.push({ label: '天竜点睛', value: `${s.stats.wyrmwind} 回（あふれ ${s.stats.focusOver}）`, rate: null });
+          metrics.push({ label: '紅の竜血', value: `${s.stats.lotd} 回`, rate: null });
+          if (!s.stats.fireLost && !s.stats.procLost && s.stats.gcds > 10) goods.push('竜眼・実行可を無駄にしていない');
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.fireLost * 10 - s.stats.procLost * 10 - s.stats.focusOver * 5), posAdvice: '竜牙竜爪は側面、桜華繚乱・竜尾大車輪は背面。ヘヴンスラストの間に側面へ、スパイラルブロウの間に背面へ回っておく。間に合わないときはトゥルーノース', castAdvice: '', rangeAdvice: '離れたらピアシングタロン（イルーシブジャンプのあとは威力が上がる）でつなぎ、ウィンググライドで戻る', comboAdvice: 'スラストラッシュ → ヘヴンスラスト → 竜牙竜爪 → 雲蒸竜変 と、スパイラルブロウ → 桜華繚乱 → 竜尾大車輪 → 雲蒸竜変 を交互に（始めはトゥルースラスト / 竜眼雷電）' };
+        },
+        howto: '竜騎士: トゥルースラスト（竜眼の間は竜眼雷電）から 2 本のコンボを交互に。スラストラッシュ → ヘヴンスラスト → 竜牙竜爪（側面）、スパイラルブロウ → 桜華繚乱（背面）→ 竜尾大車輪（背面）。最後は雲蒸竜変（竜牙竜爪・竜尾大車輪のボタンが変わる）。天竜眼 2 で天竜点睛。ゲイルスコグルで紅の竜血 → ナーストレンド・スターダイバー → スタークロッサー。ハイジャンプ → ミラージュダイブ、ドラゴンダイブ → ドラゴンライズ。',
+        gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'DRG'),
+        gaugeDefault: { JobHudDRG0: { x: 66, y: 64, anchor: 4, scale: 1 } },
+      };
+      return J;
+    },
+  };
+
+  Object.assign(window.MockJobs, { MNK, NIN, DRG });
 })();

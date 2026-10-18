@@ -86,6 +86,12 @@ window.MOCK_DATA = {
    "name": "忍者",
    "icon": "../public/icons/jobs/NIN.png",
    "role": "melee"
+  },
+  {
+   "abbr": "DRG",
+   "name": "竜騎士",
+   "icon": "../public/icons/jobs/DRG.png",
+   "role": "melee"
   }
  ],
  "jobs": {
@@ -79311,6 +79317,4680 @@ window.MOCK_DATA = {
     ],
     "7403": [
      36961
+    ]
+   },
+   "splitDetected": []
+  },
+  "DRG": {
+   "job": {
+    "abbr": "DRG",
+    "name": "竜騎士",
+    "icon": "../public/icons/jobs/DRG.png",
+    "level": 100,
+    "role": "melee"
+   },
+   "guide": {
+    "traits": [
+     {
+      "en": "Enhanced Jump",
+      "level": null,
+      "desc": "ジャンプの威力を320に上昇させる。"
+     },
+     {
+      "en": "Life of the Dragon",
+      "level": null,
+      "desc": "自身に付与される「蒼の竜血」が「紅の竜血」に変化する。\n紅の竜血効果：自身の与ダメージを15％上昇させる。\nさらに、自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒\n発動条件：ゲイルスコグルの命中時"
+     },
+     {
+      "en": "Jump Mastery",
+      "level": null,
+      "desc": "ジャンプがハイジャンプに変化する。"
+     },
+     {
+      "en": "Lance Mastery",
+      "level": null,
+      "desc": "竜牙竜爪または竜尾大車輪の命中直後に雲蒸竜変の実行に成功すると、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はトゥルースラストが「竜眼雷電」に変化する。\nさらに、特定のアクションの威力を上昇させる。\n\nトゥルースラストの威力：230\nボーパルスラストの威力：130\nピアシングタロンの威力：200\nピアシングタロン効果アップ時のピアシングタロンの威力：350\nディセムボウルの威力：140"
+     },
+     {
+      "en": "Enhanced Coerthan Torment",
+      "level": null,
+      "desc": "クルザントーメントのコンボ成功時に、自身に「竜眼」を付与する。\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n効果時間中はドゥームスパイクが「竜眼蒼穹」に変化する。"
+     },
+     {
+      "en": "Enhanced Winged Glide",
+      "level": null,
+      "desc": "ウィンググライドがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Lance Mastery II",
+      "level": null,
+      "desc": "フルスラストがヘヴンスラストに変化し、桜華狂咲が桜華繚乱に変化する。\nさらに、雲蒸竜変の威力を400に上昇させる。"
+     },
+     {
+      "en": "Enhanced Life Surge",
+      "level": null,
+      "desc": "ライフサージがチャージアクションに変化する。\n最大チャージ数：2"
+     },
+     {
+      "en": "Lance Mastery III",
+      "level": null,
+      "desc": "竜眼雷電および竜眼蒼穹の実行に成功すると、自身に「天竜眼」を付与する。\n最大スタック数：2\nさらに、特定のアクションの威力を上昇させる。\n\nゲイルスコグルの威力：280\nナーストレンドの威力：720"
+     },
+     {
+      "en": "Enhanced Dragonfire Dive",
+      "level": null,
+      "desc": "自身に「ドラゴンライズ実行可」が付与される。\n効果時間：30秒\n発動条件：ドラゴンダイブ実行時"
+     },
+     {
+      "en": "Melee Mastery",
+      "level": null,
+      "desc": "特定のアクションの威力を上昇させる。\n\n竜牙竜爪の威力：140\n竜尾大車輪の威力：140\n雲蒸竜変の威力：460\n竜眼雷電の威力：320\nスターダイバーの威力：840\nヘヴンスラストの威力：160\n桜華繚乱の威力：140\n天竜点睛の威力：440"
+     },
+     {
+      "en": "Lance Mastery IV",
+      "level": null,
+      "desc": "ボーパルスラストがスラストラッシュに、ディセムボウルがスパイラルブロウに変化する。"
+     },
+     {
+      "en": "Enhanced Stardiver",
+      "level": null,
+      "desc": "自身に「スタークロッサー実行可」が付与される。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：スターダイバー実行時"
+     },
+     {
+      "en": "Enhanced Second Wind",
+      "level": null,
+      "desc": "内丹の回復力を800に上昇させる。"
+     },
+     {
+      "en": "Enhanced Feint",
+      "level": null,
+      "desc": "牽制の効果時間を15秒に延長する。"
+     }
+    ],
+    "pets": []
+   },
+   "actions": {
+    "75": {
+     "id": 75,
+     "name": "トゥルースラスト",
+     "desc": "対象に物理攻撃。　威力：230",
+     "icon": "../public/fankit/battle-pve/07_DRG/True_Thrust.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 1,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 230
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "83": {
+     "id": 83,
+     "name": "ライフサージ",
+     "desc": "効果時間中に実行する1回のウェポンスキルが必ずクリティカルヒットし、かつＨＰを吸収する。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nこの効果は、継続ダメージなどのステータスには適用されない。\n効果時間：5秒\n最大チャージ数：2",
+     "icon": "../public/fankit/battle-pve/07_DRG/Life_Surge.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 15,
+     "maxCharges": 1,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 6,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": true,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "85": {
+     "id": 85,
+     "name": "ランスチャージ",
+     "desc": "一定時間、自身の与ダメージを10％上昇させる。\n効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Lance_Charge.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 10,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 30,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "dmgUp": {
+       "pct": 10,
+       "sec": 20
+      }
+     },
+     "replaces": []
+    },
+    "86": {
+     "id": 86,
+     "name": "ドゥームスパイク",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：110",
+     "icon": "../public/fankit/battle-pve/07_DRG/Doom_Spike.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 40,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 110
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "90": {
+     "id": 90,
+     "name": "ピアシングタロン",
+     "desc": "対象に遠隔物理攻撃。　威力：200\nピアシングタロン効果アップ時威力：350",
+     "icon": "../public/fankit/battle-pve/07_DRG/Piercing_Talon.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 15,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 6,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 200,
+      "cond": [
+       {
+        "status": "ピアシングタロン効果アップ",
+        "potency": 350
+       }
+      ]
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "94": {
+     "id": 94,
+     "name": "イルーシブジャンプ",
+     "desc": "自身の15m後方に大きくジャンプする。\n追加効果：自身に「ピアシングタロン効果アップ」を付与する。\n効果時間：15秒\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Elusive_Jump.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 6,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 35,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 15,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "grant": [
+       {
+        "status": "ピアシングタロン効果アップ",
+        "sec": 15,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "96": {
+     "id": 96,
+     "name": "ドラゴンダイブ",
+     "desc": "対象にジャンプで近づきつつ火属性範囲物理攻撃。　威力：500\n2体目以降の対象への威力は50％減少する。\n追加効果：自身に「ドラゴンライズ実行可」を付与する。\n効果時間：30秒\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Dragonfire_Dive.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 21,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": true,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 500
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ドラゴンライズ実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "3554": {
+     "id": 3554,
+     "name": "竜牙竜爪",
+     "desc": "対象に物理攻撃。　威力：140\n側面攻撃時威力：180\nコンボ条件：ヘヴンスラスト　コンボ時威力：300\nコンボ時かつ側面攻撃時威力：340",
+     "icon": "../public/fankit/battle-pve/07_DRG/Fang_and_Claw.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      84,
+      25771
+     ],
+     "preservesCombo": false,
+     "level": 56,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "flank",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140,
+      "flank": 180,
+      "combo": 300,
+      "comboFlank": 340
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "3555": {
+     "id": 3555,
+     "name": "ゲイルスコグル",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：280\n2体目以降の対象への威力は50％減少する。\n追加効果：自身が「紅の竜血」状態に変化する。\n効果時間：20秒\n紅の竜血効果：自身の与ダメージを15％上昇させる。\n追加効果：自身に「ナーストレンド実行可」を付与する。\n効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Geirskogul.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 11,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 60,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 15,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 15,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 280
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ナーストレンド実行可",
+        "sec": 20,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "3556": {
+     "id": 3556,
+     "name": "竜尾大車輪",
+     "desc": "対象に物理攻撃。　威力：140\n背面攻撃時威力：180\nコンボ条件：桜華繚乱　コンボ時威力：300\nコンボ時かつ背面攻撃時威力：340",
+     "icon": "../public/fankit/battle-pve/07_DRG/Wheeling_Thrust.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      88,
+      25772
+     ],
+     "preservesCombo": false,
+     "level": 58,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "rear",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140,
+      "rear": 180,
+      "combo": 300,
+      "comboRear": 340
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "3557": {
+     "id": 3557,
+     "name": "バトルリタニー",
+     "desc": "一定時間、自身と周囲のパーティメンバーのクリティカル発動率を10％上昇させる。　効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Battle_Litany.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 52,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 30,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7397": {
+     "id": 7397,
+     "name": "ソニックスラスト",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：100\nコンボ条件：ドゥームスパイクおよび竜眼蒼穹\nコンボ時威力：120\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Sonic_Thrust.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      86,
+      25770
+     ],
+     "preservesCombo": false,
+     "level": 62,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 100,
+      "combo": 120
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "竜槍",
+        "sec": 30,
+        "stacks": null,
+        "combo": true
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "7399": {
+     "id": 7399,
+     "name": "ミラージュダイブ",
+     "desc": "対象に物理攻撃。　威力：380\n発動条件：ジャンプ、ハイジャンプの実行後に付与される「ミラージュダイブ実行可」効果中",
+     "icon": "../public/fankit/battle-pve/07_DRG/Mirage_Dive.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 1,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 68,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 13,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 380
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "7400": {
+     "id": 7400,
+     "name": "ナーストレンド",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：720\n2体目以降の対象への威力は50％減少する。\n発動条件：「ナーストレンド実行可」効果中",
+     "icon": "../public/fankit/battle-pve/07_DRG/Nastrond.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 2000,
+     "cooldownGroup": 4,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 70,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 187,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 15,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 15,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 720
+     },
+     "eff": {
+      "requires": "ナーストレンド実行可"
+     },
+     "replaces": []
+    },
+    "7541": {
+     "id": 7541,
+     "name": "内丹",
+     "desc": "自身のＨＰを回復する。　回復力：800",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/Second_Wind.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 8,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": {
+      "heal": 800,
+      "party": false
+     },
+     "replaces": []
+    },
+    "7542": {
+     "id": 7542,
+     "name": "ブラッドバス",
+     "desc": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。　効果時間：20秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/Bloodbath.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 47,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 12,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7546": {
+     "id": 7546,
+     "name": "トゥルーノース",
+     "desc": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。　効果時間：10秒\n最大チャージ数：2",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/True_North.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 45000,
+     "cooldownGroup": 46,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 50,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7548": {
+     "id": 7548,
+     "name": "アームズレングス",
+     "desc": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/Arm's_Length.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 32,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7549": {
+     "id": 7549,
+     "name": "牽制",
+     "desc": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。　効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/Feint.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 90000,
+     "cooldownGroup": 48,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 22,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7559": {
+     "id": 7559,
+     "name": "堅実魔",
+     "desc": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。　効果時間：6秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Surecast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 49,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 44,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7561": {
+     "id": 7561,
+     "name": "迅速魔",
+     "desc": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。　効果時間：10秒",
+     "icon": "../public/fankit/battle-pve/14_BLM/Role_Actions/Swiftcast.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 18,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7571": {
+     "id": 7571,
+     "name": "救出",
+     "desc": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "icon": "../public/fankit/battle-pve/18_WHM/Role_Actions/Rescue.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 50,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 48,
+     "forJob": false,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": false,
+     "toParty": true,
+     "mp": 0,
+     "range": 30,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "7863": {
+     "id": 7863,
+     "name": "レッグスウィープ",
+     "desc": "対象をスタンさせる。　効果時間：3秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Role_Actions/Leg_Sweep.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 40000,
+     "cooldownGroup": 44,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 10,
+     "forJob": true,
+     "isRole": true,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "16472": {
+     "id": 16472,
+     "name": "影身具現",
+     "desc": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+     "icon": "../public/fankit/battle-pve/03_DRK/Living_Shadow.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 120000,
+     "cooldownGroup": 22,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": false,
+     "toSelf": true,
+     "toParty": false,
+     "mp": 0,
+     "range": 0,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 420
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ディセスティーム実行可",
+        "sec": 30,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "16477": {
+     "id": 16477,
+     "name": "クルザントーメント",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：100\nコンボ条件：ソニックスラスト　コンボ時威力：150\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Coerthan_Torment.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      7397
+     ],
+     "preservesCombo": false,
+     "level": 72,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 100,
+      "combo": 150
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "竜眼",
+        "sec": 30,
+        "stacks": null,
+        "combo": true
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "16478": {
+     "id": 16478,
+     "name": "ハイジャンプ",
+     "desc": "対象にジャンプで近づきつつ物理攻撃。　威力：400\n攻撃後は元の位置に戻る。\n追加効果：自身に「ミラージュダイブ実行可」を付与する。\n効果時間：15秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/High_Jump.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 8,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 74,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 400
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "ミラージュダイブ実行可",
+        "sec": 15,
+        "stacks": null,
+        "combo": false
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "16479": {
+     "id": 16479,
+     "name": "竜眼雷電",
+     "desc": "対象に物理攻撃。　威力：320\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとトゥルースラストが竜眼雷電に変化する。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Raiden_Thrust.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 76,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 32,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 320
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "天竜眼",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "竜眼"
+     },
+     "replaces": [
+      75
+     ]
+    },
+    "16480": {
+     "id": 16480,
+     "name": "スターダイバー",
+     "desc": "対象にジャンプで近づきつつ火属性範囲物理攻撃。　威力：840\n2体目以降の対象への威力は40％減少する。\n追加効果：自身に「スタークロッサー実行可」を付与する。\n効果時間：20秒\nこの効果は「紅の竜血」の効果が切れると解除される。\n発動条件：「紅の竜血」効果中\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Stardiver.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 30000,
+     "cooldownGroup": 7,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 80,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": true,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 840
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "スタークロッサー実行可",
+        "sec": 20,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "紅の竜血"
+     },
+     "replaces": []
+    },
+    "25757": {
+     "id": 25757,
+     "name": "シャドウブリンガー",
+     "desc": "対象に向かって無属性前方直線範囲魔法攻撃。　威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+     "icon": "../public/fankit/battle-pve/03_DRK/Shadowbringer.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 23,
+     "maxCharges": 2,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": false,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": true,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 600
+     },
+     "eff": {
+      "requires": "暗黒"
+     },
+     "replaces": []
+    },
+    "25770": {
+     "id": 25770,
+     "name": "竜眼蒼穹",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：130\n追加効果：自身に「天竜眼」を付与する。\n発動条件：「竜眼」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとドゥームスパイクが竜眼蒼穹に変化する。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Draconian_Fury.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": false,
+     "level": 82,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": 32,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 10,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 10,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 130
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "天竜眼",
+        "sec": null,
+        "stacks": null,
+        "combo": false
+       }
+      ],
+      "requires": "竜眼"
+     },
+     "replaces": [
+      86
+     ]
+    },
+    "25771": {
+     "id": 25771,
+     "name": "ヘヴンスラスト",
+     "desc": "対象に物理攻撃。　威力：160\nコンボ条件：スラストラッシュ　コンボ時威力：460",
+     "icon": "../public/fankit/battle-pve/07_DRG/Heavens'_Thrust.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      78,
+      36954
+     ],
+     "preservesCombo": false,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 160,
+      "combo": 460
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "25772": {
+     "id": 25772,
+     "name": "桜華繚乱",
+     "desc": "対象に物理攻撃。　威力：140\n背面攻撃時威力：180\nコンボ条件：スパイラルブロウ　コンボ時威力：300\nコンボ時かつ背面攻撃時威力：340\nコンボボーナス：対象に継続ダメージを付与する。\n威力：45　効果時間：24秒",
+     "icon": "../public/fankit/battle-pve/07_DRG/Chaotic_Spring.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      87,
+      36955
+     ],
+     "preservesCombo": false,
+     "level": 86,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": "rear",
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140,
+      "rear": 180,
+      "combo": 300,
+      "comboRear": 340,
+      "dot": {
+       "potency": 45,
+       "sec": 24
+      }
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "25773": {
+     "id": 25773,
+     "name": "天竜点睛",
+     "desc": "対象に向かって前方直線範囲物理攻撃。　威力：440\n2体目以降の対象への威力は50％減少する。\n発動条件：「天竜眼」2",
+     "icon": "../public/fankit/battle-pve/07_DRG/Wyrmwind_Thrust.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 10000,
+     "cooldownGroup": 5,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 90,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 4,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 15,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 15,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 440
+     },
+     "eff": {
+      "cost": {
+       "gauge": "天竜眼",
+       "n": 2
+      }
+     },
+     "replaces": []
+    },
+    "36951": {
+     "id": 36951,
+     "name": "ウィンググライド",
+     "desc": "敵単体を対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Winged_Glide.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 60000,
+     "cooldownGroup": 20,
+     "maxCharges": 1,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 45,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": true,
+     "toZone": null,
+     "pot": null,
+     "eff": null,
+     "replaces": []
+    },
+    "36952": {
+     "id": 36952,
+     "name": "雲蒸竜変",
+     "desc": "対象に物理攻撃。　威力：460\nコンボ条件：竜尾大車輪および竜牙竜爪\nコンボボーナス：自身に「竜眼」を付与する。\n効果時間：30秒\n発動条件：竜牙竜爪または竜尾大車輪をコンボ状態で実行したとき\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Drakesbane.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      3554,
+      3556
+     ],
+     "preservesCombo": false,
+     "level": 64,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 460
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "竜眼",
+        "sec": 30,
+        "stacks": null,
+        "combo": true
+       }
+      ]
+     },
+     "replaces": [
+      3554,
+      3556
+     ]
+    },
+    "36953": {
+     "id": 36953,
+     "name": "ドラゴンライズ",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：550\n2体目以降の対象への威力は50％減少する。\n発動条件：「ドラゴンライズ実行可」効果中",
+     "icon": "../public/fankit/battle-pve/07_DRG/Rise_of_the_Dragon.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 2,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 92,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 161,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 550
+     },
+     "eff": {
+      "requires": "ドラゴンライズ実行可"
+     },
+     "replaces": []
+    },
+    "36954": {
+     "id": 36954,
+     "name": "スラストラッシュ",
+     "desc": "対象に物理攻撃。　威力：130\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：340",
+     "icon": "../public/fankit/battle-pve/07_DRG/Lance_Barrage.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      75,
+      16479
+     ],
+     "preservesCombo": false,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 130,
+      "combo": 340
+     },
+     "eff": null,
+     "replaces": []
+    },
+    "36955": {
+     "id": 36955,
+     "name": "スパイラルブロウ",
+     "desc": "対象に物理攻撃。　威力：140\nコンボ条件：トゥルースラストおよび竜眼雷電\nコンボ時威力：300\nコンボボーナス：自身に「竜槍」を付与する。\n効果時間：30秒\n竜槍効果：自身の与ダメージを10％上昇させる。",
+     "icon": "../public/fankit/battle-pve/07_DRG/Spiral_Blow.png",
+     "iconFramed": true,
+     "isGcd": true,
+     "castMs": 0,
+     "recastMs": 2500,
+     "cooldownGroup": 58,
+     "maxCharges": 0,
+     "comboFrom": [
+      75,
+      16479
+     ],
+     "preservesCombo": false,
+     "level": 96,
+     "forJob": true,
+     "isRole": false,
+     "category": 3,
+     "proc": null,
+     "procStatus": null,
+     "shape": 1,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": -1,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 0,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 140,
+      "combo": 300
+     },
+     "eff": {
+      "grant": [
+       {
+        "status": "竜槍",
+        "sec": 30,
+        "stacks": null,
+        "combo": true
+       }
+      ]
+     },
+     "replaces": []
+    },
+    "36956": {
+     "id": 36956,
+     "name": "スタークロッサー",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1000\n2体目以降の対象への威力は40％減少する。\n発動条件：「スタークロッサー実行可」効果中",
+     "icon": "../public/fankit/battle-pve/07_DRG/Starcross.png",
+     "iconFramed": true,
+     "isGcd": false,
+     "castMs": 0,
+     "recastMs": 1000,
+     "cooldownGroup": 3,
+     "maxCharges": 0,
+     "comboFrom": [],
+     "preservesCombo": true,
+     "level": 100,
+     "forJob": true,
+     "isRole": false,
+     "category": 4,
+     "proc": 162,
+     "procStatus": null,
+     "shape": 2,
+     "hostile": true,
+     "toSelf": false,
+     "toParty": false,
+     "mp": 0,
+     "range": 20,
+     "crit": false,
+     "magic": false,
+     "aspect": null,
+     "effectRange": 5,
+     "ground": false,
+     "positional": null,
+     "dash": false,
+     "backstep": 0,
+     "forward": 0,
+     "toAlly": false,
+     "toZone": null,
+     "pot": {
+      "base": 1000
+     },
+     "eff": {
+      "requires": "スタークロッサー実行可"
+     },
+     "replaces": []
+    }
+   },
+   "statuses": {
+    "2959": {
+     "id": 2959,
+     "name": "奥義波切実行可",
+     "icon": "../public/icons/statuses/213313.png"
+    },
+    "3855": {
+     "id": 3855,
+     "name": "残心実行可",
+     "icon": "../public/icons/statuses/213318.png"
+    },
+    "3856": {
+     "id": 3856,
+     "name": "天道",
+     "icon": "../public/icons/statuses/213319.png"
+    }
+   },
+   "statusIcons": {
+    "ブラッドバス": "../public/icons/statuses/213913.png",
+    "ライフサージ": "../public/icons/statuses/210302.png",
+    "桜華狂咲": "../public/icons/statuses/210307.png",
+    "ディセムボウル": "../public/icons/statuses/212576.png",
+    "シールドウォール": "../public/icons/statuses/216306.png",
+    "ストロングホールド": "../public/icons/statuses/216306.png",
+    "ラストバスティオン": "../public/icons/statuses/216306.png",
+    "叱咤": "../public/icons/statuses/210608.png",
+    "バトルリタニー": "../public/icons/statuses/212578.png",
+    "原初の大地": "../public/icons/statuses/216306.png",
+    "ダークフォース": "../public/icons/statuses/216306.png",
+    "竜の右眼": "../public/icons/statuses/212581.png",
+    "竜の左眼": "../public/icons/statuses/212582.png",
+    "牽制": "../public/icons/statuses/213904.png",
+    "アームズレングス": "../public/icons/statuses/213915.png",
+    "ミラージュダイブ実行可": "../public/icons/statuses/212583.png",
+    "トゥルーノース": "../public/icons/statuses/213903.png",
+    "竜眼": "../public/icons/statuses/212585.png",
+    "ランスチャージ": "../public/icons/statuses/210304.png",
+    "ピアシングタロン効果アップ": "../public/icons/statuses/212590.png",
+    "ソウルガンメタル": "../public/icons/statuses/216306.png",
+    "捨身": "../public/icons/statuses/210304.png",
+    "フェターウォード": "../public/icons/statuses/214867.png",
+    "アームズレングス：効果": "../public/icons/statuses/214885.png",
+    "桜華繚乱": "../public/icons/statuses/212586.png",
+    "竜槍": "../public/icons/statuses/210303.png",
+    "ヘヴンスラスト実行可": "../public/icons/statuses/212585.png",
+    "紅の竜血": "../public/icons/statuses/214935.png",
+    "天竜眼": "../public/icons/statuses/214936.png",
+    "ホリッドロア": "../public/icons/statuses/214938.png",
+    "スカイハイ": "../public/icons/statuses/214939.png",
+    "スカイシャッター": "../public/icons/statuses/214940.png",
+    "イルーシブジャンプ": "../public/icons/statuses/214937.png",
+    "ナーストレンド実行可": "../public/icons/statuses/212589.png",
+    "ドラゴンライズ実行可": "../public/icons/statuses/212587.png",
+    "スタークロッサー実行可": "../public/icons/statuses/212588.png",
+    "スウィフト": "../public/icons/statuses/216678.png",
+    "ランパート": "../public/icons/statuses/210152.png",
+    "ファイト・オア・フライト": "../public/icons/statuses/210155.png",
+    "アイアンウィル": "../public/icons/statuses/212506.png",
+    "スリル・オブ・バトル": "../public/icons/statuses/210254.png",
+    "ホルムギャング": "../public/icons/statuses/210255.png",
+    "ディフェンダー": "../public/icons/statuses/212551.png",
+    "踏鳴": {
+     "icon": "../public/icons/statuses/217564.png",
+     "max": 3,
+     "base": 217564
+    },
+    "ホークアイ": "../public/icons/statuses/210351.png",
+    "猛者の撃": "../public/icons/statuses/210354.png",
+    "乱れ撃ち": "../public/icons/statuses/210356.png",
+    "賢人のバラード": "../public/icons/statuses/212603.png",
+    "軍神のパイオン": "../public/icons/statuses/212605.png",
+    "バトルボイス": "../public/icons/statuses/212601.png",
+    "ケアルラ効果アップ": "../public/icons/statuses/210410.png",
+    "神速魔": "../public/icons/statuses/212627.png",
+    "堅実魔": "../public/icons/statuses/210452.png",
+    "ファイガ効果アップ": "../public/icons/statuses/210460.png",
+    "迅速魔": "../public/icons/statuses/210454.png",
+    "マバリア": "../public/icons/statuses/210456.png",
+    "サークル・オブ・ドゥーム": "../public/icons/statuses/210158.png",
+    "エーテルフロー": {
+     "icon": "../public/icons/statuses/210501.png",
+     "max": 3,
+     "base": 210501
+    },
+    "フェイイルミネーション": "../public/icons/statuses/212828.png",
+    "ロイヤルガード": "../public/icons/statuses/213603.png",
+    "残影": "../public/icons/statuses/210605.png",
+    "印": "../public/icons/statuses/212901.png",
+    "活殺自在": "../public/icons/statuses/212902.png",
+    "土遁の術": "../public/icons/statuses/212904.png",
+    "かくれる": "../public/icons/statuses/210607.png",
+    "黒魔紋": "../public/icons/statuses/212653.png",
+    "ブラッドウェポン": {
+     "icon": "../public/icons/statuses/217926.png",
+     "max": 5,
+     "base": 217926
+    },
+    "グリットスタンス": "../public/icons/statuses/213108.png",
+    "ダークマインド": "../public/icons/statuses/213114.png",
+    "ソルトアース": "../public/icons/statuses/213104.png",
+    "暗黒": "../public/icons/statuses/213106.png",
+    "ダークアーツ": "../public/icons/statuses/213107.png",
+    "転化": "../public/icons/statuses/212805.png",
+    "応急戦術": "../public/icons/statuses/212806.png",
+    "トランス・バハムート": "../public/icons/statuses/212680.png",
+    "リビングデッド": "../public/icons/statuses/213115.png",
+    "アーゼマの均衡": "../public/icons/statuses/213204.png",
+    "ハルオーネの槍": "../public/icons/statuses/213207.png",
+    "ライトスピード": "../public/icons/statuses/213220.png",
+    "シナストリー": "../public/icons/statuses/213223.png",
+    "旅神のメヌエット": "../public/icons/statuses/212610.png",
+    "原初の解放": {
+     "icon": "../public/icons/statuses/217247.png",
+     "max": 3,
+     "base": 217247
+    },
+    "ブラックナイト": "../public/icons/statuses/213118.png",
+    "金剛の極意": "../public/icons/statuses/212527.png",
+    "紅蓮の極意": "../public/icons/statuses/212528.png",
+    "桃園結義：闘気": "../public/icons/statuses/212529.png",
+    "桃園結義：攻撃": "../public/icons/statuses/212532.png",
+    "天地人": "../public/icons/statuses/212911.png",
+    "コースティックバイト": "../public/icons/statuses/212616.png",
+    "ストームバイト": "../public/icons/statuses/212617.png",
+    "地神のミンネ": "../public/icons/statuses/212618.png",
+    "ルーシッドドリーム": "../public/icons/statuses/213909.png",
+    "三連魔": {
+     "icon": "../public/icons/statuses/219621.png",
+     "max": 3,
+     "base": 219621
+    },
+    "シンエアー": "../public/icons/statuses/212631.png",
+    "インドゥルゲンティア": "../public/icons/statuses/212637.png",
+    "連環計": "../public/icons/statuses/212809.png",
+    "星の支配者": "../public/icons/statuses/213241.png",
+    "彼岸花": "../public/icons/statuses/213304.png",
+    "明鏡止水": {
+     "icon": "../public/icons/statuses/219641.png",
+     "max": 3,
+     "base": 219641
+    },
+    "燕飛効果アップ": "../public/icons/statuses/213310.png",
+    "疾風の極意": "../public/icons/statuses/212530.png",
+    "巨星の支配者": "../public/icons/statuses/213242.png",
+    "風月": "../public/icons/statuses/213311.png",
+    "風花": "../public/icons/statuses/213312.png",
+    "残心実行可": "../public/icons/statuses/213318.png",
+    "レクイエスカット": {
+     "icon": "../public/icons/statuses/218345.png",
+     "max": 4,
+     "base": 218345
+    },
+    "ノー・マーシー": "../public/icons/statuses/213601.png",
+    "カモフラージュ": "../public/icons/statuses/213602.png",
+    "ボーライド": "../public/icons/statuses/213606.png",
+    "ソニックブレイク": "../public/icons/statuses/213607.png",
+    "バウショック": "../public/icons/statuses/213608.png",
+    "ジャギュラーリップ実行可": "../public/icons/statuses/213611.png",
+    "アブドメンテアー実行可": "../public/icons/statuses/213612.png",
+    "アイガウジ実行可": "../public/icons/statuses/213613.png",
+    "原初の猛り": "../public/icons/statuses/212558.png",
+    "ディア": "../public/icons/statuses/212635.png",
+    "テンパランス": "../public/icons/statuses/212634.png",
+    "セラフィックイルミネーション": "../public/icons/statuses/212847.png",
+    "ディヴィネーション": "../public/icons/statuses/213245.png",
+    "コンバガ": "../public/icons/statuses/213248.png",
+    "ホロスコープ": "../public/icons/statuses/213251.png",
+    "ホロスコープ・ヘリオス": "../public/icons/statuses/213252.png",
+    "ニュートラルセクト": "../public/icons/statuses/213253.png",
+    "蠱毒法": "../public/icons/statuses/212812.png",
+    "秘策": "../public/icons/statuses/212813.png",
+    "原初の混沌": "../public/icons/statuses/212560.png",
+    "ブルータルシェル": "../public/icons/statuses/213614.png",
+    "ロイエ実行可": "../public/icons/statuses/212522.png",
+    "軍神の加護": "../public/icons/statuses/212619.png",
+    "軍神の契約": "../public/icons/statuses/212620.png",
+    "トルバドゥール": "../public/icons/statuses/212615.png",
+    "分身の術": {
+     "icon": "../public/icons/statuses/219681.png",
+     "max": 5,
+     "base": 219681
+    },
+    "ブラッドデリリアム": {
+     "icon": "../public/icons/statuses/217147.png",
+     "max": 3,
+     "base": 217147
+    },
+    "零の型": "../public/icons/statuses/212535.png",
+    "カルディア": "../public/icons/statuses/212951.png",
+    "エウクラシア": "../public/icons/statuses/212953.png",
+    "ソーテリア": {
+     "icon": "../public/icons/statuses/219756.png",
+     "max": 4,
+     "base": 219756
+    },
+    "ゾーエ": "../public/icons/statuses/212957.png",
+    "エウクラシア・ドシスIII": "../public/icons/statuses/212962.png",
+    "プライマルレンド実行可": "../public/icons/statuses/212566.png",
+    "原初の覚悟": "../public/icons/statuses/212556.png",
+    "神聖魔法効果アップ": "../public/icons/statuses/212521.png",
+    "戦嵐": "../public/icons/statuses/212561.png",
+    "原初の血気": "../public/icons/statuses/212562.png",
+    "原初の血潮": "../public/icons/statuses/212563.png",
+    "オブレーション": "../public/icons/statuses/213123.png",
+    "ハート・オブ・コランダム": "../public/icons/statuses/213615.png",
+    "カタルシス・オブ・コランダム": "../public/icons/statuses/213617.png",
+    "ハイパーヴェロシティ実行可": "../public/icons/statuses/213618.png",
+    "命水": "../public/icons/statuses/212914.png",
+    "月影雷獣実行可": {
+     "icon": "../public/icons/statuses/217597.png",
+     "max": 3,
+     "base": 217597
+    },
+    "ブラストアロー実行可": "../public/icons/statuses/212621.png",
+    "ルインジャ実行可": "../public/icons/statuses/212690.png",
+    "守りの光": "../public/icons/statuses/212691.png",
+    "シアリングライト": "../public/icons/statuses/212699.png",
+    "スリップストリーム": "../public/icons/statuses/212695.png",
+    "リタージー・オブ・ベル": {
+     "icon": "../public/icons/statuses/218373.png",
+     "max": 5,
+     "base": 218373
+    },
+    "マクロコスモス": "../public/icons/statuses/213263.png",
+    "光神のフィナーレ": "../public/icons/statuses/212622.png",
+    "残影鎌鼬実行可": "../public/icons/statuses/212917.png",
+    "クリムゾンサイクロン実行可": "../public/icons/statuses/212696.png",
+    "スリップストリーム実行可": "../public/icons/statuses/212697.png",
+    "マウンテンバスター実行可": "../public/icons/statuses/212698.png",
+    "奥義波切実行可": "../public/icons/statuses/213313.png",
+    "コンフィテオル実行可": "../public/icons/statuses/212520.png",
+    "サモン・セラフィム": "../public/icons/statuses/214905.png",
+    "トランス・フェニックス": "../public/icons/statuses/214965.png",
+    "ゲベート実行可": "../public/icons/statuses/212523.png",
+    "グラブカッマー実行可": "../public/icons/statuses/212524.png",
+    "ブレード・オブ・オナー実行可": "../public/icons/statuses/213052.png",
+    "ダムネーション": "../public/icons/statuses/212568.png",
+    "原初の鼓動": {
+     "icon": "../public/icons/statuses/218147.png",
+     "max": 3,
+     "base": 218147
+    },
+    "ルイネーター実行可": "../public/icons/statuses/212569.png",
+    "シャドウヴィジル": "../public/icons/statuses/213125.png",
+    "ディセスティーム実行可": "../public/icons/statuses/213126.png",
+    "グレートネビュラ": "../public/icons/statuses/213619.png",
+    "フェイテッドブランド実行可": "../public/icons/statuses/213620.png",
+    "ハートコンボ実行可": "../public/icons/statuses/213621.png",
+    "金剛周天実行可": "../public/icons/statuses/212539.png",
+    "絶空拳実行可": "../public/icons/statuses/212540.png",
+    "乾坤闘気弾実行可": "../public/icons/statuses/212541.png",
+    "ゴアブレード実行可": "../public/icons/statuses/213053.png",
+    "忍隠": "../public/icons/statuses/212919.png",
+    "毒盛の術": "../public/icons/statuses/212920.png",
+    "秘技実行可": "../public/icons/statuses/212921.png",
+    "天理人道実行可": "../public/icons/statuses/212922.png",
+    "燕返し実行可": "../public/icons/statuses/213315.png",
+    "天道": "../public/icons/statuses/213319.png",
+    "レゾナンスアロー実行可": "../public/icons/statuses/213076.png",
+    "光神のアンコール実行可": "../public/icons/statuses/213077.png",
+    "サンダー系魔法実行可": "../public/icons/statuses/212660.png",
+    "ハイサンダー": "../public/icons/statuses/212661.png",
+    "シアリングスパーク実行可": "../public/icons/statuses/212750.png",
+    "ルクス・ソラリス実行可": "../public/icons/statuses/212751.png",
+    "グレアジャ実行可": {
+     "icon": "../public/icons/statuses/218669.png",
+     "max": 3,
+     "base": 218669
+    },
+    "ディヴァインカレス実行可": "../public/icons/statuses/212640.png",
+    "埋伏の毒実行可": "../public/icons/statuses/212818.png",
+    "埋伏の毒": "../public/icons/statuses/212819.png",
+    "セラフィズム": "../public/icons/statuses/212820.png",
+    "ソニックブレイク実行可": "../public/icons/statuses/213622.png",
+    "オラクル実行可": "../public/icons/statuses/213264.png",
+    "サンサイン実行可": "../public/icons/statuses/213266.png",
+    "エウクラシア・ディスクラシア": "../public/icons/statuses/212973.png",
+    "フィロソフィア": "../public/icons/statuses/212974.png",
+    "原初の激震実行可": "../public/icons/statuses/212571.png",
+    "シャドウヴィジル［被］": "../public/icons/statuses/213127.png",
+    "百雷銃": "../public/icons/statuses/212923.png",
+    "クリムゾンストライク実行可": "../public/icons/statuses/212752.png"
+   },
+   "bars": {
+    "hb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 75
+      },
+      {
+       "kind": "action",
+       "id": 36954,
+       "from": 78
+      },
+      {
+       "kind": "action",
+       "id": 25771,
+       "from": 84
+      },
+      {
+       "kind": "action",
+       "id": 36955,
+       "from": 87
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 16480
+      },
+      {
+       "kind": "action",
+       "id": 85
+      },
+      {
+       "kind": "action",
+       "id": 3557
+      },
+      null,
+      {
+       "kind": "action",
+       "id": 90
+      },
+      {
+       "kind": "action",
+       "id": 16478,
+       "from": 92
+      },
+      {
+       "kind": "action",
+       "id": 25772,
+       "from": 88
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb2": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 86
+      },
+      {
+       "kind": "action",
+       "id": 7397
+      },
+      {
+       "kind": "action",
+       "id": 16477
+      },
+      {
+       "kind": "action",
+       "id": 96
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7548
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 3555
+      },
+      {
+       "kind": "action",
+       "id": 7399
+      },
+      {
+       "kind": "action",
+       "id": 36951
+      }
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb3": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 3554
+      },
+      {
+       "kind": "action",
+       "id": 3556
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 83
+      },
+      {
+       "kind": "action",
+       "id": 25773
+      },
+      null,
+      null,
+      null,
+      null
+     ],
+     "shared": null,
+     "defaultSource": "job"
+    },
+    "hb4": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 7542
+      },
+      {
+       "kind": "action",
+       "id": 7863
+      },
+      {
+       "kind": "action",
+       "id": 7549
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 7546
+      },
+      {
+       "kind": "action",
+       "id": 94
+      },
+      {
+       "kind": "action",
+       "id": 7541
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 17
+      },
+      {
+       "kind": "other",
+       "type": 17
+      }
+     ],
+     "shared": [
+      {
+       "kind": "action",
+       "id": 7571
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7561
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 16
+      },
+      {
+       "kind": "action",
+       "id": 7559
+      },
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 2
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "hb5": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "action",
+       "id": 16472
+      },
+      {
+       "kind": "action",
+       "id": 25757
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb6": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "macro",
+       "no": 346
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "hb7": {
+     "job": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 17
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "shared": [
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 30
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "hb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "macro",
+       "no": 296
+      },
+      {
+       "kind": "macro",
+       "no": 297
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 307
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "macro",
+       "no": 259
+      },
+      {
+       "kind": "macro",
+       "no": 309
+      },
+      {
+       "kind": "macro",
+       "no": 310
+      },
+      {
+       "kind": "macro",
+       "no": 298
+      },
+      {
+       "kind": "macro",
+       "no": 299
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb9": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 11
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 6
+      },
+      {
+       "kind": "macro",
+       "no": 258
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "hb10": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 2
+      },
+      {
+       "kind": "macro",
+       "no": 257
+      },
+      {
+       "kind": "macro",
+       "no": 256
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb1": {
+     "job": [
+      {
+       "kind": "action",
+       "id": 36954
+      },
+      {
+       "kind": "action",
+       "id": 36955
+      },
+      {
+       "kind": "action",
+       "id": 16480
+      },
+      {
+       "kind": "action",
+       "id": 25773
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "action",
+       "id": 16477
+      },
+      {
+       "kind": "action",
+       "id": 16478
+      },
+      {
+       "kind": "missing",
+       "id": 7398
+      },
+      {
+       "kind": "action",
+       "id": 7399
+      },
+      {
+       "kind": "action",
+       "id": 3555
+      },
+      {
+       "kind": "action",
+       "id": 7397
+      },
+      {
+       "kind": "action",
+       "id": 3554
+      },
+      {
+       "kind": "action",
+       "id": 3556
+      }
+     ],
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 10
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 12
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 18
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "job"
+    },
+    "xhb2": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      null,
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb3": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      },
+      {
+       "kind": "other",
+       "type": 4
+      },
+      {
+       "kind": "other",
+       "type": 8
+      }
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb7": {
+     "job": null,
+     "shared": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+       "kind": "other",
+       "type": 24
+      },
+      null
+     ],
+     "defaultSource": "shared"
+    },
+    "xhb8": {
+     "job": null,
+     "shared": [
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      },
+      {
+       "kind": "other",
+       "type": 15
+      }
+     ],
+     "defaultSource": "shared"
+    }
+   },
+   "gauges": {
+    "JobHudDRG0": {
+     "index": 290,
+     "name": "ドラゴンゲージ",
+     "x": 38.38541793823242,
+     "y": 44.49073791503906,
+     "scale": 0.800000011920929,
+     "anchor": 4,
+     "w": 320,
+     "h": 124
+    }
+   },
+   "gauge": {
+    "names": [
+     "JobHudDRG0"
+    ],
+    "layouts": {
+     "JobHudDRG0": {
+      "partLists": [
+       {
+        "id": 1,
+        "parts": [
+         {
+          "texture": "JobHudDRG0",
+          "u": 1,
+          "v": 369,
+          "w": 152,
+          "h": 18
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 1,
+          "v": 389,
+          "w": 152,
+          "h": 18
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 155,
+          "v": 389,
+          "w": 152,
+          "h": 18
+         }
+        ]
+       },
+       {
+        "id": 2,
+        "parts": [
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 0,
+          "w": 320,
+          "h": 108
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 108,
+          "w": 320,
+          "h": 100
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 208,
+          "w": 244,
+          "h": 40
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 356,
+          "v": 208,
+          "w": 36,
+          "h": 36
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 320,
+          "v": 0,
+          "w": 100,
+          "h": 84
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 320,
+          "v": 80,
+          "w": 100,
+          "h": 48
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 380,
+          "v": 124,
+          "w": 40,
+          "h": 84
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 163,
+          "v": 365,
+          "w": 160,
+          "h": 18
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 328,
+          "v": 124,
+          "w": 44,
+          "h": 84
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 338,
+          "v": 284,
+          "w": 40,
+          "h": 28
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 320,
+          "v": 208,
+          "w": 36,
+          "h": 36
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 392,
+          "v": 208,
+          "w": 36,
+          "h": 36
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 244,
+          "v": 296,
+          "w": 40,
+          "h": 28
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 244,
+          "v": 248,
+          "w": 96,
+          "h": 48
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 248,
+          "w": 244,
+          "h": 40
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 288,
+          "w": 245,
+          "h": 40
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 0,
+          "v": 328,
+          "w": 245,
+          "h": 40
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 308,
+          "v": 384,
+          "w": 56,
+          "h": 68
+         }
+        ]
+       },
+       {
+        "id": 3,
+        "parts": [
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 0,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 32,
+          "v": 0,
+          "w": 32,
+          "h": 32
+         },
+         {
+          "texture": "JobHudSimple_StackB",
+          "u": 0,
+          "v": 32,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 4,
+        "parts": [
+         {
+          "texture": "JobHudNumBg",
+          "u": 0,
+          "v": 0,
+          "w": 60,
+          "h": 40
+         }
+        ]
+       },
+       {
+        "id": 5,
+        "parts": [
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 0,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 20,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 40,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 60,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 80,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 100,
+          "w": 160,
+          "h": 20
+         },
+         {
+          "texture": "Parameter_Gauge",
+          "u": 0,
+          "v": 120,
+          "w": 32,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 6,
+        "parts": [
+         {
+          "texture": "JobHudDRG0",
+          "u": 340,
+          "v": 248,
+          "w": 68,
+          "h": 32
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 340,
+          "v": 280,
+          "w": 68,
+          "h": 32
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 340,
+          "v": 312,
+          "w": 68,
+          "h": 32
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 340,
+          "v": 344,
+          "w": 68,
+          "h": 32
+         }
+        ]
+       },
+       {
+        "id": 7,
+        "parts": [
+         {
+          "texture": "JobHudDRG0",
+          "u": 1,
+          "v": 409,
+          "w": 70,
+          "h": 42
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 73,
+          "v": 409,
+          "w": 30,
+          "h": 30
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 104,
+          "v": 409,
+          "w": 26,
+          "h": 30
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 131,
+          "v": 409,
+          "w": 42,
+          "h": 42
+         },
+         {
+          "texture": "JobHudDRG0",
+          "u": 174,
+          "v": 409,
+          "w": 38,
+          "h": 42
+         }
+        ]
+       }
+      ],
+      "components": [
+       {
+        "id": 1001,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           50,
+           -60,
+           -50
+          ],
+          "partListId": 3,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1002,
+        "type": 0,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 178,
+          "scaleX": 2.2,
+          "scaleY": 2.2,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           100,
+           100,
+           100
+          ]
+         },
+         {
+          "id": 3,
+          "parent": 2,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 16,
+          "originY": 16,
+          "add": [
+           0,
+           -60,
+           50
+          ],
+          "partListId": 3,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 32,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 3,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1003,
+        "type": 5,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 152,
+          "h": 26,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 4,
+          "w": 152,
+          "h": 18,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           -100,
+           0,
+           200
+          ],
+          "partListId": 1,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           0,
+           2
+          ]
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 4,
+          "w": 152,
+          "h": 18,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "add": [
+           -70,
+           -80,
+           150
+          ],
+          "partListId": 1,
+          "partId": 2,
+          "nineGrid": [
+           0,
+           0,
+           0,
+           2
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 4,
+          "w": 152,
+          "h": 18,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 1,
+          "partId": 1,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1004,
+        "type": 5,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 32,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 5,
+          "partId": 0,
+          "flipH": false,
+          "flipV": false
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "multiply": [
+           80,
+           100,
+           100
+          ],
+          "add": [
+           0,
+           100,
+           140
+          ],
+          "partListId": 5,
+          "partId": 2,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 4,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 127,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 6,
+          "originY": 0,
+          "partListId": 5,
+          "partId": 3,
+          "nineGrid": [
+           0,
+           0,
+           7,
+           7
+          ]
+         },
+         {
+          "id": 5,
+          "parent": 1,
+          "type": 2,
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 20,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 5,
+          "partId": 5,
+          "flipH": false,
+          "flipV": false
+         }
+        ]
+       },
+       {
+        "id": 1005,
+        "type": 19,
+        "nodes": [
+         {
+          "id": 1,
+          "parent": 0,
+          "type": 1,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 2,
+          "parent": 1,
+          "type": 3,
+          "x": 14,
+          "y": 5,
+          "w": 30,
+          "h": 30,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0
+         },
+         {
+          "id": 3,
+          "parent": 1,
+          "type": 4,
+          "x": 0,
+          "y": 0,
+          "w": 60,
+          "h": 40,
+          "alpha": 255,
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0,
+          "originX": 0,
+          "originY": 0,
+          "partListId": 4,
+          "partId": 0,
+          "nineGrid": [
+           0,
+           0,
+           28,
+           28
+          ]
+         }
+        ]
+       }
+      ],
+      "nodes": [
+       {
+        "id": 1,
+        "parent": 0,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 124,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 2,
+        "parent": 1,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 124,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 3,
+        "parent": 2,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 124,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 186,
+        "originY": 70
+       },
+       {
+        "id": 4,
+        "parent": 3,
+        "type": 3,
+        "x": 66,
+        "y": 82,
+        "w": 2,
+        "h": 2,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 5,
+        "parent": 3,
+        "type": 1,
+        "x": 168,
+        "y": 32,
+        "w": 78,
+        "h": 50,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 6,
+        "parent": 5,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 50,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 7,
+        "parent": 6,
+        "type": 2,
+        "x": -6,
+        "y": -60,
+        "w": 56,
+        "h": 68,
+        "alpha": 0,
+        "scaleX": 0.6,
+        "scaleY": 0.8,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 34,
+        "add": [
+         200,
+         -100,
+         -80
+        ],
+        "partListId": 2,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 8,
+        "parent": 6,
+        "type": 2,
+        "x": 22,
+        "y": -60,
+        "w": 56,
+        "h": 68,
+        "alpha": 0,
+        "scaleX": 0.6,
+        "scaleY": 0.8,
+        "rotation": 0,
+        "originX": 28,
+        "originY": 34,
+        "add": [
+         -80,
+         -100,
+         200
+        ],
+        "partListId": 2,
+        "partId": 17,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 9,
+        "parent": 6,
+        "type": 2,
+        "x": 2,
+        "y": -50,
+        "w": 42,
+        "h": 42,
+        "alpha": 0,
+        "scaleX": 0.2,
+        "scaleY": 1.4,
+        "rotation": 0,
+        "originX": 21,
+        "originY": 21,
+        "add": [
+         200,
+         -160,
+         -140
+        ],
+        "partListId": 7,
+        "partId": 3,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 10,
+        "parent": 6,
+        "type": 2,
+        "x": 30,
+        "y": -50,
+        "w": 38,
+        "h": 42,
+        "alpha": 0,
+        "scaleX": 0.2,
+        "scaleY": 1.4,
+        "rotation": 0,
+        "originX": 16,
+        "originY": 21,
+        "add": [
+         -140,
+         -160,
+         200
+        ],
+        "partListId": 7,
+        "partId": 4,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 11,
+        "parent": 6,
+        "type": 2,
+        "x": 8,
+        "y": 6,
+        "w": 30,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 7,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 12,
+        "parent": 6,
+        "type": 2,
+        "x": 36,
+        "y": 6,
+        "w": 26,
+        "h": 30,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 7,
+        "partId": 2,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 13,
+        "parent": 6,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 70,
+        "h": 42,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 7,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 14,
+        "parent": 3,
+        "type": 2,
+        "x": 140,
+        "y": -30,
+        "w": 44,
+        "h": 84,
+        "alpha": 119,
+        "scaleX": 0.43333334,
+        "scaleY": 0.4,
+        "rotation": 0,
+        "originX": 22,
+        "originY": 80,
+        "add": [
+         50,
+         -250,
+         -250
+        ],
+        "partListId": 2,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 15,
+        "parent": 3,
+        "type": 2,
+        "x": 190,
+        "y": -23,
+        "w": 44,
+        "h": 84,
+        "alpha": 127,
+        "scaleX": 0.73333335,
+        "scaleY": 0.8,
+        "rotation": 0,
+        "originX": 22,
+        "originY": 80,
+        "multiply": [
+         50,
+         50,
+         50
+        ],
+        "add": [
+         50,
+         -200,
+         -200
+        ],
+        "partListId": 2,
+        "partId": 8,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 16,
+        "parent": 3,
+        "type": 2,
+        "x": 80,
+        "y": -48,
+        "w": 44,
+        "h": 84,
+        "alpha": 255,
+        "scaleX": 0.2,
+        "scaleY": 0.2,
+        "rotation": 0,
+        "originX": 22,
+        "originY": 80,
+        "add": [
+         50,
+         -250,
+         -250
+        ],
+        "partListId": 2,
+        "partId": 8,
+        "flipH": true,
+        "flipV": false
+       },
+       {
+        "id": 17,
+        "parent": 3,
+        "type": 2,
+        "x": 180,
+        "y": -20,
+        "w": 44,
+        "h": 84,
+        "alpha": 204,
+        "scaleX": 0.65,
+        "scaleY": 0.35,
+        "rotation": 0,
+        "originX": 22,
+        "originY": 80,
+        "add": [
+         50,
+         -250,
+         -250
+        ],
+        "partListId": 2,
+        "partId": 8,
+        "flipH": true,
+        "flipV": false
+       },
+       {
+        "id": 18,
+        "parent": 3,
+        "type": 2,
+        "x": 140,
+        "y": 62,
+        "w": 100,
+        "h": 48,
+        "alpha": 0,
+        "scaleX": 2,
+        "scaleY": 1.8,
+        "rotation": 0,
+        "originX": 100,
+        "originY": 24,
+        "add": [
+         -100,
+         -20,
+         0
+        ],
+        "partListId": 2,
+        "partId": 5,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 19,
+        "parent": 3,
+        "type": 2,
+        "x": 68,
+        "y": 10,
+        "w": 40,
+        "h": 84,
+        "alpha": 0,
+        "scaleX": 4,
+        "scaleY": 1,
+        "rotation": 90,
+        "originX": 20,
+        "originY": 72,
+        "add": [
+         -100,
+         -100,
+         0
+        ],
+        "partListId": 2,
+        "partId": 6,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 20,
+        "parent": 3,
+        "type": 1,
+        "x": 80,
+        "y": 28,
+        "w": 96,
+        "h": 48,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 10,
+        "originY": 40
+       },
+       {
+        "id": 21,
+        "parent": 20,
+        "type": 2,
+        "x": 41,
+        "y": 0,
+        "w": 40,
+        "h": 26,
+        "alpha": 76,
+        "scaleX": 2.2,
+        "scaleY": 1.5,
+        "rotation": -10,
+        "originX": 34,
+        "originY": 5,
+        "add": [
+         200,
+         -200,
+         0
+        ],
+        "partListId": 2,
+        "partId": 12,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 22,
+        "parent": 20,
+        "type": 2,
+        "x": 29,
+        "y": 5,
+        "w": 36,
+        "h": 36,
+        "alpha": 74,
+        "scaleX": 1.0727273,
+        "scaleY": 1.0727273,
+        "rotation": 0,
+        "originX": 18,
+        "originY": 18,
+        "add": [
+         100,
+         0,
+         100
+        ],
+        "partListId": 2,
+        "partId": 11,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 23,
+        "parent": 20,
+        "type": 2,
+        "x": 30,
+        "y": 6,
+        "w": 36,
+        "h": 36,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 18,
+        "originY": 18,
+        "add": [
+         -7,
+         -7,
+         -7
+        ],
+        "partListId": 2,
+        "partId": 3,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 24,
+        "parent": 20,
+        "type": 2,
+        "x": 13,
+        "y": 9,
+        "w": 68,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 34,
+        "originY": 16,
+        "partListId": 6,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 25,
+        "parent": 20,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 48,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "partListId": 2,
+        "partId": 13,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 26,
+        "parent": 3,
+        "type": 2,
+        "x": 30,
+        "y": 64,
+        "w": 244,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 20,
+        "partListId": 2,
+        "partId": 15,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 27,
+        "parent": 3,
+        "type": 2,
+        "x": 44,
+        "y": 64,
+        "w": 244,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 20,
+        "partListId": 2,
+        "partId": 16,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 28,
+        "parent": 3,
+        "type": 1003,
+        "x": 85,
+        "y": 70,
+        "w": 152,
+        "h": 26,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 29,
+        "parent": 3,
+        "type": 2,
+        "x": 0,
+        "y": 8,
+        "w": 320,
+        "h": 108,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         -60,
+         -20,
+         80
+        ],
+        "partListId": 2,
+        "partId": 0,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 30,
+        "parent": 3,
+        "type": 2,
+        "x": 0,
+        "y": 12,
+        "w": 320,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         0,
+         50,
+         180
+        ],
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 31,
+        "parent": 3,
+        "type": 1,
+        "x": 0,
+        "y": 12,
+        "w": 320,
+        "h": 100,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 32,
+        "parent": 31,
+        "type": 2,
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 100,
+        "alpha": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0,
+        "add": [
+         100,
+         -20,
+         -20
+        ],
+        "partListId": 2,
+        "partId": 1,
+        "flipH": false,
+        "flipV": false
+       },
+       {
+        "id": 33,
+        "parent": 1,
+        "type": 1,
+        "x": 80,
+        "y": 7,
+        "w": 160,
+        "h": 78,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 34,
+        "parent": 33,
+        "type": 1,
+        "x": 6,
+        "y": 10,
+        "w": 50,
+        "h": 64,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 35,
+        "parent": 34,
+        "type": 1,
+        "x": 0,
+        "y": 32,
+        "w": 50,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 36,
+        "parent": 35,
+        "type": 1001,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 37,
+        "parent": 35,
+        "type": 1001,
+        "x": 18,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 38,
+        "parent": 34,
+        "type": 1,
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 39,
+        "parent": 38,
+        "type": 1002,
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 40,
+        "parent": 38,
+        "type": 1002,
+        "x": 18,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 41,
+        "parent": 33,
+        "type": 1,
+        "x": 0,
+        "y": 32,
+        "w": 160,
+        "h": 46,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 42,
+        "parent": 41,
+        "type": 1005,
+        "x": 112,
+        "y": 6,
+        "w": 47,
+        "h": 40,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       },
+       {
+        "id": 43,
+        "parent": 41,
+        "type": 1004,
+        "x": 0,
+        "y": 0,
+        "w": 160,
+        "h": 32,
+        "alpha": 255,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "originX": 0,
+        "originY": 0
+       }
+      ]
+     }
+    },
+    "textures": {
+     "JobHudDRG0": {
+      "path": "../public/icons/job-gauges/textures/JobHudDRG0.png",
+      "w": 856,
+      "h": 904,
+      "scale": 2
+     },
+     "JobHudSimple_StackB": {
+      "path": "../public/icons/job-gauges/textures/JobHudSimple_StackB.png",
+      "w": 128,
+      "h": 128,
+      "scale": 2
+     },
+     "JobHudNumBg": {
+      "path": "../public/icons/job-gauges/textures/JobHudNumBg.png",
+      "w": 120,
+      "h": 80,
+      "scale": 2
+     },
+     "Parameter_Gauge": {
+      "path": "../public/icons/job-gauges/textures/Parameter_Gauge.png",
+      "w": 320,
+      "h": 304,
+      "scale": 2
+     }
+    },
+    "sizes": {
+     "JobHudDRG0": [
+      320,
+      124
+     ]
+    }
+   },
+   "dmgUp": {
+    "ランスチャージ": 10,
+    "竜槍": 10,
+    "紅の竜血": 15
+   },
+   "upgrade": {
+    "78": 36954,
+    "84": 25771,
+    "87": 36955,
+    "88": 25772,
+    "92": 16478
+   },
+   "jobSet": 22,
+   "buttonsAll": [
+    75,
+    83,
+    85,
+    86,
+    90,
+    94,
+    96,
+    3554,
+    3555,
+    3556,
+    3557,
+    7397,
+    7399,
+    7400,
+    16477,
+    16478,
+    16480,
+    25771,
+    25772,
+    25773,
+    36951,
+    36953,
+    36954,
+    36955,
+    36956
+   ],
+   "unplaced": [
+    7400,
+    36953,
+    36956
+   ],
+   "replaceGroups": {
+    "75": [
+     16479
+    ],
+    "86": [
+     25770
+    ],
+    "3554": [
+     36952
+    ],
+    "3556": [
+     36952
     ]
    },
    "splitDetected": []
