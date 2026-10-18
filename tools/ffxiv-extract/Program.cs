@@ -174,6 +174,9 @@ foreach (var id in included)
 
     var gcd = a.CooldownGroup == 58 || a.AdditionalCooldownGroup == 58;
     if (a.StatusGainSelf.RowId != 0) statusIds.Add(a.StatusGainSelf.RowId);
+    // ActionProcStatus: このステータスが付いている間、アクションが光る（ハイライト）。行が指すステータスも出力する
+    uint? procStatusId = a.ActionProcStatus.RowId != 0 && a.ActionProcStatus.ValueNullable is { } aps && aps.StatusId.RowId != 0 ? aps.StatusId.RowId : null;
+    if (procStatusId is { } psid) statusIds.Add(psid);
     var lb = limitBreakOf.TryGetValue(id, out var lbv) ? new LimitBreakOut(lbv.job, lbv.tier) : null;
 
     actions.Add(new ActionOut
@@ -210,6 +213,7 @@ foreach (var id in included)
         SecondaryCost = a.SecondaryCostType != 0 ? new CostOut(a.SecondaryCostType, a.SecondaryCostValue.RowId) : null,
         StatusGainSelf = a.StatusGainSelf.RowId != 0 ? a.StatusGainSelf.RowId : null,
         ActionProcStatus = a.ActionProcStatus.RowId != 0 ? a.ActionProcStatus.RowId : null,
+        ActionProcStatusId = procStatusId,
         Range = a.Range,
         EffectRange = a.EffectRange,
         CastType = a.CastType,
@@ -228,7 +232,33 @@ foreach (var id in included)
 // ほかの型の値はゲージ量・回数・フラグ（赤魔のマナ 20、1・2・3…）で、ステータス番号と偶然重なるだけ（石化 #1 など）
 var statusCostTypes = new HashSet<byte> { 32, 35, 46, 127 };
 foreach (var a in actions)
+{
     if (a.SecondaryCost is { Type: var t, Value: var v } && statusCostTypes.Contains(t) && v != 0 && stEn.HasRow(v) && !stEn.GetRow(v).Name.IsEmpty) statusIds.Add(v);
+    // 一次コストの型 10 も値がステータスを指す（例: 返し五剣 → 燕返し実行可の一種）
+    if (a.PrimaryCost is { Type: 10, Value: var pv } && pv != 0 && stEn.HasRow(pv) && !stEn.GetRow(pv).Name.IsEmpty) statusIds.Add(pv);
+}
+
+// 説明文で「」に囲まれた名前、およびアクションと同じ名前のステータスも拾う（風月・風花・明鏡止水・彼岸花 など。DATA-01）
+// 名前だけで引くため、同名のステータス（PvP 用など）も混ざる。どれを使うかは利用側で決める
+var statusIdsByJaName = new Dictionary<string, List<uint>>();
+foreach (var st in stJa)
+{
+    if (st.Icon == 0) continue;
+    var n = st.Name.ExtractText();
+    if (string.IsNullOrEmpty(n)) continue;
+    if (!statusIdsByJaName.TryGetValue(n, out var list)) statusIdsByJaName[n] = list = [];
+    list.Add(st.RowId);
+}
+var quotedName = new System.Text.RegularExpressions.Regex("「([^」]+)」");
+foreach (var a in actions)
+{
+    if (a.Jobs.Count == 0) continue;
+    var names = quotedName.Matches(a.Description.Ja).Select(m => m.Groups[1].Value).Append(a.Name.Ja).Distinct();
+    var found = names.Where(statusIdsByJaName.ContainsKey).SelectMany(n => statusIdsByJaName[n]).Distinct().ToList();
+    if (found.Count == 0) continue;
+    a.MentionedStatuses = found;
+    foreach (var id in found) statusIds.Add(id);
+}
 
 // ---- ステータス ----
 // statuses.json: プレイヤーのアクションが付与・参照するもの（アプリで読む軽い版）

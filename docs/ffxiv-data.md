@@ -86,8 +86,10 @@ JSON のアイコンの場所（`iconPath`）は `/icons/...` から始まるの
 | `replacesAction` | ActionIndirection | 条件を満たすとボタンがこれに変わる元（例: ロイエ → ゲベート） |
 | `inActionList` | ClassJobActionUI に載っているか | ゲーム内のジョブのアクション一覧に出るもの。ロールアクションと青魔道士は別枠なので false |
 | `primaryCost` / `secondaryCost` | Primary/SecondaryCostType・Value | `type` 3 が MP。ほかはジョブゲージ・条件（ステータス要求など）でジョブごとに意味が違うので生の値のまま |
-| `statusGainSelf` / `actionProcStatus` | | 自分に付くステータス（statuses.json の id） |
-| `range` / `effectRange` / `castType` / `xAxisModifier` | | 射程・効果範囲・範囲の形 |
+| `statusGainSelf` | StatusGainSelf | 自分に付くステータス（statuses.json の id） |
+| `actionProcStatus` / `actionProcStatusId` | ActionProcStatus / その StatusId | **このステータスが付いている間、アクションが光る**（ホットバーのハイライト）。前者はシートの行番号、後者は行が指すステータス（statuses.json の id。2026-09-24 の抽出には未反映。再抽出で出力される） |
+| `mentionedStatuses` | 説明文 / Status | 説明文の「」内の名前、またはアクション名と同じ名前のステータス（風月・風花・明鏡止水・彼岸花 など）。名前で引くので、同名の別ステータス（PvP 用など）が混ざることがある |
+| `range` / `effectRange` / `castType` / `xAxisModifier` | | 射程・効果範囲・範囲の形（castType 1 単体 / 2 自分の周囲 / 3 前方扇 / 4 前方直線） |
 
 練習 UI でジョブのアクションを並べるときは、`jobs.json` の `actionIds` から `inActionList || isRoleAction` のものを使うと、
 ゲーム内の一覧と同じ顔ぶれになる（今は使えない旧アクションが Action シートに残っている場合もこれで除ける。例: 応急戦術）。
@@ -189,6 +191,7 @@ sqpack はファイル一覧を持たないので、`JobHud` ＋英大文字 3 �
 - 説明文の条件式のうち、プレイヤー変数 `gnum110〜112` の意味が分からず 0 として評価している（全体で 2 か所ずつ）。`meta.json` の `unknownDescriptionParams` に件数が出る
 - ジョブゲージの種類（`primaryCost.type` の 3 以外）を名前に引く表は作っていない
 - ステータスの効果時間は Status シートに無い（説明文・アクションの説明文にある）ので出していない
+- 2026-09 の改修（`actionProcStatusId`・`mentionedStatuses` とそのステータス・アイコンの出力）は、この環境に .NET と FF14 クライアントがないため**未実行**。管理者の PC で再抽出し、ビルドエラーが出たら知らせる
 - アイコンと文言の権利は株式会社スクウェア・エニックスにある。非公式のファンツールとして使う
 
 (C) SQUARE ENIX CO., LTD. All Rights Reserved.
