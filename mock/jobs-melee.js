@@ -3,10 +3,9 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, extendBuff, guideTrait, numIn } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, extendBuff, guideTrait, numIn, HEAL_K, seeded } = window.MockJobs.lib;
   // クリティカルの代わり（仮 GAME-77）: クリティカルの発動率。乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
   const CRIT_RATE = 0.25;
-  const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
 
   // ---------------- モンク ----------------
   // 説明文から:
@@ -63,12 +62,11 @@
       const CRIT_OPO = new Set([ID.OPO, ID.SHADOW]); // 壱の型の間は必ずクリティカル
       const WS_CRIT_RATE = numIn(guideTrait(R, 'Deep Meditation II'), /確率が(\d+)％/, 100) / 100; // クリティカルのときに闘気が付く確率（特性）
       const chakraMax = () => (has('bhChakra') ? 10 : 5);
-      function addChakra(n, why) {
+      function addChakra(n) {
         const s = S(), max = chakraMax();
         const over = Math.max(0, s.chakra + n - max);
         if (over > 0 && s.phase === 'combat') s.stats.chakraOver += over;
         s.chakra = Math.min(max, s.chakra + n);
-        void why;
       }
       const formNow = () => (has('opoForm') ? 'opo' : has('raptorForm') ? 'raptor' : has('coeurlForm') ? 'coeurl' : null);
       function setForm(f) { for (const k of Object.values(FORM_KEY)) R.remove(k); if (f) R.buff(FORM_KEY[f], 30000); }
@@ -148,8 +146,8 @@
           // 闘気: ウェポンスキルのクリティカル（クリティカルの代わりに発動率の乱数。六合星導脚は付かない）と、桃園結義の間はウェポンスキルが当たるたび
           if (a.isGcd && a.pot?.base && id !== ID.SSS) {
             const crit = s.critOpo || s.rng() < CRIT_RATE;
-            if (crit && s.rng() < WS_CRIT_RATE) addChakra(1, 'crit');
-            if (has('bhChakra')) addChakra(1, 'bh');
+            if (crit && s.rng() < WS_CRIT_RATE) addChakra(1);
+            if (has('bhChakra')) addChakra(1);
           }
           s.critOpo = false;
           // 必殺技
@@ -163,7 +161,7 @@
             Au()?.surge();
           }
           if (id === ID.FORMSHIFT) { setForm(null); R.buff('formless', 30000); }
-          if (id === ID.STEELED || id === ID.INSPIRITED) addChakra(s.phase === 'combat' ? 1 : 5, 'meditate');
+          if (id === ID.STEELED || id === ID.INSPIRITED) addChakra(s.phase === 'combat' ? 1 : 5);
           if (id === ID.TFC || id === ID.ENLIGHTEN) { s.chakra -= 5; s.stats.tfc++; }
           if (id === ID.SSS) s.chakra = 0;
           if (id === ID.PB) R.buff('pb', 20000, 3);
@@ -173,16 +171,16 @@
           if (id === ID.ROW) { R.buff('row', 15000); R.buff('windReady', 15000); }
           if (id === ID.WIND) R.remove('windReady');
           if (id === ID.ROE) { R.mitigate('self', 0.2, 10, '金剛の極意'); R.buff('roe', 10000); R.buff('earthReady', 30000); s.roeHot = false; }
-          if (id === ID.EARTH) { R.remove('earthReady'); R.heal('party', numIn(a.desc, s.roeHot ? /金剛の決意効果中回復力：(\d+)/ : /回復力：(\d+)/, 300) * 0.0004); }
+          if (id === ID.EARTH) { R.remove('earthReady'); R.heal('party', numIn(a.desc, s.roeHot ? /金剛の決意効果中回復力：(\d+)/ : /回復力：(\d+)/, 300) * HEAL_K); }
           if (id === ID.MANTRA) R.mark('party', 'マントラ', 15, { healUp: 0.1 });
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
           if (id === ID.TN) R.buff('tn', 10000);
         },
         // 金剛の極意の間にダメージを受けると金剛の決意（継続回復 回復力 100・15 秒）
         onHurt() {
           const s = S();
-          if (has('roe') && !s.roeHot) { s.roeHot = true; R.hot('self', 100 * 0.0004, 15, '金剛の決意'); }
+          if (has('roe') && !s.roeHot) { s.roeHot = true; R.hot('self', 100 * HEAL_K, 15, '金剛の決意'); }
         },
         tick() {},
         highlightOk: () => true,
@@ -361,8 +359,8 @@
         potMult: (a) => (JUTSU.has(a.id) && has('kassatsu') ? KASSATSU_UP : 1),
         potAdd: (a, ok) => (a.id === ID.AEOLIAN && S().kaze > 0 ? KAZE_ADD : 0),
         dmgMult: () => (has('mug') ? 1.05 : 1) * (has('kunai') ? 1.1 : 1),
-        // 失敗した忍術（うさぎ）は攻撃しない
-        noHit: (id) => id === ID.NINJUTSU,
+        // 失敗した忍術（うさぎ）は攻撃しない。分身の術も自分は攻撃しない（説明文の威力 160 は分身の追撃）
+        noHit: (id) => id === ID.NINJUTSU || id === ID.BUNSHIN,
         effects(id, ok) {
           const a = A[id], s = S();
           // 印
@@ -389,8 +387,8 @@
             }
             Au()?.surge();
           }
-          // 忍気（説明文の「「忍気」をN上昇」。コンボボーナスはコンボ時だけ）
-          const g = descGain(a, '忍気', ok);
+          // 忍気（説明文の「「忍気」をN上昇」。コンボボーナスはコンボ時だけ）。分身の術の +5 は分身の攻撃の命中の分（下の追撃で足す）
+          const g = id === ID.BUNSHIN ? 0 : descGain(a, '忍気', ok);
           if (g) setNinki(s.ninki + g);
           if (a.eff?.cost?.gauge === '忍気') setNinki(s.ninki - a.eff.cost.n);
           // 風纏
@@ -418,7 +416,7 @@
           if (id === ID.HIDE) { R.buff('hidden', 1e9); R.cdShift(ID.TEN, 1e9); }
           if (id !== ID.HIDE && id !== ID.KUNAI && has('hidden')) R.remove('hidden'); // ほかのアクションで解除
           if (id === ID.SHADE) R.shieldSelf(0.2, 20, '残影');
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
           if (id === ID.TN) R.buff('tn', 10000);
         },
@@ -601,7 +599,7 @@
           if (id === ID.RISE) consume('riseReady');
           if (id === ID.ELUSIVE) { R.buff('talonUp', grantMs(id, 'ピアシングタロン効果アップ', 15)); R.leap?.(1.6, 0.6); }
           if (id === ID.PIERCING) R.remove('talonUp');
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
           if (id === ID.TN) R.buff('tn', 10000);
         },
@@ -820,8 +818,7 @@
           if (id === ID.GALLOWS || id === ID.EXEC_GALLOWS) R.remove('enhGallows');
           if (id === ID.VOID) R.remove('enhVoid');
           if (id === ID.CROSS) R.remove('enhCross');
-          if (id === ID.GIBBET_CLAW) R.remove('enhGibbet');
-          if (id === ID.GALLOWS_CLAW) R.remove('enhGallows');
+          // ジビトゥクロウ・ギャロウズクロウの効果アップは発動条件（使わない）。続くジビトゥ・ギャロウズが使う
           if (AVATAR.has(id)) {
             if (a.eff?.cost?.gauge === 'ソウルゲージ' || id === ID.GIBBET_CLAW || id === ID.GALLOWS_CLAW) s.soul -= 50;
             if (id === ID.GLUTTONY) { R.remove('soulReaver'); R.buff('executioner', 30000, 2); }
@@ -857,7 +854,7 @@
           }
           if (id === ID.RETURN) { R.remove('returnReady'); if (R.toZone('gate')) Au()?.whoosh?.(); R.zoneEnd('gate'); }
           if (id === ID.CREST) { R.shieldSelf(0.1, 5, '守護のクレスト'); R.buff('crest', 5000); s.crest = { until: s.t + 5000 }; }
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
           if (id === ID.TN) R.buff('tn', 10000);
         },
@@ -866,7 +863,7 @@
           if (s.lemure > 0 && !enshrouded()) { s.lemure = 0; s.void = 0; } // レムールの時間切れ
           // 守護のクレストを吸収しきった → 活性のクレスト（継続回復）
           if (s.crest) {
-            if (R.shieldLeft('self') <= 0.0005 && s.t < s.crest.until) { R.hot('party', 50 * 0.0004, 15, '活性のクレスト'); R.remove('crest'); s.crest = null; R.addLog('ok', '守護のクレストが吸収されて消えました → 活性のクレスト'); }
+            if (R.shieldLeft('self') <= 0.0005 && s.t < s.crest.until) { R.hot('party', 50 * HEAL_K, 15, '活性のクレスト'); R.remove('crest'); s.crest = null; R.addLog('ok', '守護のクレストが吸収されて消えました → 活性のクレスト'); }
             else if (s.t >= s.crest.until) s.crest = null;
           }
         },
@@ -1129,7 +1126,7 @@
           }
           if (id === ID.OUROBOROS) { s.tribute = 0; R.remove('reawakened'); s.lastGen = null; }
           if (id === ID.IRE) { gainCoil(1); R.buff('readyReawaken', 30000); Au()?.surge(); }
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
           if (id === ID.TN) R.buff('tn', 10000);
         },

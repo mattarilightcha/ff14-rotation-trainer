@@ -3,9 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpTicks, naturalMp, secAfter, HEAL_K } = window.MockJobs.lib;
-  // 発動確率のある効果の乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
-  const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
+  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpRegen, seeded, secAfter, HEAL_K } = window.MockJobs.lib;
   const MP_MAX = 10000;
   const isSpell = (a) => a?.category === 2;
 
@@ -207,7 +205,7 @@
           const s = S();
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
           // MP の自然回復（actor tick）と、ルーシッドドリーム（同じ周期で 550）
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
         },
         highlightOk: () => true,
         glow(id) {
@@ -469,7 +467,7 @@
           if (s.hyperPrev && !has('hyper') && s.t >= s.hyperPrev.until - 30 && s.phase === 'combat') s.stats.hyperLeft += s.hyperPrev.stacks ?? 0;
           s.hyperPrev = has('hyper') ? { stacks: s.st.hyper.stacks, until: s.st.hyper.until } : null;
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
         },
         // ブラックコメットはペイントがあるときだけ光る
         highlightOk: (id) => (id === ID.COMET ? S().paint > 0 : true),

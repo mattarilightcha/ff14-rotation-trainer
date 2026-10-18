@@ -65,6 +65,7 @@
     shieldLeft: (who) => Arena.shieldLeft?.(who) ?? 0,
     // バリアの中身 { frac, left, name }（学者の展開戦術）と、味方に付けた効果を消す（深謀遠慮の策が発動したとき）
     shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name), unshield: (who) => Arena.unshield?.(who),
+    unmitigate: (who, name) => Arena.unmitigate?.(who, name),
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
     // 今の自分の向き（敵から見て 'rear' / 'flank' / 'front'）。方向指定と状態の組み合わせで威力が変わる技（モンクの虎襲崩拳）に使う
@@ -303,9 +304,12 @@
     }
     return null;
   }
-  // 当たるか: 自分中心の範囲技は範囲（effectRange）に敵の当たり判定が入っているか、単体は射程内か
-  function reaches(a) {
-    if (!a.hostile && a.shape === 2 && a.effectRange > 0) return Arena.edgeDistance() <= a.effectRange;
+  // 当たるか: 自分中心の範囲の攻撃は範囲（effectRange）に敵の当たり判定が入っているか、単体は射程内か。
+  // 味方に使った技（who が 'self' / 'npc'。ホルムギャング・イカロスなど敵にも味方にも使える技）は敵の射程を見ない（placeBlock と同じ）。
+  // 自分中心の範囲でも攻撃しない技（メディカ・エンボルデンなどの回復・バフ）は敵がいなくても効く
+  function reaches(a, who = actWho) {
+    if (who === 'self' || who === 'npc') return true;
+    if (!a.hostile && a.shape === 2 && a.effectRange > 0) return !(a.pot?.base > 0) || Arena.edgeDistance() <= a.effectRange;
     const r = rangeOf(a);
     return r == null || Arena.edgeDistance() <= r + 0.001;
   }
@@ -394,6 +398,8 @@
     // 「対象の目前まで素早く移動」: 味方が相手なら味方の前へ、敵が相手（シャドウストライド・トラジェクトリーなど）なら敵の前へ
     if (a.toAlly) { if (actWho ? Arena.dashToAlly(actWho) : a.hostile && (Arena.dashToTarget(), true)) Au?.whoosh(); else addLog('warn', `${a.name}: 移動先の味方がいません`); }
     if (a.toZone) { if (Arena.dashToZone(a.toZone)) Au?.whoosh(); }
+    // 地面指定の移動（忍者の縮地: 説明文「指定した地点に向かって素早く移動する」）。パッドなど場所を選ばないときは敵の前へ
+    if (a.ground && /指定した地点に向かって素早く移動/.test(a.desc ?? '')) { if (placeAt ? Arena.dashToPoint(placeAt) : (Arena.dashToTarget(), true)) Au?.whoosh(); }
     playFx(id, ok, pos, true, dmg);
   }
 
@@ -428,7 +434,7 @@
       S.gcdStart = at; S.gcdEnd = at + Math.max(gcdRecast(a), ct0 > 0 ? ct0 + POLICY.castLockAfterMs : 0);
       S.tl.gcd.push({ t: at, id, end: S.gcdEnd });
       S.weaves = 0; S.lastOgcdLockEnd = null; S.stats.gcds++;
-      ok = castTimeOf(a) > 0 || reaches(a) ? combo(a, at) : false;
+      ok = castTimeOf(a) > 0 || reaches(a, who === 'boss' ? null : who) ? combo(a, at) : false;
     } else {
       S.tl.ogcd.push({ t: at, id });
       S.weaves++;

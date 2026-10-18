@@ -60,7 +60,6 @@ def image_kind(i):
 
 def images():
     """raw のページからジョブHUD の絵を集め、public/jobguide/hud/<job>/ に落とす。対応表は src/data/ffxiv/jobguide/images.json。"""
-    man = json.load(open(MANIFEST, encoding="utf-8")) if os.path.exists(MANIFEST) else {}
     found = {}
     for lang in HOSTS:
         for job in JOBS:
@@ -188,12 +187,11 @@ def parse_page(html, lang, job):
         page["header"] = {"text": text(head), "images": [i.get("src") for i in head.find_all("img")]}
 
     # 表の節（専用アクション・ロールアクション・特性・PvP ほか）。tr[id] のある表をすべて拾う
-    sections, seen = [], set()
+    sections = []
     for tb in s.find_all("table"):
         trs = tb.select("tr[id]")
-        if not trs or id(tb) in seen:
+        if not trs:
             continue
-        seen.add(id(tb))
         h = tb.find_previous(["h3", "h2"], class_=re.compile(r"job__sub_title|job__title"))
         mode = "pvp" if tb.find_parent("div", class_="js__select--pvp") is not None else "pve"
         heads = [text(th).replace("\n", "") for th in tb.select("thead th")]

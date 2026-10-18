@@ -872,6 +872,14 @@
     player.x = z.x; player.y = z.y;
     return true;
   }
+  // 選んだ地点へ素早く移動する（忍者の縮地）。練習場の外には出ない
+  function dashToPoint(p) {
+    if (!p) return false;
+    const q = ST.clamp(STG, { x: p.x, y: p.y }, 1);
+    trailFrom();
+    player.x = q.x; player.y = q.y;
+    return true;
+  }
   // ---- 召喚士のペット ----
   const DEMIS = new Set(['bahamut', 'phoenix', 'solar']);
   // ペットの居場所: カーバンクルは自分の右後ろ、エギは自分と敵の間、デミ召喚は自分の後ろの空中
@@ -1486,7 +1494,7 @@
   window.MockArena = {
     init, resize, reset, setInput, jump, leap, update, render, setView,
     view: () => (view3d() ? '3d' : '2d'), error3d: () => r3err, camera,
-    edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, bossCast, pet: petSet, petKind: () => pet.kind,
+    edgeDistance, positional, faceTarget, dashToTarget, backstep, forward, dashToAlly, dashToZone, dashToPoint, bossCast, pet: petSet, petKind: () => pet.kind,
     isMoving: () => player.moving, isJumping: () => player.jumpT >= 0, isDown: () => player.down > 0, hp: () => player.hp,
     tankHp: () => (hasNpc() ? Math.max(0, tank.hp - (opts.role === 'healer' ? 0 : tank.flash * 0.04)) : 0), // 相方の HP（範囲攻撃・通常攻撃で減る。回復役があなたでなければ少しずつ戻る）
     hasNpc, npcHealer, isNpcDown: () => hasNpc() && tank.down > 0, raiseNpc,
@@ -1497,6 +1505,8 @@
     distTo: (k) => (k === 'tank' ? dist(player, tank) : k === 'boss' ? Math.max(0, dist(player, boss) - POL.hitbox) : 0),
     heal: (who, frac, quiet) => healNow(who, frac, quiet), shield: shieldOn, mitigate: mitigateOn, hot: hotOn, mark: markOn, partyStatus,
     unmark: (who, name) => { for (const e of partyOf(who)) if (e) e.marks = (e.marks ?? []).filter((m) => m.name !== name); },
+    // 付けた被ダメージ軽減を名前で外す（戦士のシェイクオフ: ダムネーションなどを解除する）
+    unmitigate: (who, name) => { for (const e of partyOf(who)) if (e) e.mits = (e.mits ?? []).filter((m) => m.name !== name); },
     // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
     // バリアの残り（最大 HP に対する割合）。'self' / 'npc'
     shieldLeft: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? e.shield : 0; },

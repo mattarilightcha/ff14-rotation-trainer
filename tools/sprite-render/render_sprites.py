@@ -181,7 +181,8 @@ def render_animation(char_id: str, char: dict, anim_name: str, anim: dict, cfg: 
     for o in objs:
         if o.parent is None or o.parent not in objs:
             o.parent = pivot
-    # ルートモーションを止める（Mixamo は "In Place" 推奨。それでも動く場合の保険）
+    # ルートモーション（アニメで体が前へ進む動き）は打ち消さない。カメラと原点は最初のフレームで決まるので、
+    # Mixamo では "In Place" を付けて書き出す（付け忘れると、後のフレームで体が画面の外へ出る）
     frames = animation_frames(scene, armatures, anim, cfg)
     if max_frames:
         frames = frames[:max_frames]
@@ -208,7 +209,7 @@ def render_animation(char_id: str, char: dict, anim_name: str, anim: dict, cfg: 
             d_out.mkdir(parents=True, exist_ok=True)
             scene.render.filepath = str(d_out / f"{d}_{i:03d}.png")
             bpy.ops.render.render(write_still=True)
-    return {"frames": len(frames), "loop": anim.get("loop", True)}
+    return {"frames": len(frames), "loop": anim.get("loop", True), "directions": list(dirs)}
 
 
 def main() -> None:
@@ -221,15 +222,20 @@ def main() -> None:
         if args.character and cid != args.character:
             continue
         char = {**char, "dir": str((base / char.get("dir", ".")).resolve())}
+        if args.animation and args.animation not in char["animations"]:
+            raise SystemExit(f"アニメーションが見つからない: {cid}/{args.animation}（あるもの: {', '.join(char['animations'])}）")
+        info_path = out / cid / "render-info.json"
+        # 1 つだけ描き直すときは、前に描いたほかのアニメの情報を残す（pack_sheets.py がシートに入れるため）
         info = {}
+        if args.animation and info_path.exists():
+            info = json.loads(info_path.read_text(encoding="utf-8")).get("animations", {})
         for aname, anim in char["animations"].items():
             if args.animation and aname != args.animation:
                 continue
             print(f"[render] {cid}/{aname}", flush=True)
             info[aname] = render_animation(cid, char, aname, anim, cfg, out, args.max_frames)
         (out / cid).mkdir(parents=True, exist_ok=True)
-        (out / cid / "render-info.json").write_text(
-            json.dumps({"height": char.get("height", 1.8), "animations": info}, indent=2), encoding="utf-8")
+        info_path.write_text(json.dumps({"height": char.get("height", 1.8), "animations": info}, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

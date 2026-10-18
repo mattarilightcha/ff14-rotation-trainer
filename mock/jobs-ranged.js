@@ -3,9 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, numIn } = window.MockJobs.lib;
-  // 発動確率のある効果の乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
-  const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
+  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, numIn, HEAL_K, seeded } = window.MockJobs.lib;
 
   // ---------------- 機工士 ----------------
   // 説明文から:
@@ -148,7 +146,7 @@
           if (id === ID.OVERDRIVE && s.queen && !s.queen.ending) { s.queen.until = s.t; s.queen.next = s.t; }
           if (id === ID.FLAMETHROWER) s.flame = { next: s.t + 1000, until: s.t + 10000, mult: R.mult };
           if (id === ID.TACTICIAN) { R.mitigate('party', 0.15, 15, 'タクティシャン'); R.buff('tactician', 15000); }
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
         },
         // ワイルドファイアの爆発（時間切れかデトネーター）
         wfBurst() {
@@ -412,15 +410,15 @@
           if (id === ID.FLOURISH) { for (const k of ['fSymmetry', 'fFlow', 'threefold', 'fourfold', 'finishingReady']) R.buff(k, 30000); Au()?.surge(); }
           if (id === ID.DEVILMENT) { R.buff('devilment', 20000); R.buff('starfall', 20000); Au()?.surge(); }
           if (id === ID.CLOSED) { if (has('closed')) R.remove('closed'); else R.buff('closed', 1e9); }
-          if (id === ID.WALTZ) R.heal('party', 300 * 0.0004);
+          if (id === ID.WALTZ) R.heal('party', 300 * HEAL_K);
           if (id === ID.SAMBA) { R.mitigate('party', 0.15, 15, '守りのサンバ'); R.buff('samba', 15000); }
-          if (id === ID.IMPROV) { s.improv = { at: s.t, until: s.t + 15000 }; R.buff('improv', 15000, 0); R.hot('party', 100 * 0.0004, 15, 'インプロビゼーション'); }
+          if (id === ID.IMPROV) { s.improv = { at: s.t, until: s.t + 15000 }; R.buff('improv', 15000, 0); R.hot('party', 100 * HEAL_K, 15, 'インプロビゼーション'); }
           if (id === ID.IMPROV_FINISH && s.improv) {
             const n = Math.min(4, Math.floor((s.t - s.improv.at) / 3000));
             R.shield('party', (IMPROV_PCT[n] ?? 5) / 100, 30, 'インプロビゼーション・フィニッシュ');
             stopImprov(null);
           }
-          if (id === ID.SECONDWIND) R.heal('self', 800 * 0.0004);
+          if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
         },
         tick() {
           const s = S();
@@ -457,7 +455,10 @@
           if (id === ID.FAN3) return has('threefold');
           if (id === ID.FAN4) return has('fourfold');
           if (id === ID.SABER || id === ID.DAWN) return s.esprit >= (has('technicalFinish') ? 50 : 80);
-          if ([ID.TILLANA, ID.STARFALL, ID.LAST_DANCE, ID.FINISHING_MOVE].includes(id)) return true;
+          // ティラナ・フィニシングムーブはボタンが変わったときだけ出る。ラストダンス・流星の舞いは自分のボタンなので、実行可の間だけ
+          if (id === ID.TILLANA || id === ID.FINISHING_MOVE) return true;
+          if (id === ID.LAST_DANCE) return has('lastDance');
+          if (id === ID.STARFALL) return has('starfall');
           return false;
         },
         guide: () => null,

@@ -36,13 +36,18 @@ def stylize(img: Image.Image, pixelate: int, colors: int) -> Image.Image:
 def pack_character(cdir: Path, out_root: Path, pixelate: int, colors: int) -> None:
     info = json.loads((cdir / "render-info.json").read_text(encoding="utf-8"))
     anims = info["animations"]
-    sample = next(cdir.glob("*/down_000.png"))
-    fw, fh = Image.open(sample).size
+    if not anims:
+        print(f"[pack] {cdir.name}: アニメーションがないので飛ばす")
+        return
+    # 描いた方向（render_sprites.py が書く。古い render-info.json は 4 方向）
+    dirs_of = {aname: a.get("directions", DIRECTIONS) for aname, a in anims.items()}
+    first = next(iter(anims))
+    fw, fh = Image.open(cdir / first / f"{dirs_of[first][0]}_000.png").size
     cols = max(a["frames"] for a in anims.values())
     rows, manifest_anims = [], {}
     for aname, a in anims.items():
         manifest_anims[aname] = {"frames": a["frames"], "loop": a["loop"], "rows": {}}
-        for d in DIRECTIONS:
+        for d in dirs_of[aname]:
             manifest_anims[aname]["rows"][d] = len(rows)
             rows.append((aname, d, a["frames"]))
     sheet = Image.new("RGBA", (fw * cols, fh * len(rows)), (0, 0, 0, 0))

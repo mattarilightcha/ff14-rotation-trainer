@@ -140,6 +140,7 @@
             // 解除したステータス 1 つにつき、バリアを最大 HP の 2% ずつ上乗せ（説明文）
             const n = ['thrill', 'damnation', 'blood'].filter((k) => has(k)).length;
             for (const k of ['thrill', 'damnation', 'blood']) R.remove(k);
+            for (const name of ['ダムネーション', '原初の血気']) R.unmitigate('self', name); // 練習場に付けた軽減も外す（原初の血潮は別のステータスなので残る）
             support(R, a);
             if (n) R.shield('party', (15 + 2 * n) / 100, 30, 'シェイクオフ');
           }
@@ -299,9 +300,10 @@
         effects(id, ok) {
           const a = A[id], s = S();
           // 説明文の効果（発動条件のステータス・付与・ゲージの消費）。暗黒は延長の決まりがあるので除いて下で付ける。
+          // ブラックナイトのダークアーツは「バリアがダメージを完全に吸収して消滅すると」付くので除く（tick で付ける）。
           // シャドウブリンガー（暗黒の間）とソルト・アンド・ダーク（ソルトアースの間）は、発動条件のステータスを使わない
           const keep = id === ID.BRINGER || id === ID.SALT_DARK;
-          const eff = a.eff ? { ...a, eff: { ...a.eff, grant: a.eff.grant?.filter((g) => g.status !== '暗黒'), requires: keep ? undefined : a.eff.requires } } : a;
+          const eff = a.eff ? { ...a, eff: { ...a.eff, grant: a.eff.grant?.filter((g) => g.status !== '暗黒' && g.status !== 'ダークアーツ'), requires: keep ? undefined : a.eff.requires } } : a;
           tooltipEffects(R, J, eff, ok, gauges);
           // MP
           const cost = mpCost(a);

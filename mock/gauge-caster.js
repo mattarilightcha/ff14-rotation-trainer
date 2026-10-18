@@ -159,6 +159,10 @@
     function palette(st, instant) {
       const t = st.t ?? 0, v = Math.max(0, Math.min(100, st.palette ?? 0)), paint = Math.max(0, Math.min(5, st.paint ?? 0));
       const sub = !!st.st?.subtractive && st.st.subtractive.until > t, mono = !!st.st?.monochrome && st.st.monochrome.until > t;
+      // 変わったときだけ書き直す（毎フレーム呼ばれる）
+      const pkey = `${v}:${paint}:${sub}:${mono}`;
+      if (!instant && pkey === prev.pkey) return;
+      prev.pkey = pkey;
       set(k1(22), { opacity: sub ? 0 : 1 }); set(k1(23), { opacity: sub ? 1 : 0 });
       set(k1(21), { clipPath: clipW(Math.round((PCT_SWIRL * v) / 100), PCT_SWIRL) });
       const n = k1(12); if (n) n.textContent = String(v);

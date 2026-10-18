@@ -3,7 +3,7 @@
 // 値は説明文（抽出データの description と、build-mock-data.mjs が読み取った eff / pot）から。説明文にない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, HEAL_K, descCharges, support, actorTickPhase, mpTicks, naturalMp, guideTrait, guidePet, numIn } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, HEAL_K, descCharges, support, actorTickPhase, mpRegen, guideTrait, guidePet, numIn } = window.MockJobs.lib;
   const MP_MAX = 10000;
   const isSpell = (a) => a?.category === 2;
   // 説明文の「回復量のN％分のダメージを軽減」（鼓舞・コンソレイションのバリア）
@@ -120,7 +120,7 @@
       }
       // 鼓舞（クリティカルなら激励も）。応急戦術のときはバリアの分も回復にする
       function galvanize(a, who, crit) {
-        const s = S(), heal = (a.eff?.heal ?? 0) * HEAL_K * healUp(a), shield = heal * (barrierPct(a) / 100) * (crit ? 2 : 1);
+        const heal = (a.eff?.heal ?? 0) * HEAL_K * healUp(a), shield = heal * (barrierPct(a) / 100) * (crit ? 2 : 1);
         if (has('emergency')) {
           R.remove('emergency');
           R.heal(who, heal + shield);
@@ -129,7 +129,6 @@
         }
         R.heal(who, heal);
         R.shield(who, shield, 30, '鼓舞');
-        s.galv = { who, until: s.t + 30000 };
         if (crit) R.addLog('ok', `${a.name}: クリティカル（激励も付与）`);
       }
       const J = {
@@ -140,7 +139,7 @@
         procStatus: { 183: 'banefulReady' },
         ownDots: true, // 蠱毒法と埋伏の毒の 2 つを持つ
         initState(s) {
-          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.flow = 0; s.fey = 0; s.fairy = true; s.seraph = null; s.union = null; s.excog = null; s.galv = null;
+          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.flow = 0; s.fey = 0; s.fairy = true; s.seraph = null; s.union = null; s.excog = null;
           s.dots = {}; s.fairyNext = 0; s.dissip = false; s.banefulPending = false;
           s.stats.flowLost = 0; s.stats.feyOver = 0; s.stats.banefulLost = 0; s.stats.drains = 0; s.stats.fairyHeals = 0; s.stats.unionTicks = 0;
         },
@@ -251,7 +250,6 @@
           // 転化の終わり: フェアリーが戻る
           if (s.dissip && !has('dissipation')) { s.dissip = false; if (s.fairy) { R.pet('eos', 0); R.addLog('sys', '転化が終わり、フェアリーが戻りました'); } }
           if (s.seraph && s.seraph.until <= s.t) { s.seraph = null; R.addLog('sys', 'セラフィムが帰還しました（フェアリーが戻る）'); }
-          if (s.galv && s.galv.until <= s.t) s.galv = null;
           if (s.banefulPending && !has('banefulReady')) { s.banefulPending = false; s.stats.banefulLost++; R.addLog('warn', '埋伏の毒実行可を使わずに切らしました'); }
           // 深謀遠慮の策: HP が 50% 以下か、45 秒たつと回復
           if (s.excog && (R.hpOf(s.excog.who) <= 0.5 || s.t >= s.excog.until)) {
@@ -262,7 +260,7 @@
           }
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
           // MP の自然回復（actor tick）と、ルーシッドドリーム（同じ周期で 550: 召喚士と同じ）
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
           if (s.phase !== 'combat') return;
           // フェイユニオン: 3 秒ごとにフェイエーテルを 10 使い、回復力 300（仮の間隔）
           if (s.union) {
@@ -533,7 +531,7 @@
           });
           marksTick('haima', 150); marksTick('panhaima', 100);
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
           if (s.phase !== 'combat') return;
           s.gallT += dt;
           while (s.gallT >= GALL_MS) {

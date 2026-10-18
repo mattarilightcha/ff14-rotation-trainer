@@ -38,7 +38,7 @@
       const sn = k(`${WN.sNum}/2`); if (sn) sn.textContent = String(b);
       set(k(`${WN.bar}/2`), { clipPath: clipW(w, BEAST_W) });
       set(k(`${WN.sBar}/5`), { clipPath: clipW(Math.round((SBAR_W * b) / 100), SBAR_W) });
-      K.el.classList.toggle('o-full', b >= 100);
+      // ナイトの満タンの光（.o-full: 11/4 が明るい塗り）は使わない。戦士の 11/4 は使った分の暗い塗りなので、満タンで暗く明滅してしまう
       if (instant) return;
       if (b > a) {
         anim(k(`${WN.bar}/2`), [{ filter: 'brightness(1.9)' }, { filter: 'brightness(1)' }], { duration: 500 });

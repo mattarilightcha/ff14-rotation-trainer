@@ -292,7 +292,8 @@ function buildJob(JOB, LEVEL) {
   // 詠唱・リキャスト・消費 MP: 抽出データの値と、ジョブガイド（Lv100・特性込み）が違えばジョブガイド
   function timing(a) {
     const o = { castMs: Math.round(a.cast * 1000), recastMs: Math.round(a.recast * 1000), mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0, guide: [] };
-    const g = a.jobs?.includes(JOB) ? guideFor(GUIDE, a) : null; // 他ジョブのアクション（共有バーに残っているもの）は見ない
+    // 他ジョブのアクション（共有バーに残っているもの）は見ない。ジョブガイドの表は Lv100（特性込み）の値なので、Lv100 未満のジョブには使わない
+    const g = LEVEL >= 100 && a.jobs?.includes(JOB) ? guideFor(GUIDE, a) : null;
     if (!g) return o;
     const gc = guideSec(g.en.cast), gr = guideSec(g.en.recast), gm = guideMp(g.en.cost);
     if (gc != null && Math.round(gc * 1000) !== o.castMs) { o.guide.push(`詠唱 ${o.castMs / 1000}→${gc}`); o.castMs = Math.round(gc * 1000); }

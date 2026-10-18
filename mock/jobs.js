@@ -72,6 +72,10 @@
   const actorTickPhase = (R) => (((R.OPT.seed ?? 1) * 1237) % MP_TICK);
   function mpTicks(s, dt) { s.mpTick += dt; let n = 0; while (s.mpTick >= MP_TICK) { s.mpTick -= MP_TICK; n++; } return n; }
   const naturalMp = (s) => (s.phase === 'combat' ? 200 : 600);
+  // MP の自然回復とルーシッドドリーム（同じ周期で 550。21 秒で 7 回 = 3850。利用者の調べ: GAME-71）。召喚士・学者・賢者・赤魔道士・ピクトマンサーで共通
+  function mpRegen(R, s, dt, max = 10000) { for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(max, s.mp + naturalMp(s) + (R.has('lucid') ? 550 : 0)); }
+  // 発動確率のある効果の乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
+  const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
   // 公式ジョブガイドの特性・ペットの技（build-mock-data.mjs が D.guide に入れる。英語名で引く）。特性の文は日本語
   const guideTrait = (R, en) => R.D.guide?.traits?.find((t) => t.en === en)?.desc ?? '';
   const guidePet = (R, en) => R.D.guide?.pets?.find((p) => p.en === en) ?? null;
@@ -446,6 +450,8 @@
       const ID = { GLARE3: 25859, GLARE4: 37009, DIA: 16532, ASSIZE: 3571, POM: 136, MISERY: 16535, SOLACE: 16531, RAPTURE: 16534, SWIFT: 7561, HOLY3: 25860, THIN: 7430, TEMPERANCE: 16536, CARESS: 37011, LILYBELL: 25862, RAISE: 125, ASYLUM: 3569, CURE: 120, CURE2: 135, PLENARY: 7433 };
       // インドゥルゲンティアの追加の回復が出る技（説明文「メディカ、ケアルガ、メディガ、ハート・オブ・ラプチャー」）
       const PLENARY_HEALS = new Set([124, 131, 37010, 16534]);
+      // ヒーリングリリーが増える間隔（公式ジョブガイドの特性「Secret of the Lily」の文。作るときに 1 回だけ読む）
+      const LILY_MS = numIn(guideTrait(R, 'Secret of the Lily'), /(\d+)秒が経過するたび/, 20) * 1000;
       const STATUS = {
         pom: { name: '神速魔', tracked: true },
         glare4: { name: 'グレアジャ実行可', sid: 3879 },
@@ -485,7 +491,7 @@
         comboStarters: new Set(),
         procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（ケアルラ効果アップの間光る）
         dot: { key: 'dia' },
-        initState(s) { s.lily = 3; s.blood = 3; s.lilyT = 0; // 7.4 から戦闘開始時にヒーリングリリー 3・ブラッドリリー満タン（利用者の調べ: GAME-70）
+        initState(s) { s.lily = 3; s.blood = 3; s.lilyT = 0; s.lilyMs = LILY_MS; // 7.4 から戦闘開始時にヒーリングリリー 3・ブラッドリリー満タン（利用者の調べ: GAME-70）
           s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
         // リタージー・オブ・ベルの効果時間中の再使用（残りのスタックで回復して消える）は、リキャストを待たずに使える（説明文「効果時間中に再使用すると」）
         freeUse: (id) => id === ID.LILYBELL && S().bell > 0,
@@ -552,7 +558,6 @@
           if (s.phase !== 'combat') return;
           s.lilyT += dt;
           // ヒーリングリリー: 戦闘状態になってから 20 秒ごとに 1 つ（公式ジョブガイドの特性「シークレットリリー」。GAME-62）
-          const LILY_MS = numIn(guideTrait(R, 'Secret of the Lily'), /(\d+)秒が経過するたび/, 20) * 1000;
           while (s.lilyT >= LILY_MS) {
             s.lilyT -= LILY_MS;
             if (s.lily >= 3) { s.stats.lilyOver++; R.addLog('warn', 'ヒーリングリリーがあふれました（3 つのまま）'); R.ev('ミス', { result: 'あふれ', note: 'ヒーリングリリーが 3 つのまま' }); }
@@ -1464,7 +1469,7 @@
           }
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
           // MP の自然回復（actor tick）と、ルーシッドドリーム（同じ周期で 550。21 秒で 7 回 = 3850）
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
           // デミの自動攻撃（ウィルムウェーブ・火焔・光芒）: デミ自身の 1.5 秒ごと。自分の GCD とは別（利用者の調べ: 公式ジョブガイド）
           const dm = demiOn();
           if (dm && s.phase === 'combat') {
@@ -1530,6 +1535,6 @@
   window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
   // ほかのジョブの決まり（jobs-tank.js などの役割ごとのファイル）が使う共通の部品。ジョブの一覧に出ないよう列挙しない
   Object.defineProperty(window.MockJobs, 'lib', {
-    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, secAfter, descGain, extendBuff, supportWho, support, guideTrait, guidePet, numIn },
+    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, mpRegen, seeded, secAfter, descGain, extendBuff, supportWho, support, guideTrait, guidePet, numIn },
   });
 })();
