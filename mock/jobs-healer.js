@@ -428,8 +428,9 @@
         procStatus: {},
         ownDots: true, // エウクラシア・ドシスIII とエウクラシア・ディスクラシア
         initState(s) {
-          // 戦闘開始時はアダーガル 3（GAME-70）。カルディアはタンクに付けてある（仮 GAME-76）
-          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.gall = 3; s.gallT = 0; s.gallMs = GALL_MS; s.sting = 0; s.kardia = 'npc'; s.dots = {}; s.stingWatch = [];
+          // 練習の開始はコンテンツ突入・全滅後のリスタートと同じ: アダーガル 3（パッチ 6.0）・アダースティング 3（パッチ 6.1）（利用者の調べ: GAME-70）。
+          // フィールドで戦闘を始めたときは補充されず、持っている数のまま（練習では扱わない）。カルディアはタンクに付けてある（前提 GAME-76）
+          s.mp = MP_MAX; s.mpTick = actorTickPhase(R); s.gall = 3; s.gallT = 0; s.gallMs = GALL_MS; s.sting = 3; s.kardia = 'npc'; s.dots = {}; s.stingWatch = [];
           s.haima = {}; s.panhaima = {};
           s.stats.gallOver = 0; s.stats.kardia = 0; s.stats.stingGot = 0; s.stats.stingOver = 0; s.stats.gallUsed = 0;
         },
