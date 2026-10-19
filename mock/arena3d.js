@@ -551,8 +551,8 @@
     // ---- ドット絵の板 ----
     const SPR = S.SPR;
     const setTex = (set) => ({ map: texOf(set.atlas, 'sprite'), emap: texOf(set.emit, 'sprite'), size: new T.Vector2(set.atlas.width, set.atlas.height) });
-    // 人物の組（侍・タンク・白魔道士・木人）と小物。自分と相方の見た目はジョブで変わるので、組ごとに作っておく
-    const TEX = Object.fromEntries(Object.entries(SPR).filter(([, v]) => v?.atlas).map(([k, v]) => [k, setTex(v)]));
+    // 人物の組（侍・タンク・白魔道士・木人・ペット）と小物のテクスチャ。組の絵（sprites.js）と同じく、使うときに初めて作る
+    const TEX = new Proxy({}, { get(o, k) { if (!(k in o)) { const v = SPR[k]; o[k] = v?.atlas ? setTex(v) : undefined; } return o[k]; } });
     const quad = new T.PlaneGeometry(1, 1);
     function spriteMesh(tex, parent = scene) {
       const uniforms = Object.assign(T.UniformsUtils.clone(T.UniformsLib.fog), {
@@ -710,13 +710,13 @@
     }
     const ENT = {
       boss: { mesh: spriteMesh(TEX.boss), tex: TEX.boss, shadow: shadowMesh(2.4), op: 1 },
-      tank: { mesh: spriteMesh(TEX.tank), tex: TEX.tank, shadow: shadowMesh(0.95), op: 1 },
-      player: { mesh: spriteMesh(TEX.player), tex: TEX.player, shadow: shadowMesh(0.9), op: 1 },
+      tank: { mesh: spriteMesh(TEX[S.setName('tank')]), tex: TEX[S.setName('tank')], shadow: shadowMesh(0.95), op: 1 },
+      player: { mesh: spriteMesh(TEX[S.setName('player')]), tex: TEX[S.setName('player')], shadow: shadowMesh(0.9), op: 1 },
     };
     ENT.boss.mesh.material.uniforms.uEmit.value = 1.8;
-    const trails = Array.from({ length: 6 }, () => spriteMesh(TEX.player));
+    const trails = Array.from({ length: 6 }, () => spriteMesh(TEX[S.setName('player')]));
     // 召喚士のペット（カーバンクル・エギ・デミ召喚）: 板を 1 枚。出ているペットの絵に差し替える
-    const PET = { mesh: spriteMesh(TEX.pet_carbuncle ?? TEX.player), tex: null, shadow: shadowMesh(0.6) };
+    const PET = { mesh: spriteMesh(TEX[S.setName('player')]), tex: null, shadow: shadowMesh(0.6) };
     PET.mesh.material.uniforms.uEmit.value = 0.9;
 
     // ---- 敵の足元の輪 ----
@@ -1015,9 +1015,9 @@
           du.uTime.value = time; du.uAlpha.value = fade; du.uPulse.value = pulse;
           continue;
         }
-        if (z.kind === 'ley') {
-          // 黒魔紋: 足元の紫の輪（範囲の輪の描き方）
-          u.uC0.value.copy(col('#f2e8ff')); u.uC1.value.copy(col('#8a5cff'));
+        if (z.kind === 'ley' || z.ring) {
+          // 黒魔紋: 足元の紫の輪（範囲の輪の描き方）。床の輪（ソルトアースなど）は範囲ごとの色で同じ描き方
+          u.uC0.value.copy(col(z.col?.[0] ?? '#f2e8ff')); u.uC1.value.copy(col(z.col?.[1] ?? '#8a5cff'));
           continue;
         }
         if (z.kind === 'star') {

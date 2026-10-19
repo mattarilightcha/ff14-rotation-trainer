@@ -1,0 +1,685 @@
+{
+ "source": "公式ジョブガイド（© SQUARE ENIX）",
+ "hosts": {
+  "ja": "jp.finalfantasyxiv.com",
+  "en": "na.finalfantasyxiv.com"
+ },
+ "jobs": [
+  {
+   "job": "battle",
+   "ja": {
+    "title": "ファイナルファンタジーXIV: ジョブガイド",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {}
+   },
+   "en": {
+    "title": "FINAL FANTASY XIV Job Guide",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {}
+   }
+  },
+  {
+   "job": "paladin",
+   "ja": {
+    "title": "ジョブガイド「ナイト」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 39,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 20,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 16,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Paladin | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 39,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 20,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 16,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "warrior",
+   "ja": {
+    "title": "ジョブガイド「戦士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Warrior | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "darkknight",
+   "ja": {
+    "title": "ジョブガイド「暗黒騎士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 35,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Dark Knight | Final Fantasy XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 35,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "gunbreaker",
+   "ja": {
+    "title": "ジョブガイド「ガンブレイカー」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 38,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 14,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 17,
+     "pvp:anchor__pvp_limitbreak": 2,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Gunbreaker | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 38,
+     "pve:anchor__rollcommonaction": 7,
+     "pve:anchor__onlytrait": 14,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 17,
+     "pvp:anchor__pvp_limitbreak": 2,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "whitemage",
+   "ja": {
+    "title": "ジョブガイド「白魔道士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 36,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 21,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 8,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: White Mage | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 36,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 21,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 8,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "scholar",
+   "ja": {
+    "title": "ジョブガイド「学者」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 41,
+     "pve:anchor__pet_eos": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 10,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Scholar | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 41,
+     "pve:anchor__pet_eos": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 10,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "astrologian",
+   "ja": {
+    "title": "ジョブガイド「占星術師」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 40,
+     "pve:anchor__card_action": 8,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 20,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 12,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Astrologian | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 40,
+     "pve:anchor__card_action": 8,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 20,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 12,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "sage",
+   "ja": {
+    "title": "ジョブガイド「賢者」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 40,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 10,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Sage | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 40,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 10,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "monk",
+   "ja": {
+    "title": "ジョブガイド「モンク」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 41,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Monk | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 41,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "dragoon",
+   "ja": {
+    "title": "ジョブガイド「竜騎士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 2,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Dragoon | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 2,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "ninja",
+   "ja": {
+    "title": "ジョブガイド「忍者」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__ninja_onlyaction": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 18,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Ninja | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 33,
+     "pve:anchor__ninja_onlyaction": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 19,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 18,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "samurai",
+   "ja": {
+    "title": "ジョブガイド「侍」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 30,
+     "pve:anchor__samurai_onlyaction": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 15,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 15,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Samurai | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 30,
+     "pve:anchor__samurai_onlyaction": 9,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 15,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 15,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "reaper",
+   "ja": {
+    "title": "ジョブガイド「リーパー」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 38,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 14,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 17,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Reaper | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 38,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 14,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 17,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "viper",
+   "ja": {
+    "title": "ジョブガイド「ヴァイパー」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 45,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 28,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Viper | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 45,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 13,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 28,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "bard",
+   "ja": {
+    "title": "ジョブガイド「吟遊詩人」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 34,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 22,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 9,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Bard | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 34,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 22,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 9,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "machinist",
+   "ja": {
+    "title": "ジョブガイド「機工士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 39,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 21,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Machinist | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 39,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 21,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "dancer",
+   "ja": {
+    "title": "ジョブガイド「踊り子」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 31,
+     "pve:anchor__dancer_onlyaction": 4,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Dancer | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 31,
+     "pve:anchor__dancer_onlyaction": 4,
+     "pve:anchor__rollcommonaction": 6,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 1,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "blackmage",
+   "ja": {
+    "title": "ジョブガイド「黒魔道士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 34,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 23,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 20,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Black Mage | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 34,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 23,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 20,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "summoner",
+   "ja": {
+    "title": "ジョブガイド「召喚士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 79,
+     "pve:anchor__pet": 1,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 25,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 14,
+     "pvp:anchor__pvp_limitbreak": 4,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Summoner  | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 79,
+     "pve:anchor__pet": 1,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 25,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 14,
+     "pvp:anchor__pvp_limitbreak": 4,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "redmage",
+   "ja": {
+    "title": "ジョブガイド「赤魔道士」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 43,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 15,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Red Mage | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 43,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 15,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 13,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  },
+  {
+   "job": "pictomancer",
+   "ja": {
+    "title": "ジョブガイド「ピクトマンサー」 | ファイナルファンタジーXIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 43,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 25,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   },
+   "en": {
+    "title": "Job Guide: Pictomancer | FINAL FANTASY XIV",
+    "fetchedAt": "2026-10-18T12:17Z",
+    "rows": {
+     "pve:anchor__onlyaction": 43,
+     "pve:anchor__rollcommonaction": 5,
+     "pve:anchor__onlytrait": 16,
+     "pve:anchor__rollcommontrait": 2,
+     "pvp:anchor__pvp_onlyaction": 25,
+     "pvp:anchor__pvp_limitbreak": 1,
+     "pvp:anchor__pvp_commononlyaction": 5,
+     "pvp:anchor__pvp_roleaction": 3
+    }
+   }
+  }
+ ]
+}

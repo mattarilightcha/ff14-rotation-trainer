@@ -1,0 +1,2357 @@
+{
+ "https://lds-img.finalfantasyxiv.com/promo/h/B/3z8WY3AOZfrbOQZKGvgl3nidgI.png": {
+  "kind": "hud",
+  "jobs": [
+   "astrologian"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アルカナシンボル",
+   "en": "Arcana Gauge"
+  },
+  "file": "public/jobguide/hud/astrologian/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/I/dmSiiTz9fm7BUXYfL7ZKLRmckU.png": {
+  "kind": "hud",
+  "jobs": [
+   "astrologian"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アルカナシンボル",
+   "en": "Arcana Gauge"
+  },
+  "file": "public/jobguide/hud/astrologian/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/H/92-aRKuilav6nsKXjKhfV7oPro.png": {
+  "kind": "hud",
+  "jobs": [
+   "astrologian"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/astrologian/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/x/_QqSRtr2-53c4k1LfXaEZNEM7M.png": {
+  "kind": "hud",
+  "jobs": [
+   "astrologian"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/astrologian/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/C/6UAuuGF_bnfRwSST-dCBUBh2Zw.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "戦歌ゲージ",
+   "en": "Song Gauge"
+  },
+  "file": "public/jobguide/hud/bard/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/0/QnR7fHYkAr_3AQFpbtW0dwhsJk.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "戦歌ゲージ",
+   "en": "Song Gauge"
+  },
+  "file": "public/jobguide/hud/bard/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/2/zIhfAHktEHJDMVyF6loNl0p7Kw.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "戦歌ゲージ",
+   "en": "Song Gauge"
+  },
+  "file": "public/jobguide/hud/bard/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/L/GtH6guRBbIwI7w_2QuSO-gsEXs.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "戦歌ゲージ",
+   "en": "Song Gauge"
+  },
+  "file": "public/jobguide/hud/bard/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/X/u6DYtRwjQaqIXibHeCBkqir5o0.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "戦歌ゲージ",
+   "en": "Song Gauge"
+  },
+  "file": "public/jobguide/hud/bard/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/yJP1VzDXI5EHsC3u_z6PDeBxvk.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/bard/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/a/N6xiUu_sM0buay4CIOLe_1NhkI.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/bard/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/6/lg3gqIHbIPmaBukFXl_0yk5Ru4.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/bard/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/V/KrC5hrQ2S6dmIcrDVWL6E67wnw.png": {
+  "kind": "hud",
+  "jobs": [
+   "bard"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/bard/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/1/IRhCVegOONL1dan2-K0dlMTkec.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/m/hCIqO9ftbx7OL7ewRNTl2UJNro.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/v/PYRszmENkeR8mYEqMrWIvr6IYg.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/r/zuIAVHJ0EMUGtM-HvnWvMOoAak.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/b/zPgyitGlHT_2WlkEGUZg5t578g.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/d/WZPIWKF_IJXrcpLnB8V05N2RGI.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/A/CccH9NAO4sucYt95IyKtig7E0E.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エレメンタルゲージ",
+   "en": "Elemental Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/n/uCzz6QkHC-WfuKNYA7Hgvj9CUs.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アストラルシンボル",
+   "en": "Astral Gauge"
+  },
+  "file": "public/jobguide/hud/blackmage/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/_/JM7N8puHgvUt4miL3hhDjk8yqk.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/4/ygolMSCsSXEmFF95lCtgjj9aNI.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/10.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/D/0riF-ce2GgxQVsor0Rti-sLrjo.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/11.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/m/yIvov8rIUIJf2p8uebrv7Te2rI.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/12.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/9/D-YoUvDYD2YW9pnjSB_jzaOUfI.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/13.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Q/71X0HNy3ZbcufmXqpeHq1bCXl8.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/14.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/E/mF_-QzUuG17sYgTUTx15HMFu5g.png": {
+  "kind": "hud",
+  "jobs": [
+   "blackmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/blackmage/15.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/t/Q4vOFy_wj5wt0tTLBizOGv18-4.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ステップシンボル",
+   "en": "Step Gauge"
+  },
+  "file": "public/jobguide/hud/dancer/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/E/4_1nE8BxxU9H_i-cDDU3kS3JEk.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ステップシンボル",
+   "en": "Step Gauge"
+  },
+  "file": "public/jobguide/hud/dancer/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/m/HnN6uQHAhVtKNTgyj4H_TPUdkE.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "幻扇シンボル",
+   "en": "Fourfold Feathers"
+  },
+  "file": "public/jobguide/hud/dancer/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/p/Cl3YLbG3k-oLWtVg1vI9YscKd8.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "幻扇シンボル",
+   "en": "Fourfold Feathers"
+  },
+  "file": "public/jobguide/hud/dancer/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/y/lR2_mZ1Lv3XS_HcgdbrDk69dE8.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dancer/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/F/6VDBotMC28RxUFCs3ZQXztVOzQ.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dancer/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/6L150FIk2Y99ZNjMkWBBrkLnVs.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dancer/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/u/oOv709RAUY_-YOXddZOUu5npSo.png": {
+  "kind": "hud",
+  "jobs": [
+   "dancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dancer/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ブラッドゲージ",
+   "en": "Blood Gauge"
+  },
+  "file": "public/jobguide/hud/darkknight/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/KTQC7uU17HK2gGtllianH7c6Bc.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ブラッドゲージ",
+   "en": "Blood Gauge"
+  },
+  "file": "public/jobguide/hud/darkknight/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/h/7T3XMjgG1CnY1FX6fbl-oJre-Y.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ダークサイドシンボル",
+   "en": "Darkside Gauge"
+  },
+  "file": "public/jobguide/hud/darkknight/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/x/KzVLdZ6ZwSLQI9QaviWW9LxKMY.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ダークサイドシンボル",
+   "en": "Darkside Gauge"
+  },
+  "file": "public/jobguide/hud/darkknight/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ダークサイドシンボル",
+   "en": "Darkside Gauge"
+  },
+  "file": "public/jobguide/hud/darkknight/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/darkknight/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/darkknight/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/darkknight/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png": {
+  "kind": "hud",
+  "jobs": [
+   "darkknight"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/darkknight/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/U/T2yaxEHbVnDGfaX5N2wsmxFmgM.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "竜血ゲージ",
+   "en": "Dragon Gauge"
+  },
+  "file": "public/jobguide/hud/dragoon/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/G/-im224XA8oWWSknUM7c4je-E1I.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "竜血ゲージ",
+   "en": "Dragon Gauge"
+  },
+  "file": "public/jobguide/hud/dragoon/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/t/5PRCK8_YSpn6Pj6WeIeicnurUs.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "竜血ゲージ",
+   "en": "Dragon Gauge"
+  },
+  "file": "public/jobguide/hud/dragoon/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/j/r_EMLbj61FGx5sEAaDiFvcFFF4.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dragoon/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/T/r50M7FweJEDdmOIEc_WgCleyJ0.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dragoon/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/s/QbVrhBMBq-VUi7fkPZO3U7BWQU.png": {
+  "kind": "hud",
+  "jobs": [
+   "dragoon"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/dragoon/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/l/KRsqKnc7ujlwQuYYrd8ZM6GxFo.png": {
+  "kind": "hud",
+  "jobs": [
+   "gunbreaker"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ソイルシンボル",
+   "en": "Powder Gauge"
+  },
+  "file": "public/jobguide/hud/gunbreaker/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/YXsPIfV3tZYR0SmZ5jBfVq07dk.png": {
+  "kind": "hud",
+  "jobs": [
+   "gunbreaker"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ソイルシンボル",
+   "en": "Powder Gauge"
+  },
+  "file": "public/jobguide/hud/gunbreaker/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/5/XLkM5VoT3OPxb71IOPujqoUzzs.png": {
+  "kind": "hud",
+  "jobs": [
+   "gunbreaker"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ソイルシンボル",
+   "en": "Powder Gauge"
+  },
+  "file": "public/jobguide/hud/gunbreaker/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/o/fztNh8k74_dg41itWzSnoWv9HI.png": {
+  "kind": "hud",
+  "jobs": [
+   "gunbreaker"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/gunbreaker/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/J/698tVXfHraTAE6SLzp9wdUh7eI.png": {
+  "kind": "hud",
+  "jobs": [
+   "gunbreaker"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/gunbreaker/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/3/B4A-X0YSgIRWihWVXad4NyG5bc.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エンジニアゲージ",
+   "en": "Heat Gauge"
+  },
+  "file": "public/jobguide/hud/machinist/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/H/5GX8Xg6XXo8SUM4UAEAJ71p06E.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エンジニアゲージ",
+   "en": "Heat Gauge"
+  },
+  "file": "public/jobguide/hud/machinist/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/b/AGuBbV-4m_DHBea6i-tX0Y2qjE.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/machinist/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/3/CywmPRbCiJMjYNjdBlu1e-1FXA.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/machinist/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/a/SSYB8YzSAd0VfUMwSZqbNGGRWY.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/machinist/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/z/jX-6pBLvkFZaJgnGcte1HBe8jM.png": {
+  "kind": "hud",
+  "jobs": [
+   "machinist"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/machinist/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/f/wLOymzMUQpKJMnNAM9WF3SF21M.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "闘気シンボル",
+   "en": "Chakra Gauge"
+  },
+  "file": "public/jobguide/hud/monk/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/_/IpshxgdetMHlYocNwqH3Ecw9Ro.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "闘気シンボル",
+   "en": "Chakra Gauge"
+  },
+  "file": "public/jobguide/hud/monk/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/qmlyJdSzJGbzjAthwERvxkLMNU.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "象形拳シンボル",
+   "en": "Beast Chakra Gauge"
+  },
+  "file": "public/jobguide/hud/monk/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/s/9IVEhDXNCHE4c2Qu597uMPR2Xg.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "象形拳シンボル",
+   "en": "Beast Chakra Gauge"
+  },
+  "file": "public/jobguide/hud/monk/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/I/SehS4i68qgEsB0f7KuQWyFLXmg.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/monk/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/T/pd7OXWddvRCSSoxHCUsn9yXtto.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/monk/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/L/EfDdDnsLVPh1OXbXB7afMM_RZI.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/monk/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/F/YqHaU4s50GVrJ_fg6RLWTswzpc.png": {
+  "kind": "hud",
+  "jobs": [
+   "monk"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/monk/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/X/4N08Eemw-qqy87gkDKHtHfULpg.png": {
+  "kind": "hud",
+  "jobs": [
+   "ninja"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "風纏シンボル",
+   "en": "Kazematoi Gauge"
+  },
+  "file": "public/jobguide/hud/ninja/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/c/Q5_ZGRTO-GiH1dsmD5mybDBUcQ.png": {
+  "kind": "hud",
+  "jobs": [
+   "ninja"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "忍気ゲージ",
+   "en": "Ninki Gauge"
+  },
+  "file": "public/jobguide/hud/ninja/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png": {
+  "kind": "hud",
+  "jobs": [
+   "ninja"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/ninja/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png": {
+  "kind": "hud",
+  "jobs": [
+   "ninja"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/ninja/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png": {
+  "kind": "hud",
+  "jobs": [
+   "ninja"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/ninja/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/5/7CubTw07gyzi5TXmVHjzejYGmw.png": {
+  "kind": "hud",
+  "jobs": [
+   "paladin"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "オウスゲージ",
+   "en": "Oath Gauge"
+  },
+  "file": "public/jobguide/hud/paladin/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/z/W9JnpVtHtXJtcYOmFSMqiUA-d0.png": {
+  "kind": "hud",
+  "jobs": [
+   "paladin"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "オウスゲージ",
+   "en": "Oath Gauge"
+  },
+  "file": "public/jobguide/hud/paladin/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/b/hL5wqhPwALYOoBR_wDEf5wu1vY.png": {
+  "kind": "hud",
+  "jobs": [
+   "paladin"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/paladin/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/c/XMeNEhDtpM3UQaG0F9r0z8oKFg.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "キャンバスシンボル",
+   "en": "Canvases"
+  },
+  "file": "public/jobguide/hud/pictomancer/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/d/CpqIT00nFL6BkyLCjvelzxmM1k.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アニマルキャンバス",
+   "en": "Creature Canvas"
+  },
+  "file": "public/jobguide/hud/pictomancer/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Q/YMQFQpy5A9ob3VKtCMcF6460Fg.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アニマルキャンバス",
+   "en": "Creature Canvas"
+  },
+  "file": "public/jobguide/hud/pictomancer/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/D/2pdasCH6FiLvqjc84EN0zhkdGA.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ウェポンキャンバス／スケープキャンバス",
+   "en": "Weapon Canvas / Landscape Canvas"
+  },
+  "file": "public/jobguide/hud/pictomancer/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/k/WbC0bZlJPLkuGOhM7v0na3VH9M.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "パレットゲージ",
+   "en": "Palette Gauge"
+  },
+  "file": "public/jobguide/hud/pictomancer/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/085rAbsIuPNr0QOMpbPr1Yod1o.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/0/Et_8vQj-eqJyJWR47DhlKI0u0w.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/W/_yUQ1TJWB7J00FV3WwDAsyGdSM.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/z/6dRUltVuy55iy6u02Fk_vHX58I.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/w/9CNiT9qrs11R05OnnCC63ncadM.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/10.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/R/KXPuoaVRqWOQO5Ysr9nCeE0tlA.png": {
+  "kind": "hud",
+  "jobs": [
+   "pictomancer"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/pictomancer/11.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/W/1jyvIskrSc5iR0O4o-Eq5HVHuU.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ソウルゲージ",
+   "en": "Soul Gauge"
+  },
+  "file": "public/jobguide/hud/reaper/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/7/HToqFAaC0FYkQKzd7wh_2bvicg.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ソウルゲージ",
+   "en": "Soul Gauge"
+  },
+  "file": "public/jobguide/hud/reaper/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/d/TFAlyOL0A-u5wbH4xSIZCyp7TE.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "レムールシンボル",
+   "en": "Death Gauge"
+  },
+  "file": "public/jobguide/hud/reaper/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/b/xsQrvAjPWZTRg7mvwTrwK5DFXA.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "レムールシンボル",
+   "en": "Death Gauge"
+  },
+  "file": "public/jobguide/hud/reaper/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/B/my_22dBk7G-a5ediqVr67wGHNo.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/reaper/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Z/Hb74WVXwsWuLDBzampI59njz20.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/reaper/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Q/xzi1yleg6LE8pNblc_Qjwyj19M.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/reaper/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/4/tkpNcxUMgkVhofvLRjYnY7e0EM.png": {
+  "kind": "hud",
+  "jobs": [
+   "reaper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/reaper/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/W/pjhPD-Z5eXWSK3QHe04rpIgBAk.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "バランスゲージ",
+   "en": "Balance Gauge"
+  },
+  "file": "public/jobguide/hud/redmage/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "バランスゲージ",
+   "en": "Balance Gauge"
+  },
+  "file": "public/jobguide/hud/redmage/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/b/fUEa014CEUvPmc5QMaoHc1bYpY.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "バランスゲージ",
+   "en": "Balance Gauge"
+  },
+  "file": "public/jobguide/hud/redmage/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/redmage/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/redmage/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/redmage/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png": {
+  "kind": "hud",
+  "jobs": [
+   "redmage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/redmage/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/I/cwDLGuV2OTu9fWFWOsR_peQPrA.png": {
+  "kind": "hud",
+  "jobs": [
+   "sage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エウクラシアシンボル",
+   "en": "Eukrasia Gauge"
+  },
+  "file": "public/jobguide/hud/sage/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/m/fJs27-b_PnSTdVzTLh7qS0zvfA.png": {
+  "kind": "hud",
+  "jobs": [
+   "sage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アダーゲージ",
+   "en": "Addersgall Gauge"
+  },
+  "file": "public/jobguide/hud/sage/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/7/Dj5guxNBiGuHgfgp0kX69Oxkng.png": {
+  "kind": "hud",
+  "jobs": [
+   "sage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "アダーゲージ",
+   "en": "Addersgall Gauge"
+  },
+  "file": "public/jobguide/hud/sage/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/O/-2KIQ-gbsrO0JGJsOX8eC062Qo.png": {
+  "kind": "hud",
+  "jobs": [
+   "sage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/sage/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/8/8bh_auJPB8txbwwwN-8FnTHreg.png": {
+  "kind": "hud",
+  "jobs": [
+   "sage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/sage/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/D/Dl78Y5mzpsVtOgv-4sgId6PQ40.png": {
+  "kind": "hud",
+  "jobs": [
+   "samurai"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "雪月花シンボル",
+   "en": "Sen Gauge"
+  },
+  "file": "public/jobguide/hud/samurai/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/U/rptt4Mk75PBh46cm1q1vJ3ePLg.png": {
+  "kind": "hud",
+  "jobs": [
+   "samurai"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "剣気ゲージ",
+   "en": "Kenki Gauge"
+  },
+  "file": "public/jobguide/hud/samurai/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/q/yFiAv8XFU-4LYxEsIoLtfECEnk.png": {
+  "kind": "hud",
+  "jobs": [
+   "samurai"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "剣圧シンボル",
+   "en": "Meditation Gauge"
+  },
+  "file": "public/jobguide/hud/samurai/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/J3AavRpo8P39uToG2RVsA1UU04.png": {
+  "kind": "hud",
+  "jobs": [
+   "samurai"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/samurai/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/3YapYT4nugoVjZLcHZZ5baIp8U.png": {
+  "kind": "hud",
+  "jobs": [
+   "samurai"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/samurai/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/3/k7_yNXLMnM28HGbJ8EcFEW9RvQ.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エーテルフローシンボル",
+   "en": "Aetherflow Gauge"
+  },
+  "file": "public/jobguide/hud/scholar/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/n/l6m0_C1JWNm35jkGXPlZFg_2ac.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エーテルゲージ",
+   "en": "Faerie Gauge"
+  },
+  "file": "public/jobguide/hud/scholar/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エーテルゲージ",
+   "en": "Faerie Gauge"
+  },
+  "file": "public/jobguide/hud/scholar/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/scholar/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/scholar/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/scholar/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png": {
+  "kind": "hud",
+  "jobs": [
+   "scholar"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/scholar/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/g/ehaBoG3n-NogfWkhsbscDC-AZ4.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "エーテルフローシンボル",
+   "en": "Aetherflow Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/G/Ui5eNVVV9i0JqAd7-BhhavKSto.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/W/7tjpQn-CAGS3VUwI8uCoIDWCxE.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/G/RQMU_MezuqQwopegB5utV9TQXU.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/u/fyHMyrcoegyoIPzCTorrhQJ5Eo.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/V/Jx1V4GKed6G97aTgEos_tO2I-o.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Z/hcno8vopMMgLhKLNav9GWC0gc0.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/C/PAwlX1mzeDUiiOM1pu3PG8ahtU.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/F/6k81p57hMtbK964aPLVGJP4k_I.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/x/DUmdzAXO1gpzTH6XaN3I4XrCJI.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/10.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/W/pdJ0IrP2SpywJ_i7c3U0E6-KAQ.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "トランスゲージ",
+   "en": "Trance Gauge"
+  },
+  "file": "public/jobguide/hud/summoner/11.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/9/qqlNHsTJb5P6rU50n2QEIaWwUw.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/12.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/x/1AoIp95eq1ig_hMpUyW4rbNYWo.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/13.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/e/aMUEAYvsL55UF-An46fxLWITd4.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/14.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/r/OSi6LNZc9c7UNDTKOH-iNBpDYo.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/15.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/E/lCXntxryJgaToW3p81IOnJTJ_U.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/16.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/-/WpnqdM3ovXf2R7nMJviRv9RzCA.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/17.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/l/35fTAvRf1103OVjLLU5xzRe6X0.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/18.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/ZA9rsYQaW8AM1XA3iBeLl9dWyk.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/19.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/w/2-OhVK4tGy4qXReYEqNre0mBlk.png": {
+  "kind": "hud",
+  "jobs": [
+   "summoner"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/summoner/20.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/t/G22uSFZcTh5fVpuIdm8c92Ou8o.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ヴァイパーシンボル",
+   "en": "Vipersight"
+  },
+  "file": "public/jobguide/hud/viper/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/I/FJbikj-7YbIXL8OnIBV-MaVhZk.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ヴァイパーシンボル",
+   "en": "Vipersight"
+  },
+  "file": "public/jobguide/hud/viper/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/n/itotI6ZbqGe7TmMQXoIgDt6OJo.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ヴァイパーシンボル",
+   "en": "Vipersight"
+  },
+  "file": "public/jobguide/hud/viper/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/T/VclkHU7jT40MouLAejjB0I_i4o.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "霊力ゲージ",
+   "en": "Serpent Offerings Gauge"
+  },
+  "file": "public/jobguide/hud/viper/04.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/9/MVtt6dbYH04CR6ziMIf6_O-PzY.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "霊力ゲージ",
+   "en": "Serpent Offerings Gauge"
+  },
+  "file": "public/jobguide/hud/viper/05.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/U/0JmVot_twAiT5SRFTo2DQokGRs.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/viper/06.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/M/Ah71mlnDubOTcu5YWkcDXfRvVo.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/viper/07.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/n/8BELXKcihCR4GnJDU987mowoYM.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/viper/08.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/C0FqrLuPrCVLAoJyhd7YlgU0xc.png": {
+  "kind": "hud",
+  "jobs": [
+   "viper"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/viper/09.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/l/MHqKEsbF1agx5wFLFrlrjb40XM.png": {
+  "kind": "hud",
+  "jobs": [
+   "warrior"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ビーストゲージ",
+   "en": "Beast Gauge"
+  },
+  "file": "public/jobguide/hud/warrior/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/G/8mnBmkrAJdhB7ZPLG812UiFhxk.png": {
+  "kind": "hud",
+  "jobs": [
+   "warrior"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ビーストゲージ",
+   "en": "Beast Gauge"
+  },
+  "file": "public/jobguide/hud/warrior/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/k/3GHiS3XIjitdQYTykl4K02V_Kw.png": {
+  "kind": "hud",
+  "jobs": [
+   "warrior"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/warrior/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/O/jwptpuW59YM3f5xFHPYR08qMCg.png": {
+  "kind": "hud",
+  "jobs": [
+   "whitemage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ヒーリングケーン",
+   "en": "Healing Gauge"
+  },
+  "file": "public/jobguide/hud/whitemage/01.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/Q/XGVUBM4Mjd3eJ5fNjiPfrBw60g.png": {
+  "kind": "hud",
+  "jobs": [
+   "whitemage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "ヒーリングケーン",
+   "en": "Healing Gauge"
+  },
+  "file": "public/jobguide/hud/whitemage/02.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/c/hy1QFG6dHUKdL1IYJWzaHa8Gmg.png": {
+  "kind": "hud",
+  "jobs": [
+   "whitemage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/whitemage/03.png"
+ },
+ "https://lds-img.finalfantasyxiv.com/promo/h/K/k2Ag8uoD-I5rtzbhx3YVpWcv_A.png": {
+  "kind": "hud",
+  "jobs": [
+   "whitemage"
+  ],
+  "langs": [
+   "ja",
+   "en"
+  ],
+  "title": {
+   "ja": "シンプルモード",
+   "en": "Simple Mode"
+  },
+  "file": "public/jobguide/hud/whitemage/04.png"
+ }
+}

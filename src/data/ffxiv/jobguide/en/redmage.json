@@ -1,0 +1,1912 @@
+{
+ "job": "redmage",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/redmage/",
+ "pageTitle": "Job Guide: Red Mage | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMagical Ranged DPS\n\nOn the eastern edge of Abalathia's Spine lies the mountainous region of Gyr Abania.\n\nIt is in these elevated lands that people took shelter, when a burning star guided them away from the Sixth Umbral Calamity's treacherous floodwaters. The survivors gathered from near and far, and amongst them were refugees of the sorcerous cities of Mhach and Amdapor.\n\nThese sworn enemies buried their history for the sake of the future, and cast aside their vestments of black and white. Upon the remnants of their arts a new discipline was built, and the first red mages stepped forward with rapiers in hand to fight back against the rising tides of destruction.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png",
+   "https://lds-img.finalfantasyxiv.com/d/9fc8c455d50ec08c721f4674e7e9015f4700debe.png",
+   "https://lds-img.finalfantasyxiv.com/d/f5a91b090922e24a43d172f2cdfb85fc4ff9423a.png",
+   "https://lds-img.finalfantasyxiv.com/d/ca149fa59c97f3ce000ba2cdd143dd181a25def6.png",
+   "https://lds-img.finalfantasyxiv.com/d/a774e32d6c268433b5e2c56dc152cae973605e2e.png",
+   "https://lds-img.finalfantasyxiv.com/d/adbad46ea7684b2e5914b23c4ec7de0ecb19432d.png",
+   "https://lds-img.finalfantasyxiv.com/d/949abe2a408930b92fc5bc34881a60396909e623.png",
+   "https://lds-img.finalfantasyxiv.com/d/272b22305a75f5649d2dbe16e733e2a714b8a1c4.png",
+   "https://lds-img.finalfantasyxiv.com/d/ce7efb90e13d0fef394abb8d2e57a09402452890.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5ddf887a06b23a2ae9426a5a6288b863b92eced.png",
+   "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3a7bcdd99a2d4f40c95c39ce19d97be8ee0a151b.png",
+   "https://lds-img.finalfantasyxiv.com/d/f07faaccae974c9f7fdd16072a406c81db81b3ad.png",
+   "https://lds-img.finalfantasyxiv.com/d/f950d18911258503ab8a8ec2fa28ca3fdb6a8a6d.png",
+   "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png",
+   "https://lds-img.finalfantasyxiv.com/d/831a96d8378a68659074d13e8a1e90e0de2da5a4.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe9877c05ef3a4622f0488b580b6ea36b7446bca.png",
+   "https://lds-img.finalfantasyxiv.com/d/d23f5785bdb0f0c398a14087753ddcedab6d4e78.png",
+   "https://lds-img.finalfantasyxiv.com/d/e9183e5932215335efe798ce4d6422d37befaf27.png",
+   "https://lds-img.finalfantasyxiv.com/d/85d6955ad939bb051fe8b893c194497b9499d89e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5f145a66018e2f197e16b966e30c53bba09e13bd.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2b3cc05547ba6a37ba5e883f190570d32eabb10.png",
+   "https://lds-img.finalfantasyxiv.com/d/6be6c45a105e3890f5390c26a2d5532a7e2eea43.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c5d66100b8539f4dd5779a760ccbc29f5878e6a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d20080ca189b4843d89ac2faab14d42099bd2e4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/34f4be861c3f40879653fef7fe7039f8df1108c1.png",
+   "https://lds-img.finalfantasyxiv.com/d/26403c905bb62b3221f7b1930e64efdd1fe13619.png",
+   "https://lds-img.finalfantasyxiv.com/d/fa744aa271e8cb2fae5bbe2cdb55ccf70d4685e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2798af149d31668d8e35541a3b33422478013f2.png",
+   "https://lds-img.finalfantasyxiv.com/d/1149d6e897c6342f2880c3ad304fc2aef09f93d5.png",
+   "https://lds-img.finalfantasyxiv.com/d/f3be0e80366bd72a864a87e41eadd964f07a5f57.png",
+   "https://lds-img.finalfantasyxiv.com/d/5c95999b6491dcc5714cd7f926b03fc56b5c88dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/cfcb133bdbe85392f1fedadfe93b14ff5aed8b32.png",
+   "https://lds-img.finalfantasyxiv.com/d/23de2734d998406aa25f526147ebbea7f1012d67.png",
+   "https://lds-img.finalfantasyxiv.com/d/5be2009c3bc4bd918ee899e0c6edc953571e93a3.png",
+   "https://lds-img.finalfantasyxiv.com/d/f3988ae5cc17fcf0b655c5820f0c25ef2ac72b43.png",
+   "https://lds-img.finalfantasyxiv.com/d/bc05c7159bffb94c061a5d64130da539350bbc6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5ca771d95d91f9eec6795ec72317da6fc77029f3.png",
+   "https://lds-img.finalfantasyxiv.com/d/ef85b6e60966279a1352b01b582c9bc3bfae5646.png",
+   "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png",
+   "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png",
+   "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png",
+   "https://lds-img.finalfantasyxiv.com/d/18af98a63cd9850c3e064220d9237ec80aad136d.png",
+   "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/33860679da3fbc2e8cf8864ce640f369c13163d4.png",
+   "https://lds-img.finalfantasyxiv.com/d/67f481da4b0a277ad6b06432a130adfe4b986d32.png",
+   "https://lds-img.finalfantasyxiv.com/d/5aae4c251545f2fc478c40be35966398c7ab9b99.png",
+   "https://lds-img.finalfantasyxiv.com/d/54a392e5b56bf4a5030af1f6bc369afd37f91b3a.png",
+   "https://lds-img.finalfantasyxiv.com/d/b524bce7a6b14bd3f524b8c29f5df87cdfc0d955.png",
+   "https://lds-img.finalfantasyxiv.com/d/447cbba6771ca9884e9fdb197d8bf20dd2b2fa15.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea0142f5424d599e39076a6c9bac6ab9aac876ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/69e3cddfaf05c365aa386853c33eb5864aaf4735.png",
+   "https://lds-img.finalfantasyxiv.com/d/e908bf25ba9fac88edf30da9b4edf9b8bcbf1758.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2f8944b29325a91ae300010c1fb774e9d53316e.png",
+   "https://lds-img.finalfantasyxiv.com/d/110f1fc97444637fd2fdc4f35f82cc4da3f4b2de.png",
+   "https://lds-img.finalfantasyxiv.com/d/9cc3b352b38d3b755927fd84d40a923373cd58b2.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2b4a9ae89b7d2b17ec99c36fae1772ad0377d9b.png",
+   "https://lds-img.finalfantasyxiv.com/d/7c93e62e034c1a0d6cfd0dfc01ed9fa386528e9e.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+   "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/apYFpDaSnrKwnG344W6ioAoGa8.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Riposte",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 130.\nAction upgraded to Enchanted Riposte if both Black Mana and White Mana are at 20 or more.",
+     "descriptionHtml": "Delivers an attack with a potency of 130.<br/>Action upgraded to Enchanted Riposte if both Black Mana and White Mana are at 20 or more."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Jolt",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fc8c455d50ec08c721f4674e7e9015f4700debe.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 170.\nAdditional Effect: Increases both Black Mana and White Mana by 2",
+     "descriptionHtml": "Deals unaspected damage with a potency of 170.<br/>Additional Effect: Increases both Black Mana and White Mana by 2"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Verthunder",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f5a91b090922e24a43d172f2cdfb85fc4ff9423a.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals lightning damage with a potency of 360.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s",
+     "descriptionHtml": "Deals lightning damage with a potency of 360.<br/>Additional Effect: Increases Black Mana by 6<br/>Additional Effect: 50% chance of becoming Verfire Ready<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Corps-a-corps",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ca149fa59c97f3ce000ba2cdd143dd181a25def6.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "35s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 130.\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 130.<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Veraero",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a774e32d6c268433b5e2c56dc152cae973605e2e.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 360.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s",
+     "descriptionHtml": "Deals wind damage with a potency of 360.<br/>Additional Effect: Increases White Mana by 6<br/>Additional Effect: 50% chance of becoming Verstone Ready<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Scatter",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adbad46ea7684b2e5914b23c4ec7de0ecb19432d.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 120 to target and all enemies nearby it.\nAcceleration Potency: 170\nAdditional Effect: Increases both Black Mana and White Mana by 3",
+     "descriptionHtml": "Deals unaspected damage with a potency of 120 to target and all enemies nearby it.<br/>Acceleration Potency: 170<br/>Additional Effect: Increases both Black Mana and White Mana by 3"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Verthunder II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/949abe2a408930b92fc5bc34881a60396909e623.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals lightning damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases Black Mana by 7",
+     "descriptionHtml": "Deals lightning damage with a potency of 140 to target and all enemies nearby it.<br/>Additional Effect: Increases Black Mana by 7"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Veraero II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/272b22305a75f5649d2dbe16e733e2a714b8a1c4.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 22",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals wind damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases White Mana by 7",
+     "descriptionHtml": "Deals wind damage with a potency of 140 to target and all enemies nearby it.<br/>Additional Effect: Increases White Mana by 7"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Verfire",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce7efb90e13d0fef394abb8d2e57a09402452890.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals fire damage with a potency of 380.\nAdditional Effect: Increases Black Mana by 5\nCan only be executed while Verfire Ready is active.",
+     "descriptionHtml": "Deals fire damage with a potency of 380.<br/>Additional Effect: Increases Black Mana by 5<br/>Can only be executed while Verfire Ready is active."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Verstone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5ddf887a06b23a2ae9426a5a6288b863b92eced.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals earth damage with a potency of 380.\nAdditional Effect: Increases White Mana by 5\nCan only be executed while Verstone Ready is active.",
+     "descriptionHtml": "Deals earth damage with a potency of 380.<br/>Additional Effect: Increases White Mana by 5<br/>Can only be executed while Verstone Ready is active."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Zwerchhau",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 150\nAction upgraded to Enchanted Zwerchhau if both Black Mana and White Mana are at 15 or more.",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Combo Action: Riposte or Enchanted Riposte<br/>Combo Potency: 150<br/>Action upgraded to Enchanted Zwerchhau if both Black Mana and White Mana are at 15 or more."
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Displacement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3a7bcdd99a2d4f40c95c39ce19d97be8ee0a151b.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "35s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 180.\nAdditional Effect: 15-yalm backstep\nMaximum Charges: 2\nCannot be executed while bound.\nShares a recast timer with Engagement.",
+     "descriptionHtml": "Delivers an attack with a potency of 180.<br/>Additional Effect: 15-yalm backstep<br/>Maximum Charges: 2<br/>Cannot be executed while bound.<br/>Shares a recast timer with Engagement."
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Engagement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f07faaccae974c9f7fdd16072a406c81db81b3ad.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "35s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 180.\nMaximum Charges: 2\nShares a recast timer with Displacement.",
+     "descriptionHtml": "Delivers an attack with a potency of 180.<br/>Maximum Charges: 2<br/>Shares a recast timer with Displacement."
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Fleche",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f950d18911258503ab8a8ec2fa28ca3fdb6a8a6d.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "25s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 480.",
+     "descriptionHtml": "Delivers an attack with a potency of 480."
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Redoublement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nCombo Action: Zwerchhau or Enchanted Zwerchhau\nCombo Potency: 230\nAction upgraded to Enchanted Redoublement if both Black Mana and White Mana are at 15 or more.",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Combo Action: Zwerchhau or Enchanted Zwerchhau<br/>Combo Potency: 230<br/>Action upgraded to Enchanted Redoublement if both Black Mana and White Mana are at 15 or more."
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Acceleration",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/831a96d8378a68659074d13e8a1e90e0de2da5a4.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "55s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Ensures the next Verthunder III, Veraero III, or Impact can be cast immediately.\nDuration: 20s\nAdditional Effect: Increases the potency of Impact by 50\nAdditional Effect: Ensures Verthunder III and Veraero III trigger Verfire Ready or Verstone Ready respectively\nAdditional Effect: Grants Grand Impact Ready\nDuration: 30s\nMaximum Charges: 2",
+     "descriptionHtml": "Ensures the next Verthunder III, Veraero III, or Impact can be cast immediately.<br/>Duration: 20s<br/>Additional Effect: Increases the potency of Impact by 50<br/>Additional Effect: Ensures Verthunder III and Veraero III trigger Verfire Ready or Verstone Ready respectively<br/>Additional Effect: Grants Grand Impact Ready<br/>Duration: 30s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Moulinet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe9877c05ef3a4622f0488b580b6ea36b7446bca.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 60 to all enemies in a cone before you.\nAction upgraded to Enchanted Moulinet if both Black Mana and White Mana are at 20 or more.",
+     "descriptionHtml": "Delivers an attack with a potency of 60 to all enemies in a cone before you.<br/>Action upgraded to Enchanted Moulinet if both Black Mana and White Mana are at 20 or more."
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Vercure",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d23f5785bdb0f0c398a14087753ddcedab6d4e78.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "500 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 350",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 350"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Contre Sixte",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e9183e5932215335efe798ce4d6422d37befaf27.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "35s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "6y",
+     "description": "Delivers an attack with a potency of 420 to target and all enemies nearby it.",
+     "descriptionHtml": "Delivers an attack with a potency of 420 to target and all enemies nearby it."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Embolden",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85d6955ad939bb051fe8b893c194497b9499d89e.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 58",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases own magic damage dealt by 10% and damage dealt by nearby party members by 5%.\nDuration: 20s\nAdditional Effect: Grants Thorned Flourish\nDuration: 30s",
+     "descriptionHtml": "Increases own magic damage dealt by 10% and damage dealt by nearby party members by 5%.<br/>Duration: 20s<br/>Additional Effect: Grants Thorned Flourish<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Manafication",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5f145a66018e2f197e16b966e30c53bba09e13bd.png",
+     "skillCellText": "Manafication\nJob Quest",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "110s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Temporarily increases the ranges of Enchanted Riposte, Enchanted Zwerchhau, and Enchanted Redoublement to 25 yalms.\nDuration: 30s\nAdditional Effect: Grants 3 stacks of Magicked Swordplay, each stack allowing the use of Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois without cost\nDuration: 30s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 30s\nAll combos are canceled upon execution of Manafication.\nCan only be executed while in combat.",
+     "descriptionHtml": "Temporarily increases the ranges of Enchanted Riposte, Enchanted Zwerchhau, and Enchanted Redoublement to 25 yalms.<br/>Duration: 30s<br/>Additional Effect: Grants 3 stacks of Magicked Swordplay, each stack allowing the use of Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois without cost<br/>Duration: 30s<br/>Additional Effect: Grants Prefulgence Ready<br/>Duration: 30s<br/>All combos are canceled upon execution of Manafication.<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Jolt II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2b3cc05547ba6a37ba5e883f190570d32eabb10.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 280.\nAdditional Effect: Increases both Black Mana and White Mana by 2",
+     "descriptionHtml": "Deals unaspected damage with a potency of 280.<br/>Additional Effect: Increases both Black Mana and White Mana by 2"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Verraise",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6be6c45a105e3890f5390c26a2d5532a7e2eea43.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Spell",
+     "cast": "10s",
+     "recast": "2.5s",
+     "cost": "2400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Resurrects target to a weakened state.",
+     "descriptionHtml": "Resurrects target to a weakened state."
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Impact",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c5d66100b8539f4dd5779a760ccbc29f5878e6a.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 210 to target and all enemies nearby it.\nAcceleration Potency: 260\nAdditional Effect: Increases both Black Mana and White Mana by 3",
+     "descriptionHtml": "Deals unaspected damage with a potency of 210 to target and all enemies nearby it.<br/>Acceleration Potency: 260<br/>Additional Effect: Increases both Black Mana and White Mana by 3"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Verflare",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d20080ca189b4843d89ac2faab14d42099bd2e4c.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals fire damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases Black Mana by 11\nAdditional Effect: 20% chance of becoming Verfire Ready\nDuration: 30s\nChance to become Verfire Ready increases to 100% if White Mana is higher than Black Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Verthunder III and Verthunder II change to Verflare when requirements for execution are met.",
+     "descriptionHtml": "Deals fire damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.<br/>Additional Effect: Increases Black Mana by 11<br/>Additional Effect: 20% chance of becoming Verfire Ready<br/>Duration: 30s<br/>Chance to become Verfire Ready increases to 100% if White Mana is higher than Black Mana at time of execution.<br/>Mana Stack Cost: 3<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Verthunder III and Verthunder II change to Verflare when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Verholy",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34f4be861c3f40879653fef7fe7039f8df1108c1.png",
+     "skillCellText": "Verholy\nJob Quest",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases White Mana by 11\nAdditional Effect: 20% chance of becoming Verstone Ready\nDuration: 30s\nChance to become Verstone Ready increases to 100% if Black Mana is higher than White Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Veraero III and Veraero II change to Verholy when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.<br/>Additional Effect: Increases White Mana by 11<br/>Additional Effect: 20% chance of becoming Verstone Ready<br/>Duration: 30s<br/>Chance to become Verstone Ready increases to 100% if Black Mana is higher than White Mana at time of execution.<br/>Mana Stack Cost: 3<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Veraero III and Veraero II change to Verholy when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Reprise",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/26403c905bb62b3221f7b1930e64efdd1fe13619.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nAction upgraded to Enchanted Reprise if both Black Mana and White Mana are at 5 or more.",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Action upgraded to Enchanted Reprise if both Black Mana and White Mana are at 5 or more."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Scorch",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa744aa271e8cb2fae5bbe2cdb55ccf70d4685e8.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 750 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Verflare or Verholy\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Verflare or Verholy as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Scorch when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 750 for the first enemy, and 55% less for all remaining enemies.<br/>Combo Action: Verflare or Verholy<br/>Additional Effect: Increases both Black Mana and White Mana by 4<br/>Can only be executed after successfully landing Verflare or Verholy as a combo action.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Jolt III and Impact change to Scorch when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Verthunder III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2798af149d31668d8e35541a3b33422478013f2.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals lightning damage with a potency of 440.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s",
+     "descriptionHtml": "Deals lightning damage with a potency of 440.<br/>Additional Effect: Increases Black Mana by 6<br/>Additional Effect: 50% chance of becoming Verfire Ready<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Veraero III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1149d6e897c6342f2880c3ad304fc2aef09f93d5.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals wind damage with a potency of 440.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s",
+     "descriptionHtml": "Deals wind damage with a potency of 440.<br/>Additional Effect: Increases White Mana by 6<br/>Additional Effect: 50% chance of becoming Verstone Ready<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Jolt III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f3be0e80366bd72a864a87e41eadd964f07a5f57.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 360.\nAdditional Effect: Increases both Black Mana and White Mana by 2",
+     "descriptionHtml": "Deals unaspected damage with a potency of 360.<br/>Additional Effect: Increases both Black Mana and White Mana by 2"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Magick Barrier",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c95999b6491dcc5714cd7f926b03fc56b5c88dc.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces magic damage taken by self and nearby party members by 10%, while increasing HP recovered by healing actions by 5%.\nDuration: 10s",
+     "descriptionHtml": "Reduces magic damage taken by self and nearby party members by 10%, while increasing HP recovered by healing actions by 5%.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Resolution",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cfcb133bdbe85392f1fedadfe93b14ff5aed8b32.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Deals unaspected damage to all enemies in a straight line before you with a potency of 850 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Scorch\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Scorch as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Scorch changes to Resolution when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to all enemies in a straight line before you with a potency of 850 for the first enemy, and 55% less for all remaining enemies.<br/>Combo Action: Scorch<br/>Additional Effect: Increases both Black Mana and White Mana by 4<br/>Can only be executed after successfully landing Scorch as a combo action.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Scorch changes to Resolution when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Vice of Thorns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23de2734d998406aa25f526147ebbea7f1012d67.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 950 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Thorned Flourish.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 950 for the first enemy, and 55% less for all remaining enemies.<br/>Can only be executed while under the effect of Thorned Flourish."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Grand Impact",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5be2009c3bc4bd918ee899e0c6edc953571e93a3.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 600 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases both Black Mana and White Mana by 3\nCan only be executed while under the effect of Grand Impact Ready.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Grand Impact when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 600 for the first enemy, and 55% less for all remaining enemies.<br/>Additional Effect: Increases both Black Mana and White Mana by 3<br/>Can only be executed while under the effect of Grand Impact Ready.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Jolt III and Impact change to Grand Impact when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Prefulgence",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f3988ae5cc17fcf0b655c5820f0c25ef2ac72b43.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Prefulgence Ready.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 55% less for all remaining enemies.<br/>Can only be executed while under the effect of Prefulgence Ready."
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Enchanted Riposte",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc05c7159bffb94c061a5d64130da539350bbc6e.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 340.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Riposte changes to Enchanted Riposte when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 340.<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 20 Black Mana<br/>Balance Gauge Cost: 20 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Riposte changes to Enchanted Riposte when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Enchanted Zwerchhau",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ca771d95d91f9eec6795ec72317da6fc77029f3.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 190.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 380\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Zwerchhau changes to Enchanted Zwerchhau when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 190.<br/>Combo Action: Riposte or Enchanted Riposte<br/>Combo Potency: 380<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 15 Black Mana<br/>Balance Gauge Cost: 15 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Zwerchhau changes to Enchanted Zwerchhau when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "Enchanted Redoublement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ef85b6e60966279a1352b01b582c9bc3bfae5646.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 190.\nCombo Action: Enchanted Zwerchhau\nCombo Potency: 560\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Redoublement changes to Enchanted Redoublement when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 190.<br/>Combo Action: Enchanted Zwerchhau<br/>Combo Potency: 560<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 15 Black Mana<br/>Balance Gauge Cost: 15 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Redoublement changes to Enchanted Redoublement when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "Enchanted Moulinet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Moulinet changes to Enchanted Moulinet when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 130 to all enemies in a cone before you.<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 20 Black Mana<br/>Balance Gauge Cost: 20 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Moulinet changes to Enchanted Moulinet when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "Enchanted Moulinet Deux",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 140 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet changes to Enchanted Moulinet Deux when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 140 to all enemies in a cone before you.<br/>Combo Action: Enchanted Moulinet<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 15 Black Mana<br/>Balance Gauge Cost: 15 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Enchanted Moulinet changes to Enchanted Moulinet Deux when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__42",
+     "name": "Enchanted Moulinet Trois",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Deals unaspected damage with a potency of 150 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet Deux\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet Deux changes to Enchanted Moulinet Trois when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 150 to all enemies in a cone before you.<br/>Combo Action: Enchanted Moulinet Deux<br/>Additional Effect: Grants a Mana Stack<br/>Balance Gauge Cost: 15 Black Mana<br/>Balance Gauge Cost: 15 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Enchanted Moulinet Deux changes to Enchanted Moulinet Trois when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__43",
+     "name": "Enchanted Reprise",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/18af98a63cd9850c3e064220d9237ec80aad136d.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 420.\nBalance Gauge Cost: 5 Black Mana\nBalance Gauge Cost: 5 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Reprise changes to Enchanted Reprise when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 420.<br/>Balance Gauge Cost: 5 Black Mana<br/>Balance Gauge Cost: 5 White Mana<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Reprise changes to Enchanted Reprise when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "Addle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Lowers target's physical damage dealt by 5% and magic damage dealt by 10%.\nDuration: 15s",
+     "descriptionHtml": "Lowers target's physical damage dealt by 5% and magic damage dealt by 10%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "Sleep",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "2.5s",
+     "recast": "2.5s",
+     "cost": "800 MP",
+     "range": "30y",
+     "radius": "5y",
+     "description": "Puts target and all nearby enemies to sleep.\nDuration: 30s\nCancels auto-attack upon execution.",
+     "descriptionHtml": "Puts target and all nearby enemies to sleep.<br/>Duration: 30s<br/>Cancels auto-attack upon execution."
+    },
+    {
+     "rowId": "mrange_action__03",
+     "name": "Lucid Dreaming",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 14",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Gradually restores own MP.\nPotency: 55\nDuration: 21s",
+     "descriptionHtml": "Gradually restores own MP.<br/>Potency: 55<br/>Duration: 21s"
+    },
+    {
+     "rowId": "mrange_action__04",
+     "name": "Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Next spell is cast immediately.\nDuration: 10s",
+     "descriptionHtml": "Next spell is cast immediately.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "mrange_action__05",
+     "name": "Surecast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 44",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Spells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s",
+     "descriptionHtml": "Spells can be cast without interruption.<br/>Additional Effect: Nullifies most knockback and draw-in effects<br/>Duration: 6s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Dualcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3bfbb2bb1687d4d45f637ed1bfe776eaa4fd6e9f.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "description": "Grants the effect of Dualcast upon casting any spell with a cast time. While under the effect of Dualcast, your next spell will require no time to cast. Effect is canceled upon execution of any action other than an ability. Auto-attacks do not cancel effect.\nDuration: 15s",
+     "descriptionHtml": "Grants the effect of Dualcast upon casting any spell with a cast time. While under the effect of Dualcast, your next spell will require no time to cast. Effect is canceled upon execution of any action other than an ability. Auto-attacks do not cancel effect.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Maim and Mend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage and HP restoration by 10%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 10%."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Maim and Mend II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage and HP restoration by 30%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 30%."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Enhanced Jolt",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0bcf53f6181a9ee47995df0cca338005baec2318.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "description": "Upgrades Jolt to Jolt II. Also increases the potency of Verthunder and Veraero to 360, and the potency of Verfire and Verstone to 300.",
+     "descriptionHtml": "Upgrades Jolt to Jolt II. Also increases the potency of Verthunder and Veraero to 360, and the potency of Verfire and Verstone to 300."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Scatter Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/01af7d3a73b5bc906c0439b17e8a64cc2ab2bc73.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "description": "Upgrades Scatter to Impact.",
+     "descriptionHtml": "Upgrades Scatter to Impact."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Mana Stack",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/359e1d45af946f0a476487cf20ab183de42ff34e.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "description": "Adds a Mana Stack to your Balance Gauge upon landing Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois, up to a maximum of 3.\nUpon gaining 3 Mana Stacks, Verthunder and Verthunder II are upgraded to Verflare.\nUpon learning Verholy, gaining 3 Mana Stacks also upgrades Veraero and Veraero II to Verholy.",
+     "descriptionHtml": "Adds a Mana Stack to your Balance Gauge upon landing Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois, up to a maximum of 3.<br/>Upon gaining 3 Mana Stacks, Verthunder and Verthunder II are upgraded to Verflare.<br/>Upon learning Verholy, gaining 3 Mana Stacks also upgrades Veraero and Veraero II to Verholy."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Enhanced Displacement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc3485774e058d8dde933633cdeafe8a63c5e218.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Increases Displacement and Engagement potency to 180.",
+     "descriptionHtml": "Increases Displacement and Engagement potency to 180."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Red Magic Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7f69a646fa296a753d0506e741a96e06b443537.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Reduces Contre Sixte recast timer to 35 seconds and increases the potency of both Verthunder II and Veraero II to 120.",
+     "descriptionHtml": "Reduces Contre Sixte recast timer to 35 seconds and increases the potency of both Verthunder II and Veraero II to 120."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Red Magic Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6867ce5b3d9fe7ff27ac2cf6ed1a184cfc0c8e2c.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Verthunder to Verthunder III and Veraero to Veraero III.\nUpon gaining 3 Mana Stacks, Verthunder III is upgraded to Verflare and Veraero III is upgraded to Verholy.",
+     "descriptionHtml": "Upgrades Verthunder to Verthunder III and Veraero to Veraero III.<br/>Upon gaining 3 Mana Stacks, Verthunder III is upgraded to Verflare and Veraero III is upgraded to Verholy."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Red Magic Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9b90b4a6a0825caa9de580b9a999f25cfa45ad55.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Upgrades Jolt II to Jolt III. Also increases the potency of Enchanted Riposte to 280, Verthunder II to 140, Veraero II to 140, Verfire to 340, Verstone to 340, Enchanted Zwerchhau to 150, Enchanted Redoublement to 130, Impact to 210, and Enchanted Reprise to 340.",
+     "descriptionHtml": "Upgrades Jolt II to Jolt III. Also increases the potency of Enchanted Riposte to 280, Verthunder II to 140, Veraero II to 140, Verfire to 340, Verstone to 340, Enchanted Zwerchhau to 150, Enchanted Redoublement to 130, Impact to 210, and Enchanted Reprise to 340."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Enhanced Acceleration",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0f32677ceba4e0fa7cf2dbbc20db1e95e44d2d5.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Allows the accumulation of charges for consecutive uses of Acceleration.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Acceleration.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Enhanced Embolden",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fc6fde931036592d442e3d56e3c0d033f463e11.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Grants Thorned Flourish upon executing Embolden.\nDuration: 30s",
+     "descriptionHtml": "Grants Thorned Flourish upon executing Embolden.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Enchanted Blade Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Enchanted Riposte to 340, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 190, Fleche to 480, Enchanted Redoublement to 190, Contre Sixte to 420, Verflare to 650, Verholy to 650, Enchanted Reprise to 420, Scorch to 750, Veraero III to 440, Verthunder III to 440, and Resolution to 850.",
+     "descriptionHtml": "Increases the potency of Enchanted Riposte to 340, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 190, Fleche to 480, Enchanted Redoublement to 190, Contre Sixte to 420, Verflare to 650, Verholy to 650, Enchanted Reprise to 420, Scorch to 750, Veraero III to 440, Verthunder III to 440, and Resolution to 850."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Acceleration II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f88ff137a14d846648c1a350b6927826b0e0c316.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Grants Grand Impact Ready upon executing Acceleration.\nDuration: 30s\nJolt III and Impact change to Grand Impact while under the effect of Grand Impact Ready.",
+     "descriptionHtml": "Grants Grand Impact Ready upon executing Acceleration.<br/>Duration: 30s<br/>Jolt III and Impact change to Grand Impact while under the effect of Grand Impact Ready."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Manafication",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9de3804731a7d8d7b4ddc8d8bc54416263d5a4aa.png",
+     "acquired": [
+      {
+       "class": "Red Mage",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Prefulgence Ready upon executing Manafication.\nDuration: 30s\nManafication changes to Prefulgence while under the effect of Prefulgence Ready.",
+     "descriptionHtml": "Grants Prefulgence Ready upon executing Manafication.<br/>Duration: 30s<br/>Manafication changes to Prefulgence while under the effect of Prefulgence Ready."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "Enhanced Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Reduces Swiftcast recast time to 40 seconds.",
+     "descriptionHtml": "Reduces Swiftcast recast time to 40 seconds."
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "Enhanced Addle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/590a381c0421f33d428c1dd51293c715a1a53ee7.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Extends the duration of Addle to 15 seconds.",
+     "descriptionHtml": "Extends the duration of Addle to 15 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Jolt III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/33860679da3fbc2e8cf8864ce640f369c13163d4.png",
+     "type": "Spell",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 6,000.\nAdditional Effect: Grants Dualcast\nDuration: 15s\n\n※Action changes to Grand Impact upon execution.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000.<br/>Additional Effect: Grants Dualcast<br/>Duration: 15s<br/><br/>※Action changes to Grand Impact upon execution."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Enchanted Riposte",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67f481da4b0a277ad6b06432a130adfe4b986d32.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 5,000.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※Action changes to Enchanted Zwerchhau upon execution.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 5,000.<br/>Ignores the effects of Guard when dealing damage.<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency<br/>Duration: 6s<br/><br/>※Action changes to Enchanted Zwerchhau upon execution."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Resolution",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5aae4c251545f2fc478c40be35966398c7ab9b99.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Deals unaspected damage with a potency of 8,000 to all enemies in a straight line.\nAdditional Effect: Silence\nDuration: 2s\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 8,000 to all enemies in a straight line.<br/>Additional Effect: Silence<br/>Duration: 2s<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Embolden",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/54a392e5b56bf4a5030af1f6bc369afd37f91b3a.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases damage dealt by self and nearby party members by 8%, while reducing damage taken by 8%.\nDuration: 8s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 15s\nThis action's effects extend through obstructions.\n\n※Action changes to Prefulgence upon execution.",
+     "descriptionHtml": "Increases damage dealt by self and nearby party members by 8%, while reducing damage taken by 8%.<br/>Duration: 8s<br/>Additional Effect: Grants Prefulgence Ready<br/>Duration: 15s<br/>This action's effects extend through obstructions.<br/><br/>※Action changes to Prefulgence upon execution."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Corps-a-corps",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b524bce7a6b14bd3f524b8c29f5df87cdfc0d955.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 3,000.\nAdditional Effect: Afflicts target with Monomachy\nMonomachy Effect: Increases damage dealt to target by 15% while lowering damage taken from target by 15%\nDuration: 8s\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 3,000.<br/>Additional Effect: Afflicts target with Monomachy<br/>Monomachy Effect: Increases damage dealt to target by 15% while lowering damage taken from target by 15%<br/>Duration: 8s<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Displacement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/447cbba6771ca9884e9fdb197d8bf20dd2b2fa15.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 3,000.\nAdditional Effect: 15-yalm backstep\nAdditional Effect: Increases damage and healing potency of next spell cast by 15%\nDuration: 10s\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Delivers an attack with a potency of 3,000.<br/>Additional Effect: 15-yalm backstep<br/>Additional Effect: Increases damage and healing potency of next spell cast by 15%<br/>Duration: 10s<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Forte",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea0142f5424d599e39076a6c9bac6ab9aac876ce.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Creates a barrier around self that reduces damage taken by 50% and absorbs damage equivalent to a heal of 4,000 potency.\nDuration: 5s\nGrants Thorned Flourish when barrier is completely absorbed.\nDuration: 10s\n\n※Action changes to Vice of Thorns while under the effect of Thorned Flourish.",
+     "descriptionHtml": "Creates a barrier around self that reduces damage taken by 50% and absorbs damage equivalent to a heal of 4,000 potency.<br/>Duration: 5s<br/>Grants Thorned Flourish when barrier is completely absorbed.<br/>Duration: 10s<br/><br/>※Action changes to Vice of Thorns while under the effect of Thorned Flourish."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Grand Impact",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/69e3cddfaf05c365aa386853c33eb5864aaf4735.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 6,000 for the first enemy, and 4,000 for all remaining enemies.\nCan only be executed while under the effect of Dualcast.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 6,000 for the first enemy, and 4,000 for all remaining enemies.<br/>Can only be executed while under the effect of Dualcast.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Enchanted Zwerchhau",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e908bf25ba9fac88edf30da9b4edf9b8bcbf1758.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 6,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Riposte\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Enchanted Redoublement upon execution.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000.<br/>Ignores the effects of Guard when dealing damage.<br/>Combo Action: Enchanted Riposte<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency<br/>Duration: 6s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Action changes to Enchanted Redoublement upon execution."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Enchanted Redoublement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2f8944b29325a91ae300010c1fb774e9d53316e.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 7,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Zwerchhau\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Scorch upon execution.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 7,000.<br/>Ignores the effects of Guard when dealing damage.<br/>Combo Action: Enchanted Zwerchhau<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency<br/>Duration: 6s<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Action changes to Scorch upon execution."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Scorch",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/110f1fc97444637fd2fdc4f35f82cc4da3f4b2de.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nCombo Action: Enchanted Redoublement\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.<br/>Combo Action: Enchanted Redoublement<br/>Additional Effect: Damage over time<br/>Potency: 4,000<br/>Duration: 6s<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Prefulgence",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9cc3b352b38d3b755927fd84d40a923373cd58b2.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 10,000\nAdditional Effect: Restores HP of party members near target\nCure Potency: 10,000\nCan only be executed while under the effect of Prefulgence Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 10,000 to target and all enemies nearby it.<br/>Additional Effect: Restores own HP<br/>Cure Potency: 10,000<br/>Additional Effect: Restores HP of party members near target<br/>Cure Potency: 10,000<br/>Can only be executed while under the effect of Prefulgence Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Vice of Thorns",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2b4a9ae89b7d2b17ec99c36fae1772ad0377d9b.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 4,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Thorned Flourish.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 4,000 to target and all enemies nearby it.<br/>Additional Effect: Stun<br/>Duration: 2s<br/>Can only be executed while under the effect of Thorned Flourish.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Southern Cross",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c93e62e034c1a0d6cfd0dfc01ed9fa386528e9e.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "15y",
+     "description": "Emblazons a grand cross on the ground beneath a party member or enemy, restoring HP of party members within range while damaging enemies.\nCure Potency: 12,000\nDamage Potency: 12,000\nTargets standing at the cross's center will receive the effects of this action twice.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s",
+     "descriptionHtml": "Emblazons a grand cross on the ground beneath a party member or enemy, restoring HP of party members within range while damaging enemies.<br/>Cure Potency: 12,000<br/>Damage Potency: 12,000<br/>Targets standing at the cross's center will receive the effects of this action twice.<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 90s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Comet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+     "type": "Spell",
+     "cast": "2.4s",
+     "recast": "45s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "10y",
+     "description": "Deals magic damage to enemies at the designated area with a potency of 20,000.\nThis action's effects extend through obstructions.\nYou cannot move while casting, nor can you cancel the spell once cast.",
+     "descriptionHtml": "Deals magic damage to enemies at the designated area with a potency of 20,000.<br/>This action's effects extend through obstructions.<br/>You cannot move while casting, nor can you cancel the spell once cast."
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Phantom Dart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 4,000.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 5s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 4,000.<br/>Additional Effect: Increases target's damage taken by 25%<br/>Duration: 5s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Rust",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Reduces damage dealt and healing potency of target and all enemies nearby it by 33%.\nDuration: 10s",
+     "descriptionHtml": "Reduces damage dealt and healing potency of target and all enemies nearby it by 33%.<br/>Duration: 10s"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__redmage_01",
+    "steps": [
+     {
+      "name": "Riposte\n(Enchanted Riposte)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/8c24d1459dbae096bb8927efb52db5feb9b0d316.png"
+     },
+     {
+      "name": "Zwerchhau\n(Enchanted Zwerchhau)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/adef75e55602967f0c722896b45d5be518cd9dd4.png"
+     },
+     {
+      "name": "Redoublement\n(Enchanted Redoublement)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/292f17a2bcaebf7db4560ff8c977f64908db9917.png"
+     }
+    ],
+    "effect": "Upgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks when upgraded."
+   },
+   {
+    "class": "job__combo__root job__combo__redmage_01",
+    "steps": [
+     {
+      "name": "Enchanted Moulinet",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/4698cb3715e5b08d30ae8d80cb30c4b22daf3573.png"
+     },
+     {
+      "name": "Enchanted Moulinet Deux",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e5dfc01b5048f6bef58d504d6e6f633004ad8fc7.png"
+     },
+     {
+      "name": "Enchanted Moulinet Trois",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/0f1ad21893a66c8f4b9253821fee9044ba1b4464.png"
+     }
+    ],
+    "effect": "Upgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks upon execution."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nRiposte\n(Enchanted Riposte)\n\nZwerchhau\n(Enchanted Zwerchhau)\n\nRedoublement\n(Enchanted Redoublement)\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks when upgraded.\n\nEnchanted Moulinet\n\nEnchanted Moulinet Deux\n\nEnchanted Moulinet Trois\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks upon execution."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Balance Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nBalance Gauge\n\nRed Mages are unique in that they have a Balance Gauge that shows their accumulated White Mana and Black Mana.\nYou can obtain the two types of mana by using certain spells. Once enough of each has been acquired, Riposte will become Enchanted Riposte, Zwerchhau will become Enchanted Zwerchhau, and Redoublement will become Enchanted Redoublement.\nCertain actions and effects will also be strengthened.\n\nIf the gap between Black and White Mana accumulation grows too large, the crystal at the top of the gauge will change color, and it will become more difficult to accumulate the lesser of the two.\n\nUpon learning the trait Mana Stack, the Mana Stack Gauge will be displayed.\nMaximum stacks of mana can be accumulated using Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, and Enchanted Moulinet, then used to execute certain actions such as Verflare and Verholy (acquired at level 70).\nMana stacks are consumed when any magic is used.\n\nSimple Mode\n\nBalance Gauge\n\nBalanced\n\nFavoring White Mana\n\nFavoring Black Mana\n\nMana Stacks",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Balance Gauge</h3>\n<div class=\"job__hud__layout--mb16 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/pjhPD-Z5eXWSK3QHe04rpIgBAk.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Red Mages are unique in that they have a <span class=\"txt_red\">Balance Gauge</span> that shows their accumulated <span class=\"txt_red\">White Mana</span> and <span class=\"txt_red\">Black Mana</span>.<br/>You can obtain the two types of mana by using certain spells. Once enough of each has been acquired, <span class=\"txt_red\">Riposte</span> will become <span class=\"txt_red\">Enchanted Riposte</span>, <span class=\"txt_red\">Zwerchhau</span> will become <span class=\"txt_red\">Enchanted Zwerchhau</span>, and <span class=\"txt_red\">Redoublement</span> will become <span class=\"txt_red\">Enchanted Redoublement</span>.<br/>Certain actions and effects will also be strengthened.</p>\n</div>\n<p class=\"job__hud__text\">If the gap between Black and White Mana accumulation grows too large, the crystal at the top of the gauge will change color, and it will become more difficult to accumulate the lesser of the two.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/b/fUEa014CEUvPmc5QMaoHc1bYpY.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Mana Stack</span>, the <span class=\"txt_red\">Mana Stack Gauge</span> will be displayed.<br/>Maximum stacks of mana can be accumulated using <span class=\"txt_red\">Enchanted Riposte</span>, <span class=\"txt_red\">Enchanted Zwerchhau</span>, <span class=\"txt_red\">Enchanted Redoublement</span>, and <span class=\"txt_red\">Enchanted Moulinet</span>, then used to execute certain actions such as <span class=\"txt_red\">Verflare</span> and <span class=\"txt_red\">Verholy</span> (acquired at level 70).<br/>Mana stacks are consumed when any magic is used.</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">Balance Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Balanced</p>\n</td>\n<td></td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Favoring White Mana</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Favoring Black Mana</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Mana Stacks</p>\n</td>\n<td></td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/pjhPD-Z5eXWSK3QHe04rpIgBAk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/RM9T6woSmCSzmdVFMNVprlig0A.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/b/fUEa014CEUvPmc5QMaoHc1bYpY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/E/LYw7y3UmJdvvP5pCNrJsInQ310.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/8vYXZr6pW0-GSSS1S46ACBHvH0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/O/fn8oMH0o1FIihGcNPBNsY9gX1s.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/JZh3ryKOhJYRkOn-JxyZJK_ycI.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/redmage/01.png",
+   "public/jobguide/hud/redmage/02.png",
+   "public/jobguide/hud/redmage/03.png",
+   "public/jobguide/hud/redmage/04.png",
+   "public/jobguide/hud/redmage/05.png",
+   "public/jobguide/hud/redmage/06.png",
+   "public/jobguide/hud/redmage/07.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRiposte\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 130.\nAction upgraded to Enchanted Riposte if both Black Mana and White Mana are at 20 or more.\n\nJolt\n\nLv. 2\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 170.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nVerthunder\n\nLv. 4\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals lightning damage with a potency of 360.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s\n\nCorps-a-corps\n\nLv. 6\n\nAbility\nInstant\n35s\n-\n\n25y\n\n0y\n\nRushes target and delivers an attack with a potency of 130.\nMaximum Charges: 2\nCannot be executed while bound.\n\nVeraero\n\nLv. 10\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 360.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s\n\nScatter\n\nLv. 15\n\nSpell\n\n5s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 120 to target and all enemies nearby it.\nAcceleration Potency: 170\nAdditional Effect: Increases both Black Mana and White Mana by 3\n\nVerthunder II\n\nLv. 18\n\nSpell\n\n2s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals lightning damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases Black Mana by 7\n\nVeraero II\n\nLv. 22\n\nSpell\n\n2s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals wind damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases White Mana by 7\n\nVerfire\n\nLv. 26\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals fire damage with a potency of 380.\nAdditional Effect: Increases Black Mana by 5\nCan only be executed while Verfire Ready is active.\n\nVerstone\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 380.\nAdditional Effect: Increases White Mana by 5\nCan only be executed while Verstone Ready is active.\n\nZwerchhau\n\nLv. 35\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 150\nAction upgraded to Enchanted Zwerchhau if both Black Mana and White Mana are at 15 or more.\n\nDisplacement\n\nLv. 40\n\nAbility\nInstant\n35s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 180.\nAdditional Effect: 15-yalm backstep\nMaximum Charges: 2\nCannot be executed while bound.\nShares a recast timer with Engagement.\n\nEngagement\n\nLv. 40\n\nAbility\nInstant\n35s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 180.\nMaximum Charges: 2\nShares a recast timer with Displacement.\n\nFleche\n\nLv. 45\n\nAbility\nInstant\n25s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 480.\n\nRedoublement\n\nLv. 50\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Zwerchhau or Enchanted Zwerchhau\nCombo Potency: 230\nAction upgraded to Enchanted Redoublement if both Black Mana and White Mana are at 15 or more.\n\nAcceleration\n\nLv. 50\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nEnsures the next Verthunder III, Veraero III, or Impact can be cast immediately.\nDuration: 20s\nAdditional Effect: Increases the potency of Impact by 50\nAdditional Effect: Ensures Verthunder III and Veraero III trigger Verfire Ready or Verstone Ready respectively\nAdditional Effect: Grants Grand Impact Ready\nDuration: 30s\nMaximum Charges: 2\n\nMoulinet\n\nLv. 52\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 60 to all enemies in a cone before you.\nAction upgraded to Enchanted Moulinet if both Black Mana and White Mana are at 20 or more.\n\nVercure\n\nLv. 54\n\nSpell\n\n2s\n\n2.5s\n500 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 350\n\nContre Sixte\n\nLv. 56\n\nAbility\nInstant\n35s\n-\n\n25y\n\n6y\n\nDelivers an attack with a potency of 420 to target and all enemies nearby it.\n\nEmbolden\n\nLv. 58\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases own magic damage dealt by 10% and damage dealt by nearby party members by 5%.\nDuration: 20s\nAdditional Effect: Grants Thorned Flourish\nDuration: 30s\n\nManafication\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n110s\n-\n\n0y\n\n0y\n\nTemporarily increases the ranges of Enchanted Riposte, Enchanted Zwerchhau, and Enchanted Redoublement to 25 yalms.\nDuration: 30s\nAdditional Effect: Grants 3 stacks of Magicked Swordplay, each stack allowing the use of Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois without cost\nDuration: 30s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 30s\nAll combos are canceled upon execution of Manafication.\nCan only be executed while in combat.\n\nJolt II\n\nLv. 62\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 280.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nVerraise\n\nLv. 64\n\nSpell\n\n10s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nImpact\n\nLv. 66\n\nSpell\n\n5s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 210 to target and all enemies nearby it.\nAcceleration Potency: 260\nAdditional Effect: Increases both Black Mana and White Mana by 3\n\nVerflare\n\nLv. 68\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals fire damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases Black Mana by 11\nAdditional Effect: 20% chance of becoming Verfire Ready\nDuration: 30s\nChance to become Verfire Ready increases to 100% if White Mana is higher than Black Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Verthunder III and Verthunder II change to Verflare when requirements for execution are met.\n\nVerholy\n\nJob Quest\n\nLv. 70\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases White Mana by 11\nAdditional Effect: 20% chance of becoming Verstone Ready\nDuration: 30s\nChance to become Verstone Ready increases to 100% if Black Mana is higher than White Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Veraero III and Veraero II change to Verholy when requirements for execution are met.\n\nReprise\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nAction upgraded to Enchanted Reprise if both Black Mana and White Mana are at 5 or more.\n\nScorch\n\nLv. 80\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 750 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Verflare or Verholy\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Verflare or Verholy as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Scorch when requirements for execution are met.\n\nVerthunder III\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals lightning damage with a potency of 440.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s\n\nVeraero III\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 440.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s\n\nJolt III\n\nLv. 84\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 360.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nMagick Barrier\n\nLv. 86\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nReduces magic damage taken by self and nearby party members by 10%, while increasing HP recovered by healing actions by 5%.\nDuration: 10s\n\nResolution\n\nLv. 90\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n25y\n\nDeals unaspected damage to all enemies in a straight line before you with a potency of 850 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Scorch\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Scorch as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Scorch changes to Resolution when requirements for execution are met.\n\nVice of Thorns\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 950 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Thorned Flourish.\n\nGrand Impact\n\nLv. 96\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 600 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases both Black Mana and White Mana by 3\nCan only be executed while under the effect of Grand Impact Ready.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Grand Impact when requirements for execution are met.\n\nPrefulgence\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Prefulgence Ready.\n\nEnchanted Riposte\n\nLv. 1\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 340.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Riposte changes to Enchanted Riposte when requirements for execution are met.\n\nEnchanted Zwerchhau\n\nLv. 35\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 190.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 380\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Zwerchhau changes to Enchanted Zwerchhau when requirements for execution are met.\n\nEnchanted Redoublement\n\nLv. 50\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 190.\nCombo Action: Enchanted Zwerchhau\nCombo Potency: 560\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Redoublement changes to Enchanted Redoublement when requirements for execution are met.\n\nEnchanted Moulinet\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Moulinet changes to Enchanted Moulinet when requirements for execution are met.\n\nEnchanted Moulinet Deux\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 140 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet changes to Enchanted Moulinet Deux when requirements for execution are met.\n\nEnchanted Moulinet Trois\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 150 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet Deux\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet Deux changes to Enchanted Moulinet Trois when requirements for execution are met.\n\nEnchanted Reprise\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 420.\nBalance Gauge Cost: 5 Black Mana\nBalance Gauge Cost: 5 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Reprise changes to Enchanted Reprise when requirements for execution are met."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nAddle\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n25y\n\n0y\n\nLowers target's physical damage dealt by 5% and magic damage dealt by 10%.\nDuration: 15s\n\nSleep\n\nLv. 10\n\nSpell\n\n2.5s\n\n2.5s\n800 MP\n\n30y\n\n5y\n\nPuts target and all nearby enemies to sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s"
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nDualcast\n\nLv. 1\n\nGrants the effect of Dualcast upon casting any spell with a cast time. While under the effect of Dualcast, your next spell will require no time to cast. Effect is canceled upon execution of any action other than an ability. Auto-attacks do not cancel effect.\nDuration: 15s\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nEnhanced Jolt\n\nLv. 62\n\nUpgrades Jolt to Jolt II. Also increases the potency of Verthunder and Veraero to 360, and the potency of Verfire and Verstone to 300.\n\nScatter Mastery\n\nLv. 66\n\nUpgrades Scatter to Impact.\n\nMana Stack\n\nLv. 68\n\nAdds a Mana Stack to your Balance Gauge upon landing Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois, up to a maximum of 3.\nUpon gaining 3 Mana Stacks, Verthunder and Verthunder II are upgraded to Verflare.\nUpon learning Verholy, gaining 3 Mana Stacks also upgrades Veraero and Veraero II to Verholy.\n\nEnhanced Displacement\n\nLv. 72\n\nIncreases Displacement and Engagement potency to 180.\n\nRed Magic Mastery\n\nLv. 74\n\nReduces Contre Sixte recast timer to 35 seconds and increases the potency of both Verthunder II and Veraero II to 120.\n\nRed Magic Mastery II\n\nLv. 82\n\nUpgrades Verthunder to Verthunder III and Veraero to Veraero III.\nUpon gaining 3 Mana Stacks, Verthunder III is upgraded to Verflare and Veraero III is upgraded to Verholy.\n\nRed Magic Mastery III\n\nLv. 84\n\nUpgrades Jolt II to Jolt III. Also increases the potency of Enchanted Riposte to 280, Verthunder II to 140, Veraero II to 140, Verfire to 340, Verstone to 340, Enchanted Zwerchhau to 150, Enchanted Redoublement to 130, Impact to 210, and Enchanted Reprise to 340.\n\nEnhanced Acceleration\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Acceleration.\nMaximum Charges: 2\n\nEnhanced Embolden\n\nLv. 92\n\nGrants Thorned Flourish upon executing Embolden.\nDuration: 30s\n\nEnchanted Blade Mastery\n\nLv. 94\n\nIncreases the potency of Enchanted Riposte to 340, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 190, Fleche to 480, Enchanted Redoublement to 190, Contre Sixte to 420, Verflare to 650, Verholy to 650, Enchanted Reprise to 420, Scorch to 750, Veraero III to 440, Verthunder III to 440, and Resolution to 850.\n\nEnhanced Acceleration II\n\nLv. 96\n\nGrants Grand Impact Ready upon executing Acceleration.\nDuration: 30s\nJolt III and Impact change to Grand Impact while under the effect of Grand Impact Ready.\n\nEnhanced Manafication\n\nLv. 100\n\nGrants Prefulgence Ready upon executing Manafication.\nDuration: 30s\nManafication changes to Prefulgence while under the effect of Prefulgence Ready."
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds.\n\nEnhanced Addle\n\nLv. 98\n\nExtends the duration of Addle to 15 seconds."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nRiposte\n(Enchanted Riposte)\n\nZwerchhau\n(Enchanted Zwerchhau)\n\nRedoublement\n(Enchanted Redoublement)\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks when upgraded.\n\nEnchanted Moulinet\n\nEnchanted Moulinet Deux\n\nEnchanted Moulinet Trois\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks upon execution."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nBalance Gauge\n\nRed Mages are unique in that they have a Balance Gauge that shows their accumulated White Mana and Black Mana.\nYou can obtain the two types of mana by using certain spells. Once enough of each has been acquired, Riposte will become Enchanted Riposte, Zwerchhau will become Enchanted Zwerchhau, and Redoublement will become Enchanted Redoublement.\nCertain actions and effects will also be strengthened.\n\nIf the gap between Black and White Mana accumulation grows too large, the crystal at the top of the gauge will change color, and it will become more difficult to accumulate the lesser of the two.\n\nUpon learning the trait Mana Stack, the Mana Stack Gauge will be displayed.\nMaximum stacks of mana can be accumulated using Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, and Enchanted Moulinet, then used to execute certain actions such as Verflare and Verholy (acquired at level 70).\nMana stacks are consumed when any magic is used.\n\nSimple Mode\n\nBalance Gauge\n\nBalanced\n\nFavoring White Mana\n\nFavoring Black Mana\n\nMana Stacks"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nJolt III\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nAdditional Effect: Grants Dualcast\nDuration: 15s\n\n※Action changes to Grand Impact upon execution.\n\nEnchanted Riposte\n\nWeaponskill\nInstant\n16s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 5,000.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※Action changes to Enchanted Zwerchhau upon execution.\n\nResolution\n\nSpell\nInstant\n20s\n-\n\n25y\n\n25y\n\nDeals unaspected damage with a potency of 8,000 to all enemies in a straight line.\nAdditional Effect: Silence\nDuration: 2s\nThis action does not share a recast timer with any other actions.\n\nEmbolden\n\nAbility\nInstant\n24s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 8%, while reducing damage taken by 8%.\nDuration: 8s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 15s\nThis action's effects extend through obstructions.\n\n※Action changes to Prefulgence upon execution.\n\nCorps-a-corps\n\nAbility\nInstant\n16s\n-\n\n25y\n\n0y\n\nRushes target and delivers an attack with a potency of 3,000.\nAdditional Effect: Afflicts target with Monomachy\nMonomachy Effect: Increases damage dealt to target by 15% while lowering damage taken from target by 15%\nDuration: 8s\nMaximum Charges: 2\nCannot be executed while bound.\n\nDisplacement\n\nAbility\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 3,000.\nAdditional Effect: 15-yalm backstep\nAdditional Effect: Increases damage and healing potency of next spell cast by 15%\nDuration: 10s\nMaximum Charges: 2\nCannot be executed while bound.\n\nForte\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nCreates a barrier around self that reduces damage taken by 50% and absorbs damage equivalent to a heal of 4,000 potency.\nDuration: 5s\nGrants Thorned Flourish when barrier is completely absorbed.\nDuration: 10s\n\n※Action changes to Vice of Thorns while under the effect of Thorned Flourish.\n\nGrand Impact\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 6,000 for the first enemy, and 4,000 for all remaining enemies.\nCan only be executed while under the effect of Dualcast.\n\n※This action cannot be assigned to a hotbar.\n\nEnchanted Zwerchhau\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Riposte\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Enchanted Redoublement upon execution.\n\nEnchanted Redoublement\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 7,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Zwerchhau\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Scorch upon execution.\n\nScorch\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nCombo Action: Enchanted Redoublement\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n\nPrefulgence\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 10,000\nAdditional Effect: Restores HP of party members near target\nCure Potency: 10,000\nCan only be executed while under the effect of Prefulgence Ready.\n\n※This action cannot be assigned to a hotbar.\n\nVice of Thorns\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 4,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Thorned Flourish.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSouthern Cross\n\nInstant\n10s\n-\n\n30y\n\n15y\n\nEmblazons a grand cross on the ground beneath a party member or enemy, restoring HP of party members within range while damaging enemies.\nCure Potency: 12,000\nDamage Potency: 12,000\nTargets standing at the cross's center will receive the effects of this action twice.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s"
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nComet\n\nSpell\n2.4s\n45s\n-\n\n30y\n\n10y\n\nDeals magic damage to enemies at the designated area with a potency of 20,000.\nThis action's effects extend through obstructions.\nYou cannot move while casting, nor can you cancel the spell once cast.\n\nPhantom Dart\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 4,000.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 5s\n\nRust\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nReduces damage dealt and healing potency of target and all enemies nearby it by 33%.\nDuration: 10s"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMagical Ranged DPS\n\nOn the eastern edge of Abalathia's Spine lies the mountainous region of Gyr Abania.\n\nIt is in these elevated lands that people took shelter, when a burning star guided them away from the Sixth Umbral Calamity's treacherous floodwaters. The survivors gathered from near and far, and amongst them were refugees of the sorcerous cities of Mhach and Amdapor.\n\nThese sworn enemies buried their history for the sake of the future, and cast aside their vestments of black and white. Upon the remnants of their arts a new discipline was built, and the first red mages stepped forward with rapiers in hand to fight back against the rising tides of destruction.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRiposte\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 130.\nAction upgraded to Enchanted Riposte if both Black Mana and White Mana are at 20 or more.\n\nJolt\n\nLv. 2\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 170.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nVerthunder\n\nLv. 4\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals lightning damage with a potency of 360.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s\n\nCorps-a-corps\n\nLv. 6\n\nAbility\nInstant\n35s\n-\n\n25y\n\n0y\n\nRushes target and delivers an attack with a potency of 130.\nMaximum Charges: 2\nCannot be executed while bound.\n\nVeraero\n\nLv. 10\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 360.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s\n\nScatter\n\nLv. 15\n\nSpell\n\n5s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 120 to target and all enemies nearby it.\nAcceleration Potency: 170\nAdditional Effect: Increases both Black Mana and White Mana by 3\n\nVerthunder II\n\nLv. 18\n\nSpell\n\n2s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals lightning damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases Black Mana by 7\n\nVeraero II\n\nLv. 22\n\nSpell\n\n2s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals wind damage with a potency of 140 to target and all enemies nearby it.\nAdditional Effect: Increases White Mana by 7\n\nVerfire\n\nLv. 26\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals fire damage with a potency of 380.\nAdditional Effect: Increases Black Mana by 5\nCan only be executed while Verfire Ready is active.\n\nVerstone\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals earth damage with a potency of 380.\nAdditional Effect: Increases White Mana by 5\nCan only be executed while Verstone Ready is active.\n\nZwerchhau\n\nLv. 35\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 150\nAction upgraded to Enchanted Zwerchhau if both Black Mana and White Mana are at 15 or more.\n\nDisplacement\n\nLv. 40\n\nAbility\nInstant\n35s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 180.\nAdditional Effect: 15-yalm backstep\nMaximum Charges: 2\nCannot be executed while bound.\nShares a recast timer with Engagement.\n\nEngagement\n\nLv. 40\n\nAbility\nInstant\n35s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 180.\nMaximum Charges: 2\nShares a recast timer with Displacement.\n\nFleche\n\nLv. 45\n\nAbility\nInstant\n25s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 480.\n\nRedoublement\n\nLv. 50\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Zwerchhau or Enchanted Zwerchhau\nCombo Potency: 230\nAction upgraded to Enchanted Redoublement if both Black Mana and White Mana are at 15 or more.\n\nAcceleration\n\nLv. 50\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nEnsures the next Verthunder III, Veraero III, or Impact can be cast immediately.\nDuration: 20s\nAdditional Effect: Increases the potency of Impact by 50\nAdditional Effect: Ensures Verthunder III and Veraero III trigger Verfire Ready or Verstone Ready respectively\nAdditional Effect: Grants Grand Impact Ready\nDuration: 30s\nMaximum Charges: 2\n\nMoulinet\n\nLv. 52\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 60 to all enemies in a cone before you.\nAction upgraded to Enchanted Moulinet if both Black Mana and White Mana are at 20 or more.\n\nVercure\n\nLv. 54\n\nSpell\n\n2s\n\n2.5s\n500 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 350\n\nContre Sixte\n\nLv. 56\n\nAbility\nInstant\n35s\n-\n\n25y\n\n6y\n\nDelivers an attack with a potency of 420 to target and all enemies nearby it.\n\nEmbolden\n\nLv. 58\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases own magic damage dealt by 10% and damage dealt by nearby party members by 5%.\nDuration: 20s\nAdditional Effect: Grants Thorned Flourish\nDuration: 30s\n\nManafication\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n110s\n-\n\n0y\n\n0y\n\nTemporarily increases the ranges of Enchanted Riposte, Enchanted Zwerchhau, and Enchanted Redoublement to 25 yalms.\nDuration: 30s\nAdditional Effect: Grants 3 stacks of Magicked Swordplay, each stack allowing the use of Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois without cost\nDuration: 30s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 30s\nAll combos are canceled upon execution of Manafication.\nCan only be executed while in combat.\n\nJolt II\n\nLv. 62\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 280.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nVerraise\n\nLv. 64\n\nSpell\n\n10s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nImpact\n\nLv. 66\n\nSpell\n\n5s\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 210 to target and all enemies nearby it.\nAcceleration Potency: 260\nAdditional Effect: Increases both Black Mana and White Mana by 3\n\nVerflare\n\nLv. 68\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals fire damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases Black Mana by 11\nAdditional Effect: 20% chance of becoming Verfire Ready\nDuration: 30s\nChance to become Verfire Ready increases to 100% if White Mana is higher than Black Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Verthunder III and Verthunder II change to Verflare when requirements for execution are met.\n\nVerholy\n\nJob Quest\n\nLv. 70\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 650 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases White Mana by 11\nAdditional Effect: 20% chance of becoming Verstone Ready\nDuration: 30s\nChance to become Verstone Ready increases to 100% if Black Mana is higher than White Mana at time of execution.\nMana Stack Cost: 3\n\n※This action cannot be assigned to a hotbar.\n※Veraero III and Veraero II change to Verholy when requirements for execution are met.\n\nReprise\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 100.\nAction upgraded to Enchanted Reprise if both Black Mana and White Mana are at 5 or more.\n\nScorch\n\nLv. 80\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 750 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Verflare or Verholy\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Verflare or Verholy as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Scorch when requirements for execution are met.\n\nVerthunder III\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals lightning damage with a potency of 440.\nAdditional Effect: Increases Black Mana by 6\nAdditional Effect: 50% chance of becoming Verfire Ready\nDuration: 30s\n\nVeraero III\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals wind damage with a potency of 440.\nAdditional Effect: Increases White Mana by 6\nAdditional Effect: 50% chance of becoming Verstone Ready\nDuration: 30s\n\nJolt III\n\nLv. 84\n\nSpell\n\n2s\n\n2.5s\n200 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 360.\nAdditional Effect: Increases both Black Mana and White Mana by 2\n\nMagick Barrier\n\nLv. 86\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nReduces magic damage taken by self and nearby party members by 10%, while increasing HP recovered by healing actions by 5%.\nDuration: 10s\n\nResolution\n\nLv. 90\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n25y\n\nDeals unaspected damage to all enemies in a straight line before you with a potency of 850 for the first enemy, and 55% less for all remaining enemies.\nCombo Action: Scorch\nAdditional Effect: Increases both Black Mana and White Mana by 4\nCan only be executed after successfully landing Scorch as a combo action.\n\n※This action cannot be assigned to a hotbar.\n※Scorch changes to Resolution when requirements for execution are met.\n\nVice of Thorns\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 950 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Thorned Flourish.\n\nGrand Impact\n\nLv. 96\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 600 for the first enemy, and 55% less for all remaining enemies.\nAdditional Effect: Increases both Black Mana and White Mana by 3\nCan only be executed while under the effect of Grand Impact Ready.\n\n※This action cannot be assigned to a hotbar.\n※Jolt III and Impact change to Grand Impact when requirements for execution are met.\n\nPrefulgence\n\nLv. 100\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 55% less for all remaining enemies.\nCan only be executed while under the effect of Prefulgence Ready.\n\nEnchanted Riposte\n\nLv. 1\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 340.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Riposte changes to Enchanted Riposte when requirements for execution are met.\n\nEnchanted Zwerchhau\n\nLv. 35\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 190.\nCombo Action: Riposte or Enchanted Riposte\nCombo Potency: 380\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Zwerchhau changes to Enchanted Zwerchhau when requirements for execution are met.\n\nEnchanted Redoublement\n\nLv. 50\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 190.\nCombo Action: Enchanted Zwerchhau\nCombo Potency: 560\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Redoublement changes to Enchanted Redoublement when requirements for execution are met.\n\nEnchanted Moulinet\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 20 Black Mana\nBalance Gauge Cost: 20 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Moulinet changes to Enchanted Moulinet when requirements for execution are met.\n\nEnchanted Moulinet Deux\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 140 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet changes to Enchanted Moulinet Deux when requirements for execution are met.\n\nEnchanted Moulinet Trois\n\nLv. 52\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n8y\n\n8y\n\nDeals unaspected damage with a potency of 150 to all enemies in a cone before you.\nCombo Action: Enchanted Moulinet Deux\nAdditional Effect: Grants a Mana Stack\nBalance Gauge Cost: 15 Black Mana\nBalance Gauge Cost: 15 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Enchanted Moulinet Deux changes to Enchanted Moulinet Trois when requirements for execution are met.\n\nEnchanted Reprise\n\nLv. 76\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 420.\nBalance Gauge Cost: 5 Black Mana\nBalance Gauge Cost: 5 White Mana\n\n※This action cannot be assigned to a hotbar.\n※Reprise changes to Enchanted Reprise when requirements for execution are met.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nAddle\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n25y\n\n0y\n\nLowers target's physical damage dealt by 5% and magic damage dealt by 10%.\nDuration: 15s\n\nSleep\n\nLv. 10\n\nSpell\n\n2.5s\n\n2.5s\n800 MP\n\n30y\n\n5y\n\nPuts target and all nearby enemies to sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nTrait\n\nTraits\nAcquired\nEffect\n\nDualcast\n\nLv. 1\n\nGrants the effect of Dualcast upon casting any spell with a cast time. While under the effect of Dualcast, your next spell will require no time to cast. Effect is canceled upon execution of any action other than an ability. Auto-attacks do not cancel effect.\nDuration: 15s\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%.\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%.\n\nEnhanced Jolt\n\nLv. 62\n\nUpgrades Jolt to Jolt II. Also increases the potency of Verthunder and Veraero to 360, and the potency of Verfire and Verstone to 300.\n\nScatter Mastery\n\nLv. 66\n\nUpgrades Scatter to Impact.\n\nMana Stack\n\nLv. 68\n\nAdds a Mana Stack to your Balance Gauge upon landing Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois, up to a maximum of 3.\nUpon gaining 3 Mana Stacks, Verthunder and Verthunder II are upgraded to Verflare.\nUpon learning Verholy, gaining 3 Mana Stacks also upgrades Veraero and Veraero II to Verholy.\n\nEnhanced Displacement\n\nLv. 72\n\nIncreases Displacement and Engagement potency to 180.\n\nRed Magic Mastery\n\nLv. 74\n\nReduces Contre Sixte recast timer to 35 seconds and increases the potency of both Verthunder II and Veraero II to 120.\n\nRed Magic Mastery II\n\nLv. 82\n\nUpgrades Verthunder to Verthunder III and Veraero to Veraero III.\nUpon gaining 3 Mana Stacks, Verthunder III is upgraded to Verflare and Veraero III is upgraded to Verholy.\n\nRed Magic Mastery III\n\nLv. 84\n\nUpgrades Jolt II to Jolt III. Also increases the potency of Enchanted Riposte to 280, Verthunder II to 140, Veraero II to 140, Verfire to 340, Verstone to 340, Enchanted Zwerchhau to 150, Enchanted Redoublement to 130, Impact to 210, and Enchanted Reprise to 340.\n\nEnhanced Acceleration\n\nLv. 88\n\nAllows the accumulation of charges for consecutive uses of Acceleration.\nMaximum Charges: 2\n\nEnhanced Embolden\n\nLv. 92\n\nGrants Thorned Flourish upon executing Embolden.\nDuration: 30s\n\nEnchanted Blade Mastery\n\nLv. 94\n\nIncreases the potency of Enchanted Riposte to 340, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 190, Fleche to 480, Enchanted Redoublement to 190, Contre Sixte to 420, Verflare to 650, Verholy to 650, Enchanted Reprise to 420, Scorch to 750, Veraero III to 440, Verthunder III to 440, and Resolution to 850.\n\nEnhanced Acceleration II\n\nLv. 96\n\nGrants Grand Impact Ready upon executing Acceleration.\nDuration: 30s\nJolt III and Impact change to Grand Impact while under the effect of Grand Impact Ready.\n\nEnhanced Manafication\n\nLv. 100\n\nGrants Prefulgence Ready upon executing Manafication.\nDuration: 30s\nManafication changes to Prefulgence while under the effect of Prefulgence Ready.\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds.\n\nEnhanced Addle\n\nLv. 98\n\nExtends the duration of Addle to 15 seconds.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nRiposte\n(Enchanted Riposte)\n\nZwerchhau\n(Enchanted Zwerchhau)\n\nRedoublement\n(Enchanted Redoublement)\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks when upgraded.\n\nEnchanted Moulinet\n\nEnchanted Moulinet Deux\n\nEnchanted Moulinet Trois\n\nUpgrades action based on the amount of Black Mana and White Mana accumulated. Grants Mana Stacks upon execution.\n\nJob Gauge\n\nBalance Gauge\n\nRed Mages are unique in that they have a Balance Gauge that shows their accumulated White Mana and Black Mana.\nYou can obtain the two types of mana by using certain spells. Once enough of each has been acquired, Riposte will become Enchanted Riposte, Zwerchhau will become Enchanted Zwerchhau, and Redoublement will become Enchanted Redoublement.\nCertain actions and effects will also be strengthened.\n\nIf the gap between Black and White Mana accumulation grows too large, the crystal at the top of the gauge will change color, and it will become more difficult to accumulate the lesser of the two.\n\nUpon learning the trait Mana Stack, the Mana Stack Gauge will be displayed.\nMaximum stacks of mana can be accumulated using Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, and Enchanted Moulinet, then used to execute certain actions such as Verflare and Verholy (acquired at level 70).\nMana stacks are consumed when any magic is used.\n\nSimple Mode\n\nBalance Gauge\n\nBalanced\n\nFavoring White Mana\n\nFavoring Black Mana\n\nMana Stacks\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nJolt III\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nAdditional Effect: Grants Dualcast\nDuration: 15s\n\n※Action changes to Grand Impact upon execution.\n\nEnchanted Riposte\n\nWeaponskill\nInstant\n16s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 5,000.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※Action changes to Enchanted Zwerchhau upon execution.\n\nResolution\n\nSpell\nInstant\n20s\n-\n\n25y\n\n25y\n\nDeals unaspected damage with a potency of 8,000 to all enemies in a straight line.\nAdditional Effect: Silence\nDuration: 2s\nThis action does not share a recast timer with any other actions.\n\nEmbolden\n\nAbility\nInstant\n24s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 8%, while reducing damage taken by 8%.\nDuration: 8s\nAdditional Effect: Grants Prefulgence Ready\nDuration: 15s\nThis action's effects extend through obstructions.\n\n※Action changes to Prefulgence upon execution.\n\nCorps-a-corps\n\nAbility\nInstant\n16s\n-\n\n25y\n\n0y\n\nRushes target and delivers an attack with a potency of 3,000.\nAdditional Effect: Afflicts target with Monomachy\nMonomachy Effect: Increases damage dealt to target by 15% while lowering damage taken from target by 15%\nDuration: 8s\nMaximum Charges: 2\nCannot be executed while bound.\n\nDisplacement\n\nAbility\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 3,000.\nAdditional Effect: 15-yalm backstep\nAdditional Effect: Increases damage and healing potency of next spell cast by 15%\nDuration: 10s\nMaximum Charges: 2\nCannot be executed while bound.\n\nForte\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nCreates a barrier around self that reduces damage taken by 50% and absorbs damage equivalent to a heal of 4,000 potency.\nDuration: 5s\nGrants Thorned Flourish when barrier is completely absorbed.\nDuration: 10s\n\n※Action changes to Vice of Thorns while under the effect of Thorned Flourish.\n\nGrand Impact\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 6,000 for the first enemy, and 4,000 for all remaining enemies.\nCan only be executed while under the effect of Dualcast.\n\n※This action cannot be assigned to a hotbar.\n\nEnchanted Zwerchhau\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Riposte\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Enchanted Redoublement upon execution.\n\nEnchanted Redoublement\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDeals unaspected damage with a potency of 7,000.\nIgnores the effects of Guard when dealing damage.\nCombo Action: Enchanted Zwerchhau\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 4,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Scorch upon execution.\n\nScorch\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nCombo Action: Enchanted Redoublement\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n\nPrefulgence\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 10,000 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 10,000\nAdditional Effect: Restores HP of party members near target\nCure Potency: 10,000\nCan only be executed while under the effect of Prefulgence Ready.\n\n※This action cannot be assigned to a hotbar.\n\nVice of Thorns\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 4,000 to target and all enemies nearby it.\nAdditional Effect: Stun\nDuration: 2s\nCan only be executed while under the effect of Thorned Flourish.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSouthern Cross\n\nInstant\n10s\n-\n\n30y\n\n15y\n\nEmblazons a grand cross on the ground beneath a party member or enemy, restoring HP of party members within range while damaging enemies.\nCure Potency: 12,000\nDamage Potency: 12,000\nTargets standing at the cross's center will receive the effects of this action twice.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nComet\n\nSpell\n2.4s\n45s\n-\n\n30y\n\n10y\n\nDeals magic damage to enemies at the designated area with a potency of 20,000.\nThis action's effects extend through obstructions.\nYou cannot move while casting, nor can you cancel the spell once cast.\n\nPhantom Dart\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 4,000.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 5s\n\nRust\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nReduces damage dealt and healing potency of target and all enemies nearby it by 33%.\nDuration: 10s\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

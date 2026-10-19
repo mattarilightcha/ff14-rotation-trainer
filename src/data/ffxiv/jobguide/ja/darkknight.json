@@ -1,0 +1,1778 @@
+{
+ "job": "darkknight",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/darkknight/",
+ "pageTitle": "ジョブガイド「暗黒騎士」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nTANK/タンク\n\n聖職者たちが民を導き、騎士たちが民を護る宗教都市「イシュガルド」。\nしかし、高潔であるべき者の中にも、悪は存在する。\n見捨てられた者を護るため、果たされぬ正義を成すため、タブーである聖職者殺し、騎士殺しをも厭わぬ者たち。\n信念のために業を背負い、己の内に闇を飼い慣らす者たち……人は彼らを「暗黒騎士」と呼ぶ。\n彼らは決して盾を掲げない。\n騎士の盾には、権力の象徴たる紋章が描かれるのだから。\nただ大剣を闇にかざし、磨くのみである。\n\nジョブ開始クエスト",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png",
+   "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png",
+   "https://lds-img.finalfantasyxiv.com/d/b6d1592d4fcbcafe1e3b0958d688c50346fe2bd4.png",
+   "https://lds-img.finalfantasyxiv.com/d/13a97691011df3c616e3181fd21b5f6805ce5799.png",
+   "https://lds-img.finalfantasyxiv.com/d/6203d55695d1cdde37d875f7b4b4253606266ad0.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png",
+   "https://lds-img.finalfantasyxiv.com/d/438927fdaa593ec9d1bd020e1c60fad9ca495f3f.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0c4dd65cec09b11aa7ecfecf6526aff4c59b83f.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ea7904a9e066bb33d542755b5984ad78c711a45.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png",
+   "https://lds-img.finalfantasyxiv.com/d/e62374eb5036fcaa1201fec390bc266620501abe.png",
+   "https://lds-img.finalfantasyxiv.com/d/adb1f756a8cfa746f5ec2f97e487e41c06026a61.png",
+   "https://lds-img.finalfantasyxiv.com/d/968fc4ccd880ca468fff7b34680e793a80ffdab1.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c3e2f641cea5b3c0693034e6feafeff359341c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/52870f24b14efd37172003e974b8c45ca3d38010.png",
+   "https://lds-img.finalfantasyxiv.com/d/17543c65847814b073fe6481402a347c7efc9225.png",
+   "https://lds-img.finalfantasyxiv.com/d/6bbe53b6e1f87598b98967ae9d29e4337a7afadd.png",
+   "https://lds-img.finalfantasyxiv.com/d/4e5cbcae7dcf48cf8e3522d308f0c86df9114f0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea30bbaacc0da577820f8b027cec26738c1be840.png",
+   "https://lds-img.finalfantasyxiv.com/d/1dc1a1d830e5355e2cd251531e85932c24ba1b8d.png",
+   "https://lds-img.finalfantasyxiv.com/d/fbf4ae3878ecc04c6201114ce6b0aadf26bef857.png",
+   "https://lds-img.finalfantasyxiv.com/d/f82c8fbcd6549c8cd72108a937aade172f8b98a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/de4960def285cc69e33455acae0f50808a6cd623.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4536e75673663bf1b91d1a78a565dabc2f041f6.png",
+   "https://lds-img.finalfantasyxiv.com/d/5150a7bff7be43d689f896e7be140f4720a23f6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5a42ca000eb7ab0c80e3952539ed260af3d4c5e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb0216fb548f749ceb5bf25f071af462129be59b.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb5281f6fd7eb6900cbda1c39722b4d3c7e51b6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/093f2ddb0a06f04a76fe41fd5c31f7fceb46d2ea.png",
+   "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png",
+   "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png",
+   "https://lds-img.finalfantasyxiv.com/d/77ef69ee0efdb439996373d7e47f2744a7604b10.png",
+   "https://lds-img.finalfantasyxiv.com/d/acf9474555312bfc65c8d4e8e93cf368f819f503.png",
+   "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+   "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/67e397233e08c3886a8b4e8af9f97578c1df6de1.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f14337e0878aed0662297235a0682243dc3b234.png",
+   "https://lds-img.finalfantasyxiv.com/d/13f3ceaeef0d6ec12fa91489b100915e78403bcb.png",
+   "https://lds-img.finalfantasyxiv.com/d/270e904cd1e39b3eba028a60820f033a3804eeb0.png",
+   "https://lds-img.finalfantasyxiv.com/d/775946c6b9e7bd369a0a68635662781175930c0c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3e7f296d44600715e2bc8c0b5420d7b795afda3e.png",
+   "https://lds-img.finalfantasyxiv.com/d/1ceca4c94f71633fea2d1d23b75384672dd6b82b.png",
+   "https://lds-img.finalfantasyxiv.com/d/4e8120ac0d17ab2daeefc27ca75e58a2d7d7da09.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2f372c47ae3a92ee1d28661065743661c5fa425.png",
+   "https://lds-img.finalfantasyxiv.com/d/65a3f91205b57d261d3b34b83e419716a77b09b0.png",
+   "https://lds-img.finalfantasyxiv.com/d/750267df5336356bee1fb6ed174265e6bc3c2496.png",
+   "https://lds-img.finalfantasyxiv.com/d/5aa3108720c2431e655adb077eb533b60ce21312.png",
+   "https://lds-img.finalfantasyxiv.com/d/5120d2e81e82757f9f84cd9bca7d3983bc7a63b7.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f52efe634939c12aaf8d17525fd4a52a54002f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+   "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/j/xSbsvUtqQHt6bmn-NjJP-qJBBQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "ハードスラッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "サイフォンストライク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：240\nコンボ条件：ハードスラッシュ\nコンボ時威力：380\nコンボボーナス：自身のＭＰを回復する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：240<br/>コンボ条件：ハードスラッシュ<br/>コンボ時威力：380<br/>コンボボーナス：自身のＭＰを回復する。"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "アンリーシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\n追加効果：敵視アップ",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：120<br/>追加効果：敵視アップ"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "グリットスタンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6d1592d4fcbcafe1e3b0958d688c50346fe2bd4.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "戦闘中の敵から自身に向けられる敵視を非常に大きく上昇させる。\n再使用で解除する。\n効果時間：永続",
+     "descriptionHtml": "戦闘中の敵から自身に向けられる敵視を非常に大きく上昇させる。<br/>再使用で解除する。<br/>効果時間：永続"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "グリットスタンス解除かいじょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/13a97691011df3c616e3181fd21b5f6805ce5799.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "グリットスタンスを解除する。",
+     "descriptionHtml": "グリットスタンスを解除する。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "アンメンド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6203d55695d1cdde37d875f7b4b4253606266ad0.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：150\n追加効果：敵視アップ\n追加効果：シャドウストライドのリキャストタイムを5秒短縮する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：150<br/>追加効果：敵視アップ<br/>追加効果：シャドウストライドのリキャストタイムを5秒短縮する。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "ソウルイーター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：260\nコンボ条件：サイフォンストライク\nコンボ時威力：480\nコンボボーナス：自身のＨＰを回復する。\n回復力：300\nコンボボーナス：「ブラックブラッド」を20上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：260<br/>コンボ条件：サイフォンストライク<br/>コンボ時威力：480<br/>コンボボーナス：自身のＨＰを回復する。<br/>回復力：300<br/>コンボボーナス：「ブラックブラッド」を20上昇させる。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "暗黒あんこくの波動はどう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/438927fdaa593ec9d1bd020e1c60fad9ca495f3f.png",
+     "skillCellText": "暗黒あんこくの波動はどう\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP3000",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって無属性前方直線範囲魔法攻撃。\n威力：100\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の剣」と共有する。",
+     "descriptionHtml": "対象に向かって無属性前方直線範囲魔法攻撃。<br/>威力：100<br/>追加効果：自身に「暗黒」を付与する。<br/>効果時間：30秒<br/>暗黒効果：自身の与ダメージを10％上昇させる。<br/>既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。<br/>最大60秒まで延長することができる。<br/>リキャストタイマーを「暗黒の剣」と共有する。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "ブラッドウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0c4dd65cec09b11aa7ecfecf6526aff4c59b83f.png",
+     "skillCellText": "ブラッドウェポン\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に3スタックの「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復する。\nさらに、「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。",
+     "descriptionHtml": "自身に3スタックの「ブラッドウェポン」を付与する。<br/>効果時間：15秒<br/>ブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復する。<br/>さらに、「ブラックブラッド」を10上昇させる。<br/>範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "シャドウウォール",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ea7904a9e066bb33d542755b5984ad78c711a45.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 38,
+     "jobclassText": "Lv38",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の被ダメージを30％軽減させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、自身の被ダメージを30％軽減させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "ストルワートソウル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\nコンボ条件：アンリーシュ\nコンボ時威力：160\n追加効果：敵視アップ\nコンボボーナス：自身のＭＰを回復する。\nコンボボーナス：「ブラックブラッド」を20上昇させる。",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：120<br/>コンボ条件：アンリーシュ<br/>コンボ時威力：160<br/>追加効果：敵視アップ<br/>コンボボーナス：自身のＭＰを回復する。<br/>コンボボーナス：「ブラックブラッド」を20上昇させる。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "暗黒あんこくの剣つるぎ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e62374eb5036fcaa1201fec390bc266620501abe.png",
+     "skillCellText": "暗黒あんこくの剣つるぎ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP3000",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：300\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の波動」と共有する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：300<br/>追加効果：自身に「暗黒」を付与する。<br/>効果時間：30秒<br/>暗黒効果：自身の与ダメージを10％上昇させる。<br/>既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。<br/>最大60秒まで延長することができる。<br/>リキャストタイマーを「暗黒の波動」と共有する。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "ダークマインド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adb1f756a8cfa746f5ec2f97e487e41c06026a61.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の被物理ダメージを10％、被魔法ダメージを20％軽減させる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、自身の被物理ダメージを10％、被魔法ダメージを20％軽減させる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "リビングデッド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/968fc4ccd880ca468fff7b34680e793a80ffdab1.png",
+     "skillCellText": "リビングデッド\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "300秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「リビングデッド」を付与する。\n効果時間：10秒\n効果時間中に戦闘不能に至るダメージを受けた場合、戦闘不能にはならずにＨＰ1の状態となり「ウォーキングデッド」に変化する。\n効果時間：10秒\nウォーキングデッド効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nさらに、自身のウェポンスキルおよび魔法による攻撃が命中すると自身のＨＰを回復する。\n回復力：1500\n効果時間中に受けた回復効果が自身の最大ＨＰの100％分に達すると、「デッドリバース」に変化する。\nデッドリバースの効果時間は、変化した時点でのウォーキングデッドの効果時間を引き継ぐ。\n十分な回復効果を受けられなかった場合はデッドリバースに変化せず、効果時間経過時に自身は戦闘不能になる。\nデッドリバース効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nただし、いずれの効果も一部の攻撃には無効化される。",
+     "descriptionHtml": "自身に「リビングデッド」を付与する。<br/>効果時間：10秒<br/>効果時間中に戦闘不能に至るダメージを受けた場合、戦闘不能にはならずにＨＰ1の状態となり「ウォーキングデッド」に変化する。<br/>効果時間：10秒<br/>ウォーキングデッド効果：すべての攻撃に対してＨＰが1より減ることがない状態。<br/>さらに、自身のウェポンスキルおよび魔法による攻撃が命中すると自身のＨＰを回復する。<br/>回復力：1500<br/>効果時間中に受けた回復効果が自身の最大ＨＰの100％分に達すると、「デッドリバース」に変化する。<br/>デッドリバースの効果時間は、変化した時点でのウォーキングデッドの効果時間を引き継ぐ。<br/>十分な回復効果を受けられなかった場合はデッドリバースに変化せず、効果時間経過時に自身は戦闘不能になる。<br/>デッドリバース効果：すべての攻撃に対してＨＰが1より減ることがない状態。<br/>ただし、いずれの効果も一部の攻撃には無効化される。"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "ソルトアース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c3e2f641cea5b3c0693034e6feafeff359341c5.png",
+     "skillCellText": "ソルトアース\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の足元にダメージエリアを生成する。\n範囲内に入った対象に無属性ダメージを与える。\n威力：50\n効果時間：15秒",
+     "descriptionHtml": "自身の足元にダメージエリアを生成する。<br/>範囲内に入った対象に無属性ダメージを与える。<br/>威力：50<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "シャドウストライド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/52870f24b14efd37172003e974b8c45ca3d38010.png",
+     "skillCellText": "シャドウストライド\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "敵単体を対象とする。\n対象の目前まで素早く移動する。\n追加効果：敵視アップ\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "敵単体を対象とする。<br/>対象の目前まで素早く移動する。<br/>追加効果：敵視アップ<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "アビサルドレイン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/17543c65847814b073fe6481402a347c7efc9225.png",
+     "skillCellText": "アビサルドレイン\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象を中心に無属性範囲魔法攻撃。\n威力：240\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「カーヴ・アンド・スピット」と共有する。",
+     "descriptionHtml": "対象を中心に無属性範囲魔法攻撃。<br/>威力：240<br/>追加効果：自身のＨＰを回復する。<br/>回復力：500<br/>追加効果：自身のＭＰを回復する。<br/>リキャストタイマーを「カーヴ・アンド・スピット」と共有する。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "カーヴ・アンド・スピット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6bbe53b6e1f87598b98967ae9d29e4337a7afadd.png",
+     "skillCellText": "カーヴ・アンド・スピット\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：540\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「アビサルドレイン」と共有する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：540<br/>追加効果：自身のＨＰを回復する。<br/>回復力：500<br/>追加効果：自身のＭＰを回復する。<br/>リキャストタイマーを「アビサルドレイン」と共有する。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "ブラッドスピラー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4e5cbcae7dcf48cf8e3522d308f0c86df9114f0d.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：600\n発動条件：「ブラックブラッド」50",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：600<br/>発動条件：「ブラックブラッド」50"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "クワイタス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea30bbaacc0da577820f8b027cec26738c1be840.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：240\n発動条件：「ブラックブラッド」50",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：240<br/>発動条件：「ブラックブラッド」50"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "ダークミッショナリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1dc1a1d830e5355e2cd251531e85932c24ba1b8d.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーの被物理ダメージを5％、被魔法ダメージを10％軽減させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーの被物理ダメージを5％、被魔法ダメージを10％軽減させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "ブラッドデリリアム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fbf4ae3878ecc04c6201114ce6b0aadf26bef857.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に3スタックの「ブラッドデリリアム」と「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドデリリアム効果：ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復し、さらに「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。",
+     "descriptionHtml": "自身に3スタックの「ブラッドデリリアム」と「ブラッドウェポン」を付与する。<br/>効果時間：15秒<br/>ブラッドデリリアム効果：ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。<br/>ブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復し、さらに「ブラックブラッド」を10上昇させる。<br/>範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "ブラックナイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f82c8fbcd6549c8cd72108a937aade172f8b98a8.png",
+     "skillCellText": "ブラックナイト\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "MP3000",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象として、一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの25％分のダメージを軽減する。\n効果時間：7秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\nダークアーツ効果：ＭＰの代わりにダークアーツを消費して「漆黒の波動」および「漆黒の剣」を発動できる。",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象として、一定量のダメージを防ぐバリアを張る。<br/>このバリアは対象の最大ＨＰの25％分のダメージを軽減する。<br/>効果時間：7秒<br/>バリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。<br/>ダークアーツ効果：ＭＰの代わりにダークアーツを消費して「漆黒の波動」および「漆黒の剣」を発動できる。"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "漆黒しっこくの波動はどう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/de4960def285cc69e33455acae0f50808a6cd623.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP3000",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって無属性前方直線範囲魔法攻撃。\n威力：160\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の剣」と共有する。",
+     "descriptionHtml": "対象に向かって無属性前方直線範囲魔法攻撃。<br/>威力：160<br/>追加効果：自身に「暗黒」を付与する。<br/>効果時間：30秒<br/>暗黒効果：自身の与ダメージを10％上昇させる。<br/>既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。<br/>最大60秒まで延長することができる。<br/>リキャストタイマーを「漆黒の剣」と共有する。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "漆黒しっこくの剣つるぎ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4536e75673663bf1b91d1a78a565dabc2f041f6.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP3000",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：460\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の波動」と共有する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：460<br/>追加効果：自身に「暗黒」を付与する。<br/>効果時間：30秒<br/>暗黒効果：自身の与ダメージを10％上昇させる。<br/>既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。<br/>最大60秒まで延長することができる。<br/>リキャストタイマーを「漆黒の波動」と共有する。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "影身具現えいしんぐげん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5150a7bff7be43d689f896e7be140f4720a23f6e.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。",
+     "descriptionHtml": "自身と共に戦う「英雄の影身」を具現化する。<br/>効果時間：22秒<br/>追加効果：自身に「ディセスティーム実行可」を付与する。<br/>効果時間：30秒<br/>英雄の影身による攻撃の威力：420<br/>シャドウブリンガーおよびディセスティームは固有の威力を持つ。<br/>英雄の影身によるシャドウブリンガーの威力：570<br/>英雄の影身によるディセスティームの威力：620<br/>2体目以降の対象への威力は25％減少する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "オブレーション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a42ca000eb7ab0c80e3952539ed260af3d4c5e8.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象の被ダメージを10％軽減する。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象の被ダメージを10％軽減する。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "ソルト・アンド・ダーク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb0216fb548f749ceb5bf25f071af462129be59b.png",
+     "skillCellText": "ソルト・アンド・ダーク\n前提クエスト",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が設置したソルトアースの効果範囲内にいる敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は25％減少する。\n発動条件：「ソルトアース」効果中",
+     "descriptionHtml": "自身が設置したソルトアースの効果範囲内にいる敵に無属性範囲魔法攻撃。<br/>威力：500<br/>2体目以降の対象への威力は25％減少する。<br/>発動条件：「ソルトアース」効果中"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "シャドウブリンガー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb5281f6fd7eb6900cbda1c39722b4d3c7e51b6e.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって無属性前方直線範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中",
+     "descriptionHtml": "対象に向かって無属性前方直線範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は25％減少する。<br/>最大チャージ数：2<br/>発動条件：「暗黒」効果中"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "シャドウヴィジル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/093f2ddb0a06f04a76fe41fd5c31f7fceb46d2ea.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の被ダメージを40％軽減させる。\n効果時間：15秒\n追加効果：自身に「シャドウヴィジル［被］」を付与する。\n効果時間：20秒\nシャドウヴィジル［被］効果：ＨＰが50％を下回るか効果時間が経過すると、回復効果が発動する。\n回復力：1200",
+     "descriptionHtml": "一定時間、自身の被ダメージを40％軽減させる。<br/>効果時間：15秒<br/>追加効果：自身に「シャドウヴィジル［被］」を付与する。<br/>効果時間：20秒<br/>シャドウヴィジル［被］効果：ＨＰが50％を下回るか効果時間が経過すると、回復効果が発動する。<br/>回復力：1200"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "レッドデリリアム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：620\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとブラッドスピラーがレッドデリリアムに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：620<br/>追加効果：自身のＭＰを回復する。<br/>発動条件：「ブラッドデリリアム」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとブラッドスピラーがレッドデリリアムに変化する。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "カマパンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：720\nコンボ条件：レッドデリリアム\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドデリリアムがカマパンスに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：720<br/>コンボ条件：レッドデリリアム<br/>追加効果：自身のＭＰを回復する。<br/>発動条件：「ブラッドデリリアム」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとレッドデリリアムがカマパンスに変化する。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "トアクリーバー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：820\nコンボ条件：カマパンス\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとカマパンスがトアクリーバーに変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：820<br/>コンボ条件：カマパンス<br/>追加効果：自身のＭＰを回復する。<br/>発動条件：「ブラッドデリリアム」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとカマパンスがトアクリーバーに変化する。"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "インペイルメント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/77ef69ee0efdb439996373d7e47f2744a7604b10.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクワイタスがインペイルメントに変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：300<br/>追加効果：自身のＭＰを回復する。<br/>発動条件：「ブラッドデリリアム」<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとクワイタスがインペイルメントに変化する。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "ディセスティーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/acf9474555312bfc65c8d4e8e93cf368f819f503.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって無属性前方直線範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は25％減少する。\n発動条件：「ディセスティーム実行可」効果中",
+     "descriptionHtml": "対象に向かって無属性前方直線範囲物理攻撃。<br/>威力：1000<br/>2体目以降の対象への威力は25％減少する。<br/>発動条件：「ディセスティーム実行可」効果中"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "ランパート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の被ダメージを20％軽減させる。\nさらに、自身が受けるＨＰ回復効果を15％上昇させる。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の被ダメージを20％軽減させる。<br/>さらに、自身が受けるＨＰ回復効果を15％上昇させる。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "ロウブロウ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "25秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象をスタンさせる。\n効果時間：5秒",
+     "descriptionHtml": "対象をスタンさせる。<br/>効果時間：5秒"
+    },
+    {
+     "rowId": "tank_action__03",
+     "name": "挑発ちょうはつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象を挑発し、自身への敵視を最高位にしたうえで、さらに自身への敵視を上昇させる。",
+     "descriptionHtml": "対象を挑発し、自身への敵視を最高位にしたうえで、さらに自身への敵視を上昇させる。"
+    },
+    {
+     "rowId": "tank_action__04",
+     "name": "インタージェクト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象のアクション詠唱を中断させる。",
+     "descriptionHtml": "対象のアクション詠唱を中断させる。"
+    },
+    {
+     "rowId": "tank_action__05",
+     "name": "リプライザル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵の与ダメージを10％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "自身の周囲の敵の与ダメージを10％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "tank_action__06",
+     "name": "アームズレングス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 32,
+     "jobclassText": "Lv32",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒<br/>追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "tank_action__07",
+     "name": "シャーク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 48,
+     "jobclassText": "Lv48",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "自身に向けられている敵視の25％を対象のパーティメンバーに移す。",
+     "descriptionHtml": "自身に向けられている敵視の25％を対象のパーティメンバーに移す。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "タンクマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6414caac03c831ec90c34e501e444031d44003c.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "description": "自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。",
+     "descriptionHtml": "自身の被ダメージを20％軽減させる。<br/>また、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "ブラックブラッド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bf25091f18b1804e88a4a5043ff35dab2cf498a7.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "description": "「ブラックブラッド」が上昇するようになる。\n発動条件：特定のアクションの命中時",
+     "descriptionHtml": "「ブラックブラッド」が上昇するようになる。<br/>発動条件：特定のアクションの命中時"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "ブラックブラッドIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3c5de58c2097300e2c9b56678196ee5a710ffe27.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "description": "「ブラックブラッド」が上昇するようになる。\n発動条件：「ブラッドウェポン」効果中に実行するウェポンスキルおよび魔法の命中時",
+     "descriptionHtml": "「ブラックブラッド」が上昇するようになる。<br/>発動条件：「ブラッドウェポン」効果中に実行するウェポンスキルおよび魔法の命中時"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "ブラッドウェポンマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b189239725408e4ee7807ec361db47974443936.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "description": "ブラッドウェポンがブラッドデリリアムに変化する。",
+     "descriptionHtml": "ブラッドウェポンがブラッドデリリアムに変化する。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "暗黒あんこくマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/68800dbdca2c85218b44e9add376f59aa5d41559.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "暗黒の波動が漆黒の波動に、暗黒の剣が漆黒の剣に変化する。",
+     "descriptionHtml": "暗黒の波動が漆黒の波動に、暗黒の剣が漆黒の剣に変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "アンメンド効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1254f70083b234ef84a6ad64c9e237231628896f.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "シャドウストライドのリキャストタイムを5秒短縮する。\n発動条件：一部を除く敵に対するアンメンドの命中時",
+     "descriptionHtml": "シャドウストライドのリキャストタイムを5秒短縮する。<br/>発動条件：一部を除く敵に対するアンメンドの命中時"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：180\nサイフォンストライクの威力：120\nソウルイーターの威力：140",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ハードスラッシュの威力：180<br/>サイフォンストライクの威力：120<br/>ソウルイーターの威力：140"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "影身具現えいしんぐげん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/14eb5e09a27cad9aca0badada5555013ee2336d0.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "英雄の影身による攻撃の威力が420に上昇する。",
+     "descriptionHtml": "英雄の影身による攻撃の威力が420に上昇する。"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "影身具現えいしんぐげん効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ae34095410649e88aa247fedf9f6478a0e15409.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "英雄の影身が使う漆黒の波動がシャドウブリンガーに変化する。\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は25％減少する。",
+     "descriptionHtml": "英雄の影身が使う漆黒の波動がシャドウブリンガーに変化する。<br/><br/>対象に向かって無属性前方直線範囲魔法攻撃。<br/>威力：570<br/>2体目以降の対象への威力は25％減少する。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "シャドウウォールマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fb4da21e08c5ee9a06dead1aa6954f0b6a82126.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "シャドウウォールがシャドウヴィジルに変化する。",
+     "descriptionHtml": "シャドウウォールがシャドウヴィジルに変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "アクション威力いりょくアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：300\nサイフォンストライクの威力：240\nソウルイーターの威力：260\nストルワートソウルの威力：120\nカーヴ・アンド・スピットの威力：540\nブラッドスピラーの威力：600\nクワイタスの威力：240",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ハードスラッシュの威力：300<br/>サイフォンストライクの威力：240<br/>ソウルイーターの威力：260<br/>ストルワートソウルの威力：120<br/>カーヴ・アンド・スピットの威力：540<br/>ブラッドスピラーの威力：600<br/>クワイタスの威力：240"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "ブラッドデリリアム効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ebbf5df2554905cdaf3a26d5fe2f02b0ad53b6bb.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\n発動条件：「ブラッドデリリアム」効果中",
+     "descriptionHtml": "ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。<br/>発動条件：「ブラッドデリリアム」効果中"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "影身具現えいしんぐげん効果こうかアップIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1cff25d23e5fb4e97a96aee32c8b2e4082c2c516.png",
+     "acquired": [
+      {
+       "class": "暗黒騎士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「ディセスティーム実行可」が付与される。\n効果時間：30秒\n発動条件：影身具現実行時\n\nまた、英雄の影身が使うカーヴ・アンド・スピットがディセスティームに変化する。\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：620\n2体目以降の対象への威力は25％減少する。",
+     "descriptionHtml": "自身に「ディセスティーム実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：影身具現実行時<br/><br/>また、英雄の影身が使うカーヴ・アンド・スピットがディセスティームに変化する。<br/><br/>対象に向かって無属性前方直線範囲物理攻撃。<br/>威力：620<br/>2体目以降の対象への威力は25％減少する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "ランパート効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad8de6373f0bc939fd654a579d6d06ad123c958b.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。",
+     "descriptionHtml": "ランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。"
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "リプライザル効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1a390002a4eabb796458e1a93716060e1ec4d185.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "リプライザルの効果時間を15秒に延長する。",
+     "descriptionHtml": "リプライザルの効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "ヘヴィスラッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67e397233e08c3886a8b4e8af9f97578c1df6de1.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：5000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "サイフォンストライク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f14337e0878aed0662297235a0682243dc3b234.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\nコンボ条件：ヘヴィスラッシュ\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/>コンボ条件：ヘヴィスラッシュ<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "ソウルイーター",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/13f3ceaeef0d6ec12fa91489b100915e78403bcb.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：サイフォンストライク\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：サイフォンストライク<br/>追加効果：与ダメージの100％分のＨＰを吸収する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "インペイルメント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/270e904cd1e39b3eba028a60820f033a3804eeb0.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "14秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "6m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：6000～12000<br/>自身の残りＨＰが低いほど威力が上昇する。<br/>追加効果：与ダメージの100％分のＨＰを吸収する。<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "シャドウブリンガー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/775946c6b9e7bd369a0a68635662781175930c0c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲魔法攻撃。\n威力：6000\n実行時にＨＰを12000消費する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n発動条件：ＨＰが12000を超えているとき、または「ダークアーツ」効果中",
+     "descriptionHtml": "対象に向かって前方直線範囲魔法攻撃。<br/>威力：6000<br/>実行時にＨＰを12000消費する。<br/>追加効果：自身に「ブラックブラッド」を付与する。<br/>効果時間：10秒<br/>ブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。<br/>「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。<br/>発動条件：ＨＰが12000を超えているとき、または「ダークアーツ」効果中"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "プランジカット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3e7f296d44600715e2bc8c0b5420d7b795afda3e.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：2000\n追加効果：対象に「ソウルサバイバー」を付与する。\n効果時間：12秒\nソウルサバイバー効果：対象が受ける回復効果を15％減少させる。\n効果時間中に対象が倒されると、自身のＨＰとＭＰを最大ＨＰおよびＭＰの15％分回復し、プランジカットのリキャストタイムが解消される。\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：2000<br/>追加効果：対象に「ソウルサバイバー」を付与する。<br/>効果時間：12秒<br/>ソウルサバイバー効果：対象が受ける回復効果を15％減少させる。<br/>効果時間中に対象が倒されると、自身のＨＰとＭＰを最大ＨＰおよびＭＰの15％分回復し、プランジカットのリキャストタイムが解消される。<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "ブラックナイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1ceca4c94f71633fea2d1d23b75384672dd6b82b.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身または対象のパーティメンバーに一定量のダメージを防ぐバリアを張る。\nバリア量：回復力10000相当\n効果時間：8秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\n効果時間：15秒\nダークアーツ効果：ＨＰの代わりにダークアーツを消費して「シャドウブリンガー」を発動できる。\n最大チャージ数：2",
+     "descriptionHtml": "自身または対象のパーティメンバーに一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力10000相当<br/>効果時間：8秒<br/>バリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。<br/>効果時間：15秒<br/>ダークアーツ効果：ＨＰの代わりにダークアーツを消費して「シャドウブリンガー」を発動できる。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "ソルトアース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4e8120ac0d17ab2daeefc27ca75e58a2d7d7da09.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "28秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "10m",
+     "description": "自身の周囲10m以内にいる敵を自身の近くに引き寄せ、自身を中心として半径5mの「ソルトアース」を生成する。\n効果時間：10秒\nソルトアースの自身への効果：範囲内にいる自身のＨＰを継続回復し、さらに受けるダメージを20％軽減させる。\n回復力：5000\nソルトアースの敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：5000\nこのアクションを実行するとソルト・アンド・ダークに変化する。",
+     "descriptionHtml": "自身の周囲10m以内にいる敵を自身の近くに引き寄せ、自身を中心として半径5mの「ソルトアース」を生成する。<br/>効果時間：10秒<br/>ソルトアースの自身への効果：範囲内にいる自身のＨＰを継続回復し、さらに受けるダメージを20％軽減させる。<br/>回復力：5000<br/>ソルトアースの敵への効果：範囲内に入った敵に継続ダメージを与える。<br/>威力：5000<br/>このアクションを実行するとソルト・アンド・ダークに変化する。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "レッドデリリアム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2f372c47ae3a92ee1d28661065743661c5fa425.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「カマパンス実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000～12000<br/>自身の残りＨＰが低いほど威力が上昇する。<br/>追加効果：自身に「カマパンス実行可」を付与する。<br/>効果時間：永続<br/>発動条件：「ブラックブラッド」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "カマパンス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/65a3f91205b57d261d3b34b83e419716a77b09b0.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000～14000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「トアクリーバー実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」および「カマパンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000～14000<br/>自身の残りＨＰが低いほど威力が上昇する。<br/>追加効果：自身に「トアクリーバー実行可」を付与する。<br/>効果時間：永続<br/>発動条件：「ブラックブラッド」および「カマパンス実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "トアクリーバー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/750267df5336356bee1fb6ed174265e6bc3c2496.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：8000～16000\n自身の残りＨＰが低いほど威力が上昇する。\n発動条件：「ブラックブラッド」および「トアクリーバー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：8000～16000<br/>自身の残りＨＰが低いほど威力が上昇する。<br/>発動条件：「ブラックブラッド」および「トアクリーバー実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "ソルト・アンド・ダーク",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5aa3108720c2431e655adb077eb533b60ce21312.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が設置したソルトアースの効果範囲内にいる敵に魔法攻撃。\n威力：6000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身が設置したソルトアースの効果範囲内にいる敵に魔法攻撃。<br/>威力：6000<br/>追加効果：対象にバインドを付与する。<br/>効果時間：2秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "ディセスティーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5120d2e81e82757f9f84cd9bca7d3983bc7a63b7.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲魔法攻撃。\n威力：16000\n発動条件：「ディセスティーム実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に向かって前方直線範囲魔法攻撃。<br/>威力：16000<br/>発動条件：「ディセスティーム実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "イーブンタイド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f52efe634939c12aaf8d17525fd4a52a54002f9.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身の前後直線範囲に対して範囲魔法攻撃。\n威力：8000～24000\n自身の残りＨＰが高いほど威力が上昇する。\n実行時に自身のＨＰが1になる。\n追加効果：自身に「アンデッド・リデンプション」を付与する。\n効果時間：10秒\nアンデッド・リデンプション効果：一部を除くすべての攻撃に対してＨＰが1より減ることがなくなる。\nさらに自身のウェポンスキルに与ダメージの100％分のＨＰを吸収する効果を付与する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとディセスティームに変化する。",
+     "descriptionHtml": "自身の前後直線範囲に対して範囲魔法攻撃。<br/>威力：8000～24000<br/>自身の残りＨＰが高いほど威力が上昇する。<br/>実行時に自身のＨＰが1になる。<br/>追加効果：自身に「アンデッド・リデンプション」を付与する。<br/>効果時間：10秒<br/>アンデッド・リデンプション効果：一部を除くすべての攻撃に対してＨＰが1より減ることがなくなる。<br/>さらに自身のウェポンスキルに与ダメージの100％分のＨＰを吸収する効果を付与する。<br/>追加効果：自身に「ブラックブラッド」を付与する。<br/>効果時間：10秒<br/>ブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。<br/>「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。<br/>追加効果：自身に「ディセスティーム実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：105秒<br/>このアクションを実行するとディセスティームに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ランページ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "10m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：8000\n追加効果：対象が受けるダメージを25％上昇させる。\n効果時間：10秒",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>追加効果：対象が受けるダメージを25％上昇させる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ランパート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の被ダメージを50％軽減させ、受けるＨＰ回復効果を25％上昇させる。\n効果時間：15秒",
+     "descriptionHtml": "自身の被ダメージを50％軽減させ、受けるＨＰ回復効果を25％上昇させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "フルスイング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：8000\n追加効果：対象を30mノックバックする。\n「防御」効果中の対象に実行すると、その効果を解除する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：8000<br/>追加効果：対象を30mノックバックする。<br/>「防御」効果中の対象に実行すると、その効果を解除する。"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "アクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__darkknight_01",
+    "steps": [
+     {
+      "name": "ハードスラッシュ",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png"
+     },
+     {
+      "name": "サイフォンストライク",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png"
+     },
+     {
+      "name": "ソウルイーター",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png"
+     }
+    ],
+    "effect": "「ブラックブラッド」の上昇と、自身のHP、MPを回復する効果が得られるコンボです。"
+   },
+   {
+    "class": "job__combo__root job__combo__darkknight_02",
+    "steps": [
+     {
+      "name": "アンリーシュ",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png"
+     },
+     {
+      "name": "ストルワートソウル",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "「ブラックブラッド」の上昇と、自身のMPを回復する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。"
+   },
+   {
+    "class": "job__combo__root job__combo__darkknight_01",
+    "steps": [
+     {
+      "name": "レッドデリリアム",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png"
+     },
+     {
+      "name": "カマパンス",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png"
+     },
+     {
+      "name": "トアクリーバー",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png"
+     }
+    ],
+    "effect": "「ブラッドデリリアム」を消費し、自身のMPを回復する効果を得つつ、最も総威力の高い攻撃コンボです。"
+   }
+  ],
+  "allText": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nハードスラッシュ\n\nサイフォンストライク\n\nソウルイーター\n\n「ブラックブラッド」の上昇と、自身のHP、MPを回復する効果が得られるコンボです。\n\nアンリーシュ\n\nストルワートソウル\n\n「ブラックブラッド」の上昇と、自身のMPを回復する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n\nレッドデリリアム\n\nカマパンス\n\nトアクリーバー\n\n「ブラッドデリリアム」を消費し、自身のMPを回復する効果を得つつ、最も総威力の高い攻撃コンボです。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "ブラッドゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png"
+    ]
+   },
+   {
+    "title": "ダークサイドシンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nブラッドゲージ\nアクション「グリットスタンス」 を修得すると、その発動状態を示すシンボルが表示されるようになります。\nグリットスタンスの効果中は、自身が実行するアクションによる\"敵視\"を大幅に高め、敵を引き付けやすくなります。\n\nレベル62で特性「ブラックブラッド」を修得すると、グリットスタンスの状態の他に\"ブラックブラッド\"の蓄積量を示す「ブラッドゲージ」が表示されるようになります。\nブラックブラッドは特定のアクション実行時に蓄積され、ブラックブラッドを消費することで「ブラッドスピラー」やレベル64で修得する「クワイタス」などを実行できます。\n\nダークサイドシンボル\n\nアクション「暗黒の波動」 を修得すると、\"暗黒\"の効果時間を示す「ダークサイドシンボル」が表示されるようになります。\n暗黒は「暗黒の波動」やレベル40で修得する「暗黒の剣」によって付与され、効果中は自身の与ダメージが上昇します。\n\nアクション「ブラックナイト」 を修得すると、「ダークアーツ」が表示されるようになります。\nダークアーツは\"ブラックナイト\"によるバリア効果が消費されることで付与され、ダークアーツを消費することで「暗黒の波動」や「暗黒の剣」をＭＰを消費せずに実行できます。\n\nアクション「影身具現」を修得すると、共に戦ってくれる「英雄の影身」が具現化できるようになります。\n英雄の影身を具現化中は、ダークサイドシンボルに残り具現時間が表示されるようになります。\n\nシンプルモード\n\nブラッドゲージ\n\n「グリットスタンス」状態\n\nシンプルモードでは、特性「ブラックブラッド」を修得し、ブラッドゲージが表示されるまで発動状態を示すシンボルは表示されません。\n\nダークサイドシンボル\n\n「暗黒」効果中\n\n「ダークアーツ」スタック時\n\n「影身具現」実行中",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">ブラッドゲージ</h3>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「グリットスタンス」</span> を修得すると、その発動状態を示すシンボルが表示されるようになります。<br/>グリットスタンスの効果中は、自身が実行するアクションによる<span class=\"txt_red\">\"敵視\"</span>を大幅に高め、敵を引き付けやすくなります。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">レベル62で特性<span class=\"txt_red\">「ブラックブラッド」</span>を修得すると、グリットスタンスの状態の他に<span class=\"txt_red\">\"ブラックブラッド\"</span>の蓄積量を示す<span class=\"txt_red\">「ブラッドゲージ」</span>が表示されるようになります。<br/>ブラックブラッドは特定のアクション実行時に蓄積され、ブラックブラッドを消費することで<span class=\"txt_red\">「ブラッドスピラー」</span>やレベル64で修得する<span class=\"txt_red\">「クワイタス」</span>などを実行できます。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/KTQC7uU17HK2gGtllianH7c6Bc.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<h3 class=\"job__hud__title\">ダークサイドシンボル</h3>\n<div class=\"job__hud__layout job__hud__layout--mb16 clearfix\">\n<img class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/h/7T3XMjgG1CnY1FX6fbl-oJre-Y.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「暗黒の波動」 </span>を修得すると、<span class=\"txt_red\">\"暗黒\"</span>の効果時間を示す<span class=\"txt_red\">「ダークサイドシンボル」</span>が表示されるようになります。<br/>暗黒は<span class=\"txt_red\">「暗黒の波動」</span>やレベル40で修得する<span class=\"txt_red\">「暗黒の剣」</span>によって付与され、効果中は自身の与ダメージが上昇します。</p>\n</div>\n<div class=\"job__hud__layout job__hud__layout--mb32 clearfix\">\n<img class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/x/KzVLdZ6ZwSLQI9QaviWW9LxKMY.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「ブラックナイト」 </span>を修得すると、<span class=\"txt_red\">「ダークアーツ」</span>が表示されるようになります。<br/>ダークアーツは<span class=\"txt_red\">\"ブラックナイト\"</span>によるバリア効果が消費されることで付与され、ダークアーツを消費することで<span class=\"txt_red\">「暗黒の波動」</span>や<span class=\"txt_red\">「暗黒の剣」</span>をＭＰを消費せずに実行できます。</p>\n</div>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「影身具現」</span>を修得すると、共に戦ってくれる<span class=\"txt_red\">「英雄の影身」</span>が具現化できるようになります。<br/>英雄の影身を具現化中は、ダークサイドシンボルに残り具現時間が表示されるようになります。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">ブラッドゲージ</p>\n</th>\n</tr>\n<tr>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「グリットスタンス」状態</p>\n</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__text\">シンプルモードでは、特性<span class=\"txt_red\">「ブラックブラッド」</span>を修得し、ブラッドゲージが表示されるまで発動状態を示すシンボルは表示されません。</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">ダークサイドシンボル</p>\n</th>\n</tr>\n<tr>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「暗黒」効果中</p>\n</td>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「ダークアーツ」スタック時</p>\n</td>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「影身具現」実行中</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/KTQC7uU17HK2gGtllianH7c6Bc.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/h/7T3XMjgG1CnY1FX6fbl-oJre-Y.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/x/KzVLdZ6ZwSLQI9QaviWW9LxKMY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/darkknight/01.png",
+   "public/jobguide/hud/darkknight/02.png",
+   "public/jobguide/hud/darkknight/03.png",
+   "public/jobguide/hud/darkknight/04.png",
+   "public/jobguide/hud/darkknight/05.png",
+   "public/jobguide/hud/darkknight/06.png",
+   "public/jobguide/hud/darkknight/07.png",
+   "public/jobguide/hud/darkknight/08.png",
+   "public/jobguide/hud/darkknight/09.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nハードスラッシュ\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n\nサイフォンストライク\n\nLv2\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\nコンボ条件：ハードスラッシュ\nコンボ時威力：380\nコンボボーナス：自身のＭＰを回復する。\n\nアンリーシュ\n\nLv6\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\n追加効果：敵視アップ\n\nグリットスタンス\n\nLv10\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n0m\n\n戦闘中の敵から自身に向けられる敵視を非常に大きく上昇させる。\n再使用で解除する。\n効果時間：永続\n\nグリットスタンス解除かいじょ\n\nLv10\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\nグリットスタンスを解除する。\n\nアンメンド\n\nLv15\n\n魔法\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n追加効果：敵視アップ\n追加効果：シャドウストライドのリキャストタイムを5秒短縮する。\n\nソウルイーター\n\nLv26\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：260\nコンボ条件：サイフォンストライク\nコンボ時威力：480\nコンボボーナス：自身のＨＰを回復する。\n回復力：300\nコンボボーナス：「ブラックブラッド」を20上昇させる。\n\n暗黒あんこくの波動はどう\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n1秒\nMP3000\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：100\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の剣」と共有する。\n\nブラッドウェポン\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復する。\nさらに、「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。\n\nシャドウウォール\n\nLv38\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを30％軽減させる。\n効果時間：15秒\n\nストルワートソウル\n\nLv40\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\nコンボ条件：アンリーシュ\nコンボ時威力：160\n追加効果：敵視アップ\nコンボボーナス：自身のＭＰを回復する。\nコンボボーナス：「ブラックブラッド」を20上昇させる。\n\n暗黒あんこくの剣つるぎ\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\nMP3000\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：300\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の波動」と共有する。\n\nダークマインド\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被物理ダメージを10％、被魔法ダメージを20％軽減させる。\n効果時間：10秒\n\nリビングデッド\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n300秒\n-\n\n0m\n\n0m\n\n自身に「リビングデッド」を付与する。\n効果時間：10秒\n効果時間中に戦闘不能に至るダメージを受けた場合、戦闘不能にはならずにＨＰ1の状態となり「ウォーキングデッド」に変化する。\n効果時間：10秒\nウォーキングデッド効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nさらに、自身のウェポンスキルおよび魔法による攻撃が命中すると自身のＨＰを回復する。\n回復力：1500\n効果時間中に受けた回復効果が自身の最大ＨＰの100％分に達すると、「デッドリバース」に変化する。\nデッドリバースの効果時間は、変化した時点でのウォーキングデッドの効果時間を引き継ぐ。\n十分な回復効果を受けられなかった場合はデッドリバースに変化せず、効果時間経過時に自身は戦闘不能になる。\nデッドリバース効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nただし、いずれの効果も一部の攻撃には無効化される。\n\nソルトアース\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n5m\n\n自身の足元にダメージエリアを生成する。\n範囲内に入った対象に無属性ダメージを与える。\n威力：50\n効果時間：15秒\n\nシャドウストライド\n\nジョブクエスト\n\nLv54\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵単体を対象とする。\n対象の目前まで素早く移動する。\n追加効果：敵視アップ\n最大チャージ数：2\nバインド中は実行不可。\n\nアビサルドレイン\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n5m\n\n対象を中心に無属性範囲魔法攻撃。\n威力：240\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「カーヴ・アンド・スピット」と共有する。\n\nカーヴ・アンド・スピット\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：540\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「アビサルドレイン」と共有する。\n\nブラッドスピラー\n\nLv62\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：600\n発動条件：「ブラックブラッド」50\n\nクワイタス\n\nLv64\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：240\n発動条件：「ブラックブラッド」50\n\nダークミッショナリー\n\nLv66\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被物理ダメージを5％、被魔法ダメージを10％軽減させる。\n効果時間：15秒\n\nブラッドデリリアム\n\nLv68\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「ブラッドデリリアム」と「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドデリリアム効果：ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復し、さらに「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。\n\nブラックナイト\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n15秒\nMP3000\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象として、一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの25％分のダメージを軽減する。\n効果時間：7秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\nダークアーツ効果：ＭＰの代わりにダークアーツを消費して「漆黒の波動」および「漆黒の剣」を発動できる。\n\n漆黒しっこくの波動はどう\n\nLv74\n\nアビリティ\nInstant\n1秒\nMP3000\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：160\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の剣」と共有する。\n\n漆黒しっこくの剣つるぎ\n\nLv74\n\nアビリティ\nInstant\n1秒\nMP3000\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：460\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の波動」と共有する。\n\n影身具現えいしんぐげん\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。\n\nオブレーション\n\nLv82\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象の被ダメージを10％軽減する。\n効果時間：10秒\n最大チャージ数：2\n\nソルト・アンド・ダーク\n\n前提クエスト\n\nLv86\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身が設置したソルトアースの効果範囲内にいる敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は25％減少する。\n発動条件：「ソルトアース」効果中\n\nシャドウブリンガー\n\nLv90\n\nアビリティ\nInstant\n60秒\n-\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中\n\nシャドウヴィジル\n\nLv92\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを40％軽減させる。\n効果時間：15秒\n追加効果：自身に「シャドウヴィジル［被］」を付与する。\n効果時間：20秒\nシャドウヴィジル［被］効果：ＨＰが50％を下回るか効果時間が経過すると、回復効果が発動する。\n回復力：1200\n\nレッドデリリアム\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：620\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとブラッドスピラーがレッドデリリアムに変化する。\n\nカマパンス\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：720\nコンボ条件：レッドデリリアム\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドデリリアムがカマパンスに変化する。\n\nトアクリーバー\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：820\nコンボ条件：カマパンス\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとカマパンスがトアクリーバーに変化する。\n\nインペイルメント\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクワイタスがインペイルメントに変化する。\n\nディセスティーム\n\nLv100\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は25％減少する。\n発動条件：「ディセスティーム実行可」効果中"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nランパート\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを20％軽減させる。\nさらに、自身が受けるＨＰ回復効果を15％上昇させる。\n効果時間：20秒\n\nロウブロウ\n\nLv12\n\nアビリティ\nInstant\n25秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：5秒\n\n挑発ちょうはつ\n\nLv15\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n0m\n\n対象を挑発し、自身への敵視を最高位にしたうえで、さらに自身への敵視を上昇させる。\n\nインタージェクト\n\nLv18\n\nアビリティ\nInstant\n30秒\n-\n\n3m\n\n0m\n\n対象のアクション詠唱を中断させる。\n\nリプライザル\n\nLv22\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵の与ダメージを10％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nシャーク\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n25m\n\n0m\n\n自身に向けられている敵視の25％を対象のパーティメンバーに移す。"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nタンクマスタリー\n\nLv1\n\n自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。\n\nブラックブラッド\n\nLv62\n\n「ブラックブラッド」が上昇するようになる。\n発動条件：特定のアクションの命中時\n\nブラックブラッドIIつー\n\nLv66\n\n「ブラックブラッド」が上昇するようになる。\n発動条件：「ブラッドウェポン」効果中に実行するウェポンスキルおよび魔法の命中時\n\nブラッドウェポンマスタリー\n\nLv68\n\nブラッドウェポンがブラッドデリリアムに変化する。\n\n暗黒あんこくマスタリー\n\nLv74\n\n暗黒の波動が漆黒の波動に、暗黒の剣が漆黒の剣に変化する。\n\nアンメンド効果こうかアップ\n\nLv84\n\nシャドウストライドのリキャストタイムを5秒短縮する。\n発動条件：一部を除く敵に対するアンメンドの命中時\n\nアクション威力いりょくアップ\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：180\nサイフォンストライクの威力：120\nソウルイーターの威力：140\n\n影身具現えいしんぐげん効果こうかアップ\n\nLv88\n\n英雄の影身による攻撃の威力が420に上昇する。\n\n影身具現えいしんぐげん効果こうかアップIIつー\n\nLv90\n\n英雄の影身が使う漆黒の波動がシャドウブリンガーに変化する。\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は25％減少する。\n\nシャドウウォールマスタリー\n\nLv92\n\nシャドウウォールがシャドウヴィジルに変化する。\n\nアクション威力いりょくアップIIつー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：300\nサイフォンストライクの威力：240\nソウルイーターの威力：260\nストルワートソウルの威力：120\nカーヴ・アンド・スピットの威力：540\nブラッドスピラーの威力：600\nクワイタスの威力：240\n\nブラッドデリリアム効果こうかアップ\n\nLv96\n\nブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\n発動条件：「ブラッドデリリアム」効果中\n\n影身具現えいしんぐげん効果こうかアップIIIすりー\n\nLv100\n\n自身に「ディセスティーム実行可」が付与される。\n効果時間：30秒\n発動条件：影身具現実行時\n\nまた、英雄の影身が使うカーヴ・アンド・スピットがディセスティームに変化する。\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：620\n2体目以降の対象への威力は25％減少する。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\nランパート効果こうかアップ\n\nLv94\n\nランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。\n\nリプライザル効果こうかアップ\n\nLv98\n\nリプライザルの効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "コンボ",
+   "anchor": "anchor__pve_combo",
+   "text": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nハードスラッシュ\n\nサイフォンストライク\n\nソウルイーター\n\n「ブラックブラッド」の上昇と、自身のHP、MPを回復する効果が得られるコンボです。\n\nアンリーシュ\n\nストルワートソウル\n\n「ブラックブラッド」の上昇と、自身のMPを回復する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n\nレッドデリリアム\n\nカマパンス\n\nトアクリーバー\n\n「ブラッドデリリアム」を消費し、自身のMPを回復する効果を得つつ、最も総威力の高い攻撃コンボです。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nブラッドゲージ\nアクション「グリットスタンス」 を修得すると、その発動状態を示すシンボルが表示されるようになります。\nグリットスタンスの効果中は、自身が実行するアクションによる\"敵視\"を大幅に高め、敵を引き付けやすくなります。\n\nレベル62で特性「ブラックブラッド」を修得すると、グリットスタンスの状態の他に\"ブラックブラッド\"の蓄積量を示す「ブラッドゲージ」が表示されるようになります。\nブラックブラッドは特定のアクション実行時に蓄積され、ブラックブラッドを消費することで「ブラッドスピラー」やレベル64で修得する「クワイタス」などを実行できます。\n\nダークサイドシンボル\n\nアクション「暗黒の波動」 を修得すると、\"暗黒\"の効果時間を示す「ダークサイドシンボル」が表示されるようになります。\n暗黒は「暗黒の波動」やレベル40で修得する「暗黒の剣」によって付与され、効果中は自身の与ダメージが上昇します。\n\nアクション「ブラックナイト」 を修得すると、「ダークアーツ」が表示されるようになります。\nダークアーツは\"ブラックナイト\"によるバリア効果が消費されることで付与され、ダークアーツを消費することで「暗黒の波動」や「暗黒の剣」をＭＰを消費せずに実行できます。\n\nアクション「影身具現」を修得すると、共に戦ってくれる「英雄の影身」が具現化できるようになります。\n英雄の影身を具現化中は、ダークサイドシンボルに残り具現時間が表示されるようになります。\n\nシンプルモード\n\nブラッドゲージ\n\n「グリットスタンス」状態\n\nシンプルモードでは、特性「ブラックブラッド」を修得し、ブラッドゲージが表示されるまで発動状態を示すシンボルは表示されません。\n\nダークサイドシンボル\n\n「暗黒」効果中\n\n「ダークアーツ」スタック時\n\n「影身具現」実行中"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヘヴィスラッシュ\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\nサイフォンストライク\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：ヘヴィスラッシュ\n\n※このアクションはホットバーに登録することはできない。\n\nソウルイーター\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：サイフォンストライク\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。\n\nインペイルメント\n\nウェポン\nスキル\nInstant\n14秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\nシャドウブリンガー\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：6000\n実行時にＨＰを12000消費する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n発動条件：ＨＰが12000を超えているとき、または「ダークアーツ」効果中\n\nプランジカット\n\nアビリティ\nInstant\n12秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：2000\n追加効果：対象に「ソウルサバイバー」を付与する。\n効果時間：12秒\nソウルサバイバー効果：対象が受ける回復効果を15％減少させる。\n効果時間中に対象が倒されると、自身のＨＰとＭＰを最大ＨＰおよびＭＰの15％分回復し、プランジカットのリキャストタイムが解消される。\nバインド中は実行不可。\n\nブラックナイト\n\nアビリティ\nInstant\n16秒\n-\n\n30m\n\n0m\n\n自身または対象のパーティメンバーに一定量のダメージを防ぐバリアを張る。\nバリア量：回復力10000相当\n効果時間：8秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\n効果時間：15秒\nダークアーツ効果：ＨＰの代わりにダークアーツを消費して「シャドウブリンガー」を発動できる。\n最大チャージ数：2\n\nソルトアース\n\nアビリティ\nInstant\n28秒\n-\n\n0m\n\n10m\n\n自身の周囲10m以内にいる敵を自身の近くに引き寄せ、自身を中心として半径5mの「ソルトアース」を生成する。\n効果時間：10秒\nソルトアースの自身への効果：範囲内にいる自身のＨＰを継続回復し、さらに受けるダメージを20％軽減させる。\n回復力：5000\nソルトアースの敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：5000\nこのアクションを実行するとソルト・アンド・ダークに変化する。\n\nレッドデリリアム\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「カマパンス実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nカマパンス\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000～14000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「トアクリーバー実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」および「カマパンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nトアクリーバー\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000～16000\n自身の残りＨＰが低いほど威力が上昇する。\n発動条件：「ブラックブラッド」および「トアクリーバー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nソルト・アンド・ダーク\n\nアビリティ\nInstant\n10秒\n-\n\n0m\n\n0m\n\n自身が設置したソルトアースの効果範囲内にいる敵に魔法攻撃。\n威力：6000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n\n※このアクションはホットバーに登録することはできない。\n\nディセスティーム\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：16000\n発動条件：「ディセスティーム実行可」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nイーブンタイド\n\nInstant\n10秒\n-\n\n0m\n\n30m\n\n自身の前後直線範囲に対して範囲魔法攻撃。\n威力：8000～24000\n自身の残りＨＰが高いほど威力が上昇する。\n実行時に自身のＨＰが1になる。\n追加効果：自身に「アンデッド・リデンプション」を付与する。\n効果時間：10秒\nアンデッド・リデンプション効果：一部を除くすべての攻撃に対してＨＰが1より減ることがなくなる。\nさらに自身のウェポンスキルに与ダメージの100％分のＨＰを吸収する効果を付与する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとディセスティームに変化する。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nランページ\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n10m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：8000\n追加効果：対象が受けるダメージを25％上昇させる。\n効果時間：10秒\n\nランパート\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身の被ダメージを50％軽減させ、受けるＨＰ回復効果を25％上昇させる。\n効果時間：15秒\n\nフルスイング\n\nアビリティ\nInstant\n30秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\n追加効果：対象を30mノックバックする。\n「防御」効果中の対象に実行すると、その効果を解除する。"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nTANK/タンク\n\n聖職者たちが民を導き、騎士たちが民を護る宗教都市「イシュガルド」。\nしかし、高潔であるべき者の中にも、悪は存在する。\n見捨てられた者を護るため、果たされぬ正義を成すため、タブーである聖職者殺し、騎士殺しをも厭わぬ者たち。\n信念のために業を背負い、己の内に闇を飼い慣らす者たち……人は彼らを「暗黒騎士」と呼ぶ。\n彼らは決して盾を掲げない。\n騎士の盾には、権力の象徴たる紋章が描かれるのだから。\nただ大剣を闇にかざし、磨くのみである。\n\nジョブ開始クエスト\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nハードスラッシュ\n\nLv1\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n\nサイフォンストライク\n\nLv2\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\nコンボ条件：ハードスラッシュ\nコンボ時威力：380\nコンボボーナス：自身のＭＰを回復する。\n\nアンリーシュ\n\nLv6\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\n追加効果：敵視アップ\n\nグリットスタンス\n\nLv10\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n0m\n\n戦闘中の敵から自身に向けられる敵視を非常に大きく上昇させる。\n再使用で解除する。\n効果時間：永続\n\nグリットスタンス解除かいじょ\n\nLv10\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\nグリットスタンスを解除する。\n\nアンメンド\n\nLv15\n\n魔法\nInstant\n\n2.5秒\n-\n\n20m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：150\n追加効果：敵視アップ\n追加効果：シャドウストライドのリキャストタイムを5秒短縮する。\n\nソウルイーター\n\nLv26\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：260\nコンボ条件：サイフォンストライク\nコンボ時威力：480\nコンボボーナス：自身のＨＰを回復する。\n回復力：300\nコンボボーナス：「ブラックブラッド」を20上昇させる。\n\n暗黒あんこくの波動はどう\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n1秒\nMP3000\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：100\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の剣」と共有する。\n\nブラッドウェポン\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復する。\nさらに、「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。\n\nシャドウウォール\n\nLv38\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを30％軽減させる。\n効果時間：15秒\n\nストルワートソウル\n\nLv40\n\n魔法\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：120\nコンボ条件：アンリーシュ\nコンボ時威力：160\n追加効果：敵視アップ\nコンボボーナス：自身のＭＰを回復する。\nコンボボーナス：「ブラックブラッド」を20上昇させる。\n\n暗黒あんこくの剣つるぎ\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\nMP3000\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：300\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「暗黒の波動」と共有する。\n\nダークマインド\n\nLv45\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被物理ダメージを10％、被魔法ダメージを20％軽減させる。\n効果時間：10秒\n\nリビングデッド\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n300秒\n-\n\n0m\n\n0m\n\n自身に「リビングデッド」を付与する。\n効果時間：10秒\n効果時間中に戦闘不能に至るダメージを受けた場合、戦闘不能にはならずにＨＰ1の状態となり「ウォーキングデッド」に変化する。\n効果時間：10秒\nウォーキングデッド効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nさらに、自身のウェポンスキルおよび魔法による攻撃が命中すると自身のＨＰを回復する。\n回復力：1500\n効果時間中に受けた回復効果が自身の最大ＨＰの100％分に達すると、「デッドリバース」に変化する。\nデッドリバースの効果時間は、変化した時点でのウォーキングデッドの効果時間を引き継ぐ。\n十分な回復効果を受けられなかった場合はデッドリバースに変化せず、効果時間経過時に自身は戦闘不能になる。\nデッドリバース効果：すべての攻撃に対してＨＰが1より減ることがない状態。\nただし、いずれの効果も一部の攻撃には無効化される。\n\nソルトアース\n\nジョブクエスト\n\nLv52\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n5m\n\n自身の足元にダメージエリアを生成する。\n範囲内に入った対象に無属性ダメージを与える。\n威力：50\n効果時間：15秒\n\nシャドウストライド\n\nジョブクエスト\n\nLv54\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵単体を対象とする。\n対象の目前まで素早く移動する。\n追加効果：敵視アップ\n最大チャージ数：2\nバインド中は実行不可。\n\nアビサルドレイン\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n5m\n\n対象を中心に無属性範囲魔法攻撃。\n威力：240\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「カーヴ・アンド・スピット」と共有する。\n\nカーヴ・アンド・スピット\n\nジョブクエスト\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：540\n追加効果：自身のＨＰを回復する。\n回復力：500\n追加効果：自身のＭＰを回復する。\nリキャストタイマーを「アビサルドレイン」と共有する。\n\nブラッドスピラー\n\nLv62\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：600\n発動条件：「ブラックブラッド」50\n\nクワイタス\n\nLv64\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：240\n発動条件：「ブラックブラッド」50\n\nダークミッショナリー\n\nLv66\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被物理ダメージを5％、被魔法ダメージを10％軽減させる。\n効果時間：15秒\n\nブラッドデリリアム\n\nLv68\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「ブラッドデリリアム」と「ブラッドウェポン」を付与する。\n効果時間：15秒\nブラッドデリリアム効果：ブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\nブラッドウェポン効果：自身のウェポンスキルおよび魔法が命中するとＭＰを回復し、さらに「ブラックブラッド」を10上昇させる。\n範囲攻撃を2体以上の敵に命中させた場合、効果は1回のみ発動する。\n\nブラックナイト\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n15秒\nMP3000\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象として、一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの25％分のダメージを軽減する。\n効果時間：7秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\nダークアーツ効果：ＭＰの代わりにダークアーツを消費して「漆黒の波動」および「漆黒の剣」を発動できる。\n\n漆黒しっこくの波動はどう\n\nLv74\n\nアビリティ\nInstant\n1秒\nMP3000\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：160\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の剣」と共有する。\n\n漆黒しっこくの剣つるぎ\n\nLv74\n\nアビリティ\nInstant\n1秒\nMP3000\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：460\n追加効果：自身に「暗黒」を付与する。\n効果時間：30秒\n暗黒効果：自身の与ダメージを10％上昇させる。\n既に「暗黒」が付与されている場合は、その効果時間を30秒延長する。\n最大60秒まで延長することができる。\nリキャストタイマーを「漆黒の波動」と共有する。\n\n影身具現えいしんぐげん\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身と共に戦う「英雄の影身」を具現化する。\n効果時間：22秒\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：30秒\n英雄の影身による攻撃の威力：420\nシャドウブリンガーおよびディセスティームは固有の威力を持つ。\n英雄の影身によるシャドウブリンガーの威力：570\n英雄の影身によるディセスティームの威力：620\n2体目以降の対象への威力は25％減少する。\n\nオブレーション\n\nLv82\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象の被ダメージを10％軽減する。\n効果時間：10秒\n最大チャージ数：2\n\nソルト・アンド・ダーク\n\n前提クエスト\n\nLv86\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身が設置したソルトアースの効果範囲内にいる敵に無属性範囲魔法攻撃。\n威力：500\n2体目以降の対象への威力は25％減少する。\n発動条件：「ソルトアース」効果中\n\nシャドウブリンガー\n\nLv90\n\nアビリティ\nInstant\n60秒\n-\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は25％減少する。\n最大チャージ数：2\n発動条件：「暗黒」効果中\n\nシャドウヴィジル\n\nLv92\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを40％軽減させる。\n効果時間：15秒\n追加効果：自身に「シャドウヴィジル［被］」を付与する。\n効果時間：20秒\nシャドウヴィジル［被］効果：ＨＰが50％を下回るか効果時間が経過すると、回復効果が発動する。\n回復力：1200\n\nレッドデリリアム\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：620\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとブラッドスピラーがレッドデリリアムに変化する。\n\nカマパンス\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：720\nコンボ条件：レッドデリリアム\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドデリリアムがカマパンスに変化する。\n\nトアクリーバー\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：820\nコンボ条件：カマパンス\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとカマパンスがトアクリーバーに変化する。\n\nインペイルメント\n\nLv96\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：300\n追加効果：自身のＭＰを回復する。\n発動条件：「ブラッドデリリアム」\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとクワイタスがインペイルメントに変化する。\n\nディセスティーム\n\nLv100\n\nウェポン\nスキル\nInstant\n\n2.5秒\n-\n\n10m\n\n10m\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：1000\n2体目以降の対象への威力は25％減少する。\n発動条件：「ディセスティーム実行可」効果中\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nランパート\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを20％軽減させる。\nさらに、自身が受けるＨＰ回復効果を15％上昇させる。\n効果時間：20秒\n\nロウブロウ\n\nLv12\n\nアビリティ\nInstant\n25秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：5秒\n\n挑発ちょうはつ\n\nLv15\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n0m\n\n対象を挑発し、自身への敵視を最高位にしたうえで、さらに自身への敵視を上昇させる。\n\nインタージェクト\n\nLv18\n\nアビリティ\nInstant\n30秒\n-\n\n3m\n\n0m\n\n対象のアクション詠唱を中断させる。\n\nリプライザル\n\nLv22\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵の与ダメージを10％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nシャーク\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n25m\n\n0m\n\n自身に向けられている敵視の25％を対象のパーティメンバーに移す。\n\n特性\n\n特性名\n修得\n効果\n\nタンクマスタリー\n\nLv1\n\n自身の被ダメージを20％軽減させる。\nまた、ＶＩＴの上昇に伴う最大ＨＰの上昇量と、ＳＴＲの上昇に伴う与ダメージの上昇量に対して、Tankロール固有の補正がかかる。\n\nブラックブラッド\n\nLv62\n\n「ブラックブラッド」が上昇するようになる。\n発動条件：特定のアクションの命中時\n\nブラックブラッドIIつー\n\nLv66\n\n「ブラックブラッド」が上昇するようになる。\n発動条件：「ブラッドウェポン」効果中に実行するウェポンスキルおよび魔法の命中時\n\nブラッドウェポンマスタリー\n\nLv68\n\nブラッドウェポンがブラッドデリリアムに変化する。\n\n暗黒あんこくマスタリー\n\nLv74\n\n暗黒の波動が漆黒の波動に、暗黒の剣が漆黒の剣に変化する。\n\nアンメンド効果こうかアップ\n\nLv84\n\nシャドウストライドのリキャストタイムを5秒短縮する。\n発動条件：一部を除く敵に対するアンメンドの命中時\n\nアクション威力いりょくアップ\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：180\nサイフォンストライクの威力：120\nソウルイーターの威力：140\n\n影身具現えいしんぐげん効果こうかアップ\n\nLv88\n\n英雄の影身による攻撃の威力が420に上昇する。\n\n影身具現えいしんぐげん効果こうかアップIIつー\n\nLv90\n\n英雄の影身が使う漆黒の波動がシャドウブリンガーに変化する。\n\n対象に向かって無属性前方直線範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は25％減少する。\n\nシャドウウォールマスタリー\n\nLv92\n\nシャドウウォールがシャドウヴィジルに変化する。\n\nアクション威力いりょくアップIIつー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nハードスラッシュの威力：300\nサイフォンストライクの威力：240\nソウルイーターの威力：260\nストルワートソウルの威力：120\nカーヴ・アンド・スピットの威力：540\nブラッドスピラーの威力：600\nクワイタスの威力：240\n\nブラッドデリリアム効果こうかアップ\n\nLv96\n\nブラッドスピラーがレッドデリリアムに、クワイタスがインペイルメントに変化する。\n発動条件：「ブラッドデリリアム」効果中\n\n影身具現えいしんぐげん効果こうかアップIIIすりー\n\nLv100\n\n自身に「ディセスティーム実行可」が付与される。\n効果時間：30秒\n発動条件：影身具現実行時\n\nまた、英雄の影身が使うカーヴ・アンド・スピットがディセスティームに変化する。\n\n対象に向かって無属性前方直線範囲物理攻撃。\n威力：620\n2体目以降の対象への威力は25％減少する。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\nランパート効果こうかアップ\n\nLv94\n\nランパートに、「自身が受けるＨＰ回復効果を15％上昇させる効果」が付与される。\n\nリプライザル効果こうかアップ\n\nLv98\n\nリプライザルの効果時間を15秒に延長する。\n\nコンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\nハードスラッシュ\n\nサイフォンストライク\n\nソウルイーター\n\n「ブラックブラッド」の上昇と、自身のHP、MPを回復する効果が得られるコンボです。\n\nアンリーシュ\n\nストルワートソウル\n\n「ブラックブラッド」の上昇と、自身のMPを回復する効果を得つつ、複数の敵を攻撃することに適した範囲攻撃コンボです。\n\nレッドデリリアム\n\nカマパンス\n\nトアクリーバー\n\n「ブラッドデリリアム」を消費し、自身のMPを回復する効果を得つつ、最も総威力の高い攻撃コンボです。\n\nジョブHUD\n\nブラッドゲージ\nアクション「グリットスタンス」 を修得すると、その発動状態を示すシンボルが表示されるようになります。\nグリットスタンスの効果中は、自身が実行するアクションによる\"敵視\"を大幅に高め、敵を引き付けやすくなります。\n\nレベル62で特性「ブラックブラッド」を修得すると、グリットスタンスの状態の他に\"ブラックブラッド\"の蓄積量を示す「ブラッドゲージ」が表示されるようになります。\nブラックブラッドは特定のアクション実行時に蓄積され、ブラックブラッドを消費することで「ブラッドスピラー」やレベル64で修得する「クワイタス」などを実行できます。\n\nダークサイドシンボル\n\nアクション「暗黒の波動」 を修得すると、\"暗黒\"の効果時間を示す「ダークサイドシンボル」が表示されるようになります。\n暗黒は「暗黒の波動」やレベル40で修得する「暗黒の剣」によって付与され、効果中は自身の与ダメージが上昇します。\n\nアクション「ブラックナイト」 を修得すると、「ダークアーツ」が表示されるようになります。\nダークアーツは\"ブラックナイト\"によるバリア効果が消費されることで付与され、ダークアーツを消費することで「暗黒の波動」や「暗黒の剣」をＭＰを消費せずに実行できます。\n\nアクション「影身具現」を修得すると、共に戦ってくれる「英雄の影身」が具現化できるようになります。\n英雄の影身を具現化中は、ダークサイドシンボルに残り具現時間が表示されるようになります。\n\nシンプルモード\n\nブラッドゲージ\n\n「グリットスタンス」状態\n\nシンプルモードでは、特性「ブラックブラッド」を修得し、ブラッドゲージが表示されるまで発動状態を示すシンボルは表示されません。\n\nダークサイドシンボル\n\n「暗黒」効果中\n\n「ダークアーツ」スタック時\n\n「影身具現」実行中\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヘヴィスラッシュ\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\nサイフォンストライク\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：ヘヴィスラッシュ\n\n※このアクションはホットバーに登録することはできない。\n\nソウルイーター\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：サイフォンストライク\n追加効果：与ダメージの100％分のＨＰを吸収する。\n\n※このアクションはホットバーに登録することはできない。\n\nインペイルメント\n\nウェポン\nスキル\nInstant\n14秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：与ダメージの100％分のＨＰを吸収する。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\nシャドウブリンガー\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：6000\n実行時にＨＰを12000消費する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n発動条件：ＨＰが12000を超えているとき、または「ダークアーツ」効果中\n\nプランジカット\n\nアビリティ\nInstant\n12秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：2000\n追加効果：対象に「ソウルサバイバー」を付与する。\n効果時間：12秒\nソウルサバイバー効果：対象が受ける回復効果を15％減少させる。\n効果時間中に対象が倒されると、自身のＨＰとＭＰを最大ＨＰおよびＭＰの15％分回復し、プランジカットのリキャストタイムが解消される。\nバインド中は実行不可。\n\nブラックナイト\n\nアビリティ\nInstant\n16秒\n-\n\n30m\n\n0m\n\n自身または対象のパーティメンバーに一定量のダメージを防ぐバリアを張る。\nバリア量：回復力10000相当\n効果時間：8秒\nバリアがダメージを完全に吸収して消滅すると、暗黒騎士自身に「ダークアーツ」を付与する。\n効果時間：15秒\nダークアーツ効果：ＨＰの代わりにダークアーツを消費して「シャドウブリンガー」を発動できる。\n最大チャージ数：2\n\nソルトアース\n\nアビリティ\nInstant\n28秒\n-\n\n0m\n\n10m\n\n自身の周囲10m以内にいる敵を自身の近くに引き寄せ、自身を中心として半径5mの「ソルトアース」を生成する。\n効果時間：10秒\nソルトアースの自身への効果：範囲内にいる自身のＨＰを継続回復し、さらに受けるダメージを20％軽減させる。\n回復力：5000\nソルトアースの敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：5000\nこのアクションを実行するとソルト・アンド・ダークに変化する。\n\nレッドデリリアム\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000～12000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「カマパンス実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nカマパンス\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000～14000\n自身の残りＨＰが低いほど威力が上昇する。\n追加効果：自身に「トアクリーバー実行可」を付与する。\n効果時間：永続\n発動条件：「ブラックブラッド」および「カマパンス実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nトアクリーバー\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000～16000\n自身の残りＨＰが低いほど威力が上昇する。\n発動条件：「ブラックブラッド」および「トアクリーバー実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nソルト・アンド・ダーク\n\nアビリティ\nInstant\n10秒\n-\n\n0m\n\n0m\n\n自身が設置したソルトアースの効果範囲内にいる敵に魔法攻撃。\n威力：6000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n\n※このアクションはホットバーに登録することはできない。\n\nディセスティーム\n\nウェポン\nスキル\nInstant\n\n2.4秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：16000\n発動条件：「ディセスティーム実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nイーブンタイド\n\nInstant\n10秒\n-\n\n0m\n\n30m\n\n自身の前後直線範囲に対して範囲魔法攻撃。\n威力：8000～24000\n自身の残りＨＰが高いほど威力が上昇する。\n実行時に自身のＨＰが1になる。\n追加効果：自身に「アンデッド・リデンプション」を付与する。\n効果時間：10秒\nアンデッド・リデンプション効果：一部を除くすべての攻撃に対してＨＰが1より減ることがなくなる。\nさらに自身のウェポンスキルに与ダメージの100％分のＨＰを吸収する効果を付与する。\n追加効果：自身に「ブラックブラッド」を付与する。\n効果時間：10秒\nブラックブラッド効果：「コンボ：ソウルイーター」がレッドデリリアムに変化する。\n「カマパンス実行可」または「トアクリーバー実行可」が付与されている場合は、レッドデリリアムではなくカマパンスまたはトアクリーバーに変化する。\n追加効果：自身に「ディセスティーム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとディセスティームに変化する。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nランページ\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n10m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：8000\n追加効果：対象が受けるダメージを25％上昇させる。\n効果時間：10秒\n\nランパート\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身の被ダメージを50％軽減させ、受けるＨＰ回復効果を25％上昇させる。\n効果時間：15秒\n\nフルスイング\n\nアビリティ\nInstant\n30秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\n追加効果：対象を30mノックバックする。\n「防御」効果中の対象に実行すると、その効果を解除する。\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

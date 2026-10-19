@@ -1,0 +1,2089 @@
+{
+ "job": "ninja",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/ninja/",
+ "pageTitle": "ジョブガイド「忍者」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\n忍術\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nはるか昔、乱世に生きる東方の民が\n己の身と財を守るために編み出したという\n忍びの技……忍術。\n\n天の中、地の底、人の内に流れる気を用い、印を結ぶことで神秘を成すと伝えられているこの秘術は、はるか辺境の地に散在する隠れ里で密かに継承されてきた。もし、その術を体得することができれば、戦の流れを変える力を得られるだろう。\n\nジョブ開始クエスト\n\n初期クラス：双剣士",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/cad6fe9181335338ed411e0d9a2357a6e8496efc.png",
+   "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png",
+   "https://lds-img.finalfantasyxiv.com/d/5b5c3b6be21935b60b3e60b8b2b473fd3c0a7530.png",
+   "https://lds-img.finalfantasyxiv.com/d/e3d6094d93d1e6f8cb9034229a9f4bed0571471b.png",
+   "https://lds-img.finalfantasyxiv.com/d/b36d71590151a6f7f3d5fd616933f452bc9eeb68.png",
+   "https://lds-img.finalfantasyxiv.com/d/820c1eb36bd9488505973d7141d73e7fa1c3d1db.png",
+   "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png",
+   "https://lds-img.finalfantasyxiv.com/d/55c66e798d7404567ec69a023335542cef7cd916.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1362c998dbfc19dfd13223d2ae275be7f4db7cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/1836df5cdf1d1f78ae7b2f65462661f2fa6a79d8.png",
+   "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png",
+   "https://lds-img.finalfantasyxiv.com/d/c8f030128bce9d193521eb5cfcd9ff4636bbea61.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea2717bad5b805b35bb32731d78113692104a30d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2183f2672edde169e6276764503ec11ae06b4c1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/a12553440d7385aaafc940cac8f14682e3012392.png",
+   "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png",
+   "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2e750bda00af60c3a06480f512753c8b6d5951b.png",
+   "https://lds-img.finalfantasyxiv.com/d/c802df3d7abd5e50889d1cc5e97cf64eb1610afa.png",
+   "https://lds-img.finalfantasyxiv.com/d/751e11fc60c05f5ac427b522211ae510ef845f6c.png",
+   "https://lds-img.finalfantasyxiv.com/d/7fa8283b30b9ac35aada60984cbfaf01d3268c95.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c0c72efe9ba9c13d3765b1b7dd863c68eeaf4ba.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c7d1c58eb10c5d105f1ee98a21f84a031d26518.png",
+   "https://lds-img.finalfantasyxiv.com/d/d74531599ce1fc1886de7c5302265b73dd45accb.png",
+   "https://lds-img.finalfantasyxiv.com/d/384071d47821ff848b0433515b14bce679ca72ae.png",
+   "https://lds-img.finalfantasyxiv.com/d/2be5fb388f3fa8857567e83e22b8b97ad17aeb0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/5eb233e8637d859bc6c0803ffef792f272692176.png",
+   "https://lds-img.finalfantasyxiv.com/d/5b620ecc1931b456fea19bbc787a7848a9ce77a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/70139d7c1c6e323518d56f1bd503a9e8bc94d21b.png",
+   "https://lds-img.finalfantasyxiv.com/d/cb1fc6f802ae442daa8ead243f4f9f49bf9525f4.png",
+   "https://lds-img.finalfantasyxiv.com/d/55604bbe9cf720982be6e0ef74e9bf002d939935.png",
+   "https://lds-img.finalfantasyxiv.com/d/7604dd447d3b450e4816e62d5bf4e2f83fafabc4.png",
+   "https://lds-img.finalfantasyxiv.com/d/be6fdb084ef5ffd556f82bf0f3e0bb0085adf53f.png",
+   "https://lds-img.finalfantasyxiv.com/d/c13292e99775bf7b834e9bf44eae59cdf977dc8c.png",
+   "https://lds-img.finalfantasyxiv.com/d/1c5d9c8d2301016f0d1d7412cc5100a7e41de735.png",
+   "https://lds-img.finalfantasyxiv.com/d/c1f09309f06281706fd1a6f37051a97dc8fdfd4f.png",
+   "https://lds-img.finalfantasyxiv.com/d/52e16f75932d2dc542606dccf6b9a8ffdef35b5d.png",
+   "https://lds-img.finalfantasyxiv.com/d/c4807f81a654f2b25cca49c1f61e9b3bc7df62d6.png",
+   "https://lds-img.finalfantasyxiv.com/d/fd706ad1980d3382fd9c64ffec7a0374d549d5cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/42f7335959286b3409ae67dc35b603f5225fc488.png",
+   "https://lds-img.finalfantasyxiv.com/d/226d8c495bf3b742618ba71f4cb9ff80b63b4752.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/2c7a551985023f8a7d2e338a014ab29454318b81.png",
+   "https://lds-img.finalfantasyxiv.com/d/443f61d91e3c8a64e725b7366c33c267f606c8b1.png",
+   "https://lds-img.finalfantasyxiv.com/d/baa12f591901930702230bc6e3e5119c194de1db.png",
+   "https://lds-img.finalfantasyxiv.com/d/a4295da0185e15eaf0481b14d04e59133c8fc699.png",
+   "https://lds-img.finalfantasyxiv.com/d/889736b87dc2b4851a9d0e38f9c1f00f40414e73.png",
+   "https://lds-img.finalfantasyxiv.com/d/df52e05ddb6ca5801114faf60e5ba05442c5cb6f.png",
+   "https://lds-img.finalfantasyxiv.com/d/dd5359193e18dec8796cb164c2a31cd7de730e31.png",
+   "https://lds-img.finalfantasyxiv.com/d/cf1bb42ed0500b95e768ec8fff4aa0f7b3d1c20a.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2d3b22f23ff584579dc27d5526176fe0f99cb2a.png",
+   "https://lds-img.finalfantasyxiv.com/d/bd62134b59f61995abdfea2f7fee502c5795f9f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/4808fd0960ff552e382c3bc3242c43c4634b3a16.png",
+   "https://lds-img.finalfantasyxiv.com/d/834c61d21d0517e99776d435f3125c0d856bff96.png",
+   "https://lds-img.finalfantasyxiv.com/d/7b5b3ecb51c13a72c65bbb7dd48b6d702d546da9.png",
+   "https://lds-img.finalfantasyxiv.com/d/8ecdf7edc6dd4e686813cdd58a5edcdf49e0404d.png",
+   "https://lds-img.finalfantasyxiv.com/d/359bc1829d69bdbe859863cd2a782fbacc61de16.png",
+   "https://lds-img.finalfantasyxiv.com/d/839919eb2756e950cdae46be906b564ce77bd4b6.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c6735eac69b6180ad6b23c92fc467a81701cf4a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d2a67da760022e80b85ba1ccbeeecdf8bddda757.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3cc3f2b23553fa8ce5a4a46fe159c12a2f82aaa.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/1/eTHlR5BNe5i1HboflhRuoECnYQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "双刃旋そうじんせん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300\n追加効果：「忍気」を5上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300<br/>追加効果：「忍気」を5上昇させる。"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "残影ざんえい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cad6fe9181335338ed411e0d9a2357a6e8496efc.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを最大ＨＰの20％分まで無効化する。\n効果時間：20秒",
+     "descriptionHtml": "自身が受けるダメージを最大ＨＰの20％分まで無効化する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "風断かぜたち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：240\nコンボ条件：双刃旋\nコンボ時威力：400\nコンボボーナス：「忍気」を5上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：240<br/>コンボ条件：双刃旋<br/>コンボ時威力：400<br/>コンボボーナス：「忍気」を5上昇させる。"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "かくれる",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5b5c3b6be21935b60b3e60b8b2b473fd3c0a7530.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の姿を隠し、ほとんどの敵から感知されない状態になる。\nさらに移動速度が50％低下する。\n自身よりもレベルが10以上高いモンスターや、一部のモンスターからは感知される。\nスプリント以外のアクションを実行するか再使用で解除する。\n効果時間：永続\n追加効果：実行後に非戦闘状態であれば忍術のリキャストタイムを2チャージ分リセットする。\nまた、自身に「土遁の術」が付与されている場合は、それを解除する。\n発動条件：自身が非戦闘状態",
+     "descriptionHtml": "自身の姿を隠し、ほとんどの敵から感知されない状態になる。<br/>さらに移動速度が50％低下する。<br/>自身よりもレベルが10以上高いモンスターや、一部のモンスターからは感知される。<br/>スプリント以外のアクションを実行するか再使用で解除する。<br/>効果時間：永続<br/>追加効果：実行後に非戦闘状態であれば忍術のリキャストタイムを2チャージ分リセットする。<br/>また、自身に「土遁の術」が付与されている場合は、それを解除する。<br/>発動条件：自身が非戦闘状態"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "投刃とうじん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e3d6094d93d1e6f8cb9034229a9f4bed0571471b.png",
+     "skillCellText": "投刃とうじん\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に遠隔物理攻撃。\n威力：200\n追加効果：「忍気」を5上昇させる。",
+     "descriptionHtml": "対象に遠隔物理攻撃。<br/>威力：200<br/>追加効果：「忍気」を5上昇させる。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "ぶんどる",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b36d71590151a6f7f3d5fd616933f452bc9eeb68.png",
+     "skillCellText": "ぶんどる\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：150\n追加効果：対象に「被ダメージ上昇」を付与し、受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：150<br/>追加効果：対象に「被ダメージ上昇」を付与し、受けるダメージを5％上昇させる。<br/>効果時間：20秒<br/>追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "だまし討うち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/820c1eb36bd9488505973d7141d73e7fa1c3d1db.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300\n背面攻撃時威力：400\n追加効果：対象に「だまし討ち」を付与する。\n効果時間：15秒\nだまし討ち効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300<br/>背面攻撃時威力：400<br/>追加効果：対象に「だまし討ち」を付与する。<br/>効果時間：15秒<br/>だまし討ち効果：自身から対象に与えるダメージを10％上昇させる。<br/>発動条件：「かくれる」効果中"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "旋風刃せんぷうじん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：220\n背面攻撃時威力：280\nコンボ条件：風断ち\nコンボ時威力：400\nコンボ時かつ背面攻撃時威力：460\n風纏が付与されている場合は全ての威力が100上昇する。\nコンボボーナス：「忍気」を15上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：220<br/>背面攻撃時威力：280<br/>コンボ条件：風断ち<br/>コンボ時威力：400<br/>コンボ時かつ背面攻撃時威力：460<br/>風纏が付与されている場合は全ての威力が100上昇する。<br/>コンボボーナス：「忍気」を15上昇させる。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "天てんの印いん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55c66e798d7404567ec69a023335542cef7cd916.png",
+     "skillCellText": "天てんの印いん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "天の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。",
+     "descriptionHtml": "天の印を結ぶ。<br/>効果時間：6秒<br/>最大チャージ数：2<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "忍術にんじゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1362c998dbfc19dfd13223d2ae275be7f4db7cc.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "忍術を発動する。\n効果は直前に結んだ印の順番により異なる。\n印ステータス中に他のアクションを実行すると、忍術を失敗する。\nこのアビリティにはウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\nまた、「かくれる」を実行した後に自身が非戦闘状態であれば、忍術のリキャストタイムを2チャージ分リセットする。",
+     "descriptionHtml": "忍術を発動する。<br/>効果は直前に結んだ印の順番により異なる。<br/>印ステータス中に他のアクションを実行すると、忍術を失敗する。<br/>このアビリティにはウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/>また、「かくれる」を実行した後に自身が非戦闘状態であれば、忍術のリキャストタイムを2チャージ分リセットする。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "地ちの印いん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1836df5cdf1d1f78ae7b2f65462661f2fa6a79d8.png",
+     "skillCellText": "地ちの印いん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "地の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。",
+     "descriptionHtml": "地の印を結ぶ。<br/>効果時間：6秒<br/>最大チャージ数：2<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "血花五月雨けっかさみだれ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 38,
+     "jobclassText": "Lv38",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：100\n追加効果：「忍気」を5上昇させる。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：100<br/>追加効果：「忍気」を5上昇させる。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "終撃しゅうげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c8f030128bce9d193521eb5cfcd9ff4636bbea61.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：200",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：200"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "縮地しゅくち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea2717bad5b805b35bb32731d78113692104a30d.png",
+     "skillCellText": "縮地しゅくち\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "指定した地点に向かって素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "指定した地点に向かって素早く移動する。<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "人じんの印いん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2183f2672edde169e6276764503ec11ae06b4c1e.png",
+     "skillCellText": "人じんの印いん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "人の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。",
+     "descriptionHtml": "人の印を結ぶ。<br/>効果時間：6秒<br/>最大チャージ数：2<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "活殺自在かっさつじざい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a12553440d7385aaafc940cac8f14682e3012392.png",
+     "skillCellText": "活殺自在かっさつじざい\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、「天の印」「地の印」「人の印」のリキャスト状態に関わらず、忍術を1回実行することができるようになる。\nこのとき、忍術の威力を30％上昇させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、「天の印」「地の印」「人の印」のリキャスト状態に関わらず、忍術を1回実行することができるようになる。<br/>このとき、忍術の威力を30％上昇させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "八卦無刃殺はっけむじんさつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png",
+     "skillCellText": "八卦無刃殺はっけむじんさつ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：100\nコンボ条件：血花五月雨\nコンボ時威力：120\nコンボボーナス：「忍気」を5上昇させる。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：100<br/>コンボ条件：血花五月雨<br/>コンボ時威力：120<br/>コンボボーナス：「忍気」を5上昇させる。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "強甲破点突きょうこうはてんづき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png",
+     "skillCellText": "強甲破点突きょうこうはてんづき\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：240\n側面攻撃時威力：300\nコンボ条件：風断ち\nコンボ時威力：440\nコンボ時かつ側面攻撃時威力：500\nコンボボーナス：自身に2スタックの「風纏」を付与する。\n最大スタック数：5\n風纏効果：旋風刃の威力を100上昇させる。\nコンボボーナス：「忍気」を15上昇させる。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：240<br/>側面攻撃時威力：300<br/>コンボ条件：風断ち<br/>コンボ時威力：440<br/>コンボ時かつ側面攻撃時威力：500<br/>コンボボーナス：自身に2スタックの「風纏」を付与する。<br/>最大スタック数：5<br/>風纏効果：旋風刃の威力を100上昇させる。<br/>コンボボーナス：「忍気」を15上昇させる。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "夢幻三段むげんさんだん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2e750bda00af60c3a06480f512753c8b6d5951b.png",
+     "skillCellText": "夢幻三段むげんさんだん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に3回連続物理攻撃。\n威力：180",
+     "descriptionHtml": "対象に3回連続物理攻撃。<br/>威力：180"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "口くち寄よせの術じゅつ・大蝦蟇おおがま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c802df3d7abd5e50889d1cc5e97cf64eb1610afa.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "6m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：250\n発動条件：「忍気」50\nリキャストタイマーを「六道輪廻」と共有する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：250<br/>発動条件：「忍気」50<br/>リキャストタイマーを「六道輪廻」と共有する。"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "毒盛どくもりの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/751e11fc60c05f5ac427b522211ae510ef845f6c.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲物理攻撃。\n威力：400\n追加効果：対象の受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。\n追加効果：「忍気」を40上昇させる。\n追加効果：自身に「秘技実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に向かって前方扇範囲物理攻撃。<br/>威力：400<br/>追加効果：対象の受けるダメージを5％上昇させる。<br/>効果時間：20秒<br/>追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。<br/>追加効果：「忍気」を40上昇させる。<br/>追加効果：自身に「秘技実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "六道輪廻りくどうりんね",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7fa8283b30b9ac35aada60984cbfaf01d3268c95.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：400\n命水時威力：550\n発動条件：「忍気」50\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：400<br/>命水時威力：550<br/>発動条件：「忍気」50<br/>リキャストタイマーを「口寄せの術・大蝦蟇」と共有する。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "天地人てんちじん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c0c72efe9ba9c13d3765b1b7dd863c68eeaf4ba.png",
+     "skillCellText": "天地人てんちじん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、「天の印」「地の印」「人の印」が忍術アクションに変化する。\n忍術アクションを実行するたびに別の忍術アクションに変化し、最大3種類の忍術を実行することができる。\n効果時間：6秒\n効果時間中は忍術以外のアクションを実行できない。\n追加効果：自身に「天理人道実行可」を付与する。\n効果時間：30秒\n発動条件：「活殺自在」非効果中",
+     "descriptionHtml": "一定時間、「天の印」「地の印」「人の印」が忍術アクションに変化する。<br/>忍術アクションを実行するたびに別の忍術アクションに変化し、最大3種類の忍術を実行することができる。<br/>効果時間：6秒<br/>効果時間中は忍術以外のアクションを実行できない。<br/>追加効果：自身に「天理人道実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「活殺自在」非効果中"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "命水めいすい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c7d1c58eb10c5d105f1ee98a21f84a031d26518.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されている「忍隠」を消費して「忍気」を50上昇させる。\n追加効果：自身に「命水」を付与する。\n効果時間：30秒\n命水効果：次に実行する是生滅法および六道輪廻の威力を、850および550にそれぞれ上昇させる。\n発動条件：自身が戦闘状態かつ「忍隠」効果中",
+     "descriptionHtml": "自身に付与されている「忍隠」を消費して「忍気」を50上昇させる。<br/>追加効果：自身に「命水」を付与する。<br/>効果時間：30秒<br/>命水効果：次に実行する是生滅法および六道輪廻の威力を、850および550にそれぞれ上昇させる。<br/>発動条件：自身が戦闘状態かつ「忍隠」効果中"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "分身ぶんしんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d74531599ce1fc1886de7c5302265b73dd45accb.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に5スタックの「分身の術」を付与する。\n効果時間：30秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n分身による攻撃は固有の威力を持つ。\n近接攻撃威力：160\n遠隔攻撃威力：160\n範囲攻撃威力：80\nまた、分身による攻撃ではコンボボーナスが発生しないが、命中すると自身の「忍気」を5上昇させる。\n追加効果：自身に「残影鎌鼬実行可」を付与する。\n効果時間：45秒\n発動条件：「忍気」50",
+     "descriptionHtml": "自身に5スタックの「分身の術」を付与する。<br/>効果時間：30秒<br/>分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。<br/>分身による攻撃は固有の威力を持つ。<br/>近接攻撃威力：160<br/>遠隔攻撃威力：160<br/>範囲攻撃威力：80<br/>また、分身による攻撃ではコンボボーナスが発生しないが、命中すると自身の「忍気」を5上昇させる。<br/>追加効果：自身に「残影鎌鼬実行可」を付与する。<br/>効果時間：45秒<br/>発動条件：「忍気」50"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "残影鎌鼬ざんえいかまいたち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/384071d47821ff848b0433515b14bce679ca72ae.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "自身の分身により、対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：700\n追加効果：「忍気」を10上昇させる。\n発動条件：分身の術を実行することで付与される「残影鎌鼬実行可」効果中",
+     "descriptionHtml": "自身の分身により、対象とその周囲5m以内の敵に風属性範囲魔法攻撃。<br/>威力：700<br/>追加効果：「忍気」を10上昇させる。<br/>発動条件：分身の術を実行することで付与される「残影鎌鼬実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "幻影野槌げんえいのづち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2be5fb388f3fa8857567e83e22b8b97ad17aeb0d.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "100m",
+     "radius": "5m",
+     "description": "自身が「土遁の術」を発生させているときに八卦無刃殺をコンボ状態で実行するか、火遁の術、劫火滅却の術または残影鎌鼬を実行すると、土遁の術の範囲内にいる敵に対して土属性魔法攻撃。\n威力：70\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身が「土遁の術」を発生させているときに八卦無刃殺をコンボ状態で実行するか、火遁の術、劫火滅却の術または残影鎌鼬を実行すると、土遁の術の範囲内にいる敵に対して土属性魔法攻撃。<br/>威力：70<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "月影雷獣爪げつえいらいじゅうそう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5eb233e8637d859bc6c0803ffef792f272692176.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して雷属性魔法攻撃。<br/>威力：700<br/>追加効果：「忍気」を5上昇させる。<br/>発動条件：「月影雷獣実行可」効果中<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "月影雷獣牙げつえいらいじゅうが",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5b620ecc1931b456fea19bbc787a7848a9ce77a6.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2.12秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中",
+     "descriptionHtml": "対象に雷属性魔法攻撃。<br/>威力：700<br/>追加効果：「忍気」を5上昇させる。<br/>発動条件：「月影雷獣実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "百雷銃ひゃくらいじゅう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/70139d7c1c6e323518d56f1bd503a9e8bc94d21b.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：700\n追加効果：対象に「百雷銃」を付与する。\n効果時間：15秒\n百雷銃効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：700<br/>追加効果：対象に「百雷銃」を付与する。<br/>効果時間：15秒<br/>百雷銃効果：自身から対象に与えるダメージを10％上昇させる。<br/>発動条件：「かくれる」効果中"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "口寄くちよせの術じゅつ・蝦蟇仙がません",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cb1fc6f802ae442daa8ead243f4f9f49bf9525f4.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "6m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：400\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「六道輪廻」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと口寄せの術・大蝦蟇が口寄せの術・蝦蟇仙に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：400<br/>発動条件：「忍気」50および「秘技実行可」効果中<br/>リキャストタイマーを「六道輪廻」と共有する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと口寄せの術・大蝦蟇が口寄せの術・蝦蟇仙に変化する。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "是生滅法ぜしょうめっぽう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55604bbe9cf720982be6e0ef74e9bf002d939935.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：700\n命水時威力：850\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと六道輪廻が是生滅法に変化する。",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：700<br/>命水時威力：850<br/>発動条件：「忍気」50および「秘技実行可」効果中<br/>リキャストタイマーを「口寄せの術・大蝦蟇」と共有する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと六道輪廻が是生滅法に変化する。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "天理人道てんりじんどう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7604dd447d3b450e4816e62d5bf4e2f83fafabc4.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n発動条件：「天理人道実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと天地人が天理人道に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1100<br/>発動条件：「天理人道実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと天地人が天理人道に変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__ninja_onlyaction",
+   "title": "忍術",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_jyutsu_action__01",
+     "name": "風魔手裏剣ふうましゅりけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/be6fdb084ef5ffd556f82bf0f3e0bb0085adf53f.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に遠隔物理攻撃。\n威力：500\n発動条件：「天の印」「地の印」「人の印」のいずれかひとつを結んだ状態で、忍術を実行する。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風魔手裏剣に変化する。",
+     "descriptionHtml": "対象に遠隔物理攻撃。<br/>威力：500<br/>発動条件：「天の印」「地の印」「人の印」のいずれかひとつを結んだ状態で、忍術を実行する。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が風魔手裏剣に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__02",
+     "name": "火遁かとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c13292e99775bf7b834e9bf44eae59cdf977dc8c.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：350\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が火遁の術に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：350<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「地の印」「天の印」または、<br/>「人の印」「天の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が火遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__03",
+     "name": "雷遁らいとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c5d9c8d2301016f0d1d7412cc5100a7e41de735.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に雷属性魔法攻撃。\n威力：740\n追加効果：自身に「月影雷獣実行可」を付与する。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」または、\n「人の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が雷遁の術に変化する。",
+     "descriptionHtml": "対象に雷属性魔法攻撃。<br/>威力：740<br/>追加効果：自身に「月影雷獣実行可」を付与する。<br/>最大スタック数：3<br/>効果時間：30秒<br/>この効果はウェポンスキルによる近接攻撃を実行すると解除される。<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「天の印」「地の印」または、<br/>「人の印」「地の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が雷遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__04",
+     "name": "氷遁ひょうとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c1f09309f06281706fd1a6f37051a97dc8fdfd4f.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に氷属性魔法攻撃。\n威力：350\n追加効果：対象にバインドを付与する。\n効果時間：15秒\n実行後にオートアタックを停止する。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷遁の術に変化する。",
+     "descriptionHtml": "対象に氷属性魔法攻撃。<br/>威力：350<br/>追加効果：対象にバインドを付与する。<br/>効果時間：15秒<br/>実行後にオートアタックを停止する。<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「天の印」「人の印」または、<br/>「地の印」「人の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が氷遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__05",
+     "name": "風遁ふうとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/52e16f75932d2dc542606dccf6b9a8ffdef35b5d.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：240\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「人の印」「地の印」「天の印」または、\n「地の印」「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風遁の術に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：240<br/>追加効果：自身に「忍隠」を付与する。<br/>効果時間：20秒<br/>忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「人の印」「地の印」「天の印」または、<br/>「地の印」「人の印」「天の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が風遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__06",
+     "name": "土遁どとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c4807f81a654f2b25cca49c1f61e9b3bc7df62d6.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身を中心にダメージエリアを生成する。\n範囲内に入った対象に土属性ダメージを与える。\n威力：80\n効果時間：18秒\n追加効果：範囲内にいる対象に40％ヘヴィを付与し続ける。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」「地の印」または、\n「人の印」「天の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が土遁の術に変化する。",
+     "descriptionHtml": "自身を中心にダメージエリアを生成する。<br/>範囲内に入った対象に土属性ダメージを与える。<br/>威力：80<br/>効果時間：18秒<br/>追加効果：範囲内にいる対象に40％ヘヴィを付与し続ける。<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「天の印」「人の印」「地の印」または、<br/>「人の印」「天の印」「地の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が土遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__07",
+     "name": "水遁すいとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fd706ad1980d3382fd9c64ffec7a0374d549d5cc.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に水属性魔法攻撃。\n威力：580\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」「人の印」または、\n「地の印」「天の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が水遁の術に変化する。",
+     "descriptionHtml": "対象に水属性魔法攻撃。<br/>威力：580<br/>追加効果：自身に「忍隠」を付与する。<br/>効果時間：20秒<br/>忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。<br/>発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「天の印」「地の印」「人の印」または、<br/>「地の印」「天の印」「人の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が水遁の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__08",
+     "name": "劫火滅却ごうかめっきゃくの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/42f7335959286b3409ae67dc35b603f5225fc488.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：850\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が劫火滅却の術に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：850<br/>発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「地の印」「天の印」または、<br/>「人の印」「天の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が劫火滅却の術に変化する。"
+    },
+    {
+     "rowId": "pve_jyutsu_action__09",
+     "name": "氷晶乱流ひょうしょうらんりゅうの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/226d8c495bf3b742618ba71f4cb9ff80b63b4752.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に氷属性魔法攻撃。\n威力：1300\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷晶乱流の術に変化する。",
+     "descriptionHtml": "対象に氷属性魔法攻撃。<br/>威力：1300<br/>発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。<br/>「天の印」「人の印」または、<br/>「地の印」「人の印」の順で印を結ぶ。<br/>このアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと忍術が氷晶乱流の術に変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：800",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "レッグスウィープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象をスタンさせる。\n効果時間：3秒",
+     "descriptionHtml": "対象をスタンさせる。<br/>効果時間：3秒"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "牽制けんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "アームズレングス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 32,
+     "jobclassText": "Lv32",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒<br/>追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "トゥルーノース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "落下らっかダメージ軽減けいげん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fd819651f2279e1fe98f4824352620713d446a6.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "description": "落下による被ダメージを軽減する。",
+     "descriptionHtml": "落下による被ダメージを軽減する。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "移動速度いどうそくどアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d94c302e9fb661ef889d8ef58c4c694fa6564ea.png",
+     "acquired": [
+      {
+       "class": "双剣士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/Q/yTZOXpPWSy3fsiBbQUtdZKcAJo.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身の移動速度を上昇させる。",
+     "descriptionHtml": "自身の移動速度を上昇させる。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "攻撃速度こうげきそくどアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6d96e09b096b18633938943d197373212d767009.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "description": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "終撃皆伝しゅうげきかいでん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8e20e43cf11fb9e8170c5b2ed11630aabc2ca1dd.png",
+     "skillCellText": "終撃皆伝しゅうげきかいでん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "description": "終撃が夢幻三段に変化する。",
+     "descriptionHtml": "終撃が夢幻三段に変化する。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "集気法しゅうきほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fef32445cd44c56bf6a9500314912ebc67d73e4f.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "description": "「忍気」が5ずつ上昇するようになる。\n発動条件：ウェポンスキルの命中時またはコンボ成功時",
+     "descriptionHtml": "「忍気」が5ずつ上昇するようになる。<br/>発動条件：ウェポンスキルの命中時またはコンボ成功時"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "縮地しゅくち効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ce513d4222cc5512ff25b458264517338e847220.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "description": "縮地のリキャストタイムをリセットする。\n発動条件：一部を除く敵に対する火遁の術、雷遁の術、氷遁の術の実行時",
+     "descriptionHtml": "縮地のリキャストタイムをリセットする。<br/>発動条件：一部を除く敵に対する火遁の術、雷遁の術、氷遁の術の実行時"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "ぶんどる皆伝かいでん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/16bc1bf7b920888ca93bcbb4d53c7e5a8b59cb9c.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "description": "ぶんどるが毒盛の術に変化する。",
+     "descriptionHtml": "ぶんどるが毒盛の術に変化する。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "縮地しゅくち効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b5d1357c43c6f9935d3de67584eadd79e08c1cff.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "縮地がチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "縮地がチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "特定のアクションの威力を上昇させる。\n\n風断ちの威力：120\n旋風刃の威力：140\n強甲破点突の威力：140",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>風断ちの威力：120<br/>旋風刃の威力：140<br/>強甲破点突の威力：140"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "活殺自在かっさつじざい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92a5951f7dfce5eeeb154be45c61581bdc2c1479.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "description": "「活殺自在」の効果中は、火遁の術と氷遁の術がそれぞれ「劫火滅却の術」と「氷晶乱流の術」に変化する。",
+     "descriptionHtml": "「活殺自在」の効果中は、火遁の術と氷遁の術がそれぞれ「劫火滅却の術」と「氷晶乱流の術」に変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "集気法しゅうきほうIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/68d3162b002738b64629b49b9380d8c1a1a4a7dc.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 78,
+     "jobclassText": "Lv78",
+     "description": "「忍気」の上昇量が10に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時",
+     "descriptionHtml": "「忍気」の上昇量が10に増加する。<br/>発動条件：旋風刃と強甲破点突のコンボ成功時"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "集気法しゅうきほうIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/554f6b82d072acfae267f4f7e46b113303a2f318.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "「忍気」の上昇量が15に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時",
+     "descriptionHtml": "「忍気」の上昇量が15に増加する。<br/>発動条件：旋風刃と強甲破点突のコンボ成功時"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "アクション威力いりょくアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "特定のアクションの威力を上昇させる。\n\n双刃旋の威力：220\n風断ちの威力：160\n投刃の威力：200",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>双刃旋の威力：220<br/>風断ちの威力：160<br/>投刃の威力：200"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "命水めいすい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d937810c86fa7fd6eebe009864850eafee3e1c12.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "自身に「命水」を付与する。\n命水効果：次に実行する六道輪廻の威力を500に上昇させる。\n効果時間：30秒\n発動条件：命水実行時",
+     "descriptionHtml": "自身に「命水」を付与する。<br/>命水効果：次に実行する六道輪廻の威力を500に上昇させる。<br/>効果時間：30秒<br/>発動条件：命水実行時"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "雷遁らいとんの術じゅつ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/70738b6b6497ca53a7dea280a6650c7025af88b9.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "自身に「月影雷獣実行可」が付与される。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：雷遁の術実行時",
+     "descriptionHtml": "自身に「月影雷獣実行可」が付与される。<br/>最大スタック数：3<br/>効果時間：30秒<br/>この効果はウェポンスキルによる近接攻撃を実行すると解除される。<br/>発動条件：雷遁の術実行時"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "だまし討うち皆伝かいでん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4ab2eab74e5f92060d2d1866451d9ebfe86204a7.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "だまし討ちが百雷銃に変化する。",
+     "descriptionHtml": "だまし討ちが百雷銃に変化する。"
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "アクション威力いりょくアップIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76ee293b5a8fae7dd16716bc05d79216ef2689a9.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\n双刃旋の威力：300\n風断ちの威力：240\n旋風刃の威力：220\n風魔手裏剣の威力：500\n雷遁の術の威力：740\n水遁の術の威力：580\n強甲破点突の威力：240\n六道輪廻の威力：400\n命水効果中の六道輪廻の威力：550\n月影雷獣爪の威力：700\n月影雷獣牙の威力：700",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>双刃旋の威力：300<br/>風断ちの威力：240<br/>旋風刃の威力：220<br/>風魔手裏剣の威力：500<br/>雷遁の術の威力：740<br/>水遁の術の威力：580<br/>強甲破点突の威力：240<br/>六道輪廻の威力：400<br/>命水効果中の六道輪廻の威力：550<br/>月影雷獣爪の威力：700<br/>月影雷獣牙の威力：700"
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "毒盛どくもりの術じゅつ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f5e5d42f5d1ac030ce64650db8a0496edca66cd9.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "自身に「秘技実行可」が付与される。\n効果時間：30秒\n発動条件：毒盛の術実行時",
+     "descriptionHtml": "自身に「秘技実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：毒盛の術実行時"
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "天地人てんちじん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c06ede286225c8c52a672be5d631803f4fc4821.png",
+     "acquired": [
+      {
+       "class": "忍者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/N/EXvdQYvr1Rn4En8AKssbVwwcac.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「天理人道実行可」が付与される。\n効果時間：30秒\n発動条件：天地人実行時\n効果中は天地人が天理人道に変化する。",
+     "descriptionHtml": "自身に「天理人道実行可」が付与される。<br/>効果時間：30秒<br/>発動条件：天地人実行時<br/>効果中は天地人が天理人道に変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "内丹の回復力を800に上昇させる。",
+     "descriptionHtml": "内丹の回復力を800に上昇させる。"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "牽制けんせい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "牽制の効果時間を15秒に延長する。",
+     "descriptionHtml": "牽制の効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "双刃旋そうじんせん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2c7a551985023f8a7d2e338a014ab29454318b81.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/> 威力：5000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "風断かぜたち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/443f61d91e3c8a64e725b7366c33c267f606c8b1.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\nコンボ条件：双刃旋\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/>コンボ条件：双刃旋<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "旋風刃せんぷうじん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/baa12f591901930702230bc6e3e5119c194de1db.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：風断ち\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：風断ち<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "風魔手裏剣ふうましゅりけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a4295da0185e15eaf0481b14d04e59133c8fc699.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に遠隔物理攻撃。\n威力：8000\n最大チャージ数：3\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n「三印自在」効果中は氷晶乱流の術に変化する。",
+     "descriptionHtml": "対象に遠隔物理攻撃。<br/>威力：8000<br/>最大チャージ数：3<br/>このウェポンスキルは固有のリキャストタイマーを持つ。<br/>「三印自在」効果中は氷晶乱流の術に変化する。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "毒盛どくもりの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889736b87dc2b4851a9d0e38f9c1f00f40414e73.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "24秒",
+     "cost": "-",
+     "range": "8m",
+     "radius": "8m",
+     "description": "対象に向かって前方扇範囲物理攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：6秒\n追加効果：自身に「是生滅法実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：旋風刃」が是生滅法に変化する。\n「三印自在」効果中は劫火滅却の術に変化する。",
+     "descriptionHtml": "対象に向かって前方扇範囲物理攻撃。<br/>威力：2000<br/>追加効果：対象の被ダメージを10％上昇させる。<br/>効果時間：6秒<br/>追加効果：自身に「是生滅法実行可」を付与する。<br/>効果時間：10秒<br/>効果中は「コンボ：旋風刃」が是生滅法に変化する。<br/>「三印自在」効果中は劫火滅却の術に変化する。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "三印自在さんいんじざい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/df52e05ddb6ca5801114faf60e5ba05442c5cb6f.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「三印自在」を付与し、忍術が発動できる状態になる。\nただし、同じ忍術は連続で発動できない。\n効果時間：10秒\n三印自在効果：星遁天誅以外のアクションが変化する。\n最大チャージ数：2\n「三印自在」効果中は命水に変化する。",
+     "descriptionHtml": "自身に「三印自在」を付与し、忍術が発動できる状態になる。<br/>ただし、同じ忍術は連続で発動できない。<br/>効果時間：10秒<br/>三印自在効果：星遁天誅以外のアクションが変化する。<br/>最大チャージ数：2<br/>「三印自在」効果中は命水に変化する。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "分身ぶんしんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dd5359193e18dec8796cb164c2a31cd7de730e31.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に5スタックの「分身の術」を付与する。\n効果時間：20秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n威力：5000\n風魔手裏剣、是生滅法は威力が半減する。\n追加効果：自身に「残影」を付与する。\n残影効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n「三印自在」効果中は風遁の術に変化する。",
+     "descriptionHtml": "自身に5スタックの「分身の術」を付与する。<br/>効果時間：20秒<br/>分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。<br/>威力：5000<br/>風魔手裏剣、是生滅法は威力が半減する。<br/>追加効果：自身に「残影」を付与する。<br/>残影効果：一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力8000相当<br/>効果時間：10秒<br/>「三印自在」効果中は風遁の術に変化する。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "縮地しゅくち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cf1bb42ed0500b95e768ec8fff4aa0f7b3d1c20a.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "指定した地点に向かって素早く移動する。\n追加効果：自身に「かくれる」を付与する。\n効果時間：4秒\nかくれる効果：敵から見えなくなり、ターゲットもされなくなる。\nアクションを実行するか、敵から攻撃を受けることで解除される。\n効果中は「コンボ：旋風刃」が終撃に変化する。\nバインド中は実行不可。\n「三印自在」効果中は土遁の術に変化する。",
+     "descriptionHtml": "指定した地点に向かって素早く移動する。<br/>追加効果：自身に「かくれる」を付与する。<br/>効果時間：4秒<br/>かくれる効果：敵から見えなくなり、ターゲットもされなくなる。<br/>アクションを実行するか、敵から攻撃を受けることで解除される。<br/>効果中は「コンボ：旋風刃」が終撃に変化する。<br/>バインド中は実行不可。<br/>「三印自在」効果中は土遁の術に変化する。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "是生滅法ぜしょうめっぽう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2d3b22f23ff584579dc27d5526176fe0f99cb2a.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に4回連続物理攻撃。\n威力：2500\n発動条件：「是生滅法実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に4回連続物理攻撃。<br/>威力：2500<br/>発動条件：「是生滅法実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "終撃しゅうげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bd62134b59f61995abdfea2f7fee502c5795f9f9.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n発動条件：「かくれる」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：12000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>発動条件：「かくれる」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "月影雷獣爪げつえいらいじゅうそう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4808fd0960ff552e382c3bc3242c43c4634b3a16.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身に「月影雷獣牙実行可」を付与する。\n効果時間：5秒\n効果中は「コンボ：旋風刃」が月影雷獣牙に変化する。\n発動条件：「三印自在」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：6000<br/>追加効果：対象をスタンさせる。<br/>効果時間：2秒<br/>追加効果：自身に「月影雷獣牙実行可」を付与する。<br/>効果時間：5秒<br/>効果中は「コンボ：旋風刃」が月影雷獣牙に変化する。<br/>発動条件：「三印自在」効果中<br/>バインド中は実行不可。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "月影雷獣牙げつえいらいじゅうが",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/834c61d21d0517e99776d435f3125c0d856bff96.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「月影雷獣牙実行可」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：6000<br/>追加効果：対象をスタンさせる。<br/>効果時間：2秒<br/>発動条件：「月影雷獣牙実行可」効果中<br/>バインド中は実行不可。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "氷晶乱流ひょうしょうらんりゅうの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7b5b3ecb51c13a72c65bbb7dd48b6d702d546da9.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：18000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：18000<br/>発動条件：「三印自在」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "劫火滅却ごうかめっきゃくの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8ecdf7edc6dd4e686813cdd58a5edcdf49e0404d.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "8m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：5000\n追加効果：対象に継続ダメージを付与する。\n威力：5000\n効果時間：12秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：5000<br/>追加効果：対象に継続ダメージを付与する。<br/>威力：5000<br/>効果時間：12秒<br/>発動条件：「三印自在」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "命水めいすい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/359bc1829d69bdbe859863cd2a782fbacc61de16.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：8000\n追加効果：対象のＨＰを継続回復する。\n回復力：5000\n効果時間：12秒\n追加効果：対象に付与されている、浄化で解除可能な状態異常を1つ解除する。\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象のＨＰを回復する。<br/>回復力：8000<br/>追加効果：対象のＨＰを継続回復する。<br/>回復力：5000<br/>効果時間：12秒<br/>追加効果：対象に付与されている、浄化で解除可能な状態異常を1つ解除する。<br/>発動条件：「三印自在」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "風遁ふうとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/839919eb2756e950cdae46be906b564ce77bd4b6.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「風遁の術」を付与する。\n風遁の術効果：自身に一定量のダメージを防ぐバリアを付与する。\nバリアの効果中はウェポンスキルのリキャストタイムを20％短縮させ、移動速度を50％上昇させる。\nバリア量：回復力16000相当\n効果時間：10秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身に「風遁の術」を付与する。<br/>風遁の術効果：自身に一定量のダメージを防ぐバリアを付与する。<br/>バリアの効果中はウェポンスキルのリキャストタイムを20％短縮させ、移動速度を50％上昇させる。<br/>バリア量：回復力16000相当<br/>効果時間：10秒<br/>発動条件：「三印自在」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "土遁どとんの術じゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c6735eac69b6180ad6b23c92fc467a81701cf4a.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の足元に「土遁の術」を生成する。\n効果時間：10秒\n土遁の術の自身への効果：範囲内にいる自身の被ダメージを15％軽減する。\n土遁の術の敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：3000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身の足元に「土遁の術」を生成する。<br/>効果時間：10秒<br/>土遁の術の自身への効果：範囲内にいる自身の被ダメージを15％軽減する。<br/>土遁の術の敵への効果：範囲内に入った敵に継続ダメージを与える。<br/>威力：3000<br/>発動条件：「三印自在」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__18",
+     "name": "幻影野槌げんえいのづち",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d2a67da760022e80b85ba1ccbeeecdf8bddda757.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "100m",
+     "radius": "5m",
+     "description": "自身が「土遁の術」を発生させているときにウェポンスキルか氷晶乱流の術、劫火滅却の術を実行すると、土遁の術の範囲内にいる敵に対して魔法攻撃。\n威力：3000\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：3秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身が「土遁の術」を発生させているときにウェポンスキルか氷晶乱流の術、劫火滅却の術を実行すると、土遁の術の範囲内にいる敵に対して魔法攻撃。<br/>威力：3000<br/>追加効果：対象に75％ヘヴィを付与する。<br/>効果時間：3秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "星遁天誅せいとんてんちゅう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3cc3f2b23553fa8ce5a4a46fe159c12a2f82aaa.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象のＨＰが50％以下の場合、戦闘不能状態にさせる。\n追加効果：対象に「死の連鎖」を付与する。\n効果時間：2秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nこのアクションで対象を戦闘不能にするか、死の連鎖の対象が戦闘不能になると、自身に「星遁天誅実行可」が付与される。\n効果時間：8秒\n効果中は星遁天誅を再使用できる。\nこの効果は付与されるたびに効果時間が1秒ずつ減少し、最低4秒まで減少する。\n発動条件：「リミットゲージ」最大もしくは「星遁天誅実行可」効果中\n蓄積時間：90秒\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：12000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>対象のＨＰが50％以下の場合、戦闘不能状態にさせる。<br/>追加効果：対象に「死の連鎖」を付与する。<br/>効果時間：2秒<br/>対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。<br/>このアクションで対象を戦闘不能にするか、死の連鎖の対象が戦闘不能になると、自身に「星遁天誅実行可」が付与される。<br/>効果時間：8秒<br/>効果中は星遁天誅を再使用できる。<br/>この効果は付与されるたびに効果時間が1秒ずつ減少し、最低4秒まで減少する。<br/>発動条件：「リミットゲージ」最大もしくは「星遁天誅実行可」効果中<br/>蓄積時間：90秒<br/>バインド中は実行不可。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒",
+     "descriptionHtml": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "スウィフト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。",
+     "descriptionHtml": "自身の移動速度を100％上昇させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>この効果はマウントに騎乗すると解除される。"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "スマイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000～18000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。<br/>自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "アクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__ninja_01",
+    "steps": [
+     {
+      "name": "双刃旋",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/150bf30be1a1ae0bcb2716d0ee4db448b71609c6.png"
+     },
+     {
+      "name": "風断ち",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/7891f6fad42ffdcf2a4f2b1fa37570c9a1f3a1a9.png"
+     },
+     {
+      "name": "旋風刃",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/c2741e8be4448134b1497cf59fa8a32d096cb91e.png"
+     }
+    ],
+    "effect": "「忍気」の上昇と、瞬発的な総威力が最も大きいコンボです。"
+   },
+   {
+    "class": "job__combo__root job__combo__ninja_02",
+    "steps": [
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "強甲破点突",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/f8e49f627d8f6e16b91b2192b322812f09c40475.png"
+     }
+    ],
+    "effect": "「忍気」の上昇と、「風纏」が付与されるコンボです。"
+   },
+   {
+    "class": "job__combo__root job__combo__ninja_04",
+    "steps": [
+     {
+      "name": "血花五月雨",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/08a91ba599c83a9fdbe791137d57f411f130bcc3.png"
+     },
+     {
+      "name": "八卦無刃殺",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/86e59c1bd3dedee2a6b68d3321da04c68a3acb52.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "「忍気」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。"
+   }
+  ],
+  "allText": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n双刃旋\n\n風断ち\n\n旋風刃\n\n「忍気」の上昇と、瞬発的な総威力が最も大きいコンボです。\n\n強甲破点突\n\n「忍気」の上昇と、「風纏」が付与されるコンボです。\n\n血花五月雨\n\n八卦無刃殺\n\n「忍気」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "風纏シンボル",
+    "images": []
+   },
+   {
+    "title": "忍気ゲージ",
+    "images": []
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\n風纏シンボル\n\nアクション「強甲破点突」を修得すると、\"風纏\"の蓄積状態を確認できる「風纏シンボル」が表示されるようになります。\n風纏は「強甲破点突」をコンボで実行すると最大5つまで蓄積され、これを消費して「旋風刃」の威力を上昇させることができます。\n風纏の状態を意識しつつ、強力なコンボを叩きこみましょう！\n\n忍気ゲージ\n\nレベル62で特性「集気法」を修得すると、\"忍気\"の蓄積量を示す「忍気ゲージ」が表示されるようになります。\n忍気はウェポンスキルの命中時などに蓄積し、忍気を消費することで「口寄せの術・大蝦蟇」や、レベル68で修得する「六道輪廻」を実行できます。\n\nシンプルモード\n\n風纏シンボル\n\n忍気ゲージ\n\n通常時\n\n使用可能時",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">風纏シンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/X/4N08Eemw-qqy87gkDKHtHfULpg.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「強甲破点突」</span>を修得すると、<span class=\"txt_red\">\"風纏\"</span>の蓄積状態を確認できる<span class=\"txt_red\">「風纏シンボル」</span>が表示されるようになります。<br/>風纏は「強甲破点突」をコンボで実行すると最大5つまで蓄積され、これを消費して<span class=\"txt_red\">「旋風刃」</span>の威力を上昇させることができます。<br/>風纏の状態を意識しつつ、強力なコンボを叩きこみましょう！</p>\n</div>\n<h3 class=\"job__hud__title\">忍気ゲージ</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/Q5_ZGRTO-GiH1dsmD5mybDBUcQ.png\" width=\"290\"/>\n<p class=\"job__hud__text\">レベル62で特性<span class=\"txt_red\">「集気法」</span>を修得すると、<span class=\"txt_red\">\"忍気\"</span>の蓄積量を示す<span class=\"txt_red\">「忍気ゲージ」</span>が表示されるようになります。<br/>忍気はウェポンスキルの命中時などに蓄積し、忍気を消費することで<span class=\"txt_red\">「口寄せの術・大蝦蟇」</span>や、レベル68で修得する<span class=\"txt_red\">「六道輪廻」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">風纏シンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png\" width=\"290\"/>\n</td>\n<td></td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">忍気ゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">通常時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">使用可能時</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/4N08Eemw-qqy87gkDKHtHfULpg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/Q5_ZGRTO-GiH1dsmD5mybDBUcQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/emASenGYJ0jpAJHMx2azByaMvw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/HRNFrbzcRdNFgfM-bmoV4mEr70.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/1/PRin7Ow5zLAAQqoxOSDW6hqj2E.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/ninja/01.png",
+   "public/jobguide/hud/ninja/02.png",
+   "public/jobguide/hud/ninja/03.png",
+   "public/jobguide/hud/ninja/04.png",
+   "public/jobguide/hud/ninja/05.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双刃旋そうじんせん\n\nLv1\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：「忍気」を5上昇させる。\n\n残影ざんえい\n\nLv2\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを最大ＨＰの20％分まで無効化する。\n効果時間：20秒\n\n風断かぜたち\n\nLv4\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\nコンボ条件：双刃旋\nコンボ時威力：400\nコンボボーナス：「忍気」を5上昇させる。\n\nかくれる\n\nLv10\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の姿を隠し、ほとんどの敵から感知されない状態になる。\nさらに移動速度が50％低下する。\n自身よりもレベルが10以上高いモンスターや、一部のモンスターからは感知される。\nスプリント以外のアクションを実行するか再使用で解除する。\n効果時間：永続\n追加効果：実行後に非戦闘状態であれば忍術のリキャストタイムを2チャージ分リセットする。\nまた、自身に「土遁の術」が付与されている場合は、それを解除する。\n発動条件：自身が非戦闘状態\n\n投刃とうじん\n\nクラスクエスト\n\nLv15\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\n追加効果：「忍気」を5上昇させる。\n\nぶんどる\n\nクラスクエスト\n\nLv15\n\nアビリティ\nInstant\n120秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：150\n追加効果：対象に「被ダメージ上昇」を付与し、受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。\n\nだまし討うち\n\nLv18\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n背面攻撃時威力：400\n追加効果：対象に「だまし討ち」を付与する。\n効果時間：15秒\nだまし討ち効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中\n\n旋風刃せんぷうじん\n\nLv26\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：220\n背面攻撃時威力：280\nコンボ条件：風断ち\nコンボ時威力：400\nコンボ時かつ背面攻撃時威力：460\n風纏が付与されている場合は全ての威力が100上昇する。\nコンボボーナス：「忍気」を15上昇させる。\n\n天てんの印いん\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n天の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n忍術にんじゅつ\n\nLv30\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n忍術を発動する。\n効果は直前に結んだ印の順番により異なる。\n印ステータス中に他のアクションを実行すると、忍術を失敗する。\nこのアビリティにはウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\nまた、「かくれる」を実行した後に自身が非戦闘状態であれば、忍術のリキャストタイムを2チャージ分リセットする。\n\n地ちの印いん\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n地の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n血花五月雨けっかさみだれ\n\nLv38\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：100\n追加効果：「忍気」を5上昇させる。\n\n終撃しゅうげき\n\nLv40\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n\n縮地しゅくち\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n0m\n\n指定した地点に向かって素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\n人じんの印いん\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n人の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n活殺自在かっさつじざい\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、「天の印」「地の印」「人の印」のリキャスト状態に関わらず、忍術を1回実行することができるようになる。\nこのとき、忍術の威力を30％上昇させる。\n効果時間：15秒\n\n八卦無刃殺はっけむじんさつ\n\nジョブクエスト\n\nLv52\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：100\nコンボ条件：血花五月雨\nコンボ時威力：120\nコンボボーナス：「忍気」を5上昇させる。\n\n強甲破点突きょうこうはてんづき\n\nジョブクエスト\n\nLv54\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\n側面攻撃時威力：300\nコンボ条件：風断ち\nコンボ時威力：440\nコンボ時かつ側面攻撃時威力：500\nコンボボーナス：自身に2スタックの「風纏」を付与する。\n最大スタック数：5\n風纏効果：旋風刃の威力を100上昇させる。\nコンボボーナス：「忍気」を15上昇させる。\n\n夢幻三段むげんさんだん\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に3回連続物理攻撃。\n威力：180\n\n口くち寄よせの術じゅつ・大蝦蟇おおがま\n\nLv62\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：250\n発動条件：「忍気」50\nリキャストタイマーを「六道輪廻」と共有する。\n\n毒盛どくもりの術じゅつ\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：400\n追加効果：対象の受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。\n追加効果：「忍気」を40上昇させる。\n追加効果：自身に「秘技実行可」を付与する。\n効果時間：30秒\n\n六道輪廻りくどうりんね\n\nLv68\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：400\n命水時威力：550\n発動条件：「忍気」50\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。\n\n天地人てんちじん\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、「天の印」「地の印」「人の印」が忍術アクションに変化する。\n忍術アクションを実行するたびに別の忍術アクションに変化し、最大3種類の忍術を実行することができる。\n効果時間：6秒\n効果時間中は忍術以外のアクションを実行できない。\n追加効果：自身に「天理人道実行可」を付与する。\n効果時間：30秒\n発動条件：「活殺自在」非効果中\n\n命水めいすい\n\nLv72\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に付与されている「忍隠」を消費して「忍気」を50上昇させる。\n追加効果：自身に「命水」を付与する。\n効果時間：30秒\n命水効果：次に実行する是生滅法および六道輪廻の威力を、850および550にそれぞれ上昇させる。\n発動条件：自身が戦闘状態かつ「忍隠」効果中\n\n分身ぶんしんの術じゅつ\n\nLv80\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身に5スタックの「分身の術」を付与する。\n効果時間：30秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n分身による攻撃は固有の威力を持つ。\n近接攻撃威力：160\n遠隔攻撃威力：160\n範囲攻撃威力：80\nまた、分身による攻撃ではコンボボーナスが発生しないが、命中すると自身の「忍気」を5上昇させる。\n追加効果：自身に「残影鎌鼬実行可」を付与する。\n効果時間：45秒\n発動条件：「忍気」50\n\n残影鎌鼬ざんえいかまいたち\n\nLv82\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n自身の分身により、対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：700\n追加効果：「忍気」を10上昇させる。\n発動条件：分身の術を実行することで付与される「残影鎌鼬実行可」効果中\n\n幻影野槌げんえいのづち\n\nLv86\n\nアビリティ\nInstant\n-\n-\n\n100m\n\n5m\n\n自身が「土遁の術」を発生させているときに八卦無刃殺をコンボ状態で実行するか、火遁の術、劫火滅却の術または残影鎌鼬を実行すると、土遁の術の範囲内にいる敵に対して土属性魔法攻撃。\n威力：70\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣爪げつえいらいじゅうそう\n\nLv90\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n対象に急接近して雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中\nバインド中は実行不可。\n\n月影雷獣牙げつえいらいじゅうが\n\nLv90\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中\n\n百雷銃ひゃくらいじゅう\n\nLv92\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：700\n追加効果：対象に「百雷銃」を付与する。\n効果時間：15秒\n百雷銃効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中\n\n口寄くちよせの術じゅつ・蝦蟇仙がません\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：400\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「六道輪廻」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと口寄せの術・大蝦蟇が口寄せの術・蝦蟇仙に変化する。\n\n是生滅法ぜしょうめっぽう\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：700\n命水時威力：850\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと六道輪廻が是生滅法に変化する。\n\n天理人道てんりじんどう\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n発動条件：「天理人道実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと天地人が天理人道に変化する。"
+  },
+  {
+   "heading": "忍術",
+   "anchor": "anchor__ninja_onlyaction",
+   "text": "忍術\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n風魔手裏剣ふうましゅりけん\n\nLv30\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：500\n発動条件：「天の印」「地の印」「人の印」のいずれかひとつを結んだ状態で、忍術を実行する。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風魔手裏剣に変化する。\n\n火遁かとんの術じゅつ\n\nLv35\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：350\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が火遁の術に変化する。\n\n雷遁らいとんの術じゅつ\n\nLv35\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：740\n追加効果：自身に「月影雷獣実行可」を付与する。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」または、\n「人の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が雷遁の術に変化する。\n\n氷遁ひょうとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：350\n追加効果：対象にバインドを付与する。\n効果時間：15秒\n実行後にオートアタックを停止する。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷遁の術に変化する。\n\n風遁ふうとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：240\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「人の印」「地の印」「天の印」または、\n「地の印」「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風遁の術に変化する。\n\n土遁どとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n5m\n\n自身を中心にダメージエリアを生成する。\n範囲内に入った対象に土属性ダメージを与える。\n威力：80\n効果時間：18秒\n追加効果：範囲内にいる対象に40％ヘヴィを付与し続ける。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」「地の印」または、\n「人の印」「天の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が土遁の術に変化する。\n\n水遁すいとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n0m\n\n対象に水属性魔法攻撃。\n威力：580\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」「人の印」または、\n「地の印」「天の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が水遁の術に変化する。\n\n劫火滅却ごうかめっきゃくの術じゅつ\n\nLv76\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：850\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が劫火滅却の術に変化する。\n\n氷晶乱流ひょうしょうらんりゅうの術じゅつ\n\nLv76\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：1300\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷晶乱流の術に変化する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\n落下らっかダメージ軽減けいげん\n\nLv14\n\n落下による被ダメージを軽減する。\n\n移動速度いどうそくどアップ\n\nLv20\n\n自身の移動速度を上昇させる。\n\n攻撃速度こうげきそくどアップ\n\nLv45\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n\n終撃皆伝しゅうげきかいでん\n\nジョブクエスト\n\nLv56\n\n終撃が夢幻三段に変化する。\n\n集気法しゅうきほう\n\nLv62\n\n「忍気」が5ずつ上昇するようになる。\n発動条件：ウェポンスキルの命中時またはコンボ成功時\n\n縮地しゅくち効果こうかアップ\n\nLv64\n\n縮地のリキャストタイムをリセットする。\n発動条件：一部を除く敵に対する火遁の術、雷遁の術、氷遁の術の実行時\n\nぶんどる皆伝かいでん\n\nLv66\n\nぶんどるが毒盛の術に変化する。\n\n縮地しゅくち効果こうかアップIIつー\n\nLv74\n\n縮地がチャージアクションに変化する。\n最大チャージ数：2\n\nアクション威力いりょくアップ\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\n風断ちの威力：120\n旋風刃の威力：140\n強甲破点突の威力：140\n\n活殺自在かっさつじざい効果こうかアップ\n\nLv76\n\n「活殺自在」の効果中は、火遁の術と氷遁の術がそれぞれ「劫火滅却の術」と「氷晶乱流の術」に変化する。\n\n集気法しゅうきほうIIつー\n\nLv78\n\n「忍気」の上昇量が10に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時\n\n集気法しゅうきほうIIIすりー\n\nLv84\n\n「忍気」の上昇量が15に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時\n\nアクション威力いりょくアップIIつー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n双刃旋の威力：220\n風断ちの威力：160\n投刃の威力：200\n\n命水めいすい効果こうかアップ\n\nLv88\n\n自身に「命水」を付与する。\n命水効果：次に実行する六道輪廻の威力を500に上昇させる。\n効果時間：30秒\n発動条件：命水実行時\n\n雷遁らいとんの術じゅつ効果こうかアップ\n\nLv90\n\n自身に「月影雷獣実行可」が付与される。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：雷遁の術実行時\n\nだまし討うち皆伝かいでん\n\nLv92\n\nだまし討ちが百雷銃に変化する。\n\nアクション威力いりょくアップIIIすりー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n双刃旋の威力：300\n風断ちの威力：240\n旋風刃の威力：220\n風魔手裏剣の威力：500\n雷遁の術の威力：740\n水遁の術の威力：580\n強甲破点突の威力：240\n六道輪廻の威力：400\n命水効果中の六道輪廻の威力：550\n月影雷獣爪の威力：700\n月影雷獣牙の威力：700\n\n毒盛どくもりの術じゅつ効果こうかアップ\n\nLv96\n\n自身に「秘技実行可」が付与される。\n効果時間：30秒\n発動条件：毒盛の術実行時\n\n天地人てんちじん効果こうかアップ\n\nLv100\n\n自身に「天理人道実行可」が付与される。\n効果時間：30秒\n発動条件：天地人実行時\n効果中は天地人が天理人道に変化する。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "コンボ",
+   "anchor": "anchor__pve_combo",
+   "text": "コンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n双刃旋\n\n風断ち\n\n旋風刃\n\n「忍気」の上昇と、瞬発的な総威力が最も大きいコンボです。\n\n強甲破点突\n\n「忍気」の上昇と、「風纏」が付与されるコンボです。\n\n血花五月雨\n\n八卦無刃殺\n\n「忍気」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\n風纏シンボル\n\nアクション「強甲破点突」を修得すると、\"風纏\"の蓄積状態を確認できる「風纏シンボル」が表示されるようになります。\n風纏は「強甲破点突」をコンボで実行すると最大5つまで蓄積され、これを消費して「旋風刃」の威力を上昇させることができます。\n風纏の状態を意識しつつ、強力なコンボを叩きこみましょう！\n\n忍気ゲージ\n\nレベル62で特性「集気法」を修得すると、\"忍気\"の蓄積量を示す「忍気ゲージ」が表示されるようになります。\n忍気はウェポンスキルの命中時などに蓄積し、忍気を消費することで「口寄せの術・大蝦蟇」や、レベル68で修得する「六道輪廻」を実行できます。\n\nシンプルモード\n\n風纏シンボル\n\n忍気ゲージ\n\n通常時\n\n使用可能時"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双刃旋そうじんせん\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n風断かぜたち\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：双刃旋\n\n※このアクションはホットバーに登録することはできない。\n\n旋風刃せんぷうじん\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：風断ち\n\n※このアクションはホットバーに登録することはできない。\n\n風魔手裏剣ふうましゅりけん\n\nウェポン\nスキル\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：8000\n最大チャージ数：3\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n「三印自在」効果中は氷晶乱流の術に変化する。\n\n毒盛どくもりの術じゅつ\n\nアビリティ\nInstant\n24秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：6秒\n追加効果：自身に「是生滅法実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：旋風刃」が是生滅法に変化する。\n「三印自在」効果中は劫火滅却の術に変化する。\n\n三印自在さんいんじざい\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n自身に「三印自在」を付与し、忍術が発動できる状態になる。\nただし、同じ忍術は連続で発動できない。\n効果時間：10秒\n三印自在効果：星遁天誅以外のアクションが変化する。\n最大チャージ数：2\n「三印自在」効果中は命水に変化する。\n\n分身ぶんしんの術じゅつ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身に5スタックの「分身の術」を付与する。\n効果時間：20秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n威力：5000\n風魔手裏剣、是生滅法は威力が半減する。\n追加効果：自身に「残影」を付与する。\n残影効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n「三印自在」効果中は風遁の術に変化する。\n\n縮地しゅくち\n\nアビリティ\nInstant\n20秒\n-\n\n20m\n\n0m\n\n指定した地点に向かって素早く移動する。\n追加効果：自身に「かくれる」を付与する。\n効果時間：4秒\nかくれる効果：敵から見えなくなり、ターゲットもされなくなる。\nアクションを実行するか、敵から攻撃を受けることで解除される。\n効果中は「コンボ：旋風刃」が終撃に変化する。\nバインド中は実行不可。\n「三印自在」効果中は土遁の術に変化する。\n\n是生滅法ぜしょうめっぽう\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に4回連続物理攻撃。\n威力：2500\n発動条件：「是生滅法実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n終撃しゅうげき\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n発動条件：「かくれる」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣爪げつえいらいじゅうそう\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身に「月影雷獣牙実行可」を付与する。\n効果時間：5秒\n効果中は「コンボ：旋風刃」が月影雷獣牙に変化する。\n発動条件：「三印自在」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣牙げつえいらいじゅうが\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「月影雷獣牙実行可」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。\n\n氷晶乱流ひょうしょうらんりゅうの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に魔法攻撃。\n威力：18000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n劫火滅却ごうかめっきゃくの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n20m\n\n8m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：5000\n追加効果：対象に継続ダメージを付与する。\n威力：5000\n効果時間：12秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n命水めいすい\n\n魔法\nInstant\n\n2秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：8000\n追加効果：対象のＨＰを継続回復する。\n回復力：5000\n効果時間：12秒\n追加効果：対象に付与されている、浄化で解除可能な状態異常を1つ解除する。\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n風遁ふうとんの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n0m\n\n0m\n\n自身に「風遁の術」を付与する。\n風遁の術効果：自身に一定量のダメージを防ぐバリアを付与する。\nバリアの効果中はウェポンスキルのリキャストタイムを20％短縮させ、移動速度を50％上昇させる。\nバリア量：回復力16000相当\n効果時間：10秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n土遁どとんの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n0m\n\n5m\n\n自身の足元に「土遁の術」を生成する。\n効果時間：10秒\n土遁の術の自身への効果：範囲内にいる自身の被ダメージを15％軽減する。\n土遁の術の敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：3000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n幻影野槌げんえいのづち\n\nアビリティ\nInstant\n-\n-\n\n100m\n\n5m\n\n自身が「土遁の術」を発生させているときにウェポンスキルか氷晶乱流の術、劫火滅却の術を実行すると、土遁の術の範囲内にいる敵に対して魔法攻撃。\n威力：3000\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：3秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n星遁天誅せいとんてんちゅう\n\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象のＨＰが50％以下の場合、戦闘不能状態にさせる。\n追加効果：対象に「死の連鎖」を付与する。\n効果時間：2秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nこのアクションで対象を戦闘不能にするか、死の連鎖の対象が戦闘不能になると、自身に「星遁天誅実行可」が付与される。\n効果時間：8秒\n効果中は星遁天誅を再使用できる。\nこの効果は付与されるたびに効果時間が1秒ずつ減少し、最低4秒まで減少する。\n発動条件：「リミットゲージ」最大もしくは「星遁天誅実行可」効果中\n蓄積時間：90秒\nバインド中は実行不可。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\n忍術\n\nロールアクション\n\n特性\nロール特性\nコンボ\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nはるか昔、乱世に生きる東方の民が\n己の身と財を守るために編み出したという\n忍びの技……忍術。\n\n天の中、地の底、人の内に流れる気を用い、印を結ぶことで神秘を成すと伝えられているこの秘術は、はるか辺境の地に散在する隠れ里で密かに継承されてきた。もし、その術を体得することができれば、戦の流れを変える力を得られるだろう。\n\nジョブ開始クエスト\n\n初期クラス：双剣士\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双刃旋そうじんせん\n\nLv1\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n追加効果：「忍気」を5上昇させる。\n\n残影ざんえい\n\nLv2\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを最大ＨＰの20％分まで無効化する。\n効果時間：20秒\n\n風断かぜたち\n\nLv4\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\nコンボ条件：双刃旋\nコンボ時威力：400\nコンボボーナス：「忍気」を5上昇させる。\n\nかくれる\n\nLv10\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の姿を隠し、ほとんどの敵から感知されない状態になる。\nさらに移動速度が50％低下する。\n自身よりもレベルが10以上高いモンスターや、一部のモンスターからは感知される。\nスプリント以外のアクションを実行するか再使用で解除する。\n効果時間：永続\n追加効果：実行後に非戦闘状態であれば忍術のリキャストタイムを2チャージ分リセットする。\nまた、自身に「土遁の術」が付与されている場合は、それを解除する。\n発動条件：自身が非戦闘状態\n\n投刃とうじん\n\nクラスクエスト\n\nLv15\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：200\n追加効果：「忍気」を5上昇させる。\n\nぶんどる\n\nクラスクエスト\n\nLv15\n\nアビリティ\nInstant\n120秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：150\n追加効果：対象に「被ダメージ上昇」を付与し、受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。\n\nだまし討うち\n\nLv18\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n背面攻撃時威力：400\n追加効果：対象に「だまし討ち」を付与する。\n効果時間：15秒\nだまし討ち効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中\n\n旋風刃せんぷうじん\n\nLv26\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：220\n背面攻撃時威力：280\nコンボ条件：風断ち\nコンボ時威力：400\nコンボ時かつ背面攻撃時威力：460\n風纏が付与されている場合は全ての威力が100上昇する。\nコンボボーナス：「忍気」を15上昇させる。\n\n天てんの印いん\n\nジョブクエスト\n\nLv30\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n天の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n忍術にんじゅつ\n\nLv30\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n忍術を発動する。\n効果は直前に結んだ印の順番により異なる。\n印ステータス中に他のアクションを実行すると、忍術を失敗する。\nこのアビリティにはウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\nまた、「かくれる」を実行した後に自身が非戦闘状態であれば、忍術のリキャストタイムを2チャージ分リセットする。\n\n地ちの印いん\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n地の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n血花五月雨けっかさみだれ\n\nLv38\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：100\n追加効果：「忍気」を5上昇させる。\n\n終撃しゅうげき\n\nLv40\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：200\n\n縮地しゅくち\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n60秒\n-\n\n20m\n\n0m\n\n指定した地点に向かって素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\n人じんの印いん\n\nジョブクエスト\n\nLv45\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n人の印を結ぶ。\n効果時間：6秒\n最大チャージ数：2\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n活殺自在かっさつじざい\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、「天の印」「地の印」「人の印」のリキャスト状態に関わらず、忍術を1回実行することができるようになる。\nこのとき、忍術の威力を30％上昇させる。\n効果時間：15秒\n\n八卦無刃殺はっけむじんさつ\n\nジョブクエスト\n\nLv52\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：100\nコンボ条件：血花五月雨\nコンボ時威力：120\nコンボボーナス：「忍気」を5上昇させる。\n\n強甲破点突きょうこうはてんづき\n\nジョブクエスト\n\nLv54\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：240\n側面攻撃時威力：300\nコンボ条件：風断ち\nコンボ時威力：440\nコンボ時かつ側面攻撃時威力：500\nコンボボーナス：自身に2スタックの「風纏」を付与する。\n最大スタック数：5\n風纏効果：旋風刃の威力を100上昇させる。\nコンボボーナス：「忍気」を15上昇させる。\n\n夢幻三段むげんさんだん\n\nジョブクエスト\n\nLv56\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n0m\n\n対象に3回連続物理攻撃。\n威力：180\n\n口くち寄よせの術じゅつ・大蝦蟇おおがま\n\nLv62\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：250\n発動条件：「忍気」50\nリキャストタイマーを「六道輪廻」と共有する。\n\n毒盛どくもりの術じゅつ\n\nLv66\n\nアビリティ\nInstant\n120秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：400\n追加効果：対象の受けるダメージを5％上昇させる。\n効果時間：20秒\n追加効果：このアクションを命中させてから敵を倒すと、より多くのアイテムを獲得できることがある。\n追加効果：「忍気」を40上昇させる。\n追加効果：自身に「秘技実行可」を付与する。\n効果時間：30秒\n\n六道輪廻りくどうりんね\n\nLv68\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：400\n命水時威力：550\n発動条件：「忍気」50\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。\n\n天地人てんちじん\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、「天の印」「地の印」「人の印」が忍術アクションに変化する。\n忍術アクションを実行するたびに別の忍術アクションに変化し、最大3種類の忍術を実行することができる。\n効果時間：6秒\n効果時間中は忍術以外のアクションを実行できない。\n追加効果：自身に「天理人道実行可」を付与する。\n効果時間：30秒\n発動条件：「活殺自在」非効果中\n\n命水めいすい\n\nLv72\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に付与されている「忍隠」を消費して「忍気」を50上昇させる。\n追加効果：自身に「命水」を付与する。\n効果時間：30秒\n命水効果：次に実行する是生滅法および六道輪廻の威力を、850および550にそれぞれ上昇させる。\n発動条件：自身が戦闘状態かつ「忍隠」効果中\n\n分身ぶんしんの術じゅつ\n\nLv80\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身に5スタックの「分身の術」を付与する。\n効果時間：30秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n分身による攻撃は固有の威力を持つ。\n近接攻撃威力：160\n遠隔攻撃威力：160\n範囲攻撃威力：80\nまた、分身による攻撃ではコンボボーナスが発生しないが、命中すると自身の「忍気」を5上昇させる。\n追加効果：自身に「残影鎌鼬実行可」を付与する。\n効果時間：45秒\n発動条件：「忍気」50\n\n残影鎌鼬ざんえいかまいたち\n\nLv82\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n自身の分身により、対象とその周囲5m以内の敵に風属性範囲魔法攻撃。\n威力：700\n追加効果：「忍気」を10上昇させる。\n発動条件：分身の術を実行することで付与される「残影鎌鼬実行可」効果中\n\n幻影野槌げんえいのづち\n\nLv86\n\nアビリティ\nInstant\n-\n-\n\n100m\n\n5m\n\n自身が「土遁の術」を発生させているときに八卦無刃殺をコンボ状態で実行するか、火遁の術、劫火滅却の術または残影鎌鼬を実行すると、土遁の術の範囲内にいる敵に対して土属性魔法攻撃。\n威力：70\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣爪げつえいらいじゅうそう\n\nLv90\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n20m\n\n0m\n\n対象に急接近して雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中\nバインド中は実行不可。\n\n月影雷獣牙げつえいらいじゅうが\n\nLv90\n\nウェポン\nスキル\nInstant\n2.12秒\n-\n\n3m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：700\n追加効果：「忍気」を5上昇させる。\n発動条件：「月影雷獣実行可」効果中\n\n百雷銃ひゃくらいじゅう\n\nLv92\n\nアビリティ\nInstant\n60秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：700\n追加効果：対象に「百雷銃」を付与する。\n効果時間：15秒\n百雷銃効果：自身から対象に与えるダメージを10％上昇させる。\n発動条件：「かくれる」効果中\n\n口寄くちよせの術じゅつ・蝦蟇仙がません\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n6m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：400\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「六道輪廻」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと口寄せの術・大蝦蟇が口寄せの術・蝦蟇仙に変化する。\n\n是生滅法ぜしょうめっぽう\n\nLv96\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：700\n命水時威力：850\n発動条件：「忍気」50および「秘技実行可」効果中\nリキャストタイマーを「口寄せの術・大蝦蟇」と共有する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと六道輪廻が是生滅法に変化する。\n\n天理人道てんりじんどう\n\nLv100\n\nアビリティ\nInstant\n1秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n発動条件：「天理人道実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと天地人が天理人道に変化する。\n\n忍術\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n風魔手裏剣ふうましゅりけん\n\nLv30\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：500\n発動条件：「天の印」「地の印」「人の印」のいずれかひとつを結んだ状態で、忍術を実行する。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風魔手裏剣に変化する。\n\n火遁かとんの術じゅつ\n\nLv35\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：350\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が火遁の術に変化する。\n\n雷遁らいとんの術じゅつ\n\nLv35\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：740\n追加効果：自身に「月影雷獣実行可」を付与する。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」または、\n「人の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が雷遁の術に変化する。\n\n氷遁ひょうとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：350\n追加効果：対象にバインドを付与する。\n効果時間：15秒\n実行後にオートアタックを停止する。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷遁の術に変化する。\n\n風遁ふうとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：240\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「人の印」「地の印」「天の印」または、\n「地の印」「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が風遁の術に変化する。\n\n土遁どとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n5m\n\n自身を中心にダメージエリアを生成する。\n範囲内に入った対象に土属性ダメージを与える。\n威力：80\n効果時間：18秒\n追加効果：範囲内にいる対象に40％ヘヴィを付与し続ける。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」「地の印」または、\n「人の印」「天の印」「地の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が土遁の術に変化する。\n\n水遁すいとんの術じゅつ\n\nLv45\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n0m\n\n対象に水属性魔法攻撃。\n威力：580\n追加効果：自身に「忍隠」を付与する。\n効果時間：20秒\n忍隠効果：隠れていなくても「かくれる」を発動条件とするアクションを1回だけ実行することができる。\n発動条件：下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「地の印」「人の印」または、\n「地の印」「天の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が水遁の術に変化する。\n\n劫火滅却ごうかめっきゃくの術じゅつ\n\nLv76\n\nアビリティ\nInstant\n1.5秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：850\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「地の印」「天の印」または、\n「人の印」「天の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が劫火滅却の術に変化する。\n\n氷晶乱流ひょうしょうらんりゅうの術じゅつ\n\nLv76\n\nアビリティ\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：1300\n発動条件：「活殺自在」効果時間中に、下記のいずれかの順に印を結んだ状態で、忍術を実行する。\n「天の印」「人の印」または、\n「地の印」「人の印」の順で印を結ぶ。\nこのアクションを実行するとウェポンスキルと魔法、印アクション、忍術アクションにリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと忍術が氷晶乱流の術に変化する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2\n\n特性\n\n特性名\n修得\n効果\n\n落下らっかダメージ軽減けいげん\n\nLv14\n\n落下による被ダメージを軽減する。\n\n移動速度いどうそくどアップ\n\nLv20\n\n自身の移動速度を上昇させる。\n\n攻撃速度こうげきそくどアップ\n\nLv45\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n\n終撃皆伝しゅうげきかいでん\n\nジョブクエスト\n\nLv56\n\n終撃が夢幻三段に変化する。\n\n集気法しゅうきほう\n\nLv62\n\n「忍気」が5ずつ上昇するようになる。\n発動条件：ウェポンスキルの命中時またはコンボ成功時\n\n縮地しゅくち効果こうかアップ\n\nLv64\n\n縮地のリキャストタイムをリセットする。\n発動条件：一部を除く敵に対する火遁の術、雷遁の術、氷遁の術の実行時\n\nぶんどる皆伝かいでん\n\nLv66\n\nぶんどるが毒盛の術に変化する。\n\n縮地しゅくち効果こうかアップIIつー\n\nLv74\n\n縮地がチャージアクションに変化する。\n最大チャージ数：2\n\nアクション威力いりょくアップ\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\n風断ちの威力：120\n旋風刃の威力：140\n強甲破点突の威力：140\n\n活殺自在かっさつじざい効果こうかアップ\n\nLv76\n\n「活殺自在」の効果中は、火遁の術と氷遁の術がそれぞれ「劫火滅却の術」と「氷晶乱流の術」に変化する。\n\n集気法しゅうきほうIIつー\n\nLv78\n\n「忍気」の上昇量が10に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時\n\n集気法しゅうきほうIIIすりー\n\nLv84\n\n「忍気」の上昇量が15に増加する。\n発動条件：旋風刃と強甲破点突のコンボ成功時\n\nアクション威力いりょくアップIIつー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n双刃旋の威力：220\n風断ちの威力：160\n投刃の威力：200\n\n命水めいすい効果こうかアップ\n\nLv88\n\n自身に「命水」を付与する。\n命水効果：次に実行する六道輪廻の威力を500に上昇させる。\n効果時間：30秒\n発動条件：命水実行時\n\n雷遁らいとんの術じゅつ効果こうかアップ\n\nLv90\n\n自身に「月影雷獣実行可」が付与される。\n最大スタック数：3\n効果時間：30秒\nこの効果はウェポンスキルによる近接攻撃を実行すると解除される。\n発動条件：雷遁の術実行時\n\nだまし討うち皆伝かいでん\n\nLv92\n\nだまし討ちが百雷銃に変化する。\n\nアクション威力いりょくアップIIIすりー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n双刃旋の威力：300\n風断ちの威力：240\n旋風刃の威力：220\n風魔手裏剣の威力：500\n雷遁の術の威力：740\n水遁の術の威力：580\n強甲破点突の威力：240\n六道輪廻の威力：400\n命水効果中の六道輪廻の威力：550\n月影雷獣爪の威力：700\n月影雷獣牙の威力：700\n\n毒盛どくもりの術じゅつ効果こうかアップ\n\nLv96\n\n自身に「秘技実行可」が付与される。\n効果時間：30秒\n発動条件：毒盛の術実行時\n\n天地人てんちじん効果こうかアップ\n\nLv100\n\n自身に「天理人道実行可」が付与される。\n効果時間：30秒\n発動条件：天地人実行時\n効果中は天地人が天理人道に変化する。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。\n\nコンボ\n\nアクションは特定のルートで使用すると、威力アップなどの様々なコンボボーナスの効果が得られます。\n\nコンボルート\n効果\n\n双刃旋\n\n風断ち\n\n旋風刃\n\n「忍気」の上昇と、瞬発的な総威力が最も大きいコンボです。\n\n強甲破点突\n\n「忍気」の上昇と、「風纏」が付与されるコンボです。\n\n血花五月雨\n\n八卦無刃殺\n\n「忍気」の上昇と、複数の敵を攻撃することに適した範囲攻撃コンボです。\n\nジョブHUD\n\n風纏シンボル\n\nアクション「強甲破点突」を修得すると、\"風纏\"の蓄積状態を確認できる「風纏シンボル」が表示されるようになります。\n風纏は「強甲破点突」をコンボで実行すると最大5つまで蓄積され、これを消費して「旋風刃」の威力を上昇させることができます。\n風纏の状態を意識しつつ、強力なコンボを叩きこみましょう！\n\n忍気ゲージ\n\nレベル62で特性「集気法」を修得すると、\"忍気\"の蓄積量を示す「忍気ゲージ」が表示されるようになります。\n忍気はウェポンスキルの命中時などに蓄積し、忍気を消費することで「口寄せの術・大蝦蟇」や、レベル68で修得する「六道輪廻」を実行できます。\n\nシンプルモード\n\n風纏シンボル\n\n忍気ゲージ\n\n通常時\n\n使用可能時\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双刃旋そうじんせん\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：5000\n\n※このアクションはホットバーに登録することはできない。\n\n風断かぜたち\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\nコンボ条件：双刃旋\n\n※このアクションはホットバーに登録することはできない。\n\n旋風刃せんぷうじん\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：風断ち\n\n※このアクションはホットバーに登録することはできない。\n\n風魔手裏剣ふうましゅりけん\n\nウェポン\nスキル\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に遠隔物理攻撃。\n威力：8000\n最大チャージ数：3\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n「三印自在」効果中は氷晶乱流の術に変化する。\n\n毒盛どくもりの術じゅつ\n\nアビリティ\nInstant\n24秒\n-\n\n8m\n\n8m\n\n対象に向かって前方扇範囲物理攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：6秒\n追加効果：自身に「是生滅法実行可」を付与する。\n効果時間：10秒\n効果中は「コンボ：旋風刃」が是生滅法に変化する。\n「三印自在」効果中は劫火滅却の術に変化する。\n\n三印自在さんいんじざい\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n自身に「三印自在」を付与し、忍術が発動できる状態になる。\nただし、同じ忍術は連続で発動できない。\n効果時間：10秒\n三印自在効果：星遁天誅以外のアクションが変化する。\n最大チャージ数：2\n「三印自在」効果中は命水に変化する。\n\n分身ぶんしんの術じゅつ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身に5スタックの「分身の術」を付与する。\n効果時間：20秒\n分身の術効果：自身がウェポンスキルを実行すると、分身が出現して追撃を行う。\n威力：5000\n風魔手裏剣、是生滅法は威力が半減する。\n追加効果：自身に「残影」を付与する。\n残影効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n「三印自在」効果中は風遁の術に変化する。\n\n縮地しゅくち\n\nアビリティ\nInstant\n20秒\n-\n\n20m\n\n0m\n\n指定した地点に向かって素早く移動する。\n追加効果：自身に「かくれる」を付与する。\n効果時間：4秒\nかくれる効果：敵から見えなくなり、ターゲットもされなくなる。\nアクションを実行するか、敵から攻撃を受けることで解除される。\n効果中は「コンボ：旋風刃」が終撃に変化する。\nバインド中は実行不可。\n「三印自在」効果中は土遁の術に変化する。\n\n是生滅法ぜしょうめっぽう\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に4回連続物理攻撃。\n威力：2500\n発動条件：「是生滅法実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n終撃しゅうげき\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n発動条件：「かくれる」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣爪げつえいらいじゅうそう\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n追加効果：自身に「月影雷獣牙実行可」を付与する。\n効果時間：5秒\n効果中は「コンボ：旋風刃」が月影雷獣牙に変化する。\n発動条件：「三印自在」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。\n\n月影雷獣牙げつえいらいじゅうが\n\nウェポン\nスキル\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：6000\n追加効果：対象をスタンさせる。\n効果時間：2秒\n発動条件：「月影雷獣牙実行可」効果中\nバインド中は実行不可。\n\n※このアクションはホットバーに登録することはできない。\n\n氷晶乱流ひょうしょうらんりゅうの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n20m\n\n0m\n\n対象に魔法攻撃。\n威力：18000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n劫火滅却ごうかめっきゃくの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n20m\n\n8m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：5000\n追加効果：対象に継続ダメージを付与する。\n威力：5000\n効果時間：12秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n命水めいすい\n\n魔法\nInstant\n\n2秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：8000\n追加効果：対象のＨＰを継続回復する。\n回復力：5000\n効果時間：12秒\n追加効果：対象に付与されている、浄化で解除可能な状態異常を1つ解除する。\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n風遁ふうとんの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n0m\n\n0m\n\n自身に「風遁の術」を付与する。\n風遁の術効果：自身に一定量のダメージを防ぐバリアを付与する。\nバリアの効果中はウェポンスキルのリキャストタイムを20％短縮させ、移動速度を50％上昇させる。\nバリア量：回復力16000相当\n効果時間：10秒\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n土遁どとんの術じゅつ\n\n魔法\nInstant\n\n2秒\n-\n\n0m\n\n5m\n\n自身の足元に「土遁の術」を生成する。\n効果時間：10秒\n土遁の術の自身への効果：範囲内にいる自身の被ダメージを15％軽減する。\n土遁の術の敵への効果：範囲内に入った敵に継続ダメージを与える。\n威力：3000\n発動条件：「三印自在」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n幻影野槌げんえいのづち\n\nアビリティ\nInstant\n-\n-\n\n100m\n\n5m\n\n自身が「土遁の術」を発生させているときにウェポンスキルか氷晶乱流の術、劫火滅却の術を実行すると、土遁の術の範囲内にいる敵に対して魔法攻撃。\n威力：3000\n追加効果：対象に75％ヘヴィを付与する。\n効果時間：3秒\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n星遁天誅せいとんてんちゅう\n\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象のＨＰが50％以下の場合、戦闘不能状態にさせる。\n追加効果：対象に「死の連鎖」を付与する。\n効果時間：2秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nこのアクションで対象を戦闘不能にするか、死の連鎖の対象が戦闘不能になると、自身に「星遁天誅実行可」が付与される。\n効果時間：8秒\n効果中は星遁天誅を再使用できる。\nこの効果は付与されるたびに効果時間が1秒ずつ減少し、最低4秒まで減少する。\n発動条件：「リミットゲージ」最大もしくは「星遁天誅実行可」効果中\n蓄積時間：90秒\nバインド中は実行不可。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

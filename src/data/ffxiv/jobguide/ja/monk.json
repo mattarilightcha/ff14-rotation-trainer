@@ -1,0 +1,1929 @@
+{
+ "job": "monk",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/monk/",
+ "pageTitle": "ジョブガイド「モンク」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\n型\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nかつてエオルゼア随一の軍事力を誇った城塞都市「アラミゴ」。\nその精強なる軍勢の中で、パイク兵と並び、\n他都市に恐れられたのが「モンク」と呼ばれる僧兵であった。\n\n「ラールガー星導教」の僧侶でもある彼らは、信奉する壊神「ラールガー」に一歩でも近づくため研鑽を積み、独自の格闘術を発展させてきた。\n\nチャクラを操る彼らは、己の身体能力を最大限に高め、舞うように闘うという。\n\nジョブ開始クエスト\n\n初期クラス：格闘士",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/7079a2bf92e2473c4a28b582850a44b5b8d2d9aa.png",
+   "https://lds-img.finalfantasyxiv.com/d/f0ebdb32af553d84dfd59abb4d868c6be17bf334.png",
+   "https://lds-img.finalfantasyxiv.com/d/eea79a3861a427c42750d650af3b17c611ac1f73.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f5525f96d26fa3bb52df3cd390fbabd126be062.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5bf98a4d13a858dc2c4932408eefe77c4f173c1.png",
+   "https://lds-img.finalfantasyxiv.com/d/d649439b0004da7643cbeaafe73e4e93f2572e61.png",
+   "https://lds-img.finalfantasyxiv.com/d/92b45621e9e88401316dc9bede7253b10d4facd8.png",
+   "https://lds-img.finalfantasyxiv.com/d/883edfbb5dec0daed23aa0447d6e7b28cf16b8d3.png",
+   "https://lds-img.finalfantasyxiv.com/d/5a0f246b748bb726d3626d3713bc71138f6bb86f.png",
+   "https://lds-img.finalfantasyxiv.com/d/9a4a20e6ff8843d06e066fd0ffb6f8f6944acac4.png",
+   "https://lds-img.finalfantasyxiv.com/d/e496f61cb81a7d95c751a64c3c416faa851216f0.png",
+   "https://lds-img.finalfantasyxiv.com/d/d5392c32b9d05bda3c0a4ee45c1d13cce2dee9e1.png",
+   "https://lds-img.finalfantasyxiv.com/d/576fee56715e5d7a353c36daab4c4e3a5546738e.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe6108fe3ff3591e8a6d3155c5764e53baf41397.png",
+   "https://lds-img.finalfantasyxiv.com/d/a6e218fec5415ba80ebdf6364458022bbd5b32d2.png",
+   "https://lds-img.finalfantasyxiv.com/d/a66c7c878615dad8345d7dce2aced30714572312.png",
+   "https://lds-img.finalfantasyxiv.com/d/da141fe139c2b20081a175704336a0af21f0f801.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f5525f96d26fa3bb52df3cd390fbabd126be062.png",
+   "https://lds-img.finalfantasyxiv.com/d/20a6e6104d8cad0e109bd0f56e1d26689017b871.png",
+   "https://lds-img.finalfantasyxiv.com/d/e42e291b8a444b9daf5c4bed5170e92d5c11872e.png",
+   "https://lds-img.finalfantasyxiv.com/d/c048e791bb8e3acbc39aed1eaf2e413c79367d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/86593521c943c9be34dd6bcf4bbcaf805b38ab3b.png",
+   "https://lds-img.finalfantasyxiv.com/d/5d44a1b394d5fe9d8ace8edcc742233d93127baa.png",
+   "https://lds-img.finalfantasyxiv.com/d/56b3a643f6f021d073e372428af662f204d82eb5.png",
+   "https://lds-img.finalfantasyxiv.com/d/9297680db2fae6085ff7c4607b7f593f1445d0ee.png",
+   "https://lds-img.finalfantasyxiv.com/d/f43b6c836fff7fa639c967aac3d6ef768fc1d16c.png",
+   "https://lds-img.finalfantasyxiv.com/d/615580fd49ed973d96fa084493f79bc87a2199a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/ab70fce75ed41f0bbaa02e4bc4b5c4a2ff39d07d.png",
+   "https://lds-img.finalfantasyxiv.com/d/5cfa2c17de4b6ddd285e621423f92b68d61cdf65.png",
+   "https://lds-img.finalfantasyxiv.com/d/e496f61cb81a7d95c751a64c3c416faa851216f0.png",
+   "https://lds-img.finalfantasyxiv.com/d/4609c042377d4e8c7cfd87920d95f2d48993dd3d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2e88997084591670e9454c1f089c14ccdb98a285.png",
+   "https://lds-img.finalfantasyxiv.com/d/747483adb10812567df5653fbd0d333c179fa3dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/3823c3483384694af79cd67f1b7740fb3e1636c7.png",
+   "https://lds-img.finalfantasyxiv.com/d/99e2472d285987b1eeefc2d693796a266d120078.png",
+   "https://lds-img.finalfantasyxiv.com/d/000c5561b5d49694d019252cf5bbd8db16d948aa.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b71871e5f6a0c0fbdefea14931fc459e6f6ca58.png",
+   "https://lds-img.finalfantasyxiv.com/d/9314f58e4df7e3392781a926bbd0480d3a9b5c71.png",
+   "https://lds-img.finalfantasyxiv.com/d/334dae96eb1b67c861a22e07a9c0f3c918130f5f.png",
+   "https://lds-img.finalfantasyxiv.com/d/d57a98ac83fa1f066de448639688b34ba4342a98.png",
+   "https://lds-img.finalfantasyxiv.com/d/6de38cd8ff4cddd607b2bb2afde0dd8a22774489.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/5ec9494d0971929187228a39aaff90a2b3d6a634.png",
+   "https://lds-img.finalfantasyxiv.com/d/527f4b68d64733c38d667f81c5e1f9d4875127ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/67078f08b4af6bacf409e67e4afca97ade589d1d.png",
+   "https://lds-img.finalfantasyxiv.com/d/566b6d31e2d4c1ac44da81f083861c60c96728ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/5c2b28f59b51e7c50f02730a081416d7c5523af2.png",
+   "https://lds-img.finalfantasyxiv.com/d/b677856385083b5b693f6f6ff5dd1a444fa7f30d.png",
+   "https://lds-img.finalfantasyxiv.com/d/fc732ca2151a2ae7012961e98e696865ad1e1d04.png",
+   "https://lds-img.finalfantasyxiv.com/d/d3e8881fa1db7986d1f229f79aec9ceaa9e9205d.png",
+   "https://lds-img.finalfantasyxiv.com/d/f1d0fb89b8edd7248064be9fd13aa927b40aadd2.png",
+   "https://lds-img.finalfantasyxiv.com/d/64a9bd6d68ae80af1ea8daa2410bd032d39b97be.png",
+   "https://lds-img.finalfantasyxiv.com/d/a54ed85ea1e9f400712c049ca5f8f6d503bd2ab6.png",
+   "https://lds-img.finalfantasyxiv.com/d/1ae1ba21d1370ccd4b265997c90fe227ed8d0766.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5310e97e21000736821f990996a09f2d0bba1e6.png",
+   "https://lds-img.finalfantasyxiv.com/d/db4da14c2bf5aabe9de5c2cc782225c7fb13b9a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/a/XnHnjQLJQ6KM1PS83ehplbjO7E.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "連撃れんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7079a2bf92e2473c4a28b582850a44b5b8d2d9aa.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：220\n壱の功力時威力：420\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：220<br/>壱の功力時威力：420<br/>壱の型効果中追加効果：必ずクリティカルヒットする。<br/>クリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>追加効果：自身に「弐の型」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "正拳せいけん突づき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0ebdb32af553d84dfd59abb4d868c6be17bf334.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：300\n弐の功力時威力：500\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：300<br/>弐の功力時威力：500<br/>追加効果：自身に「参の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「弐の型」効果中"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "崩拳ぽんけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eea79a3861a427c42750d650af3b17c611ac1f73.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 6,
+     "jobclassText": "Lv6",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：270\n参の功力時威力：420\n側面攻撃時威力：330\n参の功力時かつ側面攻撃時威力：480\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：270<br/>参の功力時威力：420<br/>側面攻撃時威力：330<br/>参の功力時かつ側面攻撃時威力：480<br/>追加効果：自身に「壱の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「参の型」効果中"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "鉄山闘気てつざんとうき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f5525f96d26fa3bb52df3cd390fbabd126be062.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "descriptionHtml": "自身に「闘気」を付与する。最大5スタックする。<br/>効果時間：永続<br/>自身が非戦闘状態であれば5スタックを付与する。<br/>発動条件：「闘気」5未満<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "鉄山靠てつざんこう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5bf98a4d13a858dc2c4932408eefe77c4f173c1.png",
+     "skillCellText": "鉄山靠てつざんこう\nクラスクエスト",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：180\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：180<br/>発動条件：自身が戦闘状態かつ「闘気」5"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "双掌打そうしょうだ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d649439b0004da7643cbeaafe73e4e93f2572e61.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：420\n追加効果：自身に「弐の功力」を付与する。\n弐の功力効果：竜頷正拳撃の威力を200上昇させる。\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：420<br/>追加効果：自身に「弐の功力」を付与する。<br/>弐の功力効果：竜頷正拳撃の威力を200上昇させる。<br/>追加効果：自身に「参の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「弐の型」効果中"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "壊神衝かいしんしょう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92b45621e9e88401316dc9bede7253b10d4facd8.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：110\n壱の型時威力：120\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：110<br/>壱の型時威力：120<br/>追加効果：自身に「弐の型」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "破砕拳はさいけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/883edfbb5dec0daed23aa0447d6e7b28cf16b8d3.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：360\n背面攻撃時威力：420\n追加効果：自身に2スタックの「参の功力」を付与する。\n参の功力効果：虎襲崩拳の威力を150上昇させる。\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：360<br/>背面攻撃時威力：420<br/>追加効果：自身に2スタックの「参の功力」を付与する。<br/>参の功力効果：虎襲崩拳の威力を150上昇させる。<br/>追加効果：自身に「壱の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「参の型」効果中"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "地烈斬ちれつざん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a0f246b748bb726d3626d3713bc71138f6bb86f.png",
+     "skillCellText": "地烈斬ちれつざん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：150\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：150<br/>追加効果：自身に「壱の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「参の型」効果中"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "抜重歩法ばつじゅうほほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9a4a20e6ff8843d06e066fd0ffb6f8f6944acac4.png",
+     "skillCellText": "抜重歩法ばつじゅうほほう\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。",
+     "descriptionHtml": "敵またはパーティメンバーひとりを対象とする。<br/>対象の目前まで素早く移動する。<br/>最大チャージ数：3<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "空鳴闘気くうめいとうき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e496f61cb81a7d95c751a64c3c416faa851216f0.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "descriptionHtml": "自身に「闘気」を付与する。最大5スタックする。<br/>効果時間：永続<br/>自身が非戦闘状態であれば5スタックを付与する。<br/>発動条件：「闘気」5未満<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "空鳴拳くうめいけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d5392c32b9d05bda3c0a4ee45c1d13cce2dee9e1.png",
+     "skillCellText": "空鳴拳くうめいけん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：100\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：100<br/>発動条件：自身が戦闘状態かつ「闘気」5"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "マントラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/576fee56715e5d7a353c36daab4c4e3a5546738e.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 42,
+     "jobclassText": "Lv42",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーが受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーが受けるＨＰ回復効果を10％上昇させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "四面脚しめんきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe6108fe3ff3591e8a6d3155c5764e53baf41397.png",
+     "skillCellText": "四面脚しめんきゃく\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：140\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：140<br/>追加効果：自身に「参の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「弐の型」効果中"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "双竜脚そうりゅうきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a6e218fec5415ba80ebdf6364458022bbd5b32d2.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：320\n壱の型効果中追加効果：自身に「壱の功力」を付与する。\n壱の功力効果：猿舞連撃の威力を200上昇させる。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：320<br/>壱の型効果中追加効果：自身に「壱の功力」を付与する。<br/>壱の功力効果：猿舞連撃の威力を200上昇させる。<br/>追加効果：自身に「弐の型」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "踏鳴ふみなり",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a66c7c878615dad8345d7dce2aced30714572312.png",
+     "skillCellText": "踏鳴ふみなり\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に3スタックの「踏鳴」を付与する。\n効果時間：20秒\n踏鳴効果：発動条件に「型」を持つウェポンスキルを、「型」が付与されていなくても実行できるようになる。\n追加効果：自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」を付与する。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」\n参の型を付与するウェポンスキル：「走竜のチャクラ」\n最大チャージ数：2\n発動条件：自身が戦闘状態かついずれのチャクラも付与されていない",
+     "descriptionHtml": "自身に3スタックの「踏鳴」を付与する。<br/>効果時間：20秒<br/>踏鳴効果：発動条件に「型」を持つウェポンスキルを、「型」が付与されていなくても実行できるようになる。<br/>追加効果：自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」を付与する。<br/>壱の型を付与するウェポンスキル：「猛虎のチャクラ」<br/>弐の型を付与するウェポンスキル：「魔猿のチャクラ」<br/>参の型を付与するウェポンスキル：「走竜のチャクラ」<br/>最大チャージ数：2<br/>発動条件：自身が戦闘状態かついずれのチャクラも付与されていない"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "演武えんぶ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/da141fe139c2b20081a175704336a0af21f0f801.png",
+     "skillCellText": "演武えんぶ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。",
+     "descriptionHtml": "自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "陰陽闘気おんみょうとうき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f5525f96d26fa3bb52df3cd390fbabd126be062.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "descriptionHtml": "自身に「闘気」を付与する。最大5スタックする。<br/>効果時間：永続<br/>自身が非戦闘状態であれば5スタックを付与する。<br/>発動条件：「闘気」5未満<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "陰陽闘気斬おんみょうとうきざん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/20a6e6104d8cad0e109bd0f56e1d26689017b871.png",
+     "skillCellText": "陰陽闘気斬おんみょうとうきざん\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：400\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：400<br/>発動条件：自身が戦闘状態かつ「闘気」5"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "必殺技ひっさつわざ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e42e291b8a444b9daf5c4bed5170e92d5c11872e.png",
+     "skillCellText": "必殺技ひっさつわざ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に3つの「チャクラ」が付与されていて、かつ特定の条件を満たす場合、必殺技を発動する。\n付与されているチャクラが1種類：「真空波」を発動する。\n付与されているチャクラが2種類：「天宙脚」を発動する。\n付与されているチャクラが3種類：「鳳凰の舞」を発動する。\nチャクラ3つと「陰の闘気」と「陽の闘気」：「夢幻闘舞」を発動する。",
+     "descriptionHtml": "自身に3つの「チャクラ」が付与されていて、かつ特定の条件を満たす場合、必殺技を発動する。<br/>付与されているチャクラが1種類：「真空波」を発動する。<br/>付与されているチャクラが2種類：「天宙脚」を発動する。<br/>付与されているチャクラが3種類：「鳳凰の舞」を発動する。<br/>チャクラ3つと「陰の闘気」と「陽の闘気」：「夢幻闘舞」を発動する。"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "闘魂旋風脚とうこんせんぷうきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c048e791bb8e3acbc39aed1eaf2e413c79367d23.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が闘魂旋風脚に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：1200<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が闘魂旋風脚に変化する。"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "蒼気砲そうきほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86593521c943c9be34dd6bcf4bbcaf805b38ab3b.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が蒼気砲に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：800<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「陰の闘気」を付与する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：自身に同じ「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が蒼気砲に変化する。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "天宙脚てんちゅうきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5d44a1b394d5fe9d8ace8edcc742233d93127baa.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：600\n追加効果：自身に「陰の闘気」を付与する。\n既に付与されている場合は「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が天宙脚に変化する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：600<br/>追加効果：自身に「陰の闘気」を付与する。<br/>既に付与されている場合は「陽の闘気」を付与する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：自身に「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が天宙脚に変化する。"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "爆裂脚ばくれつきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/56b3a643f6f021d073e372428af662f204d82eb5.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が爆裂脚に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：800<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「陽の闘気」を付与する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：自身に異なる「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が爆裂脚に変化する。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "金剛こんごうの極意ごくい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9297680db2fae6085ff7c4607b7f593f1445d0ee.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の被ダメージを20％軽減させる。\n効果時間：10秒\n追加効果：効果中に自身がダメージを受けると、自身に「金剛の決意」を付与する。\n金剛の決意効果：自身のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身に「金剛周天実行可」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "一定時間、自身の被ダメージを20％軽減させる。<br/>効果時間：10秒<br/>追加効果：効果中に自身がダメージを受けると、自身に「金剛の決意」を付与する。<br/>金剛の決意効果：自身のＨＰを継続回復する。<br/>回復力：100<br/>効果時間：15秒<br/>追加効果：自身に「金剛周天実行可」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "金剛周天こんごうしゅうてん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f43b6c836fff7fa639c967aac3d6ef768fc1d16c.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n金剛の決意効果中回復力：500\n発動条件：「金剛周天実行可」効果中",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：300<br/>金剛の決意効果中回復力：500<br/>発動条件：「金剛周天実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "紅蓮ぐれんの極意ごくい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/615580fd49ed973d96fa084493f79bc87a2199a6.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 68,
+     "jobclassText": "Lv68",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の与ダメージを15％上昇させる。\n効果時間：20秒\n追加効果：自身に「乾坤闘気弾実行可」を付与する。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の与ダメージを15％上昇させる。<br/>効果時間：20秒<br/>追加効果：自身に「乾坤闘気弾実行可」を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "桃園結義とうえんけつぎ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ab70fce75ed41f0bbaa02e4bc4b5c4a2ff39d07d.png",
+     "skillCellText": "桃園結義とうえんけつぎ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーに「桃園結義：攻撃」を付与する。\n効果時間：20秒\n桃園結義：攻撃効果：対象の与ダメージを5％上昇させる。\n追加効果：自身と周囲のパーティメンバーに「桃園結義：闘気」を付与する。\n効果時間：20秒\n桃園結義：闘気効果（自身の発動確率100％、パーティメンバーの発動確率20％）：自身または対象のパーティメンバーがウェポンスキルおよび魔法による攻撃を命中させると、自身に「闘気」が付与される。\nまた、闘気の最大スタック数が10に増加する。",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーに「桃園結義：攻撃」を付与する。<br/>効果時間：20秒<br/>桃園結義：攻撃効果：対象の与ダメージを5％上昇させる。<br/>追加効果：自身と周囲のパーティメンバーに「桃園結義：闘気」を付与する。<br/>効果時間：20秒<br/>桃園結義：闘気効果（自身の発動確率100％、パーティメンバーの発動確率20％）：自身または対象のパーティメンバーがウェポンスキルおよび魔法による攻撃を命中させると、自身に「闘気」が付与される。<br/>また、闘気の最大スタック数が10に増加する。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "疾風しっぷうの極意ごくい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5cfa2c17de4b6ddd285e621423f92b68d61cdf65.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のオートアタックの攻撃間隔を50％短縮させる。\n効果時間：15秒\n追加効果：自身に「絶空拳実行可」を付与する。\n効果時間：15秒",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔を50％短縮させる。<br/>効果時間：15秒<br/>追加効果：自身に「絶空拳実行可」を付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "万象闘気ばんしょうとうき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e496f61cb81a7d95c751a64c3c416faa851216f0.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。",
+     "descriptionHtml": "自身に「闘気」を付与する。最大5スタックする。<br/>効果時間：永続<br/>自身が非戦闘状態であれば5スタックを付与する。<br/>発動条件：「闘気」5未満<br/>このアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。<br/>さらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "万象闘気圏ばんしょうとうきけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4609c042377d4e8c7cfd87920d95f2d48993dd3d.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：160\n発動条件：自身が戦闘状態かつ「闘気」5",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：160<br/>発動条件：自身が戦闘状態かつ「闘気」5"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "六合星導脚りくごうせいどうきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2e88997084591670e9454c1f089c14ccdb98a285.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：780\n自身に付与されている「闘気」のスタック数に応じた威力が上乗せされる。\n1スタックごとの上乗せ威力：80\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\n実行時に「闘気」の効果が切れる。\nこのアクションはクリティカルヒットしても「闘気」が付与されない。\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：780<br/>自身に付与されている「闘気」のスタック数に応じた威力が上乗せされる。<br/>1スタックごとの上乗せ威力：80<br/>追加効果：自身の移動速度を上昇させる。<br/>効果時間：5秒<br/>実行時に「闘気」の効果が切れる。<br/>このアクションはクリティカルヒットしても「闘気」が付与されない。<br/>このウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "壊神脚かいしんきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/747483adb10812567df5653fbd0d333c179fa3dc.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：120\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：120<br/>壱の型効果中追加効果：必ずクリティカルヒットする。<br/>クリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>追加効果：自身に「弐の型」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "鳳凰ほうおうの舞まい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3823c3483384694af79cd67f1b7740fb3e1636c7.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に火属性範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が鳳凰の舞に変化する。",
+     "descriptionHtml": "自身の周囲の敵に火属性範囲物理攻撃。<br/>威力：900<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「陽の闘気」を付与する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：自身に異なる「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が鳳凰の舞に変化する。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "夢幻闘舞むげんとうぶ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/99e2472d285987b1eeefc2d693796a266d120078.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：1500\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が夢幻闘舞に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：1500<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が夢幻闘舞に変化する。"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "猿舞連撃さるまいれんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/000c5561b5d49694d019252cf5bbd8db16d948aa.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：260\n壱の功力時威力：460\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：260<br/>壱の功力時威力：460<br/>壱の型効果中追加効果：必ずクリティカルヒットする。<br/>クリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>追加効果：自身に「弐の型」を付与する。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "竜頷正拳撃りょうがんせいけんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b71871e5f6a0c0fbdefea14931fc459e6f6ca58.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：340\n弐の功力時威力：540\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：340<br/>弐の功力時威力：540<br/>追加効果：自身に「参の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「弐の型」効果中"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "虎襲崩拳こしゅうぽんけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9314f58e4df7e3392781a926bbd0480d3a9b5c71.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：310\n参の功力時威力：460\n側面攻撃時威力：370\n参の功力時かつ側面攻撃時威力：520\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：310<br/>参の功力時威力：460<br/>側面攻撃時威力：370<br/>参の功力時かつ側面攻撃時威力：520<br/>追加効果：自身に「壱の型」を付与する。<br/>効果時間：30秒<br/>発動条件：「参の型」効果中"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "真空波しんくうは",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/334dae96eb1b67c861a22e07a9c0f3c918130f5f.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が真空波に変化する。",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：900<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「陰の闘気」を付与する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：自身に同じ「チャクラ」が3つ付与されている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすと必殺技が真空波に変化する。"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "絶空拳ぜっくうけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d57a98ac83fa1f066de448639688b34ba4342a98.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：1040\n2体目以降の対象への威力は35％減少する。\n発動条件：「絶空拳実行可」効果中",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：1040<br/>2体目以降の対象への威力は35％減少する。<br/>発動条件：「絶空拳実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "乾坤闘気弾けんこんとうきだん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6de38cd8ff4cddd607b2bb2afde0dd8a22774489.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：1400\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「乾坤闘気弾実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：1400<br/>2体目以降の対象への威力は35％減少する。<br/>追加効果：自身に「零の型」を付与する。<br/>効果時間：30秒<br/>零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。<br/>その場合には追加効果も発動させることができる。<br/>発動条件：「乾坤闘気弾実行可」効果中"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：800",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "レッグスウィープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "3m",
+     "radius": "0m",
+     "description": "対象をスタンさせる。\n効果時間：3秒",
+     "descriptionHtml": "対象をスタンさせる。<br/>効果時間：3秒"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒",
+     "descriptionHtml": "一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "牽制けんせい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 22,
+     "jobclassText": "Lv22",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "アームズレングス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "TANK/タンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 32,
+     "jobclassText": "Lv32",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒<br/>追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "トゥルーノース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "疾風迅雷しっぷうじんらい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1242a4d2fe8af56a62e75a1000531a88feea9e79.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "description": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを5％短縮させる。",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを5％短縮させる。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "疾風迅雷しっぷうじんらい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f9c9b11440b158d1673d0d6e73be564ee3a1739d.png",
+     "acquired": [
+      {
+       "class": "格闘士",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/5cqUqFtgdpy9D9-dk0OPyDN9Os.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを10％短縮させる。",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを10％短縮させる。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "闘気充填とうきじゅうてんアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fcc57a368d5c174df67fa0d9b1b52a8a46d095d.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 38,
+     "jobclassText": "Lv38",
+     "description": "自身に「闘気」が付与される。\n発動条件：ウェポンスキルのクリティカルヒット時（発動確率80％）",
+     "descriptionHtml": "自身に「闘気」が付与される。<br/>発動条件：ウェポンスキルのクリティカルヒット時（発動確率80％）"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "疾風迅雷しっぷうじんらい効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c722533782523fde71657d9b1da71ec39391d486.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "鉄山靠てつざんこうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0369facfcb90d94cd3e519fa0d770f89bfaabd4.png",
+     "skillCellText": "鉄山靠てつざんこうマスタリー\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "鉄山闘気が陰陽闘気に、鉄山靠が陰陽闘気斬に変化する。",
+     "descriptionHtml": "鉄山闘気が陰陽闘気に、鉄山靠が陰陽闘気斬に変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "踏鳴ふみなり効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d3bfa3f6acfdaf5e631396c2d4f60b5d16e9eeeb.png",
+     "skillCellText": "踏鳴ふみなり効果こうかアップ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "description": "自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」が付与されるようになる。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」が付与される。\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」が付与される。\n参の型を付与するウェポンスキル：「走竜のチャクラ」が付与される。\n発動条件：「踏鳴」効果中",
+     "descriptionHtml": "自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」が付与されるようになる。<br/>壱の型を付与するウェポンスキル：「猛虎のチャクラ」が付与される。<br/>弐の型を付与するウェポンスキル：「魔猿のチャクラ」が付与される。<br/>参の型を付与するウェポンスキル：「走竜のチャクラ」が付与される。<br/>発動条件：「踏鳴」効果中"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "闘気充填とうきじゅうてんアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/883f2e334ece7ce39a8676efe7dc725a2dff404c.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "自身に「闘気」が付与される確率が100％に上昇する。\n発動条件：ウェポンスキルのクリティカルヒット時",
+     "descriptionHtml": "自身に「闘気」が付与される確率が100％に上昇する。<br/>発動条件：ウェポンスキルのクリティカルヒット時"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "空鳴拳くうめいけんマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cb2125dcefa5ad35158eac67b6081f315fcafbe1.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "空鳴闘気が万象闘気に、空鳴拳が万象闘気圏に変化する。",
+     "descriptionHtml": "空鳴闘気が万象闘気に、空鳴拳が万象闘気圏に変化する。"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "疾風迅雷しっぷうじんらい効果こうかアップIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/61ff7327b6bb6e92d08415f15a656180f4ce0bc2.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "description": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを20％短縮させる。",
+     "descriptionHtml": "自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを20％短縮させる。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "壊神衝かいしんしょうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c3284ece30744b936194114cfa0c84d304508fd2.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "壊神衝が壊神脚に変化する。",
+     "descriptionHtml": "壊神衝が壊神脚に変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "抜重歩法ばつじゅうほほう効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/99008f22bb1e8a5118d39fb1aed9a15ccde08e02.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "抜重歩法の最大チャージ数が3に増加する。",
+     "descriptionHtml": "抜重歩法の最大チャージ数が3に増加する。"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "特定のアクションの威力を上昇させる。\n\n連撃の威力：220\n正拳突きの威力：300\n崩拳の威力：270\n双掌打の威力：380\n破砕拳の威力：320\n双竜脚の威力：280\n陰陽闘気斬の威力：400",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>連撃の威力：220<br/>正拳突きの威力：300<br/>崩拳の威力：270<br/>双掌打の威力：380<br/>破砕拳の威力：320<br/>双竜脚の威力：280<br/>陰陽闘気斬の威力：400"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "爆裂脚ばくれつきゃくマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b633010b4060c9e4dcdb5b6f5719e5474904f58.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "description": "爆裂脚が鳳凰の舞に変化する。",
+     "descriptionHtml": "爆裂脚が鳳凰の舞に変化する。"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "桃園結義とうえんけつぎ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/de4667d29a9eea3463eb0dfca6c9f08ee3a82974.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "自身に付与される「桃園結義：闘気」による「闘気」の付与確率を100％に上昇させる。",
+     "descriptionHtml": "自身に付与される「桃園結義：闘気」による「闘気」の付与確率を100％に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "闘魂旋風脚とうこんせんぷうきゃくマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d414efb84014697b1d6122949797e5874763c842.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "闘魂旋風脚が夢幻闘舞に変化する。",
+     "descriptionHtml": "闘魂旋風脚が夢幻闘舞に変化する。"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "象形拳しょうけいけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3385580f3c7997901e536e937ec95ebac2108e38.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "連撃が猿舞連撃に、正拳突きが竜頷正拳撃に、崩拳が虎襲崩拳に、蒼気砲が真空波に変化する。",
+     "descriptionHtml": "連撃が猿舞連撃に、正拳突きが竜頷正拳撃に、崩拳が虎襲崩拳に、蒼気砲が真空波に変化する。"
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "アクション威力いりょくアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\n双掌打の威力：420\n破砕拳の威力：360\n双竜脚の威力：320\n六合星導脚の威力：780\n夢幻闘舞の威力：1500",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>双掌打の威力：420<br/>破砕拳の威力：360<br/>双竜脚の威力：320<br/>六合星導脚の威力：780<br/>夢幻闘舞の威力：1500"
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "疾風しっぷうの極意ごくい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b4bb68b7f3879342409b0b2fe05802ee090f6284.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "自身に「絶空拳実行可」が付与される。\n効果時間：15秒\n発動条件：疾風の極意実行時",
+     "descriptionHtml": "自身に「絶空拳実行可」が付与される。<br/>効果時間：15秒<br/>発動条件：疾風の極意実行時"
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "紅蓮ぐれんの極意ごくい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86250eda8f18aa1992fb138ecbcbdbb29d3329ea.png",
+     "acquired": [
+      {
+       "class": "モンク",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/C/Ce_VQB6VPPJKTGJwxf3h5iujp4.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「乾坤闘気弾実行可」が付与される。\n効果時間：20秒\n発動条件：紅蓮の極意実行時",
+     "descriptionHtml": "自身に「乾坤闘気弾実行可」が付与される。<br/>効果時間：20秒<br/>発動条件：紅蓮の極意実行時"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "内丹ないたん効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS/遠隔物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "内丹の回復力を800に上昇させる。",
+     "descriptionHtml": "内丹の回復力を800に上昇させる。"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "牽制けんせい効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS/近接物理DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "牽制の効果時間を15秒に延長する。",
+     "descriptionHtml": "牽制の効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "双竜脚そうりゅうきゃく",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ec9494d0971929187228a39aaff90a2b3d6a634.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "双掌打そうしょうだ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/527f4b68d64733c38d667f81c5e1f9d4875127ac.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6500\nコンボ条件：双竜脚\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6500<br/>コンボ条件：双竜脚<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "破砕拳はさいけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67078f08b4af6bacf409e67e4afca97ade589d1d.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：7000\nコンボ条件：双掌打\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：7000<br/>コンボ条件：双掌打<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "猿舞連撃さるまいれんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/566b6d31e2d4c1ac44da81f083861c60c96728ac.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：8000\nコンボ条件：破砕拳\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：8000<br/>コンボ条件：破砕拳<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "竜頷正拳撃りょうがんせいけんげき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c2b28f59b51e7c50f02730a081416d7c5523af2.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：8500\nコンボ条件：猿舞連撃\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：8500<br/>コンボ条件：猿舞連撃<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "虎襲崩拳こしゅうぽんけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b677856385083b5b693f6f6ff5dd1a444fa7f30d.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：9000\nコンボ条件：竜頷正拳撃\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：9000<br/>コンボ条件：竜頷正拳撃<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "夢幻闘舞むげんとうぶ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fc732ca2151a2ae7012961e98e696865ad1e1d04.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "1.8秒",
+     "cost": "-",
+     "range": "6m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：12000\nコンボ条件：虎襲崩拳\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：12000<br/>コンボ条件：虎襲崩拳<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "絶空拳ぜっくうけん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d3e8881fa1db7986d1f229f79aec9ceaa9e9205d.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "10m",
+     "description": "対象に向かって前方直線範囲物理攻撃。\n威力：8000\n追加効果：メインターゲットを15mノックバックする。\nノックバックに成功すると、対象に「急所経穴」を付与する。\n効果時間：4秒\n急所経穴効果：自身から対象にウェポンスキルを実行すると追加ダメージを与える。\n威力：12000\n追加ダメージが発生すると急所経穴は解除される。\n追加効果：自身に「疾風の神髄」を付与する。\n効果時間：4秒\n疾風の神髄効果：自身の移動速度を50％上昇させる。\nこのウェポンスキルは固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に向かって前方直線範囲物理攻撃。<br/>威力：8000<br/>追加効果：メインターゲットを15mノックバックする。<br/>ノックバックに成功すると、対象に「急所経穴」を付与する。<br/>効果時間：4秒<br/>急所経穴効果：自身から対象にウェポンスキルを実行すると追加ダメージを与える。<br/>威力：12000<br/>追加ダメージが発生すると急所経穴は解除される。<br/>追加効果：自身に「疾風の神髄」を付与する。<br/>効果時間：4秒<br/>疾風の神髄効果：自身の移動速度を50％上昇させる。<br/>このウェポンスキルは固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "鳳凰ほうおうの舞まい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f1d0fb89b8edd7248064be9fd13aa927b40aadd2.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "6m",
+     "description": "自身の周囲の敵に範囲物理攻撃。\n威力：4000\n追加効果：自身に「紅蓮の神髄」を付与する。\n紅蓮の神髄効果：次に実行する1回のウェポンスキルの与ダメージが50％上昇する。\n効果時間：10秒\n最大チャージ数：2",
+     "descriptionHtml": "自身の周囲の敵に範囲物理攻撃。<br/>威力：4000<br/>追加効果：自身に「紅蓮の神髄」を付与する。<br/>紅蓮の神髄効果：次に実行する1回のウェポンスキルの与ダメージが50％上昇する。<br/>効果時間：10秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "金剛こんごうの極意ごくい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/64a9bd6d68ae80af1ea8daa2410bd032d39b97be.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "24秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「金剛の神髄」を付与する。\n金剛の神髄効果：効果中に自身がダメージを受けるとそのダメージを蓄積する。\nまた、効果中はこのアクションが金剛転輪に変化する。\n効果時間：8秒\n金剛転輪を実行すると、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分",
+     "descriptionHtml": "自身に「金剛の神髄」を付与する。<br/>金剛の神髄効果：効果中に自身がダメージを受けるとそのダメージを蓄積する。<br/>また、効果中はこのアクションが金剛転輪に変化する。<br/>効果時間：8秒<br/>金剛転輪を実行すると、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。<br/>ダメージ量：威力4000＋蓄積されたダメージの25％分<br/>回復量：回復力8000＋蓄積されたダメージの50％分"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "抜重歩法ばつじゅうほほう",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a54ed85ea1e9f400712c049ca5f8f6d503bd2ab6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "8秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象の目前まで素早く移動する。\n追加効果：敵を対象とした場合は自身に、味方を対象とした場合はその対象に、一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：5秒\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象の目前まで素早く移動する。<br/>追加効果：敵を対象とした場合は自身に、味方を対象とした場合はその対象に、一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力8000相当<br/>効果時間：5秒<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "乾坤闘気弾けんこんとうきだん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1ae1ba21d1370ccd4b265997c90fe227ed8d0766.png",
+     "type": "ウェポンスキル",
+     "cast": "Instant",
+     "recast": "16秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n最大チャージ数：2",
+     "descriptionHtml": "対象とその周囲の敵に範囲物理攻撃。<br/>威力：8000<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "金剛転輪こんごうてんりん",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5310e97e21000736821f990996a09f2d0bba1e6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "6m",
+     "description": "自身に付与した「金剛の神髄」の効果を終了させて、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分\n発動条件：「金剛の神髄」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身に付与した「金剛の神髄」の効果を終了させて、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。<br/>ダメージ量：威力4000＋蓄積されたダメージの25％分<br/>回復量：回復力8000＋蓄積されたダメージの50％分<br/>発動条件：「金剛の神髄」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "メテオドライヴ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/db4da14c2bf5aabe9de5c2cc782225c7fb13b9a8.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "20m",
+     "radius": "0m",
+     "description": "対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御を解除したうえでダメージを与える。\n追加効果：対象に「メテオドライヴ」を付与し、さらに追加ダメージを与える。\n効果時間：3秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nメテオドライヴ効果：体の自由を奪われ行動できない。\nメテオドライヴによる追加ダメージ量：4000×3\n発動条件：「リミットゲージ」最大\n蓄積時間：75秒\nバインド中は実行不可。",
+     "descriptionHtml": "対象に急接近して物理攻撃。<br/>威力：12000<br/>このアクションは、対象が実行している防御を解除したうえでダメージを与える。<br/>追加効果：対象に「メテオドライヴ」を付与し、さらに追加ダメージを与える。<br/>効果時間：3秒<br/>対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。<br/>メテオドライヴ効果：体の自由を奪われ行動できない。<br/>メテオドライヴによる追加ダメージ量：4000×3<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：75秒<br/>バインド中は実行不可。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ブラッドバス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒",
+     "descriptionHtml": "自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "スウィフト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。",
+     "descriptionHtml": "自身の移動速度を100％上昇させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>この効果はマウントに騎乗すると解除される。"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "スマイト",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "10m",
+     "radius": "0m",
+     "description": "対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。",
+     "descriptionHtml": "対象に物理攻撃。<br/>威力：6000～18000<br/>このアクションは、対象が実行している防御の効果を無視してダメージを与える。<br/>対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。<br/>自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "他のクラス・ジョブとは異なり、一部のアクションは付与された「型」に応じて選択できるようになります。\n一部のアクションは、「功力」が付与された状態で使うことで威力アップ効果が得られます。",
+  "routes": [],
+  "allText": "型\n\n他のクラス・ジョブとは異なり、一部のアクションは付与された「型」に応じて選択できるようになります。\n一部のアクションは、「功力」が付与された状態で使うことで威力アップ効果が得られます。\n型の付与\n\n壱の型：魔猿\n\n連撃\n\n双竜脚\n\n壊神脚 (壊神衝)\n<範囲攻撃>\n\n猿舞連撃\n\n追加効果\n「弐の型」を付与する\n\n双竜脚：「猿舞連撃」の威力を上昇させる「壱の功力」を付与する\n\n「壱の型」が付与されているときは次の効果が得られる。\n連撃：必ずクリティカルヒットする\n壊神衝：威力が上昇する\n壊神脚：必ずクリティカルヒットする\n猿舞連撃：必ずクリティカルヒットする\n\n弐の型：走竜\n\n正拳突き\n\n双掌打\n\n四面脚 <範囲攻撃>\n\n竜頷正拳撃\n\n追加効果\n「参の型」を付与する\n\n双掌打：「竜頷正拳撃」の威力を上昇させる「弐の功力」を付与する\n\n参の型：猛虎\n\n崩拳 <側面>\n\n破砕拳 <背面>\n\n地烈斬 <範囲攻撃>\n\n虎襲崩拳 <側面>\n\n追加効果\n「壱の型」を付与する\n\n破砕拳：「虎襲崩拳」の威力を上昇させる「参の功力」を付与する\n\n※カッコ（）内は特性修得前のアクションです。"
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "闘気シンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/_/IpshxgdetMHlYocNwqH3Ecw9Ro.png"
+    ]
+   },
+   {
+    "title": "象形拳シンボル",
+    "images": []
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/I/SehS4i68qgEsB0f7KuQWyFLXmg.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/T/pd7OXWddvRCSSoxHCUsn9yXtto.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/L/EfDdDnsLVPh1OXbXB7afMM_RZI.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/F/YqHaU4s50GVrJ_fg6RLWTswzpc.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\n闘気シンボル\n\nアクション「鉄山闘気」を修得すると、\"闘気\"の蓄積状態を示す「闘気シンボル」が表示されるようになります。\n闘気は、最大まで蓄積することで「鉄山靠」や、レベル40で修得する「空鳴拳」、レベル54で修得する「陰陽闘気斬」、レベル74で修得する「万象闘気圏」を実行できます。\n\nレベル70でアクション「桃園結義」を修得し実行すると、自身と周囲のパーティメンバーに「桃園結義：闘気」が付与され、「桃園結義：闘気」効果中に限り、\"闘気\"を最大10個まで蓄積させることができます。\n象形拳シンボル\n\nアクション「双掌打」を修得することで、\"功力\"の蓄積状態を確認できる「象形拳シンボル」が表示されるようになります。\n「双掌打」やレベル30で修得する「破砕拳」、レベル50で修得する「双竜脚」を実行すると功力が付与されます。\n功力には\"壱の功力\"、\"弐の功力\"、\"参の功力\"があり、それぞれの功力に対応するウェポンスキルの威力を上昇させることができます。\n\nレベル60で特性「踏鳴効果アップ」修得すると、「象形拳シンボル」に\"チャクラ\"と\"陰陽の闘気\"が表示されるようになります。\nチャクラは\"魔猿のチャクラ\"、\"走竜のチャクラ\"、\"猛虎のチャクラ\"の3種類があり、特定のウェポンスキルを実行することで付与されます。\n付与されたチャクラの組み合わせにより異なる3つのアクションが実行可能です。\n同じチャクラを3つ付与することでアクション「蒼気砲」を実行できます。\n3種類のチャクラをすべて付与するとアクション「爆裂脚」を実行できます。\n種類を問わず3つのチャクラを付与するとアクション「天宙脚」を実行できます。\nまた、「蒼気砲」を実行すると\"陰の闘気\"が付与され、「爆裂脚」を実行すると\"陽の闘気\"が付与されます。\nさらに陰の闘気と陽の闘気が付与された状態で、チャクラが種類を問わず3つ付与されると「夢幻闘舞」を実行できます。\n\nシンプルモード\n\n闘気シンボル\n\n「闘気」スタック時\n\n「桃園結義：闘気」状態（闘気×8）\n\n象形拳シンボル\n\n「功力」スタック時\n\n「チャクラ」、「陰陽の闘気」スタック時",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">闘気シンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/f/wLOymzMUQpKJMnNAM9WF3SF21M.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「鉄山闘気」</span>を修得すると、<span class=\"txt_red\">\"闘気\"</span>の蓄積状態を示す<span class=\"txt_red\">「闘気シンボル」</span>が表示されるようになります。<br/>闘気は、最大まで蓄積することで<span class=\"txt_red\">「鉄山靠」</span>や、レベル40で修得する<span class=\"txt_red\">「空鳴拳」</span>、レベル54で修得する<span class=\"txt_red\">「陰陽闘気斬」</span>、レベル74で修得する<span class=\"txt_red\">「万象闘気圏」</span>を実行できます。</p>\n</div>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/_/IpshxgdetMHlYocNwqH3Ecw9Ro.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">レベル70でアクション<span class=\"txt_red\">「桃園結義」</span>を修得し実行すると、自身と周囲のパーティメンバーに<span class=\"txt_red\">「桃園結義：闘気」</span>が付与され、「桃園結義：闘気」効果中に限り、<span class=\"txt_red\">\"闘気\"</span>を最大10個まで蓄積させることができます。</p>\n<h3 class=\"job__hud__title\">象形拳シンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/K/qmlyJdSzJGbzjAthwERvxkLMNU.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「双掌打」</span>を修得することで、<span class=\"txt_red\">\"功力\"</span>の蓄積状態を確認できる<span class=\"txt_red\">「象形拳シンボル」</span>が表示されるようになります。<br/>「双掌打」やレベル30で修得する<span class=\"txt_red\">「破砕拳」</span>、レベル50で修得する<span class=\"txt_red\">「双竜脚」</span>を実行すると功力が付与されます。<br/>功力には<span class=\"txt_red\">\"壱の功力\"</span>、<span class=\"txt_red\">\"弐の功力\"</span>、<span class=\"txt_red\">\"参の功力\"</span>があり、それぞれの功力に対応するウェポンスキルの威力を上昇させることができます。</p>\n</div>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/s/9IVEhDXNCHE4c2Qu597uMPR2Xg.png\" width=\"290\"/>\n<p class=\"job__hud__text text_right\">レベル60で特性<span class=\"txt_red\">「踏鳴効果アップ」</span>修得すると、「象形拳シンボル」に<span class=\"txt_red\">\"チャクラ\"</span>と<span class=\"txt_red\">\"陰陽の闘気\"</span>が表示されるようになります。<br/>チャクラは<span class=\"txt_red\">\"魔猿のチャクラ\"、\"走竜のチャクラ\"、\"猛虎のチャクラ\"</span>の3種類があり、特定のウェポンスキルを実行することで付与されます。<br/>付与されたチャクラの組み合わせにより異なる3つのアクションが実行可能です。<br/>同じチャクラを3つ付与することでアクション<span class=\"txt_red\">「蒼気砲」</span>を実行できます。<br/>3種類のチャクラをすべて付与するとアクション<span class=\"txt_red\">「爆裂脚」</span>を実行できます。<br/>種類を問わず3つのチャクラを付与するとアクション<span class=\"txt_red\">「天宙脚」</span>を実行できます。<br/>また、「蒼気砲」を実行すると<span class=\"txt_red\">\"陰の闘気\"</span>が付与され、「爆裂脚」を実行すると<span class=\"txt_red\">\"陽の闘気\"</span>が付与されます。<br/>さらに陰の闘気と陽の闘気が付与された状態で、チャクラが種類を問わず3つ付与されると<span class=\"txt_red\">「夢幻闘舞」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">闘気シンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/I/SehS4i68qgEsB0f7KuQWyFLXmg.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「闘気」スタック時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/T/pd7OXWddvRCSSoxHCUsn9yXtto.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「桃園結義：闘気」状態（闘気×8）</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">象形拳シンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/L/EfDdDnsLVPh1OXbXB7afMM_RZI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「功力」スタック時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/F/YqHaU4s50GVrJ_fg6RLWTswzpc.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「チャクラ」、「陰陽の闘気」スタック時</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/f/wLOymzMUQpKJMnNAM9WF3SF21M.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/IpshxgdetMHlYocNwqH3Ecw9Ro.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/qmlyJdSzJGbzjAthwERvxkLMNU.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/s/9IVEhDXNCHE4c2Qu597uMPR2Xg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/I/SehS4i68qgEsB0f7KuQWyFLXmg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/T/pd7OXWddvRCSSoxHCUsn9yXtto.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/L/EfDdDnsLVPh1OXbXB7afMM_RZI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/F/YqHaU4s50GVrJ_fg6RLWTswzpc.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/monk/01.png",
+   "public/jobguide/hud/monk/02.png",
+   "public/jobguide/hud/monk/03.png",
+   "public/jobguide/hud/monk/04.png",
+   "public/jobguide/hud/monk/05.png",
+   "public/jobguide/hud/monk/06.png",
+   "public/jobguide/hud/monk/07.png",
+   "public/jobguide/hud/monk/08.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n連撃れんげき\n\nLv1\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：220\n壱の功力時威力：420\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n正拳せいけん突づき\n\nLv4\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n弐の功力時威力：500\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n崩拳ぽんけん\n\nLv6\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：270\n参の功力時威力：420\n側面攻撃時威力：330\n参の功力時かつ側面攻撃時威力：480\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n鉄山闘気てつざんとうき\n\nLv15\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n鉄山靠てつざんこう\n\nクラスクエスト\n\nLv15\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：180\n発動条件：自身が戦闘状態かつ「闘気」5\n\n双掌打そうしょうだ\n\nLv18\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：420\n追加効果：自身に「弐の功力」を付与する。\n弐の功力効果：竜頷正拳撃の威力を200上昇させる。\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n壊神衝かいしんしょう\n\nLv26\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：110\n壱の型時威力：120\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n破砕拳はさいけん\n\nLv30\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：360\n背面攻撃時威力：420\n追加効果：自身に2スタックの「参の功力」を付与する。\n参の功力効果：虎襲崩拳の威力を150上昇させる。\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n地烈斬ちれつざん\n\nジョブクエスト\n\nLv30\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：150\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n抜重歩法ばつじゅうほほう\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。\n\n空鳴闘気くうめいとうき\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n空鳴拳くうめいけん\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\n発動条件：自身が戦闘状態かつ「闘気」5\n\nマントラ\n\nLv42\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーが受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒\n\n四面脚しめんきゃく\n\nジョブクエスト\n\nLv45\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：140\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n双竜脚そうりゅうきゃく\n\nLv50\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：320\n壱の型効果中追加効果：自身に「壱の功力」を付与する。\n壱の功力効果：猿舞連撃の威力を200上昇させる。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n踏鳴ふみなり\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「踏鳴」を付与する。\n効果時間：20秒\n踏鳴効果：発動条件に「型」を持つウェポンスキルを、「型」が付与されていなくても実行できるようになる。\n追加効果：自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」を付与する。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」\n参の型を付与するウェポンスキル：「走竜のチャクラ」\n最大チャージ数：2\n発動条件：自身が戦闘状態かついずれのチャクラも付与されていない\n\n演武えんぶ\n\nジョブクエスト\n\nLv52\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n0m\n\n自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n\n陰陽闘気おんみょうとうき\n\nLv54\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n陰陽闘気斬おんみょうとうきざん\n\nジョブクエスト\n\nLv54\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：400\n発動条件：自身が戦闘状態かつ「闘気」5\n\n必殺技ひっさつわざ\n\nジョブクエスト\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n0m\n\n自身に3つの「チャクラ」が付与されていて、かつ特定の条件を満たす場合、必殺技を発動する。\n付与されているチャクラが1種類：「真空波」を発動する。\n付与されているチャクラが2種類：「天宙脚」を発動する。\n付与されているチャクラが3種類：「鳳凰の舞」を発動する。\nチャクラ3つと「陰の闘気」と「陽の闘気」：「夢幻闘舞」を発動する。\n\n闘魂旋風脚とうこんせんぷうきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が闘魂旋風脚に変化する。\n\n蒼気砲そうきほう\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が蒼気砲に変化する。\n\n天宙脚てんちゅうきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：600\n追加効果：自身に「陰の闘気」を付与する。\n既に付与されている場合は「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が天宙脚に変化する。\n\n爆裂脚ばくれつきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が爆裂脚に変化する。\n\n金剛こんごうの極意ごくい\n\nLv64\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを20％軽減させる。\n効果時間：10秒\n追加効果：効果中に自身がダメージを受けると、自身に「金剛の決意」を付与する。\n金剛の決意効果：自身のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身に「金剛周天実行可」を付与する。\n効果時間：30秒\n\n金剛周天こんごうしゅうてん\n\nLv64\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n金剛の決意効果中回復力：500\n発動条件：「金剛周天実行可」効果中\n\n紅蓮ぐれんの極意ごくい\n\nLv68\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の与ダメージを15％上昇させる。\n効果時間：20秒\n追加効果：自身に「乾坤闘気弾実行可」を付与する。\n効果時間：20秒\n\n桃園結義とうえんけつぎ\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーに「桃園結義：攻撃」を付与する。\n効果時間：20秒\n桃園結義：攻撃効果：対象の与ダメージを5％上昇させる。\n追加効果：自身と周囲のパーティメンバーに「桃園結義：闘気」を付与する。\n効果時間：20秒\n桃園結義：闘気効果（自身の発動確率100％、パーティメンバーの発動確率20％）：自身または対象のパーティメンバーがウェポンスキルおよび魔法による攻撃を命中させると、自身に「闘気」が付与される。\nまた、闘気の最大スタック数が10に増加する。\n\n疾風しっぷうの極意ごくい\n\nLv72\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身のオートアタックの攻撃間隔を50％短縮させる。\n効果時間：15秒\n追加効果：自身に「絶空拳実行可」を付与する。\n効果時間：15秒\n\n万象闘気ばんしょうとうき\n\nLv74\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n万象闘気圏ばんしょうとうきけん\n\nLv74\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：160\n発動条件：自身が戦闘状態かつ「闘気」5\n\n六合星導脚りくごうせいどうきゃく\n\nLv80\n\nウェポン\nスキル\nInstant\n4秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：780\n自身に付与されている「闘気」のスタック数に応じた威力が上乗せされる。\n1スタックごとの上乗せ威力：80\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\n実行時に「闘気」の効果が切れる。\nこのアクションはクリティカルヒットしても「闘気」が付与されない。\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n壊神脚かいしんきゃく\n\nLv82\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n鳳凰ほうおうの舞まい\n\nLv86\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に火属性範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が鳳凰の舞に変化する。\n\n夢幻闘舞むげんとうぶ\n\nLv90\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1500\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が夢幻闘舞に変化する。\n\n猿舞連撃さるまいれんげき\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：260\n壱の功力時威力：460\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n竜頷正拳撃りょうがんせいけんげき\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n弐の功力時威力：540\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n虎襲崩拳こしゅうぽんけん\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：310\n参の功力時威力：460\n側面攻撃時威力：370\n参の功力時かつ側面攻撃時威力：520\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n真空波しんくうは\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が真空波に変化する。\n\n絶空拳ぜっくうけん\n\nLv96\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：1040\n2体目以降の対象への威力は35％減少する。\n発動条件：「絶空拳実行可」効果中\n\n乾坤闘気弾けんこんとうきだん\n\nLv100\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1400\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「乾坤闘気弾実行可」効果中"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\n疾風迅雷しっぷうじんらい\n\nLv1\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを5％短縮させる。\n\n疾風迅雷しっぷうじんらい効果こうかアップ\n\nLv20\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを10％短縮させる。\n\n闘気充填とうきじゅうてんアップ\n\nLv38\n\n自身に「闘気」が付与される。\n発動条件：ウェポンスキルのクリティカルヒット時（発動確率80％）\n\n疾風迅雷しっぷうじんらい効果こうかアップIIつー\n\nLv40\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n\n鉄山靠てつざんこうマスタリー\n\nジョブクエスト\n\nLv54\n\n鉄山闘気が陰陽闘気に、鉄山靠が陰陽闘気斬に変化する。\n\n踏鳴ふみなり効果こうかアップ\n\nジョブクエスト\n\nLv60\n\n自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」が付与されるようになる。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」が付与される。\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」が付与される。\n参の型を付与するウェポンスキル：「走竜のチャクラ」が付与される。\n発動条件：「踏鳴」効果中\n\n闘気充填とうきじゅうてんアップIIつー\n\nLv74\n\n自身に「闘気」が付与される確率が100％に上昇する。\n発動条件：ウェポンスキルのクリティカルヒット時\n\n空鳴拳くうめいけんマスタリー\n\nLv74\n\n空鳴闘気が万象闘気に、空鳴拳が万象闘気圏に変化する。\n\n疾風迅雷しっぷうじんらい効果こうかアップIIIすりー\n\nLv76\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを20％短縮させる。\n\n壊神衝かいしんしょうマスタリー\n\nLv82\n\n壊神衝が壊神脚に変化する。\n\n抜重歩法ばつじゅうほほう効果こうかアップ\n\nLv84\n\n抜重歩法の最大チャージ数が3に増加する。\n\nアクション威力いりょくアップ\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n連撃の威力：220\n正拳突きの威力：300\n崩拳の威力：270\n双掌打の威力：380\n破砕拳の威力：320\n双竜脚の威力：280\n陰陽闘気斬の威力：400\n\n爆裂脚ばくれつきゃくマスタリー\n\nLv86\n\n爆裂脚が鳳凰の舞に変化する。\n\n桃園結義とうえんけつぎ効果こうかアップ\n\nLv88\n\n自身に付与される「桃園結義：闘気」による「闘気」の付与確率を100％に上昇させる。\n\n闘魂旋風脚とうこんせんぷうきゃくマスタリー\n\nLv90\n\n闘魂旋風脚が夢幻闘舞に変化する。\n\n象形拳しょうけいけん\n\nLv92\n\n連撃が猿舞連撃に、正拳突きが竜頷正拳撃に、崩拳が虎襲崩拳に、蒼気砲が真空波に変化する。\n\nアクション威力いりょくアップIIつー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n双掌打の威力：420\n破砕拳の威力：360\n双竜脚の威力：320\n六合星導脚の威力：780\n夢幻闘舞の威力：1500\n\n疾風しっぷうの極意ごくい効果こうかアップ\n\nLv96\n\n自身に「絶空拳実行可」が付与される。\n効果時間：15秒\n発動条件：疾風の極意実行時\n\n紅蓮ぐれんの極意ごくい効果こうかアップ\n\nLv100\n\n自身に「乾坤闘気弾実行可」が付与される。\n効果時間：20秒\n発動条件：紅蓮の極意実行時"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "型",
+   "anchor": "anchor__pve_combo",
+   "text": "型\n\n他のクラス・ジョブとは異なり、一部のアクションは付与された「型」に応じて選択できるようになります。\n一部のアクションは、「功力」が付与された状態で使うことで威力アップ効果が得られます。\n型の付与\n\n壱の型：魔猿\n\n連撃\n\n双竜脚\n\n壊神脚 (壊神衝)\n<範囲攻撃>\n\n猿舞連撃\n\n追加効果\n「弐の型」を付与する\n\n双竜脚：「猿舞連撃」の威力を上昇させる「壱の功力」を付与する\n\n「壱の型」が付与されているときは次の効果が得られる。\n連撃：必ずクリティカルヒットする\n壊神衝：威力が上昇する\n壊神脚：必ずクリティカルヒットする\n猿舞連撃：必ずクリティカルヒットする\n\n弐の型：走竜\n\n正拳突き\n\n双掌打\n\n四面脚 <範囲攻撃>\n\n竜頷正拳撃\n\n追加効果\n「参の型」を付与する\n\n双掌打：「竜頷正拳撃」の威力を上昇させる「弐の功力」を付与する\n\n参の型：猛虎\n\n崩拳 <側面>\n\n破砕拳 <背面>\n\n地烈斬 <範囲攻撃>\n\n虎襲崩拳 <側面>\n\n追加効果\n「壱の型」を付与する\n\n破砕拳：「虎襲崩拳」の威力を上昇させる「参の功力」を付与する\n\n※カッコ（）内は特性修得前のアクションです。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\n闘気シンボル\n\nアクション「鉄山闘気」を修得すると、\"闘気\"の蓄積状態を示す「闘気シンボル」が表示されるようになります。\n闘気は、最大まで蓄積することで「鉄山靠」や、レベル40で修得する「空鳴拳」、レベル54で修得する「陰陽闘気斬」、レベル74で修得する「万象闘気圏」を実行できます。\n\nレベル70でアクション「桃園結義」を修得し実行すると、自身と周囲のパーティメンバーに「桃園結義：闘気」が付与され、「桃園結義：闘気」効果中に限り、\"闘気\"を最大10個まで蓄積させることができます。\n象形拳シンボル\n\nアクション「双掌打」を修得することで、\"功力\"の蓄積状態を確認できる「象形拳シンボル」が表示されるようになります。\n「双掌打」やレベル30で修得する「破砕拳」、レベル50で修得する「双竜脚」を実行すると功力が付与されます。\n功力には\"壱の功力\"、\"弐の功力\"、\"参の功力\"があり、それぞれの功力に対応するウェポンスキルの威力を上昇させることができます。\n\nレベル60で特性「踏鳴効果アップ」修得すると、「象形拳シンボル」に\"チャクラ\"と\"陰陽の闘気\"が表示されるようになります。\nチャクラは\"魔猿のチャクラ\"、\"走竜のチャクラ\"、\"猛虎のチャクラ\"の3種類があり、特定のウェポンスキルを実行することで付与されます。\n付与されたチャクラの組み合わせにより異なる3つのアクションが実行可能です。\n同じチャクラを3つ付与することでアクション「蒼気砲」を実行できます。\n3種類のチャクラをすべて付与するとアクション「爆裂脚」を実行できます。\n種類を問わず3つのチャクラを付与するとアクション「天宙脚」を実行できます。\nまた、「蒼気砲」を実行すると\"陰の闘気\"が付与され、「爆裂脚」を実行すると\"陽の闘気\"が付与されます。\nさらに陰の闘気と陽の闘気が付与された状態で、チャクラが種類を問わず3つ付与されると「夢幻闘舞」を実行できます。\n\nシンプルモード\n\n闘気シンボル\n\n「闘気」スタック時\n\n「桃園結義：闘気」状態（闘気×8）\n\n象形拳シンボル\n\n「功力」スタック時\n\n「チャクラ」、「陰陽の闘気」スタック時"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双竜脚そうりゅうきゃく\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\n\n※このアクションはホットバーに登録することはできない。\n\n双掌打そうしょうだ\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6500\nコンボ条件：双竜脚\n\n※このアクションはホットバーに登録することはできない。\n\n破砕拳はさいけん\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：双掌打\n\n※このアクションはホットバーに登録することはできない。\n\n猿舞連撃さるまいれんげき\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\nコンボ条件：破砕拳\n\n※このアクションはホットバーに登録することはできない。\n\n竜頷正拳撃りょうがんせいけんげき\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8500\nコンボ条件：猿舞連撃\n\n※このアクションはホットバーに登録することはできない。\n\n虎襲崩拳こしゅうぽんけん\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：9000\nコンボ条件：竜頷正拳撃\n\n※このアクションはホットバーに登録することはできない。\n\n夢幻闘舞むげんとうぶ\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n6m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\nコンボ条件：虎襲崩拳\n\n※このアクションはホットバーに登録することはできない。\n\n絶空拳ぜっくうけん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：8000\n追加効果：メインターゲットを15mノックバックする。\nノックバックに成功すると、対象に「急所経穴」を付与する。\n効果時間：4秒\n急所経穴効果：自身から対象にウェポンスキルを実行すると追加ダメージを与える。\n威力：12000\n追加ダメージが発生すると急所経穴は解除される。\n追加効果：自身に「疾風の神髄」を付与する。\n効果時間：4秒\n疾風の神髄効果：自身の移動速度を50％上昇させる。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n鳳凰ほうおうの舞まい\n\nアビリティ\nInstant\n12秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：4000\n追加効果：自身に「紅蓮の神髄」を付与する。\n紅蓮の神髄効果：次に実行する1回のウェポンスキルの与ダメージが50％上昇する。\n効果時間：10秒\n最大チャージ数：2\n\n金剛こんごうの極意ごくい\n\nアビリティ\nInstant\n24秒\n-\n\n0m\n\n0m\n\n自身に「金剛の神髄」を付与する。\n金剛の神髄効果：効果中に自身がダメージを受けるとそのダメージを蓄積する。\nまた、効果中はこのアクションが金剛転輪に変化する。\n効果時間：8秒\n金剛転輪を実行すると、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分\n\n抜重歩法ばつじゅうほほう\n\nアビリティ\nInstant\n8秒\n-\n\n20m\n\n0m\n\n対象の目前まで素早く移動する。\n追加効果：敵を対象とした場合は自身に、味方を対象とした場合はその対象に、一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：5秒\n最大チャージ数：2\nバインド中は実行不可。\n\n乾坤闘気弾けんこんとうきだん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n最大チャージ数：2\n\n金剛転輪こんごうてんりん\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n6m\n\n自身に付与した「金剛の神髄」の効果を終了させて、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分\n発動条件：「金剛の神髄」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nメテオドライヴ\n\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御を解除したうえでダメージを与える。\n追加効果：対象に「メテオドライヴ」を付与し、さらに追加ダメージを与える。\n効果時間：3秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nメテオドライヴ効果：体の自由を奪われ行動できない。\nメテオドライヴによる追加ダメージ量：4000×3\n発動条件：「リミットゲージ」最大\n蓄積時間：75秒\nバインド中は実行不可。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\n型\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMelee DPS/近接物理DPS\n\nかつてエオルゼア随一の軍事力を誇った城塞都市「アラミゴ」。\nその精強なる軍勢の中で、パイク兵と並び、\n他都市に恐れられたのが「モンク」と呼ばれる僧兵であった。\n\n「ラールガー星導教」の僧侶でもある彼らは、信奉する壊神「ラールガー」に一歩でも近づくため研鑽を積み、独自の格闘術を発展させてきた。\n\nチャクラを操る彼らは、己の身体能力を最大限に高め、舞うように闘うという。\n\nジョブ開始クエスト\n\n初期クラス：格闘士\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n連撃れんげき\n\nLv1\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：220\n壱の功力時威力：420\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n正拳せいけん突づき\n\nLv4\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：300\n弐の功力時威力：500\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n崩拳ぽんけん\n\nLv6\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：270\n参の功力時威力：420\n側面攻撃時威力：330\n参の功力時かつ側面攻撃時威力：480\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n鉄山闘気てつざんとうき\n\nLv15\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n鉄山靠てつざんこう\n\nクラスクエスト\n\nLv15\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：180\n発動条件：自身が戦闘状態かつ「闘気」5\n\n双掌打そうしょうだ\n\nLv18\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：420\n追加効果：自身に「弐の功力」を付与する。\n弐の功力効果：竜頷正拳撃の威力を200上昇させる。\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n壊神衝かいしんしょう\n\nLv26\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：110\n壱の型時威力：120\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n破砕拳はさいけん\n\nLv30\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：360\n背面攻撃時威力：420\n追加効果：自身に2スタックの「参の功力」を付与する。\n参の功力効果：虎襲崩拳の威力を150上昇させる。\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n地烈斬ちれつざん\n\nジョブクエスト\n\nLv30\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：150\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n抜重歩法ばつじゅうほほう\n\nジョブクエスト\n\nLv35\n\nアビリティ\nInstant\n30秒\n-\n\n20m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\n最大チャージ数：3\nバインド中は実行不可。\n\n空鳴闘気くうめいとうき\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n空鳴拳くうめいけん\n\nジョブクエスト\n\nLv40\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：100\n発動条件：自身が戦闘状態かつ「闘気」5\n\nマントラ\n\nLv42\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーが受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒\n\n四面脚しめんきゃく\n\nジョブクエスト\n\nLv45\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：140\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n双竜脚そうりゅうきゃく\n\nLv50\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：320\n壱の型効果中追加効果：自身に「壱の功力」を付与する。\n壱の功力効果：猿舞連撃の威力を200上昇させる。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n踏鳴ふみなり\n\nジョブクエスト\n\nLv50\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「踏鳴」を付与する。\n効果時間：20秒\n踏鳴効果：発動条件に「型」を持つウェポンスキルを、「型」が付与されていなくても実行できるようになる。\n追加効果：自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」を付与する。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」\n参の型を付与するウェポンスキル：「走竜のチャクラ」\n最大チャージ数：2\n発動条件：自身が戦闘状態かついずれのチャクラも付与されていない\n\n演武えんぶ\n\nジョブクエスト\n\nLv52\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n0m\n\n自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n\n陰陽闘気おんみょうとうき\n\nLv54\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n陰陽闘気斬おんみょうとうきざん\n\nジョブクエスト\n\nLv54\n\nアビリティ\nInstant\n1秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：400\n発動条件：自身が戦闘状態かつ「闘気」5\n\n必殺技ひっさつわざ\n\nジョブクエスト\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n0m\n\n自身に3つの「チャクラ」が付与されていて、かつ特定の条件を満たす場合、必殺技を発動する。\n付与されているチャクラが1種類：「真空波」を発動する。\n付与されているチャクラが2種類：「天宙脚」を発動する。\n付与されているチャクラが3種類：「鳳凰の舞」を発動する。\nチャクラ3つと「陰の闘気」と「陽の闘気」：「夢幻闘舞」を発動する。\n\n闘魂旋風脚とうこんせんぷうきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が闘魂旋風脚に変化する。\n\n蒼気砲そうきほう\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が蒼気砲に変化する。\n\n天宙脚てんちゅうきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：600\n追加効果：自身に「陰の闘気」を付与する。\n既に付与されている場合は「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が天宙脚に変化する。\n\n爆裂脚ばくれつきゃく\n\nLv60\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が爆裂脚に変化する。\n\n金剛こんごうの極意ごくい\n\nLv64\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、自身の被ダメージを20％軽減させる。\n効果時間：10秒\n追加効果：効果中に自身がダメージを受けると、自身に「金剛の決意」を付与する。\n金剛の決意効果：自身のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身に「金剛周天実行可」を付与する。\n効果時間：30秒\n\n金剛周天こんごうしゅうてん\n\nLv64\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n5m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n金剛の決意効果中回復力：500\n発動条件：「金剛周天実行可」効果中\n\n紅蓮ぐれんの極意ごくい\n\nLv68\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n一定時間、自身の与ダメージを15％上昇させる。\n効果時間：20秒\n追加効果：自身に「乾坤闘気弾実行可」を付与する。\n効果時間：20秒\n\n桃園結義とうえんけつぎ\n\nジョブクエスト\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーに「桃園結義：攻撃」を付与する。\n効果時間：20秒\n桃園結義：攻撃効果：対象の与ダメージを5％上昇させる。\n追加効果：自身と周囲のパーティメンバーに「桃園結義：闘気」を付与する。\n効果時間：20秒\n桃園結義：闘気効果（自身の発動確率100％、パーティメンバーの発動確率20％）：自身または対象のパーティメンバーがウェポンスキルおよび魔法による攻撃を命中させると、自身に「闘気」が付与される。\nまた、闘気の最大スタック数が10に増加する。\n\n疾風しっぷうの極意ごくい\n\nLv72\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身のオートアタックの攻撃間隔を50％短縮させる。\n効果時間：15秒\n追加効果：自身に「絶空拳実行可」を付与する。\n効果時間：15秒\n\n万象闘気ばんしょうとうき\n\nLv74\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「闘気」を付与する。最大5スタックする。\n効果時間：永続\n自身が非戦闘状態であれば5スタックを付与する。\n発動条件：「闘気」5未満\nこのアビリティには固有のリキャストタイムに加えて、ウェポンスキルの実行によるリキャストタイムも発生する。\nさらに、実行するとウェポンスキルと魔法にリキャストタイムが発生する。\n\n万象闘気圏ばんしょうとうきけん\n\nLv74\n\nアビリティ\nInstant\n1秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：160\n発動条件：自身が戦闘状態かつ「闘気」5\n\n六合星導脚りくごうせいどうきゃく\n\nLv80\n\nウェポン\nスキル\nInstant\n4秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：780\n自身に付与されている「闘気」のスタック数に応じた威力が上乗せされる。\n1スタックごとの上乗せ威力：80\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\n実行時に「闘気」の効果が切れる。\nこのアクションはクリティカルヒットしても「闘気」が付与されない。\nこのウェポンスキルは固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n壊神脚かいしんきゃく\n\nLv82\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：120\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n鳳凰ほうおうの舞まい\n\nLv86\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に火属性範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が鳳凰の舞に変化する。\n\n夢幻闘舞むげんとうぶ\n\nLv90\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1500\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が夢幻闘舞に変化する。\n\n猿舞連撃さるまいれんげき\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：260\n壱の功力時威力：460\n壱の型効果中追加効果：必ずクリティカルヒットする。\nクリティカルヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n追加効果：自身に「弐の型」を付与する。\n効果時間：30秒\n\n竜頷正拳撃りょうがんせいけんげき\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：340\n弐の功力時威力：540\n追加効果：自身に「参の型」を付与する。\n効果時間：30秒\n発動条件：「弐の型」効果中\n\n虎襲崩拳こしゅうぽんけん\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n3m\n\n0m\n\n対象に物理攻撃。\n威力：310\n参の功力時威力：460\n側面攻撃時威力：370\n参の功力時かつ側面攻撃時威力：520\n追加効果：自身に「壱の型」を付与する。\n効果時間：30秒\n発動条件：「参の型」効果中\n\n真空波しんくうは\n\nLv92\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n0m\n\n5m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：900\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすと必殺技が真空波に変化する。\n\n絶空拳ぜっくうけん\n\nLv96\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：1040\n2体目以降の対象への威力は35％減少する。\n発動条件：「絶空拳実行可」効果中\n\n乾坤闘気弾けんこんとうきだん\n\nLv100\n\nウェポン\nスキル\nInstant\n2秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：1400\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。\n効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「乾坤闘気弾実行可」効果中\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n内丹ないたん\n\nLv8\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：800\n\nレッグスウィープ\n\nLv10\n\nアビリティ\nInstant\n40秒\n-\n\n3m\n\n0m\n\n対象をスタンさせる。\n効果時間：3秒\n\nブラッドバス\n\nLv12\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n一定時間、自身の物理攻撃に、与えたダメージの一部をＨＰとして吸収する効果を付与する。\n効果時間：20秒\n\n牽制けんせい\n\nLv22\n\nアビリティ\nInstant\n90秒\n-\n\n10m\n\n0m\n\n一定時間、対象の与物理ダメージを10％、与魔法ダメージを5％減少させる。\n効果時間：15秒\n\nアームズレングス\n\nLv32\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n追加効果：効果中に自身が物理攻撃を受けると、攻撃者に20％スロウを付与する。\n効果時間：15秒\n\nトゥルーノース\n\nLv50\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n一定時間、方向指定条件のあるアクションをどの方向から実行しても成功させる。\n効果時間：10秒\n最大チャージ数：2\n\n特性\n\n特性名\n修得\n効果\n\n疾風迅雷しっぷうじんらい\n\nLv1\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを5％短縮させる。\n\n疾風迅雷しっぷうじんらい効果こうかアップ\n\nLv20\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを10％短縮させる。\n\n闘気充填とうきじゅうてんアップ\n\nLv38\n\n自身に「闘気」が付与される。\n発動条件：ウェポンスキルのクリティカルヒット時（発動確率80％）\n\n疾風迅雷しっぷうじんらい効果こうかアップIIつー\n\nLv40\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを15％短縮させる。\n\n鉄山靠てつざんこうマスタリー\n\nジョブクエスト\n\nLv54\n\n鉄山闘気が陰陽闘気に、鉄山靠が陰陽闘気斬に変化する。\n\n踏鳴ふみなり効果こうかアップ\n\nジョブクエスト\n\nLv60\n\n自身に「壱の型」「弐の型」「参の型」のいずれかを付与するウェポンスキルを実行すると、自身に対応する「チャクラ」が付与されるようになる。\n壱の型を付与するウェポンスキル：「猛虎のチャクラ」が付与される。\n弐の型を付与するウェポンスキル：「魔猿のチャクラ」が付与される。\n参の型を付与するウェポンスキル：「走竜のチャクラ」が付与される。\n発動条件：「踏鳴」効果中\n\n闘気充填とうきじゅうてんアップIIつー\n\nLv74\n\n自身に「闘気」が付与される確率が100％に上昇する。\n発動条件：ウェポンスキルのクリティカルヒット時\n\n空鳴拳くうめいけんマスタリー\n\nLv74\n\n空鳴闘気が万象闘気に、空鳴拳が万象闘気圏に変化する。\n\n疾風迅雷しっぷうじんらい効果こうかアップIIIすりー\n\nLv76\n\n自身のオートアタックの攻撃間隔と、ウェポンスキルおよび魔法のキャストタイムとリキャストタイムを20％短縮させる。\n\n壊神衝かいしんしょうマスタリー\n\nLv82\n\n壊神衝が壊神脚に変化する。\n\n抜重歩法ばつじゅうほほう効果こうかアップ\n\nLv84\n\n抜重歩法の最大チャージ数が3に増加する。\n\nアクション威力いりょくアップ\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\n連撃の威力：220\n正拳突きの威力：300\n崩拳の威力：270\n双掌打の威力：380\n破砕拳の威力：320\n双竜脚の威力：280\n陰陽闘気斬の威力：400\n\n爆裂脚ばくれつきゃくマスタリー\n\nLv86\n\n爆裂脚が鳳凰の舞に変化する。\n\n桃園結義とうえんけつぎ効果こうかアップ\n\nLv88\n\n自身に付与される「桃園結義：闘気」による「闘気」の付与確率を100％に上昇させる。\n\n闘魂旋風脚とうこんせんぷうきゃくマスタリー\n\nLv90\n\n闘魂旋風脚が夢幻闘舞に変化する。\n\n象形拳しょうけいけん\n\nLv92\n\n連撃が猿舞連撃に、正拳突きが竜頷正拳撃に、崩拳が虎襲崩拳に、蒼気砲が真空波に変化する。\n\nアクション威力いりょくアップIIつー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\n双掌打の威力：420\n破砕拳の威力：360\n双竜脚の威力：320\n六合星導脚の威力：780\n夢幻闘舞の威力：1500\n\n疾風しっぷうの極意ごくい効果こうかアップ\n\nLv96\n\n自身に「絶空拳実行可」が付与される。\n効果時間：15秒\n発動条件：疾風の極意実行時\n\n紅蓮ぐれんの極意ごくい効果こうかアップ\n\nLv100\n\n自身に「乾坤闘気弾実行可」が付与される。\n効果時間：20秒\n発動条件：紅蓮の極意実行時\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n内丹ないたん効果こうかアップ\n\nLv94\n\n内丹の回復力を800に上昇させる。\n\n牽制けんせい効果こうかアップ\n\nLv98\n\n牽制の効果時間を15秒に延長する。\n\n型\n\n他のクラス・ジョブとは異なり、一部のアクションは付与された「型」に応じて選択できるようになります。\n一部のアクションは、「功力」が付与された状態で使うことで威力アップ効果が得られます。\n型の付与\n\n壱の型：魔猿\n\n連撃\n\n双竜脚\n\n壊神脚 (壊神衝)\n<範囲攻撃>\n\n猿舞連撃\n\n追加効果\n「弐の型」を付与する\n\n双竜脚：「猿舞連撃」の威力を上昇させる「壱の功力」を付与する\n\n「壱の型」が付与されているときは次の効果が得られる。\n連撃：必ずクリティカルヒットする\n壊神衝：威力が上昇する\n壊神脚：必ずクリティカルヒットする\n猿舞連撃：必ずクリティカルヒットする\n\n弐の型：走竜\n\n正拳突き\n\n双掌打\n\n四面脚 <範囲攻撃>\n\n竜頷正拳撃\n\n追加効果\n「参の型」を付与する\n\n双掌打：「竜頷正拳撃」の威力を上昇させる「弐の功力」を付与する\n\n参の型：猛虎\n\n崩拳 <側面>\n\n破砕拳 <背面>\n\n地烈斬 <範囲攻撃>\n\n虎襲崩拳 <側面>\n\n追加効果\n「壱の型」を付与する\n\n破砕拳：「虎襲崩拳」の威力を上昇させる「参の功力」を付与する\n\n※カッコ（）内は特性修得前のアクションです。\n\nジョブHUD\n\n闘気シンボル\n\nアクション「鉄山闘気」を修得すると、\"闘気\"の蓄積状態を示す「闘気シンボル」が表示されるようになります。\n闘気は、最大まで蓄積することで「鉄山靠」や、レベル40で修得する「空鳴拳」、レベル54で修得する「陰陽闘気斬」、レベル74で修得する「万象闘気圏」を実行できます。\n\nレベル70でアクション「桃園結義」を修得し実行すると、自身と周囲のパーティメンバーに「桃園結義：闘気」が付与され、「桃園結義：闘気」効果中に限り、\"闘気\"を最大10個まで蓄積させることができます。\n象形拳シンボル\n\nアクション「双掌打」を修得することで、\"功力\"の蓄積状態を確認できる「象形拳シンボル」が表示されるようになります。\n「双掌打」やレベル30で修得する「破砕拳」、レベル50で修得する「双竜脚」を実行すると功力が付与されます。\n功力には\"壱の功力\"、\"弐の功力\"、\"参の功力\"があり、それぞれの功力に対応するウェポンスキルの威力を上昇させることができます。\n\nレベル60で特性「踏鳴効果アップ」修得すると、「象形拳シンボル」に\"チャクラ\"と\"陰陽の闘気\"が表示されるようになります。\nチャクラは\"魔猿のチャクラ\"、\"走竜のチャクラ\"、\"猛虎のチャクラ\"の3種類があり、特定のウェポンスキルを実行することで付与されます。\n付与されたチャクラの組み合わせにより異なる3つのアクションが実行可能です。\n同じチャクラを3つ付与することでアクション「蒼気砲」を実行できます。\n3種類のチャクラをすべて付与するとアクション「爆裂脚」を実行できます。\n種類を問わず3つのチャクラを付与するとアクション「天宙脚」を実行できます。\nまた、「蒼気砲」を実行すると\"陰の闘気\"が付与され、「爆裂脚」を実行すると\"陽の闘気\"が付与されます。\nさらに陰の闘気と陽の闘気が付与された状態で、チャクラが種類を問わず3つ付与されると「夢幻闘舞」を実行できます。\n\nシンプルモード\n\n闘気シンボル\n\n「闘気」スタック時\n\n「桃園結義：闘気」状態（闘気×8）\n\n象形拳シンボル\n\n「功力」スタック時\n\n「チャクラ」、「陰陽の闘気」スタック時\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n双竜脚そうりゅうきゃく\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6000\n\n※このアクションはホットバーに登録することはできない。\n\n双掌打そうしょうだ\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：6500\nコンボ条件：双竜脚\n\n※このアクションはホットバーに登録することはできない。\n\n破砕拳はさいけん\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：7000\nコンボ条件：双掌打\n\n※このアクションはホットバーに登録することはできない。\n\n猿舞連撃さるまいれんげき\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8000\nコンボ条件：破砕拳\n\n※このアクションはホットバーに登録することはできない。\n\n竜頷正拳撃りょうがんせいけんげき\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：8500\nコンボ条件：猿舞連撃\n\n※このアクションはホットバーに登録することはできない。\n\n虎襲崩拳こしゅうぽんけん\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n5m\n\n0m\n\n対象に物理攻撃。\n威力：9000\nコンボ条件：竜頷正拳撃\n\n※このアクションはホットバーに登録することはできない。\n\n夢幻闘舞むげんとうぶ\n\nウェポン\nスキル\nInstant\n\n1.8秒\n-\n\n6m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：12000\nコンボ条件：虎襲崩拳\n\n※このアクションはホットバーに登録することはできない。\n\n絶空拳ぜっくうけん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n10m\n\n10m\n\n対象に向かって前方直線範囲物理攻撃。\n威力：8000\n追加効果：メインターゲットを15mノックバックする。\nノックバックに成功すると、対象に「急所経穴」を付与する。\n効果時間：4秒\n急所経穴効果：自身から対象にウェポンスキルを実行すると追加ダメージを与える。\n威力：12000\n追加ダメージが発生すると急所経穴は解除される。\n追加効果：自身に「疾風の神髄」を付与する。\n効果時間：4秒\n疾風の神髄効果：自身の移動速度を50％上昇させる。\nこのウェポンスキルは固有のリキャストタイマーを持つ。\n\n鳳凰ほうおうの舞まい\n\nアビリティ\nInstant\n12秒\n-\n\n0m\n\n6m\n\n自身の周囲の敵に範囲物理攻撃。\n威力：4000\n追加効果：自身に「紅蓮の神髄」を付与する。\n紅蓮の神髄効果：次に実行する1回のウェポンスキルの与ダメージが50％上昇する。\n効果時間：10秒\n最大チャージ数：2\n\n金剛こんごうの極意ごくい\n\nアビリティ\nInstant\n24秒\n-\n\n0m\n\n0m\n\n自身に「金剛の神髄」を付与する。\n金剛の神髄効果：効果中に自身がダメージを受けるとそのダメージを蓄積する。\nまた、効果中はこのアクションが金剛転輪に変化する。\n効果時間：8秒\n金剛転輪を実行すると、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分\n\n抜重歩法ばつじゅうほほう\n\nアビリティ\nInstant\n8秒\n-\n\n20m\n\n0m\n\n対象の目前まで素早く移動する。\n追加効果：敵を対象とした場合は自身に、味方を対象とした場合はその対象に、一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：5秒\n最大チャージ数：2\nバインド中は実行不可。\n\n乾坤闘気弾けんこんとうきだん\n\nウェポン\nスキル\nInstant\n16秒\n-\n\n20m\n\n5m\n\n対象とその周囲の敵に範囲物理攻撃。\n威力：8000\n最大チャージ数：2\n\n金剛転輪こんごうてんりん\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n6m\n\n自身に付与した「金剛の神髄」の効果を終了させて、自身の周囲の敵に範囲物理攻撃を行い、さらに自身のＨＰを回復する。\nダメージ量：威力4000＋蓄積されたダメージの25％分\n回復量：回復力8000＋蓄積されたダメージの50％分\n発動条件：「金剛の神髄」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nメテオドライヴ\n\nInstant\n10秒\n-\n\n20m\n\n0m\n\n対象に急接近して物理攻撃。\n威力：12000\nこのアクションは、対象が実行している防御を解除したうえでダメージを与える。\n追加効果：対象に「メテオドライヴ」を付与し、さらに追加ダメージを与える。\n効果時間：3秒\n対象が非プレイヤーまたは兵器に搭乗しているプレイヤーの場合は付与しない。\nメテオドライヴ効果：体の自由を奪われ行動できない。\nメテオドライヴによる追加ダメージ量：4000×3\n発動条件：「リミットゲージ」最大\n蓄積時間：75秒\nバインド中は実行不可。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nブラッドバス\n\nアビリティ\nInstant\n45秒\n-\n\n0m\n\n0m\n\n自身の与ダメージを25％上昇させ、さらに与ダメージの100％分のＨＰを吸収する効果を付与する。\n効果時間：10秒\n\nスウィフト\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身の移動速度を100％上昇させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\nこの効果はマウントに騎乗すると解除される。\n\nスマイト\n\nアビリティ\nInstant\n15秒\n-\n\n10m\n\n0m\n\n対象に物理攻撃。\n威力：6000～18000\nこのアクションは、対象が実行している防御の効果を無視してダメージを与える。\n対象の残りＨＰが低いほど威力が上昇し、25％以下だと最大になる。\n自身がノックアウトまたはアシストを獲得すると、このアクションのリキャストタイムが解消される。\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

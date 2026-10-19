@@ -1,0 +1,29 @@
+{
+  "size": 128,
+  "fps": 12,
+  "source_fps": 30,
+  "camera_elevation": 30,
+  "samples": 16,
+  "outline": true,
+  "directions": ["down", "left", "right", "up"],
+  "characters": {
+    "knight": {
+      "dir": "models/knight",
+      "height": 1.8,
+      "colors": { "Armor": [0.2, 0.35, 0.8] },
+      "animations": {
+        "idle":   { "file": "idle.glb",   "loop": true },
+        "attack": { "file": "attack.glb", "loop": false }
+      }
+    },
+    "knight_red": {
+      "dir": "models/knight",
+      "height": 1.8,
+      "colors": { "Armor": [0.8, 0.2, 0.2] },
+      "animations": {
+        "idle":   { "file": "idle.glb",   "loop": true },
+        "attack": { "file": "attack.glb", "loop": false }
+      }
+    }
+  }
+}

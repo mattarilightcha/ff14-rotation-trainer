@@ -1,4 +1,4 @@
-// 設定画面（FF14 のキャラクターコンフィグ風）: 左にカテゴリ、右に「見出し・項目名・操作」の行を並べる。
+// 設定画面: 左にカテゴリ、右に「項目名・操作」の行を並べる。説明は短くし、細かい設定は「詳しい設定」にたたむ。
 // 中身（どの項目を出すか）は mock.js が tab() で渡す。開くたびに作り直すので、表示は常に今の値になる。
 (function () {
   'use strict';
@@ -9,19 +9,31 @@
     return el;
   };
   let uid = 0;
+  const openMore = new Set(); // 開いている「詳しい設定」（作り直しても開いたままにする）
 
   // ---- 操作の部品（どれも要素を返す）----
   const kit = {
+    // 見出し（title が空なら見出しなし）と、ひとことの説明
     section(pane, title, note) {
       const s = h('div', 'cfg-section');
-      s.appendChild(h('div', 'cfg-head', title));
+      if (title) s.appendChild(h('div', 'cfg-head', title));
       if (note) s.appendChild(h('div', 'cfg-note', note));
       pane.appendChild(s);
       return s;
     },
-    // 1 行: 左に項目名（と補足）、右に操作
-    row(sec, label, control, note) {
-      const r = h('div', 'cfg-row');
+    // たたんでおく細かい設定。返り値に row / section で中身を足す
+    more(pane, title = '詳しい設定') {
+      const d = h('details', 'cfg-more');
+      const key = `${pane.closest?.('.cfg-pane')?.dataset.tab ?? ''}:${title}`;
+      d.appendChild(h('summary', null, title));
+      d.open = openMore.has(key);
+      d.addEventListener('toggle', () => { if (d.open) openMore.add(key); else openMore.delete(key); });
+      pane.appendChild(d);
+      return d;
+    },
+    // 1 行: 左に項目名（と補足）、右に操作。wide なら操作を項目名の下に横いっぱいに出す（ジョブの一覧など）
+    row(sec, label, control, note, wide = false) {
+      const r = h('div', `cfg-row${wide ? ' wide' : ''}`);
       const l = h('div', 'cfg-label');
       l.appendChild(h('span', null, label));
       if (note) l.appendChild(h('small', null, note));
@@ -37,7 +49,8 @@
       b.setAttribute('role', 'switch');
       b.setAttribute('aria-checked', String(!!value));
       b.innerHTML = '<i></i><span></span>';
-      const sync = () => { b.classList.toggle('on', value); b.setAttribute('aria-checked', String(value)); b.lastChild.textContent = value ? labels[0] : labels[1]; };
+      const plain = labels[0] === '入' && labels[1] === '切'; // 「入 / 切」だけなら文字は出さない（スイッチの形で分かる）
+      const sync = () => { b.classList.toggle('on', value); b.setAttribute('aria-checked', String(value)); b.lastChild.textContent = plain ? '' : value ? labels[0] : labels[1]; };
       sync();
       b.addEventListener('click', () => { value = !value; sync(); onChange(value); });
       return b;
@@ -107,21 +120,20 @@
     win.setAttribute('role', 'dialog');
     win.setAttribute('aria-modal', 'true');
     win.setAttribute('aria-label', o.title);
-    const bar = h('div', 'cfg-titlebar');
-    bar.appendChild(h('span', 'cfg-title', o.title));
+    const side = h('div', 'cfg-side');
+    const nav = h('nav', 'cfg-nav');
+    side.append(h('div', 'cfg-title', o.title), nav, h('div', 'cfg-side-note', o.footNote ?? ''));
+    // 右: 上に今のカテゴリの名前と閉じるボタン、その下に中身（中身だけが動く）
+    const main = h('div', 'cfg-main');
+    const top = h('div', 'cfg-top');
+    const heading = h('div', 'cfg-heading');
     const x = h('button', 'cfg-x', '×');
     x.type = 'button';
     x.setAttribute('aria-label', '閉じる');
-    bar.appendChild(x);
-    const body = h('div', 'cfg-body');
-    const nav = h('nav', 'cfg-nav');
+    top.append(heading, x);
     const pane = h('div', 'cfg-pane');
-    body.append(nav, pane);
-    const foot = h('div', 'cfg-foot');
-    const foot1 = h('div', 'cfg-foot-note', o.footNote ?? '');
-    const close = kit.button('閉じる', () => api.close(), 'primary');
-    foot.append(foot1, close);
-    win.append(bar, body, foot);
+    main.append(top, pane);
+    win.append(side, main);
     back.appendChild(win);
     host.appendChild(back);
 
@@ -131,8 +143,10 @@
       current = id;
       for (const t of tabs) t.btn.classList.toggle('on', t.id === id);
       pane.innerHTML = '';
+      pane.dataset.tab = id;
       const t = tabs.find((x) => x.id === id);
-      if (t) { pane.appendChild(h('h2', 'cfg-pane-title', t.label)); t.build(pane, kit); }
+      heading.textContent = t?.label ?? '';
+      if (t) t.build(pane, kit);
       pane.scrollTop = 0;
     }
     x.addEventListener('click', () => api.close());
@@ -150,7 +164,7 @@
         back.hidden = false;
         show(id ?? current ?? tabs[0]?.id);
         o.onOpen?.();
-        close.focus();
+        x.focus();
       },
       close() {
         if (back.hidden) return;

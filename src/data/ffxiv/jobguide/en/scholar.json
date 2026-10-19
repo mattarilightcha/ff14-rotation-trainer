@@ -1,0 +1,2032 @@
+{
+ "job": "scholar",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/scholar/",
+ "pageTitle": "Job Guide: Scholar | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nPet Actions\n\nPet Actions (Commands)\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nIn an age long past, when mankind flourished under the radiance of arcane mastery, the island of Vylbrand was home to a city-state called Nym. Though the history of that age tells of countless wars waged with earth-shattering incantations, it was the brilliant strategic maneuvering of Nym's scholars that allowed their mundane army of mariners to throw back would-be conquerors time and again. These learned men and women defended the freedom of their tiny nation with their unique command over spell-weaving faeries, utilizing the creatures' magicks to heal the wounded and bolster the strength of their allies.\n\nStarting Job Quest\n\nPrerequisite Class: Arcanist",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+   "https://lds-img.finalfantasyxiv.com/d/93f61adcffc6644730a017347d91805359b52bdb.png",
+   "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+   "https://lds-img.finalfantasyxiv.com/d/7e5c03b72c4e181034da8121d6f2bdf2f1aa2a60.png",
+   "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+   "https://lds-img.finalfantasyxiv.com/d/161dc95f27e69fb5bd4caecfdeab022e3560193d.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea0a5e685172203ac73332f7e1690a5a89b25590.png",
+   "https://lds-img.finalfantasyxiv.com/d/07beea4eb1cc3f24533d045db5b694c939f3a3ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/59ca7d9f2002ba3176f070a023bcfd8fa2129fb9.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/6ed1ace8e31760fa3b042e6d27dac669668196b0.png",
+   "https://lds-img.finalfantasyxiv.com/d/175631d8db5550a7b74a9bc811c3781e083e393e.png",
+   "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+   "https://lds-img.finalfantasyxiv.com/d/a9adc8943d1d8402366c869416b7a9d5ef7fcf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/a414b67652d67ff6707276156d1ce275f188ef07.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c47bdf94dc6c3dcd9b303cfa42a08a5cfd13629.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f80a5bd016eab7200c55dd8d1d6afb07361a0ca.png",
+   "https://lds-img.finalfantasyxiv.com/d/7203f797d2c3dd4148a8cb5fe510c1cfd1ac46a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/307e3a65fff1e38b28235509dd392323642d6965.png",
+   "https://lds-img.finalfantasyxiv.com/d/fbfaa6c46fac537aec9d2903ec64d4f64fc54557.png",
+   "https://lds-img.finalfantasyxiv.com/d/fffbdbce557a09ee3a50f541fac07d432bfc7c89.png",
+   "https://lds-img.finalfantasyxiv.com/d/b46ada85c48a81940953f46eaaba05f1c2f5cfdd.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8d8172feffed42f80d335bb7bedb14cc90fbd56.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f5f538d79932e3bfb3bd5c72af6f13987aa3e6d.png",
+   "https://lds-img.finalfantasyxiv.com/d/eb866b142bd93d46ffa7809e1092aefc48f48f3c.png",
+   "https://lds-img.finalfantasyxiv.com/d/10602136009d5a92a005f0bd127a1a9ec8c1691a.png",
+   "https://lds-img.finalfantasyxiv.com/d/e77ebe8644e35de5bc2d67a4c8365d6d726c9ca4.png",
+   "https://lds-img.finalfantasyxiv.com/d/1f85b58d71471a33c2d35db849b20a681bfd5b56.png",
+   "https://lds-img.finalfantasyxiv.com/d/b1be794db381c20399faf7dec80b7f64eaba2e61.png",
+   "https://lds-img.finalfantasyxiv.com/d/e37b65935298898f61fd4b12a293998ba1258be5.png",
+   "https://lds-img.finalfantasyxiv.com/d/ff070d67e4c75ed8bb06de1f577979e8c69c8ad1.png",
+   "https://lds-img.finalfantasyxiv.com/d/86ce58393104f45f36ef15d9d358a684c4013df4.png",
+   "https://lds-img.finalfantasyxiv.com/d/7bf8e98c4a2078b2a0c1e113deb2ffbecaf125ac.png",
+   "https://lds-img.finalfantasyxiv.com/d/b05c06909651d83ec9806ea19ad6cbf328809a1b.png",
+   "https://lds-img.finalfantasyxiv.com/d/a46c7dccd2bb9a8fe7a472766acf8138f2ada3e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/023d8827b75a8d5d6682a81acf1016371366f8e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/16ca1e2b66efb797ca63394b5f856ab89a709acf.png",
+   "https://lds-img.finalfantasyxiv.com/d/f124b01882a45f5befe10fa82964fc7fb7895e8c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3660e0317ed2aba78b7cfdc526dd174efa94d88d.png",
+   "https://lds-img.finalfantasyxiv.com/d/7244131eba68b8042f1461bf4100deaebe2a7c0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/c859b1042c024b57c646316f1e0e93ff5e5f90fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+   "https://lds-img.finalfantasyxiv.com/d/f6608e86b2f0526d4f9fd593eac7cb7e8a674668.png",
+   "https://lds-img.finalfantasyxiv.com/d/22a3932c3e8625b941a6d65c7bb1985e2244abe7.png",
+   "https://lds-img.finalfantasyxiv.com/d/f1a089378baca67848f466998eaf675ca65b241f.png",
+   "https://lds-img.finalfantasyxiv.com/d/ba157dccbbb4761461ca40b5e03c2a882498cdf3.png",
+   "https://lds-img.finalfantasyxiv.com/d/23a8a3db9390a92f29e6df238044537361682fab.png",
+   "https://lds-img.finalfantasyxiv.com/d/5f98fdab5e9b3c01f61588afd6f60ceeb8fc7966.png",
+   "https://lds-img.finalfantasyxiv.com/d/44de61f43a848bff2f6c8ee8dd37df66746e12d2.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f4ce8d90ce96634d7c028ef2990dfc9f61b8417.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8137bd2178a9071507f4d74e4ce4d1282cacc4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe17c3c2cb39842c9bfe50d5839d2b6a93075ef9.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb3ffdaf3d55f8c9813f1a0d827a7cc736cd8802.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+   "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/P/qrrcDBEdx6w-1lpo7T_f97Eyko.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Ruin",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1c74fa1688f3d89d6f5b972ce384df15f62e35d1.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 150.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 150."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Bio",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/93f61adcffc6644730a017347d91805359b52bdb.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 20\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 20<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Physick",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e51f309947cde0c36f3a0cd815ca01e268928eb6.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 450",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 450"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Summon Eos",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e5c03b72c4e181034da8121d6f2bdf2f1aa2a60.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "200 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Summons the faerie Eos to fight at your side. When set to guard, automatically casts Embrace on party members who suffer damage.",
+     "descriptionHtml": "Summons the faerie Eos to fight at your side. When set to guard, automatically casts Embrace on party members who suffer damage."
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Resurrection",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9e61ea15caf1f7c0e4b44943dcbee0178e61a9fd.png",
+     "acquired": [
+      {
+       "class": "Arcanist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Spell",
+     "cast": "8s",
+     "recast": "2.5s",
+     "cost": "2400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Resurrects target to a weakened state.",
+     "descriptionHtml": "Resurrects target to a weakened state."
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Whispering Dawn",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/161dc95f27e69fb5bd4caecfdeab022e3560193d.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Orders faerie to execute Whispering Dawn. If Seraph is summoned, orders her to execute Angel's Whisper.\nWhispering Dawn/Angel's Whisper Effect: Gradually restores the HP of all nearby party members\nCure Potency: 80\nDuration: 21s",
+     "descriptionHtml": "Orders faerie to execute Whispering Dawn. If Seraph is summoned, orders her to execute Angel's Whisper.<br/>Whispering Dawn/Angel's Whisper Effect: Gradually restores the HP of all nearby party members<br/>Cure Potency: 80<br/>Duration: 21s"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Bio II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea0a5e685172203ac73332f7e1690a5a89b25590.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "300 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 40\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 40<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Adloquium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07beea4eb1cc3f24533d045db5b694c939f3a3ac.png",
+     "skillCellText": "Adloquium\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 300\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 300<br/>Additional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.<br/>Duration: 30s<br/>Effect cannot be stacked with certain sage barrier effects."
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Succor",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/59ca7d9f2002ba3176f070a023bcfd8fa2129fb9.png",
+     "skillCellText": "Succor\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 160% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 200<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling 160% of the amount of HP restored<br/>Duration: 30s<br/>Effect cannot be stacked with certain sage barrier effects."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Ruin II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6875ae1008a9e4b2d04562cff42646752e919c5.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 38",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 220.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 220."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Fey Illumination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6ed1ace8e31760fa3b042e6d27dac669668196b0.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Orders faerie to execute Fey Illumination. If Seraph is summoned, orders her to execute Seraphic Illumination.\nFey Illumination/Seraphic Illumination Effect: Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.",
+     "descriptionHtml": "Orders faerie to execute Fey Illumination. If Seraph is summoned, orders her to execute Seraphic Illumination.<br/>Fey Illumination/Seraphic Illumination Effect: Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%<br/>Duration: 20s<br/>Effect cannot be stacked with Seraphic Illumination."
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Aetherflow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/175631d8db5550a7b74a9bc811c3781e083e393e.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores 20% of maximum MP.\nAdditional Effect: Aetherflow III\nCan only be executed while in combat.",
+     "descriptionHtml": "Restores 20% of maximum MP.<br/>Additional Effect: Aetherflow III<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Energy Drain",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/92ea9227a8a09c62eb53852e2c26c0d6763a35c2.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 100.\nAdditional Effect: Absorbs a portion of damage dealt as HP\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1",
+     "descriptionHtml": "Deals unaspected damage with a potency of 100.<br/>Additional Effect: Absorbs a portion of damage dealt as HP<br/>Additional Effect: Increases Faerie Gauge by 10<br/>Aetherflow Gauge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Lustrate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a9adc8943d1d8402366c869416b7a9d5ef7fcf07.png",
+     "skillCellText": "Lustrate\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 600\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 600<br/>Additional Effect: Increases Faerie Gauge by 10<br/>Aetherflow Gauge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Art of War",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a414b67652d67ff6707276156d1ce275f188ef07.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 46",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 165 to all nearby enemies.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 165 to all nearby enemies."
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Sacred Soil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c47bdf94dc6c3dcd9b303cfa42a08a5cfd13629.png",
+     "skillCellText": "Sacred Soil\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "15y",
+     "description": "Creates a designated area in which party members will only suffer 90% of all damage inflicted.\nDuration: 15s\nAdditional Effect: Regen\nCure Potency: 100\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1",
+     "descriptionHtml": "Creates a designated area in which party members will only suffer 90% of all damage inflicted.<br/>Duration: 15s<br/>Additional Effect: Regen<br/>Cure Potency: 100<br/>Additional Effect: Increases Faerie Gauge by 10<br/>Aetherflow Gauge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Indomitability",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f80a5bd016eab7200c55dd8d1d6afb07361a0ca.png",
+     "skillCellText": "Indomitability\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 400<br/>Additional Effect: Increases Faerie Gauge by 10<br/>Aetherflow Gauge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Broil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7203f797d2c3dd4148a8cb5fe510c1cfd1ac46a8.png",
+     "skillCellText": "Broil\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 220.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 220."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Deployment Tactics",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/307e3a65fff1e38b28235509dd392323642d6965.png",
+     "skillCellText": "Deployment Tactics\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "30y",
+     "description": "Extends Galvanize effect cast on self or target party member to other nearby party members.\nDuration: Time remaining on original effect\nNo effect when target is not under the effect of Galvanize.",
+     "descriptionHtml": "Extends Galvanize effect cast on self or target party member to other nearby party members.<br/>Duration: Time remaining on original effect<br/>No effect when target is not under the effect of Galvanize."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Emergency Tactics",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fbfaa6c46fac537aec9d2903ec64d4f64fc54557.png",
+     "skillCellText": "Emergency Tactics\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 58",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Transforms the next Galvanize and Catalyze statuses into HP recovery equaling the amount of damage reduction intended for the barrier.\nDuration: 15s",
+     "descriptionHtml": "Transforms the next Galvanize and Catalyze statuses into HP recovery equaling the amount of damage reduction intended for the barrier.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Dissipation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fffbdbce557a09ee3a50f541fac07d432bfc7c89.png",
+     "skillCellText": "Dissipation\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "180s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Orders your faerie away while granting you a full Aetherflow stack. Also increases healing magic potency by 20%.\nDuration: 30s\nCurrent faerie will return once the effect expires.\nSummon Eos cannot be executed while under the effect of Dissipation.\nCan only be executed while a faerie is summoned and you are in combat.",
+     "descriptionHtml": "Orders your faerie away while granting you a full Aetherflow stack. Also increases healing magic potency by 20%.<br/>Duration: 30s<br/>Current faerie will return once the effect expires.<br/>Summon Eos cannot be executed while under the effect of Dissipation.<br/>Can only be executed while a faerie is summoned and you are in combat."
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Excogitation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b46ada85c48a81940953f46eaaba05f1c2f5cfdd.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Grants self or target party member the effect of Excogitation, restoring HP when member's HP falls to 50% or below, or upon effect duration expiration.\nCure Potency: 800\nDuration: 45s\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1",
+     "descriptionHtml": "Grants self or target party member the effect of Excogitation, restoring HP when member's HP falls to 50% or below, or upon effect duration expiration.<br/>Cure Potency: 800<br/>Duration: 45s<br/>Additional Effect: Increases Faerie Gauge by 10<br/>Aetherflow Gauge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Broil II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8d8172feffed42f80d335bb7bedb14cc90fbd56.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 240.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 240."
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Chain Stratagem",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f5f538d79932e3bfb3bd5c72af6f13987aa3e6d.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Increases rate at which target takes critical hits by 10%.\nDuration: 20s\nAdditional Effect: Grants Impact Imminent\nDuration: 30s",
+     "descriptionHtml": "Increases rate at which target takes critical hits by 10%.<br/>Duration: 20s<br/>Additional Effect: Grants Impact Imminent<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Aetherpact",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eb866b142bd93d46ffa7809e1092aefc48f48f3c.png",
+     "skillCellText": "Aetherpact\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "3s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Orders faerie to execute Fey Union with target party member. Effect ends upon reuse.\nFaerie Gauge Cost: 10\nFey Union Effect: Gradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\nThe Faerie Gauge increases when a faerie or Seraph is summoned and an Aetherflow action is successfully executed while in combat.",
+     "descriptionHtml": "Orders faerie to execute Fey Union with target party member. Effect ends upon reuse.<br/>Faerie Gauge Cost: 10<br/>Fey Union Effect: Gradually restores HP of party member with which faerie has a Fey Union.<br/>Cure Potency: 300<br/>Faerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.<br/>The Faerie Gauge increases when a faerie or Seraph is summoned and an Aetherflow action is successfully executed while in combat."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Dissolve Union",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10602136009d5a92a005f0bd127a1a9ec8c1691a.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Dissolves current Fey Union.",
+     "descriptionHtml": "Dissolves current Fey Union."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Biolysis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e77ebe8644e35de5bc2d67a4c8365d6d726c9ca4.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage over time.\nPotency: 85\nDuration: 30s",
+     "descriptionHtml": "Deals unaspected damage over time.<br/>Potency: 85<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Broil III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1f85b58d71471a33c2d35db849b20a681bfd5b56.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 255.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 255."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Recitation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b1be794db381c20399faf7dec80b7f64eaba2e61.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Allows the execution of Adloquium, Concitation, Indomitability, or Excogitation without consuming resources while also ensuring critical HP is restored.\nDuration: 15s",
+     "descriptionHtml": "Allows the execution of Adloquium, Concitation, Indomitability, or Excogitation without consuming resources while also ensuring critical HP is restored.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Fey Blessing",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e37b65935298898f61fd4b12a293998ba1258be5.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Orders faerie to execute Fey Blessing.\nFey Blessing Effect: Restores the HP of all nearby party members\nCure Potency: 320",
+     "descriptionHtml": "Orders faerie to execute Fey Blessing.<br/>Fey Blessing Effect: Restores the HP of all nearby party members<br/>Cure Potency: 320"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Summon Seraph",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ff070d67e4c75ed8bb06de1f577979e8c69c8ad1.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Summons Seraph to fight at your side. When set to guard, automatically casts Seraphic Veil on party members who suffer damage.\nCannot summon Seraph unless a pet is already summoned. Current pet will leave the battlefield while Seraph is present, and return once gone.\nDuration: 22s",
+     "descriptionHtml": "Summons Seraph to fight at your side. When set to guard, automatically casts Seraphic Veil on party members who suffer damage.<br/>Cannot summon Seraph unless a pet is already summoned. Current pet will leave the battlefield while Seraph is present, and return once gone.<br/>Duration: 22s"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Consolation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/86ce58393104f45f36ef15d9d358a684c4013df4.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Orders Seraph to execute Consolation.\nConsolation Effect: Restores the HP of all nearby party members\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\nMaximum Charges: 2",
+     "descriptionHtml": "Orders Seraph to execute Consolation.<br/>Consolation Effect: Restores the HP of all nearby party members<br/>Cure Potency: 250<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored<br/>Duration: 30s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Broil IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7bf8e98c4a2078b2a0c1e113deb2ffbecaf125ac.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "1.5s",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 320.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 320."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Art of War II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b05c06909651d83ec9806ea19ad6cbf328809a1b.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 180 to all nearby enemies.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 180 to all nearby enemies."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Protraction",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a46c7dccd2bb9a8fe7a472766acf8138f2ada3e8.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases maximum HP of a party member or self by 10% and restores the amount increased.\nAdditional Effect: Increases HP recovery via healing actions by 10%\nDuration: 10s",
+     "descriptionHtml": "Increases maximum HP of a party member or self by 10% and restores the amount increased.<br/>Additional Effect: Increases HP recovery via healing actions by 10%<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Expedient",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/023d8827b75a8d5d6682a81acf1016371366f8e8.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Grants Expedience and Desperate Measures to all nearby party members.\nExpedience Effect: Increases movement speed\nDuration: 10s\nDesperate Measures Effect: Reduces damage taken by 10%\nDuration: 20s",
+     "descriptionHtml": "Grants Expedience and Desperate Measures to all nearby party members.<br/>Expedience Effect: Increases movement speed<br/>Duration: 10s<br/>Desperate Measures Effect: Reduces damage taken by 10%<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Baneful Impaction",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/16ca1e2b66efb797ca63394b5f856ab89a709acf.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage over time to target and all enemies nearby it.\nPotency: 140\nDuration: 15s\nCan only be executed while under the effect of Impact Imminent.",
+     "descriptionHtml": "Deals unaspected damage over time to target and all enemies nearby it.<br/>Potency: 140<br/>Duration: 15s<br/>Can only be executed while under the effect of Impact Imminent."
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Concitation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f124b01882a45f5befe10fa82964fc7fb7895e8c.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Spell",
+     "cast": "2s",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 200<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored<br/>Duration: 30s<br/>Effect cannot be stacked with certain sage barrier effects."
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "Seraphism",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3660e0317ed2aba78b7cfdc526dd174efa94d88d.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "180s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Gradually restores the HP of self and all party members within a radius of 50 yalms.\nCure Potency: 100\nAdditional Effect: Changes Adloquium to Manifestation and Concitation to Accession\nAdditional Effect: Resets Emergency Tactics recast timer and reduces its recast timer to 1s\nDuration: 20s\nEffect cannot be stacked with Dissipation.\nCan only be executed while a faerie or Seraph is summoned and you are in combat.",
+     "descriptionHtml": "Gradually restores the HP of self and all party members within a radius of 50 yalms.<br/>Cure Potency: 100<br/>Additional Effect: Changes Adloquium to Manifestation and Concitation to Accession<br/>Additional Effect: Resets Emergency Tactics recast timer and reduces its recast timer to 1s<br/>Duration: 20s<br/>Effect cannot be stacked with Dissipation.<br/>Can only be executed while a faerie or Seraph is summoned and you are in combat."
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "Manifestation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7244131eba68b8042f1461bf4100deaebe2a7c0d.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 360\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Adloquium changes to Manifestation when requirements for execution are met.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 360<br/>Additional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.<br/>Duration: 30s<br/>Effect cannot be stacked with certain sage barrier effects.<br/>Can only be executed while under the effect of Seraphism.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Adloquium changes to Manifestation when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "Accession",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c859b1042c024b57c646316f1e0e93ff5e5f90fb.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "900 MP",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 240\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Concitation changes to Accession when requirements for execution are met.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 240<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored<br/>Duration: 30s<br/>Effect cannot be stacked with certain sage barrier effects.<br/>Can only be executed while under the effect of Seraphism.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Concitation changes to Accession when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pet_eos",
+   "title": "Pet Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_pet_action__01",
+     "name": "Embrace",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d674990026a72270d2b697fb082a11876075d580.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "3s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 180\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 180<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__02",
+     "name": "Whispering Dawn",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b4f6def5e70800aa4fee24c630e0e1c1fb238a7.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Gradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Gradually restores the HP of all nearby party members.<br/>Cure Potency: 80<br/>Duration: 21s<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__03",
+     "name": "Fey Illumination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23bfb94bb82e70982c73fafd94771c0d522bc326.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%.<br/>Duration: 20s<br/>Effect cannot be stacked with Seraphic Illumination.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__04",
+     "name": "Fey Union",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2289de5779836f1b6905349f5031b2421bc9fd01.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Gradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Gradually restores HP of party member with which faerie has a Fey Union.<br/>Cure Potency: 300<br/>Faerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__05",
+     "name": "Fey Blessing",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7e8ec62242991c3169dad8acbd2663bbc806ba70.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Restores the HP of all nearby party members.\nCure Potency: 320\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores the HP of all nearby party members.<br/>Cure Potency: 320<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__06",
+     "name": "Seraphic Veil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07f1ba0fbda8b1b69078795da3932089e055e10d.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "3s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 180\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 180<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored<br/>Duration: 30s<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__07",
+     "name": "Angel's Whisper",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c6732641fcefad97152fbf3fbefa0a4a1d3a5114.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "20y",
+     "description": "Gradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Gradually restores the HP of all nearby party members.<br/>Cure Potency: 80<br/>Duration: 21s<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__08",
+     "name": "Seraphic Illumination",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f52540afc77b83926b4b31d0c3caacd9147e7af6.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases healing magic potency of nearby party members by 10%, while reducing magic damage taken by nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Fey Illumination.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Increases healing magic potency of nearby party members by 10%, while reducing magic damage taken by nearby party members by 5%.<br/>Duration: 20s<br/>Effect cannot be stacked with Fey Illumination.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_pet_action__09",
+     "name": "Consolation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/49e61f876fbd6dccbebcf0e5d2f979f2472df3f5.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Restores the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores the HP of all nearby party members.<br/>Cure Potency: 250<br/>Additional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored<br/>Duration: 30s<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Repose",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Spell",
+     "cast": "2.5s",
+     "recast": "2.5s",
+     "cost": "600 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Afflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.",
+     "descriptionHtml": "Afflicts target with Sleep.<br/>Duration: 30s<br/>Cancels auto-attack upon execution."
+    },
+    {
+     "rowId": "healer_action__02",
+     "name": "Esuna",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "400 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Removes a single detrimental effect from target.",
+     "descriptionHtml": "Removes a single detrimental effect from target."
+    },
+    {
+     "rowId": "healer_action__03",
+     "name": "Lucid Dreaming",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 14",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Gradually restores own MP.\nPotency: 55\nDuration: 21s",
+     "descriptionHtml": "Gradually restores own MP.<br/>Potency: 55<br/>Duration: 21s"
+    },
+    {
+     "rowId": "healer_action__04",
+     "name": "Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Next spell is cast immediately.\nDuration: 10s",
+     "descriptionHtml": "Next spell is cast immediately.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "healer_action__05",
+     "name": "Surecast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 44",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Spells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s",
+     "descriptionHtml": "Spells can be cast without interruption.<br/>Additional Effect: Nullifies most knockback and draw-in effects<br/>Duration: 6s"
+    },
+    {
+     "rowId": "healer_action__06",
+     "name": "Rescue",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 48",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.",
+     "descriptionHtml": "Instantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Maim and Mend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "Arcanist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Corruption Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0f39eba82638e7ec21a71a2dc85a90d16988bcb8.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "description": "Upgrades Bio to Bio II.",
+     "descriptionHtml": "Upgrades Bio to Bio II."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Maim and Mend II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "Arcanist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/k/_3v-EDzckpsEC39oe0t4A8pLJk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%.",
+     "descriptionHtml": "Increases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Broil Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/687cae181f73b9e80f3aabf2f8c8ab9941d18389.png",
+     "skillCellText": "Broil Mastery\nJob Quest",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "description": "Upgrades Ruin to Broil and increases the potency of Ruin II to 160, and Art of War to 165.",
+     "descriptionHtml": "Upgrades Ruin to Broil and increases the potency of Ruin II to 160, and Art of War to 165."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Broil Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/71d1738f45b711c361d800be0b471fe794f057b8.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Upgrades Broil to Broil II and increases the potency of Ruin II to 180.",
+     "descriptionHtml": "Upgrades Broil to Broil II and increases the potency of Ruin II to 180."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Corruption Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/138c7127cfe40a93bea3f3e2df53e623251837f3.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Bio II to Biolysis.",
+     "descriptionHtml": "Upgrades Bio II to Biolysis."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Broil Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/957954d748a84bfa8f2a0bd28476d3a239e10fad.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "description": "Upgrades Broil II to Broil III and increases the potency of Ruin II to 200.",
+     "descriptionHtml": "Upgrades Broil II to Broil III and increases the potency of Ruin II to 200."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Enhanced Sacred Soil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/85d3a47cfa61348d06257ee6c4110d1d2f92e57e.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Adds an additional effect to Sacred Soil that grants healing over time.",
+     "descriptionHtml": "Adds an additional effect to Sacred Soil that grants healing over time."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Broil Mastery IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dd7f6f833033a06f220f34096d3107d3be34d58b.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Broil III to Broil IV and increases the potency of Ruin II to 220.",
+     "descriptionHtml": "Upgrades Broil III to Broil IV and increases the potency of Ruin II to 220."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Art of War Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/313a47d2c187d96f10375ab954e71bfc82df59e8.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Art of War to Art of War II.",
+     "descriptionHtml": "Upgrades Art of War to Art of War II."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Enhanced Healing Magic",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889c5ea6067c8a9f387840a91f54c110ca6f023e.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 85",
+     "description": "Increases the healing potency of Physick to 450, Embrace to 180, and Seraphic Veil to 180.\nIncreases the barrier potency of Adloquium to 180% the amount healed and Succor to 160% the amount healed.",
+     "descriptionHtml": "Increases the healing potency of Physick to 450, Embrace to 180, and Seraphic Veil to 180.<br/>Increases the barrier potency of Adloquium to 180% the amount healed and Succor to 160% the amount healed."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Enhanced Deployment Tactics",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76b8ce632650a837a520b088ff4cc0eeb9ddc868.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Reduces Deployment Tactics recast time to 90 seconds.",
+     "descriptionHtml": "Reduces Deployment Tactics recast time to 90 seconds."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Enhanced Chain Stratagem",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d7db48ae39f61343dfe40dca1213dfc7cafc7cac.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Grants Impact Imminent upon using Chain Stratagem.\nDuration: 30s",
+     "descriptionHtml": "Grants Impact Imminent upon using Chain Stratagem.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Tactician's Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Biolysis's damage over time effect to 85 and Broil IV to 320.",
+     "descriptionHtml": "Increases the potency of Biolysis's damage over time effect to 85 and Broil IV to 320."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Succor Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4da1e7f4705cf4f9818dfa7d28dc35814f7b6291.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Upgrades Succor to Concitation.",
+     "descriptionHtml": "Upgrades Succor to Concitation."
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Enhanced Recitation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3dab3b88f599e0456c01548bf94c8bd9895ee004.png",
+     "acquired": [
+      {
+       "class": "Scholar",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Reduces Recitation recast time to 60 seconds.",
+     "descriptionHtml": "Reduces Recitation recast time to 60 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "Enhanced Swiftcast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "Healer",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Reduces Swiftcast recast time to 40 seconds.",
+     "descriptionHtml": "Reduces Swiftcast recast time to 40 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Broil IV",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f6608e86b2f0526d4f9fd593eac7cb7e8a674668.png",
+     "type": "Spell",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 6,000.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Adloquium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/22a3932c3e8625b941a6d65c7bb1985e2244abe7.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 4,000\nAdditional Effect: Grants Galvanize and Catalyze to target\nGalvanize Effect: Absorbs damage equivalent to a heal of 4,000 potency\nDuration: 12s\nBarrier potency is doubled when you are under the effect of Recitation.\nCatalyze Effect: Reduces damage taken by 10%\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 4,000<br/>Additional Effect: Grants Galvanize and Catalyze to target<br/>Galvanize Effect: Absorbs damage equivalent to a heal of 4,000 potency<br/>Duration: 12s<br/>Barrier potency is doubled when you are under the effect of Recitation.<br/>Catalyze Effect: Reduces damage taken by 10%<br/>Duration: 12s<br/>Maximum Charges: 2<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Biolysis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f1a089378baca67848f466998eaf675ca65b241f.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Afflicts target with Biolysis and Biolytic.\nBiolysis Effect: Damage over time\nPotency: 3,000\nDuration: 12s\nPotency is increased by 50% when you are under the effect of Recitation.\nBiolytic Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Afflicts target with Biolysis and Biolytic.<br/>Biolysis Effect: Damage over time<br/>Potency: 3,000<br/>Duration: 12s<br/>Potency is increased by 50% when you are under the effect of Recitation.<br/>Biolytic Effect: Reduces target's HP recovered by healing actions by 15%<br/>Duration: 12s<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Deployment Tactics",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ba157dccbbb4761461ca40b5e03c2a882498cdf3.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "15y",
+     "description": "Extends Galvanize and Catalyze effects cast on self or target to nearby party members.\nWhen targeting an enemy, extends Biolysis and Biolytic effects to other nearby enemies.\nDuration: Time remaining on original effect\nNo effect on targets not under effects applied by you, players riding machina, or non-player combatants.\nMaximum Charges: 2",
+     "descriptionHtml": "Extends Galvanize and Catalyze effects cast on self or target to nearby party members.<br/>When targeting an enemy, extends Biolysis and Biolytic effects to other nearby enemies.<br/>Duration: Time remaining on original effect<br/>No effect on targets not under effects applied by you, players riding machina, or non-player combatants.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Chain Stratagem",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23a8a3db9390a92f29e6df238044537361682fab.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Increases target's damage taken by 10%.\nDuration: 10s\nHalves the defensive bonus of Guard instead when targeting enemies under its effect.",
+     "descriptionHtml": "Increases target's damage taken by 10%.<br/>Duration: 10s<br/>Halves the defensive bonus of Guard instead when targeting enemies under its effect."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Expedient",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5f98fdab5e9b3c01f61588afd6f60ceeb8fc7966.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Grants Expedience and Desperate Measures to self and all nearby party members.\nExpedience Effect: Increases movement speed by 25%\nDuration: 10s\nDesperate Measures Effect: Increases damage dealt by 10%\nDuration: 10s\nAdditional Effect: Grants Recitation\nRecitation Effect: Increases the potency of Galvanize, Biolysis, and Biolytic effects\nDuration: 20s\nThis action's effects extend through obstructions.",
+     "descriptionHtml": "Grants Expedience and Desperate Measures to self and all nearby party members.<br/>Expedience Effect: Increases movement speed by 25%<br/>Duration: 10s<br/>Desperate Measures Effect: Increases damage dealt by 10%<br/>Duration: 10s<br/>Additional Effect: Grants Recitation<br/>Recitation Effect: Increases the potency of Galvanize, Biolysis, and Biolytic effects<br/>Duration: 20s<br/>This action's effects extend through obstructions."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Summon Seraph",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/44de61f43a848bff2f6c8ee8dd37df66746e12d2.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "1y",
+     "description": "Summons Seraph to fight at a designated location.\nDuration: 20s\nAutomatically casts Seraphic Veil on party members within 30 yalms.\nAutomatically grants Seraphic Illumination to party members within 15 yalms.\nSeraphic Illumination Effect: Increases HP recovery via healing actions on self by 10%",
+     "descriptionHtml": "Summons Seraph to fight at a designated location.<br/>Duration: 20s<br/>Automatically casts Seraphic Veil on party members within 30 yalms.<br/>Automatically grants Seraphic Illumination to party members within 15 yalms.<br/>Seraphic Illumination Effect: Increases HP recovery via healing actions on self by 10%"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Seraphic Halo",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f4ce8d90ce96634d7c028ef2990dfc9f61b8417.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.<br/>Can only be executed while under the effect of Seraphism.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Accession",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8137bd2178a9071507f4d74e4ce4d1282cacc4c.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Restores own HP and the HP of all nearby party members.\nCure Potency: 8,000\nAdditional Effect: Grants Consolation\nConsolation Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 20s\nThis action's effects extend through obstructions.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores own HP and the HP of all nearby party members.<br/>Cure Potency: 8,000<br/>Additional Effect: Grants Consolation<br/>Consolation Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 20s<br/>This action's effects extend through obstructions.<br/>Can only be executed while under the effect of Seraphism.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Seraphic Veil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe17c3c2cb39842c9bfe50d5839d2b6a93075ef9.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 6,000\nAdditional Effect: Erects a magicked barrier which nullifies damage equivalent to a heal of 6,000 potency\nDuration: 10s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 6,000<br/>Additional Effect: Erects a magicked barrier which nullifies damage equivalent to a heal of 6,000 potency<br/>Duration: 10s<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Seraphism",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb3ffdaf3d55f8c9813f1a0d827a7cc736cd8802.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Grants Seraphism and Recitation.\nSeraphism Effect: Broil IV is upgraded to Seraphic Halo and Seraphism is upgraded to Accession\nDuration: 20s\nRecitation Effect: Increases the potency of Adloquium and Biolysis effects\nDuration: 20s\nAdditional Effect: Removes one status affliction from self and nearby party members that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify\nDuration: 20s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s\nThis action's effects extend through obstructions.\n\n※Action changes to Accession upon execution.",
+     "descriptionHtml": "Grants Seraphism and Recitation.<br/>Seraphism Effect: Broil IV is upgraded to Seraphic Halo and Seraphism is upgraded to Accession<br/>Duration: 20s<br/>Recitation Effect: Increases the potency of Adloquium and Biolysis effects<br/>Duration: 20s<br/>Additional Effect: Removes one status affliction from self and nearby party members that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify<br/>Duration: 20s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 90s<br/>This action's effects extend through obstructions.<br/><br/>※Action changes to Accession upon execution."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Haelan",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "2000 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Restores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.",
+     "descriptionHtml": "Restores target's HP.<br/>Cure Potency: 16,000<br/>Potency reduced to 8,000 when targeting self."
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Stoneskin II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s",
+     "descriptionHtml": "Creates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.<br/>This action's effects extend through obstructions.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Diabrosis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s",
+     "descriptionHtml": "Deals unaspected damage with a potency of 9,000 to target and all enemies nearby it.<br/>Additional Effect: Reduces target's HP recovered by healing actions by 33%<br/>Duration: 10s"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "Aetherflow Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png"
+    ]
+   },
+   {
+    "title": "Faerie Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nAetherflow Gauge\n\nUpon learning the action Aetherflow, the Aetherflow Gauge will be displayed, indicating stacks of Aetherflow.\n\nAetherflow can be used to execute certain actions such as Lustrate (acquired at level 45) and Excogitation (acquired at level 62).\n\nFaerie Gauge\n\nUpon learning the action Aetherpact, you'll be able to view the Faerie Gauge, which displays the amount of fae aether.\nFae aether is accumulated when you use Aetherflow to execute certain actions such as Lustrate or Excogitation during battle while a faerie is summoned. Accumulated fae aether can then be used to perform Aetherpact.\n\nUpon learning the action Summon Seraph, you can temporarily call Seraph to fight alongside you in place of Eos. The Faerie Gauge will indicate how much time remains before she must return.\n\nSimple Mode\n\nAetherflow Gauge\n\nFaerie Gauge\n\nNormal\n\nAetherpact Duration\n\nSeraph Duration",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Aetherflow Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/3/k7_yNXLMnM28HGbJ8EcFEW9RvQ.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Aetherflow</span>, the <span class=\"txt_red\">Aetherflow Gauge</span> will be displayed, indicating stacks of Aetherflow.<br/><br/>Aetherflow can be used to execute certain actions such as <span class=\"txt_red\">Lustrate</span> (acquired at level 45) and <span class=\"txt_red\">Excogitation</span> (acquired at level 62).</p>\n</div>\n<h3 class=\"job__hud__title\">Faerie Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/n/l6m0_C1JWNm35jkGXPlZFg_2ac.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Aetherpact</span>, you'll be able to view the <span class=\"txt_red\">Faerie Gauge</span>, which displays the amount of <span class=\"txt_red\">fae aether</span>.<br/>Fae aether is accumulated when you use Aetherflow to execute certain actions such as <span class=\"txt_red\">Lustrate</span> or <span class=\"txt_red\">Excogitation</span> during battle while a faerie is summoned. Accumulated fae aether can then be used to perform Aetherpact.</p>\n</div>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Summon Seraph</span>, you can temporarily call Seraph to fight alongside you in place of Eos. The Faerie Gauge will indicate how much time remains before she must return.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">Aetherflow Gauge</p>\n</th>\n</tr>\n<tr>\n<td colspan=\"3\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png\" width=\"290\"/>\n</td>\n</tr><tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">Faerie Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Normal</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Aetherpact Duration</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Seraph Duration</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/3/k7_yNXLMnM28HGbJ8EcFEW9RvQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/n/l6m0_C1JWNm35jkGXPlZFg_2ac.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/E/fIhufwDeYN4u9xBz398HYAwopI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/k/8cDdskUxw8R9h_lfXwBkQUcVLE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/D/QIKfALFt1hgwM9w-HozJDJCbG8.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/4/sDLYtoH20Nat6vcyuocDs_oyFc.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/CpjoFFNzW7pBEgzNzsry4idnfA.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/scholar/01.png",
+   "public/jobguide/hud/scholar/02.png",
+   "public/jobguide/hud/scholar/03.png",
+   "public/jobguide/hud/scholar/04.png",
+   "public/jobguide/hud/scholar/05.png",
+   "public/jobguide/hud/scholar/06.png",
+   "public/jobguide/hud/scholar/07.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRuin\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 150.\n\nBio\n\nLv. 2\n\nSpell\nInstant\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 20\nDuration: 30s\n\nPhysick\n\nLv. 4\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 450\n\nSummon Eos\n\nLv. 4\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n0y\n\n0y\n\nSummons the faerie Eos to fight at your side. When set to guard, automatically casts Embrace on party members who suffer damage.\n\nResurrection\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nWhispering Dawn\n\nLv. 20\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Whispering Dawn. If Seraph is summoned, orders her to execute Angel's Whisper.\nWhispering Dawn/Angel's Whisper Effect: Gradually restores the HP of all nearby party members\nCure Potency: 80\nDuration: 21s\n\nBio II\n\nLv. 26\n\nSpell\nInstant\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 40\nDuration: 30s\n\nAdloquium\n\nJob Quest\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 300\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nSuccor\n\nJob Quest\n\nLv. 35\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 160% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nRuin II\n\nLv. 38\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 220.\n\nFey Illumination\n\nLv. 40\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Fey Illumination. If Seraph is summoned, orders her to execute Seraphic Illumination.\nFey Illumination/Seraphic Illumination Effect: Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.\n\nAetherflow\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nRestores 20% of maximum MP.\nAdditional Effect: Aetherflow III\nCan only be executed while in combat.\n\nEnergy Drain\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 100.\nAdditional Effect: Absorbs a portion of damage dealt as HP\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nLustrate\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 600\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nArt of War\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 165 to all nearby enemies.\n\nSacred Soil\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n30s\n-\n\n30y\n\n15y\n\nCreates a designated area in which party members will only suffer 90% of all damage inflicted.\nDuration: 15s\nAdditional Effect: Regen\nCure Potency: 100\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nIndomitability\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n30s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nBroil\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 220.\n\nDeployment Tactics\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n90s\n-\n\n30y\n\n30y\n\nExtends Galvanize effect cast on self or target party member to other nearby party members.\nDuration: Time remaining on original effect\nNo effect when target is not under the effect of Galvanize.\n\nEmergency Tactics\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n15s\n-\n\n0y\n\n0y\n\nTransforms the next Galvanize and Catalyze statuses into HP recovery equaling the amount of damage reduction intended for the barrier.\nDuration: 15s\n\nDissipation\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n180s\n-\n\n0y\n\n0y\n\nOrders your faerie away while granting you a full Aetherflow stack. Also increases healing magic potency by 20%.\nDuration: 30s\nCurrent faerie will return once the effect expires.\nSummon Eos cannot be executed while under the effect of Dissipation.\nCan only be executed while a faerie is summoned and you are in combat.\n\nExcogitation\n\nLv. 62\n\nAbility\nInstant\n45s\n-\n\n30y\n\n0y\n\nGrants self or target party member the effect of Excogitation, restoring HP when member's HP falls to 50% or below, or upon effect duration expiration.\nCure Potency: 800\nDuration: 45s\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nBroil II\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 240.\n\nChain Stratagem\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nIncreases rate at which target takes critical hits by 10%.\nDuration: 20s\nAdditional Effect: Grants Impact Imminent\nDuration: 30s\n\nAetherpact\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n3s\n-\n\n30y\n\n0y\n\nOrders faerie to execute Fey Union with target party member. Effect ends upon reuse.\nFaerie Gauge Cost: 10\nFey Union Effect: Gradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\nThe Faerie Gauge increases when a faerie or Seraph is summoned and an Aetherflow action is successfully executed while in combat.\n\nDissolve Union\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nDissolves current Fey Union.\n\nBiolysis\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 85\nDuration: 30s\n\nBroil III\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 255.\n\nRecitation\n\nLv. 74\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nAllows the execution of Adloquium, Concitation, Indomitability, or Excogitation without consuming resources while also ensuring critical HP is restored.\nDuration: 15s\n\nFey Blessing\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Fey Blessing.\nFey Blessing Effect: Restores the HP of all nearby party members\nCure Potency: 320\n\nSummon Seraph\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSummons Seraph to fight at your side. When set to guard, automatically casts Seraphic Veil on party members who suffer damage.\nCannot summon Seraph unless a pet is already summoned. Current pet will leave the battlefield while Seraph is present, and return once gone.\nDuration: 22s\n\nConsolation\n\nLv. 80\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nOrders Seraph to execute Consolation.\nConsolation Effect: Restores the HP of all nearby party members\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\nMaximum Charges: 2\n\nBroil IV\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 320.\n\nArt of War II\n\nLv. 82\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 180 to all nearby enemies.\n\nProtraction\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nIncreases maximum HP of a party member or self by 10% and restores the amount increased.\nAdditional Effect: Increases HP recovery via healing actions by 10%\nDuration: 10s\n\nExpedient\n\nLv. 90\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nGrants Expedience and Desperate Measures to all nearby party members.\nExpedience Effect: Increases movement speed\nDuration: 10s\nDesperate Measures Effect: Reduces damage taken by 10%\nDuration: 20s\n\nBaneful Impaction\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage over time to target and all enemies nearby it.\nPotency: 140\nDuration: 15s\nCan only be executed while under the effect of Impact Imminent.\n\nConcitation\n\nLv. 96\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nSeraphism\n\nLv. 100\n\nAbility\nInstant\n180s\n-\n\n0y\n\n0y\n\nGradually restores the HP of self and all party members within a radius of 50 yalms.\nCure Potency: 100\nAdditional Effect: Changes Adloquium to Manifestation and Concitation to Accession\nAdditional Effect: Resets Emergency Tactics recast timer and reduces its recast timer to 1s\nDuration: 20s\nEffect cannot be stacked with Dissipation.\nCan only be executed while a faerie or Seraph is summoned and you are in combat.\n\nManifestation\n\nLv. 100\n\nSpell\nInstant\n\n2.5s\n900 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 360\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Adloquium changes to Manifestation when requirements for execution are met.\n\nAccession\n\nLv. 100\n\nSpell\nInstant\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 240\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Concitation changes to Accession when requirements for execution are met."
+  },
+  {
+   "heading": "Pet Actions",
+   "anchor": "anchor__pet_eos",
+   "text": "Pet Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nEmbrace\n\nLv. 1\n\nSpell\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 180\n\n※This action cannot be assigned to a hotbar.\n\nWhispering Dawn\n\nLv. 20\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nGradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.\n\nFey Illumination\n\nLv. 40\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nIncreases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.\n\n※This action cannot be assigned to a hotbar.\n\nFey Union\n\nLv. 70\n\nAbility\nInstant\n-\n-\n\n30y\n\n0y\n\nGradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\n\n※This action cannot be assigned to a hotbar.\n\nFey Blessing\n\nLv. 76\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nRestores the HP of all nearby party members.\nCure Potency: 320\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Veil\n\nLv. 80\n\nSpell\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 180\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n\nAngel's Whisper\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nGradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Illumination\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nIncreases healing magic potency of nearby party members by 10%, while reducing magic damage taken by nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Fey Illumination.\n\n※This action cannot be assigned to a hotbar.\n\nConsolation\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nRestores the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Pet Actions (Commands)",
+   "anchor": "anchor__pet_instruction",
+   "text": "Pet Actions (Commands)\n\nAction Name\nEffect\n\nAway\n\nOrder pet to leave the battlefield.\n\nHeel\n\nOrder pet to follow behind you.\n\nPlace\n\nOrder pet to move to a specified location.\n\nStay\n\nOrder pet to remain where it is.\n\nGuard\n\nOrder pet to refrain from attacking until you attack or are attacked.\n\nSteady\n\nOrder pet to refrain from attacking until ordered to do so."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements."
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%.\n\nCorruption Mastery\n\nLv. 26\n\nUpgrades Bio to Bio II.\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%.\n\nBroil Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Ruin to Broil and increases the potency of Ruin II to 160, and Art of War to 165.\n\nBroil Mastery II\n\nLv. 64\n\nUpgrades Broil to Broil II and increases the potency of Ruin II to 180.\n\nCorruption Mastery II\n\nLv. 72\n\nUpgrades Bio II to Biolysis.\n\nBroil Mastery III\n\nLv. 72\n\nUpgrades Broil II to Broil III and increases the potency of Ruin II to 200.\n\nEnhanced Sacred Soil\n\nLv. 78\n\nAdds an additional effect to Sacred Soil that grants healing over time.\n\nBroil Mastery IV\n\nLv. 82\n\nUpgrades Broil III to Broil IV and increases the potency of Ruin II to 220.\n\nArt of War Mastery\n\nLv. 82\n\nUpgrades Art of War to Art of War II.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Physick to 450, Embrace to 180, and Seraphic Veil to 180.\nIncreases the barrier potency of Adloquium to 180% the amount healed and Succor to 160% the amount healed.\n\nEnhanced Deployment Tactics\n\nLv. 88\n\nReduces Deployment Tactics recast time to 90 seconds.\n\nEnhanced Chain Stratagem\n\nLv. 92\n\nGrants Impact Imminent upon using Chain Stratagem.\nDuration: 30s\n\nTactician's Mastery\n\nLv. 94\n\nIncreases the potency of Biolysis's damage over time effect to 85 and Broil IV to 320.\n\nSuccor Mastery\n\nLv. 96\n\nUpgrades Succor to Concitation.\n\nEnhanced Recitation\n\nLv. 98\n\nReduces Recitation recast time to 60 seconds."
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nAetherflow Gauge\n\nUpon learning the action Aetherflow, the Aetherflow Gauge will be displayed, indicating stacks of Aetherflow.\n\nAetherflow can be used to execute certain actions such as Lustrate (acquired at level 45) and Excogitation (acquired at level 62).\n\nFaerie Gauge\n\nUpon learning the action Aetherpact, you'll be able to view the Faerie Gauge, which displays the amount of fae aether.\nFae aether is accumulated when you use Aetherflow to execute certain actions such as Lustrate or Excogitation during battle while a faerie is summoned. Accumulated fae aether can then be used to perform Aetherpact.\n\nUpon learning the action Summon Seraph, you can temporarily call Seraph to fight alongside you in place of Eos. The Faerie Gauge will indicate how much time remains before she must return.\n\nSimple Mode\n\nAetherflow Gauge\n\nFaerie Gauge\n\nNormal\n\nAetherpact Duration\n\nSeraph Duration"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBroil IV\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\n\nAdloquium\n\nSpell\nInstant\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 4,000\nAdditional Effect: Grants Galvanize and Catalyze to target\nGalvanize Effect: Absorbs damage equivalent to a heal of 4,000 potency\nDuration: 12s\nBarrier potency is doubled when you are under the effect of Recitation.\nCatalyze Effect: Reduces damage taken by 10%\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nBiolysis\n\nSpell\nInstant\n16s\n-\n\n25y\n\n0y\n\nAfflicts target with Biolysis and Biolytic.\nBiolysis Effect: Damage over time\nPotency: 3,000\nDuration: 12s\nPotency is increased by 50% when you are under the effect of Recitation.\nBiolytic Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nThis action does not share a recast timer with any other actions.\n\nDeployment Tactics\n\nAbility\nInstant\n12s\n-\n\n30y\n\n15y\n\nExtends Galvanize and Catalyze effects cast on self or target to nearby party members.\nWhen targeting an enemy, extends Biolysis and Biolytic effects to other nearby enemies.\nDuration: Time remaining on original effect\nNo effect on targets not under effects applied by you, players riding machina, or non-player combatants.\nMaximum Charges: 2\n\nChain Stratagem\n\nAbility\nInstant\n20s\n-\n\n25y\n\n0y\n\nIncreases target's damage taken by 10%.\nDuration: 10s\nHalves the defensive bonus of Guard instead when targeting enemies under its effect.\n\nExpedient\n\nAbility\nInstant\n30s\n-\n\n0y\n\n15y\n\nGrants Expedience and Desperate Measures to self and all nearby party members.\nExpedience Effect: Increases movement speed by 25%\nDuration: 10s\nDesperate Measures Effect: Increases damage dealt by 10%\nDuration: 10s\nAdditional Effect: Grants Recitation\nRecitation Effect: Increases the potency of Galvanize, Biolysis, and Biolytic effects\nDuration: 20s\nThis action's effects extend through obstructions.\n\nSummon Seraph\n\nAbility\nInstant\n60s\n-\n\n30y\n\n1y\n\nSummons Seraph to fight at a designated location.\nDuration: 20s\nAutomatically casts Seraphic Veil on party members within 30 yalms.\nAutomatically grants Seraphic Illumination to party members within 15 yalms.\nSeraphic Illumination Effect: Increases HP recovery via healing actions on self by 10%\n\nSeraphic Halo\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n\nAccession\n\nSpell\nInstant\n20s\n-\n\n0y\n\n15y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 8,000\nAdditional Effect: Grants Consolation\nConsolation Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 20s\nThis action's effects extend through obstructions.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Veil\n\nSpell\nInstant\n2.5s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 6,000\nAdditional Effect: Erects a magicked barrier which nullifies damage equivalent to a heal of 6,000 potency\nDuration: 10s\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSeraphism\n\nInstant\n10s\n-\n\n0y\n\n30y\n\nGrants Seraphism and Recitation.\nSeraphism Effect: Broil IV is upgraded to Seraphic Halo and Seraphism is upgraded to Accession\nDuration: 20s\nRecitation Effect: Increases the potency of Adloquium and Biolysis effects\nDuration: 20s\nAdditional Effect: Removes one status affliction from self and nearby party members that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify\nDuration: 20s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s\nThis action's effects extend through obstructions.\n\n※Action changes to Accession upon execution."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nPet Actions\n\nPet Actions (Commands)\n\nRole Actions\n\nTrait\nRole Traits\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nHealer\n\nIn an age long past, when mankind flourished under the radiance of arcane mastery, the island of Vylbrand was home to a city-state called Nym. Though the history of that age tells of countless wars waged with earth-shattering incantations, it was the brilliant strategic maneuvering of Nym's scholars that allowed their mundane army of mariners to throw back would-be conquerors time and again. These learned men and women defended the freedom of their tiny nation with their unique command over spell-weaving faeries, utilizing the creatures' magicks to heal the wounded and bolster the strength of their allies.\n\nStarting Job Quest\n\nPrerequisite Class: Arcanist\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRuin\n\nLv. 1\n\nSpell\n\n1.5s\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 150.\n\nBio\n\nLv. 2\n\nSpell\nInstant\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 20\nDuration: 30s\n\nPhysick\n\nLv. 4\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 450\n\nSummon Eos\n\nLv. 4\n\nSpell\n\n1.5s\n\n2.5s\n200 MP\n\n0y\n\n0y\n\nSummons the faerie Eos to fight at your side. When set to guard, automatically casts Embrace on party members who suffer damage.\n\nResurrection\n\nLv. 12\n\nSpell\n\n8s\n\n2.5s\n2400 MP\n\n30y\n\n0y\n\nResurrects target to a weakened state.\n\nWhispering Dawn\n\nLv. 20\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Whispering Dawn. If Seraph is summoned, orders her to execute Angel's Whisper.\nWhispering Dawn/Angel's Whisper Effect: Gradually restores the HP of all nearby party members\nCure Potency: 80\nDuration: 21s\n\nBio II\n\nLv. 26\n\nSpell\nInstant\n\n2.5s\n300 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 40\nDuration: 30s\n\nAdloquium\n\nJob Quest\n\nLv. 30\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 300\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nSuccor\n\nJob Quest\n\nLv. 35\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 160% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nRuin II\n\nLv. 38\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 220.\n\nFey Illumination\n\nLv. 40\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Fey Illumination. If Seraph is summoned, orders her to execute Seraphic Illumination.\nFey Illumination/Seraphic Illumination Effect: Increases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.\n\nAetherflow\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nRestores 20% of maximum MP.\nAdditional Effect: Aetherflow III\nCan only be executed while in combat.\n\nEnergy Drain\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 100.\nAdditional Effect: Absorbs a portion of damage dealt as HP\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nLustrate\n\nJob Quest\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 600\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nArt of War\n\nLv. 46\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 165 to all nearby enemies.\n\nSacred Soil\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n30s\n-\n\n30y\n\n15y\n\nCreates a designated area in which party members will only suffer 90% of all damage inflicted.\nDuration: 15s\nAdditional Effect: Regen\nCure Potency: 100\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nIndomitability\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n30s\n-\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 400\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nBroil\n\nJob Quest\n\nLv. 54\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 220.\n\nDeployment Tactics\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n90s\n-\n\n30y\n\n30y\n\nExtends Galvanize effect cast on self or target party member to other nearby party members.\nDuration: Time remaining on original effect\nNo effect when target is not under the effect of Galvanize.\n\nEmergency Tactics\n\nJob Quest\n\nLv. 58\n\nAbility\nInstant\n15s\n-\n\n0y\n\n0y\n\nTransforms the next Galvanize and Catalyze statuses into HP recovery equaling the amount of damage reduction intended for the barrier.\nDuration: 15s\n\nDissipation\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n180s\n-\n\n0y\n\n0y\n\nOrders your faerie away while granting you a full Aetherflow stack. Also increases healing magic potency by 20%.\nDuration: 30s\nCurrent faerie will return once the effect expires.\nSummon Eos cannot be executed while under the effect of Dissipation.\nCan only be executed while a faerie is summoned and you are in combat.\n\nExcogitation\n\nLv. 62\n\nAbility\nInstant\n45s\n-\n\n30y\n\n0y\n\nGrants self or target party member the effect of Excogitation, restoring HP when member's HP falls to 50% or below, or upon effect duration expiration.\nCure Potency: 800\nDuration: 45s\nAdditional Effect: Increases Faerie Gauge by 10\nAetherflow Gauge Cost: 1\n\nBroil II\n\nLv. 64\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 240.\n\nChain Stratagem\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nIncreases rate at which target takes critical hits by 10%.\nDuration: 20s\nAdditional Effect: Grants Impact Imminent\nDuration: 30s\n\nAetherpact\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n3s\n-\n\n30y\n\n0y\n\nOrders faerie to execute Fey Union with target party member. Effect ends upon reuse.\nFaerie Gauge Cost: 10\nFey Union Effect: Gradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\nThe Faerie Gauge increases when a faerie or Seraph is summoned and an Aetherflow action is successfully executed while in combat.\n\nDissolve Union\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nDissolves current Fey Union.\n\nBiolysis\n\nLv. 72\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage over time.\nPotency: 85\nDuration: 30s\n\nBroil III\n\nLv. 72\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 255.\n\nRecitation\n\nLv. 74\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nAllows the execution of Adloquium, Concitation, Indomitability, or Excogitation without consuming resources while also ensuring critical HP is restored.\nDuration: 15s\n\nFey Blessing\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nOrders faerie to execute Fey Blessing.\nFey Blessing Effect: Restores the HP of all nearby party members\nCure Potency: 320\n\nSummon Seraph\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSummons Seraph to fight at your side. When set to guard, automatically casts Seraphic Veil on party members who suffer damage.\nCannot summon Seraph unless a pet is already summoned. Current pet will leave the battlefield while Seraph is present, and return once gone.\nDuration: 22s\n\nConsolation\n\nLv. 80\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nOrders Seraph to execute Consolation.\nConsolation Effect: Restores the HP of all nearby party members\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\nMaximum Charges: 2\n\nBroil IV\n\nLv. 82\n\nSpell\n\n1.5s\n\n2.5s\n400 MP\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 320.\n\nArt of War II\n\nLv. 82\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 180 to all nearby enemies.\n\nProtraction\n\nLv. 86\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nIncreases maximum HP of a party member or self by 10% and restores the amount increased.\nAdditional Effect: Increases HP recovery via healing actions by 10%\nDuration: 10s\n\nExpedient\n\nLv. 90\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nGrants Expedience and Desperate Measures to all nearby party members.\nExpedience Effect: Increases movement speed\nDuration: 10s\nDesperate Measures Effect: Reduces damage taken by 10%\nDuration: 20s\n\nBaneful Impaction\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage over time to target and all enemies nearby it.\nPotency: 140\nDuration: 15s\nCan only be executed while under the effect of Impact Imminent.\n\nConcitation\n\nLv. 96\n\nSpell\n\n2s\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 200\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\n\nSeraphism\n\nLv. 100\n\nAbility\nInstant\n180s\n-\n\n0y\n\n0y\n\nGradually restores the HP of self and all party members within a radius of 50 yalms.\nCure Potency: 100\nAdditional Effect: Changes Adloquium to Manifestation and Concitation to Accession\nAdditional Effect: Resets Emergency Tactics recast timer and reduces its recast timer to 1s\nDuration: 20s\nEffect cannot be stacked with Dissipation.\nCan only be executed while a faerie or Seraph is summoned and you are in combat.\n\nManifestation\n\nLv. 100\n\nSpell\nInstant\n\n2.5s\n900 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 360\nAdditional Effect: Grants Galvanize to target, nullifying damage equaling 180% of the amount of HP restored. When critical HP is restored, also grants Catalyze, nullifying damage equaling 180% the amount of HP restored.\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Adloquium changes to Manifestation when requirements for execution are met.\n\nAccession\n\nLv. 100\n\nSpell\nInstant\n\n2.5s\n900 MP\n\n0y\n\n20y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 240\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling 180% of the amount of HP restored\nDuration: 30s\nEffect cannot be stacked with certain sage barrier effects.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n※Concitation changes to Accession when requirements for execution are met.\n\nPet Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nEmbrace\n\nLv. 1\n\nSpell\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 180\n\n※This action cannot be assigned to a hotbar.\n\nWhispering Dawn\n\nLv. 20\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nGradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.\n\nFey Illumination\n\nLv. 40\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nIncreases healing magic potency of all nearby party members by 10%, while reducing magic damage taken by all nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Seraphic Illumination.\n\n※This action cannot be assigned to a hotbar.\n\nFey Union\n\nLv. 70\n\nAbility\nInstant\n-\n-\n\n30y\n\n0y\n\nGradually restores HP of party member with which faerie has a Fey Union.\nCure Potency: 300\nFaerie Gauge is depleted by 10 periodically while HP is restored. Fey Union effect fades upon execution of other faerie actions or when party member moves from within 30 yalms of the faerie.\n\n※This action cannot be assigned to a hotbar.\n\nFey Blessing\n\nLv. 76\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nRestores the HP of all nearby party members.\nCure Potency: 320\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Veil\n\nLv. 80\n\nSpell\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 180\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n\nAngel's Whisper\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n20y\n\nGradually restores the HP of all nearby party members.\nCure Potency: 80\nDuration: 21s\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Illumination\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nIncreases healing magic potency of nearby party members by 10%, while reducing magic damage taken by nearby party members by 5%.\nDuration: 20s\nEffect cannot be stacked with Fey Illumination.\n\n※This action cannot be assigned to a hotbar.\n\nConsolation\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n0y\n\n30y\n\nRestores the HP of all nearby party members.\nCure Potency: 250\nAdditional Effect: Erects a magicked barrier which nullifies damage equaling the amount of HP restored\nDuration: 30s\n\n※This action cannot be assigned to a hotbar.\n\nPet Actions (Commands)\n\nAction Name\nEffect\n\nAway\n\nOrder pet to leave the battlefield.\n\nHeel\n\nOrder pet to follow behind you.\n\nPlace\n\nOrder pet to move to a specified location.\n\nStay\n\nOrder pet to remain where it is.\n\nGuard\n\nOrder pet to refrain from attacking until you attack or are attacked.\n\nSteady\n\nOrder pet to refrain from attacking until ordered to do so.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRepose\n\nLv. 8\n\nSpell\n\n2.5s\n\n2.5s\n600 MP\n\n30y\n\n0y\n\nAfflicts target with Sleep.\nDuration: 30s\nCancels auto-attack upon execution.\n\nEsuna\n\nLv. 10\n\nSpell\nInstant\n\n2.5s\n400 MP\n\n30y\n\n0y\n\nRemoves a single detrimental effect from target.\n\nLucid Dreaming\n\nLv. 14\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGradually restores own MP.\nPotency: 55\nDuration: 21s\n\nSwiftcast\n\nLv. 18\n\nAbility\nInstant\n40s\n-\n\n0y\n\n0y\n\nNext spell is cast immediately.\nDuration: 10s\n\nSurecast\n\nLv. 44\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nSpells can be cast without interruption.\nAdditional Effect: Nullifies most knockback and draw-in effects\nDuration: 6s\n\nRescue\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n30y\n\n0y\n\nInstantly draws target party member to your side. Cannot be used outside of combat or when target is suffering from certain enfeeblements.\n\nTrait\n\nTraits\nAcquired\nEffect\n\nMaim and Mend\n\nLv. 20\n\nIncreases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%.\n\nCorruption Mastery\n\nLv. 26\n\nUpgrades Bio to Bio II.\n\nMaim and Mend II\n\nLv. 40\n\nIncreases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%.\n\nBroil Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Ruin to Broil and increases the potency of Ruin II to 160, and Art of War to 165.\n\nBroil Mastery II\n\nLv. 64\n\nUpgrades Broil to Broil II and increases the potency of Ruin II to 180.\n\nCorruption Mastery II\n\nLv. 72\n\nUpgrades Bio II to Biolysis.\n\nBroil Mastery III\n\nLv. 72\n\nUpgrades Broil II to Broil III and increases the potency of Ruin II to 200.\n\nEnhanced Sacred Soil\n\nLv. 78\n\nAdds an additional effect to Sacred Soil that grants healing over time.\n\nBroil Mastery IV\n\nLv. 82\n\nUpgrades Broil III to Broil IV and increases the potency of Ruin II to 220.\n\nArt of War Mastery\n\nLv. 82\n\nUpgrades Art of War to Art of War II.\n\nEnhanced Healing Magic\n\nLv. 85\n\nIncreases the healing potency of Physick to 450, Embrace to 180, and Seraphic Veil to 180.\nIncreases the barrier potency of Adloquium to 180% the amount healed and Succor to 160% the amount healed.\n\nEnhanced Deployment Tactics\n\nLv. 88\n\nReduces Deployment Tactics recast time to 90 seconds.\n\nEnhanced Chain Stratagem\n\nLv. 92\n\nGrants Impact Imminent upon using Chain Stratagem.\nDuration: 30s\n\nTactician's Mastery\n\nLv. 94\n\nIncreases the potency of Biolysis's damage over time effect to 85 and Broil IV to 320.\n\nSuccor Mastery\n\nLv. 96\n\nUpgrades Succor to Concitation.\n\nEnhanced Recitation\n\nLv. 98\n\nReduces Recitation recast time to 60 seconds.\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Swiftcast\n\nLv. 94\n\nReduces Swiftcast recast time to 40 seconds.\n\nJob Gauge\n\nAetherflow Gauge\n\nUpon learning the action Aetherflow, the Aetherflow Gauge will be displayed, indicating stacks of Aetherflow.\n\nAetherflow can be used to execute certain actions such as Lustrate (acquired at level 45) and Excogitation (acquired at level 62).\n\nFaerie Gauge\n\nUpon learning the action Aetherpact, you'll be able to view the Faerie Gauge, which displays the amount of fae aether.\nFae aether is accumulated when you use Aetherflow to execute certain actions such as Lustrate or Excogitation during battle while a faerie is summoned. Accumulated fae aether can then be used to perform Aetherpact.\n\nUpon learning the action Summon Seraph, you can temporarily call Seraph to fight alongside you in place of Eos. The Faerie Gauge will indicate how much time remains before she must return.\n\nSimple Mode\n\nAetherflow Gauge\n\nFaerie Gauge\n\nNormal\n\nAetherpact Duration\n\nSeraph Duration\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBroil IV\n\nSpell\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 6,000.\n\nAdloquium\n\nSpell\nInstant\n12s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 4,000\nAdditional Effect: Grants Galvanize and Catalyze to target\nGalvanize Effect: Absorbs damage equivalent to a heal of 4,000 potency\nDuration: 12s\nBarrier potency is doubled when you are under the effect of Recitation.\nCatalyze Effect: Reduces damage taken by 10%\nDuration: 12s\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nBiolysis\n\nSpell\nInstant\n16s\n-\n\n25y\n\n0y\n\nAfflicts target with Biolysis and Biolytic.\nBiolysis Effect: Damage over time\nPotency: 3,000\nDuration: 12s\nPotency is increased by 50% when you are under the effect of Recitation.\nBiolytic Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nThis action does not share a recast timer with any other actions.\n\nDeployment Tactics\n\nAbility\nInstant\n12s\n-\n\n30y\n\n15y\n\nExtends Galvanize and Catalyze effects cast on self or target to nearby party members.\nWhen targeting an enemy, extends Biolysis and Biolytic effects to other nearby enemies.\nDuration: Time remaining on original effect\nNo effect on targets not under effects applied by you, players riding machina, or non-player combatants.\nMaximum Charges: 2\n\nChain Stratagem\n\nAbility\nInstant\n20s\n-\n\n25y\n\n0y\n\nIncreases target's damage taken by 10%.\nDuration: 10s\nHalves the defensive bonus of Guard instead when targeting enemies under its effect.\n\nExpedient\n\nAbility\nInstant\n30s\n-\n\n0y\n\n15y\n\nGrants Expedience and Desperate Measures to self and all nearby party members.\nExpedience Effect: Increases movement speed by 25%\nDuration: 10s\nDesperate Measures Effect: Increases damage dealt by 10%\nDuration: 10s\nAdditional Effect: Grants Recitation\nRecitation Effect: Increases the potency of Galvanize, Biolysis, and Biolytic effects\nDuration: 20s\nThis action's effects extend through obstructions.\n\nSummon Seraph\n\nAbility\nInstant\n60s\n-\n\n30y\n\n1y\n\nSummons Seraph to fight at a designated location.\nDuration: 20s\nAutomatically casts Seraphic Veil on party members within 30 yalms.\nAutomatically grants Seraphic Illumination to party members within 15 yalms.\nSeraphic Illumination Effect: Increases HP recovery via healing actions on self by 10%\n\nSeraphic Halo\n\nSpell\nInstant\n\n2.4s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n\nAccession\n\nSpell\nInstant\n20s\n-\n\n0y\n\n15y\n\nRestores own HP and the HP of all nearby party members.\nCure Potency: 8,000\nAdditional Effect: Grants Consolation\nConsolation Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 20s\nThis action's effects extend through obstructions.\nCan only be executed while under the effect of Seraphism.\n\n※This action cannot be assigned to a hotbar.\n\nSeraphic Veil\n\nSpell\nInstant\n2.5s\n-\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 6,000\nAdditional Effect: Erects a magicked barrier which nullifies damage equivalent to a heal of 6,000 potency\nDuration: 10s\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSeraphism\n\nInstant\n10s\n-\n\n0y\n\n30y\n\nGrants Seraphism and Recitation.\nSeraphism Effect: Broil IV is upgraded to Seraphic Halo and Seraphism is upgraded to Accession\nDuration: 20s\nRecitation Effect: Increases the potency of Adloquium and Biolysis effects\nDuration: 20s\nAdditional Effect: Removes one status affliction from self and nearby party members that can be removed by Purify. If a status affliction cannot be removed, creates a barrier that will nullify the next status affliction that can be removed by Purify\nDuration: 20s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s\nThis action's effects extend through obstructions.\n\n※Action changes to Accession upon execution.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHaelan\n\nSpell\nInstant\n\n2.4s\n2000 MP\n\n30y\n\n0y\n\nRestores target's HP.\nCure Potency: 16,000\nPotency reduced to 8,000 when targeting self.\n\nStoneskin II\n\nSpell\nInstant\n30s\n-\n\n0y\n\n15y\n\nCreates a barrier around self and all nearby party members that absorbs damage equivalent to a heal of 12,000 potency.\nThis action's effects extend through obstructions.\nDuration: 10s\n\nDiabrosis\n\nAbility\nInstant\n45s\n-\n\n25y\n\n10y\n\nDeals unaspected damage with a potency of 9,000 to target and all enemies nearby it.\nAdditional Effect: Reduces target's HP recovered by healing actions by 33%\nDuration: 10s\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

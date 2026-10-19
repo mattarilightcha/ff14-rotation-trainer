@@ -1,0 +1,1873 @@
+{
+ "job": "reaper",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/reaper/",
+ "pageTitle": "Job Guide: Reaper | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMelee DPS\n\nThe Garleans' forebears were once humble farmers who made their home among the sun-drenched fields of southern Ilsabard. That was, until they were driven from this paradise by invaders wielding arcane magicks. Forced north into the frigid mountains, the survivors sought a means to tap into the reservoir of aether otherwise closed to them. A daring few found their answer within the void, binding themselves to its creatures to gain verboten power─power fed by the souls of the slain. Once more they took up their scythes, this time to reap a crimson harvest.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/26fda59956454f1dbca5f260b2763321a2bb761a.png",
+   "https://lds-img.finalfantasyxiv.com/d/4bab01eb43df9752e98deef097e9251647ad96df.png",
+   "https://lds-img.finalfantasyxiv.com/d/e3e48cee91c7abf77a15f6c4c9c9630349849205.png",
+   "https://lds-img.finalfantasyxiv.com/d/d3ae9c9673da37ea10aa4103b747163250c4a385.png",
+   "https://lds-img.finalfantasyxiv.com/d/2e1c97fd007f90808b2fd40ad86354b9e97447a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/113b87916c7ffdb9a8007615f697f2c189c6646a.png",
+   "https://lds-img.finalfantasyxiv.com/d/dac9dba46aa8ff673cd2e365c9468525db0ba1a2.png",
+   "https://lds-img.finalfantasyxiv.com/d/aa7a7dd464459f24aa2209cddcbf8a3ebb167f0b.png",
+   "https://lds-img.finalfantasyxiv.com/d/31d409f8aaeae041b8150e68764e032fccd7c4c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/9977fdbbf70443f9f31f4868cba97138fbec5460.png",
+   "https://lds-img.finalfantasyxiv.com/d/710256a9319251859b53dd3804078cc8e35c2333.png",
+   "https://lds-img.finalfantasyxiv.com/d/f0f3d4c722f5f9b36b25ba72d3774b4b811b699d.png",
+   "https://lds-img.finalfantasyxiv.com/d/ac34fd282b758c407014a47e3c30e188050307d8.png",
+   "https://lds-img.finalfantasyxiv.com/d/089e7135cc2e4e64590c18db17fbab56e0040843.png",
+   "https://lds-img.finalfantasyxiv.com/d/22ae994a06569700d3f9d51b1b999c951ca171e3.png",
+   "https://lds-img.finalfantasyxiv.com/d/f8259f07fef48d2d418535404fdc672bdc852285.png",
+   "https://lds-img.finalfantasyxiv.com/d/ae681cd40113523630db64f0e3823235db61a364.png",
+   "https://lds-img.finalfantasyxiv.com/d/b4d685f506367e2bd3228603e7b2c4172567f933.png",
+   "https://lds-img.finalfantasyxiv.com/d/02ab830b9551480d0b5d62a24012c401a422b0bd.png",
+   "https://lds-img.finalfantasyxiv.com/d/017af138fc2458f9cae561ec96f027791d1da803.png",
+   "https://lds-img.finalfantasyxiv.com/d/b561271272c45fb8436bfe4dfb590b76c631687b.png",
+   "https://lds-img.finalfantasyxiv.com/d/eaeec5829efd0623650ee09d1b3867ef3804c643.png",
+   "https://lds-img.finalfantasyxiv.com/d/933867484213377dc45cafd796ff5d934cee8906.png",
+   "https://lds-img.finalfantasyxiv.com/d/4e389efd3504b3ed9dcd4f7633ebc9a5bb528971.png",
+   "https://lds-img.finalfantasyxiv.com/d/d2632208267baca74f7d9c19ee7a9c794034f2f0.png",
+   "https://lds-img.finalfantasyxiv.com/d/a080e4189263d80adcd79deaaac266c93798d202.png",
+   "https://lds-img.finalfantasyxiv.com/d/3b57c45ec39fc75788c9603653a77c5b95f04e67.png",
+   "https://lds-img.finalfantasyxiv.com/d/a59a5def406758cbd282cffdea8bea00a98f5e58.png",
+   "https://lds-img.finalfantasyxiv.com/d/e5f0a7dabd5ef44d08e8d5920d834f3e734169d9.png",
+   "https://lds-img.finalfantasyxiv.com/d/c9ae486399356401f032b455ea5b13f986236c82.png",
+   "https://lds-img.finalfantasyxiv.com/d/479155b751c2764273ae35c1aab71ed298ad9d18.png",
+   "https://lds-img.finalfantasyxiv.com/d/08babf4d2bf7ce046d03f459af8fa4c9921f96cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/3b0daa7e454abbd2b6ce037b5c77157462fadbf7.png",
+   "https://lds-img.finalfantasyxiv.com/d/c30eb0a31733645a16fe4afedf837597addded77.png",
+   "https://lds-img.finalfantasyxiv.com/d/7df5921d09e8a524ef8b7c187a9f0cb1ee181aff.png",
+   "https://lds-img.finalfantasyxiv.com/d/0dfc7d7951330304c328135c306fa3d54b1a9cdc.png",
+   "https://lds-img.finalfantasyxiv.com/d/d732a04e72dd2c5e3c0702749e6310329b611ca8.png",
+   "https://lds-img.finalfantasyxiv.com/d/ab9537a1e24665b2b794656e28f58981b95b3c52.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+   "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+   "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3aba81b36f1d7f627a0f83e38f1b9a6b92434cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/5d626f5a33df738e1e06dfdd8d7094bda770ad64.png",
+   "https://lds-img.finalfantasyxiv.com/d/dd4a740c4bbf1f6fa18b92187e7039379fbfed30.png",
+   "https://lds-img.finalfantasyxiv.com/d/7c70f9fe69e5c51199086c4345095722bf7a9b5a.png",
+   "https://lds-img.finalfantasyxiv.com/d/ab0eae0be0bf452487bd9f9c33ac06ab5ae53efc.png",
+   "https://lds-img.finalfantasyxiv.com/d/4b0d41599ef62b2057cf1e0ac5a007eb235baa5f.png",
+   "https://lds-img.finalfantasyxiv.com/d/4717cd6aa17ee7ea4fb28d37658b738c83d67f34.png",
+   "https://lds-img.finalfantasyxiv.com/d/2424ad75e462d533b623f1371216bc130c82b109.png",
+   "https://lds-img.finalfantasyxiv.com/d/076c61a60da76d1c1060275a87218c9ea298974b.png",
+   "https://lds-img.finalfantasyxiv.com/d/c79c9c91a5420c2f67a70bfd085727cfa63cfa95.png",
+   "https://lds-img.finalfantasyxiv.com/d/a9236a05eda40fadfa57db522498cf8da0c1338f.png",
+   "https://lds-img.finalfantasyxiv.com/d/3e622ba1498759d256ccbb7ae712fb848142b8b4.png",
+   "https://lds-img.finalfantasyxiv.com/d/9506431de0afcffcbfa5d260d2d488afbceb84a7.png",
+   "https://lds-img.finalfantasyxiv.com/d/66956c56a1b12c94704d38d36cf65e00440666ad.png",
+   "https://lds-img.finalfantasyxiv.com/d/f9dde969872d209ff9752660a9fe5083df829856.png",
+   "https://lds-img.finalfantasyxiv.com/d/fad15db3f8853ecf4d7789fb9d5429e64edb02ba.png",
+   "https://lds-img.finalfantasyxiv.com/d/fa7c30344d62ac831c58842a0f24e668eb3b867d.png",
+   "https://lds-img.finalfantasyxiv.com/d/a2c6adec36c8eeace712802c88eb896c788a8c94.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+   "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+   "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/T/jfOqleBqGoBvOUQ8MS_H0apDgQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/26fda59956454f1dbca5f260b2763321a2bb761a.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 420.\nAdditional Effect: Increases Soul Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 420.<br/>Additional Effect: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Waxing Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4bab01eb43df9752e98deef097e9251647ad96df.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 5",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 260.\nCombo Action: Slice\nCombo Potency: 500\nCombo Bonus: Increases Soul Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 260.<br/>Combo Action: Slice<br/>Combo Potency: 500<br/>Combo Bonus: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Shadow of Death",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e3e48cee91c7abf77a15f6c4c9c9630349849205.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires",
+     "descriptionHtml": "Delivers an attack with a potency of 300.<br/>Additional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%<br/>Duration: 30s<br/>Extends duration of Death's Design by 30s to a maximum of 60s.<br/>Additional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Harpe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d3ae9c9673da37ea10aa4103b747163250c4a385.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Spell",
+     "cast": "1.3s",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 300.\nAdditional Effect: Increases Soul Gauge by 10",
+     "descriptionHtml": "Deals unaspected damage with a potency of 300.<br/>Additional Effect: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Hell's Ingress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2e1c97fd007f90808b2fd40ad86354b9e97447a8.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Quickly dash 15 yalms forward.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Ingress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Egress.",
+     "descriptionHtml": "Quickly dash 15 yalms forward.<br/>Additional Effect: Grants Enhanced Harpe<br/>Enhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Ingress by 5s upon execution<br/>Duration: 10s<br/>Additional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self<br/>Duration: 10s<br/>Cannot be executed while bound.<br/>Shares a recast timer with Hell's Egress."
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Hell's Egress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/113b87916c7ffdb9a8007615f697f2c189c6646a.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Quickly dash 15 yalms backwards.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Egress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Ingress.",
+     "descriptionHtml": "Quickly dash 15 yalms backwards.<br/>Additional Effect: Grants Enhanced Harpe<br/>Enhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Egress by 5s upon execution<br/>Duration: 10s<br/>Additional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self<br/>Duration: 10s<br/>Cannot be executed while bound.<br/>Shares a recast timer with Hell's Ingress."
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Spinning Scythe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dac9dba46aa8ff673cd2e365c9468525db0ba1a2.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 25",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 140 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 140 to all nearby enemies.<br/>Additional Effect: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Infernal Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/aa7a7dd464459f24aa2209cddcbf8a3ebb167f0b.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 280.\nCombo Action: Waxing Slice\nCombo Potency: 600\nCombo Bonus: Increases Soul Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 280.<br/>Combo Action: Waxing Slice<br/>Combo Potency: 600<br/>Combo Bonus: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Whorl of Death",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/31d409f8aaeae041b8150e68764e032fccd7c4c6.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all nearby enemies.<br/>Additional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%<br/>Duration: 30s<br/>Extends duration of Death's Design by 30s to a maximum of 60s.<br/>Additional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Arcane Crest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9977fdbbf70443f9f31f4868cba97138fbec5460.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Crest of Time Borrowed to self, creating a barrier that nullifies damage totaling up to 10% of maximum HP.\nDuration: 5s\nGrants Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 50\nDuration: 15s",
+     "descriptionHtml": "Grants Crest of Time Borrowed to self, creating a barrier that nullifies damage totaling up to 10% of maximum HP.<br/>Duration: 5s<br/>Grants Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.<br/>Crest of Time Returned Effect: Gradually restores HP<br/>Cure Potency: 50<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Nightmare Scythe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/710256a9319251859b53dd3804078cc8e35c2333.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 120 to all nearby enemies.\nCombo Action: Spinning Scythe\nCombo Potency: 180\nCombo Bonus: Increases Soul Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 120 to all nearby enemies.<br/>Combo Action: Spinning Scythe<br/>Combo Potency: 180<br/>Combo Bonus: Increases Soul Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Blood Stalk",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0f3d4c722f5f9b36b25ba72d3774b4b811b699d.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Summons your avatar to deliver an attack with a potency of 340.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.",
+     "descriptionHtml": "Summons your avatar to deliver an attack with a potency of 340.<br/>Additional Effect: Grants Soul Reaver<br/>Duration: 30s<br/>Stack count will be reduced to 1 when already under the effect of Soul Reaver.<br/>Effect cannot be stacked with Executioner.<br/>Soul Gauge Cost: 50<br/>Shares a recast timer with all avatar attacks except Gluttony."
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Grim Swathe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ac34fd282b758c407014a47e3c30e188050307d8.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 55",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Summons your avatar to deliver an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.",
+     "descriptionHtml": "Summons your avatar to deliver an attack with a potency of 140 to all enemies in a cone before you.<br/>Additional Effect: Grants Soul Reaver<br/>Duration: 30s<br/>Stack count will be reduced to 1 when already under the effect of Soul Reaver.<br/>Effect cannot be stacked with Executioner.<br/>Soul Gauge Cost: 50<br/>Shares a recast timer with all avatar attacks except Gluttony."
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Soul Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/089e7135cc2e4e64590c18db17fbab56e0040843.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 520.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Scythe.\nRecast timer cannot be affected by status effects or gear attributes.",
+     "descriptionHtml": "Delivers an attack with a potency of 520.<br/>Additional Effect: Increases Soul Gauge by 50<br/>Maximum Charges: 2<br/>Shares a recast timer with Soul Scythe.<br/>Recast timer cannot be affected by status effects or gear attributes."
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Soul Scythe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/22ae994a06569700d3f9d51b1b999c951ca171e3.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 65",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 180 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Slice.\nRecast timer cannot be affected by status effects or gear attributes.",
+     "descriptionHtml": "Delivers an attack with a potency of 180 to all nearby enemies.<br/>Additional Effect: Increases Soul Gauge by 50<br/>Maximum Charges: 2<br/>Shares a recast timer with Soul Slice.<br/>Recast timer cannot be affected by status effects or gear attributes."
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Gibbet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f8259f07fef48d2d418535404fdc672bdc852285.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 500.\n560 when executed from a target's flank.\nEnhanced Gibbet Potency: 560\nFlank Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.",
+     "descriptionHtml": "Delivers an attack with a potency of 500.<br/>560 when executed from a target's flank.<br/>Enhanced Gibbet Potency: 560<br/>Flank Enhanced Potency: 620<br/>Additional Effect: Grants Enhanced Gallows<br/>Duration: 60s<br/>The action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Soul Reaver."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Gallows",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ae681cd40113523630db64f0e3823235db61a364.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 500.\n560 when executed from a target's rear.\nEnhanced Gallows Potency: 560\nRear Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.",
+     "descriptionHtml": "Delivers an attack with a potency of 500.<br/>560 when executed from a target's rear.<br/>Enhanced Gallows Potency: 560<br/>Rear Enhanced Potency: 620<br/>Additional Effect: Grants Enhanced Gibbet<br/>Duration: 60s<br/>The action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Soul Reaver."
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Guillotine",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b4d685f506367e2bd3228603e7b2c4172567f933.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 200 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.",
+     "descriptionHtml": "Delivers an attack with a potency of 200 to all enemies in a cone before you.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Soul Reaver."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Unveiled Gibbet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/02ab830b9551480d0b5d62a24012c401a422b0bd.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Summons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gibbet.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gibbet when under the effect of Enhanced Gibbet.",
+     "descriptionHtml": "Summons your avatar to deliver an attack with a potency of 440.<br/>Additional Effect: Grants Soul Reaver<br/>Duration: 30s<br/>Stack count will be reduced to 1 when already under the effect of Soul Reaver.<br/>Effect cannot be stacked with Executioner.<br/>Soul Gauge Cost: 50<br/>Can only be executed while under the effect of Enhanced Gibbet.<br/>Shares a recast timer with all avatar attacks except Gluttony.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Blood Stalk changes to Unveiled Gibbet when under the effect of Enhanced Gibbet."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Unveiled Gallows",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/017af138fc2458f9cae561ec96f027791d1da803.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Summons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gallows.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.",
+     "descriptionHtml": "Summons your avatar to deliver an attack with a potency of 440.<br/>Additional Effect: Grants Soul Reaver<br/>Duration: 30s<br/>Stack count will be reduced to 1 when already under the effect of Soul Reaver.<br/>Effect cannot be stacked with Executioner.<br/>Soul Gauge Cost: 50<br/>Can only be executed while under the effect of Enhanced Gallows.<br/>Shares a recast timer with all avatar attacks except Gluttony.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows."
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Arcane Circle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b561271272c45fb8436bfe4dfb590b76c631687b.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases damage dealt by self and nearby party members by 3%.\nDuration: 20s\nAdditional Effect: Grants Circle of Sacrifice to self and nearby party members\nDuration: 5s\nAdditional Effect: Grants Bloodsown Circle to self\nDuration: 6s\nCircle of Sacrifice Effect: When you or party members under this effect successfully land a weaponskill or ability, or cast a spell, the reaper who applied it may be granted a stack of Immortal Sacrifice, up to a maximum of 8\nDuration: 30s\nBloodsown Circle Effect: Allows you to accumulate stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice",
+     "descriptionHtml": "Increases damage dealt by self and nearby party members by 3%.<br/>Duration: 20s<br/>Additional Effect: Grants Circle of Sacrifice to self and nearby party members<br/>Duration: 5s<br/>Additional Effect: Grants Bloodsown Circle to self<br/>Duration: 6s<br/>Circle of Sacrifice Effect: When you or party members under this effect successfully land a weaponskill or ability, or cast a spell, the reaper who applied it may be granted a stack of Immortal Sacrifice, up to a maximum of 8<br/>Duration: 30s<br/>Bloodsown Circle Effect: Allows you to accumulate stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Regress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eaeec5829efd0623650ee09d1b3867ef3804c643.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Move instantly to the Hellsgate left behind by you.\nCan only be executed while under the effect of Threshold.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n※Hell's Ingress or Hell's Egress will change to Regress when requirements for execution are met.",
+     "descriptionHtml": "Move instantly to the Hellsgate left behind by you.<br/>Can only be executed while under the effect of Threshold.<br/>Cannot be executed while bound.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Hell's Ingress or Hell's Egress will change to Regress when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Gluttony",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/933867484213377dc45cafd796ff5d934cee8906.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Summons your avatar to deal unaspected damage to target and all enemies nearby it with a potency of 560 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Grants 2 stacks of Executioner\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nSoul Gauge Cost: 50",
+     "descriptionHtml": "Summons your avatar to deal unaspected damage to target and all enemies nearby it with a potency of 560 for the first enemy, and 25% less for all remaining enemies.<br/>Additional Effect: Grants 2 stacks of Executioner<br/>Duration: 30s<br/>Effect cannot be stacked with Soul Reaver.<br/>Soul Gauge Cost: 50"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Enshroud",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4e389efd3504b3ed9dcd4f7633ebc9a5bb528971.png",
+     "skillCellText": "Enshroud\nJob Quest",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Offers your flesh as a vessel to your avatar, gaining maximum stacks of Lemure Shroud.\nDuration: 30s\nCertain actions cannot be executed while playing host to your avatar.\nAdditional Effect: Grants Oblatio\nDuration: 30s\nShroud Gauge Cost: 50",
+     "descriptionHtml": "Offers your flesh as a vessel to your avatar, gaining maximum stacks of Lemure Shroud.<br/>Duration: 30s<br/>Certain actions cannot be executed while playing host to your avatar.<br/>Additional Effect: Grants Oblatio<br/>Duration: 30s<br/>Shroud Gauge Cost: 50"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Void Reaping",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d2632208267baca74f7d9c19ee7a9c794034f2f0.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 580.\nEnhanced Void Reaping Potency: 640\nAdditional Effect: Grants Enhanced Cross Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nRecast timer cannot be affected by status effects or gear attributes.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Void Reaping when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 580.<br/>Enhanced Void Reaping Potency: 640<br/>Additional Effect: Grants Enhanced Cross Reaping<br/>Duration: 30s<br/>Additional Effect: Grants Void Shroud<br/>Can only be executed while under the effect of Enshrouded.<br/>Recast timer cannot be affected by status effects or gear attributes.<br/>Lemure Shroud Cost: 1<br/>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gibbet changes to Void Reaping when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Cross Reaping",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a080e4189263d80adcd79deaaac266c93798d202.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 580.\nEnhanced Cross Reaping Potency: 640\nAdditional Effect: Grants Enhanced Void Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Lemure Shroud.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Cross Reaping when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 580.<br/>Enhanced Cross Reaping Potency: 640<br/>Additional Effect: Grants Enhanced Void Reaping<br/>Duration: 30s<br/>Additional Effect: Grants Void Shroud<br/>Can only be executed while under the effect of Lemure Shroud.<br/>Lemure Shroud Cost: 1<br/>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gallows changes to Cross Reaping when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Grim Reaping",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3b57c45ec39fc75788c9603653a77c5b95f04e67.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 220 to all enemies in a cone before you.\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Grim Reaping when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 220 to all enemies in a cone before you.<br/>Additional Effect: Grants Void Shroud<br/>Can only be executed while under the effect of Enshrouded.<br/>Lemure Shroud Cost: 1<br/>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Guillotine changes to Grim Reaping when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Soulsow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a59a5def406758cbd282cffdea8bea00a98f5e58.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "5s",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Soulsow to self, changing the action to Harvest Moon.\nCast time is instant when used outside of battle.",
+     "descriptionHtml": "Grants Soulsow to self, changing the action to Harvest Moon.<br/>Cast time is instant when used outside of battle."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Harvest Moon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e5f0a7dabd5ef44d08e8d5920d834f3e734169d9.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 800 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Increases Soul Gauge by 10\nCan only be executed while under the effect of Soulsow.\n\n※This action cannot be assigned to a hotbar.\n※Soulsow changes to Harvest Moon when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 800 for the first enemy, and 40% less for all remaining enemies.<br/>Additional Effect: Increases Soul Gauge by 10<br/>Can only be executed while under the effect of Soulsow.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Soulsow changes to Harvest Moon when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Lemure's Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c9ae486399356401f032b455ea5b13f986236c82.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 280.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Scythe.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Lemure's Slice while under the effect of Enshrouded.",
+     "descriptionHtml": "Delivers an attack with a potency of 280.<br/>Void Shroud Cost: 2<br/>Shares a recast timer with Lemure's Scythe.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Blood Stalk changes to Lemure's Slice while under the effect of Enshrouded."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Lemure's Scythe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/479155b751c2764273ae35c1aab71ed298ad9d18.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 100 to all enemies in a cone before you.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Slice.\n\n※This action cannot be assigned to a hotbar.\n※Grim Swathe changes to Lemure's Scythe while under the effect of Enshrouded.",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all enemies in a cone before you.<br/>Void Shroud Cost: 2<br/>Shares a recast timer with Lemure's Slice.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Grim Swathe changes to Lemure's Scythe while under the effect of Enshrouded."
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Plentiful Harvest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/08babf4d2bf7ce046d03f459af8fa4c9921f96cc.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "15y",
+     "radius": "15y",
+     "description": "Delivers an attack to all enemies in a straight line before you with a potency of 720 for the first enemy, and 20% less for all remaining enemies.\nImmortal Sacrifice Cost: 1 stack\nPotency increases up to 1,000 as stacks of Immortal Sacrifice exceed minimum cost.\nAdditional Effect: Grants Ideal Host\nDuration: 30s\nAdditional Effect: Grants Perfectio Occulta\nPerfectio Occulta Effect: Grants Perfectio Parata upon executing Communio\nDuration: 30s\nCannot be executed while under the effect of Bloodsown Circle.\nConsumes all stacks of Immortal Sacrifice upon execution.",
+     "descriptionHtml": "Delivers an attack to all enemies in a straight line before you with a potency of 720 for the first enemy, and 20% less for all remaining enemies.<br/>Immortal Sacrifice Cost: 1 stack<br/>Potency increases up to 1,000 as stacks of Immortal Sacrifice exceed minimum cost.<br/>Additional Effect: Grants Ideal Host<br/>Duration: 30s<br/>Additional Effect: Grants Perfectio Occulta<br/>Perfectio Occulta Effect: Grants Perfectio Parata upon executing Communio<br/>Duration: 30s<br/>Cannot be executed while under the effect of Bloodsown Circle.<br/>Consumes all stacks of Immortal Sacrifice upon execution."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Communio",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3b0daa7e454abbd2b6ce037b5c77157462fadbf7.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Spell",
+     "cast": "1.3s",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,100 for the first enemy, and 20% less for all remaining enemies.\nAdditional Effect: Grants Perfectio Parata when executed while Perfectio Occulta is active\nDuration: 30s\nEnshrouded effect expires upon execution.\nRequires at least one stack of Lemure Shroud to execute.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 1,100 for the first enemy, and 20% less for all remaining enemies.<br/>Additional Effect: Grants Perfectio Parata when executed while Perfectio Occulta is active<br/>Duration: 30s<br/>Enshrouded effect expires upon execution.<br/>Requires at least one stack of Lemure Shroud to execute."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Sacrificium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c30eb0a31733645a16fe4afedf837597addded77.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Enshrouded and Oblatio.\n\n※This action cannot be assigned to a hotbar.\n※Gluttony changes to Sacrificium when requirements for execution are met.",
+     "descriptionHtml": "Deals unaspected damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 20% less for all remaining enemies.<br/>Can only be executed while under the effect of Enshrouded and Oblatio.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gluttony changes to Sacrificium when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Executioner's Gibbet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7df5921d09e8a524ef8b7c187a9f0cb1ee181aff.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 700.\n760 when executed from a target's flank.\nEnhanced Gibbet Potency: 760\nFlank Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Executioner's Gibbet when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 700.<br/>760 when executed from a target's flank.<br/>Enhanced Gibbet Potency: 760<br/>Flank Enhanced Potency: 820<br/>Additional Effect: Grants Enhanced Gallows<br/>Duration: 60s<br/>The action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Executioner.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gibbet changes to Executioner's Gibbet when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Executioner's Gallows",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0dfc7d7951330304c328135c306fa3d54b1a9cdc.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 700.\n760 when executed from a target's rear.\nEnhanced Gallows Potency: 760\nRear Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Executioner's Gallows when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 700.<br/>760 when executed from a target's rear.<br/>Enhanced Gallows Potency: 760<br/>Rear Enhanced Potency: 820<br/>Additional Effect: Grants Enhanced Gibbet<br/>Duration: 60s<br/>The action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Executioner.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gallows changes to Executioner's Gallows when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Executioner's Guillotine",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d732a04e72dd2c5e3c0702749e6310329b611ca8.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 260 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Executioner's Guillotine when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 260 to all enemies in a cone before you.<br/>Additional Effect: Increases Shroud Gauge by 10<br/>Can only be executed while under the effect of Executioner.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Guillotine changes to Executioner's Guillotine when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Perfectio",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ab9537a1e24665b2b794656e28f58981b95b3c52.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 1,300 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar.\n※Communio changes to Perfectio when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 1,300 for the first enemy, and 20% less for all remaining enemies.<br/>Can only be executed while under the effect of Perfectio Parata.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Communio changes to Perfectio when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Instantly restores own HP.\nCure Potency: 800",
+     "descriptionHtml": "Instantly restores own HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "Leg Sweep",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c9674aba5fe48e73cc80ceb4a49782c1539b942.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Stuns target.\nDuration: 3s",
+     "descriptionHtml": "Stuns target.<br/>Duration: 3s"
+    },
+    {
+     "rowId": "melee_action__03",
+     "name": "Bloodbath",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f76d6999b80178e51cfedf68f3af69ce6ed5016f.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Converts a portion of physical damage dealt into HP.\nDuration: 20s",
+     "descriptionHtml": "Converts a portion of physical damage dealt into HP.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "melee_action__04",
+     "name": "Feint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/84c26a86cbbb8a599e5a2441cebcd33b0064bf07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 22",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Lowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s",
+     "descriptionHtml": "Lowers target's physical damage dealt by 10% and magic damage dealt by 5%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "melee_action__05",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    },
+    {
+     "rowId": "melee_action__06",
+     "name": "True North",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d62e72f5da6d52e189c1ed10dfbd602625fc536.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2",
+     "descriptionHtml": "Nullifies all action direction requirements.<br/>Duration: 10s<br/>Maximum Charges: 2"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Soul Gauge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cdd4dbdaa89dfc284e0be14a8ef05287679e7210.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "description": "Allows for Soul Gauge accumulation upon the landing of certain weaponskills and magic actions, or defeating enemies under the effect of Death's Design.",
+     "descriptionHtml": "Allows for Soul Gauge accumulation upon the landing of certain weaponskills and magic actions, or defeating enemies under the effect of Death's Design."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Melee Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "description": "Increases the potency of Slice to 300, Waxing Slice to 140, Shadow of Death to 300, Harpe to 300, Spinning Scythe to 140, Infernal Slice to 140, Whorl of Death to 100, and Nightmare Scythe to 120.",
+     "descriptionHtml": "Increases the potency of Slice to 300, Waxing Slice to 140, Shadow of Death to 300, Harpe to 300, Spinning Scythe to 140, Infernal Slice to 140, Whorl of Death to 100, and Nightmare Scythe to 120."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Enhanced Avatar",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/884cf03809d4b64336961dedfcb87d7fa5c065f3.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "description": "Grants the effect of Soul Reaver upon successfully landing Blood Stalk or Grim Swathe.\nDuration: 30s\nEffect ends upon execution of any weaponskill or magic attack.",
+     "descriptionHtml": "Grants the effect of Soul Reaver upon successfully landing Blood Stalk or Grim Swathe.<br/>Duration: 30s<br/>Effect ends upon execution of any weaponskill or magic attack."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Hellsgate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/197108fc180510d46e15ba85434a517352da9ea3.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Upon executing Hell's Ingress or Hell's Egress, leave behind a Hellsgate and grant Threshold to self.\nDuration: 10s\nHell's Ingress changes to Regress after executing Hell's Egress, and vice versa.",
+     "descriptionHtml": "Upon executing Hell's Ingress or Hell's Egress, leave behind a Hellsgate and grant Threshold to self.<br/>Duration: 10s<br/>Hell's Ingress changes to Regress after executing Hell's Egress, and vice versa."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Tempered Soul",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c1fcd7a37a619bdd241fafe156ffe6e1c306553d.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Allows the accumulation of charges for consecutive uses of Soul Slice and Soul Scythe.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Soul Slice and Soul Scythe.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Shroud Gauge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/aec909a3e2c44d5c726b997c0d1af8da7175218d.png",
+     "skillCellText": "Shroud Gauge\nJob Quest",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "description": "Allows for Shroud Gauge accumulation upon the landing of Gibbet, Gallows, or Guillotine.",
+     "descriptionHtml": "Allows for Shroud Gauge accumulation upon the landing of Gibbet, Gallows, or Guillotine."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Enhanced Arcane Crest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2f58d09091b830b74082188a84bb17efd365dc2.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Grants Crest of Time Returned to self and nearby party members, gradually restoring HP over time. This effect is only granted when the Crest of Time Borrowed barrier is completely absorbed.\nCure Potency: 50\nDuration: 15s",
+     "descriptionHtml": "Grants Crest of Time Returned to self and nearby party members, gradually restoring HP over time. This effect is only granted when the Crest of Time Borrowed barrier is completely absorbed.<br/>Cure Potency: 50<br/>Duration: 15s"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Melee Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases the potency of Slice to 320, Waxing Slice to 160, and Infernal Slice to 180.",
+     "descriptionHtml": "Increases the potency of Slice to 320, Waxing Slice to 160, and Infernal Slice to 180."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Void Soul",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ada3c73d86be1fc25e17386dd10e76e170fef077.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "description": "Grants Void Shroud upon landing Void Reaping, Cross Reaping, or Grim Reaping.",
+     "descriptionHtml": "Grants Void Shroud upon landing Void Reaping, Cross Reaping, or Grim Reaping."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Enhanced Arcane Circle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6f540f8120532425d4aa28831c6f8cdcbfa5db7.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Grants Circle of Sacrifice to you and nearby party members upon executing Arcane Circle.\nDuration: 5s\nWhen you or party members under this effect successfully land a weaponskill or cast a spell, you may gain a stack of Immortal Sacrifice, up to a maximum of 8.\nDuration: 30s\nAlso grants Bloodsown Circle to self, allowing you to receive stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice.\nDuration: 6s",
+     "descriptionHtml": "Grants Circle of Sacrifice to you and nearby party members upon executing Arcane Circle.<br/>Duration: 5s<br/>When you or party members under this effect successfully land a weaponskill or cast a spell, you may gain a stack of Immortal Sacrifice, up to a maximum of 8.<br/>Duration: 30s<br/>Also grants Bloodsown Circle to self, allowing you to receive stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice.<br/>Duration: 6s"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Enhanced Enshroud",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5091bfb444d4a9ee64f5b364fc58f0c5fb5b0b38.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Grants Oblatio upon executing Enshroud.\nDuration: 30s",
+     "descriptionHtml": "Grants Oblatio upon executing Enshroud.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Melee Mastery III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/76ee293b5a8fae7dd16716bc05d79216ef2689a9.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Slice to 420, Waxing Slice to 260, Infernal Slice to 280, Soul Slice to 520, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 580, Cross Reaping to 580, Harvest Moon to 800, and Lemure's Slice to 280.",
+     "descriptionHtml": "Increases the potency of Slice to 420, Waxing Slice to 260, Infernal Slice to 280, Soul Slice to 520, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 580, Cross Reaping to 580, Harvest Moon to 800, and Lemure's Slice to 280."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Enhanced Gluttony",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a31d9112196a1558d38290cc5502d584ce5f05f0.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Grants 2 stacks of Executioner upon executing Gluttony.\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nEffect ends upon execution of any weaponskill or magic attack.\nGibbet changes to Executioner's Gibbet, Gallows changes to Executioner's Gallows, and Guillotine changes to Executioner's Guillotine while under the effect of Executioner.",
+     "descriptionHtml": "Grants 2 stacks of Executioner upon executing Gluttony.<br/>Duration: 30s<br/>Effect cannot be stacked with Soul Reaver.<br/>Effect ends upon execution of any weaponskill or magic attack.<br/>Gibbet changes to Executioner's Gibbet, Gallows changes to Executioner's Gallows, and Guillotine changes to Executioner's Guillotine while under the effect of Executioner."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Plentiful Harvest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/71ef6d72decb0ba869aa07010008e538299ba064.png",
+     "acquired": [
+      {
+       "class": "Reaper",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Perfectio Occulta upon executing Plentiful Harvest.\nDuration: 30s\nPerfectio Occulta changes to Perfectio Parata upon executing Communio.\nEffect of Perfectio Parata ends upon gaining the effect of Lemure Shroud.",
+     "descriptionHtml": "Grants Perfectio Occulta upon executing Plentiful Harvest.<br/>Duration: 30s<br/>Perfectio Occulta changes to Perfectio Parata upon executing Communio.<br/>Effect of Perfectio Parata ends upon gaining the effect of Lemure Shroud."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "melee_action__01",
+     "name": "Enhanced Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the healing potency of Second Wind to 800.",
+     "descriptionHtml": "Increases the healing potency of Second Wind to 800."
+    },
+    {
+     "rowId": "melee_action__02",
+     "name": "Enhanced Feint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dda2a9e930cb141e91f00c4f2eda5fd5e1678e07.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Extends the duration of Feint to 15 seconds.",
+     "descriptionHtml": "Extends the duration of Feint to 15 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3aba81b36f1d7f627a0f83e38f1b9a6b92434cd.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 5,000.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Waxing Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5d626f5a33df738e1e06dfdd8d7094bda770ad64.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nCombo Action: Slice\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Combo Action: Slice<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Infernal Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dd4a740c4bbf1f6fa18b92187e7039379fbfed30.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nCombo Action: Waxing Slice\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Combo Action: Waxing Slice<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Harvest Moon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c70f9fe69e5c51199086c4345095722bf7a9b5a.png",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nPotency increases up to 12,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 8,000 to target and all enemies nearby it.<br/>Potency increases up to 12,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.<br/>Additional Effect: Absorbs 50% of damage dealt as HP<br/>Maximum Charges: 2<br/>This action does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Plentiful Harvest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ab0eae0be0bf452487bd9f9c33ac06ab5ae53efc.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "15y",
+     "radius": "15y",
+     "description": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nPotency increases up to 24,000 based on your accumulated stacks of Immortal Sacrifice, gained by executing Executioner's Guillotine, KOing enemies, or earning assists.\nConsumes all stacks of Immortal Sacrifice upon execution.\nCan only be executed while not under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before you.<br/>Potency increases up to 24,000 based on your accumulated stacks of Immortal Sacrifice, gained by executing Executioner's Guillotine, KOing enemies, or earning assists.<br/>Consumes all stacks of Immortal Sacrifice upon execution.<br/>Can only be executed while not under the effect of Enshrouded.<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Grim Swathe",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4b0d41599ef62b2057cf1e0ac5a007eb235baa5f.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Summons your avatar to deliver an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Grants Executioner's Guillotine Ready\nDuration: 10s\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※Infernal Slice Combo changes to Executioner's Guillotine upon execution.",
+     "descriptionHtml": "Summons your avatar to deliver an attack with a potency of 4,000 to all enemies in a cone before you.<br/>Additional Effect: Grants Executioner's Guillotine Ready<br/>Duration: 10s<br/>Additional Effect: Heavy +75%<br/>Duration: 3s<br/><br/>※Infernal Slice Combo changes to Executioner's Guillotine upon execution."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Death Warrant",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4717cd6aa17ee7ea4fb28d37658b738c83d67f34.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Afflicts target with Death Warrant, causing you to compile damage you deal to that target. Action is changed to Fate Sealed for the duration of the effect.\nDeals damage when time expires or upon executing Fate Sealed.\nDuration: 8s\nDamage Potency: 2,000 plus 50% of compiled damage",
+     "descriptionHtml": "Afflicts target with Death Warrant, causing you to compile damage you deal to that target. Action is changed to Fate Sealed for the duration of the effect.<br/>Deals damage when time expires or upon executing Fate Sealed.<br/>Duration: 8s<br/>Damage Potency: 2,000 plus 50% of compiled damage"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Hell's Ingress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2424ad75e462d533b623f1371216bc130c82b109.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Quickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nAdditional Effect: Increases movement speed by 25%\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Regress upon execution.",
+     "descriptionHtml": "Quickly dash 15 yalms forward.<br/>Additional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self<br/>Duration: 10s<br/>Additional Effect: Increases movement speed by 25%<br/>Duration: 5s<br/>Cannot be executed while bound.<br/><br/>※Action changes to Regress upon execution."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Arcane Crest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/076c61a60da76d1c1060275a87218c9ea298974b.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Crest of Time Borrowed to self, creating a barrier that nullifies damage equivalent to a heal of 12,000 potency.\nDuration: 10s\nGrants the Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 6,000\nDuration: 6s\nThis action's effects extend through obstructions.",
+     "descriptionHtml": "Grants Crest of Time Borrowed to self, creating a barrier that nullifies damage equivalent to a heal of 12,000 potency.<br/>Duration: 10s<br/>Grants the Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.<br/>Crest of Time Returned Effect: Gradually restores HP<br/>Cure Potency: 6,000<br/>Duration: 6s<br/>This action's effects extend through obstructions."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Executioner's Guillotine",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c79c9c91a5420c2f67a70bfd085727cfa63cfa95.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 8,000 to all enemies in a cone before you.\nAdditional Effect: Grants a stack of Immortal Sacrifice, up to a maximum of 8\nCan only be executed while under the effect of Executioner's Guillotine.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all enemies in a cone before you.<br/>Additional Effect: Grants a stack of Immortal Sacrifice, up to a maximum of 8<br/>Can only be executed while under the effect of Executioner's Guillotine.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Void Reaping",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a9236a05eda40fadfa57db522498cf8da0c1338f.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 12,000.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000.<br/>Additional Effect: Absorbs 50% of damage dealt as HP<br/>Can only be executed while under the effect of Enshrouded.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Cross Reaping",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3e622ba1498759d256ccbb7ae712fb848142b8b4.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 12,000.\nCombo Action: Void Reaping\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000.<br/>Combo Action: Void Reaping<br/>Additional Effect: Absorbs 50% of damage dealt as HP<br/>Can only be executed while under the effect of Enshrouded.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Lemure's Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9506431de0afcffcbfa5d260d2d488afbceb84a7.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "8y",
+     "radius": "8y",
+     "description": "Delivers an attack with a potency of 6,000 to all enemies in a cone before you.\nAdditional Effect: Bind\nDuration: 3s\nCan only be executed while under the effect of Enshrouded.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000 to all enemies in a cone before you.<br/>Additional Effect: Bind<br/>Duration: 3s<br/>Can only be executed while under the effect of Enshrouded.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "Fate Sealed",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/66956c56a1b12c94704d38d36cf65e00440666ad.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Ends the effect of Death Warrant, dealing damage to the target.\nDamage Potency: 2,000 plus 50% of compiled damage\nCan only be executed while under the effect of Death Warrant.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Ends the effect of Death Warrant, dealing damage to the target.<br/>Damage Potency: 2,000 plus 50% of compiled damage<br/>Can only be executed while under the effect of Death Warrant.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "Regress",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f9dde969872d209ff9752660a9fe5083df829856.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Move instantly to the Hellsgate left behind by you.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Move instantly to the Hellsgate left behind by you.<br/>Cannot be executed while bound.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "Communio",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fad15db3f8853ecf4d7789fb9d5429e64edb02ba.png",
+     "type": "Spell",
+     "cast": "1.32s",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 16,000 to target and all enemies nearby it.\nAdditional Effect: Grants Perfectio Parata\nDuration: 15s\nRequires at least one stack of Enshrouded.\nConsumes all stacks of Enshrouded upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Perfectio upon execution.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 16,000 to target and all enemies nearby it.<br/>Additional Effect: Grants Perfectio Parata<br/>Duration: 15s<br/>Requires at least one stack of Enshrouded.<br/>Consumes all stacks of Enshrouded upon execution.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Action changes to Perfectio upon execution."
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "Perfectio",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa7c30344d62ac831c58842a0f24e668eb3b867d.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 12,000 to target and all enemies nearby it, incapacitating foes whose HP is below 25%.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000 to target and all enemies nearby it, incapacitating foes whose HP is below 25%.<br/>Effect cannot be applied to players riding machina or non-player combatants.<br/>Can only be executed while under the effect of Perfectio Parata.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Tenebrae Lemurum",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a2c6adec36c8eeace712802c88eb896c788a8c94.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "10y",
+     "description": "Offers your flesh as a vessel to your avatar, gaining 5 stacks of Enshrouded.\nDuration: 20s\nAdditional Effect: Afflicts nearby enemies with Hysteria\nHysteria Effect: Afflicted enemies are unable to act of their own free will\nDuration: 2s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nHas no effect on players riding machina or non-player combatants.\n\n※Action changes to Communio while under the effect of Enshrouded.\n※Grim Swathe changes to Lemure's Slice while under the effect of Enshrouded.\n※Infernal Slice Combo changes to Void Reaping while under the effect of Enshrouded.",
+     "descriptionHtml": "Offers your flesh as a vessel to your avatar, gaining 5 stacks of Enshrouded.<br/>Duration: 20s<br/>Additional Effect: Afflicts nearby enemies with Hysteria<br/>Hysteria Effect: Afflicted enemies are unable to act of their own free will<br/>Duration: 2s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 60s<br/>Has no effect on players riding machina or non-player combatants.<br/><br/>※Action changes to Communio while under the effect of Enshrouded.<br/>※Grim Swathe changes to Lemure's Slice while under the effect of Enshrouded.<br/>※Infernal Slice Combo changes to Void Reaping while under the effect of Enshrouded."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Bloodbath",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3f4e049b56fe58f93ddf61cec1e4157675ad7f02.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s",
+     "descriptionHtml": "Increases damage dealt by 25%, and converts 100% of damage dealt into HP.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Swift",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4c0e196518ec2d5f7f584cc2c9824930f303a531.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.",
+     "descriptionHtml": "Increases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Effect ends when riding a mount."
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Smite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83978e6c6cfafeb1e30bf085e884b9c2030435db.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Potency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.<br/>Ignores the effects of Guard when dealing damage.<br/>Recast time resets upon earning a kill or an assist."
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__reaper_01",
+    "steps": [
+     {
+      "name": "Slice",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/26fda59956454f1dbca5f260b2763321a2bb761a.png"
+     },
+     {
+      "name": "Waxing Slice",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/4bab01eb43df9752e98deef097e9251647ad96df.png"
+     },
+     {
+      "name": "Infernal Slice",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/aa7a7dd464459f24aa2209cddcbf8a3ebb167f0b.png"
+     }
+    ],
+    "effect": "Increases the Soul Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__reaper_02",
+    "steps": [
+     {
+      "name": "Spinning Scythe",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/dac9dba46aa8ff673cd2e365c9468525db0ba1a2.png"
+     },
+     {
+      "name": "Nightmare Scythe",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/710256a9319251859b53dd3804078cc8e35c2333.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "Hits multiple enemies while also increasing the Soul Gauge."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSlice\n\nWaxing Slice\n\nInfernal Slice\n\nIncreases the Soul Gauge.\n\nSpinning Scythe\n\nNightmare Scythe\n\nHits multiple enemies while also increasing the Soul Gauge."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Soul Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/W/1jyvIskrSc5iR0O4o-Eq5HVHuU.png"
+    ]
+   },
+   {
+    "title": "Death Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/b/xsQrvAjPWZTRg7mvwTrwK5DFXA.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/B/my_22dBk7G-a5ediqVr67wGHNo.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/Z/Hb74WVXwsWuLDBzampI59njz20.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/Q/xzi1yleg6LE8pNblc_Qjwyj19M.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/4/tkpNcxUMgkVhofvLRjYnY7e0EM.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nSoul Gauge\n\nWhen you learn the trait Soul Gauge, the Soul Gauge will be displayed, indicating the number of Souls you have accumulated.\nSouls are accumulated upon executing certain weaponskills and by defeating enemies who fall under the effects of Death's Design from the action Shadow of Death. Souls can be used to execute Blood Stalk, Grim Swathe (acquired at level 55), and Gluttony (acquired at level 76).\n\nThe Shroud Gauge can be filled via the execution of Gibbet, Gallows, and Guillotine. With sufficient energy stored in the gauge, you can execute Enshroud.\nDeath Gauge\n\nStacks of Lemure Shroud can be consumed to execute Void Reaping or Communio (acquired at level 90).\n\nWhen you learn the trait Enhanced Shroud, Void Shroud will be gained when stacks of Lemure Shroud are used. These can be used to execute several actions such as Lemure's Slice and Lemure's Scythe.\n\nSimple Mode\n\nSoul Gauge\n\nShroud Gauge\n\nDeath Gauge\n\nLemure\n\nVoid Shroud",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Soul Gauge</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/1jyvIskrSc5iR0O4o-Eq5HVHuU.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">When you learn the trait <span class=\"txt_red\">Soul Gauge</span>, the <span class=\"txt_red\">Soul Gauge</span> will be displayed, indicating the number of <span class=\"txt_red\">Souls</span> you have accumulated.<br/>Souls are accumulated upon executing certain weaponskills and by defeating enemies who fall under the effects of <span class=\"txt_red\">Death's Design</span> from the action <span class=\"txt_red\">Shadow of Death</span>. Souls can be used to execute <span class=\"txt_red\">Blood Stalk</span>, <span class=\"txt_red\">Grim Swathe</span> (acquired at level 55), and <span class=\"txt_red\">Gluttony</span> (acquired at level 76).</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/7/HToqFAaC0FYkQKzd7wh_2bvicg.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">The <span class=\"txt_red\">Shroud Gauge</span> can be filled via the execution of <span class=\"txt_red\">Gibbet</span>, <span class=\"txt_red\">Gallows</span>, and <span class=\"txt_red\">Guillotine</span>. With sufficient energy stored in the gauge, you can execute <span class=\"txt_red\">Enshroud</span>.</p>\n<h3 class=\"job__hud__title\">Death Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/d/TFAlyOL0A-u5wbH4xSIZCyp7TE.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Stacks of <span class=\"txt_red\">Lemure Shroud</span> can be consumed to execute <span class=\"txt_red\">Void Reaping</span> or <span class=\"txt_red\">Communio</span> (acquired at level 90).</p>\n</div>\n<p class=\"job__hud__text\">When you learn the trait <span class=\"txt_red\">Enhanced Shroud</span>, <span class=\"txt_red\">Void Shroud</span> will be gained when stacks of Lemure Shroud are used. These can be used to execute several actions such as <span class=\"txt_red\">Lemure's Slice</span> and <span class=\"txt_red\">Lemure's Scythe</span>.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/b/xsQrvAjPWZTRg7mvwTrwK5DFXA.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/B/my_22dBk7G-a5ediqVr67wGHNo.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Soul Gauge</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/Z/Hb74WVXwsWuLDBzampI59njz20.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Shroud Gauge</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">Death Gauge</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/Q/xzi1yleg6LE8pNblc_Qjwyj19M.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Lemure</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/4/tkpNcxUMgkVhofvLRjYnY7e0EM.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Void Shroud</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/1jyvIskrSc5iR0O4o-Eq5HVHuU.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/HToqFAaC0FYkQKzd7wh_2bvicg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/TFAlyOL0A-u5wbH4xSIZCyp7TE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/b/xsQrvAjPWZTRg7mvwTrwK5DFXA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/B/my_22dBk7G-a5ediqVr67wGHNo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Z/Hb74WVXwsWuLDBzampI59njz20.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Q/xzi1yleg6LE8pNblc_Qjwyj19M.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/4/tkpNcxUMgkVhofvLRjYnY7e0EM.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/reaper/01.png",
+   "public/jobguide/hud/reaper/02.png",
+   "public/jobguide/hud/reaper/03.png",
+   "public/jobguide/hud/reaper/04.png",
+   "public/jobguide/hud/reaper/05.png",
+   "public/jobguide/hud/reaper/06.png",
+   "public/jobguide/hud/reaper/07.png",
+   "public/jobguide/hud/reaper/08.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSlice\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 420.\nAdditional Effect: Increases Soul Gauge by 10\n\nWaxing Slice\n\nLv. 5\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 260.\nCombo Action: Slice\nCombo Potency: 500\nCombo Bonus: Increases Soul Gauge by 10\n\nShadow of Death\n\nLv. 10\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires\n\nHarpe\n\nLv. 15\n\nSpell\n\n1.3s\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 300.\nAdditional Effect: Increases Soul Gauge by 10\n\nHell's Ingress\n\nLv. 20\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Ingress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Egress.\n\nHell's Egress\n\nLv. 20\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms backwards.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Egress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Ingress.\n\nSpinning Scythe\n\nLv. 25\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 140 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 10\n\nInfernal Slice\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 280.\nCombo Action: Waxing Slice\nCombo Potency: 600\nCombo Bonus: Increases Soul Gauge by 10\n\nWhorl of Death\n\nLv. 35\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires\n\nArcane Crest\n\nLv. 40\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nGrants Crest of Time Borrowed to self, creating a barrier that nullifies damage totaling up to 10% of maximum HP.\nDuration: 5s\nGrants Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 50\nDuration: 15s\n\nNightmare Scythe\n\nLv. 45\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 120 to all nearby enemies.\nCombo Action: Spinning Scythe\nCombo Potency: 180\nCombo Bonus: Increases Soul Gauge by 10\n\nBlood Stalk\n\nLv. 50\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 340.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.\n\nGrim Swathe\n\nLv. 55\n\nAbility\nInstant\n1s\n-\n\n8y\n\n8y\n\nSummons your avatar to deliver an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.\n\nSoul Slice\n\nLv. 60\n\nWeaponskill\nInstant\n\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 520.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Scythe.\nRecast timer cannot be affected by status effects or gear attributes.\n\nSoul Scythe\n\nLv. 65\n\nWeaponskill\nInstant\n\n30s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 180 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Slice.\nRecast timer cannot be affected by status effects or gear attributes.\n\nGibbet\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\n560 when executed from a target's flank.\nEnhanced Gibbet Potency: 560\nFlank Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nGallows\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\n560 when executed from a target's rear.\nEnhanced Gallows Potency: 560\nRear Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nGuillotine\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 200 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nUnveiled Gibbet\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gibbet.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gibbet when under the effect of Enhanced Gibbet.\n\nUnveiled Gallows\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gallows.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\n\nArcane Circle\n\nLv. 72\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 3%.\nDuration: 20s\nAdditional Effect: Grants Circle of Sacrifice to self and nearby party members\nDuration: 5s\nAdditional Effect: Grants Bloodsown Circle to self\nDuration: 6s\nCircle of Sacrifice Effect: When you or party members under this effect successfully land a weaponskill or ability, or cast a spell, the reaper who applied it may be granted a stack of Immortal Sacrifice, up to a maximum of 8\nDuration: 30s\nBloodsown Circle Effect: Allows you to accumulate stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice\n\nRegress\n\nLv. 74\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Hellsgate left behind by you.\nCan only be executed while under the effect of Threshold.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n※Hell's Ingress or Hell's Egress will change to Regress when requirements for execution are met.\n\nGluttony\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n25y\n\n5y\n\nSummons your avatar to deal unaspected damage to target and all enemies nearby it with a potency of 560 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Grants 2 stacks of Executioner\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nSoul Gauge Cost: 50\n\nEnshroud\n\nJob Quest\n\nLv. 80\n\nAbility\nInstant\n5s\n-\n\n0y\n\n0y\n\nOffers your flesh as a vessel to your avatar, gaining maximum stacks of Lemure Shroud.\nDuration: 30s\nCertain actions cannot be executed while playing host to your avatar.\nAdditional Effect: Grants Oblatio\nDuration: 30s\nShroud Gauge Cost: 50\n\nVoid Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 580.\nEnhanced Void Reaping Potency: 640\nAdditional Effect: Grants Enhanced Cross Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nRecast timer cannot be affected by status effects or gear attributes.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Void Reaping when requirements for execution are met.\n\nCross Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 580.\nEnhanced Cross Reaping Potency: 640\nAdditional Effect: Grants Enhanced Void Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Lemure Shroud.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Cross Reaping when requirements for execution are met.\n\nGrim Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 220 to all enemies in a cone before you.\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Grim Reaping when requirements for execution are met.\n\nSoulsow\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n-\n\n0y\n\n0y\n\nGrants Soulsow to self, changing the action to Harvest Moon.\nCast time is instant when used outside of battle.\n\nHarvest Moon\n\nLv. 82\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 800 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Increases Soul Gauge by 10\nCan only be executed while under the effect of Soulsow.\n\n※This action cannot be assigned to a hotbar.\n※Soulsow changes to Harvest Moon when requirements for execution are met.\n\nLemure's Slice\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 280.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Scythe.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Lemure's Slice while under the effect of Enshrouded.\n\nLemure's Scythe\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 100 to all enemies in a cone before you.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Slice.\n\n※This action cannot be assigned to a hotbar.\n※Grim Swathe changes to Lemure's Scythe while under the effect of Enshrouded.\n\nPlentiful Harvest\n\nLv. 88\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n15y\n\n15y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 720 for the first enemy, and 20% less for all remaining enemies.\nImmortal Sacrifice Cost: 1 stack\nPotency increases up to 1,000 as stacks of Immortal Sacrifice exceed minimum cost.\nAdditional Effect: Grants Ideal Host\nDuration: 30s\nAdditional Effect: Grants Perfectio Occulta\nPerfectio Occulta Effect: Grants Perfectio Parata upon executing Communio\nDuration: 30s\nCannot be executed while under the effect of Bloodsown Circle.\nConsumes all stacks of Immortal Sacrifice upon execution.\n\nCommunio\n\nLv. 90\n\nSpell\n\n1.3s\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,100 for the first enemy, and 20% less for all remaining enemies.\nAdditional Effect: Grants Perfectio Parata when executed while Perfectio Occulta is active\nDuration: 30s\nEnshrouded effect expires upon execution.\nRequires at least one stack of Lemure Shroud to execute.\n\nSacrificium\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Enshrouded and Oblatio.\n\n※This action cannot be assigned to a hotbar.\n※Gluttony changes to Sacrificium when requirements for execution are met.\n\nExecutioner's Gibbet\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 700.\n760 when executed from a target's flank.\nEnhanced Gibbet Potency: 760\nFlank Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Executioner's Gibbet when requirements for execution are met.\n\nExecutioner's Gallows\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 700.\n760 when executed from a target's rear.\nEnhanced Gallows Potency: 760\nRear Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Executioner's Gallows when requirements for execution are met.\n\nExecutioner's Guillotine\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 260 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Executioner's Guillotine when requirements for execution are met.\n\nPerfectio\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 1,300 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar.\n※Communio changes to Perfectio when requirements for execution are met."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nLeg Sweep\n\nLv. 10\n\nAbility\nInstant\n40s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 3s\n\nBloodbath\n\nLv. 12\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nConverts a portion of physical damage dealt into HP.\nDuration: 20s\n\nFeint\n\nLv. 22\n\nAbility\nInstant\n90s\n-\n\n10y\n\n0y\n\nLowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrue North\n\nLv. 50\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nNullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2"
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nSoul Gauge\n\nLv. 50\n\nAllows for Soul Gauge accumulation upon the landing of certain weaponskills and magic actions, or defeating enemies under the effect of Death's Design.\n\nMelee Mastery\n\nLv. 60\n\nIncreases the potency of Slice to 300, Waxing Slice to 140, Shadow of Death to 300, Harpe to 300, Spinning Scythe to 140, Infernal Slice to 140, Whorl of Death to 100, and Nightmare Scythe to 120.\n\nEnhanced Avatar\n\nLv. 70\n\nGrants the effect of Soul Reaver upon successfully landing Blood Stalk or Grim Swathe.\nDuration: 30s\nEffect ends upon execution of any weaponskill or magic attack.\n\nHellsgate\n\nLv. 74\n\nUpon executing Hell's Ingress or Hell's Egress, leave behind a Hellsgate and grant Threshold to self.\nDuration: 10s\nHell's Ingress changes to Regress after executing Hell's Egress, and vice versa.\n\nTempered Soul\n\nLv. 78\n\nAllows the accumulation of charges for consecutive uses of Soul Slice and Soul Scythe.\nMaximum Charges: 2\n\nShroud Gauge\n\nJob Quest\n\nLv. 80\n\nAllows for Shroud Gauge accumulation upon the landing of Gibbet, Gallows, or Guillotine.\n\nEnhanced Arcane Crest\n\nLv. 84\n\nGrants Crest of Time Returned to self and nearby party members, gradually restoring HP over time. This effect is only granted when the Crest of Time Borrowed barrier is completely absorbed.\nCure Potency: 50\nDuration: 15s\n\nMelee Mastery II\n\nLv. 84\n\nIncreases the potency of Slice to 320, Waxing Slice to 160, and Infernal Slice to 180.\n\nVoid Soul\n\nLv. 86\n\nGrants Void Shroud upon landing Void Reaping, Cross Reaping, or Grim Reaping.\n\nEnhanced Arcane Circle\n\nLv. 88\n\nGrants Circle of Sacrifice to you and nearby party members upon executing Arcane Circle.\nDuration: 5s\nWhen you or party members under this effect successfully land a weaponskill or cast a spell, you may gain a stack of Immortal Sacrifice, up to a maximum of 8.\nDuration: 30s\nAlso grants Bloodsown Circle to self, allowing you to receive stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice.\nDuration: 6s\n\nEnhanced Enshroud\n\nLv. 92\n\nGrants Oblatio upon executing Enshroud.\nDuration: 30s\n\nMelee Mastery III\n\nLv. 94\n\nIncreases the potency of Slice to 420, Waxing Slice to 260, Infernal Slice to 280, Soul Slice to 520, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 580, Cross Reaping to 580, Harvest Moon to 800, and Lemure's Slice to 280.\n\nEnhanced Gluttony\n\nLv. 96\n\nGrants 2 stacks of Executioner upon executing Gluttony.\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nEffect ends upon execution of any weaponskill or magic attack.\nGibbet changes to Executioner's Gibbet, Gallows changes to Executioner's Gallows, and Guillotine changes to Executioner's Guillotine while under the effect of Executioner.\n\nEnhanced Plentiful Harvest\n\nLv. 100\n\nGrants Perfectio Occulta upon executing Plentiful Harvest.\nDuration: 30s\nPerfectio Occulta changes to Perfectio Parata upon executing Communio.\nEffect of Perfectio Parata ends upon gaining the effect of Lemure Shroud."
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nEnhanced Feint\n\nLv. 98\n\nExtends the duration of Feint to 15 seconds."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSlice\n\nWaxing Slice\n\nInfernal Slice\n\nIncreases the Soul Gauge.\n\nSpinning Scythe\n\nNightmare Scythe\n\nHits multiple enemies while also increasing the Soul Gauge."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nSoul Gauge\n\nWhen you learn the trait Soul Gauge, the Soul Gauge will be displayed, indicating the number of Souls you have accumulated.\nSouls are accumulated upon executing certain weaponskills and by defeating enemies who fall under the effects of Death's Design from the action Shadow of Death. Souls can be used to execute Blood Stalk, Grim Swathe (acquired at level 55), and Gluttony (acquired at level 76).\n\nThe Shroud Gauge can be filled via the execution of Gibbet, Gallows, and Guillotine. With sufficient energy stored in the gauge, you can execute Enshroud.\nDeath Gauge\n\nStacks of Lemure Shroud can be consumed to execute Void Reaping or Communio (acquired at level 90).\n\nWhen you learn the trait Enhanced Shroud, Void Shroud will be gained when stacks of Lemure Shroud are used. These can be used to execute several actions such as Lemure's Slice and Lemure's Scythe.\n\nSimple Mode\n\nSoul Gauge\n\nShroud Gauge\n\nDeath Gauge\n\nLemure\n\nVoid Shroud"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSlice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nWaxing Slice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Slice\n\n※This action cannot be assigned to a hotbar.\n\nInfernal Slice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Waxing Slice\n\n※This action cannot be assigned to a hotbar.\n\nHarvest Moon\n\nSpell\nInstant\n16s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nPotency increases up to 12,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nPlentiful Harvest\n\nWeaponskill\nInstant\n60s\n-\n\n15y\n\n15y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nPotency increases up to 24,000 based on your accumulated stacks of Immortal Sacrifice, gained by executing Executioner's Guillotine, KOing enemies, or earning assists.\nConsumes all stacks of Immortal Sacrifice upon execution.\nCan only be executed while not under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\nGrim Swathe\n\nAbility\nInstant\n12s\n-\n\n8y\n\n8y\n\nSummons your avatar to deliver an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Grants Executioner's Guillotine Ready\nDuration: 10s\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※Infernal Slice Combo changes to Executioner's Guillotine upon execution.\n\nDeath Warrant\n\nAbility\nInstant\n24s\n-\n\n25y\n\n0y\n\nAfflicts target with Death Warrant, causing you to compile damage you deal to that target. Action is changed to Fate Sealed for the duration of the effect.\nDeals damage when time expires or upon executing Fate Sealed.\nDuration: 8s\nDamage Potency: 2,000 plus 50% of compiled damage\n\nHell's Ingress\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nAdditional Effect: Increases movement speed by 25%\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Regress upon execution.\n\nArcane Crest\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nGrants Crest of Time Borrowed to self, creating a barrier that nullifies damage equivalent to a heal of 12,000 potency.\nDuration: 10s\nGrants the Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 6,000\nDuration: 6s\nThis action's effects extend through obstructions.\n\nExecutioner's Guillotine\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 8,000 to all enemies in a cone before you.\nAdditional Effect: Grants a stack of Immortal Sacrifice, up to a maximum of 8\nCan only be executed while under the effect of Executioner's Guillotine.\n\n※This action cannot be assigned to a hotbar.\n\nVoid Reaping\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nCross Reaping\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nCombo Action: Void Reaping\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nLemure's Slice\n\nAbility\nInstant\n20s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 6,000 to all enemies in a cone before you.\nAdditional Effect: Bind\nDuration: 3s\nCan only be executed while under the effect of Enshrouded.\n\n※This action cannot be assigned to a hotbar.\n\nFate Sealed\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nEnds the effect of Death Warrant, dealing damage to the target.\nDamage Potency: 2,000 plus 50% of compiled damage\nCan only be executed while under the effect of Death Warrant.\n\n※This action cannot be assigned to a hotbar.\n\nRegress\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Hellsgate left behind by you.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nCommunio\n\nSpell\n\n1.32s\n\n2.2s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 16,000 to target and all enemies nearby it.\nAdditional Effect: Grants Perfectio Parata\nDuration: 15s\nRequires at least one stack of Enshrouded.\nConsumes all stacks of Enshrouded upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Perfectio upon execution.\n\nPerfectio\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 12,000 to target and all enemies nearby it, incapacitating foes whose HP is below 25%.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nTenebrae Lemurum\n\nInstant\n10s\n-\n\n0y\n\n10y\n\nOffers your flesh as a vessel to your avatar, gaining 5 stacks of Enshrouded.\nDuration: 20s\nAdditional Effect: Afflicts nearby enemies with Hysteria\nHysteria Effect: Afflicted enemies are unable to act of their own free will\nDuration: 2s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nHas no effect on players riding machina or non-player combatants.\n\n※Action changes to Communio while under the effect of Enshrouded.\n※Grim Swathe changes to Lemure's Slice while under the effect of Enshrouded.\n※Infernal Slice Combo changes to Void Reaping while under the effect of Enshrouded."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBloodbath\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s\n\nSwift\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.\n\nSmite\n\nAbility\nInstant\n15s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nMelee DPS\n\nThe Garleans' forebears were once humble farmers who made their home among the sun-drenched fields of southern Ilsabard. That was, until they were driven from this paradise by invaders wielding arcane magicks. Forced north into the frigid mountains, the survivors sought a means to tap into the reservoir of aether otherwise closed to them. A daring few found their answer within the void, binding themselves to its creatures to gain verboten power─power fed by the souls of the slain. Once more they took up their scythes, this time to reap a crimson harvest.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSlice\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 420.\nAdditional Effect: Increases Soul Gauge by 10\n\nWaxing Slice\n\nLv. 5\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 260.\nCombo Action: Slice\nCombo Potency: 500\nCombo Bonus: Increases Soul Gauge by 10\n\nShadow of Death\n\nLv. 10\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires\n\nHarpe\n\nLv. 15\n\nSpell\n\n1.3s\n\n2.5s\n-\n\n25y\n\n0y\n\nDeals unaspected damage with a potency of 300.\nAdditional Effect: Increases Soul Gauge by 10\n\nHell's Ingress\n\nLv. 20\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Ingress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Egress.\n\nHell's Egress\n\nLv. 20\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms backwards.\nAdditional Effect: Grants Enhanced Harpe\nEnhanced Harpe Effect: Next Harpe can be cast immediately and will reduce recast timer of Hell's Egress by 5s upon execution\nDuration: 10s\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nCannot be executed while bound.\nShares a recast timer with Hell's Ingress.\n\nSpinning Scythe\n\nLv. 25\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 140 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 10\n\nInfernal Slice\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 280.\nCombo Action: Waxing Slice\nCombo Potency: 600\nCombo Bonus: Increases Soul Gauge by 10\n\nWhorl of Death\n\nLv. 35\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Afflicts target with Death's Design, increasing damage you deal target by 10%\nDuration: 30s\nExtends duration of Death's Design by 30s to a maximum of 60s.\nAdditional Effect: Increases Soul Gauge by 10 if target is KO'd before effect expires\n\nArcane Crest\n\nLv. 40\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nGrants Crest of Time Borrowed to self, creating a barrier that nullifies damage totaling up to 10% of maximum HP.\nDuration: 5s\nGrants Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 50\nDuration: 15s\n\nNightmare Scythe\n\nLv. 45\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 120 to all nearby enemies.\nCombo Action: Spinning Scythe\nCombo Potency: 180\nCombo Bonus: Increases Soul Gauge by 10\n\nBlood Stalk\n\nLv. 50\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 340.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.\n\nGrim Swathe\n\nLv. 55\n\nAbility\nInstant\n1s\n-\n\n8y\n\n8y\n\nSummons your avatar to deliver an attack with a potency of 140 to all enemies in a cone before you.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nShares a recast timer with all avatar attacks except Gluttony.\n\nSoul Slice\n\nLv. 60\n\nWeaponskill\nInstant\n\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 520.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Scythe.\nRecast timer cannot be affected by status effects or gear attributes.\n\nSoul Scythe\n\nLv. 65\n\nWeaponskill\nInstant\n\n30s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 180 to all nearby enemies.\nAdditional Effect: Increases Soul Gauge by 50\nMaximum Charges: 2\nShares a recast timer with Soul Slice.\nRecast timer cannot be affected by status effects or gear attributes.\n\nGibbet\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\n560 when executed from a target's flank.\nEnhanced Gibbet Potency: 560\nFlank Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nGallows\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\n560 when executed from a target's rear.\nEnhanced Gallows Potency: 560\nRear Enhanced Potency: 620\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nGuillotine\n\nLv. 70\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 200 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Soul Reaver.\n\nUnveiled Gibbet\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gibbet.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gibbet when under the effect of Enhanced Gibbet.\n\nUnveiled Gallows\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nSummons your avatar to deliver an attack with a potency of 440.\nAdditional Effect: Grants Soul Reaver\nDuration: 30s\nStack count will be reduced to 1 when already under the effect of Soul Reaver.\nEffect cannot be stacked with Executioner.\nSoul Gauge Cost: 50\nCan only be executed while under the effect of Enhanced Gallows.\nShares a recast timer with all avatar attacks except Gluttony.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\n\nArcane Circle\n\nLv. 72\n\nAbility\nInstant\n120s\n-\n\n0y\n\n30y\n\nIncreases damage dealt by self and nearby party members by 3%.\nDuration: 20s\nAdditional Effect: Grants Circle of Sacrifice to self and nearby party members\nDuration: 5s\nAdditional Effect: Grants Bloodsown Circle to self\nDuration: 6s\nCircle of Sacrifice Effect: When you or party members under this effect successfully land a weaponskill or ability, or cast a spell, the reaper who applied it may be granted a stack of Immortal Sacrifice, up to a maximum of 8\nDuration: 30s\nBloodsown Circle Effect: Allows you to accumulate stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice\n\nRegress\n\nLv. 74\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Hellsgate left behind by you.\nCan only be executed while under the effect of Threshold.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n※Hell's Ingress or Hell's Egress will change to Regress when requirements for execution are met.\n\nGluttony\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n25y\n\n5y\n\nSummons your avatar to deal unaspected damage to target and all enemies nearby it with a potency of 560 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Grants 2 stacks of Executioner\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nSoul Gauge Cost: 50\n\nEnshroud\n\nJob Quest\n\nLv. 80\n\nAbility\nInstant\n5s\n-\n\n0y\n\n0y\n\nOffers your flesh as a vessel to your avatar, gaining maximum stacks of Lemure Shroud.\nDuration: 30s\nCertain actions cannot be executed while playing host to your avatar.\nAdditional Effect: Grants Oblatio\nDuration: 30s\nShroud Gauge Cost: 50\n\nVoid Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 580.\nEnhanced Void Reaping Potency: 640\nAdditional Effect: Grants Enhanced Cross Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nRecast timer cannot be affected by status effects or gear attributes.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Void Reaping when requirements for execution are met.\n\nCross Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 580.\nEnhanced Cross Reaping Potency: 640\nAdditional Effect: Grants Enhanced Void Reaping\nDuration: 30s\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Lemure Shroud.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Cross Reaping when requirements for execution are met.\n\nGrim Reaping\n\nLv. 80\n\nWeaponskill\nInstant\n1.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 220 to all enemies in a cone before you.\nAdditional Effect: Grants Void Shroud\nCan only be executed while under the effect of Enshrouded.\nLemure Shroud Cost: 1\nThis action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Grim Reaping when requirements for execution are met.\n\nSoulsow\n\nLv. 82\n\nSpell\n\n5s\n\n2.5s\n-\n\n0y\n\n0y\n\nGrants Soulsow to self, changing the action to Harvest Moon.\nCast time is instant when used outside of battle.\n\nHarvest Moon\n\nLv. 82\n\nSpell\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 800 for the first enemy, and 40% less for all remaining enemies.\nAdditional Effect: Increases Soul Gauge by 10\nCan only be executed while under the effect of Soulsow.\n\n※This action cannot be assigned to a hotbar.\n※Soulsow changes to Harvest Moon when requirements for execution are met.\n\nLemure's Slice\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 280.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Scythe.\n\n※This action cannot be assigned to a hotbar.\n※Blood Stalk changes to Lemure's Slice while under the effect of Enshrouded.\n\nLemure's Scythe\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 100 to all enemies in a cone before you.\nVoid Shroud Cost: 2\nShares a recast timer with Lemure's Slice.\n\n※This action cannot be assigned to a hotbar.\n※Grim Swathe changes to Lemure's Scythe while under the effect of Enshrouded.\n\nPlentiful Harvest\n\nLv. 88\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n15y\n\n15y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 720 for the first enemy, and 20% less for all remaining enemies.\nImmortal Sacrifice Cost: 1 stack\nPotency increases up to 1,000 as stacks of Immortal Sacrifice exceed minimum cost.\nAdditional Effect: Grants Ideal Host\nDuration: 30s\nAdditional Effect: Grants Perfectio Occulta\nPerfectio Occulta Effect: Grants Perfectio Parata upon executing Communio\nDuration: 30s\nCannot be executed while under the effect of Bloodsown Circle.\nConsumes all stacks of Immortal Sacrifice upon execution.\n\nCommunio\n\nLv. 90\n\nSpell\n\n1.3s\n\n2.5s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 1,100 for the first enemy, and 20% less for all remaining enemies.\nAdditional Effect: Grants Perfectio Parata when executed while Perfectio Occulta is active\nDuration: 30s\nEnshrouded effect expires upon execution.\nRequires at least one stack of Lemure Shroud to execute.\n\nSacrificium\n\nLv. 92\n\nAbility\nInstant\n1s\n-\n\n25y\n\n5y\n\nDeals unaspected damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Enshrouded and Oblatio.\n\n※This action cannot be assigned to a hotbar.\n※Gluttony changes to Sacrificium when requirements for execution are met.\n\nExecutioner's Gibbet\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 700.\n760 when executed from a target's flank.\nEnhanced Gibbet Potency: 760\nFlank Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gallows\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gallows while under the effect of Enhanced Gallows.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gibbet changes to Executioner's Gibbet when requirements for execution are met.\n\nExecutioner's Gallows\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 700.\n760 when executed from a target's rear.\nEnhanced Gallows Potency: 760\nRear Enhanced Potency: 820\nAdditional Effect: Grants Enhanced Gibbet\nDuration: 60s\nThe action Blood Stalk changes to Unveiled Gibbet while under the effect of Enhanced Gibbet.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Gallows changes to Executioner's Gallows when requirements for execution are met.\n\nExecutioner's Guillotine\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 260 to all enemies in a cone before you.\nAdditional Effect: Increases Shroud Gauge by 10\nCan only be executed while under the effect of Executioner.\n\n※This action cannot be assigned to a hotbar.\n※Guillotine changes to Executioner's Guillotine when requirements for execution are met.\n\nPerfectio\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 1,300 for the first enemy, and 20% less for all remaining enemies.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar.\n※Communio changes to Perfectio when requirements for execution are met.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nLeg Sweep\n\nLv. 10\n\nAbility\nInstant\n40s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 3s\n\nBloodbath\n\nLv. 12\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nConverts a portion of physical damage dealt into HP.\nDuration: 20s\n\nFeint\n\nLv. 22\n\nAbility\nInstant\n90s\n-\n\n10y\n\n0y\n\nLowers target's physical damage dealt by 10% and magic damage dealt by 5%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrue North\n\nLv. 50\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nNullifies all action direction requirements.\nDuration: 10s\nMaximum Charges: 2\n\nTrait\n\nTraits\nAcquired\nEffect\n\nSoul Gauge\n\nLv. 50\n\nAllows for Soul Gauge accumulation upon the landing of certain weaponskills and magic actions, or defeating enemies under the effect of Death's Design.\n\nMelee Mastery\n\nLv. 60\n\nIncreases the potency of Slice to 300, Waxing Slice to 140, Shadow of Death to 300, Harpe to 300, Spinning Scythe to 140, Infernal Slice to 140, Whorl of Death to 100, and Nightmare Scythe to 120.\n\nEnhanced Avatar\n\nLv. 70\n\nGrants the effect of Soul Reaver upon successfully landing Blood Stalk or Grim Swathe.\nDuration: 30s\nEffect ends upon execution of any weaponskill or magic attack.\n\nHellsgate\n\nLv. 74\n\nUpon executing Hell's Ingress or Hell's Egress, leave behind a Hellsgate and grant Threshold to self.\nDuration: 10s\nHell's Ingress changes to Regress after executing Hell's Egress, and vice versa.\n\nTempered Soul\n\nLv. 78\n\nAllows the accumulation of charges for consecutive uses of Soul Slice and Soul Scythe.\nMaximum Charges: 2\n\nShroud Gauge\n\nJob Quest\n\nLv. 80\n\nAllows for Shroud Gauge accumulation upon the landing of Gibbet, Gallows, or Guillotine.\n\nEnhanced Arcane Crest\n\nLv. 84\n\nGrants Crest of Time Returned to self and nearby party members, gradually restoring HP over time. This effect is only granted when the Crest of Time Borrowed barrier is completely absorbed.\nCure Potency: 50\nDuration: 15s\n\nMelee Mastery II\n\nLv. 84\n\nIncreases the potency of Slice to 320, Waxing Slice to 160, and Infernal Slice to 180.\n\nVoid Soul\n\nLv. 86\n\nGrants Void Shroud upon landing Void Reaping, Cross Reaping, or Grim Reaping.\n\nEnhanced Arcane Circle\n\nLv. 88\n\nGrants Circle of Sacrifice to you and nearby party members upon executing Arcane Circle.\nDuration: 5s\nWhen you or party members under this effect successfully land a weaponskill or cast a spell, you may gain a stack of Immortal Sacrifice, up to a maximum of 8.\nDuration: 30s\nAlso grants Bloodsown Circle to self, allowing you to receive stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice.\nDuration: 6s\n\nEnhanced Enshroud\n\nLv. 92\n\nGrants Oblatio upon executing Enshroud.\nDuration: 30s\n\nMelee Mastery III\n\nLv. 94\n\nIncreases the potency of Slice to 420, Waxing Slice to 260, Infernal Slice to 280, Soul Slice to 520, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 580, Cross Reaping to 580, Harvest Moon to 800, and Lemure's Slice to 280.\n\nEnhanced Gluttony\n\nLv. 96\n\nGrants 2 stacks of Executioner upon executing Gluttony.\nDuration: 30s\nEffect cannot be stacked with Soul Reaver.\nEffect ends upon execution of any weaponskill or magic attack.\nGibbet changes to Executioner's Gibbet, Gallows changes to Executioner's Gallows, and Guillotine changes to Executioner's Guillotine while under the effect of Executioner.\n\nEnhanced Plentiful Harvest\n\nLv. 100\n\nGrants Perfectio Occulta upon executing Plentiful Harvest.\nDuration: 30s\nPerfectio Occulta changes to Perfectio Parata upon executing Communio.\nEffect of Perfectio Parata ends upon gaining the effect of Lemure Shroud.\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nEnhanced Feint\n\nLv. 98\n\nExtends the duration of Feint to 15 seconds.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nSlice\n\nWaxing Slice\n\nInfernal Slice\n\nIncreases the Soul Gauge.\n\nSpinning Scythe\n\nNightmare Scythe\n\nHits multiple enemies while also increasing the Soul Gauge.\n\nJob Gauge\n\nSoul Gauge\n\nWhen you learn the trait Soul Gauge, the Soul Gauge will be displayed, indicating the number of Souls you have accumulated.\nSouls are accumulated upon executing certain weaponskills and by defeating enemies who fall under the effects of Death's Design from the action Shadow of Death. Souls can be used to execute Blood Stalk, Grim Swathe (acquired at level 55), and Gluttony (acquired at level 76).\n\nThe Shroud Gauge can be filled via the execution of Gibbet, Gallows, and Guillotine. With sufficient energy stored in the gauge, you can execute Enshroud.\nDeath Gauge\n\nStacks of Lemure Shroud can be consumed to execute Void Reaping or Communio (acquired at level 90).\n\nWhen you learn the trait Enhanced Shroud, Void Shroud will be gained when stacks of Lemure Shroud are used. These can be used to execute several actions such as Lemure's Slice and Lemure's Scythe.\n\nSimple Mode\n\nSoul Gauge\n\nShroud Gauge\n\nDeath Gauge\n\nLemure\n\nVoid Shroud\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSlice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nWaxing Slice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Slice\n\n※This action cannot be assigned to a hotbar.\n\nInfernal Slice\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Waxing Slice\n\n※This action cannot be assigned to a hotbar.\n\nHarvest Moon\n\nSpell\nInstant\n16s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to target and all enemies nearby it.\nPotency increases up to 12,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nMaximum Charges: 2\nThis action does not share a recast timer with any other actions.\n\nPlentiful Harvest\n\nWeaponskill\nInstant\n60s\n-\n\n15y\n\n15y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before you.\nPotency increases up to 24,000 based on your accumulated stacks of Immortal Sacrifice, gained by executing Executioner's Guillotine, KOing enemies, or earning assists.\nConsumes all stacks of Immortal Sacrifice upon execution.\nCan only be executed while not under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\nGrim Swathe\n\nAbility\nInstant\n12s\n-\n\n8y\n\n8y\n\nSummons your avatar to deliver an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Grants Executioner's Guillotine Ready\nDuration: 10s\nAdditional Effect: Heavy +75%\nDuration: 3s\n\n※Infernal Slice Combo changes to Executioner's Guillotine upon execution.\n\nDeath Warrant\n\nAbility\nInstant\n24s\n-\n\n25y\n\n0y\n\nAfflicts target with Death Warrant, causing you to compile damage you deal to that target. Action is changed to Fate Sealed for the duration of the effect.\nDeals damage when time expires or upon executing Fate Sealed.\nDuration: 8s\nDamage Potency: 2,000 plus 50% of compiled damage\n\nHell's Ingress\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nQuickly dash 15 yalms forward.\nAdditional Effect: Leaves behind a Hellsgate at point of origin, and grants Threshold to self\nDuration: 10s\nAdditional Effect: Increases movement speed by 25%\nDuration: 5s\nCannot be executed while bound.\n\n※Action changes to Regress upon execution.\n\nArcane Crest\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nGrants Crest of Time Borrowed to self, creating a barrier that nullifies damage equivalent to a heal of 12,000 potency.\nDuration: 10s\nGrants the Crest of Time Returned to self and nearby party members within a radius of 15 yalms when barrier is completely absorbed.\nCrest of Time Returned Effect: Gradually restores HP\nCure Potency: 6,000\nDuration: 6s\nThis action's effects extend through obstructions.\n\nExecutioner's Guillotine\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 8,000 to all enemies in a cone before you.\nAdditional Effect: Grants a stack of Immortal Sacrifice, up to a maximum of 8\nCan only be executed while under the effect of Executioner's Guillotine.\n\n※This action cannot be assigned to a hotbar.\n\nVoid Reaping\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nCross Reaping\n\nWeaponskill\nInstant\n1.5s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nCombo Action: Void Reaping\nAdditional Effect: Absorbs 50% of damage dealt as HP\nCan only be executed while under the effect of Enshrouded.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nLemure's Slice\n\nAbility\nInstant\n20s\n-\n\n8y\n\n8y\n\nDelivers an attack with a potency of 6,000 to all enemies in a cone before you.\nAdditional Effect: Bind\nDuration: 3s\nCan only be executed while under the effect of Enshrouded.\n\n※This action cannot be assigned to a hotbar.\n\nFate Sealed\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nEnds the effect of Death Warrant, dealing damage to the target.\nDamage Potency: 2,000 plus 50% of compiled damage\nCan only be executed while under the effect of Death Warrant.\n\n※This action cannot be assigned to a hotbar.\n\nRegress\n\nAbility\nInstant\n1s\n-\n\n30y\n\n0y\n\nMove instantly to the Hellsgate left behind by you.\nCannot be executed while bound.\n\n※This action cannot be assigned to a hotbar.\n\nCommunio\n\nSpell\n\n1.32s\n\n2.2s\n-\n\n25y\n\n5y\n\nDeals unaspected damage with a potency of 16,000 to target and all enemies nearby it.\nAdditional Effect: Grants Perfectio Parata\nDuration: 15s\nRequires at least one stack of Enshrouded.\nConsumes all stacks of Enshrouded upon execution.\n\n※This action cannot be assigned to a hotbar.\n※Action changes to Perfectio upon execution.\n\nPerfectio\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 12,000 to target and all enemies nearby it, incapacitating foes whose HP is below 25%.\nEffect cannot be applied to players riding machina or non-player combatants.\nCan only be executed while under the effect of Perfectio Parata.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nTenebrae Lemurum\n\nInstant\n10s\n-\n\n0y\n\n10y\n\nOffers your flesh as a vessel to your avatar, gaining 5 stacks of Enshrouded.\nDuration: 20s\nAdditional Effect: Afflicts nearby enemies with Hysteria\nHysteria Effect: Afflicted enemies are unable to act of their own free will\nDuration: 2s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\nHas no effect on players riding machina or non-player combatants.\n\n※Action changes to Communio while under the effect of Enshrouded.\n※Grim Swathe changes to Lemure's Slice while under the effect of Enshrouded.\n※Infernal Slice Combo changes to Void Reaping while under the effect of Enshrouded.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBloodbath\n\nAbility\nInstant\n45s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 25%, and converts 100% of damage dealt into HP.\nDuration: 10s\n\nSwift\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 100% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nEffect ends when riding a mount.\n\nSmite\n\nAbility\nInstant\n15s\n-\n\n10y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 18,000 as the target's HP decreases, reaching its maximum value when the target has 25% HP or less.\nIgnores the effects of Guard when dealing damage.\nRecast time resets upon earning a kill or an assist.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

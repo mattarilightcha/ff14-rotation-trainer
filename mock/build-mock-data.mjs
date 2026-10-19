@@ -15,8 +15,9 @@ const actions = read('src/data/ffxiv/actions.json');
 const statuses = read('src/data/ffxiv/statuses.json');
 // 全件（敵へのデバフ・食事なども入る）。説明文の「」の名前が statuses.json にないとき（燕飛効果アップなど）に引く
 const statusesAll = read('src/data/ffxiv/statuses-all.json');
-// モックのジョブの決まり（mock/jobs.js の STATUS）に書いたステータスの名前。説明文に「」で出てこないもの（ケアルラ効果アップなど）もアイコンを引けるように
-const MOCK_STATUS_NAMES = new Set([...readFileSync(new URL('./jobs.js', import.meta.url), 'utf8').matchAll(/\{ name: '([^']+)'/g)].map((m) => m[1]));
+// モックのジョブの決まり（mock/jobs.js と役割ごとの jobs-*.js の STATUS）に書いたステータスの名前。説明文に「」で出てこないもの（ケアルラ効果アップなど）もアイコンを引けるように
+const JOB_FILES = readdirSync(new URL('.', import.meta.url)).filter((f) => /^jobs(-\w+)?\.js$/.test(f));
+const MOCK_STATUS_NAMES = new Set(JOB_FILES.flatMap((f) => [...readFileSync(new URL(`./${f}`, import.meta.url), 'utf8').matchAll(/\{ name: '([^']+)'/g)].map((m) => m[1])));
 const jobs = read('src/data/ffxiv/jobs.json');
 const meta = read('src/data/ffxiv/meta.json');
 const jobGauges = read('src/data/ffxiv/job-gauges.json');
@@ -24,8 +25,42 @@ const CfgParse = createRequire(import.meta.url)('./cfg-parse.js');
 const sample = (name) => readFileSync(join(root, 'samples/hotbar-hud', name));
 const byId = new Map(actions.map((a) => [a.id, a]));
 
+// 公式ジョブガイド（src/data/ffxiv/jobguide。tools/jobguide/README.md）: 表の詠唱・リキャスト・消費 MP は Lv100 の値（特性込み）。
+// 抽出データ（Action シート）は特性の前の基本値なので、違うときはジョブガイドの値を使う（迅速魔 60 → 40 秒、居合術の詠唱 1.8 → 1.3 秒など）。
+// 行は英語版の名前で突き合わせる（日本語版の名前にはふりがなが混ざる）。日英の行 ID は同じ
+const GUIDE_FILE = { PLD: 'paladin', WAR: 'warrior', DRK: 'darkknight', GNB: 'gunbreaker', WHM: 'whitemage', SCH: 'scholar', AST: 'astrologian', SGE: 'sage', MNK: 'monk', DRG: 'dragoon', NIN: 'ninja', SAM: 'samurai', RPR: 'reaper', VPR: 'viper', BRD: 'bard', MCH: 'machinist', DNC: 'dancer', BLM: 'blackmage', SMN: 'summoner', RDM: 'redmage', PCT: 'pictomancer' };
+// 特性とペットの技（Lv 以下の特性。英語名・Lv・日本語の説明文）。ジョブの決まりが「20秒経過するたび」などを読む
+function guideExtra(job, level) {
+  const f = GUIDE_FILE[job];
+  if (!f || !existsSync(join(root, `src/data/ffxiv/jobguide/en/${f}.json`))) return null;
+  const en = read(`src/data/ffxiv/jobguide/en/${f}.json`), ja = read(`src/data/ffxiv/jobguide/ja/${f}.json`);
+  const jaById = new Map(ja.sections.flatMap((x) => x.rows).map((r) => [r.rowId, r]));
+  const rowsOf = (re) => en.sections.filter((x) => x.mode === 'pve' && re.test(x.anchor)).flatMap((x) => x.rows);
+  return {
+    traits: rowsOf(/trait/).filter((r) => (r.level ?? 0) <= level).map((r) => ({ en: r.name, level: r.level, desc: jaById.get(r.rowId)?.description ?? '' })),
+    pets: rowsOf(/pet/).map((r) => ({ en: r.name, recastMs: Math.round((guideSec(r.recast) ?? 0) * 1000), desc: jaById.get(r.rowId)?.description ?? '' })),
+  };
+}
+function guideRows(job) {
+  const f = GUIDE_FILE[job];
+  if (!f || !existsSync(join(root, `src/data/ffxiv/jobguide/en/${f}.json`))) return [];
+  const en = read(`src/data/ffxiv/jobguide/en/${f}.json`), ja = read(`src/data/ffxiv/jobguide/ja/${f}.json`);
+  const jaById = new Map(ja.sections.flatMap((x) => x.rows).map((r) => [r.rowId, r]));
+  return en.sections.filter((x) => x.mode === 'pve' && /action|pet/.test(x.anchor)).flatMap((x) => x.rows.map((r) => ({ en: r, ja: jaById.get(r.rowId) })));
+}
+const guideSec = (v) => (v == null || v === '-' || v === '' ? null : /instant/i.test(v) ? 0 : Number.isFinite(Number(String(v).replace(/[^\d.]/g, ''))) && /\d/.test(v) ? Number(String(v).replace(/[^\d.]/g, '')) : null);
+const guideMp = (v) => { const m = /(\d+)\s*MP|MP\s*(\d+)/i.exec(v ?? ''); return m ? Number(m[1] ?? m[2]) : null; };
+// 同じ名前の行が複数あるとき（ホロスコープと、その発動）は、説明文の書き出しが長く一致する方
+function guideFor(rows, a) {
+  const c = rows.filter((r) => r.en.name === a.name.en);
+  if (c.length <= 1) return c[0] ?? null;
+  const d = a.description.ja;
+  const same = (t) => { let i = 0; while (i < t.length && t[i] === d[i]) i++; return i; };
+  return c.map((r) => [r, same(r.ja?.description ?? '')]).sort((x, y) => y[1] - x[1])[0][0];
+}
+
 // 練習できるジョブ（略称・レベル）。増やすときはここに足し、jobs.js にジョブの決まりを書く
-const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100]];
+const JOBS = [['SAM', 100], ['PLD', 100], ['WHM', 100], ['AST', 100], ['BLM', 100], ['BRD', 100], ['SMN', 100], ['WAR', 100], ['DRK', 100], ['GNB', 100], ['SCH', 100], ['SGE', 100], ['MNK', 100], ['NIN', 100], ['DRG', 100], ['RPR', 100], ['VPR', 100], ['MCH', 100], ['DNC', 100], ['RDM', 100], ['PCT', 100]];
 
 // サンプルの設定ファイルを「読み込み済み」の状態として解析する（画面の「設定ファイルを読み込む」と同じ処理）
 const keybind = CfgParse.parseKeybind(sample('KEYBIND.DAT'));
@@ -191,11 +226,45 @@ function buildJob(JOB, LEVEL) {
   }
 
   // アクションの変化（ボタン置き換え）のグループ。「変化させない」設定（CFG-11）のときは、変化先を別のボタンにする
+  // 抽出データに変化元が無いものは、説明文「発動条件を満たすと竜牙竜爪または竜尾大車輪が雲蒸竜変に変化する」から読む（変化元はこのジョブの技の名前）
+  const jobByName = new Map(job.actionIds.map((id) => byId.get(id)).filter((a) => a && a.level <= LEVEL).map((a) => [a.name.ja, resolve(a.id)]));
+  const descReplaces = new Map();
+  for (const id of job.actionIds) {
+    const a = byId.get(id);
+    if (!a || a.replacesAction?.length || a.level > LEVEL) continue;
+    const m = /発動条件を満たすと(.+?)が(.+?)に変化する/.exec(a.description?.ja ?? '');
+    if (!m || m[2] !== a.name.ja) continue;
+    const bases = (jobByName.has(m[1]) ? [m[1]] : m[1].split(/または|と|、/)).map((n) => jobByName.get(n.trim())).filter(Boolean);
+    if (bases.length) descReplaces.set(a.id, bases);
+  }
+  const replacesOf = (a) => (a.replacesAction?.length ? a.replacesAction : descReplaces.get(a.id) ?? []);
   const replaceGroups = {};
   for (const a of actions) {
-    for (const base of a.replacesAction ?? []) {
+    for (const base of replacesOf(a)) {
       if (!jobIds.has(base) || a.level > LEVEL) continue;
-      (replaceGroups[base] ??= []).push(a.id);
+      // 対象レベルで上位版に置き換わった技は上位版にする（モンクの闘魂旋風脚 → 夢幻闘舞、賢者のエウクラシア・プログノシス → II）
+      const t = resolve(a.id);
+      if (t !== base && !(replaceGroups[base] ??= []).includes(t)) replaceGroups[base].push(t);
+    }
+  }
+  // 説明文に変化元が 2 つ以上あるもの（「ヘルズイングレスまたはヘルズイーグレスがリターンに変化する」「ファイアとブリザドがパラドックスに変化する」）は、
+  // 抽出データの変化元が 1 つでも説明文の変化元を足す（変化元がほかの技の変化先のもの = 途中の段の名前は、元のボタンと同じなので足さない）
+  for (const id of job.actionIds) {
+    const a = byId.get(id);
+    if (!a || !a.replacesAction?.length || a.level > LEVEL || resolve(a.id) !== a.id) continue;
+    const m = /発動条件を満たすと(.+?)が(.+?)に変化する/.exec(a.description?.ja ?? '');
+    if (!m || m[2] !== a.name.ja || jobByName.has(m[1])) continue;
+    for (const base of m[1].split(/または|と|、/).map((n) => jobByName.get(n.trim())).filter(Boolean)) {
+      if (!jobIds.has(base) || replacesOf(byId.get(base)).length) continue;
+      if (!(replaceGroups[base] ??= []).includes(a.id)) replaceGroups[base].push(a.id);
+    }
+  }
+  // ヴァイパー: 参の牙の変化元は説明文のとおり、弐の牙【猛襲】の出る咬創のボタンが側撃・背撃、弐の牙【疾速】の出る穿裂のボタンが側裂・背裂
+  // （「発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する」など。抽出データの変化元は側撃・側裂が咬創、背撃・背裂が穿裂: GAME-81）
+  if (JOB === 'VPR') {
+    for (const [id, base] of [[34610, 34606], [34612, 34606], [34611, 34607], [34613, 34607]]) {
+      for (const ts of Object.values(replaceGroups)) { const i = ts.indexOf(id); if (i >= 0) ts.splice(i, 1); }
+      if (byId.get(id)?.level <= LEVEL) (replaceGroups[base] ??= []).push(id);
     }
   }
   if (JOB === 'SAM') for (const a of actions) if (a.id === 25782) (replaceGroups[25781] ??= []).push(a.id); // 奥義波切「このアクションを実行すると「返し波切」に変化する」
@@ -205,12 +274,19 @@ function buildJob(JOB, LEVEL) {
   // アストラルフレア・煉獄の炎・アンブラルフレアは、データではアウトバースト（16511）の変化先。Lv74 でアウトバーストはトライディザスターに
   // なるので（説明文「発動条件を満たすとトライディザスターがアストラルフレアに変化する」）、トライディザスターの変化先にする
   if (JOB === 'SMN') for (const id of [25821, 16515, 36995]) if (byId.get(id)?.level <= LEVEL) (replaceGroups[25826] ??= []).push(id);
+  // 赤魔道士: ヴァルフレア・ヴァルホーリー・スコーチの変化元（抽出データ）はヴァルサンダー・ヴァルエアロ・ジョルトII。どれも上位版に置き換わるので、
+  // 説明文「発動条件を満たすとヴァルサンダガとヴァルサンダラがヴァルフレアに変化する」「ジョルガとインパクトがスコーチに変化する」のとおり上位版のボタンが変わる
+  if (JOB === 'RDM') {
+    for (const [base, id] of [[25855, 7525], [16524, 7525], [25856, 7526], [16525, 7526], [37004, 16530], [16526, 16530], [16530, 25858]]) {
+      if (byId.get(id)?.level <= LEVEL && !(replaceGroups[base] ??= []).includes(id)) replaceGroups[base].push(id);
+    }
+  }
 
   // ゲーム内のアクション一覧にあるのにホットバーに置かれていないもの（INPUT_HUD §5.3「未配置」）
   const unplaced = job.actionIds
     .map((id) => byId.get(id))
     .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id] && !used.has(a.id))
-    .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
+    .filter((a) => !replacesOf(a).length && a.category !== 9)
     .map((a) => a.id);
   for (const id of unplaced) used.add(id);
   // 召喚士: サンプルの HOTBAR.DAT は古い配置（今はないアクション）で、主な技が未配置になる。1 本目のバーの空きに未配置の技を順に置く
@@ -224,7 +300,7 @@ function buildJob(JOB, LEVEL) {
   const buttonsAll = job.actionIds
     .map((id) => byId.get(id))
     .filter((a) => a && a.inActionList && a.isPlayerAction !== false && !a.isRoleAction && a.level <= LEVEL && !upgrade[a.id])
-    .filter((a) => !(a.replacesAction?.length) && a.category !== 9)
+    .filter((a) => !replacesOf(a).length && a.category !== 9)
     .map((a) => a.id);
   // このジョブが使えるロールアクション（読み込んだホットバーに置かれていても表示できるように）
   for (const a of actions) if (a.isRoleAction && a.jobs?.includes(JOB) && a.level <= LEVEL && !upgrade[a.id]) used.add(a.id);
@@ -233,18 +309,43 @@ function buildJob(JOB, LEVEL) {
   for (const [base, targets] of Object.entries(replaceGroups)) if (used.has(Number(base))) targets.forEach((id) => used.add(id));
 
   const fankitOf = (a) => fankit.get(`${JOB}|${normName(a.name.en)}`) ?? fankit.get(`*|${normName(a.name.en)}`);
+  const GUIDE = guideRows(JOB);
+  const fromGuide = []; // ジョブガイドの値にしたもの（ログに出す）
+  // 詠唱・リキャスト・消費 MP: 抽出データの値と、ジョブガイド（Lv100・特性込み）が違えばジョブガイド
+  function timing(a) {
+    const o = { castMs: Math.round(a.cast * 1000), recastMs: Math.round(a.recast * 1000), mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0, guide: [] };
+    // 他ジョブのアクション（共有バーに残っているもの）は見ない。ジョブガイドの表は Lv100（特性込み）の値なので、Lv100 未満のジョブには使わない
+    const g = LEVEL >= 100 && a.jobs?.includes(JOB) ? guideFor(GUIDE, a) : null;
+    if (!g) return o;
+    const gc = guideSec(g.en.cast), gr = guideSec(g.en.recast), gm = guideMp(g.en.cost);
+    if (gc != null && Math.round(gc * 1000) !== o.castMs) { o.guide.push(`詠唱 ${o.castMs / 1000}→${gc}`); o.castMs = Math.round(gc * 1000); }
+    if (gr != null && gr > 0 && Math.round(gr * 1000) !== o.recastMs) { o.guide.push(`リキャスト ${o.recastMs / 1000}→${gr}`); o.recastMs = Math.round(gr * 1000); }
+    if (gm != null && o.mp !== -1 && gm !== o.mp) { o.guide.push(`MP ${o.mp}→${gm}`); o.mp = gm; }
+    if (o.guide.length) fromGuide.push(`${a.name.ja}（${o.guide.join('・')}）`);
+    return o;
+  }
   const iconOf = (a) => fankitOf(a) ?? (a.iconPath ? `../public${a.iconPath}` : null);
+  // 説明文「リキャストタイマーを「オーバードライブ・クイーン」と共有する」なのに、抽出データの cooldownGroup が違うもの（機工士のクイーン）は同じグループにする
+  const sharedCd = new Map();
+  for (const id of job.actionIds) {
+    const a = byId.get(id), m = /リキャストタイマーを「([^」]+)」と共有する/.exec(a?.description?.ja ?? '');
+    const b = m && jobByName.has(m[1]) ? byId.get(jobByName.get(m[1])) : null;
+    if (!a || !b || a.cooldownGroup === b.cooldownGroup || a.cooldownGroup === 58 || b.cooldownGroup === 58) continue;
+    const g = Math.min(a.cooldownGroup, b.cooldownGroup);
+    sharedCd.set(a.id, g); sharedCd.set(b.id, g);
+  }
 
-  const pick = (a) => ({
+  const pick = (a, t = timing(a)) => ({
     id: a.id,
     name: a.name.ja,
     desc: a.description.ja,
     icon: iconOf(a), // ファンキット（枠付き）。無ければ抽出したアイコン
     iconFramed: !!fankitOf(a),
     isGcd: a.isGcd,
-    castMs: Math.round(a.cast * 1000),
-    recastMs: Math.round(a.recast * 1000),
-    cooldownGroup: a.cooldownGroup,
+    castMs: t.castMs,
+    recastMs: t.recastMs,
+    fromGuide: t.guide.length ? t.guide : undefined, // ジョブガイドの値にした項目
+    cooldownGroup: sharedCd.get(a.id) ?? a.cooldownGroup,
     maxCharges: a.maxCharges,
     comboFrom: a.comboFrom ? [a.comboFrom, upgrade[a.comboFrom]].filter(Boolean) : [],
     preservesCombo: a.preservesCombo,
@@ -261,8 +362,8 @@ function buildJob(JOB, LEVEL) {
     hostile: a.canTargetHostile,
     // 対象にできるもの（自分・味方）。ターゲットの決め方に使う（敵にしか使えない技は敵のターゲットが要る）
     toSelf: !!a.canTargetSelf, toParty: !!a.canTargetParty,
-    // 消費 MP（Action の一次コスト。型 3 と 76 は値 × 100、型 4 は「MP 全部」= -1。黒魔道士の MP の計算に使う）
-    mp: a.primaryCost?.type === 3 || a.primaryCost?.type === 76 ? a.primaryCost.value * 100 : a.primaryCost?.type === 4 ? -1 : 0,
+    // 消費 MP（Action の一次コスト。型 3 と 76 は値 × 100、型 4 は「MP 全部」= -1。ジョブガイドに数があればそれ）
+    mp: t.mp,
     range: a.range,
     crit: /必ずクリティカルヒット/.test(a.description.ja), // 説明文「このアクションは必ずクリティカルヒットする」
     // 効果音のジャンル: 魔法の攻撃（AttackType 5）かと属性（Aspect: 1 火・2 氷・3 風・4 土・5 雷・6 水・7 無）。物理の斬・突・打はデータにない（-1）ので、ジョブの武器で決める
@@ -272,22 +373,35 @@ function buildJob(JOB, LEVEL) {
     ground: !!a.targetArea, // 地面指定（先行入力されない: docs/SPEC.md GAME-05）
     // 方向指定: 説明文「背面攻撃時威力」「側面攻撃時威力」から
     positional: /背面攻撃時/.test(a.description.ja) ? 'rear' : /側面攻撃時/.test(a.description.ja) ? 'flank' : null,
-    // 移動を伴う技: 説明文「対象に急接近」「N m後方へ（に）飛び退く」「自身の N m前方に向かって素早く移動」
-    // 「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
-    dash: /対象に急接近/.test(a.description.ja),
-    backstep: Number(/(\d+)m後方[へに]飛び退く/.exec(a.description.ja)?.[1] ?? 0),
+    // 移動を伴う技: 説明文「対象に急接近」「対象に飛び掛かりつつ」「対象にジャンプで近づきつつ」（「攻撃後は元の位置に戻る」なら動かない）
+    // 「N m後方へ（に）飛び退く」「自身の N m後方（前方）に向かって素早く移動」「自身の N m後方に大きくジャンプ」「対象の目前まで素早く移動」「黒魔紋の中心へ素早く移動」から
+    dash: /対象に急接近|対象に飛び掛かり|対象にジャンプで近づきつつ/.test(a.description.ja) && !/攻撃後は元の位置に戻る/.test(a.description.ja),
+    backstep: Number(/(\d+)m後方[へに]飛び退く|自身の(\d+)m後方に向かって素早く移動|自身の(\d+)m後方に大きくジャンプ/.exec(a.description.ja)?.slice(1).find(Boolean) ?? 0),
     forward: Number(/自身の(\d+)m前方に向かって素早く移動/.exec(a.description.ja)?.[1] ?? 0),
     toAlly: /対象の目前まで素早く移動/.test(a.description.ja),
     toZone: /黒魔紋の中心へ素早く移動/.test(a.description.ja) ? 'ley' : null,
     pot: parsePotency(a.description.ja),
     eff: parseEffects(a.description.ja),
-    replaces: a.replacesAction ?? [],
+    replaces: replacesOf(a),
   });
 
   const role = { 1: 'tank', 2: 'melee', 3: 'ranged', 4: 'healer' }[job.role] ?? 'melee';
+  const actionsOut = Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))]));
+  // コンボ元を説明文からも足す（「コンボ条件：竜尾大車輪および竜牙竜爪」。Action シートのコンボ元は 1 つだけ）。
+  // Action シートにコンボ元がある技は「発動条件：壱の牙【咬創】または壱の牙【穿裂】命中時」「発動条件：壱の蛇【強砕】または弐の蛇【疾速】実行後」の書き方も読む（ヴァイパー）
+  const idByName = new Map(Object.values(actionsOut).filter((x) => x.forJob).map((x) => [x.name, x.id]));
+  for (const x of Object.values(actionsOut)) {
+    const m = /コンボ条件：([^\n　]+)/.exec(x.desc ?? '') ?? (x.comboFrom.length ? /発動条件：([^\n　]+?)(?:の)?(?:命中時|実行後)/.exec(x.desc ?? '') : null);
+    if (!m) continue;
+    for (const n of m[1].split(/および|または|、/)) { const id = idByName.get(n.trim()); if (id && !x.comboFrom.includes(id)) x.comboFrom.push(id); }
+  }
+  if (fromGuide.length) console.log(`  ジョブガイドの値にした: ${fromGuide.join(' / ')}`);
   return {
     job: { abbr: JOB, name: job.name.ja, icon: `../public${job.iconPath}`, level: LEVEL, role },
-    actions: Object.fromEntries([...used].sort((a, b) => a - b).map((id) => [id, pick(byId.get(id))])),
+    guide: guideExtra(JOB, LEVEL), // 公式ジョブガイドの特性・ペットの技（traits / pets）
+    actions: actionsOut,
+    // ペットの技（機工士のオートマトン・クイーンの技など。ホットバーに置けない）: 名前と説明文だけ（威力の幅を説明文から読む）
+    petActions: Object.fromEntries(actions.filter((a) => a.jobs?.length === 1 && a.jobs[0] === JOB && a.category !== 9 && a.isPlayerAction === false && a.level <= LEVEL && !actionsOut[a.id]).map((a) => [a.id, { name: a.name.ja, desc: a.description.ja }])),
     statuses: Object.fromEntries(
       statuses
         .filter((s) => [3856, 2959, 3855].includes(s.id))

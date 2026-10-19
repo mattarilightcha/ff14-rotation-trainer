@@ -1,0 +1,1911 @@
+{
+ "job": "machinist",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/machinist/",
+ "pageTitle": "Job Guide: Machinist | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nPhysical Ranged DPS\n\nThe war with Dravania rages on, brutal and unrelenting. With no end in sight, the Holy See grows desperate. As her dragoons lay down their lives in defense of their home, Ishgard turns to technology to protect her sons and daughters. Great cannons and ballistas now line the city walls, plucking dragons from the sky.\n\nFollowing the example of Cid Garlond, who has demonstrated the potency of magitek, the Skysteel Manufactory works tirelessly on the development of advanced armaments. As new and devastating weapons are brought to the fray, a new class of champion arises to wield them―the machinist.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/8060c2f198141fb9c4d4202e298c212c15a82e88.png",
+   "https://lds-img.finalfantasyxiv.com/d/63bb059658f193d08de8cd45e4a95e7bed0418b8.png",
+   "https://lds-img.finalfantasyxiv.com/d/b297b6034baa7347d3a53a12910b102914ce3c3e.png",
+   "https://lds-img.finalfantasyxiv.com/d/55906cd43fffdf7bcc09790b1b02b19edc6b2e8e.png",
+   "https://lds-img.finalfantasyxiv.com/d/e6959a3306b601fc9e5987712f6d9ea247a7a566.png",
+   "https://lds-img.finalfantasyxiv.com/d/7c4e991ed4e6b585ceb2dda1c03dec0278ff28f0.png",
+   "https://lds-img.finalfantasyxiv.com/d/d6d762f987ab51e9840cbf5229251838b16078b5.png",
+   "https://lds-img.finalfantasyxiv.com/d/092ad12e9867fd64a23a705bd0dd67215b793ae5.png",
+   "https://lds-img.finalfantasyxiv.com/d/868f1e47a66f3d747213accc2b7d37f2c4464f8e.png",
+   "https://lds-img.finalfantasyxiv.com/d/7d6539171b0c158f7ca5e1ed4a112e6336601646.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2703467384768bbc34517f6137898961ee5db6f.png",
+   "https://lds-img.finalfantasyxiv.com/d/1ab647949d0dd2caed010390a84f687390e762d9.png",
+   "https://lds-img.finalfantasyxiv.com/d/6d73e45fbbfb35ad0a4f8b4a73753e6a06a37651.png",
+   "https://lds-img.finalfantasyxiv.com/d/4fd81a7627fd0706b03ca3685e383bf8a19518c9.png",
+   "https://lds-img.finalfantasyxiv.com/d/5556960a2e8ce389c2117d13c6d182f41943c3c9.png",
+   "https://lds-img.finalfantasyxiv.com/d/73035ee439401fc6216782e74ce892f061d71214.png",
+   "https://lds-img.finalfantasyxiv.com/d/cac7ff217edfabca410218ec69323060aed0caaa.png",
+   "https://lds-img.finalfantasyxiv.com/d/570cc0bbf4a1478e35f52075640fd9ec6c7ed0f6.png",
+   "https://lds-img.finalfantasyxiv.com/d/ecb2da5330a2f9bfa05671f5fa843daecde471a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb394365a76fac1c38ff540c8c81881d79680b62.png",
+   "https://lds-img.finalfantasyxiv.com/d/94eaa7aadfa4d857c00551af690f42bb5d7a4a94.png",
+   "https://lds-img.finalfantasyxiv.com/d/57fa0a309dc4d53d5edc52aad068a93788715c4c.png",
+   "https://lds-img.finalfantasyxiv.com/d/4a4a5d764fa65a4514f89fdc77ac7956e3f2e7de.png",
+   "https://lds-img.finalfantasyxiv.com/d/c70341dbb174a9c43c76249ae4b7c40aefbbf40a.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d88d4346b2dc86970c797bed3cc8ca902c26593.png",
+   "https://lds-img.finalfantasyxiv.com/d/23329a987c4b36fd72121e3362363a179a16d8d0.png",
+   "https://lds-img.finalfantasyxiv.com/d/2d5e4d7a3787c164fa36605a5e868143326f5b9a.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b7ba10a27554510b8d25429592d040331405b14.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc0d8c0798f0a092f546726f06a8deb067ad44d3.png",
+   "https://lds-img.finalfantasyxiv.com/d/25db329264856ae1c870925c989bad8fa6ffa067.png",
+   "https://lds-img.finalfantasyxiv.com/d/c8df61cf6471343f9e55b57a9b06711155b298bf.png",
+   "https://lds-img.finalfantasyxiv.com/d/7a8751b813d4db6533661dda2d9ba29810fa287f.png",
+   "https://lds-img.finalfantasyxiv.com/d/7a419e1dcf06b3d6fba2aef9afdb340db269a304.png",
+   "https://lds-img.finalfantasyxiv.com/d/80549392e28c25336dff537fe4a5ef21da71d764.png",
+   "https://lds-img.finalfantasyxiv.com/d/ebcc4c4bc77ed9eb835ca7ee6c1755052a997805.png",
+   "https://lds-img.finalfantasyxiv.com/d/5de8d4517d7e5179cc341ecb2d0bb63e0d716492.png",
+   "https://lds-img.finalfantasyxiv.com/d/f44e0b84bfe54b08662b521becbb338225ea90c9.png",
+   "https://lds-img.finalfantasyxiv.com/d/6e221fc321a6d40ecac7a908c5b8c144c8c693a3.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c5bb54095373de5764bcfee0205f998f57b986b.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6b7be8517f51d8cbcc60be2ae5970668f515eb.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/8b1f979d2b1428f9791f54ad0e429ea94a8d95d6.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb8b0f0ca18af4362d27f6699579bd5a18b40137.png",
+   "https://lds-img.finalfantasyxiv.com/d/748fe5fc8262b58e9a35aa9e4d40e67a0dd006a5.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/e15fdee2a9a849495d10440d6d5f007a66f636e0.png",
+   "https://lds-img.finalfantasyxiv.com/d/a97a3334f7e3c5afaa91eb2ab84c953f9e1402a7.png",
+   "https://lds-img.finalfantasyxiv.com/d/1843c5eb1876f021be1a9cf6359c316781916627.png",
+   "https://lds-img.finalfantasyxiv.com/d/a280d91d346e69536185448d513b18b2977d985a.png",
+   "https://lds-img.finalfantasyxiv.com/d/95728389d41fbd0e5d09f80b2c0d10df41441cd9.png",
+   "https://lds-img.finalfantasyxiv.com/d/5b81ea0d7793a71e83ebe7472ce3f860a51a842a.png",
+   "https://lds-img.finalfantasyxiv.com/d/38dc9d35007c7cdc38d10d63379748401fed9939.png",
+   "https://lds-img.finalfantasyxiv.com/d/3d3fd3374284bfe2495f1658b107a7437ff01bad.png",
+   "https://lds-img.finalfantasyxiv.com/d/70783248b63c783d9df10fbe8f420ec6954d9eab.png",
+   "https://lds-img.finalfantasyxiv.com/d/120150f155ff0887d5b979ef25e82df2232e2afe.png",
+   "https://lds-img.finalfantasyxiv.com/d/acbc270d0d2e6192541800dcc280c80a7eae3bba.png",
+   "https://lds-img.finalfantasyxiv.com/d/54d3f10b024f47996e6cdaeb9f59b47448543872.png",
+   "https://lds-img.finalfantasyxiv.com/d/e630bb066bbc76a8e961d011612bbdcdaf9509d2.png",
+   "https://lds-img.finalfantasyxiv.com/d/b641fb27f646df1959aa4754f6389d54fd20b9d5.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/7d8fbe1550c91afbd4d4349a0aab9dab9a1e04ab.png",
+   "https://lds-img.finalfantasyxiv.com/d/5224aafe6eaf21b1b9a559865b37b023524ae0c7.png",
+   "https://lds-img.finalfantasyxiv.com/d/67522181f502fda37e11dd98b9bf8e8f337f36fa.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/v/FVT8LCDqf_JgYQGtm1SnD6vzMs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Split Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8060c2f198141fb9c4d4202e298c212c15a82e88.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 140.\nAdditional Effect: Increases Heat Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 140.<br/>Additional Effect: Increases Heat Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Slug Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/63bb059658f193d08de8cd45e4a95e7bed0418b8.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nCombo Action: Split Shot or Heated Split Shot\nCombo Potency: 210\nCombo Bonus: Increases Heat Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Combo Action: Split Shot or Heated Split Shot<br/>Combo Potency: 210<br/>Combo Bonus: Increases Heat Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Hot Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b297b6034baa7347d3a53a12910b102914ce3c3e.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Additional Effect: Increases Battery Gauge by 20<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Reassemble",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/55906cd43fffdf7bcc09790b1b02b19edc6b2e8e.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "55s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Guarantees that next weaponskill is a critical direct hit.\nDuration: 5s\nIncreases damage dealt when under an effect that raises critical hit rate or direct hit rate.\nThis action does not affect damage over time effects.\nMaximum Charges: 2",
+     "descriptionHtml": "Guarantees that next weaponskill is a critical direct hit.<br/>Duration: 5s<br/>Increases damage dealt when under an effect that raises critical hit rate or direct hit rate.<br/>This action does not affect damage over time effects.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Gauss Round",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e6959a3306b601fc9e5987712f6d9ea247a7a566.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 130.\nMaximum Charges: 3",
+     "descriptionHtml": "Delivers an attack with a potency of 130.<br/>Maximum Charges: 3"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Spread Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7c4e991ed4e6b585ceb2dda1c03dec0278ff28f0.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 110 to all enemies in a cone before you.<br/>Additional Effect: Increases Heat Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Clean Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d6d762f987ab51e9840cbf5229251838b16078b5.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 100.\nCombo Action: Slug Shot or Heated Slug Shot\nCombo Potency: 270\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 100.<br/>Combo Action: Slug Shot or Heated Slug Shot<br/>Combo Potency: 270<br/>Combo Bonus: Increases Heat Gauge by 5<br/>Combo Bonus: Increases Battery Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Hypercharge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/092ad12e9867fd64a23a705bd0dd67215b793ae5.png",
+     "skillCellText": "Hypercharge\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants 5 stacks of Overheated, each stack allowing the execution of Blazing Shot or Auto Crossbow.\nDuration: 10s\nOverheated Effect: Increases the potency of single-target weaponskills by 20\nHeat Gauge Cost: 50\nOverheated effect only applicable to machinist job actions.",
+     "descriptionHtml": "Grants 5 stacks of Overheated, each stack allowing the execution of Blazing Shot or Auto Crossbow.<br/>Duration: 10s<br/>Overheated Effect: Increases the potency of single-target weaponskills by 20<br/>Heat Gauge Cost: 50<br/>Overheated effect only applicable to machinist job actions."
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Heat Blast",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/868f1e47a66f3d747213accc2b7d37f2c4464f8e.png",
+     "skillCellText": "Heat Blast\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 200.\nAdditional Effect: Reduces the recast time of both Gauss Round and Ricochet by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 200.<br/>Additional Effect: Reduces the recast time of both Gauss Round and Ricochet by 15s<br/>Can only be executed when firearm is Overheated.<br/>This weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Rook Autoturret",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d6539171b0c158f7ca5e1ed4a112e6336601646.png",
+     "skillCellText": "Rook Autoturret\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "6s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Deploys a single-target battle turret which attacks using Volley Fire, dealing damage with a potency of 35.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 70.\nBattery Gauge Cost: 50\nDuration: 9s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Rook Overdrive.\nShares a recast timer with Rook Overdrive.",
+     "descriptionHtml": "Deploys a single-target battle turret which attacks using Volley Fire, dealing damage with a potency of 35.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 70.<br/>Battery Gauge Cost: 50<br/>Duration: 9s<br/>Consumes Battery Gauge upon execution.<br/>Shuts down when time expires or upon execution of Rook Overdrive.<br/>Shares a recast timer with Rook Overdrive."
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Rook Overdrive",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2703467384768bbc34517f6137898961ee5db6f.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Orders the rook autoturret to use Rook Overload.\nRook Overload Potency: 160\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Rook Autoturret.",
+     "descriptionHtml": "Orders the rook autoturret to use Rook Overload.<br/>Rook Overload Potency: 160<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.<br/>The rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.<br/>Shares a recast timer with Rook Autoturret."
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Rook Overload",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1ab647949d0dd2caed010390a84f687390e762d9.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "40y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 160.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 160.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.<br/>The rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Wildfire",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6d73e45fbbfb35ad0a4f8b4a73753e6a06a37651.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Covers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage when time expires or upon executing Detonator.\nPotency is increased by 240 for each of your own weaponskills you land prior to the end of the effect.\nCan be stacked up to 6 times.\nDuration: 10s",
+     "descriptionHtml": "Covers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.<br/>Deals damage when time expires or upon executing Detonator.<br/>Potency is increased by 240 for each of your own weaponskills you land prior to the end of the effect.<br/>Can be stacked up to 6 times.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Detonator",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4fd81a7627fd0706b03ca3685e383bf8a19518c9.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Ends the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.\n※Wildfire changes to Detonator when requirements for execution are met.",
+     "descriptionHtml": "Ends the effect of Wildfire, dealing damage to the target.<br/>Can only be executed while under the effect of Wildfire.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Wildfire changes to Detonator when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Ricochet",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5556960a2e8ce389c2117d13c6d182f41943c3c9.png",
+     "skillCellText": "Ricochet\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deals damage to target and all enemies nearby it with a potency of 130 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3",
+     "descriptionHtml": "Deals damage to target and all enemies nearby it with a potency of 130 for the first enemy, and 30% less for all remaining enemies.<br/>Maximum Charges: 3"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Auto Crossbow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73035ee439401fc6216782e74ce892f061d71214.png",
+     "skillCellText": "Auto Crossbow\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 180 to all enemies in a cone before you.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 180 to all enemies in a cone before you.<br/>Can only be executed when firearm is Overheated.<br/>This weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Heated Split Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cac7ff217edfabca410218ec69323060aed0caaa.png",
+     "skillCellText": "Heated Split Shot\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 220.\nAdditional Effect: Increases Heat Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 220.<br/>Additional Effect: Increases Heat Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Tactician",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/570cc0bbf4a1478e35f52075640fd9ec6c7ed0f6.png",
+     "skillCellText": "Tactician\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with bard's Troubadour or dancer's Shield Samba.",
+     "descriptionHtml": "Reduces damage taken by self and nearby party members by 15%.<br/>Duration: 15s<br/>Effect cannot be stacked with bard's Troubadour or dancer's Shield Samba."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Drill",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ecb2da5330a2f9bfa05671f5fa843daecde471a6.png",
+     "skillCellText": "Drill\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 58",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 660.\nMaximum Charges: 2\nShares a recast timer with Bioblaster.",
+     "descriptionHtml": "Delivers an attack with a potency of 660.<br/>Maximum Charges: 2<br/>Shares a recast timer with Bioblaster."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Heated Slug Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb394365a76fac1c38ff540c8c81881d79680b62.png",
+     "skillCellText": "Heated Slug Shot\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 140.\nCombo Action: Heated Split Shot\nCombo Potency: 320\nCombo Bonus: Increases Heat Gauge by 5",
+     "descriptionHtml": "Delivers an attack with a potency of 140.<br/>Combo Action: Heated Split Shot<br/>Combo Potency: 320<br/>Combo Bonus: Increases Heat Gauge by 5"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Dismantle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/94eaa7aadfa4d857c00551af690f42bb5d7a4a94.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Lowers target's damage dealt by 10%.\nDuration: 10s",
+     "descriptionHtml": "Lowers target's damage dealt by 10%.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Heated Clean Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/57fa0a309dc4d53d5edc52aad068a93788715c4c.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 160.\nCombo Action: Heated Slug Shot\nCombo Potency: 420\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 160.<br/>Combo Action: Heated Slug Shot<br/>Combo Potency: 420<br/>Combo Bonus: Increases Heat Gauge by 5<br/>Combo Bonus: Increases Battery Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Barrel Stabilizer",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4a4a5d764fa65a4514f89fdc77ac7956e3f2e7de.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants Hypercharged.\nDuration: 30s\nAdditional Effect: Grants Full Metal Machinist\nDuration: 30s\nCan only be executed while in combat.",
+     "descriptionHtml": "Grants Hypercharged.<br/>Duration: 30s<br/>Additional Effect: Grants Full Metal Machinist<br/>Duration: 30s<br/>Can only be executed while in combat."
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Blazing Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c70341dbb174a9c43c76249ae4b7c40aefbbf40a.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nAdditional Effect: Reduces the recast time of both Double Check and Checkmate by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Additional Effect: Reduces the recast time of both Double Check and Checkmate by 15s<br/>Can only be executed when firearm is Overheated.<br/>This weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions."
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Flamethrower",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d88d4346b2dc86970c797bed3cc8ca902c26593.png",
+     "skillCellText": "Flamethrower\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "12y",
+     "description": "Delivers damage over time to all enemies in a cone before you.\nPotency: 120\nDuration: 10s\nEffect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills upon execution. Cannot be executed during the cooldown of weaponskills.",
+     "descriptionHtml": "Delivers damage over time to all enemies in a cone before you.<br/>Potency: 120<br/>Duration: 10s<br/>Effect ends upon using another action or moving (including facing a different direction).<br/>Cancels auto-attack upon execution.<br/>Triggers the cooldown of weaponskills upon execution. Cannot be executed during the cooldown of weaponskills."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Bioblaster",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23329a987c4b36fd72121e3362363a179a16d8d0.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 50 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 50\nDuration: 15s\nMaximum Charges: 2\nShares a recast timer with Drill.",
+     "descriptionHtml": "Delivers an attack with a potency of 50 to all enemies in a cone before you.<br/>Additional Effect: Damage over time<br/>Potency: 50<br/>Duration: 15s<br/>Maximum Charges: 2<br/>Shares a recast timer with Drill."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Air Anchor",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2d5e4d7a3787c164fa36605a5e868143326f5b9a.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "40s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 660.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 660.<br/>Additional Effect: Increases Battery Gauge by 20<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Automaton Queen",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b7ba10a27554510b8d25429592d040331405b14.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "6s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Deploys an Automaton Queen to fight at your side.\nPotency of Automaton Queen actions increases as Battery Gauge exceeds required cost at time of deployment.\nBattery Gauge Cost: 50\nDuration: 12s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Queen Overdrive.\nShares a recast timer with Queen Overdrive.",
+     "descriptionHtml": "Deploys an Automaton Queen to fight at your side.<br/>Potency of Automaton Queen actions increases as Battery Gauge exceeds required cost at time of deployment.<br/>Battery Gauge Cost: 50<br/>Duration: 12s<br/>Consumes Battery Gauge upon execution.<br/>Shuts down when time expires or upon execution of Queen Overdrive.<br/>Shares a recast timer with Queen Overdrive."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Queen Overdrive",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc0d8c0798f0a092f546726f06a8deb067ad44d3.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Orders the Automaton Queen to use Pile Bunker.\nPile Bunker Potency: 340\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Automaton Queen.",
+     "descriptionHtml": "Orders the Automaton Queen to use Pile Bunker.<br/>Pile Bunker Potency: 340<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.<br/>The Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.<br/>Shares a recast timer with Automaton Queen."
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Arm Punch",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/25db329264856ae1c870925c989bad8fa6ffa067.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 120.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 240.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 120.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 240.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Roller Dash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c8df61cf6471343f9e55b57a9b06711155b298bf.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "3s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 240.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 480.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 240.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 480.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Pile Bunker",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7a8751b813d4db6533661dda2d9ba29810fa287f.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 340.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nIf this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 340.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.<br/>If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Scattergun",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7a419e1dcf06b3d6fba2aef9afdb340db269a304.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 10",
+     "descriptionHtml": "Delivers an attack with a potency of 130 to all enemies in a cone before you.<br/>Additional Effect: Increases Heat Gauge by 10"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Crowned Collider",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/80549392e28c25336dff537fe4a5ef21da71d764.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "-",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 390.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 780.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 390.<br/>Potency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 780.<br/>The Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Chain Saw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ebcc4c4bc77ed9eb835ca7ee6c1755052a997805.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack to all enemies in a straight line before you with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nAdditional Effect: Grants Excavator Ready\nDuration: 30s\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack to all enemies in a straight line before you with a potency of 660 for the first enemy, and 25% less for all remaining enemies.<br/>Additional Effect: Increases Battery Gauge by 20<br/>Additional Effect: Grants Excavator Ready<br/>Duration: 30s<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Double Check",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5de8d4517d7e5179cc341ecb2d0bb63e0d716492.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.<br/>Maximum Charges: 3"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Checkmate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f44e0b84bfe54b08662b521becbb338225ea90c9.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.<br/>Maximum Charges: 3"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Excavator",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6e221fc321a6d40ecac7a908c5b8c144c8c693a3.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nCan only be executed while under the effect of Excavator Ready.\n\n※This action cannot be assigned to a hotbar.\n※Chain Saw changes to Excavator when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 660 for the first enemy, and 25% less for all remaining enemies.<br/>Additional Effect: Increases Battery Gauge by 20<br/>Can only be executed while under the effect of Excavator Ready.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Chain Saw changes to Excavator when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "Full Metal Field",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c5bb54095373de5764bcfee0205f998f57b986b.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers a critical direct hit to target and all enemies nearby it with a potency of 900 for the first enemy, and 25% less for all remaining enemies.\nDamage dealt is increased when under an effect that raises critical hit rate or direct hit rate.\nThis action is not affected by Reassemble.\nCan only be executed while under the effect of Full Metal Machinist.",
+     "descriptionHtml": "Delivers a critical direct hit to target and all enemies nearby it with a potency of 900 for the first enemy, and 25% less for all remaining enemies.<br/>Damage dealt is increased when under an effect that raises critical hit rate or direct hit rate.<br/>This action is not affected by Reassemble.<br/>Can only be executed while under the effect of Full Metal Machinist."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "prange_action__01",
+     "name": "Leg Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6b7be8517f51d8cbcc60be2ae5970668f515eb.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Afflicts target with Heavy +40%.\nDuration: 10s",
+     "descriptionHtml": "Afflicts target with Heavy +40%.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "prange_action__02",
+     "name": "Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b79d78f1ed471ace5708898e3388062fbd555fb.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Instantly restores own HP.\nCure Potency: 800",
+     "descriptionHtml": "Instantly restores own HP.<br/>Cure Potency: 800"
+    },
+    {
+     "rowId": "prange_action__03",
+     "name": "Foot Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8b1f979d2b1428f9791f54ad0e429ea94a8d95d6.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Binds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.",
+     "descriptionHtml": "Binds target.<br/>Duration: 10s<br/>Cancels auto-attack upon execution.<br/>Target unbound if damage taken."
+    },
+    {
+     "rowId": "prange_action__04",
+     "name": "Peloton",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb8b0f0ca18af4362d27f6699579bd5a18b40137.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Increases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.",
+     "descriptionHtml": "Increases movement speed of self and nearby party members.<br/>Duration: 30s<br/>Effect ends when enmity is generated. Has no effect in battle."
+    },
+    {
+     "rowId": "prange_action__05",
+     "name": "Head Graze",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/748fe5fc8262b58e9a35aa9e4d40e67a0dd006a5.png",
+     "acquired": [
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 24",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Interrupts the use of a target's action.",
+     "descriptionHtml": "Interrupts the use of a target's action."
+    },
+    {
+     "rowId": "prange_action__06",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Increased Action Damage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7263469f5db29716ccd6b96bc089be5ad1d5cb29.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 20",
+     "description": "Increases base action damage and autoturret damage by 10%.",
+     "descriptionHtml": "Increases base action damage and autoturret damage by 10%."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Increased Action Damage II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0033564bb462ac76e0a14dc1cafbd8beea2a2276.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "description": "Increases base action damage and autoturret damage by 20%.",
+     "descriptionHtml": "Increases base action damage and autoturret damage by 20%."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Split Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/95361e34bd0f8dd33c55842f96a8b8735e7f9a7f.png",
+     "skillCellText": "Split Shot Mastery\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "description": "Upgrades Split Shot to Heated Split Shot.",
+     "descriptionHtml": "Upgrades Split Shot to Heated Split Shot."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Slug Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b01b63a65eaf52b371ba3bfce93b97763973312a.png",
+     "skillCellText": "Slug Shot Mastery\nJob Quest",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "description": "Upgrades Slug Shot to Heated Slug Shot.",
+     "descriptionHtml": "Upgrades Slug Shot to Heated Slug Shot."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Clean Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/53ee3f71ec27a81ca140b3d4796b96a43f9ca3c4.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "description": "Upgrades Clean Shot to Heated Clean Shot.",
+     "descriptionHtml": "Upgrades Clean Shot to Heated Clean Shot."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Heat Blast Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9cccaf0b8870d8d58435d49c1d4af6b97747cb05.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "description": "Upgrades Heat Blast to Blazing Shot.",
+     "descriptionHtml": "Upgrades Heat Blast to Blazing Shot."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Charged Action Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/96902e3b2895eda5aad058eba1965ace1258e246.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Allows a third charge of Gauss Round and Ricochet.",
+     "descriptionHtml": "Allows a third charge of Gauss Round and Ricochet."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Hot Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9fbd1a75714839d633a6099e02f3b9ba45dae937.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "description": "Upgrades Hot Shot to Air Anchor.",
+     "descriptionHtml": "Upgrades Hot Shot to Air Anchor."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Enhanced Wildfire",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a3cf414dd726d928db4aef209db25b545f75c1a2.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 78",
+     "description": "Improves Wildfire's potency increase for landing weaponskills to 240.",
+     "descriptionHtml": "Improves Wildfire's potency increase for landing weaponskills to 240."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Promotion",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/eecc1744a0f8f8436cc6f67e0db6b21cc35bce1c.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "description": "Upgrades Rook Autoturret and Rook Overdrive to Automaton Queen and Queen Overdrive respectively.",
+     "descriptionHtml": "Upgrades Rook Autoturret and Rook Overdrive to Automaton Queen and Queen Overdrive respectively."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Spread Shot Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5913c354d2b15004d7ae0fb9ed0e8642a67cb99d.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Spread Shot to Scattergun.",
+     "descriptionHtml": "Upgrades Spread Shot to Scattergun."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Enhanced Reassemble",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a8f324b805b16d82b777869fc086b98c1306d025.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Allows the accumulation of charges for consecutive uses of Reassemble.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Reassemble.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Marksman's Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases the potency of Heated Split Shot to 200, Heated Slug Shot to 120, and Heated Clean Shot to 120.",
+     "descriptionHtml": "Increases the potency of Heated Split Shot to 200, Heated Slug Shot to 120, and Heated Clean Shot to 120."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Queen's Gambit",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c35155023e7e3c40f6536f4e710ed38cfb1f1165.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "description": "After executing Pile Bunker, the Automaton Queen will also execute Crowned Collider.",
+     "descriptionHtml": "After executing Pile Bunker, the Automaton Queen will also execute Crowned Collider."
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "Enhanced Tactician",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/326b2d307441fd46c40af27ba30173ca16820ddc.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Reduces Tactician recast time to 90 seconds.",
+     "descriptionHtml": "Reduces Tactician recast time to 90 seconds."
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "Double-barrel Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d27efc5e828ecabff4d0b45ee10c6e731cc71847.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Upgrades Gauss Round to Double Check and Ricochet to Checkmate.",
+     "descriptionHtml": "Upgrades Gauss Round to Double Check and Ricochet to Checkmate."
+    },
+    {
+     "rowId": "trait_action__17",
+     "name": "Enhanced Multiweapon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ae9cf4acdbd365202307fbaedd38340a7d0fa94f.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Allows the accumulation of charges for consecutive uses of Drill and Bioblaster.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Drill and Bioblaster.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__18",
+     "name": "Marksman's Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Auto Crossbow to 180, Heated Split Shot to 220, Drill to 660, Heated Slug Shot to 140, Heated Clean Shot to 160, Blazing Shot to 240, Air Anchor to 660, and Chain Saw to 660.",
+     "descriptionHtml": "Increases the potency of Auto Crossbow to 180, Heated Split Shot to 220, Drill to 660, Heated Slug Shot to 140, Heated Clean Shot to 160, Blazing Shot to 240, Air Anchor to 660, and Chain Saw to 660."
+    },
+    {
+     "rowId": "trait_action__19",
+     "name": "Enhanced Multiweapon II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/28f091ab4b400b52cb77f45488cd87386ba45998.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Grants Excavator Ready upon executing Chain Saw.\nDuration: 30s\nChain Saw changes to Excavator while under the effect of Excavator Ready.",
+     "descriptionHtml": "Grants Excavator Ready upon executing Chain Saw.<br/>Duration: 30s<br/>Chain Saw changes to Excavator while under the effect of Excavator Ready."
+    },
+    {
+     "rowId": "trait_action__20",
+     "name": "Enhanced Tactician II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a3ae0598316b6300ddb35a842fd49f138d837b8e.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Improves Tactician's damage reduction effect to 15%.",
+     "descriptionHtml": "Improves Tactician's damage reduction effect to 15%."
+    },
+    {
+     "rowId": "trait_action__21",
+     "name": "Enhanced Barrel Stabilizer",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1afa87e85f90db56234d7365432dfd5bde9a4b31.png",
+     "acquired": [
+      {
+       "class": "Machinist",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/2/oHLJxTt_OLDK_eQkRTBVNwwxeE.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants Full Metal Machinist upon executing Barrel Stabilizer.\nDuration: 30s",
+     "descriptionHtml": "Grants Full Metal Machinist upon executing Barrel Stabilizer.<br/>Duration: 30s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "prange_action__01",
+     "name": "Enhanced Second Wind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dccd320d548ebfe264816b020f67211d2a310bb9.png",
+     "acquired": [
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the healing potency of Second Wind to 800.",
+     "descriptionHtml": "Increases the healing potency of Second Wind to 800."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Blast Charge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e15fdee2a9a849495d10440d6d5f007a66f636e0.png",
+     "type": "Weaponskill",
+     "cast": "1.44s",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 6,000.\nAdditional Effect: Grants a stack of Heat, up to a maximum of 3\nDuration: 15s\nAt maximum stacks, grants Overheated and increases movement speed by 25%.\nDuration: 5s\nRequires casting time to execute. However, it is possible to walk while casting.\n\n※Action changes to Blazing Shot while under the effect of Overheated.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 6,000.<br/>Additional Effect: Grants a stack of Heat, up to a maximum of 3<br/>Duration: 15s<br/>At maximum stacks, grants Overheated and increases movement speed by 25%.<br/>Duration: 5s<br/>Requires casting time to execute. However, it is possible to walk while casting.<br/><br/>※Action changes to Blazing Shot while under the effect of Overheated."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Scattergun",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a97a3334f7e3c5afaa91eb2ab84c953f9e1402a7.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 10,000 to all enemies in a cone before you. Strikes twice when hitting only a single target.\nAdditional Effect: 10-yalm knockback\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 10,000 to all enemies in a cone before you. Strikes twice when hitting only a single target.<br/>Additional Effect: 10-yalm knockback<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Drill",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1843c5eb1876f021be1a9cf6359c316781916627.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 10,000.\nPotency is increased to 20,000 while under the effect of Analysis.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Grants Bioblaster Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Drill Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Bioblaster while under the effect of Bioblaster Primed.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 10,000.<br/>Potency is increased to 20,000 while under the effect of Analysis.<br/>Ignores the effects of Guard when dealing damage.<br/>Additional Effect: Grants Bioblaster Primed<br/>Maximum Charges: 2<br/>Can only be executed while under the effect of Drill Primed.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Bioblaster while under the effect of Bioblaster Primed."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Full Metal Field",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a280d91d346e69536185448d513b18b2977d985a.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 10,000 to target and all enemies nearby it.\nStrikes the first target twice, but its potency will be halved for the second strike.\nAdditional Effect: Grants Overheated\nDuration: 5s\nOverheated Effect: Increases movement speed by 25%\nExtends Overheated duration by 5s to a maximum of 10s.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Blast Charge changes to Blazing Shot while under the effect of Overheated.",
+     "descriptionHtml": "Delivers an attack with a potency of 10,000 to target and all enemies nearby it.<br/>Strikes the first target twice, but its potency will be halved for the second strike.<br/>Additional Effect: Grants Overheated<br/>Duration: 5s<br/>Overheated Effect: Increases movement speed by 25%<br/>Extends Overheated duration by 5s to a maximum of 10s.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Blast Charge changes to Blazing Shot while under the effect of Overheated."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Wildfire",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/95728389d41fbd0e5d09f80b2c0d10df41441cd9.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "24s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Covers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage to target and all enemies within 5 yalms when time expires or upon executing Detonator.\nDuration: 8s\nPotency is increased by 4,500 for each of your own attack actions you land prior to the end of the effect. Landing 4 attack actions will cause the slow-burning pitch to detonate immediately.",
+     "descriptionHtml": "Covers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.<br/>Deals damage to target and all enemies within 5 yalms when time expires or upon executing Detonator.<br/>Duration: 8s<br/>Potency is increased by 4,500 for each of your own attack actions you land prior to the end of the effect. Landing 4 attack actions will cause the slow-burning pitch to detonate immediately."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Bishop Autoturret",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5b81ea0d7793a71e83ebe7472ce3f860a51a842a.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "5y",
+     "description": "Deploys an area of effect battle turret which will deliver auto-attacks to enemies within range with a potency of 8,000.\nDuration: 10s\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s",
+     "descriptionHtml": "Deploys an area of effect battle turret which will deliver auto-attacks to enemies within range with a potency of 8,000.<br/>Duration: 10s<br/>Additional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 6s"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Analysis",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/38dc9d35007c7cdc38d10d63379748401fed9939.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants additional effects to Drill, Bioblaster, Air Anchor, and Chain Saw when these weaponskills are executed.\nDuration: 10s\nDrill Additional Effect: Potency is increased to 200%\nBioblaster Additional Effect: Attack potency and damage over time potency is increased by 50%\nAir Anchor Additional Effect: Potency is increased by 50% and the Bind effect becomes Stun\nChain Saw Additional Effect: Increases target's damage taken\nMaximum Charges: 2",
+     "descriptionHtml": "Grants additional effects to Drill, Bioblaster, Air Anchor, and Chain Saw when these weaponskills are executed.<br/>Duration: 10s<br/>Drill Additional Effect: Potency is increased to 200%<br/>Bioblaster Additional Effect: Attack potency and damage over time potency is increased by 50%<br/>Air Anchor Additional Effect: Potency is increased by 50% and the Bind effect becomes Stun<br/>Chain Saw Additional Effect: Increases target's damage taken<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Blazing Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3d3fd3374284bfe2495f1658b107a7437ff01bad.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 8,000.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 8,000.<br/>Can only be executed when firearm is Overheated.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Bioblaster",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/70783248b63c783d9df10fbe8f420ec6954d9eab.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "12y",
+     "radius": "12y",
+     "description": "Delivers an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 12s\nAdditional Effect: Increases attack potency and damage over time potency by 50% while under the effect of Analysis\nAdditional Effect: Grants Air Anchor Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Bioblaster Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Air Anchor while under the effect of Air Anchor Primed.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000 to all enemies in a cone before you.<br/>Additional Effect: Damage over time<br/>Potency: 4,000<br/>Duration: 12s<br/>Additional Effect: Increases attack potency and damage over time potency by 50% while under the effect of Analysis<br/>Additional Effect: Grants Air Anchor Primed<br/>Maximum Charges: 2<br/>Can only be executed while under the effect of Bioblaster Primed.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Air Anchor while under the effect of Air Anchor Primed.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Air Anchor",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/120150f155ff0887d5b979ef25e82df2232e2afe.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 8,000.\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Potency is increased by 50%, and the Bind effect becomes Stun while under the effect of Analysis\nDuration: 3s\nAdditional Effect: Grants Chain Saw Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Air Anchor Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Chain Saw while under the effect of Chain Saw Primed.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 8,000.<br/>Additional Effect: Bind<br/>Duration: 3s<br/>Additional Effect: Potency is increased by 50%, and the Bind effect becomes Stun while under the effect of Analysis<br/>Duration: 3s<br/>Additional Effect: Grants Chain Saw Primed<br/>Maximum Charges: 2<br/>Can only be executed while under the effect of Air Anchor Primed.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Chain Saw while under the effect of Chain Saw Primed.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Chain Saw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/acbc270d0d2e6192541800dcc280c80a7eae3bba.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "25y",
+     "description": "Delivers an attack with a potency of 12,000 to all enemies in a straight line before you.\nAdditional Effect: Increases target's damage taken by 20% while under the effect of Analysis\nDuration: 6s\nAdditional Effect: Grants Drill Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Chain Saw Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Drill while under the effect of Drill Primed.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000 to all enemies in a straight line before you.<br/>Additional Effect: Increases target's damage taken by 20% while under the effect of Analysis<br/>Duration: 6s<br/>Additional Effect: Grants Drill Primed<br/>Maximum Charges: 2<br/>Can only be executed while under the effect of Chain Saw Primed.<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Action changes to Drill while under the effect of Drill Primed.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Detonator",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/54d3f10b024f47996e6cdaeb9f59b47448543872.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Ends the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Ends the effect of Wildfire, dealing damage to the target.<br/>Can only be executed while under the effect of Wildfire.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Aether Mortar",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e630bb066bbc76a8e961d011612bbdcdaf9509d2.png",
+     "type": "Ability",
+     "cast": "1s",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 8,000 to all nearby enemies.<br/>Additional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 6s<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Marksman's Spite",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b641fb27f646df1959aa4754f6389d54fd20b9d5.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "50y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 40,000.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 40,000.<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 90s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Dervish",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d8fbe1550c91afbd4d4349a0aab9dab9a1e04ab.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "15y",
+     "description": "Reduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s",
+     "descriptionHtml": "Reduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.<br/>This action's effects extend through obstructions.<br/>Duration: 12s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Bravery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5224aafe6eaf21b1b9a559865b37b023524ae0c7.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Increases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s",
+     "descriptionHtml": "Increases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Eagle Eye Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67522181f502fda37e11dd98b9bf8e8f337f36fa.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "-",
+     "range": "40y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000.<br/>Ignores the effects of Guard when dealing damage."
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__machinist_01",
+    "steps": [
+     {
+      "name": "Heated Split Shot\n(Split Shot)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/cac7ff217edfabca410218ec69323060aed0caaa.png"
+     },
+     {
+      "name": "Heated Slug Shot\n(Slug Shot)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/bb394365a76fac1c38ff540c8c81881d79680b62.png"
+     },
+     {
+      "name": "Heated Clean Shot\n(Clean Shot)",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/57fa0a309dc4d53d5edc52aad068a93788715c4c.png"
+     }
+    ],
+    "effect": "Increases the Heat Gauge and Battery Gauge."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHeated Split Shot\n(Split Shot)\n\nHeated Slug Shot\n(Slug Shot)\n\nHeated Clean Shot\n(Clean Shot)\n\nIncreases the Heat Gauge and Battery Gauge.\n\n* Actions shown in parentheses are used before acquiring certain traits."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Heat Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/H/5GX8Xg6XXo8SUM4UAEAJ71p06E.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/b/AGuBbV-4m_DHBea6i-tX0Y2qjE.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/3/CywmPRbCiJMjYNjdBlu1e-1FXA.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/a/SSYB8YzSAd0VfUMwSZqbNGGRWY.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/z/jX-6pBLvkFZaJgnGcte1HBe8jM.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nHeat Gauge\n\nUpon learning the action Hypercharge, the Heat Gauge will be displayed.\n\nUsing certain weaponskills will generate heat. When you have generated enough, Hypercharge can be activated, overheating your firearm. This allows the execution of certain weaponskills such as Heat Blast (acquired at level 35) and Auto Crossbow (acquired at level 52).\n\nUpon learning the action Rook Autoturret, the Battery Gauge will be displayed.\n\nThe Battery Gauge accumulates when certain actions are performed and allows the placement of a Rook Autoturret, which will attack your target. It also allows the deployment of an Automaton Queen (acquired at level 80) to fight alongside you.\n\nSimple Mode\n\nHeat Gauge\n\nBattery Gauge\n\nOverheated\n\nAutomaton Queen",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Heat Gauge</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/3/B4A-X0YSgIRWihWVXad4NyG5bc.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Hypercharge</span>, the <span class=\"txt_red\">Heat Gauge</span> will be displayed.<br/><br/>Using certain weaponskills will generate heat. When you have generated enough, Hypercharge can be activated, overheating your firearm. This allows the execution of certain weaponskills such as <span class=\"txt_red\">Heat Blast</span> (acquired at level 35) and <span class=\"txt_red\">Auto Crossbow</span> (acquired at level 52).</p>\n</div>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Rook Autoturret</span>, the <span class=\"txt_red\">Battery Gauge</span> will be displayed.<br/><br/>The Battery Gauge accumulates when certain actions are performed and allows the placement of a <span class=\"txt_red\">Rook Autoturret</span>, which will attack your target. It also allows the deployment of an <span class=\"txt_red\">Automaton Queen</span> (acquired at level 80) to fight alongside you.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/H/5GX8Xg6XXo8SUM4UAEAJ71p06E.png\" width=\"590\"/>\n</td>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/b/AGuBbV-4m_DHBea6i-tX0Y2qjE.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Heat Gauge</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/3/CywmPRbCiJMjYNjdBlu1e-1FXA.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Battery Gauge</p>\n</td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/a/SSYB8YzSAd0VfUMwSZqbNGGRWY.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Overheated</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/z/jX-6pBLvkFZaJgnGcte1HBe8jM.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Automaton Queen</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/3/B4A-X0YSgIRWihWVXad4NyG5bc.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/H/5GX8Xg6XXo8SUM4UAEAJ71p06E.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/b/AGuBbV-4m_DHBea6i-tX0Y2qjE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/3/CywmPRbCiJMjYNjdBlu1e-1FXA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/a/SSYB8YzSAd0VfUMwSZqbNGGRWY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/z/jX-6pBLvkFZaJgnGcte1HBe8jM.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/machinist/01.png",
+   "public/jobguide/hud/machinist/02.png",
+   "public/jobguide/hud/machinist/03.png",
+   "public/jobguide/hud/machinist/04.png",
+   "public/jobguide/hud/machinist/05.png",
+   "public/jobguide/hud/machinist/06.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSplit Shot\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 140.\nAdditional Effect: Increases Heat Gauge by 5\n\nSlug Shot\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Split Shot or Heated Split Shot\nCombo Potency: 210\nCombo Bonus: Increases Heat Gauge by 5\n\nHot Shot\n\nLv. 4\n\nWeaponskill\nInstant\n\n40s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 240.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.\n\nReassemble\n\nLv. 10\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nGuarantees that next weaponskill is a critical direct hit.\nDuration: 5s\nIncreases damage dealt when under an effect that raises critical hit rate or direct hit rate.\nThis action does not affect damage over time effects.\nMaximum Charges: 2\n\nGauss Round\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 130.\nMaximum Charges: 3\n\nSpread Shot\n\nLv. 18\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 5\n\nClean Shot\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Slug Shot or Heated Slug Shot\nCombo Potency: 270\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10\n\nHypercharge\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Overheated, each stack allowing the execution of Blazing Shot or Auto Crossbow.\nDuration: 10s\nOverheated Effect: Increases the potency of single-target weaponskills by 20\nHeat Gauge Cost: 50\nOverheated effect only applicable to machinist job actions.\n\nHeat Blast\n\nJob Quest\n\nLv. 35\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 200.\nAdditional Effect: Reduces the recast time of both Gauss Round and Ricochet by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nRook Autoturret\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n6s\n-\n\n0y\n\n0y\n\nDeploys a single-target battle turret which attacks using Volley Fire, dealing damage with a potency of 35.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 70.\nBattery Gauge Cost: 50\nDuration: 9s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Rook Overdrive.\nShares a recast timer with Rook Overdrive.\n\nRook Overdrive\n\nLv. 40\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nOrders the rook autoturret to use Rook Overload.\nRook Overload Potency: 160\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Rook Autoturret.\n\nRook Overload\n\nLv. 40\n\nAbility\nInstant\n-\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 160.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nWildfire\n\nLv. 45\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nCovers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage when time expires or upon executing Detonator.\nPotency is increased by 240 for each of your own weaponskills you land prior to the end of the effect.\nCan be stacked up to 6 times.\nDuration: 10s\n\nDetonator\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n25y\n\n0y\n\nEnds the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.\n※Wildfire changes to Detonator when requirements for execution are met.\n\nRicochet\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDeals damage to target and all enemies nearby it with a potency of 130 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nAuto Crossbow\n\nJob Quest\n\nLv. 52\n\nWeaponskill\nInstant\n1.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 180 to all enemies in a cone before you.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nHeated Split Shot\n\nJob Quest\n\nLv. 54\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 220.\nAdditional Effect: Increases Heat Gauge by 5\n\nTactician\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with bard's Troubadour or dancer's Shield Samba.\n\nDrill\n\nJob Quest\n\nLv. 58\n\nWeaponskill\nInstant\n\n20s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 660.\nMaximum Charges: 2\nShares a recast timer with Bioblaster.\n\nHeated Slug Shot\n\nJob Quest\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 140.\nCombo Action: Heated Split Shot\nCombo Potency: 320\nCombo Bonus: Increases Heat Gauge by 5\n\nDismantle\n\nLv. 62\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nLowers target's damage dealt by 10%.\nDuration: 10s\n\nHeated Clean Shot\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 160.\nCombo Action: Heated Slug Shot\nCombo Potency: 420\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10\n\nBarrel Stabilizer\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Hypercharged.\nDuration: 30s\nAdditional Effect: Grants Full Metal Machinist\nDuration: 30s\nCan only be executed while in combat.\n\nBlazing Shot\n\nLv. 68\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 240.\nAdditional Effect: Reduces the recast time of both Double Check and Checkmate by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nFlamethrower\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n60s\n-\n\n0y\n\n12y\n\nDelivers damage over time to all enemies in a cone before you.\nPotency: 120\nDuration: 10s\nEffect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills upon execution. Cannot be executed during the cooldown of weaponskills.\n\nBioblaster\n\nLv. 72\n\nWeaponskill\nInstant\n\n20s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 50 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 50\nDuration: 15s\nMaximum Charges: 2\nShares a recast timer with Drill.\n\nAir Anchor\n\nLv. 76\n\nWeaponskill\nInstant\n\n40s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 660.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.\n\nAutomaton Queen\n\nLv. 80\n\nAbility\nInstant\n6s\n-\n\n0y\n\n0y\n\nDeploys an Automaton Queen to fight at your side.\nPotency of Automaton Queen actions increases as Battery Gauge exceeds required cost at time of deployment.\nBattery Gauge Cost: 50\nDuration: 12s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Queen Overdrive.\nShares a recast timer with Queen Overdrive.\n\nQueen Overdrive\n\nLv. 80\n\nAbility\nInstant\n15s\n-\n\n30y\n\n0y\n\nOrders the Automaton Queen to use Pile Bunker.\nPile Bunker Potency: 340\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Automaton Queen.\n\nArm Punch\n\nLv. 80\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 120.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 240.\n\n※This action cannot be assigned to a hotbar.\n\nRoller Dash\n\nLv. 80\n\nWeaponskill\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRushes target and delivers an attack with a potency of 240.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 480.\n\n※This action cannot be assigned to a hotbar.\n\nPile Bunker\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 340.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nIf this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nScattergun\n\nLv. 82\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 10\n\nCrowned Collider\n\nLv. 86\n\nAbility\nInstant\n-\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 390.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 780.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nChain Saw\n\nLv. 90\n\nWeaponskill\nInstant\n\n60s\n-\n\n25y\n\n25y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nAdditional Effect: Grants Excavator Ready\nDuration: 30s\nThis weaponskill does not share a recast timer with any other actions.\n\nDouble Check\n\nLv. 92\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nCheckmate\n\nLv. 92\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nExcavator\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nCan only be executed while under the effect of Excavator Ready.\n\n※This action cannot be assigned to a hotbar.\n※Chain Saw changes to Excavator when requirements for execution are met.\n\nFull Metal Field\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers a critical direct hit to target and all enemies nearby it with a potency of 900 for the first enemy, and 25% less for all remaining enemies.\nDamage dealt is increased when under an effect that raises critical hit rate or direct hit rate.\nThis action is not affected by Reassemble.\nCan only be executed while under the effect of Full Metal Machinist."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nLeg Graze\n\nLv. 6\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nAfflicts target with Heavy +40%.\nDuration: 10s\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nFoot Graze\n\nLv. 10\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nBinds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.\n\nPeloton\n\nLv. 20\n\nAbility\nInstant\n5s\n-\n\n0y\n\n30y\n\nIncreases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.\n\nHead Graze\n\nLv. 24\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nInterrupts the use of a target's action.\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s"
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nIncreased Action Damage\n\nLv. 20\n\nIncreases base action damage and autoturret damage by 10%.\n\nIncreased Action Damage II\n\nLv. 40\n\nIncreases base action damage and autoturret damage by 20%.\n\nSplit Shot Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Split Shot to Heated Split Shot.\n\nSlug Shot Mastery\n\nJob Quest\n\nLv. 60\n\nUpgrades Slug Shot to Heated Slug Shot.\n\nClean Shot Mastery\n\nLv. 64\n\nUpgrades Clean Shot to Heated Clean Shot.\n\nHeat Blast Mastery\n\nLv. 68\n\nUpgrades Heat Blast to Blazing Shot.\n\nCharged Action Mastery\n\nLv. 74\n\nAllows a third charge of Gauss Round and Ricochet.\n\nHot Shot Mastery\n\nLv. 76\n\nUpgrades Hot Shot to Air Anchor.\n\nEnhanced Wildfire\n\nLv. 78\n\nImproves Wildfire's potency increase for landing weaponskills to 240.\n\nPromotion\n\nLv. 80\n\nUpgrades Rook Autoturret and Rook Overdrive to Automaton Queen and Queen Overdrive respectively.\n\nSpread Shot Mastery\n\nLv. 82\n\nUpgrades Spread Shot to Scattergun.\n\nEnhanced Reassemble\n\nLv. 84\n\nAllows the accumulation of charges for consecutive uses of Reassemble.\nMaximum Charges: 2\n\nMarksman's Mastery\n\nLv. 84\n\nIncreases the potency of Heated Split Shot to 200, Heated Slug Shot to 120, and Heated Clean Shot to 120.\n\nQueen's Gambit\n\nLv. 86\n\nAfter executing Pile Bunker, the Automaton Queen will also execute Crowned Collider.\n\nEnhanced Tactician\n\nLv. 88\n\nReduces Tactician recast time to 90 seconds.\n\nDouble-barrel Mastery\n\nLv. 92\n\nUpgrades Gauss Round to Double Check and Ricochet to Checkmate.\n\nEnhanced Multiweapon\n\nLv. 94\n\nAllows the accumulation of charges for consecutive uses of Drill and Bioblaster.\nMaximum Charges: 2\n\nMarksman's Mastery II\n\nLv. 94\n\nIncreases the potency of Auto Crossbow to 180, Heated Split Shot to 220, Drill to 660, Heated Slug Shot to 140, Heated Clean Shot to 160, Blazing Shot to 240, Air Anchor to 660, and Chain Saw to 660.\n\nEnhanced Multiweapon II\n\nLv. 96\n\nGrants Excavator Ready upon executing Chain Saw.\nDuration: 30s\nChain Saw changes to Excavator while under the effect of Excavator Ready.\n\nEnhanced Tactician II\n\nLv. 98\n\nImproves Tactician's damage reduction effect to 15%.\n\nEnhanced Barrel Stabilizer\n\nLv. 100\n\nGrants Full Metal Machinist upon executing Barrel Stabilizer.\nDuration: 30s"
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHeated Split Shot\n(Split Shot)\n\nHeated Slug Shot\n(Slug Shot)\n\nHeated Clean Shot\n(Clean Shot)\n\nIncreases the Heat Gauge and Battery Gauge.\n\n* Actions shown in parentheses are used before acquiring certain traits."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nHeat Gauge\n\nUpon learning the action Hypercharge, the Heat Gauge will be displayed.\n\nUsing certain weaponskills will generate heat. When you have generated enough, Hypercharge can be activated, overheating your firearm. This allows the execution of certain weaponskills such as Heat Blast (acquired at level 35) and Auto Crossbow (acquired at level 52).\n\nUpon learning the action Rook Autoturret, the Battery Gauge will be displayed.\n\nThe Battery Gauge accumulates when certain actions are performed and allows the placement of a Rook Autoturret, which will attack your target. It also allows the deployment of an Automaton Queen (acquired at level 80) to fight alongside you.\n\nSimple Mode\n\nHeat Gauge\n\nBattery Gauge\n\nOverheated\n\nAutomaton Queen"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBlast Charge\n\nWeaponskill\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 6,000.\nAdditional Effect: Grants a stack of Heat, up to a maximum of 3\nDuration: 15s\nAt maximum stacks, grants Overheated and increases movement speed by 25%.\nDuration: 5s\nRequires casting time to execute. However, it is possible to walk while casting.\n\n※Action changes to Blazing Shot while under the effect of Overheated.\n\nScattergun\n\nWeaponskill\nInstant\n16s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 10,000 to all enemies in a cone before you. Strikes twice when hitting only a single target.\nAdditional Effect: 10-yalm knockback\nThis weaponskill does not share a recast timer with any other actions.\n\nDrill\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 10,000.\nPotency is increased to 20,000 while under the effect of Analysis.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Grants Bioblaster Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Drill Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Bioblaster while under the effect of Bioblaster Primed.\n\nFull Metal Field\n\nWeaponskill\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 10,000 to target and all enemies nearby it.\nStrikes the first target twice, but its potency will be halved for the second strike.\nAdditional Effect: Grants Overheated\nDuration: 5s\nOverheated Effect: Increases movement speed by 25%\nExtends Overheated duration by 5s to a maximum of 10s.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Blast Charge changes to Blazing Shot while under the effect of Overheated.\n\nWildfire\n\nAbility\nInstant\n24s\n-\n\n25y\n\n0y\n\nCovers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage to target and all enemies within 5 yalms when time expires or upon executing Detonator.\nDuration: 8s\nPotency is increased by 4,500 for each of your own attack actions you land prior to the end of the effect. Landing 4 attack actions will cause the slow-burning pitch to detonate immediately.\n\nBishop Autoturret\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDeploys an area of effect battle turret which will deliver auto-attacks to enemies within range with a potency of 8,000.\nDuration: 10s\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\n\nAnalysis\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nGrants additional effects to Drill, Bioblaster, Air Anchor, and Chain Saw when these weaponskills are executed.\nDuration: 10s\nDrill Additional Effect: Potency is increased to 200%\nBioblaster Additional Effect: Attack potency and damage over time potency is increased by 50%\nAir Anchor Additional Effect: Potency is increased by 50% and the Bind effect becomes Stun\nChain Saw Additional Effect: Increases target's damage taken\nMaximum Charges: 2\n\nBlazing Shot\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nBioblaster\n\nWeaponskill\nInstant\n10s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 12s\nAdditional Effect: Increases attack potency and damage over time potency by 50% while under the effect of Analysis\nAdditional Effect: Grants Air Anchor Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Bioblaster Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Air Anchor while under the effect of Air Anchor Primed.\n※This action cannot be assigned to a hotbar.\n\nAir Anchor\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Potency is increased by 50%, and the Bind effect becomes Stun while under the effect of Analysis\nDuration: 3s\nAdditional Effect: Grants Chain Saw Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Air Anchor Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Chain Saw while under the effect of Chain Saw Primed.\n※This action cannot be assigned to a hotbar.\n\nChain Saw\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 12,000 to all enemies in a straight line before you.\nAdditional Effect: Increases target's damage taken by 20% while under the effect of Analysis\nDuration: 6s\nAdditional Effect: Grants Drill Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Chain Saw Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Drill while under the effect of Drill Primed.\n※This action cannot be assigned to a hotbar.\n\nDetonator\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nEnds the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.\n\nAether Mortar\n\nAbility\n1s\n1s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nMarksman's Spite\n\nInstant\n10s\n-\n\n50y\n\n0y\n\nDelivers a ranged attack with a potency of 40,000.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s"
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nDervish\n\nAbility\nInstant\n45s\n-\n\n0y\n\n15y\n\nReduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s\n\nBravery\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s\n\nEagle Eye Shot\n\nAbility\nInstant\n15s\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nPhysical Ranged DPS\n\nThe war with Dravania rages on, brutal and unrelenting. With no end in sight, the Holy See grows desperate. As her dragoons lay down their lives in defense of their home, Ishgard turns to technology to protect her sons and daughters. Great cannons and ballistas now line the city walls, plucking dragons from the sky.\n\nFollowing the example of Cid Garlond, who has demonstrated the potency of magitek, the Skysteel Manufactory works tirelessly on the development of advanced armaments. As new and devastating weapons are brought to the fray, a new class of champion arises to wield them―the machinist.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nSplit Shot\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 140.\nAdditional Effect: Increases Heat Gauge by 5\n\nSlug Shot\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Split Shot or Heated Split Shot\nCombo Potency: 210\nCombo Bonus: Increases Heat Gauge by 5\n\nHot Shot\n\nLv. 4\n\nWeaponskill\nInstant\n\n40s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 240.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.\n\nReassemble\n\nLv. 10\n\nAbility\nInstant\n55s\n-\n\n0y\n\n0y\n\nGuarantees that next weaponskill is a critical direct hit.\nDuration: 5s\nIncreases damage dealt when under an effect that raises critical hit rate or direct hit rate.\nThis action does not affect damage over time effects.\nMaximum Charges: 2\n\nGauss Round\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 130.\nMaximum Charges: 3\n\nSpread Shot\n\nLv. 18\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 110 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 5\n\nClean Shot\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 100.\nCombo Action: Slug Shot or Heated Slug Shot\nCombo Potency: 270\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10\n\nHypercharge\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nGrants 5 stacks of Overheated, each stack allowing the execution of Blazing Shot or Auto Crossbow.\nDuration: 10s\nOverheated Effect: Increases the potency of single-target weaponskills by 20\nHeat Gauge Cost: 50\nOverheated effect only applicable to machinist job actions.\n\nHeat Blast\n\nJob Quest\n\nLv. 35\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 200.\nAdditional Effect: Reduces the recast time of both Gauss Round and Ricochet by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nRook Autoturret\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n6s\n-\n\n0y\n\n0y\n\nDeploys a single-target battle turret which attacks using Volley Fire, dealing damage with a potency of 35.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 70.\nBattery Gauge Cost: 50\nDuration: 9s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Rook Overdrive.\nShares a recast timer with Rook Overdrive.\n\nRook Overdrive\n\nLv. 40\n\nAbility\nInstant\n15s\n-\n\n25y\n\n0y\n\nOrders the rook autoturret to use Rook Overload.\nRook Overload Potency: 160\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Rook Autoturret.\n\nRook Overload\n\nLv. 40\n\nAbility\nInstant\n-\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 160.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 320.\nThe rook autoturret shuts down after execution. If this action is not used manually while the rook autoturret is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nWildfire\n\nLv. 45\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nCovers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage when time expires or upon executing Detonator.\nPotency is increased by 240 for each of your own weaponskills you land prior to the end of the effect.\nCan be stacked up to 6 times.\nDuration: 10s\n\nDetonator\n\nLv. 45\n\nAbility\nInstant\n1s\n-\n\n25y\n\n0y\n\nEnds the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.\n※Wildfire changes to Detonator when requirements for execution are met.\n\nRicochet\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDeals damage to target and all enemies nearby it with a potency of 130 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nAuto Crossbow\n\nJob Quest\n\nLv. 52\n\nWeaponskill\nInstant\n1.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 180 to all enemies in a cone before you.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nHeated Split Shot\n\nJob Quest\n\nLv. 54\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 220.\nAdditional Effect: Increases Heat Gauge by 5\n\nTactician\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces damage taken by self and nearby party members by 15%.\nDuration: 15s\nEffect cannot be stacked with bard's Troubadour or dancer's Shield Samba.\n\nDrill\n\nJob Quest\n\nLv. 58\n\nWeaponskill\nInstant\n\n20s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 660.\nMaximum Charges: 2\nShares a recast timer with Bioblaster.\n\nHeated Slug Shot\n\nJob Quest\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 140.\nCombo Action: Heated Split Shot\nCombo Potency: 320\nCombo Bonus: Increases Heat Gauge by 5\n\nDismantle\n\nLv. 62\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nLowers target's damage dealt by 10%.\nDuration: 10s\n\nHeated Clean Shot\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 160.\nCombo Action: Heated Slug Shot\nCombo Potency: 420\nCombo Bonus: Increases Heat Gauge by 5\nCombo Bonus: Increases Battery Gauge by 10\n\nBarrel Stabilizer\n\nLv. 66\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nGrants Hypercharged.\nDuration: 30s\nAdditional Effect: Grants Full Metal Machinist\nDuration: 30s\nCan only be executed while in combat.\n\nBlazing Shot\n\nLv. 68\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 240.\nAdditional Effect: Reduces the recast time of both Double Check and Checkmate by 15s\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.\n\nFlamethrower\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n60s\n-\n\n0y\n\n12y\n\nDelivers damage over time to all enemies in a cone before you.\nPotency: 120\nDuration: 10s\nEffect ends upon using another action or moving (including facing a different direction).\nCancels auto-attack upon execution.\nTriggers the cooldown of weaponskills upon execution. Cannot be executed during the cooldown of weaponskills.\n\nBioblaster\n\nLv. 72\n\nWeaponskill\nInstant\n\n20s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 50 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 50\nDuration: 15s\nMaximum Charges: 2\nShares a recast timer with Drill.\n\nAir Anchor\n\nLv. 76\n\nWeaponskill\nInstant\n\n40s\n-\n\n25y\n\n0y\n\nDelivers an attack with a potency of 660.\nAdditional Effect: Increases Battery Gauge by 20\nThis weaponskill does not share a recast timer with any other actions.\n\nAutomaton Queen\n\nLv. 80\n\nAbility\nInstant\n6s\n-\n\n0y\n\n0y\n\nDeploys an Automaton Queen to fight at your side.\nPotency of Automaton Queen actions increases as Battery Gauge exceeds required cost at time of deployment.\nBattery Gauge Cost: 50\nDuration: 12s\nConsumes Battery Gauge upon execution.\nShuts down when time expires or upon execution of Queen Overdrive.\nShares a recast timer with Queen Overdrive.\n\nQueen Overdrive\n\nLv. 80\n\nAbility\nInstant\n15s\n-\n\n30y\n\n0y\n\nOrders the Automaton Queen to use Pile Bunker.\nPile Bunker Potency: 340\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\nShares a recast timer with Automaton Queen.\n\nArm Punch\n\nLv. 80\n\nWeaponskill\nInstant\n\n1.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 120.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 240.\n\n※This action cannot be assigned to a hotbar.\n\nRoller Dash\n\nLv. 80\n\nWeaponskill\nInstant\n\n3s\n-\n\n30y\n\n0y\n\nRushes target and delivers an attack with a potency of 240.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 480.\n\n※This action cannot be assigned to a hotbar.\n\nPile Bunker\n\nLv. 80\n\nAbility\nInstant\n-\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 340.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 680.\nIf this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nScattergun\n\nLv. 82\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 130 to all enemies in a cone before you.\nAdditional Effect: Increases Heat Gauge by 10\n\nCrowned Collider\n\nLv. 86\n\nAbility\nInstant\n-\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 390.\nPotency increases as Battery Gauge exceeds required cost at time of deployment, up to a maximum of 780.\nThe Automaton Queen shuts down after execution. If this action is not used manually while the Automaton Queen is active, it will be triggered automatically immediately before shutting down.\n\n※This action cannot be assigned to a hotbar.\n\nChain Saw\n\nLv. 90\n\nWeaponskill\nInstant\n\n60s\n-\n\n25y\n\n25y\n\nDelivers an attack to all enemies in a straight line before you with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nAdditional Effect: Grants Excavator Ready\nDuration: 30s\nThis weaponskill does not share a recast timer with any other actions.\n\nDouble Check\n\nLv. 92\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nCheckmate\n\nLv. 92\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 180 for the first enemy, and 30% less for all remaining enemies.\nMaximum Charges: 3\n\nExcavator\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 660 for the first enemy, and 25% less for all remaining enemies.\nAdditional Effect: Increases Battery Gauge by 20\nCan only be executed while under the effect of Excavator Ready.\n\n※This action cannot be assigned to a hotbar.\n※Chain Saw changes to Excavator when requirements for execution are met.\n\nFull Metal Field\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n25y\n\n5y\n\nDelivers a critical direct hit to target and all enemies nearby it with a potency of 900 for the first enemy, and 25% less for all remaining enemies.\nDamage dealt is increased when under an effect that raises critical hit rate or direct hit rate.\nThis action is not affected by Reassemble.\nCan only be executed while under the effect of Full Metal Machinist.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nLeg Graze\n\nLv. 6\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nAfflicts target with Heavy +40%.\nDuration: 10s\n\nSecond Wind\n\nLv. 8\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nInstantly restores own HP.\nCure Potency: 800\n\nFoot Graze\n\nLv. 10\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nBinds target.\nDuration: 10s\nCancels auto-attack upon execution.\nTarget unbound if damage taken.\n\nPeloton\n\nLv. 20\n\nAbility\nInstant\n5s\n-\n\n0y\n\n30y\n\nIncreases movement speed of self and nearby party members.\nDuration: 30s\nEffect ends when enmity is generated. Has no effect in battle.\n\nHead Graze\n\nLv. 24\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nInterrupts the use of a target's action.\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nTrait\n\nTraits\nAcquired\nEffect\n\nIncreased Action Damage\n\nLv. 20\n\nIncreases base action damage and autoturret damage by 10%.\n\nIncreased Action Damage II\n\nLv. 40\n\nIncreases base action damage and autoturret damage by 20%.\n\nSplit Shot Mastery\n\nJob Quest\n\nLv. 54\n\nUpgrades Split Shot to Heated Split Shot.\n\nSlug Shot Mastery\n\nJob Quest\n\nLv. 60\n\nUpgrades Slug Shot to Heated Slug Shot.\n\nClean Shot Mastery\n\nLv. 64\n\nUpgrades Clean Shot to Heated Clean Shot.\n\nHeat Blast Mastery\n\nLv. 68\n\nUpgrades Heat Blast to Blazing Shot.\n\nCharged Action Mastery\n\nLv. 74\n\nAllows a third charge of Gauss Round and Ricochet.\n\nHot Shot Mastery\n\nLv. 76\n\nUpgrades Hot Shot to Air Anchor.\n\nEnhanced Wildfire\n\nLv. 78\n\nImproves Wildfire's potency increase for landing weaponskills to 240.\n\nPromotion\n\nLv. 80\n\nUpgrades Rook Autoturret and Rook Overdrive to Automaton Queen and Queen Overdrive respectively.\n\nSpread Shot Mastery\n\nLv. 82\n\nUpgrades Spread Shot to Scattergun.\n\nEnhanced Reassemble\n\nLv. 84\n\nAllows the accumulation of charges for consecutive uses of Reassemble.\nMaximum Charges: 2\n\nMarksman's Mastery\n\nLv. 84\n\nIncreases the potency of Heated Split Shot to 200, Heated Slug Shot to 120, and Heated Clean Shot to 120.\n\nQueen's Gambit\n\nLv. 86\n\nAfter executing Pile Bunker, the Automaton Queen will also execute Crowned Collider.\n\nEnhanced Tactician\n\nLv. 88\n\nReduces Tactician recast time to 90 seconds.\n\nDouble-barrel Mastery\n\nLv. 92\n\nUpgrades Gauss Round to Double Check and Ricochet to Checkmate.\n\nEnhanced Multiweapon\n\nLv. 94\n\nAllows the accumulation of charges for consecutive uses of Drill and Bioblaster.\nMaximum Charges: 2\n\nMarksman's Mastery II\n\nLv. 94\n\nIncreases the potency of Auto Crossbow to 180, Heated Split Shot to 220, Drill to 660, Heated Slug Shot to 140, Heated Clean Shot to 160, Blazing Shot to 240, Air Anchor to 660, and Chain Saw to 660.\n\nEnhanced Multiweapon II\n\nLv. 96\n\nGrants Excavator Ready upon executing Chain Saw.\nDuration: 30s\nChain Saw changes to Excavator while under the effect of Excavator Ready.\n\nEnhanced Tactician II\n\nLv. 98\n\nImproves Tactician's damage reduction effect to 15%.\n\nEnhanced Barrel Stabilizer\n\nLv. 100\n\nGrants Full Metal Machinist upon executing Barrel Stabilizer.\nDuration: 30s\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Second Wind\n\nLv. 94\n\nIncreases the healing potency of Second Wind to 800.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHeated Split Shot\n(Split Shot)\n\nHeated Slug Shot\n(Slug Shot)\n\nHeated Clean Shot\n(Clean Shot)\n\nIncreases the Heat Gauge and Battery Gauge.\n\n* Actions shown in parentheses are used before acquiring certain traits.\n\nJob Gauge\n\nHeat Gauge\n\nUpon learning the action Hypercharge, the Heat Gauge will be displayed.\n\nUsing certain weaponskills will generate heat. When you have generated enough, Hypercharge can be activated, overheating your firearm. This allows the execution of certain weaponskills such as Heat Blast (acquired at level 35) and Auto Crossbow (acquired at level 52).\n\nUpon learning the action Rook Autoturret, the Battery Gauge will be displayed.\n\nThe Battery Gauge accumulates when certain actions are performed and allows the placement of a Rook Autoturret, which will attack your target. It also allows the deployment of an Automaton Queen (acquired at level 80) to fight alongside you.\n\nSimple Mode\n\nHeat Gauge\n\nBattery Gauge\n\nOverheated\n\nAutomaton Queen\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nBlast Charge\n\nWeaponskill\n\n1.44s\n\n2.4s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 6,000.\nAdditional Effect: Grants a stack of Heat, up to a maximum of 3\nDuration: 15s\nAt maximum stacks, grants Overheated and increases movement speed by 25%.\nDuration: 5s\nRequires casting time to execute. However, it is possible to walk while casting.\n\n※Action changes to Blazing Shot while under the effect of Overheated.\n\nScattergun\n\nWeaponskill\nInstant\n16s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 10,000 to all enemies in a cone before you. Strikes twice when hitting only a single target.\nAdditional Effect: 10-yalm knockback\nThis weaponskill does not share a recast timer with any other actions.\n\nDrill\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 10,000.\nPotency is increased to 20,000 while under the effect of Analysis.\nIgnores the effects of Guard when dealing damage.\nAdditional Effect: Grants Bioblaster Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Drill Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Bioblaster while under the effect of Bioblaster Primed.\n\nFull Metal Field\n\nWeaponskill\nInstant\n30s\n-\n\n25y\n\n5y\n\nDelivers an attack with a potency of 10,000 to target and all enemies nearby it.\nStrikes the first target twice, but its potency will be halved for the second strike.\nAdditional Effect: Grants Overheated\nDuration: 5s\nOverheated Effect: Increases movement speed by 25%\nExtends Overheated duration by 5s to a maximum of 10s.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Blast Charge changes to Blazing Shot while under the effect of Overheated.\n\nWildfire\n\nAbility\nInstant\n24s\n-\n\n25y\n\n0y\n\nCovers target's body in a slow-burning pitch. Action is changed to Detonator for the duration of the effect.\nDeals damage to target and all enemies within 5 yalms when time expires or upon executing Detonator.\nDuration: 8s\nPotency is increased by 4,500 for each of your own attack actions you land prior to the end of the effect. Landing 4 attack actions will cause the slow-burning pitch to detonate immediately.\n\nBishop Autoturret\n\nAbility\nInstant\n30s\n-\n\n25y\n\n5y\n\nDeploys an area of effect battle turret which will deliver auto-attacks to enemies within range with a potency of 8,000.\nDuration: 10s\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\n\nAnalysis\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nGrants additional effects to Drill, Bioblaster, Air Anchor, and Chain Saw when these weaponskills are executed.\nDuration: 10s\nDrill Additional Effect: Potency is increased to 200%\nBioblaster Additional Effect: Attack potency and damage over time potency is increased by 50%\nAir Anchor Additional Effect: Potency is increased by 50% and the Bind effect becomes Stun\nChain Saw Additional Effect: Increases target's damage taken\nMaximum Charges: 2\n\nBlazing Shot\n\nWeaponskill\nInstant\n1.5s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nCan only be executed when firearm is Overheated.\nThis weaponskill does not share a recast timer with any other actions.\n\n※This action cannot be assigned to a hotbar.\n\nBioblaster\n\nWeaponskill\nInstant\n10s\n-\n\n12y\n\n12y\n\nDelivers an attack with a potency of 4,000 to all enemies in a cone before you.\nAdditional Effect: Damage over time\nPotency: 4,000\nDuration: 12s\nAdditional Effect: Increases attack potency and damage over time potency by 50% while under the effect of Analysis\nAdditional Effect: Grants Air Anchor Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Bioblaster Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Air Anchor while under the effect of Air Anchor Primed.\n※This action cannot be assigned to a hotbar.\n\nAir Anchor\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n0y\n\nDelivers a ranged attack with a potency of 8,000.\nAdditional Effect: Bind\nDuration: 3s\nAdditional Effect: Potency is increased by 50%, and the Bind effect becomes Stun while under the effect of Analysis\nDuration: 3s\nAdditional Effect: Grants Chain Saw Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Air Anchor Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Chain Saw while under the effect of Chain Saw Primed.\n※This action cannot be assigned to a hotbar.\n\nChain Saw\n\nWeaponskill\nInstant\n10s\n-\n\n25y\n\n25y\n\nDelivers an attack with a potency of 12,000 to all enemies in a straight line before you.\nAdditional Effect: Increases target's damage taken by 20% while under the effect of Analysis\nDuration: 6s\nAdditional Effect: Grants Drill Primed\nMaximum Charges: 2\nCan only be executed while under the effect of Chain Saw Primed.\nThis weaponskill does not share a recast timer with any other actions.\n\n※Action changes to Drill while under the effect of Drill Primed.\n※This action cannot be assigned to a hotbar.\n\nDetonator\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nEnds the effect of Wildfire, dealing damage to the target.\nCan only be executed while under the effect of Wildfire.\n\n※This action cannot be assigned to a hotbar.\n\nAether Mortar\n\nAbility\n1s\n1s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Creates a barrier that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nMarksman's Spite\n\nInstant\n10s\n-\n\n50y\n\n0y\n\nDelivers a ranged attack with a potency of 40,000.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 90s\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nDervish\n\nAbility\nInstant\n45s\n-\n\n0y\n\n15y\n\nReduces cast time and recast time of spells and weaponskills by 10%, and increases movement speed by 33% for self and nearby party members.\nThis action's effects extend through obstructions.\nDuration: 12s\n\nBravery\n\nAbility\nInstant\n30s\n-\n\n30y\n\n0y\n\nIncreases damage dealt by a party member or self by 25%, and reduces damage taken by 25%.\nDuration: 15s\n\nEagle Eye Shot\n\nAbility\nInstant\n15s\n-\n\n40y\n\n0y\n\nDelivers an attack with a potency of 12,000.\nIgnores the effects of Guard when dealing damage.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

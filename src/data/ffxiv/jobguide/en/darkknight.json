@@ -1,0 +1,1778 @@
+{
+ "job": "darkknight",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/darkknight/",
+ "pageTitle": "Job Guide: Dark Knight | Final Fantasy XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nTank\n\nThe pious Ishgardian clergy guide the flock, and the devout knights protect the weak. Yet even the holiest of men succumb to the darkest of temptations.\n\nNone dare to administer justice to these sacrosanct elite residing outside the reach of the law. Who, then, defends the feeble from the transgressions of those meant to guide and protect them?\n\nA valiant few take up arms to defend the downtrodden, and not even the holy priests and knights can escape their judgment. Pariahs in their own land, they are known by many as “dark knights.”\n\nThese sentinels bear no shields declaring their allegiance. Instead, their greatswords act as beacons to guide the meek through darkness.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png",
+   "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png",
+   "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png",
+   "https://lds-img.finalfantasyxiv.com/d/b6d1592d4fcbcafe1e3b0958d688c50346fe2bd4.png",
+   "https://lds-img.finalfantasyxiv.com/d/13a97691011df3c616e3181fd21b5f6805ce5799.png",
+   "https://lds-img.finalfantasyxiv.com/d/6203d55695d1cdde37d875f7b4b4253606266ad0.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png",
+   "https://lds-img.finalfantasyxiv.com/d/438927fdaa593ec9d1bd020e1c60fad9ca495f3f.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0c4dd65cec09b11aa7ecfecf6526aff4c59b83f.png",
+   "https://lds-img.finalfantasyxiv.com/d/7ea7904a9e066bb33d542755b5984ad78c711a45.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png",
+   "https://lds-img.finalfantasyxiv.com/d/e62374eb5036fcaa1201fec390bc266620501abe.png",
+   "https://lds-img.finalfantasyxiv.com/d/adb1f756a8cfa746f5ec2f97e487e41c06026a61.png",
+   "https://lds-img.finalfantasyxiv.com/d/968fc4ccd880ca468fff7b34680e793a80ffdab1.png",
+   "https://lds-img.finalfantasyxiv.com/d/8c3e2f641cea5b3c0693034e6feafeff359341c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/52870f24b14efd37172003e974b8c45ca3d38010.png",
+   "https://lds-img.finalfantasyxiv.com/d/17543c65847814b073fe6481402a347c7efc9225.png",
+   "https://lds-img.finalfantasyxiv.com/d/6bbe53b6e1f87598b98967ae9d29e4337a7afadd.png",
+   "https://lds-img.finalfantasyxiv.com/d/4e5cbcae7dcf48cf8e3522d308f0c86df9114f0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/ea30bbaacc0da577820f8b027cec26738c1be840.png",
+   "https://lds-img.finalfantasyxiv.com/d/1dc1a1d830e5355e2cd251531e85932c24ba1b8d.png",
+   "https://lds-img.finalfantasyxiv.com/d/fbf4ae3878ecc04c6201114ce6b0aadf26bef857.png",
+   "https://lds-img.finalfantasyxiv.com/d/f82c8fbcd6549c8cd72108a937aade172f8b98a8.png",
+   "https://lds-img.finalfantasyxiv.com/d/de4960def285cc69e33455acae0f50808a6cd623.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4536e75673663bf1b91d1a78a565dabc2f041f6.png",
+   "https://lds-img.finalfantasyxiv.com/d/5150a7bff7be43d689f896e7be140f4720a23f6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/5a42ca000eb7ab0c80e3952539ed260af3d4c5e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb0216fb548f749ceb5bf25f071af462129be59b.png",
+   "https://lds-img.finalfantasyxiv.com/d/bb5281f6fd7eb6900cbda1c39722b4d3c7e51b6e.png",
+   "https://lds-img.finalfantasyxiv.com/d/093f2ddb0a06f04a76fe41fd5c31f7fceb46d2ea.png",
+   "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png",
+   "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png",
+   "https://lds-img.finalfantasyxiv.com/d/77ef69ee0efdb439996373d7e47f2744a7604b10.png",
+   "https://lds-img.finalfantasyxiv.com/d/acf9474555312bfc65c8d4e8e93cf368f819f503.png",
+   "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+   "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/67e397233e08c3886a8b4e8af9f97578c1df6de1.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f14337e0878aed0662297235a0682243dc3b234.png",
+   "https://lds-img.finalfantasyxiv.com/d/13f3ceaeef0d6ec12fa91489b100915e78403bcb.png",
+   "https://lds-img.finalfantasyxiv.com/d/270e904cd1e39b3eba028a60820f033a3804eeb0.png",
+   "https://lds-img.finalfantasyxiv.com/d/775946c6b9e7bd369a0a68635662781175930c0c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3e7f296d44600715e2bc8c0b5420d7b795afda3e.png",
+   "https://lds-img.finalfantasyxiv.com/d/1ceca4c94f71633fea2d1d23b75384672dd6b82b.png",
+   "https://lds-img.finalfantasyxiv.com/d/4e8120ac0d17ab2daeefc27ca75e58a2d7d7da09.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2f372c47ae3a92ee1d28661065743661c5fa425.png",
+   "https://lds-img.finalfantasyxiv.com/d/65a3f91205b57d261d3b34b83e419716a77b09b0.png",
+   "https://lds-img.finalfantasyxiv.com/d/750267df5336356bee1fb6ed174265e6bc3c2496.png",
+   "https://lds-img.finalfantasyxiv.com/d/5aa3108720c2431e655adb077eb533b60ce21312.png",
+   "https://lds-img.finalfantasyxiv.com/d/5120d2e81e82757f9f84cd9bca7d3983bc7a63b7.png",
+   "https://lds-img.finalfantasyxiv.com/d/2f52efe634939c12aaf8d17525fd4a52a54002f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+   "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Z/m9taYfaqlB9crTI8WwobcKszig.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Hard Slash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.",
+     "descriptionHtml": "Delivers an attack with a potency of 300."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "Syphon Strike",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nCombo Action: Hard Slash\nCombo Potency: 380\nCombo Bonus: Restores MP",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Combo Action: Hard Slash<br/>Combo Potency: 380<br/>Combo Bonus: Restores MP"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Unleash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity",
+     "descriptionHtml": "Deals unaspected damage with a potency of 120 to all nearby enemies.<br/>Additional Effect: Increased enmity"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Grit",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6d1592d4fcbcafe1e3b0958d688c50346fe2bd4.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Significantly increases enmity generation.\nEffect ends upon reuse.",
+     "descriptionHtml": "Significantly increases enmity generation.<br/>Effect ends upon reuse."
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Release Grit",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/13a97691011df3c616e3181fd21b5f6805ce5799.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Cancels the effect of Grit.",
+     "descriptionHtml": "Cancels the effect of Grit."
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Unmend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6203d55695d1cdde37d875f7b4b4253606266ad0.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 150.\nAdditional Effect: Increased enmity\nAdditional Effect: Reduces the recast time of Shadowstride by 5 seconds",
+     "descriptionHtml": "Deals unaspected damage with a potency of 150.<br/>Additional Effect: Increased enmity<br/>Additional Effect: Reduces the recast time of Shadowstride by 5 seconds"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Souleater",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 260.\nCombo Action: Syphon Strike\nCombo Potency: 480\nCombo Bonus: Restores own HP\nCure Potency: 300\nCombo Bonus: Increases Blood Gauge by 20",
+     "descriptionHtml": "Delivers an attack with a potency of 260.<br/>Combo Action: Syphon Strike<br/>Combo Potency: 480<br/>Combo Bonus: Restores own HP<br/>Cure Potency: 300<br/>Combo Bonus: Increases Blood Gauge by 20"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Flood of Darkness",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/438927fdaa593ec9d1bd020e1c60fad9ca495f3f.png",
+     "skillCellText": "Flood of Darkness\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "3000 MP",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 100 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Darkness.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 100 to all enemies in a straight line before you.<br/>Additional Effect: Grants Darkside, increasing damage dealt by 10%<br/>Duration: 30s<br/>Extends Darkside duration by 30s to a maximum of 60s.<br/>Shares a recast timer with Edge of Darkness."
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Blood Weapon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0c4dd65cec09b11aa7ecfecf6526aff4c59b83f.png",
+     "skillCellText": "Blood Weapon\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 35",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants 3 stacks of Blood Weapon, each stack increasing Blood Gauge by 10 and restoring MP upon landing weaponskills or spells.\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.",
+     "descriptionHtml": "Grants 3 stacks of Blood Weapon, each stack increasing Blood Gauge by 10 and restoring MP upon landing weaponskills or spells.<br/>Duration: 15s<br/>Effect does not stack when hitting multiple targets with a single attack."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Shadow Wall",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7ea7904a9e066bb33d542755b5984ad78c711a45.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 38",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 30%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage taken by 30%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Stalwart Soul",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Spell",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Unleash\nCombo Potency: 160\nCombo Bonus: Restores MP\nCombo Bonus: Increases Blood Gauge by 20",
+     "descriptionHtml": "Deals unaspected damage with a potency of 120 to all nearby enemies.<br/>Additional Effect: Increased enmity<br/>Combo Action: Unleash<br/>Combo Potency: 160<br/>Combo Bonus: Restores MP<br/>Combo Bonus: Increases Blood Gauge by 20"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Edge of Darkness",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e62374eb5036fcaa1201fec390bc266620501abe.png",
+     "skillCellText": "Edge of Darkness\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "3000 MP",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 300.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Darkness.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 300.<br/>Additional Effect: Grants Darkside, increasing damage dealt by 10%<br/>Duration: 30s<br/>Extends Darkside duration by 30s to a maximum of 60s.<br/>Shares a recast timer with Flood of Darkness."
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Dark Mind",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/adb1f756a8cfa746f5ec2f97e487e41c06026a61.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces physical damage taken by 10% and magic damage taken by 20%.\nDuration: 10s",
+     "descriptionHtml": "Reduces physical damage taken by 10% and magic damage taken by 20%.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Living Dead",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/968fc4ccd880ca468fff7b34680e793a80ffdab1.png",
+     "skillCellText": "Living Dead\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "300s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants the effect of Living Dead.\nWhen HP is reduced to 0 while under the effect of Living Dead, instead of becoming KO'd, your status will change to Walking Dead.\nLiving Dead Duration: 10s\nAdditional Effect: Restores HP with each weaponskill successfully delivered or spell cast\nCure Potency: 1500\nWhile under the effect of Walking Dead, most attacks will not lower your HP below 1. If, before the Walking Dead timer runs out, an amount of HP totaling your maximum HP is restored, the effect will change to Undead Rebirth. If this amount is not restored, you will be KO'd.\nWalking Dead Duration: 10s\nWhile under the effect of Undead Rebirth, most attacks will not lower your HP below 1.\nUndead Rebirth Duration: Time remaining on Walking Dead",
+     "descriptionHtml": "Grants the effect of Living Dead.<br/>When HP is reduced to 0 while under the effect of Living Dead, instead of becoming KO'd, your status will change to Walking Dead.<br/>Living Dead Duration: 10s<br/>Additional Effect: Restores HP with each weaponskill successfully delivered or spell cast<br/>Cure Potency: 1500<br/>While under the effect of Walking Dead, most attacks will not lower your HP below 1. If, before the Walking Dead timer runs out, an amount of HP totaling your maximum HP is restored, the effect will change to Undead Rebirth. If this amount is not restored, you will be KO'd.<br/>Walking Dead Duration: 10s<br/>While under the effect of Undead Rebirth, most attacks will not lower your HP below 1.<br/>Undead Rebirth Duration: Time remaining on Walking Dead"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Salted Earth",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8c3e2f641cea5b3c0693034e6feafeff359341c5.png",
+     "skillCellText": "Salted Earth\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Creates a patch of salted earth at your feet, dealing unaspected damage with a potency of 50 to any enemies who enter.\nDuration: 15s",
+     "descriptionHtml": "Creates a patch of salted earth at your feet, dealing unaspected damage with a potency of 50 to any enemies who enter.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Shadowstride",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/52870f24b14efd37172003e974b8c45ca3d38010.png",
+     "skillCellText": "Shadowstride\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Rush to a targeted enemy's location.<br/>Additional Effect: Increased enmity<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Abyssal Drain",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/17543c65847814b073fe6481402a347c7efc9225.png",
+     "skillCellText": "Abyssal Drain\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "5y",
+     "description": "Deals unaspected damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Carve and Spit.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 240 to target and all enemies nearby it.<br/>Additional Effect: Restores own HP<br/>Cure Potency: 500<br/>Additional Effect: Restores MP<br/>Shares a recast timer with Carve and Spit."
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Carve and Spit",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6bbe53b6e1f87598b98967ae9d29e4337a7afadd.png",
+     "skillCellText": "Carve and Spit\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers a threefold attack with a potency of 540.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Abyssal Drain.",
+     "descriptionHtml": "Delivers a threefold attack with a potency of 540.<br/>Additional Effect: Restores own HP<br/>Cure Potency: 500<br/>Additional Effect: Restores MP<br/>Shares a recast timer with Abyssal Drain."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Bloodspiller",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4e5cbcae7dcf48cf8e3522d308f0c86df9114f0d.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 600.\nBlood Gauge Cost: 50",
+     "descriptionHtml": "Delivers an attack with a potency of 600.<br/>Blood Gauge Cost: 50"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Quietus",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ea30bbaacc0da577820f8b027cec26738c1be840.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 240 to all nearby enemies.\nBlood Gauge Cost: 50",
+     "descriptionHtml": "Delivers an attack with a potency of 240 to all nearby enemies.<br/>Blood Gauge Cost: 50"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Dark Missionary",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1dc1a1d830e5355e2cd251531e85932c24ba1b8d.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s",
+     "descriptionHtml": "Reduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Delirium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fbf4ae3878ecc04c6201114ce6b0aadf26bef857.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Grants 3 stacks of Delirium and Blood Weapon.\nDelirium Effect: Changes Bloodspiller to Scarlet Delirium and Quietus to Impalement\nDuration: 15s\nBlood Weapon Effect: Each stack increases Blood Gauge by 10 and restores MP upon landing weaponskills or spells\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.",
+     "descriptionHtml": "Grants 3 stacks of Delirium and Blood Weapon.<br/>Delirium Effect: Changes Bloodspiller to Scarlet Delirium and Quietus to Impalement<br/>Duration: 15s<br/>Blood Weapon Effect: Each stack increases Blood Gauge by 10 and restores MP upon landing weaponskills or spells<br/>Duration: 15s<br/>Effect does not stack when hitting multiple targets with a single attack."
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "The Blackest Night",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f82c8fbcd6549c8cd72108a937aade172f8b98a8.png",
+     "skillCellText": "The Blackest Night\nJob Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "15s",
+     "cost": "3000 MP",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Creates a barrier around self or target party member that absorbs damage totaling 25% of target's maximum HP.\nDuration: 7s\nGrants Dark Arts when barrier is completely absorbed.\nDark Arts Effect: Consume Dark Arts instead of MP to execute Edge of Shadow or Flood of Shadow",
+     "descriptionHtml": "Creates a barrier around self or target party member that absorbs damage totaling 25% of target's maximum HP.<br/>Duration: 7s<br/>Grants Dark Arts when barrier is completely absorbed.<br/>Dark Arts Effect: Consume Dark Arts instead of MP to execute Edge of Shadow or Flood of Shadow"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Flood of Shadow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/de4960def285cc69e33455acae0f50808a6cd623.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "3000 MP",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 160 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Shadow.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 160 to all enemies in a straight line before you.<br/>Additional Effect: Grants Darkside, increasing damage dealt by 10%<br/>Duration: 30s<br/>Extends Darkside duration by 30s to a maximum of 60s.<br/>Shares a recast timer with Edge of Shadow."
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Edge of Shadow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4536e75673663bf1b91d1a78a565dabc2f041f6.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "3000 MP",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Deals unaspected damage with a potency of 460.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Shadow.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 460.<br/>Additional Effect: Grants Darkside, increasing damage dealt by 10%<br/>Duration: 30s<br/>Extends Darkside duration by 30s to a maximum of 60s.<br/>Shares a recast timer with Flood of Shadow."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Living Shadow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5150a7bff7be43d689f896e7be140f4720a23f6e.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Conjure a simulacrum of your darkside to fight alongside you.\nDuration: 22s\nAdditional Effect: Grants Scorn\nDuration: 30s\nSimulacrum Attack Potency: 420\nAdditional Effect: Simulacrum is able to execute Shadowbringer and Disesteem\nShadowbringer Potency: 570 for the first enemy, and 25% less for all remaining enemies\nDisesteem Potency: 620 for the first enemy, and 25% less for all remaining enemies",
+     "descriptionHtml": "Conjure a simulacrum of your darkside to fight alongside you.<br/>Duration: 22s<br/>Additional Effect: Grants Scorn<br/>Duration: 30s<br/>Simulacrum Attack Potency: 420<br/>Additional Effect: Simulacrum is able to execute Shadowbringer and Disesteem<br/>Shadowbringer Potency: 570 for the first enemy, and 25% less for all remaining enemies<br/>Disesteem Potency: 620 for the first enemy, and 25% less for all remaining enemies"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Oblation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a42ca000eb7ab0c80e3952539ed260af3d4c5e8.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by target party member or self by 10%.\nDuration: 10s\nMaximum Charges: 2",
+     "descriptionHtml": "Reduces damage taken by target party member or self by 10%.<br/>Duration: 10s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Salt and Darkness",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb0216fb548f749ceb5bf25f071af462129be59b.png",
+     "skillCellText": "Salt and Darkness\nPrerequisite Quest",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "All enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 500 for the first enemy, and 25% less for all remaining enemies.",
+     "descriptionHtml": "All enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 500 for the first enemy, and 25% less for all remaining enemies."
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Shadowbringer",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bb5281f6fd7eb6900cbda1c39722b4d3c7e51b6e.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals unaspected damage to all enemies in a straight line before you with a potency of 600 for the first enemy, and 25% less for all remaining enemies.\nMaximum Charges: 2\nCan only be executed while under the effect of Darkside.",
+     "descriptionHtml": "Deals unaspected damage to all enemies in a straight line before you with a potency of 600 for the first enemy, and 25% less for all remaining enemies.<br/>Maximum Charges: 2<br/>Can only be executed while under the effect of Darkside."
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Shadowed Vigil",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/093f2ddb0a06f04a76fe41fd5c31f7fceb46d2ea.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 40%.\nDuration: 15s\nAdditional Effect: Grants Vigilant\nDuration: 20s\nVigilant Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 1,200",
+     "descriptionHtml": "Reduces damage taken by 40%.<br/>Duration: 15s<br/>Additional Effect: Grants Vigilant<br/>Duration: 20s<br/>Vigilant Effect: Restores HP when HP falls below 50% or upon effect duration expiration<br/>Cure Potency: 1,200"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Scarlet Delirium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 620.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Bloodspiller changes to Scarlet Delirium while under the effect of Delirium.",
+     "descriptionHtml": "Delivers an attack with a potency of 620.<br/>Additional Effect: Restores MP<br/>Can only be executed while under the effect of Delirium.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Bloodspiller changes to Scarlet Delirium while under the effect of Delirium."
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Comeuppance",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 720.\nCombo Action: Scarlet Delirium\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Scarlet Delirium changes to Comeuppance when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 720.<br/>Combo Action: Scarlet Delirium<br/>Additional Effect: Restores MP<br/>Can only be executed while under the effect of Delirium.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Scarlet Delirium changes to Comeuppance when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Torcleaver",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 820.\nCombo Action: Comeuppance\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Comeuppance changes to Torcleaver when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 820.<br/>Combo Action: Comeuppance<br/>Additional Effect: Restores MP<br/>Can only be executed while under the effect of Delirium.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Comeuppance changes to Torcleaver when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Impalement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/77ef69ee0efdb439996373d7e47f2744a7604b10.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Quietus changes to Impalement when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 300 to all nearby enemies.<br/>Additional Effect: Restores MP<br/>Can only be executed while under the effect of Delirium.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Quietus changes to Impalement when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Disesteem",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/acf9474555312bfc65c8d4e8e93cf368f819f503.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals physical damage to all enemies in a straight line before you with a potency of 1,000 for the first enemy, and 25% less for all remaining enemies.\nCan only be executed while Scorn is active.",
+     "descriptionHtml": "Deals physical damage to all enemies in a straight line before you with a potency of 1,000 for the first enemy, and 25% less for all remaining enemies.<br/>Can only be executed while Scorn is active."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s",
+     "descriptionHtml": "Reduces damage taken by 20%.<br/>Additional Effect: Increases HP recovery via healing actions on self by 15%<br/>Duration: 20s"
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "Low Blow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "25s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Stuns target.\nDuration: 5s",
+     "descriptionHtml": "Stuns target.<br/>Duration: 5s"
+    },
+    {
+     "rowId": "tank_action__03",
+     "name": "Provoke",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Gesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.",
+     "descriptionHtml": "Gesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity."
+    },
+    {
+     "rowId": "tank_action__04",
+     "name": "Interject",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Interrupts the use of a target's action.",
+     "descriptionHtml": "Interrupts the use of a target's action."
+    },
+    {
+     "rowId": "tank_action__05",
+     "name": "Reprisal",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 22",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Reduces damage dealt by nearby enemies by 10%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage dealt by nearby enemies by 10%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "tank_action__06",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    },
+    {
+     "rowId": "tank_action__07",
+     "name": "Shirk",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 48",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Diverts 25% of enmity to target party member.",
+     "descriptionHtml": "Diverts 25% of enmity to target party member."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Tank Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6414caac03c831ec90c34e501e444031d44003c.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "description": "Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.",
+     "descriptionHtml": "Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Blackblood",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bf25091f18b1804e88a4a5043ff35dab2cf498a7.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "description": "Allows for Blood Gauge accumulation upon the landing of certain actions.",
+     "descriptionHtml": "Allows for Blood Gauge accumulation upon the landing of certain actions."
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Enhanced Blackblood",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3c5de58c2097300e2c9b56678196ee5a710ffe27.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 66",
+     "description": "Allows for Blood Gauge accumulation upon the landing of any weaponskill or spell while under the effect of Blood Weapon.",
+     "descriptionHtml": "Allows for Blood Gauge accumulation upon the landing of any weaponskill or spell while under the effect of Blood Weapon."
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Blood Weapon Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b189239725408e4ee7807ec361db47974443936.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "description": "Upgrades Blood Weapon to Delirium.",
+     "descriptionHtml": "Upgrades Blood Weapon to Delirium."
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Darkside Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/68800dbdca2c85218b44e9add376f59aa5d41559.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 74",
+     "description": "Upgrades Flood of Darkness and Edge of Darkness to Flood of Shadow and Edge of Shadow respectively.",
+     "descriptionHtml": "Upgrades Flood of Darkness and Edge of Darkness to Flood of Shadow and Edge of Shadow respectively."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Enhanced Unmend",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1254f70083b234ef84a6ad64c9e237231628896f.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Reduces recast time of Shadowstride by 5 seconds when executing Unmend on most targets.",
+     "descriptionHtml": "Reduces recast time of Shadowstride by 5 seconds when executing Unmend on most targets."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Melee Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases the potency of Hard Slash to 180, Syphon Strike to 120, and Souleater to 140.",
+     "descriptionHtml": "Increases the potency of Hard Slash to 180, Syphon Strike to 120, and Souleater to 140."
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Enhanced Living Shadow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/14eb5e09a27cad9aca0badada5555013ee2336d0.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Increases the potency of attacks dealt by your simulacrum to 420.",
+     "descriptionHtml": "Increases the potency of attacks dealt by your simulacrum to 420."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Enhanced Living Shadow II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5ae34095410649e88aa247fedf9f6478a0e15409.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "description": "Upgrades Flood of Shadow executed by your simulacrum to Shadowbringer, which delivers an attack to all enemies in a straight line before it with a potency of 570 for the first enemy, and 25% less for all remaining enemies.",
+     "descriptionHtml": "Upgrades Flood of Shadow executed by your simulacrum to Shadowbringer, which delivers an attack to all enemies in a straight line before it with a potency of 570 for the first enemy, and 25% less for all remaining enemies."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Shadow Wall Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1fb4da21e08c5ee9a06dead1aa6954f0b6a82126.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Upgrades Shadow Wall to Shadowed Vigil.",
+     "descriptionHtml": "Upgrades Shadow Wall to Shadowed Vigil."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Melee Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Hard Slash to 300, Syphon Strike to 240, Souleater to 260, Stalwart Soul to 120, Carve and Spit to 540, Bloodspiller to 600, and Quietus to 240.",
+     "descriptionHtml": "Increases the potency of Hard Slash to 300, Syphon Strike to 240, Souleater to 260, Stalwart Soul to 120, Carve and Spit to 540, Bloodspiller to 600, and Quietus to 240."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Enhanced Delirium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ebbf5df2554905cdaf3a26d5fe2f02b0ad53b6bb.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Upgrades Bloodspiller and Quietus to Scarlet Delirium and Impalement respectively.",
+     "descriptionHtml": "Upgrades Bloodspiller and Quietus to Scarlet Delirium and Impalement respectively."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Enhanced Living Shadow III",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1cff25d23e5fb4e97a96aee32c8b2e4082c2c516.png",
+     "acquired": [
+      {
+       "class": "Dark Knight",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants the effect of Scorn after executing Living Shadow.\nDuration: 30s\nAdditionally upgrades Carve and Spit executed by your simulacrum to Disesteem, which delivers an attack to all enemies in a straight line before it with a potency of 620 for the first enemy, and 25% less for all remaining enemies.",
+     "descriptionHtml": "Grants the effect of Scorn after executing Living Shadow.<br/>Duration: 30s<br/>Additionally upgrades Carve and Spit executed by your simulacrum to Disesteem, which delivers an attack to all enemies in a straight line before it with a potency of 620 for the first enemy, and 25% less for all remaining enemies."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "Enhanced Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad8de6373f0bc939fd654a579d6d06ad123c958b.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.",
+     "descriptionHtml": "Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%."
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "Enhanced Reprisal",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1a390002a4eabb796458e1a93716060e1ec4d185.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Extends the duration of Reprisal to 15 seconds.",
+     "descriptionHtml": "Extends the duration of Reprisal to 15 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Hard Slash",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67e397233e08c3886a8b4e8af9f97578c1df6de1.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 5,000.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Syphon Strike",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f14337e0878aed0662297235a0682243dc3b234.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nCombo Action: Hard Slash\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Combo Action: Hard Slash<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Souleater",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/13f3ceaeef0d6ec12fa91489b100915e78403bcb.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nCombo Action: Syphon Strike\nAdditional Effect: Converts 100% of damage dealt into HP\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Combo Action: Syphon Strike<br/>Additional Effect: Converts 100% of damage dealt into HP<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Impalement",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/270e904cd1e39b3eba028a60820f033a3804eeb0.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "14s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "6y",
+     "description": "Delivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Absorbs 100% of damage dealt as HP\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Potency increases up to 12,000 as your HP decreases.<br/>Additional Effect: Absorbs 100% of damage dealt as HP<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Shadowbringer",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/775946c6b9e7bd369a0a68635662781175930c0c.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 6,000 to all enemies in a straight line before you.\nConsumes 12,000 HP when executed.\nAdditional Effect: Grants Blackblood\nDuration: 10s\nCan only be executed when current HP is above 12,000 or while under the effect of Dark Arts.\n\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 6,000 to all enemies in a straight line before you.<br/>Consumes 12,000 HP when executed.<br/>Additional Effect: Grants Blackblood<br/>Duration: 10s<br/>Can only be executed when current HP is above 12,000 or while under the effect of Dark Arts.<br/><br/>※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.<br/>※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.<br/>※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Plunge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3e7f296d44600715e2bc8c0b5420d7b795afda3e.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "12s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Afflicts target with Sole Survivor\nSole Survivor Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nIf that target should be KO'd in battle before Sole Survivor expires, your HP and MP will be restored by 15%, and the recast time of Plunge will be reset.\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 2,000.<br/>Additional Effect: Afflicts target with Sole Survivor<br/>Sole Survivor Effect: Reduces target's HP recovered by healing actions by 15%<br/>Duration: 12s<br/>If that target should be KO'd in battle before Sole Survivor expires, your HP and MP will be restored by 15%, and the recast time of Plunge will be reset.<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "The Blackest Night",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1ceca4c94f71633fea2d1d23b75384672dd6b82b.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 8s\nGrants Dark Arts when barrier is completely absorbed.\nDuration: 15s\nDark Arts Effect: Consume Dark Arts instead of HP to execute Shadowbringer\nMaximum Charges: 2",
+     "descriptionHtml": "Creates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.<br/>Duration: 8s<br/>Grants Dark Arts when barrier is completely absorbed.<br/>Duration: 15s<br/>Dark Arts Effect: Consume Dark Arts instead of HP to execute Shadowbringer<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Salted Earth",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4e8120ac0d17ab2daeefc27ca75e58a2d7d7da09.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "28s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "10y",
+     "description": "Instantly draws nearby enemies within 10 yalms to your side, and creates a patch of salted earth at your feet, dealing unaspected damage over time to enemies within a 5-yalm radius.\nPotency: 5,000\nDuration: 10s\nAdditional Effect: Gradually restores your HP and reduces damage taken by 20% while standing in the patch of salted earth\nCure Potency: 5,000\n\n※Action changes to Salt and Darkness upon execution.",
+     "descriptionHtml": "Instantly draws nearby enemies within 10 yalms to your side, and creates a patch of salted earth at your feet, dealing unaspected damage over time to enemies within a 5-yalm radius.<br/>Potency: 5,000<br/>Duration: 10s<br/>Additional Effect: Gradually restores your HP and reduces damage taken by 20% while standing in the patch of salted earth<br/>Cure Potency: 5,000<br/><br/>※Action changes to Salt and Darkness upon execution."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Scarlet Delirium",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2f372c47ae3a92ee1d28661065743661c5fa425.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Grants Comeuppance Ready\nCan only be executed while under the effect of Blackblood.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Potency increases up to 12,000 as your HP decreases.<br/>Additional Effect: Grants Comeuppance Ready<br/>Can only be executed while under the effect of Blackblood.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Comeuppance",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/65a3f91205b57d261d3b34b83e419716a77b09b0.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nPotency increases up to 14,000 as your HP decreases.\nAdditional Effect: Grants Torcleaver Ready\nCan only be executed while under the effect of Blackblood and Comeuppance Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Potency increases up to 14,000 as your HP decreases.<br/>Additional Effect: Grants Torcleaver Ready<br/>Can only be executed while under the effect of Blackblood and Comeuppance Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Torcleaver",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/750267df5336356bee1fb6ed174265e6bc3c2496.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 8,000.\nPotency increases up to 16,000 as your HP decreases.\nCan only be executed while under the effect of Blackblood and Torcleaver Ready.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000.<br/>Potency increases up to 16,000 as your HP decreases.<br/>Can only be executed while under the effect of Blackblood and Torcleaver Ready.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Salt and Darkness",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5aa3108720c2431e655adb077eb533b60ce21312.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "All enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 6,000.\nAdditional Effect: Bind\nDuration: 2s\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "All enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 6,000.<br/>Additional Effect: Bind<br/>Duration: 2s<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Disesteem",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5120d2e81e82757f9f84cd9bca7d3983bc7a63b7.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.4s",
+     "cost": "-",
+     "range": "10y",
+     "radius": "10y",
+     "description": "Deals unaspected damage with a potency of 16,000 to all enemies in a straight line.\nCan only be executed while under the effect of Scorn.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Deals unaspected damage with a potency of 16,000 to all enemies in a straight line.<br/>Can only be executed while under the effect of Scorn.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Eventide",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2f52efe634939c12aaf8d17525fd4a52a54002f9.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before and behind you.\nPotency increases up to 24,000 as HP nears maximum.\nHP is reduced to 1 upon execution.\nAdditional Effect: Grants Undead Redemption\nUndead Redemption Effect: Most attacks cannot reduce your HP to less than 1, and you absorb 100% of weaponskill damage dealt as HP\nDuration: 10s\nAdditional Effect: Grants Blackblood\nDuration: 10s\nAdditional Effect: Grants Scorn\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Disesteem while under the effect of Scorn.\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all enemies in a straight line before and behind you.<br/>Potency increases up to 24,000 as HP nears maximum.<br/>HP is reduced to 1 upon execution.<br/>Additional Effect: Grants Undead Redemption<br/>Undead Redemption Effect: Most attacks cannot reduce your HP to less than 1, and you absorb 100% of weaponskill damage dealt as HP<br/>Duration: 10s<br/>Additional Effect: Grants Blackblood<br/>Duration: 10s<br/>Additional Effect: Grants Scorn<br/>Duration: 15s<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 105s<br/><br/>※Action changes to Disesteem while under the effect of Scorn.<br/>※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.<br/>※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.<br/>※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Rampage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "10y",
+     "description": "Delivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all nearby enemies.<br/>Additional Effect: Increases target's damage taken by 25%<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage taken by 50% while increasing HP recovered by healing actions by 25%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Full Swing",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000.<br/>Additional Effect: 30-yalm knockback<br/>Removes Guard from enemies under its effect."
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__darkknight_01",
+    "steps": [
+     {
+      "name": "Hard Slash",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/5c0fef99ef9100285ede6dbc62a5c35cea188d7c.png"
+     },
+     {
+      "name": "Syphon Strike",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e2a305d72e05ef339e0692bd5f7ed9626b6eb9ea.png"
+     },
+     {
+      "name": "Souleater",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/8c6a197869a69116f52b41b3fef2ce03c29b5212.png"
+     }
+    ],
+    "effect": "Recovers HP and MP while increasing the Blood Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__darkknight_02",
+    "steps": [
+     {
+      "name": "Unleash",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/600c6a17bd8c4e08c783d1fb8891f12eea132a9a.png"
+     },
+     {
+      "name": "Stalwart Soul",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/cc2fff4dcbf82d405c36a0d153fb28af5fcb9068.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "Hits multiple enemies while also restoring MP and increasing the Blood Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__darkknight_01",
+    "steps": [
+     {
+      "name": "Scarlet Delirium",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/457d3fa4f25afb9c4494105c0afc15644bbaad7a.png"
+     },
+     {
+      "name": "Comeuppance",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/cc157e7338d9b4c32f880aed1838519933bc6797.png"
+     },
+     {
+      "name": "Torcleaver",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/2510476b643976c09c1b42f6eb9f011b7de6902c.png"
+     }
+    ],
+    "effect": "A high-damage combo requiring stacks of Delirium that also restores MP."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHard Slash\n\nSyphon Strike\n\nSouleater\n\nRecovers HP and MP while increasing the Blood Gauge.\n\nUnleash\n\nStalwart Soul\n\nHits multiple enemies while also restoring MP and increasing the Blood Gauge.\n\nScarlet Delirium\n\nComeuppance\n\nTorcleaver\n\nA high-damage combo requiring stacks of Delirium that also restores MP."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Blood Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png"
+    ]
+   },
+   {
+    "title": "Darkside Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nBlood Gauge\nUpon learning the action Grit, a symbol will appear on the screen indicating when it is in effect. Grit increases enmity gained from using other actions.\n\nUpon learning the trait Blackblood, the symbol which indicates the use of Grit will change to also display the Blood Gauge.\n\nThe Blood Gauge displays the amount of Blackblood a dark knight has accumulated, which can be used to execute several actions such as Bloodspiller (acquired at level 62) and Quietus (acquired at level 64).\n\nDarkside Gauge\n\nUpon learning the action Flood of Darkness, an additional gauge will be displayed, indicating the remaining duration of Darkside.\n\nDarkside increases damage dealt, and its duration can be extended by using actions such as Flood of Darkness and Edge of Darkness (acquired at level 40).\n\nUpon learning the action The Blackest Night, an icon indicating the effect of Dark Arts will be displayed on the Darkside Gauge. Dark Arts is granted when the barrier created by the Blackest Night is completely absorbed. It can then be used to execute Flood of Darkness or Edge of Darkness without MP cost.\n\nUpon learning the action Living Shadow, you can conjure a simulacrum to fight alongside you. Its duration will be displayed alongside the Darkside Gauge.\n\nSimple Mode\n\nBlood Gauge\n\nGrit (Active)\n\nThe gauge cannot be displayed in simple mode until learning the trait Blackblood at level 62.\n\nDarkside Gauge\n\nDarkside\n\nDark Arts\n\nLiving Shadow",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Blood Gauge</h3>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Grit</span>, a symbol will appear on the screen indicating when it is in effect. Grit increases enmity gained from using other actions.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Blackblood</span>, the symbol which indicates the use of Grit will change to also display the <span class=\"txt_red\">Blood Gauge</span>.<br/><br/>The Blood Gauge displays the amount of Blackblood a dark knight has accumulated, which can be used to execute several actions such as <span class=\"txt_red\">Bloodspiller</span> (acquired at level 62) and <span class=\"txt_red\">Quietus</span> (acquired at level 64).</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/KTQC7uU17HK2gGtllianH7c6Bc.png\" width=\"400\"/>\n</th>\n</tr>\n</table>\n<h3 class=\"job__hud__title\">Darkside Gauge</h3>\n<div class=\"job__hud__layout job__hud__layout--mb16 clearfix\">\n<img class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/h/7T3XMjgG1CnY1FX6fbl-oJre-Y.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Flood of Darkness</span>, an additional gauge will be displayed, indicating the remaining duration of <span class=\"txt_red\">Darkside</span>.<br/><br/>Darkside increases damage dealt, and its duration can be extended by using actions such as <span class=\"txt_red\">Flood of Darkness</span> and <span class=\"txt_red\">Edge of Darkness</span> (acquired at level 40).</p>\n</div>\n<div class=\"job__hud__layout job__hud__layout--mb32 clearfix\">\n<img class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/x/KzVLdZ6ZwSLQI9QaviWW9LxKMY.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">The Blackest Night</span>, an icon indicating the effect of <span class=\"txt_red\">Dark Arts</span> will be displayed on the Darkside Gauge. Dark Arts is granted when the barrier created by the Blackest Night is completely absorbed. It can then be used to execute Flood of Darkness or Edge of Darkness without MP cost.</p>\n</div>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Living Shadow</span>, you can conjure a simulacrum to fight alongside you. Its duration will be displayed alongside the Darkside Gauge.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img alt=\"\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve column03\">\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">Blood Gauge</p>\n</th>\n</tr>\n<tr>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Grit (Active)</p>\n</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__text\">The gauge cannot be displayed in simple mode until learning the trait <span class=\"txt_red\">Blackblood</span> at level 62.</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"3\">\n<p class=\"job__hud__layout--pve__simple__title\">Darkside Gauge</p>\n</th>\n</tr>\n<tr>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Darkside</p>\n</td>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Dark Arts</p>\n</td>\n<td class=\"colmun03\">\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Living Shadow</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/k/PL53N1Q7xMAJ-TSUAI209q2vO0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/KTQC7uU17HK2gGtllianH7c6Bc.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/h/7T3XMjgG1CnY1FX6fbl-oJre-Y.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/x/KzVLdZ6ZwSLQI9QaviWW9LxKMY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/N/NgEqCbuT7YZMRjk_I1eEgtCwnQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/P/ZTxDPwYsAOcfzldXX4RVxyNqgk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/B/YCaMlmcbrU9yvR1tkGJt8oeGXY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/i/-pgKJM6Jo5Fj3rBNii6rDs7c_4.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/A/gPlNnaC0j-myapUWtdyLR97jig.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/darkknight/01.png",
+   "public/jobguide/hud/darkknight/02.png",
+   "public/jobguide/hud/darkknight/03.png",
+   "public/jobguide/hud/darkknight/04.png",
+   "public/jobguide/hud/darkknight/05.png",
+   "public/jobguide/hud/darkknight/06.png",
+   "public/jobguide/hud/darkknight/07.png",
+   "public/jobguide/hud/darkknight/08.png",
+   "public/jobguide/hud/darkknight/09.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHard Slash\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n\nSyphon Strike\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Hard Slash\nCombo Potency: 380\nCombo Bonus: Restores MP\n\nUnleash\n\nLv. 6\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity\n\nGrit\n\nLv. 10\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nSignificantly increases enmity generation.\nEffect ends upon reuse.\n\nRelease Grit\n\nLv. 10\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nCancels the effect of Grit.\n\nUnmend\n\nLv. 15\n\nSpell\nInstant\n\n2.5s\n-\n\n20y\n\n0y\n\nDeals unaspected damage with a potency of 150.\nAdditional Effect: Increased enmity\nAdditional Effect: Reduces the recast time of Shadowstride by 5 seconds\n\nSouleater\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 260.\nCombo Action: Syphon Strike\nCombo Potency: 480\nCombo Bonus: Restores own HP\nCure Potency: 300\nCombo Bonus: Increases Blood Gauge by 20\n\nFlood of Darkness\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n1s\n3000 MP\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 100 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Darkness.\n\nBlood Weapon\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGrants 3 stacks of Blood Weapon, each stack increasing Blood Gauge by 10 and restoring MP upon landing weaponskills or spells.\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.\n\nShadow Wall\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 30%.\nDuration: 15s\n\nStalwart Soul\n\nLv. 40\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Unleash\nCombo Potency: 160\nCombo Bonus: Restores MP\nCombo Bonus: Increases Blood Gauge by 20\n\nEdge of Darkness\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n1s\n3000 MP\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 300.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Darkness.\n\nDark Mind\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces physical damage taken by 10% and magic damage taken by 20%.\nDuration: 10s\n\nLiving Dead\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n300s\n-\n\n0y\n\n0y\n\nGrants the effect of Living Dead.\nWhen HP is reduced to 0 while under the effect of Living Dead, instead of becoming KO'd, your status will change to Walking Dead.\nLiving Dead Duration: 10s\nAdditional Effect: Restores HP with each weaponskill successfully delivered or spell cast\nCure Potency: 1500\nWhile under the effect of Walking Dead, most attacks will not lower your HP below 1. If, before the Walking Dead timer runs out, an amount of HP totaling your maximum HP is restored, the effect will change to Undead Rebirth. If this amount is not restored, you will be KO'd.\nWalking Dead Duration: 10s\nWhile under the effect of Undead Rebirth, most attacks will not lower your HP below 1.\nUndead Rebirth Duration: Time remaining on Walking Dead\n\nSalted Earth\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n90s\n-\n\n0y\n\n5y\n\nCreates a patch of salted earth at your feet, dealing unaspected damage with a potency of 50 to any enemies who enter.\nDuration: 15s\n\nShadowstride\n\nJob Quest\n\nLv. 54\n\nAbility\nInstant\n30s\n-\n\n20y\n\n0y\n\nRush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.\n\nAbyssal Drain\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n60s\n-\n\n20y\n\n5y\n\nDeals unaspected damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Carve and Spit.\n\nCarve and Spit\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers a threefold attack with a potency of 540.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Abyssal Drain.\n\nBloodspiller\n\nLv. 62\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 600.\nBlood Gauge Cost: 50\n\nQuietus\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 240 to all nearby enemies.\nBlood Gauge Cost: 50\n\nDark Missionary\n\nLv. 66\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s\n\nDelirium\n\nLv. 68\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGrants 3 stacks of Delirium and Blood Weapon.\nDelirium Effect: Changes Bloodspiller to Scarlet Delirium and Quietus to Impalement\nDuration: 15s\nBlood Weapon Effect: Each stack increases Blood Gauge by 10 and restores MP upon landing weaponskills or spells\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.\n\nThe Blackest Night\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n15s\n3000 MP\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage totaling 25% of target's maximum HP.\nDuration: 7s\nGrants Dark Arts when barrier is completely absorbed.\nDark Arts Effect: Consume Dark Arts instead of MP to execute Edge of Shadow or Flood of Shadow\n\nFlood of Shadow\n\nLv. 74\n\nAbility\nInstant\n1s\n3000 MP\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 160 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Shadow.\n\nEdge of Shadow\n\nLv. 74\n\nAbility\nInstant\n1s\n3000 MP\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 460.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Shadow.\n\nLiving Shadow\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nConjure a simulacrum of your darkside to fight alongside you.\nDuration: 22s\nAdditional Effect: Grants Scorn\nDuration: 30s\nSimulacrum Attack Potency: 420\nAdditional Effect: Simulacrum is able to execute Shadowbringer and Disesteem\nShadowbringer Potency: 570 for the first enemy, and 25% less for all remaining enemies\nDisesteem Potency: 620 for the first enemy, and 25% less for all remaining enemies\n\nOblation\n\nLv. 82\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by target party member or self by 10%.\nDuration: 10s\nMaximum Charges: 2\n\nSalt and Darkness\n\nPrerequisite Quest\n\nLv. 86\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nAll enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 500 for the first enemy, and 25% less for all remaining enemies.\n\nShadowbringer\n\nLv. 90\n\nAbility\nInstant\n60s\n-\n\n10y\n\n10y\n\nDeals unaspected damage to all enemies in a straight line before you with a potency of 600 for the first enemy, and 25% less for all remaining enemies.\nMaximum Charges: 2\nCan only be executed while under the effect of Darkside.\n\nShadowed Vigil\n\nLv. 92\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 40%.\nDuration: 15s\nAdditional Effect: Grants Vigilant\nDuration: 20s\nVigilant Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 1,200\n\nScarlet Delirium\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 620.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Bloodspiller changes to Scarlet Delirium while under the effect of Delirium.\n\nComeuppance\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 720.\nCombo Action: Scarlet Delirium\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Scarlet Delirium changes to Comeuppance when requirements for execution are met.\n\nTorcleaver\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 820.\nCombo Action: Comeuppance\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Comeuppance changes to Torcleaver when requirements for execution are met.\n\nImpalement\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Quietus changes to Impalement when requirements for execution are met.\n\nDisesteem\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n10y\n\n10y\n\nDeals physical damage to all enemies in a straight line before you with a potency of 1,000 for the first enemy, and 25% less for all remaining enemies.\nCan only be executed while Scorn is active."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampart\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nReduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s\n\nLow Blow\n\nLv. 12\n\nAbility\nInstant\n25s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 5s\n\nProvoke\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nGesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.\n\nInterject\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nInterrupts the use of a target's action.\n\nReprisal\n\nLv. 22\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nReduces damage dealt by nearby enemies by 10%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nShirk\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nDiverts 25% of enmity to target party member."
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nTank Mastery\n\nLv. 1\n\nReduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.\n\nBlackblood\n\nLv. 62\n\nAllows for Blood Gauge accumulation upon the landing of certain actions.\n\nEnhanced Blackblood\n\nLv. 66\n\nAllows for Blood Gauge accumulation upon the landing of any weaponskill or spell while under the effect of Blood Weapon.\n\nBlood Weapon Mastery\n\nLv. 68\n\nUpgrades Blood Weapon to Delirium.\n\nDarkside Mastery\n\nLv. 74\n\nUpgrades Flood of Darkness and Edge of Darkness to Flood of Shadow and Edge of Shadow respectively.\n\nEnhanced Unmend\n\nLv. 84\n\nReduces recast time of Shadowstride by 5 seconds when executing Unmend on most targets.\n\nMelee Mastery\n\nLv. 84\n\nIncreases the potency of Hard Slash to 180, Syphon Strike to 120, and Souleater to 140.\n\nEnhanced Living Shadow\n\nLv. 88\n\nIncreases the potency of attacks dealt by your simulacrum to 420.\n\nEnhanced Living Shadow II\n\nLv. 90\n\nUpgrades Flood of Shadow executed by your simulacrum to Shadowbringer, which delivers an attack to all enemies in a straight line before it with a potency of 570 for the first enemy, and 25% less for all remaining enemies.\n\nShadow Wall Mastery\n\nLv. 92\n\nUpgrades Shadow Wall to Shadowed Vigil.\n\nMelee Mastery II\n\nLv. 94\n\nIncreases the potency of Hard Slash to 300, Syphon Strike to 240, Souleater to 260, Stalwart Soul to 120, Carve and Spit to 540, Bloodspiller to 600, and Quietus to 240.\n\nEnhanced Delirium\n\nLv. 96\n\nUpgrades Bloodspiller and Quietus to Scarlet Delirium and Impalement respectively.\n\nEnhanced Living Shadow III\n\nLv. 100\n\nGrants the effect of Scorn after executing Living Shadow.\nDuration: 30s\nAdditionally upgrades Carve and Spit executed by your simulacrum to Disesteem, which delivers an attack to all enemies in a straight line before it with a potency of 620 for the first enemy, and 25% less for all remaining enemies."
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Rampart\n\nLv. 94\n\nAdds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.\n\nEnhanced Reprisal\n\nLv. 98\n\nExtends the duration of Reprisal to 15 seconds."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHard Slash\n\nSyphon Strike\n\nSouleater\n\nRecovers HP and MP while increasing the Blood Gauge.\n\nUnleash\n\nStalwart Soul\n\nHits multiple enemies while also restoring MP and increasing the Blood Gauge.\n\nScarlet Delirium\n\nComeuppance\n\nTorcleaver\n\nA high-damage combo requiring stacks of Delirium that also restores MP."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nBlood Gauge\nUpon learning the action Grit, a symbol will appear on the screen indicating when it is in effect. Grit increases enmity gained from using other actions.\n\nUpon learning the trait Blackblood, the symbol which indicates the use of Grit will change to also display the Blood Gauge.\n\nThe Blood Gauge displays the amount of Blackblood a dark knight has accumulated, which can be used to execute several actions such as Bloodspiller (acquired at level 62) and Quietus (acquired at level 64).\n\nDarkside Gauge\n\nUpon learning the action Flood of Darkness, an additional gauge will be displayed, indicating the remaining duration of Darkside.\n\nDarkside increases damage dealt, and its duration can be extended by using actions such as Flood of Darkness and Edge of Darkness (acquired at level 40).\n\nUpon learning the action The Blackest Night, an icon indicating the effect of Dark Arts will be displayed on the Darkside Gauge. Dark Arts is granted when the barrier created by the Blackest Night is completely absorbed. It can then be used to execute Flood of Darkness or Edge of Darkness without MP cost.\n\nUpon learning the action Living Shadow, you can conjure a simulacrum to fight alongside you. Its duration will be displayed alongside the Darkside Gauge.\n\nSimple Mode\n\nBlood Gauge\n\nGrit (Active)\n\nThe gauge cannot be displayed in simple mode until learning the trait Blackblood at level 62.\n\nDarkside Gauge\n\nDarkside\n\nDark Arts\n\nLiving Shadow"
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHard Slash\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nSyphon Strike\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Hard Slash\n\n※This action cannot be assigned to a hotbar.\n\nSouleater\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Syphon Strike\nAdditional Effect: Converts 100% of damage dealt into HP\n\n※This action cannot be assigned to a hotbar.\n\nImpalement\n\nWeaponskill\nInstant\n14s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Absorbs 100% of damage dealt as HP\nThis weaponskill does not share a recast timer with any other actions.\n\nShadowbringer\n\nAbility\nInstant\n1s\n-\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 6,000 to all enemies in a straight line before you.\nConsumes 12,000 HP when executed.\nAdditional Effect: Grants Blackblood\nDuration: 10s\nCan only be executed when current HP is above 12,000 or while under the effect of Dark Arts.\n\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready.\n\nPlunge\n\nAbility\nInstant\n12s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Afflicts target with Sole Survivor\nSole Survivor Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nIf that target should be KO'd in battle before Sole Survivor expires, your HP and MP will be restored by 15%, and the recast time of Plunge will be reset.\nCannot be executed while bound.\n\nThe Blackest Night\n\nAbility\nInstant\n16s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 8s\nGrants Dark Arts when barrier is completely absorbed.\nDuration: 15s\nDark Arts Effect: Consume Dark Arts instead of HP to execute Shadowbringer\nMaximum Charges: 2\n\nSalted Earth\n\nAbility\nInstant\n28s\n-\n\n0y\n\n10y\n\nInstantly draws nearby enemies within 10 yalms to your side, and creates a patch of salted earth at your feet, dealing unaspected damage over time to enemies within a 5-yalm radius.\nPotency: 5,000\nDuration: 10s\nAdditional Effect: Gradually restores your HP and reduces damage taken by 20% while standing in the patch of salted earth\nCure Potency: 5,000\n\n※Action changes to Salt and Darkness upon execution.\n\nScarlet Delirium\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Grants Comeuppance Ready\nCan only be executed while under the effect of Blackblood.\n\n※This action cannot be assigned to a hotbar.\n\nComeuppance\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nPotency increases up to 14,000 as your HP decreases.\nAdditional Effect: Grants Torcleaver Ready\nCan only be executed while under the effect of Blackblood and Comeuppance Ready.\n\n※This action cannot be assigned to a hotbar.\n\nTorcleaver\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nPotency increases up to 16,000 as your HP decreases.\nCan only be executed while under the effect of Blackblood and Torcleaver Ready.\n\n※This action cannot be assigned to a hotbar.\n\nSalt and Darkness\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nAll enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 6,000.\nAdditional Effect: Bind\nDuration: 2s\n\n※This action cannot be assigned to a hotbar.\n\nDisesteem\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 16,000 to all enemies in a straight line.\nCan only be executed while under the effect of Scorn.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nEventide\n\nInstant\n10s\n-\n\n0y\n\n30y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before and behind you.\nPotency increases up to 24,000 as HP nears maximum.\nHP is reduced to 1 upon execution.\nAdditional Effect: Grants Undead Redemption\nUndead Redemption Effect: Most attacks cannot reduce your HP to less than 1, and you absorb 100% of weaponskill damage dealt as HP\nDuration: 10s\nAdditional Effect: Grants Blackblood\nDuration: 10s\nAdditional Effect: Grants Scorn\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Disesteem while under the effect of Scorn.\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampage\n\nAbility\nInstant\n45s\n-\n\n0y\n\n10y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s\n\nRampart\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s\n\nFull Swing\n\nAbility\nInstant\n30s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nTank\n\nThe pious Ishgardian clergy guide the flock, and the devout knights protect the weak. Yet even the holiest of men succumb to the darkest of temptations.\n\nNone dare to administer justice to these sacrosanct elite residing outside the reach of the law. Who, then, defends the feeble from the transgressions of those meant to guide and protect them?\n\nA valiant few take up arms to defend the downtrodden, and not even the holy priests and knights can escape their judgment. Pariahs in their own land, they are known by many as “dark knights.”\n\nThese sentinels bear no shields declaring their allegiance. Instead, their greatswords act as beacons to guide the meek through darkness.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHard Slash\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n\nSyphon Strike\n\nLv. 2\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Hard Slash\nCombo Potency: 380\nCombo Bonus: Restores MP\n\nUnleash\n\nLv. 6\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity\n\nGrit\n\nLv. 10\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nSignificantly increases enmity generation.\nEffect ends upon reuse.\n\nRelease Grit\n\nLv. 10\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nCancels the effect of Grit.\n\nUnmend\n\nLv. 15\n\nSpell\nInstant\n\n2.5s\n-\n\n20y\n\n0y\n\nDeals unaspected damage with a potency of 150.\nAdditional Effect: Increased enmity\nAdditional Effect: Reduces the recast time of Shadowstride by 5 seconds\n\nSouleater\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 260.\nCombo Action: Syphon Strike\nCombo Potency: 480\nCombo Bonus: Restores own HP\nCure Potency: 300\nCombo Bonus: Increases Blood Gauge by 20\n\nFlood of Darkness\n\nJob Quest\n\nLv. 30\n\nAbility\nInstant\n1s\n3000 MP\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 100 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Darkness.\n\nBlood Weapon\n\nJob Quest\n\nLv. 35\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGrants 3 stacks of Blood Weapon, each stack increasing Blood Gauge by 10 and restoring MP upon landing weaponskills or spells.\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.\n\nShadow Wall\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 30%.\nDuration: 15s\n\nStalwart Soul\n\nLv. 40\n\nSpell\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDeals unaspected damage with a potency of 120 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Unleash\nCombo Potency: 160\nCombo Bonus: Restores MP\nCombo Bonus: Increases Blood Gauge by 20\n\nEdge of Darkness\n\nJob Quest\n\nLv. 40\n\nAbility\nInstant\n1s\n3000 MP\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 300.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Darkness.\n\nDark Mind\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces physical damage taken by 10% and magic damage taken by 20%.\nDuration: 10s\n\nLiving Dead\n\nJob Quest\n\nLv. 50\n\nAbility\nInstant\n300s\n-\n\n0y\n\n0y\n\nGrants the effect of Living Dead.\nWhen HP is reduced to 0 while under the effect of Living Dead, instead of becoming KO'd, your status will change to Walking Dead.\nLiving Dead Duration: 10s\nAdditional Effect: Restores HP with each weaponskill successfully delivered or spell cast\nCure Potency: 1500\nWhile under the effect of Walking Dead, most attacks will not lower your HP below 1. If, before the Walking Dead timer runs out, an amount of HP totaling your maximum HP is restored, the effect will change to Undead Rebirth. If this amount is not restored, you will be KO'd.\nWalking Dead Duration: 10s\nWhile under the effect of Undead Rebirth, most attacks will not lower your HP below 1.\nUndead Rebirth Duration: Time remaining on Walking Dead\n\nSalted Earth\n\nJob Quest\n\nLv. 52\n\nAbility\nInstant\n90s\n-\n\n0y\n\n5y\n\nCreates a patch of salted earth at your feet, dealing unaspected damage with a potency of 50 to any enemies who enter.\nDuration: 15s\n\nShadowstride\n\nJob Quest\n\nLv. 54\n\nAbility\nInstant\n30s\n-\n\n20y\n\n0y\n\nRush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.\n\nAbyssal Drain\n\nJob Quest\n\nLv. 56\n\nAbility\nInstant\n60s\n-\n\n20y\n\n5y\n\nDeals unaspected damage with a potency of 240 to target and all enemies nearby it.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Carve and Spit.\n\nCarve and Spit\n\nJob Quest\n\nLv. 60\n\nAbility\nInstant\n60s\n-\n\n3y\n\n0y\n\nDelivers a threefold attack with a potency of 540.\nAdditional Effect: Restores own HP\nCure Potency: 500\nAdditional Effect: Restores MP\nShares a recast timer with Abyssal Drain.\n\nBloodspiller\n\nLv. 62\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 600.\nBlood Gauge Cost: 50\n\nQuietus\n\nLv. 64\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 240 to all nearby enemies.\nBlood Gauge Cost: 50\n\nDark Missionary\n\nLv. 66\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s\n\nDelirium\n\nLv. 68\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nGrants 3 stacks of Delirium and Blood Weapon.\nDelirium Effect: Changes Bloodspiller to Scarlet Delirium and Quietus to Impalement\nDuration: 15s\nBlood Weapon Effect: Each stack increases Blood Gauge by 10 and restores MP upon landing weaponskills or spells\nDuration: 15s\nEffect does not stack when hitting multiple targets with a single attack.\n\nThe Blackest Night\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n15s\n3000 MP\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage totaling 25% of target's maximum HP.\nDuration: 7s\nGrants Dark Arts when barrier is completely absorbed.\nDark Arts Effect: Consume Dark Arts instead of MP to execute Edge of Shadow or Flood of Shadow\n\nFlood of Shadow\n\nLv. 74\n\nAbility\nInstant\n1s\n3000 MP\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 160 to all enemies in a straight line before you.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Edge of Shadow.\n\nEdge of Shadow\n\nLv. 74\n\nAbility\nInstant\n1s\n3000 MP\n\n3y\n\n0y\n\nDeals unaspected damage with a potency of 460.\nAdditional Effect: Grants Darkside, increasing damage dealt by 10%\nDuration: 30s\nExtends Darkside duration by 30s to a maximum of 60s.\nShares a recast timer with Flood of Shadow.\n\nLiving Shadow\n\nLv. 80\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nConjure a simulacrum of your darkside to fight alongside you.\nDuration: 22s\nAdditional Effect: Grants Scorn\nDuration: 30s\nSimulacrum Attack Potency: 420\nAdditional Effect: Simulacrum is able to execute Shadowbringer and Disesteem\nShadowbringer Potency: 570 for the first enemy, and 25% less for all remaining enemies\nDisesteem Potency: 620 for the first enemy, and 25% less for all remaining enemies\n\nOblation\n\nLv. 82\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nReduces damage taken by target party member or self by 10%.\nDuration: 10s\nMaximum Charges: 2\n\nSalt and Darkness\n\nPrerequisite Quest\n\nLv. 86\n\nAbility\nInstant\n20s\n-\n\n0y\n\n0y\n\nAll enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 500 for the first enemy, and 25% less for all remaining enemies.\n\nShadowbringer\n\nLv. 90\n\nAbility\nInstant\n60s\n-\n\n10y\n\n10y\n\nDeals unaspected damage to all enemies in a straight line before you with a potency of 600 for the first enemy, and 25% less for all remaining enemies.\nMaximum Charges: 2\nCan only be executed while under the effect of Darkside.\n\nShadowed Vigil\n\nLv. 92\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 40%.\nDuration: 15s\nAdditional Effect: Grants Vigilant\nDuration: 20s\nVigilant Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 1,200\n\nScarlet Delirium\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 620.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Bloodspiller changes to Scarlet Delirium while under the effect of Delirium.\n\nComeuppance\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 720.\nCombo Action: Scarlet Delirium\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Scarlet Delirium changes to Comeuppance when requirements for execution are met.\n\nTorcleaver\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 820.\nCombo Action: Comeuppance\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Comeuppance changes to Torcleaver when requirements for execution are met.\n\nImpalement\n\nLv. 96\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Restores MP\nCan only be executed while under the effect of Delirium.\n\n※This action cannot be assigned to a hotbar.\n※Quietus changes to Impalement when requirements for execution are met.\n\nDisesteem\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n10y\n\n10y\n\nDeals physical damage to all enemies in a straight line before you with a potency of 1,000 for the first enemy, and 25% less for all remaining enemies.\nCan only be executed while Scorn is active.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampart\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nReduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s\n\nLow Blow\n\nLv. 12\n\nAbility\nInstant\n25s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 5s\n\nProvoke\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nGesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.\n\nInterject\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nInterrupts the use of a target's action.\n\nReprisal\n\nLv. 22\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nReduces damage dealt by nearby enemies by 10%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nShirk\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nDiverts 25% of enmity to target party member.\n\nTrait\n\nTraits\nAcquired\nEffect\n\nTank Mastery\n\nLv. 1\n\nReduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.\n\nBlackblood\n\nLv. 62\n\nAllows for Blood Gauge accumulation upon the landing of certain actions.\n\nEnhanced Blackblood\n\nLv. 66\n\nAllows for Blood Gauge accumulation upon the landing of any weaponskill or spell while under the effect of Blood Weapon.\n\nBlood Weapon Mastery\n\nLv. 68\n\nUpgrades Blood Weapon to Delirium.\n\nDarkside Mastery\n\nLv. 74\n\nUpgrades Flood of Darkness and Edge of Darkness to Flood of Shadow and Edge of Shadow respectively.\n\nEnhanced Unmend\n\nLv. 84\n\nReduces recast time of Shadowstride by 5 seconds when executing Unmend on most targets.\n\nMelee Mastery\n\nLv. 84\n\nIncreases the potency of Hard Slash to 180, Syphon Strike to 120, and Souleater to 140.\n\nEnhanced Living Shadow\n\nLv. 88\n\nIncreases the potency of attacks dealt by your simulacrum to 420.\n\nEnhanced Living Shadow II\n\nLv. 90\n\nUpgrades Flood of Shadow executed by your simulacrum to Shadowbringer, which delivers an attack to all enemies in a straight line before it with a potency of 570 for the first enemy, and 25% less for all remaining enemies.\n\nShadow Wall Mastery\n\nLv. 92\n\nUpgrades Shadow Wall to Shadowed Vigil.\n\nMelee Mastery II\n\nLv. 94\n\nIncreases the potency of Hard Slash to 300, Syphon Strike to 240, Souleater to 260, Stalwart Soul to 120, Carve and Spit to 540, Bloodspiller to 600, and Quietus to 240.\n\nEnhanced Delirium\n\nLv. 96\n\nUpgrades Bloodspiller and Quietus to Scarlet Delirium and Impalement respectively.\n\nEnhanced Living Shadow III\n\nLv. 100\n\nGrants the effect of Scorn after executing Living Shadow.\nDuration: 30s\nAdditionally upgrades Carve and Spit executed by your simulacrum to Disesteem, which delivers an attack to all enemies in a straight line before it with a potency of 620 for the first enemy, and 25% less for all remaining enemies.\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Rampart\n\nLv. 94\n\nAdds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.\n\nEnhanced Reprisal\n\nLv. 98\n\nExtends the duration of Reprisal to 15 seconds.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nHard Slash\n\nSyphon Strike\n\nSouleater\n\nRecovers HP and MP while increasing the Blood Gauge.\n\nUnleash\n\nStalwart Soul\n\nHits multiple enemies while also restoring MP and increasing the Blood Gauge.\n\nScarlet Delirium\n\nComeuppance\n\nTorcleaver\n\nA high-damage combo requiring stacks of Delirium that also restores MP.\n\nJob Gauge\n\nBlood Gauge\nUpon learning the action Grit, a symbol will appear on the screen indicating when it is in effect. Grit increases enmity gained from using other actions.\n\nUpon learning the trait Blackblood, the symbol which indicates the use of Grit will change to also display the Blood Gauge.\n\nThe Blood Gauge displays the amount of Blackblood a dark knight has accumulated, which can be used to execute several actions such as Bloodspiller (acquired at level 62) and Quietus (acquired at level 64).\n\nDarkside Gauge\n\nUpon learning the action Flood of Darkness, an additional gauge will be displayed, indicating the remaining duration of Darkside.\n\nDarkside increases damage dealt, and its duration can be extended by using actions such as Flood of Darkness and Edge of Darkness (acquired at level 40).\n\nUpon learning the action The Blackest Night, an icon indicating the effect of Dark Arts will be displayed on the Darkside Gauge. Dark Arts is granted when the barrier created by the Blackest Night is completely absorbed. It can then be used to execute Flood of Darkness or Edge of Darkness without MP cost.\n\nUpon learning the action Living Shadow, you can conjure a simulacrum to fight alongside you. Its duration will be displayed alongside the Darkside Gauge.\n\nSimple Mode\n\nBlood Gauge\n\nGrit (Active)\n\nThe gauge cannot be displayed in simple mode until learning the trait Blackblood at level 62.\n\nDarkside Gauge\n\nDarkside\n\nDark Arts\n\nLiving Shadow\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nHard Slash\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nSyphon Strike\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Hard Slash\n\n※This action cannot be assigned to a hotbar.\n\nSouleater\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Syphon Strike\nAdditional Effect: Converts 100% of damage dealt into HP\n\n※This action cannot be assigned to a hotbar.\n\nImpalement\n\nWeaponskill\nInstant\n14s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Absorbs 100% of damage dealt as HP\nThis weaponskill does not share a recast timer with any other actions.\n\nShadowbringer\n\nAbility\nInstant\n1s\n-\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 6,000 to all enemies in a straight line before you.\nConsumes 12,000 HP when executed.\nAdditional Effect: Grants Blackblood\nDuration: 10s\nCan only be executed when current HP is above 12,000 or while under the effect of Dark Arts.\n\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready.\n\nPlunge\n\nAbility\nInstant\n12s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Afflicts target with Sole Survivor\nSole Survivor Effect: Reduces target's HP recovered by healing actions by 15%\nDuration: 12s\nIf that target should be KO'd in battle before Sole Survivor expires, your HP and MP will be restored by 15%, and the recast time of Plunge will be reset.\nCannot be executed while bound.\n\nThe Blackest Night\n\nAbility\nInstant\n16s\n-\n\n30y\n\n0y\n\nCreates a barrier around self or target party member that absorbs damage equivalent to a heal of 10,000 potency.\nDuration: 8s\nGrants Dark Arts when barrier is completely absorbed.\nDuration: 15s\nDark Arts Effect: Consume Dark Arts instead of HP to execute Shadowbringer\nMaximum Charges: 2\n\nSalted Earth\n\nAbility\nInstant\n28s\n-\n\n0y\n\n10y\n\nInstantly draws nearby enemies within 10 yalms to your side, and creates a patch of salted earth at your feet, dealing unaspected damage over time to enemies within a 5-yalm radius.\nPotency: 5,000\nDuration: 10s\nAdditional Effect: Gradually restores your HP and reduces damage taken by 20% while standing in the patch of salted earth\nCure Potency: 5,000\n\n※Action changes to Salt and Darkness upon execution.\n\nScarlet Delirium\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nPotency increases up to 12,000 as your HP decreases.\nAdditional Effect: Grants Comeuppance Ready\nCan only be executed while under the effect of Blackblood.\n\n※This action cannot be assigned to a hotbar.\n\nComeuppance\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nPotency increases up to 14,000 as your HP decreases.\nAdditional Effect: Grants Torcleaver Ready\nCan only be executed while under the effect of Blackblood and Comeuppance Ready.\n\n※This action cannot be assigned to a hotbar.\n\nTorcleaver\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nPotency increases up to 16,000 as your HP decreases.\nCan only be executed while under the effect of Blackblood and Torcleaver Ready.\n\n※This action cannot be assigned to a hotbar.\n\nSalt and Darkness\n\nAbility\nInstant\n10s\n-\n\n0y\n\n0y\n\nAll enemies standing in the corrupted patch of Salted Earth take additional unaspected damage with a potency of 6,000.\nAdditional Effect: Bind\nDuration: 2s\n\n※This action cannot be assigned to a hotbar.\n\nDisesteem\n\nWeaponskill\nInstant\n\n2.4s\n-\n\n10y\n\n10y\n\nDeals unaspected damage with a potency of 16,000 to all enemies in a straight line.\nCan only be executed while under the effect of Scorn.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nEventide\n\nInstant\n10s\n-\n\n0y\n\n30y\n\nDelivers an attack with a potency of 8,000 to all enemies in a straight line before and behind you.\nPotency increases up to 24,000 as HP nears maximum.\nHP is reduced to 1 upon execution.\nAdditional Effect: Grants Undead Redemption\nUndead Redemption Effect: Most attacks cannot reduce your HP to less than 1, and you absorb 100% of weaponskill damage dealt as HP\nDuration: 10s\nAdditional Effect: Grants Blackblood\nDuration: 10s\nAdditional Effect: Grants Scorn\nDuration: 15s\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 105s\n\n※Action changes to Disesteem while under the effect of Scorn.\n※Souleater Combo changes to Scarlet Delirium while under the effect of Blackblood.\n※Souleater Combo changes to Comeuppance while under the effect of Comeuppance Ready.\n※Souleater Combo changes to Torcleaver while under the effect of Torcleaver Ready.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampage\n\nAbility\nInstant\n45s\n-\n\n0y\n\n10y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s\n\nRampart\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s\n\nFull Swing\n\nAbility\nInstant\n30s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

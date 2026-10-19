@@ -1,0 +1,2074 @@
+{
+ "job": "pictomancer",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/pictomancer/",
+ "pageTitle": "ジョブガイド「ピクトマンサー」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\n時は第五星暦末期、マハの黒魔法とアムダプールの白魔法が衝突する魔大戦のさなかのこと。\n後に十二賢者のひとりとして称えられることになる流浪の画家「リルム」によって、新たな魔法「絵画魔法」が生み出された。\n杖を筆へと持ち替え、絵の具に見立てた魔力をもって想像したものを描き出し、事象に変換する――その術を極めれば、存在しない獣を、武器を、環境をも具現化することができるという。\n絵画魔法の使い手たるピクトマンサーに求められるのは絵心ではない、魔力を操る才と未来を思い描く想像力なのだ。\n\nジョブ開始クエスト",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/e25904d9d00a0c1067e479ea752557aaec6fc30d.png",
+   "https://lds-img.finalfantasyxiv.com/d/07406a981daf5e92fa645d070a97d8dc87e68a78.png",
+   "https://lds-img.finalfantasyxiv.com/d/615ab65c73e8727db1cd8de2bb161626170506c8.png",
+   "https://lds-img.finalfantasyxiv.com/d/2cf03c27a9e09631ea594dea8b064cf4f9aa48be.png",
+   "https://lds-img.finalfantasyxiv.com/d/2933360212b43c10972912ef1907e45937f50292.png",
+   "https://lds-img.finalfantasyxiv.com/d/a7bc8c6fb62a9d9666ef56e064ac6624474520c4.png",
+   "https://lds-img.finalfantasyxiv.com/d/89e15b3832fe4cd3edbe62d6149f48053694306f.png",
+   "https://lds-img.finalfantasyxiv.com/d/f9128e8be207d2af1ea466a8a16e0c84028bd237.png",
+   "https://lds-img.finalfantasyxiv.com/d/67d1a8e6464d65e94696ab65d1b0ba85e7501a91.png",
+   "https://lds-img.finalfantasyxiv.com/d/39158442095659217fb08bed59c45b2caf4ae7c2.png",
+   "https://lds-img.finalfantasyxiv.com/d/9ccb0df55e15663f80866bd12936553cef27e1f8.png",
+   "https://lds-img.finalfantasyxiv.com/d/839afb2d992cdfd4588764299d02f5acd46d8765.png",
+   "https://lds-img.finalfantasyxiv.com/d/78640b1974c2e3ac862c3e94b6cf0715c2a53705.png",
+   "https://lds-img.finalfantasyxiv.com/d/bc20c2aa10ac1db0fae2452b5c3cd41e2b9c2eda.png",
+   "https://lds-img.finalfantasyxiv.com/d/5d8842fd05fef2d1c4f940bd5a7b35137bdba502.png",
+   "https://lds-img.finalfantasyxiv.com/d/385f005903208963e20e251176a2e9b7efc0590f.png",
+   "https://lds-img.finalfantasyxiv.com/d/b17ceff782edd7fed2934d1bb6a918fb8e97ef7f.png",
+   "https://lds-img.finalfantasyxiv.com/d/bd61923ae5b677d8d93e57b962b23511d0f4396c.png",
+   "https://lds-img.finalfantasyxiv.com/d/3c48a4050ea4386ef17063dbc841e75327a8d29e.png",
+   "https://lds-img.finalfantasyxiv.com/d/83dc200badfab99ff0f550da3b13737e82dfa118.png",
+   "https://lds-img.finalfantasyxiv.com/d/4a31c08d79867d5b332f98f8616bb06b9088daf0.png",
+   "https://lds-img.finalfantasyxiv.com/d/5f09a63e115cb331f60826a258ba7d2cf51adf3f.png",
+   "https://lds-img.finalfantasyxiv.com/d/346a632a64591ed1e61406c1a85357112ae98a80.png",
+   "https://lds-img.finalfantasyxiv.com/d/8f7552113b38a8e6b3debb5ca900fbcd2bc3d0fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/f6f648fbed76b3d0b99e4127e8e9024234b6fb97.png",
+   "https://lds-img.finalfantasyxiv.com/d/900e2d32cfb03084ddf48bc8120763ad623f5540.png",
+   "https://lds-img.finalfantasyxiv.com/d/6463351c3b4bef69baddc35e1c6d93a247daa923.png",
+   "https://lds-img.finalfantasyxiv.com/d/f05b478236d27157b878276c280c3b49bd13cca6.png",
+   "https://lds-img.finalfantasyxiv.com/d/d711d26c3f29241311b78bca1d92cc18de18e35f.png",
+   "https://lds-img.finalfantasyxiv.com/d/39ff3bff7a4857c386313552edd236755358526a.png",
+   "https://lds-img.finalfantasyxiv.com/d/cafa13f63003b860d9edc8e67aa095fed5501a79.png",
+   "https://lds-img.finalfantasyxiv.com/d/5d8eefda835c959562af7d1fe12b229cedcca409.png",
+   "https://lds-img.finalfantasyxiv.com/d/10803efae25f689fa66fe9ddedce3a95390e80c5.png",
+   "https://lds-img.finalfantasyxiv.com/d/2405c837c6e42b5e05b84f9e10b30ef2eb6224e0.png",
+   "https://lds-img.finalfantasyxiv.com/d/ed684b430814130c6917a00018cd5e400430e210.png",
+   "https://lds-img.finalfantasyxiv.com/d/b6e90d61c6e71d968943043d62ddb5e1a9e6d7f3.png",
+   "https://lds-img.finalfantasyxiv.com/d/5611f2fd77f2a770574f207216a66a12629a7526.png",
+   "https://lds-img.finalfantasyxiv.com/d/34cd074b3bd5cc9036d2598ae899aed5e77e6db3.png",
+   "https://lds-img.finalfantasyxiv.com/d/96814a40791c36cc4eff5e82300e1fb851a4515e.png",
+   "https://lds-img.finalfantasyxiv.com/d/e7eb51e71ca43854e55e520c860658d166e4b266.png",
+   "https://lds-img.finalfantasyxiv.com/d/a7397b9f417ac2daf98e9f72b38e30768ec3b1cf.png",
+   "https://lds-img.finalfantasyxiv.com/d/cfe33f3c8faa98ade9f3f2fa13e4fbb1aa0cb3e3.png",
+   "https://lds-img.finalfantasyxiv.com/d/5627109a7394cce83a4085e16b4448a7d0262525.png",
+   "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+   "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/c0e56a0d4cf1578b83b7b074ca91f245bda5b8ed.png",
+   "https://lds-img.finalfantasyxiv.com/d/00385107dfd36a27756e8bdd935c565677386459.png",
+   "https://lds-img.finalfantasyxiv.com/d/79eb1db429f1e4c975a7a44b35c974cc192dc7d7.png",
+   "https://lds-img.finalfantasyxiv.com/d/b15e0a9f0d71e6c28356bad098818cd7e4c79766.png",
+   "https://lds-img.finalfantasyxiv.com/d/aa47b13470953c72f7f1319eb85345971374e0f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/4a8241cfd5161fa63aadae588a7bccb8948aabeb.png",
+   "https://lds-img.finalfantasyxiv.com/d/b374e26828c617c35ed61d4a8a1535101c38399f.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4e9d75773e873155e5f175971e4c3bb82b7b3c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/8a3991ea36e4afc117921e791810cbd6bd79f688.png",
+   "https://lds-img.finalfantasyxiv.com/d/32f6385276fcf8c8265169219051910acd58ca18.png",
+   "https://lds-img.finalfantasyxiv.com/d/19a18cabc7c500cf37a2a225fbce543b4a46b094.png",
+   "https://lds-img.finalfantasyxiv.com/d/f7ca8f42d105124efd328db0455e5941aba9acad.png",
+   "https://lds-img.finalfantasyxiv.com/d/2c9a38e15538f766d1a2f1cef421104335458698.png",
+   "https://lds-img.finalfantasyxiv.com/d/1d830f52710c0d2d198699098f5b7ad7c6a70496.png",
+   "https://lds-img.finalfantasyxiv.com/d/72b068c52a228df2cc72f6906d9595af240f5cd3.png",
+   "https://lds-img.finalfantasyxiv.com/d/303c02febb046418b4579c33dd60bf7d4881762e.png",
+   "https://lds-img.finalfantasyxiv.com/d/d27fd4cdfbfab888ea7a2dc563780523da531fec.png",
+   "https://lds-img.finalfantasyxiv.com/d/cf83b2d14e25b5cc4a2908500c0d192f95fad2fb.png",
+   "https://lds-img.finalfantasyxiv.com/d/c68a47cb4ad350d16d41f2835c8f2c83e63acc00.png",
+   "https://lds-img.finalfantasyxiv.com/d/80caa4495f49a84e017745a21e6bc0c997c8c420.png",
+   "https://lds-img.finalfantasyxiv.com/d/8a084fdc2deb34a20608e057871e3d237017b42c.png",
+   "https://lds-img.finalfantasyxiv.com/d/07f72a1e8df3e068a0111c25871a8b6b61117636.png",
+   "https://lds-img.finalfantasyxiv.com/d/d7522955f9d7c3aa0ff024d9762644de023f0347.png",
+   "https://lds-img.finalfantasyxiv.com/d/cfe265bf9bf3b385248588694df294aa3f0c2d65.png",
+   "https://lds-img.finalfantasyxiv.com/d/292cd782b225aeb87e590190f12b8963f759b4ba.png",
+   "https://lds-img.finalfantasyxiv.com/d/e015114ded2f4f0c44b02c840de79c23e98dedf6.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+   "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+   "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/a/1AyE130dODasroyg8hkT34ncdM.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "レッドファイア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e25904d9d00a0c1067e479ea752557aaec6fc30d.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に火属性魔法攻撃。\n威力：490\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。",
+     "descriptionHtml": "対象に火属性魔法攻撃。<br/>威力：490<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "グリーンエアロ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07406a981daf5e92fa645d070a97d8dc87e68a78.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 5,
+     "jobclassText": "Lv5",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に風属性魔法攻撃。\n威力：530\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイアがグリーンエアロに変化する。",
+     "descriptionHtml": "対象に風属性魔法攻撃。<br/>威力：530<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとレッドファイアがグリーンエアロに変化する。"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "テンペラコート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/615ab65c73e8727db1cd8de2bb161626170506c8.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを60秒短縮する。",
+     "descriptionHtml": "自身に一定量のダメージを防ぐバリアを張る。<br/>このバリアは対象の最大ＨＰの20％分のダメージを軽減する。<br/>効果時間：10秒<br/>バリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを60秒短縮する。"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "ブルーウォータ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2cf03c27a9e09631ea594dea8b064cf4f9aa48be.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 15,
+     "jobclassText": "Lv15",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に水属性魔法攻撃。\n威力：570\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロがブルーウォータに変化する。",
+     "descriptionHtml": "対象に水属性魔法攻撃。<br/>威力：570<br/>追加効果：「パレットゲージ」を25上昇させる。<br/>追加効果：自身に「ホワイトペイント」を付与する。<br/>最大スタック数：5<br/>発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとグリーンエアロがブルーウォータに変化する。"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "スマッジ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2933360212b43c10972912ef1907e45937f50292.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\nバインド中は実行不可。",
+     "descriptionHtml": "自身の15m前方に向かって素早く移動する。<br/>追加効果：自身の移動速度を上昇させる。<br/>効果時間：5秒<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "レッドファイラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7bc8c6fb62a9d9666ef56e064ac6624474520c4.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 25,
+     "jobclassText": "Lv25",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：180\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。",
+     "descriptionHtml": "対象とその周囲の敵に火属性範囲魔法攻撃。<br/>威力：180<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "ピクトアニマル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/89e15b3832fe4cd3edbe62d6149f48053694306f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「アニマル」の絵素を描く。\nこのアクションはホットバーにセットすると異なるアクションに変化する。\n変化するアクションは、ピクトポンポン、ピクトウィング、ピクトクロー、ピクトファングの4種類となり、実行することで順番に変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "「アニマル」の絵素を描く。<br/>このアクションはホットバーにセットすると異なるアクションに変化する。<br/>変化するアクションは、ピクトポンポン、ピクトウィング、ピクトクロー、ピクトファングの4種類となり、実行することで順番に変化する。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "イマジンアニマル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f9128e8be207d2af1ea466a8a16e0c84028bd237.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "描いた「アニマル」の絵素を具現化する。\nアニマルキャンバスに絵素が描かれると、このアクションがイマジンポンポン、イマジンウィング、イマジンクロー、イマジンファングのいずれかに変化する。\n最大チャージ数：3\n発動条件：ピクトアニマルの絵が完成している",
+     "descriptionHtml": "描いた「アニマル」の絵素を具現化する。<br/>アニマルキャンバスに絵素が描かれると、このアクションがイマジンポンポン、イマジンウィング、イマジンクロー、イマジンファングのいずれかに変化する。<br/>最大チャージ数：3<br/>発動条件：ピクトアニマルの絵が完成している"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "モーグリストリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/67d1a8e6464d65e94696ab65d1b0ba85e7501a91.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "「モーグリ」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は70％減少する。\n発動条件：「モーグリシンボル」効果中",
+     "descriptionHtml": "「モーグリ」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。<br/>威力：1000<br/>2体目以降の対象への威力は70％減少する。<br/>発動条件：「モーグリシンボル」効果中"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "ピクトポンポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/39158442095659217fb08bed59c45b2caf4ae7c2.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ポンポン」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトポンポンに変化する。",
+     "descriptionHtml": "「ポンポン」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：アニマルキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトアニマルがピクトポンポンに変化する。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "ピクトウィング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9ccb0df55e15663f80866bd12936553cef27e1f8.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ウィング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトウィングに変化する。",
+     "descriptionHtml": "「ウィング」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：アニマルキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトアニマルがピクトウィングに変化する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "イマジンポンポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/839afb2d992cdfd4588764299d02f5acd46d8765.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ポンポン」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトポンポン」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ポンポン」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンポンポンに変化する。",
+     "descriptionHtml": "「ポンポン」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は70％減少する。<br/>追加効果：自身に「ピクトポンポン」のアニマルシンボルを付与する。<br/>最大チャージ数：3<br/>発動条件：アニマルキャンバスに「ポンポン」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンアニマルがイマジンポンポンに変化する。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "イマジンウィング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/78640b1974c2e3ac862c3e94b6cf0715c2a53705.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ウィング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトウィング」のアニマルシンボルを付与する。\n「ピクトポンポン」と「ピクトウィング」のアニマルシンボルが揃うと、「モーグリシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ウィング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンウィングに変化する。",
+     "descriptionHtml": "「ウィング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は70％減少する。<br/>追加効果：自身に「ピクトウィング」のアニマルシンボルを付与する。<br/>「ピクトポンポン」と「ピクトウィング」のアニマルシンボルが揃うと、「モーグリシンボル」が付与される。<br/>最大チャージ数：3<br/>発動条件：アニマルキャンバスに「ウィング」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンアニマルがイマジンウィングに変化する。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "グリーンエアロラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc20c2aa10ac1db0fae2452b5c3cd41e2b9c2eda.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：200\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイラがグリーンエアロラに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に風属性範囲魔法攻撃。<br/>威力：200<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとレッドファイラがグリーンエアロラに変化する。"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "ブルーウォタラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5d8842fd05fef2d1c4f940bd5a7b35137bdba502.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に水属性範囲魔法攻撃。\n威力：220\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロラがブルーウォタラに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に水属性範囲魔法攻撃。<br/>威力：220<br/>追加効果：「パレットゲージ」を25上昇させる。<br/>追加効果：自身に「ホワイトペイント」を付与する。<br/>最大スタック数：5<br/>発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとグリーンエアロラがブルーウォタラに変化する。"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "ピクトウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/385f005903208963e20e251176a2e9b7efc0590f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ウェポン」の絵素を描く。\nこのアクションはホットバーにセットするとピクトハンマーに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "「ウェポン」の絵素を描く。<br/>このアクションはホットバーにセットするとピクトハンマーに変化する。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "イマジンウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b17ceff782edd7fed2934d1bb6a918fb8e97ef7f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "描いた「ウェポン」の絵素を具現化する。ウェポンキャンバスに絵素が描かれると、このアクションがイマジンハンマーに変化する。\n最大チャージ数：2\n発動条件：自身が戦闘状態かつピクトウェポンの絵が完成している",
+     "descriptionHtml": "描いた「ウェポン」の絵素を具現化する。ウェポンキャンバスに絵素が描かれると、このアクションがイマジンハンマーに変化する。<br/>最大チャージ数：2<br/>発動条件：自身が戦闘状態かつピクトウェポンの絵が完成している"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "ハンマースタンプ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bd61923ae5b677d8d93e57b962b23511d0f4396c.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n発動条件：「ハンマーコンボ実行可」効果中",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：560<br/>2体目以降の対象への威力は70％減少する。<br/>このアクションは必ずクリティカルヒットかつダイレクトヒットする。<br/>クリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>発動条件：「ハンマーコンボ実行可」効果中"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "ピクトハンマー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3c48a4050ea4386ef17063dbc841e75327a8d29e.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ハンマー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「ハンマーコンボ実行可」非効果中かつウェポンキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトウェポンがピクトハンマーに変化する。",
+     "descriptionHtml": "「ハンマー」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：「ハンマーコンボ実行可」非効果中かつウェポンキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトウェポンがピクトハンマーに変化する。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "イマジンハンマー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/83dc200badfab99ff0f550da3b13737e82dfa118.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ハンマー」の絵素を具現化し、自身に3スタックの「ハンマーコンボ実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：自身が戦闘状態かつウェポンキャンバスに「ハンマー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンウェポンがイマジンハンマーに変化する。",
+     "descriptionHtml": "「ハンマー」の絵素を具現化し、自身に3スタックの「ハンマーコンボ実行可」を付与する。<br/>効果時間：30秒<br/>最大チャージ数：2<br/>発動条件：自身が戦闘状態かつウェポンキャンバスに「ハンマー」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンウェポンがイマジンハンマーに変化する。"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "シアンブリザド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4a31c08d79867d5b332f98f8616bb06b9088daf0.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に氷属性魔法攻撃。\n威力：860\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "対象に氷属性魔法攻撃。<br/>威力：860<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "シアンブリザラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5f09a63e115cb331f60826a258ba7d2cf51adf3f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に氷属性範囲魔法攻撃。\n威力：360\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "対象とその周囲の敵に氷属性範囲魔法攻撃。<br/>威力：360<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "サブトラクティブパレット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/346a632a64591ed1e61406c1a85357112ae98a80.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に3スタックの「サブトラクティブパレット」を付与する。\n追加効果：自身に「色調反転」を付与する。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：「サブトラクティブパレット」非効果中かつ「パレットゲージ」50",
+     "descriptionHtml": "自身に3スタックの「サブトラクティブパレット」を付与する。<br/>追加効果：自身に「色調反転」を付与する。<br/>色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。<br/>発動条件：「サブトラクティブパレット」非効果中かつ「パレットゲージ」50"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "イエローストーン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8f7552113b38a8e6b3debb5ca900fbcd2bc3d0fb.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に土属性魔法攻撃。\n威力：900\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザドがイエローストーンに変化する。",
+     "descriptionHtml": "対象に土属性魔法攻撃。<br/>威力：900<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとシアンブリザドがイエローストーンに変化する。"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "マゼンタサンダー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f6f648fbed76b3d0b99e4127e8e9024234b6fb97.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に雷属性魔法攻撃。\n威力：940\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストーンがマゼンタサンダーに変化する。",
+     "descriptionHtml": "対象に雷属性魔法攻撃。<br/>威力：940<br/>追加効果：自身に「ホワイトペイント」を付与する。<br/>最大スタック数：5<br/>発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイエローストーンがマゼンタサンダーに変化する。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "イエローストンラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/900e2d32cfb03084ddf48bc8120763ad623f5540.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：380\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザラがイエローストンラに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に土属性範囲魔法攻撃。<br/>威力：380<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：30秒<br/>発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとシアンブリザラがイエローストンラに変化する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "マゼンタサンダラ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6463351c3b4bef69baddc35e1c6d93a247daa923.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "魔法",
+     "cast": "2.3秒",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：400\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストンラがマゼンタサンダラに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に雷属性範囲魔法攻撃。<br/>威力：400<br/>追加効果：自身に「ホワイトペイント」を付与する。<br/>最大スタック数：5<br/>発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイエローストンラがマゼンタサンダラに変化する。"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "ピクトスケープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f05b478236d27157b878276c280c3b49bd13cca6.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「スケープ」の絵素を描く。\nこのアクションはホットバーにセットするとピクトスカイに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "「スケープ」の絵素を描く。<br/>このアクションはホットバーにセットするとピクトスカイに変化する。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "イマジンスケープ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d711d26c3f29241311b78bca1d92cc18de18e35f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "描いた「スケープ」の絵素を具現化する。\nスケープキャンバスに絵素が描かれると、このアクションがイマジンスカイに変化する。\n発動条件：自身が戦闘状態かつピクトスケープの絵が完成している",
+     "descriptionHtml": "描いた「スケープ」の絵素を具現化する。<br/>スケープキャンバスに絵素が描かれると、このアクションがイマジンスカイに変化する。<br/>発動条件：自身が戦闘状態かつピクトスケープの絵が完成している"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "ピクトスカイ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/39ff3bff7a4857c386313552edd236755358526a.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「スカイ」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「イマジンスカイ」非効果中かつスケープキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトスケープがピクトスカイに変化する。",
+     "descriptionHtml": "「スカイ」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：「イマジンスカイ」非効果中かつスケープキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトスケープがピクトスカイに変化する。"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "イマジンスカイ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cafa13f63003b860d9edc8e67aa095fed5501a79.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "「スカイ」の絵素を具現化して空間アートを展開し、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「サブトラクティブパレット実行可」を付与する。\n効果時間：30秒\n追加効果：自身に5スタックの「インスタレーション」を付与する。\n効果時間：30秒\nインスタレーション効果：空間アートの範囲内にいる場合、自身の色魔法およびスタープリズムのキャストタイムとリキャストタイムを25％短縮させる。\nこの効果が発動するたびにインスタレーションを1スタック消費する。\n追加効果：インスタレーションを5スタック全て消費すると自身に「レインボードリップ効果アップ」を付与する。\n効果時間：30秒\nレインボードリップ効果アップ効果：レインボードリップのリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：20秒\n発動条件：自身が戦闘状態かつスケープキャンバスに「スカイ」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンスケープがイマジンスカイに変化する。",
+     "descriptionHtml": "「スカイ」の絵素を具現化して空間アートを展開し、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。<br/>効果時間：20秒<br/>追加効果：自身に「サブトラクティブパレット実行可」を付与する。<br/>効果時間：30秒<br/>追加効果：自身に5スタックの「インスタレーション」を付与する。<br/>効果時間：30秒<br/>インスタレーション効果：空間アートの範囲内にいる場合、自身の色魔法およびスタープリズムのキャストタイムとリキャストタイムを25％短縮させる。<br/>この効果が発動するたびにインスタレーションを1スタック消費する。<br/>追加効果：インスタレーションを5スタック全て消費すると自身に「レインボードリップ効果アップ」を付与する。<br/>効果時間：30秒<br/>レインボードリップ効果アップ効果：レインボードリップのリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。<br/>追加効果：自身に「スタープリズム実行可」を付与する。<br/>効果時間：20秒<br/>発動条件：自身が戦闘状態かつスケープキャンバスに「スカイ」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンスケープがイマジンスカイに変化する。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "ホワイトホーリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5d8eefda835c959562af7d1fe12b229cedcca409.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は65％減少する。\n発動条件：「ホワイトペイント」および「色調反転」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：570<br/>2体目以降の対象への威力は65％減少する。<br/>発動条件：「ホワイトペイント」および「色調反転」非効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "ハンマーブラッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10803efae25f689fa66fe9ddedce3a95390e80c5.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：580\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマースタンプ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマースタンプがハンマーブラッシュに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：580<br/>2体目以降の対象への威力は70％減少する。<br/>このアクションは必ずクリティカルヒットかつダイレクトヒットする。<br/>クリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>コンボ条件：ハンマースタンプ<br/>発動条件：「ハンマーコンボ実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとハンマースタンプがハンマーブラッシュに変化する。"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "ハンマーポリッシュ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2405c837c6e42b5e05b84f9e10b30ef2eb6224e0.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマーブラッシュ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマーブラッシュがハンマーポリッシュに変化する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：600<br/>2体目以降の対象への威力は70％減少する。<br/>このアクションは必ずクリティカルヒットかつダイレクトヒットする。<br/>クリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。<br/>コンボ条件：ハンマーブラッシュ<br/>発動条件：「ハンマーコンボ実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとハンマーブラッシュがハンマーポリッシュに変化する。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "テンペラグラッサ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ed684b430814130c6917a00018cd5e400430e210.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身に付与した「テンペラコート」を解除する代わりに、自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを付与する。\nこのバリアは対象の最大ＨＰの10％分のダメージを軽減する。\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n自身に付与されたバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを30秒短縮する。",
+     "descriptionHtml": "自身に付与した「テンペラコート」を解除する代わりに、自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを付与する。<br/>このバリアは対象の最大ＨＰの10％分のダメージを軽減する。<br/>効果時間：10秒<br/>発動条件：「テンペラコート」効果中<br/>自身に付与されたバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを30秒短縮する。"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "ブラックコメット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6e90d61c6e71d968943043d62ddb5e1a9e6d7f3.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "3.3秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：940\n2体目以降の対象への威力は65％減少する。\n発動条件：「ブラックペイント」および「色調反転」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：940<br/>2体目以降の対象への威力は65％減少する。<br/>発動条件：「ブラックペイント」および「色調反転」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "レインボードリップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5611f2fd77f2a770574f207216a66a12629a7526.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "魔法",
+     "cast": "4秒",
+     "recast": "6秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は85％減少する。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n自身に「レインボードリップ効果アップ」が付与されているとリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "対象に向かって前方直線範囲無属性魔法攻撃。<br/>威力：1000<br/>2体目以降の対象への威力は85％減少する。<br/>追加効果：自身に「ホワイトペイント」を付与する。<br/>最大スタック数：5<br/>自身に「レインボードリップ効果アップ」が付与されているとリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "ピクトクロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/34cd074b3bd5cc9036d2598ae899aed5e77e6db3.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「クロー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトクローに変化する。",
+     "descriptionHtml": "「クロー」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：アニマルキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトアニマルがピクトクローに変化する。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "ピクトファング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/96814a40791c36cc4eff5e82300e1fb851a4515e.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "魔法",
+     "cast": "3秒",
+     "recast": "4秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ファング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトファングに変化する。",
+     "descriptionHtml": "「ファング」の絵素を描く。<br/>自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。<br/>発動条件：アニマルキャンバスに絵素が描かれていない<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。<br/>また、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとピクトアニマルがピクトファングに変化する。"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "イマジンクロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e7eb51e71ca43854e55e520c860658d166e4b266.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「クロー」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトクロー」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「クロー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンクローに変化する。",
+     "descriptionHtml": "「クロー」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は70％減少する。<br/>追加効果：自身に「ピクトクロー」のアニマルシンボルを付与する。<br/>最大チャージ数：3<br/>発動条件：アニマルキャンバスに「クロー」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンアニマルがイマジンクローに変化する。"
+    },
+    {
+     "rowId": "pve_action__41",
+     "name": "イマジンファング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a7397b9f417ac2daf98e9f72b38e30768ec3b1cf.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ファング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトファング」のアニマルシンボルを付与する。\n「ピクトポンポン」「ピクトウィング」「ピクトクロー」「ピクトファング」が揃うと全てのアニマルシンボルが消滅し、「マディーンシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ファング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンファングに変化する。",
+     "descriptionHtml": "「ファング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：800<br/>2体目以降の対象への威力は70％減少する。<br/>追加効果：自身に「ピクトファング」のアニマルシンボルを付与する。<br/>「ピクトポンポン」「ピクトウィング」「ピクトクロー」「ピクトファング」が揃うと全てのアニマルシンボルが消滅し、「マディーンシンボル」が付与される。<br/>最大チャージ数：3<br/>発動条件：アニマルキャンバスに「ファング」の絵素が描かれている<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとイマジンアニマルがイマジンファングに変化する。"
+    },
+    {
+     "rowId": "pve_action__42",
+     "name": "マディーンレトリビューション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cfe33f3c8faa98ade9f3f2fa13e4fbb1aa0cb3e3.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "「マディーン」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとモーグリストリームがマディーンレトリビューションに変化する。",
+     "descriptionHtml": "「マディーン」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。<br/>威力：1100<br/>2体目以降の対象への威力は70％減少する。<br/>発動条件：「マディーンシンボル」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとモーグリストリームがマディーンレトリビューションに変化する。"
+    },
+    {
+     "rowId": "pve_action__43",
+     "name": "スタープリズム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5627109a7394cce83a4085e16b4448a7d0262525.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\n回復力：400\n発動条件：「スタープリズム実行可」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：1100<br/>2体目以降の対象への威力は70％減少する。<br/>追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。<br/>回復力：400<br/>発動条件：「スタープリズム実行可」効果中<br/>実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "アドル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b45e688d81b5607246600f904aac008364db0d1e.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒",
+     "descriptionHtml": "一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "スリプル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10e9fb5302668c923b8237ffbd4841ccc6c2edb4.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "MP800",
+     "range": "30m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。",
+     "descriptionHtml": "対象とその周囲の敵に睡眠を付与する。<br/>効果時間：30秒<br/>実行後にオートアタックを停止する。"
+    },
+    {
+     "rowId": "mrange_action__03",
+     "name": "ルーシッドドリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒",
+     "descriptionHtml": "自身のＭＰを継続回復する。<br/>効果量：55<br/>効果時間：21秒"
+    },
+    {
+     "rowId": "mrange_action__04",
+     "name": "迅速魔じんそくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "mrange_action__05",
+     "name": "堅実魔けんじつま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 44,
+     "jobclassText": "Lv44",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒",
+     "descriptionHtml": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。<br/>さらに、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "アクションダメージ・回復量かいふくりょうアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "アクションダメージ・回復量かいふくりょうアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad0c61780693af7ce5d7331856d865fadc941cc9.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：310\nグリーンエアロの威力：350\nブルーウォータの威力：390\nイマジンポンポンの威力：700\nイマジンウィングの威力：700\nモーグリストリームの威力：800\nハンマースタンプの威力：420",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>レッドファイアの威力：310<br/>グリーンエアロの威力：350<br/>ブルーウォータの威力：390<br/>イマジンポンポンの威力：700<br/>イマジンウィングの威力：700<br/>モーグリストリームの威力：800<br/>ハンマースタンプの威力：420"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "パレットゲージ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ed350b3a4f38f31ce5e9153909cd05d3f2740980.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "description": "パレットゲージが上昇するようになる。\n発動条件：ブルーウォータおよびブルーウォタラの命中時",
+     "descriptionHtml": "パレットゲージが上昇するようになる。<br/>発動条件：ブルーウォータおよびブルーウォタラの命中時"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "アクション威力いりょくアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fa01c39aad1f63bab6834385d2857e782f73bef3.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "description": "特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：380\nグリーンエアロの威力：420\nブルーウォータの威力：460\nレッドファイラの威力：150\nグリーンエアロラの威力：170\nブルーウォタラの威力：190\nハンマースタンプの威力：500\nシアンブリザドの威力：680\nイエローストーンの威力：720\nマゼンタサンダーの威力：760\nシアンブリザラの威力：330\nイエローストンラの威力：350\nマゼンタサンダラの威力：370",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>レッドファイアの威力：380<br/>グリーンエアロの威力：420<br/>ブルーウォータの威力：460<br/>レッドファイラの威力：150<br/>グリーンエアロラの威力：170<br/>ブルーウォタラの威力：190<br/>ハンマースタンプの威力：500<br/>シアンブリザドの威力：680<br/>イエローストーンの威力：720<br/>マゼンタサンダーの威力：760<br/>シアンブリザラの威力：330<br/>イエローストンラの威力：350<br/>マゼンタサンダラの威力：370"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "絵画魔法かいがまほう効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c098373a6a2923202dad6f792e26de1f24b7118.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "description": "自身に「ホワイトペイント」が付与される。\n発動条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時",
+     "descriptionHtml": "自身に「ホワイトペイント」が付与される。<br/>発動条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "ピクト効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1ff3ab29b234ca2041912c220d80cd3a67defb77.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "自身に5スタックの「インスタレーション」が付与される。\n効果時間：30秒\n発動条件：イマジンスカイ実行時",
+     "descriptionHtml": "自身に5スタックの「インスタレーション」が付与される。<br/>効果時間：30秒<br/>発動条件：イマジンスカイ実行時"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "スマッジ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b522ef5f10dd45407c96b6f7661b4d7a24863a0f.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "自身の移動速度を上昇させる。\n効果時間：5秒\n発動条件：スマッジ実行時",
+     "descriptionHtml": "自身の移動速度を上昇させる。<br/>効果時間：5秒<br/>発動条件：スマッジ実行時"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "アクション威力いりょくアップIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d89bc4bb459ec42ad2c6ff8170ccbfffe7962a50.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 84,
+     "jobclassText": "Lv84",
+     "description": "特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：420\nグリーンエアロの威力：460\nブルーウォータの威力：500\nイマジンポンポンの威力：800\nイマジンウィングの威力：800\nモーグリストリームの威力：1000\nハンマースタンプの威力：540\nシアンブリザドの威力：750\nイエローストーンの威力：790\nマゼンタサンダーの威力：830\nホワイトホーリーの威力：500",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>レッドファイアの威力：420<br/>グリーンエアロの威力：460<br/>ブルーウォータの威力：500<br/>イマジンポンポンの威力：800<br/>イマジンウィングの威力：800<br/>モーグリストリームの威力：1000<br/>ハンマースタンプの威力：540<br/>シアンブリザドの威力：750<br/>イエローストーンの威力：790<br/>マゼンタサンダーの威力：830<br/>ホワイトホーリーの威力：500"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "ピクト効果こうかアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0cfb3f30dad8142dc038fa326f1a0fe5c856a59c.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "description": "ハンマースタンプを実行するとハンマースタンプがハンマーブラッシュに変化し、ハンマーブラッシュを実行するとハンマーブラッシュがハンマーポリッシュに変化する。\nさらに、イマジンハンマーがチャージアクションに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "ハンマースタンプを実行するとハンマースタンプがハンマーブラッシュに変化し、ハンマーブラッシュを実行するとハンマーブラッシュがハンマーポリッシュに変化する。<br/>さらに、イマジンハンマーがチャージアクションに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "テンペラ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b238c0e118e493e49f7b4508b23a77e18cb0ba33.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "テンペラグラッサが実行できるようになる。\n発動条件：「テンペラコート」効果中",
+     "descriptionHtml": "テンペラグラッサが実行できるようになる。<br/>発動条件：「テンペラコート」効果中"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "サブトラクト効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1a308480d67b3af7711d2b97ba1b5c5c87a86163.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "description": "自身に「色調反転」が付与される。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：サブトラクティブパレット実行時",
+     "descriptionHtml": "自身に「色調反転」が付与される。<br/>色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。<br/>発動条件：サブトラクティブパレット実行時"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "ピクト効果こうかアップIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b63973ed575fe9f1b35a307c4f7f14dbf528c873.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "description": "自身に「レインボードリップ効果アップ」が付与される。\n効果時間：30秒\n発動条件：色魔法の実行によりインスタレーションの効果を全て消費したとき",
+     "descriptionHtml": "自身に「レインボードリップ効果アップ」が付与される。<br/>効果時間：30秒<br/>発動条件：色魔法の実行によりインスタレーションの効果を全て消費したとき"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "アクション威力いりょくアップIVふぉー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a3e17894ca98f3065d9b76d83657385abf02e1cc.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：490\nグリーンエアロの威力：530\nブルーウォータの威力：570\nレッドファイラの威力：180\nグリーンエアロラの威力：200\nブルーウォタラの威力：220\nハンマースタンプの威力：560\nシアンブリザドの威力：860\nイエローストーンの威力：900\nマゼンタサンダーの威力：940\nシアンブリザラの威力：360\nイエローストンラの威力：380\nマゼンタサンダラの威力：400\nホワイトホーリーの威力：570\nハンマーブラッシュの威力：580\nハンマーポリッシュの威力：600\nブラックコメットの威力：940",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>レッドファイアの威力：490<br/>グリーンエアロの威力：530<br/>ブルーウォータの威力：570<br/>レッドファイラの威力：180<br/>グリーンエアロラの威力：200<br/>ブルーウォタラの威力：220<br/>ハンマースタンプの威力：560<br/>シアンブリザドの威力：860<br/>イエローストーンの威力：900<br/>マゼンタサンダーの威力：940<br/>シアンブリザラの威力：360<br/>イエローストンラの威力：380<br/>マゼンタサンダラの威力：400<br/>ホワイトホーリーの威力：570<br/>ハンマーブラッシュの威力：580<br/>ハンマーポリッシュの威力：600<br/>ブラックコメットの威力：940"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "ピクト効果こうかアップIVふぉー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8bb7f53a94ef9f297e05eb1ee60f28d1424fa065.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "イマジンアニマルの最大チャージ数が3に増加する。\nさらに、イマジンアニマルにより実行できるアクションにピクトクローとピクトファングが追加される。",
+     "descriptionHtml": "イマジンアニマルの最大チャージ数が3に増加する。<br/>さらに、イマジンアニマルにより実行できるアクションにピクトクローとピクトファングが追加される。"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "ピクト効果こうかアップVふぁいぶ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/5a5b49af6e2cfc92bb9bd85310893fae68239348.png",
+     "acquired": [
+      {
+       "class": "ピクトマンサー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/t0iiQ-ja8O8YNZaVimL5Qb6Tnw.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "description": "自身に「スタープリズム実行可」が付与される。\n効果時間：20秒\n発動条件：イマジンスカイ実行時",
+     "descriptionHtml": "自身に「スタープリズム実行可」が付与される。<br/>効果時間：20秒<br/>発動条件：イマジンスカイ実行時"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "mrange_action__01",
+     "name": "迅速魔じんそくま効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "迅速魔のリキャストタイムを40秒に短縮する。",
+     "descriptionHtml": "迅速魔のリキャストタイムを40秒に短縮する。"
+    },
+    {
+     "rowId": "mrange_action__02",
+     "name": "アドル効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/590a381c0421f33d428c1dd51293c715a1a53ee7.png",
+     "acquired": [
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "アドルの効果時間を15秒に延長する。",
+     "descriptionHtml": "アドルの効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "レッドファイア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c0e56a0d4cf1578b83b7b074ca91f245bda5b8ed.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：5000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」非効果中\n\n「色魔法2実行可」効果中は、グリーンエアロに変化する。\n「色魔法3実行可」効果中は、ブルーウォータに変化する。\n「サブトラクティブパレット」効果中は、シアンブリザドに変化する。\n「サブトラクティブパレット」かつ「色魔法2実行可」効果中は、イエローストーンに変化する。\n「サブトラクティブパレット」かつ「色魔法3実行可」効果中は、マゼンタサンダーに変化する。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：5000<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「サブトラクティブパレット」非効果中<br/><br/>「色魔法2実行可」効果中は、グリーンエアロに変化する。<br/>「色魔法3実行可」効果中は、ブルーウォータに変化する。<br/>「サブトラクティブパレット」効果中は、シアンブリザドに変化する。<br/>「サブトラクティブパレット」かつ「色魔法2実行可」効果中は、イエローストーンに変化する。<br/>「サブトラクティブパレット」かつ「色魔法3実行可」効果中は、マゼンタサンダーに変化する。"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "ホワイトホーリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00385107dfd36a27756e8bdd935c565677386459.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：自身のＨＰを回復する。\n回復力：12000\n発動条件：「サブトラクティブパレット」非効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをブラックコメットと共有する。\n最大チャージ数：2\n\n「サブトラクティブパレット」効果中は、「ブラックコメット」に変化する。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：9000<br/>追加効果：自身のＨＰを回復する。<br/>回復力：12000<br/>発動条件：「サブトラクティブパレット」非効果中<br/>この魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをブラックコメットと共有する。<br/>最大チャージ数：2<br/><br/>「サブトラクティブパレット」効果中は、「ブラックコメット」に変化する。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "ピクトアニマル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/79eb1db429f1e4c975a7a44b35c974cc192dc7d7.png",
+     "type": "魔法",
+     "cast": "1.8秒",
+     "recast": "2.8秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「アニマル」の絵素を描く。\nドラフトポンポン効果中：ピクトポンポンに変化する。\nドラフトウィング効果中：ピクトウィングに変化する。\nドラフトクロー効果中：ピクトクローに変化する。\nドラフトファング効果中：ピクトファングに変化する。\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。",
+     "descriptionHtml": "「アニマル」の絵素を描く。<br/>ドラフトポンポン効果中：ピクトポンポンに変化する。<br/>ドラフトウィング効果中：ピクトウィングに変化する。<br/>ドラフトクロー効果中：ピクトクローに変化する。<br/>ドラフトファング効果中：ピクトファングに変化する。<br/>この魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "イマジンアニマル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b15e0a9f0d71e6c28356bad098818cd7e4c79766.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "描いた「アニマル」の絵素を具現化する。\nピクトポンポン効果中：イマジンポンポンに変化する。\nピクトウィング効果中：イマジンウィングに変化する。\nピクトクロー効果中：イマジンクローに変化する。\nピクトファング効果中：イマジンファングに変化する。\n最大チャージ数：2",
+     "descriptionHtml": "描いた「アニマル」の絵素を具現化する。<br/>ピクトポンポン効果中：イマジンポンポンに変化する。<br/>ピクトウィング効果中：イマジンウィングに変化する。<br/>ピクトクロー効果中：イマジンクローに変化する。<br/>ピクトファング効果中：イマジンファングに変化する。<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "モーグリストリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/aa47b13470953c72f7f1319eb85345971374e0f9.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "「モーグリ」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象に沈黙を付与する。\n効果時間：2秒\n発動条件：「モーグリシンボル」効果中\n\n「マディーンシンボル」効果中は、「マディーンレトリビューション」に変化する。",
+     "descriptionHtml": "「モーグリ」を具現化し、対象に向かって前方直線範囲魔法攻撃。<br/>威力：14000<br/>追加効果：対象に沈黙を付与する。<br/>効果時間：2秒<br/>発動条件：「モーグリシンボル」効果中<br/><br/>「マディーンシンボル」効果中は、「マディーンレトリビューション」に変化する。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "スマッジ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4a8241cfd5161fa63aadae588a7bccb8948aabeb.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：3秒\n追加効果：自身に「ラフドローイング」を付与する。\nラフドローイング効果：次の1回のピクト系アクションについて、詠唱時間無しで詠唱できる。\n効果時間：10秒\nバインド中は実行不可。",
+     "descriptionHtml": "自身の15m前方に向かって素早く移動する。<br/>追加効果：自身の移動速度を25％上昇させる。<br/>効果時間：3秒<br/>追加効果：自身に「ラフドローイング」を付与する。<br/>ラフドローイング効果：次の1回のピクト系アクションについて、詠唱時間無しで詠唱できる。<br/>効果時間：10秒<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "テンペラコート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b374e26828c617c35ed61d4a8a1535101c38399f.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "20秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「テンペラコート」を付与する。\nテンペラコート効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムが5秒短縮される。\n効果中はこのアクションがテンペラグラッサに変化する。",
+     "descriptionHtml": "自身に「テンペラコート」を付与する。<br/>テンペラコート効果：一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力12000相当<br/>効果時間：10秒<br/>バリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムが5秒短縮される。<br/>効果中はこのアクションがテンペラグラッサに変化する。"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "サブトラクティブパレット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4e9d75773e873155e5f175971e4c3bb82b7b3c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「サブトラクティブパレット」を付与する。\n再使用で解除する。\n効果時間：永続",
+     "descriptionHtml": "自身に「サブトラクティブパレット」を付与する。<br/>再使用で解除する。<br/>効果時間：永続"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "グリーンエアロ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8a3991ea36e4afc117921e791810cbd6bd79f688.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「色魔法2実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "ブルーウォータ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/32f6385276fcf8c8265169219051910acd58ca18.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：7000\n発動条件：「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：7000<br/>発動条件：「色魔法3実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "シアンブリザド",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/19a18cabc7c500cf37a2a225fbce543b4a46b094.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：7000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：7000<br/>追加効果：自身に「色魔法2実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「サブトラクティブパレット」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "イエローストーン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f7ca8f42d105124efd328db0455e5941aba9acad.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：8000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」かつ「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：8000<br/>追加効果：自身に「色魔法3実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「サブトラクティブパレット」かつ「色魔法2実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "マゼンタサンダー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2c9a38e15538f766d1a2f1cef421104335458698.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：9000\n発動条件：「サブトラクティブパレット」かつ「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：9000<br/>発動条件：「サブトラクティブパレット」かつ「色魔法3実行可」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "ブラックコメット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1d830f52710c0d2d198699098f5b7ad7c6a70496.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n発動条件：「サブトラクティブパレット」効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをホワイトホーリーと共有する。\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：12000<br/>発動条件：「サブトラクティブパレット」効果中<br/>この魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをホワイトホーリーと共有する。<br/>最大チャージ数：2<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "ピクトポンポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/72b068c52a228df2cc72f6906d9595af240f5cd3.png",
+     "type": "魔法",
+     "cast": "1.8秒",
+     "recast": "2.8秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ポンポン」の絵素を描き、自身に「ピクトポンポン」を付与する。\n効果時間：永続\n発動条件：「ドラフトポンポン」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ポンポン」の絵素を描き、自身に「ピクトポンポン」を付与する。<br/>効果時間：永続<br/>発動条件：「ドラフトポンポン」効果中<br/>この魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "ピクトウィング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/303c02febb046418b4579c33dd60bf7d4881762e.png",
+     "type": "魔法",
+     "cast": "1.8秒",
+     "recast": "2.8秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ウィング」の絵素を描き、自身に「ピクトウィング」を付与する。\n効果時間：永続\n発動条件：「ドラフトウィング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ウィング」の絵素を描き、自身に「ピクトウィング」を付与する。<br/>効果時間：永続<br/>発動条件：「ドラフトウィング」効果中<br/>この魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "ピクトクロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d27fd4cdfbfab888ea7a2dc563780523da531fec.png",
+     "type": "魔法",
+     "cast": "1.8秒",
+     "recast": "2.8秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「クロー」の絵素を描き、自身に「ピクトクロー」を付与する。\n効果時間：永続\n発動条件：「ドラフトクロー」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「クロー」の絵素を描き、自身に「ピクトクロー」を付与する。<br/>効果時間：永続<br/>発動条件：「ドラフトクロー」効果中<br/>この魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__18",
+     "name": "ピクトファング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cf83b2d14e25b5cc4a2908500c0d192f95fad2fb.png",
+     "type": "魔法",
+     "cast": "1.8秒",
+     "recast": "2.8秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "「ファング」の絵素を描き、自身に「ピクトファング」を付与する。\n効果時間：永続\n発動条件：「ドラフトファング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ファング」の絵素を描き、自身に「ピクトファング」を付与する。<br/>効果時間：永続<br/>発動条件：「ドラフトファング」効果中<br/>この魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__19",
+     "name": "イマジンポンポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c68a47cb4ad350d16d41f2835c8f2c83e63acc00.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ポンポン」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の与ダメージと回復効果を20％上昇させる。\n効果時間：10秒\n追加効果：自身に「ドラフトウィング」を付与する。\n効果時間：永続\n発動条件：「ピクトポンポン」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ポンポン」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>追加効果：自身の与ダメージと回復効果を20％上昇させる。<br/>効果時間：10秒<br/>追加効果：自身に「ドラフトウィング」を付与する。<br/>効果時間：永続<br/>発動条件：「ピクトポンポン」効果中<br/>最大チャージ数：2<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__20",
+     "name": "イマジンウィング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/80caa4495f49a84e017745a21e6bc0c997c8c420.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ウィング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の魔法のキャストタイムとリキャストタイムを25％短縮させ、さらに移動速度を25％上昇させる。\n効果時間：10秒\n追加効果：自身に「モーグリシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトクロー」を付与する。\n効果時間：永続\n発動条件：「ピクトウィング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ウィング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>追加効果：自身の魔法のキャストタイムとリキャストタイムを25％短縮させ、さらに移動速度を25％上昇させる。<br/>効果時間：10秒<br/>追加効果：自身に「モーグリシンボル」を付与する。<br/>効果時間：永続<br/>追加効果：自身に「ドラフトクロー」を付与する。<br/>効果時間：永続<br/>発動条件：「ピクトウィング」効果中<br/>最大チャージ数：2<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__21",
+     "name": "イマジンクロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8a084fdc2deb34a20608e057871e3d237017b42c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「クロー」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象が受けるダメージを10％上昇させ、さらに受ける回復効果を15％減少させる。\n効果時間：10秒\n追加効果：自身に「ドラフトファング」を付与する。\n効果時間：永続\n発動条件：「ピクトクロー」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「クロー」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>追加効果：対象が受けるダメージを10％上昇させ、さらに受ける回復効果を15％減少させる。<br/>効果時間：10秒<br/>追加効果：自身に「ドラフトファング」を付与する。<br/>効果時間：永続<br/>発動条件：「ピクトクロー」効果中<br/>最大チャージ数：2<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__22",
+     "name": "イマジンファング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07f72a1e8df3e068a0111c25871a8b6b61117636.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "「ファング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象に継続ダメージを与える。\n威力：4000\n効果時間：12秒\n追加効果：自身に「マディーンシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトポンポン」を付与する。\n効果時間：永続\n発動条件：「ピクトファング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「ファング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>追加効果：対象に継続ダメージを与える。<br/>威力：4000<br/>効果時間：12秒<br/>追加効果：自身に「マディーンシンボル」を付与する。<br/>効果時間：永続<br/>追加効果：自身に「ドラフトポンポン」を付与する。<br/>効果時間：永続<br/>発動条件：「ピクトファング」効果中<br/>最大チャージ数：2<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__23",
+     "name": "マディーンレトリビューション",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d7522955f9d7c3aa0ff024d9762644de023f0347.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "「マディーン」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象をスタンする。\n効果時間：2秒\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "「マディーン」を具現化し、対象に向かって前方直線範囲魔法攻撃。<br/>威力：14000<br/>追加効果：対象をスタンする。<br/>効果時間：2秒<br/>発動条件：「マディーンシンボル」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__24",
+     "name": "テンペラグラッサ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cfe265bf9bf3b385248588694df294aa3f0c2d65.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "2秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身に付与した「テンペラコート」の効果を終了させて、自身と周囲のパーティメンバーに「テンペラグラッサ」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\nテンペラグラッサ効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "自身に付与した「テンペラコート」の効果を終了させて、自身と周囲のパーティメンバーに「テンペラグラッサ」を付与する。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>テンペラグラッサ効果：一定量のダメージを防ぐバリアを張る。<br/>バリア量：回復力8000相当<br/>効果時間：10秒<br/>発動条件：「テンペラコート」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__25",
+     "name": "スタープリズム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/292cd782b225aeb87e590190f12b8963f759b4ba.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n回復力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーの与ダメージを10％上昇させる。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：15秒\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：16000<br/>追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。<br/>この追加効果は遮蔽物を越えて効果を発揮する。<br/>回復力：16000<br/>追加効果：対象の周囲30m以内にいるパーティメンバーの与ダメージを10％上昇させる。<br/>この追加効果は遮蔽物を越えて効果を発揮する。<br/>効果時間：15秒<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "ウォール・オブ・ファット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e015114ded2f4f0c44b02c840de79c23e98dedf6.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "8m",
+     "description": "「でぶチョコボ」を具現化し、自身の周囲の敵を15mノックバックさせる。\n追加効果：自身の足元に「ウォール・オブ・ファット」を生成する。\n効果時間：15秒\nウォール・オブ・ファット効果：範囲内にいる自身およびパーティメンバーの被ダメージを25％軽減し、受けるＨＰ回復効果を25％上昇させる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとスタープリズムに変化する。",
+     "descriptionHtml": "「でぶチョコボ」を具現化し、自身の周囲の敵を15mノックバックさせる。<br/>追加効果：自身の足元に「ウォール・オブ・ファット」を生成する。<br/>効果時間：15秒<br/>ウォール・オブ・ファット効果：範囲内にいる自身およびパーティメンバーの被ダメージを25％軽減し、受けるＨＰ回復効果を25％上昇させる。<br/>追加効果：自身に「スタープリズム実行可」を付与する。<br/>効果時間：15秒<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：105秒<br/>このアクションを実行するとスタープリズムに変化する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "コメット",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e4fc5a2a1a14cc8831e9b5d0cf2e3188af51e3c0.png",
+     "type": "魔法",
+     "cast": "2.4秒",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "10m",
+     "description": "指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。",
+     "descriptionHtml": "指定した地面の周囲に魔法攻撃。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>威力：20000<br/>このアクションの詠唱中は移動することができず、また詠唱を中断することもできない。"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ファントムダート",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/73d32dda03743186181568f145a260d41487e51c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：4000<br/>追加効果：対象が受けるダメージを25％増加させる。<br/>効果時間：5秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "ダルウェポン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c24680d2c87ff15f7815d8b2dfba4c17e2ccf20.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "対象とその周囲の敵の与ダメージと回復効果を33％減少させる。<br/>効果時間：10秒"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "キャンバスシンボル",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/c/XMeNEhDtpM3UQaG0F9r0z8oKFg.png"
+    ]
+   },
+   {
+    "title": "アニマルキャンバス",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/d/CpqIT00nFL6BkyLCjvelzxmM1k.png"
+    ]
+   },
+   {
+    "title": "ウェポンキャンバス／スケープキャンバス",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/WbC0bZlJPLkuGOhM7v0na3VH9M.png"
+    ]
+   },
+   {
+    "title": "パレットゲージ",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/k/WbC0bZlJPLkuGOhM7v0na3VH9M.png"
+    ]
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/K/085rAbsIuPNr0QOMpbPr1Yod1o.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/0/Et_8vQj-eqJyJWR47DhlKI0u0w.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/W/_yUQ1TJWB7J00FV3WwDAsyGdSM.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/z/6dRUltVuy55iy6u02Fk_vHX58I.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/w/9CNiT9qrs11R05OnnCC63ncadM.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/R/KXPuoaVRqWOQO5Ysr9nCeE0tlA.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nキャンバスシンボル\n\n「キャンバスシンボル」は絵素の具現化状況を示します。\nピクトマンサーはキャンバスに絵素を描いて、それを具現化することで様々な効果を発動させて戦います。\nキャンバスには\"アニマルキャンバス\"、\"ウェポンキャンバス\"、\"スケープキャンバス\"の3種類があります。\nアニマルキャンバス\n\nアニマルキャンバスでは、アニマルに関する絵素の具現化状況を確認できます。\n\n「ピクトアニマル」で描いた絵素がアニマルキャンバス上に表示され、これを「イマジンアニマル」で具現化することで絵素に応じた効果が発動し、同時に自身に\"アニマルシンボル\"が付与されます。\nアニマルシンボルである\"ピクトポンポン\"、\"ピクトウィング\"が揃うと、\"モーグリシンボル\"が付与され、強力なアクション「モーグリストリーム」を実行できるようになります。\n\nレベル96でアクション「ピクトクロー」「ピクトファング」を修得することで、\"アニマルキャンバス\"に\"マディーンシンボル\"が表示されるようになります。\n「ピクトアニマル」「イマジンアニマル」を順に実行し、\"ピクトポンポン\"\"ピクトウィング\"\"ピクトクロー\"\"ピクトファング\"の4つのアニマルシンボルが揃うと\"マディーンシンボル\"が付与され、強力なアクション「マディーンレトリビューション」を実行できます。\nウェポンキャンバス／スケープキャンバス\n\nウェポンキャンバスとスケープキャンバスでは、それぞれウェポン、スケープの絵素の具現化状況を確認できます。\n\n《ウェポンキャンバス》\n「ピクトウェポン」を実行するとウェポンキャンバスに絵素が表示され、「イマジンウェポン」が「イマジンハンマー」に置き換わります。\nこれを実行すると、さらに「ハンマースタンプ」が実行できるようになります。\n\n《スケープキャンバス》\n「ピクトスケープ」を実行するとスケープキャンバスに絵素が表示され、\n「イマジンスケープ」が「イマジンスカイ」に置き換わります。\nこれを実行すると、自身とパーティの与ダメージを上昇させることができます。\n\nパレットゲージ\n\n「パレットゲージ」は\"パレットゲージ\"と\"ホワイトペイント\"の蓄積状況を示します。\n特定の色魔法を実行するとパレットゲージとホワイトペイントが蓄積していき、一定のパレットゲージを消費して「サブトラクティブパレット」を実行できます。\n「サブトラクティブパレット」効果中は、色魔法の性質が変化し、より強力な色魔法を実行することが可能です。\nまた、ホワイトペイントを消費することで「ホワイトホーリー」を実行できます。\n\nさらにレベル90で特性「サブトラクト効果アップ」を修得することで、「パレットゲージ」に\"ブラックペイント\"が表示されるようになります。\n「サブトラクティブパレット」を実行して「色調反転」が自身に付与されると、ホワイトペイントが1スタックのみブラックペイントに変化します。これを消費することで「ブラックコメット」を実行できるようになります。\n\nパレットゲージ蓄積条件：ブルーウォータおよびブルーウォタラの命中時\nホワイトペイント付与条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時\nブラックペイント付与条件：ホワイトペイント付与状態かつ色調反転効果中\n\nシンプルモード\n\nキャンバスシンボル\n\nアニマルキャンバス/ウェポンキャンバス/スケープキャンバス\n\nモーグリシンボル付与時\n\nマディーンシンボル付与時\n\nパレットゲージ\n\n通常時\n\n「サブトラクティブパレット」付与時\n\n「サブトラクティブパレット」（ブラックペイント）付与時",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">キャンバスシンボル</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/c/XMeNEhDtpM3UQaG0F9r0z8oKFg.png\" width=\"400\"/>\n</td>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\"><span class=\"txt_red\">「キャンバスシンボル」</span>は絵素の具現化状況を示します。<br/>ピクトマンサーはキャンバスに絵素を描いて、それを具現化することで様々な効果を発動させて戦います。<br/>キャンバスには<span class=\"txt_red\">\"アニマルキャンバス\"</span>、<span class=\"txt_red\">\"ウェポンキャンバス\"</span>、<span class=\"txt_red\">\"スケープキャンバス\"</span>の3種類があります。</p>\n<h3 class=\"job__hud__title\">アニマルキャンバス</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/d/CpqIT00nFL6BkyLCjvelzxmM1k.png\" width=\"590\"/>\n</td>\n</tr>\n</table>\n<p class=\"job__hud__text\">アニマルキャンバスでは、アニマルに関する絵素の具現化状況を確認できます。<br/><br/><span class=\"txt_red\">「ピクトアニマル」</span>で描いた絵素がアニマルキャンバス上に表示され、これを「イマジンアニマル」で具現化することで絵素に応じた効果が発動し、同時に自身に<span class=\"txt_red\">\"アニマルシンボル\"</span>が付与されます。<br/>アニマルシンボルである<span class=\"txt_red\">\"ピクトポンポン\"</span>、<span class=\"txt_red\">\"ピクトウィング\"</span>が揃うと、<span class=\"txt_red\">\"モーグリシンボル\"</span>が付与され、強力なアクション<span class=\"txt_red\">「モーグリストリーム」</span>を実行できるようになります。</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/Q/YMQFQpy5A9ob3VKtCMcF6460Fg.png\" width=\"590\"/>\n</td>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">レベル96でアクション<span class=\"txt_red\">「ピクトクロー」「ピクトファング」</span>を修得することで、\"アニマルキャンバス\"に<span class=\"txt_red\">\"マディーンシンボル\"</span>が表示されるようになります。<br/>「ピクトアニマル」「イマジンアニマル」を順に実行し、<span class=\"txt_red\">\"ピクトポンポン\"\"ピクトウィング\"\"ピクトクロー\"\"ピクトファング\"</span>の4つのアニマルシンボルが揃うと\"マディーンシンボル\"が付与され、強力なアクション<span class=\"txt_red\">「マディーンレトリビューション」</span>を実行できます。</p>\n<h3 class=\"job__hud__title\">ウェポンキャンバス／スケープキャンバス</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/D/2pdasCH6FiLvqjc84EN0zhkdGA.png\" width=\"290\"/>\n<p class=\"job__hud__text text_right\">ウェポンキャンバスとスケープキャンバスでは、それぞれウェポン、スケープの絵素の具現化状況を確認できます。<br/><br/><span class=\"txt_red\">《ウェポンキャンバス》</span><br/><span class=\"txt_red\">「ピクトウェポン」</span>を実行するとウェポンキャンバスに絵素が表示され、「イマジンウェポン」が<span class=\"txt_red\">「イマジンハンマー」</span>に置き換わります。<br/>これを実行すると、さらに<span class=\"txt_red\">「ハンマースタンプ」</span>が実行できるようになります。<br/><br/><span class=\"txt_red\">《スケープキャンバス》</span><br/><span class=\"txt_red\">「ピクトスケープ」</span>を実行するとスケープキャンバスに絵素が表示され、<br/>「イマジンスケープ」が<span class=\"txt_red\">「イマジンスカイ」</span>に置き換わります。<br/>これを実行すると、自身とパーティの与ダメージを上昇させることができます。</p>\n</div>\n<h3 class=\"job__hud__title\">パレットゲージ</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<td>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/k/WbC0bZlJPLkuGOhM7v0na3VH9M.png\" width=\"590\"/>\n</td>\n</tr>\n</table>\n<p class=\"job__hud__text job__hud__layout--mb32\">「パレットゲージ」は<span class=\"txt_red\">\"パレットゲージ\"</span>と<span class=\"txt_red\">\"ホワイトペイント\"</span>の蓄積状況を示します。<br/>特定の色魔法を実行するとパレットゲージとホワイトペイントが蓄積していき、一定のパレットゲージを消費して<span class=\"txt_red\">「サブトラクティブパレット」</span>を実行できます。<br/>「サブトラクティブパレット」効果中は、色魔法の性質が変化し、より強力な色魔法を実行することが可能です。<br/>また、ホワイトペイントを消費することで<span class=\"txt_red\">「ホワイトホーリー」</span>を実行できます。<br/><br/>さらにレベル90で特性<span class=\"txt_red\">「サブトラクト効果アップ」</span>を修得することで、「パレットゲージ」に<span class=\"txt_red\">\"ブラックペイント\"</span>が表示されるようになります。<br/>「サブトラクティブパレット」を実行して<span class=\"txt_red\">「色調反転」</span>が自身に付与されると、ホワイトペイントが1スタックのみブラックペイントに変化します。これを消費することで<span class=\"txt_red\">「ブラックコメット」</span>を実行できるようになります。<br/><br/>パレットゲージ蓄積条件：ブルーウォータおよびブルーウォタラの命中時<br/>ホワイトペイント付与条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時<br/>ブラックペイント付与条件：ホワイトペイント付与状態かつ色調反転効果中</p>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve pictomancer\">\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">キャンバスシンボル</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/K/085rAbsIuPNr0QOMpbPr1Yod1o.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">アニマルキャンバス/ウェポンキャンバス/スケープキャンバス</p>\n</td>\n<td></td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/0/Et_8vQj-eqJyJWR47DhlKI0u0w.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">モーグリシンボル付与時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/W/_yUQ1TJWB7J00FV3WwDAsyGdSM.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">マディーンシンボル付与時</p>\n</td>\n</tr>\n<tr>\n<th colspan=\"2\">\n<p class=\"job__hud__layout--pve__simple__title\">パレットゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/z/6dRUltVuy55iy6u02Fk_vHX58I.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">通常時</p>\n</td>\n<td></td>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/w/9CNiT9qrs11R05OnnCC63ncadM.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「サブトラクティブパレット」付与時</p>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/R/KXPuoaVRqWOQO5Ysr9nCeE0tlA.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「サブトラクティブパレット」（ブラックペイント）付与時</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/c/XMeNEhDtpM3UQaG0F9r0z8oKFg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/CpqIT00nFL6BkyLCjvelzxmM1k.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Q/YMQFQpy5A9ob3VKtCMcF6460Fg.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/D/2pdasCH6FiLvqjc84EN0zhkdGA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/k/WbC0bZlJPLkuGOhM7v0na3VH9M.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/K/085rAbsIuPNr0QOMpbPr1Yod1o.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/0/Et_8vQj-eqJyJWR47DhlKI0u0w.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/W/_yUQ1TJWB7J00FV3WwDAsyGdSM.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/z/6dRUltVuy55iy6u02Fk_vHX58I.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/w/9CNiT9qrs11R05OnnCC63ncadM.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/R/KXPuoaVRqWOQO5Ysr9nCeE0tlA.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/pictomancer/01.png",
+   "public/jobguide/hud/pictomancer/02.png",
+   "public/jobguide/hud/pictomancer/03.png",
+   "public/jobguide/hud/pictomancer/04.png",
+   "public/jobguide/hud/pictomancer/05.png",
+   "public/jobguide/hud/pictomancer/06.png",
+   "public/jobguide/hud/pictomancer/07.png",
+   "public/jobguide/hud/pictomancer/08.png",
+   "public/jobguide/hud/pictomancer/09.png",
+   "public/jobguide/hud/pictomancer/10.png",
+   "public/jobguide/hud/pictomancer/11.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nレッドファイア\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：490\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nグリーンエアロ\n\nLv5\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：530\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイアがグリーンエアロに変化する。\n\nテンペラコート\n\nLv10\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを60秒短縮する。\n\nブルーウォータ\n\nLv15\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に水属性魔法攻撃。\n威力：570\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロがブルーウォータに変化する。\n\nスマッジ\n\nLv20\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\nバインド中は実行不可。\n\nレッドファイラ\n\nLv25\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：180\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nピクトアニマル\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「アニマル」の絵素を描く。\nこのアクションはホットバーにセットすると異なるアクションに変化する。\n変化するアクションは、ピクトポンポン、ピクトウィング、ピクトクロー、ピクトファングの4種類となり、実行することで順番に変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンアニマル\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n描いた「アニマル」の絵素を具現化する。\nアニマルキャンバスに絵素が描かれると、このアクションがイマジンポンポン、イマジンウィング、イマジンクロー、イマジンファングのいずれかに変化する。\n最大チャージ数：3\n発動条件：ピクトアニマルの絵が完成している\n\nモーグリストリーム\n\nLv30\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n25m\n\n「モーグリ」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は70％減少する。\n発動条件：「モーグリシンボル」効果中\n\nピクトポンポン\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ポンポン」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトポンポンに変化する。\n\nピクトウィング\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ウィング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトウィングに変化する。\n\nイマジンポンポン\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ポンポン」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトポンポン」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ポンポン」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンポンポンに変化する。\n\nイマジンウィング\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ウィング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトウィング」のアニマルシンボルを付与する。\n「ピクトポンポン」と「ピクトウィング」のアニマルシンボルが揃うと、「モーグリシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ウィング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンウィングに変化する。\n\nグリーンエアロラ\n\nLv35\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：200\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイラがグリーンエアロラに変化する。\n\nブルーウォタラ\n\nLv45\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に水属性範囲魔法攻撃。\n威力：220\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロラがブルーウォタラに変化する。\n\nピクトウェポン\n\nLv50\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ウェポン」の絵素を描く。\nこのアクションはホットバーにセットするとピクトハンマーに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンウェポン\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n描いた「ウェポン」の絵素を具現化する。ウェポンキャンバスに絵素が描かれると、このアクションがイマジンハンマーに変化する。\n最大チャージ数：2\n発動条件：自身が戦闘状態かつピクトウェポンの絵が完成している\n\nハンマースタンプ\n\nLv50\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n発動条件：「ハンマーコンボ実行可」効果中\n\nピクトハンマー\n\nLv50\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ハンマー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「ハンマーコンボ実行可」非効果中かつウェポンキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトウェポンがピクトハンマーに変化する。\n\nイマジンハンマー\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n「ハンマー」の絵素を具現化し、自身に3スタックの「ハンマーコンボ実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：自身が戦闘状態かつウェポンキャンバスに「ハンマー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンウェポンがイマジンハンマーに変化する。\n\nシアンブリザド\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：860\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nシアンブリザラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に氷属性範囲魔法攻撃。\n威力：360\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nサブトラクティブパレット\n\nLv60\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「サブトラクティブパレット」を付与する。\n追加効果：自身に「色調反転」を付与する。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：「サブトラクティブパレット」非効果中かつ「パレットゲージ」50\n\nイエローストーン\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：900\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザドがイエローストーンに変化する。\n\nマゼンタサンダー\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：940\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストーンがマゼンタサンダーに変化する。\n\nイエローストンラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：380\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザラがイエローストンラに変化する。\n\nマゼンタサンダラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：400\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストンラがマゼンタサンダラに変化する。\n\nピクトスケープ\n\nLv70\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「スケープ」の絵素を描く。\nこのアクションはホットバーにセットするとピクトスカイに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンスケープ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n描いた「スケープ」の絵素を具現化する。\nスケープキャンバスに絵素が描かれると、このアクションがイマジンスカイに変化する。\n発動条件：自身が戦闘状態かつピクトスケープの絵が完成している\n\nピクトスカイ\n\nLv70\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「スカイ」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「イマジンスカイ」非効果中かつスケープキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトスケープがピクトスカイに変化する。\n\nイマジンスカイ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n「スカイ」の絵素を具現化して空間アートを展開し、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「サブトラクティブパレット実行可」を付与する。\n効果時間：30秒\n追加効果：自身に5スタックの「インスタレーション」を付与する。\n効果時間：30秒\nインスタレーション効果：空間アートの範囲内にいる場合、自身の色魔法およびスタープリズムのキャストタイムとリキャストタイムを25％短縮させる。\nこの効果が発動するたびにインスタレーションを1スタック消費する。\n追加効果：インスタレーションを5スタック全て消費すると自身に「レインボードリップ効果アップ」を付与する。\n効果時間：30秒\nレインボードリップ効果アップ効果：レインボードリップのリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：20秒\n発動条件：自身が戦闘状態かつスケープキャンバスに「スカイ」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンスケープがイマジンスカイに変化する。\n\nホワイトホーリー\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は65％減少する。\n発動条件：「ホワイトペイント」および「色調反転」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nハンマーブラッシュ\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：580\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマースタンプ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマースタンプがハンマーブラッシュに変化する。\n\nハンマーポリッシュ\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマーブラッシュ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマーブラッシュがハンマーポリッシュに変化する。\n\nテンペラグラッサ\n\nLv88\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n30m\n\n自身に付与した「テンペラコート」を解除する代わりに、自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを付与する。\nこのバリアは対象の最大ＨＰの10％分のダメージを軽減する。\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n自身に付与されたバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを30秒短縮する。\n\nブラックコメット\n\nLv90\n\n魔法\nInstant\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：940\n2体目以降の対象への威力は65％減少する。\n発動条件：「ブラックペイント」および「色調反転」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nレインボードリップ\n\nLv92\n\n魔法\n\n4秒\n\n6秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は85％減少する。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n自身に「レインボードリップ効果アップ」が付与されているとリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nピクトクロー\n\nLv96\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「クロー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトクローに変化する。\n\nピクトファング\n\nLv96\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ファング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトファングに変化する。\n\nイマジンクロー\n\nLv96\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「クロー」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトクロー」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「クロー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンクローに変化する。\n\nイマジンファング\n\nLv96\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ファング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトファング」のアニマルシンボルを付与する。\n「ピクトポンポン」「ピクトウィング」「ピクトクロー」「ピクトファング」が揃うと全てのアニマルシンボルが消滅し、「マディーンシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ファング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンファングに変化する。\n\nマディーンレトリビューション\n\nLv96\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n25m\n\n「マディーン」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとモーグリストリームがマディーンレトリビューションに変化する。\n\nスタープリズム\n\nLv100\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\n回復力：400\n発動条件：「スタープリズム実行可」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nアクション威力いりょくアップ\n\nLv54\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：310\nグリーンエアロの威力：350\nブルーウォータの威力：390\nイマジンポンポンの威力：700\nイマジンウィングの威力：700\nモーグリストリームの威力：800\nハンマースタンプの威力：420\n\nパレットゲージ\n\nLv60\n\nパレットゲージが上昇するようになる。\n発動条件：ブルーウォータおよびブルーウォタラの命中時\n\nアクション威力いりょくアップIIつー\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：380\nグリーンエアロの威力：420\nブルーウォータの威力：460\nレッドファイラの威力：150\nグリーンエアロラの威力：170\nブルーウォタラの威力：190\nハンマースタンプの威力：500\nシアンブリザドの威力：680\nイエローストーンの威力：720\nマゼンタサンダーの威力：760\nシアンブリザラの威力：330\nイエローストンラの威力：350\nマゼンタサンダラの威力：370\n\n絵画魔法かいがまほう効果こうかアップ\n\nLv80\n\n自身に「ホワイトペイント」が付与される。\n発動条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時\n\nピクト効果こうかアップ\n\nLv82\n\n自身に5スタックの「インスタレーション」が付与される。\n効果時間：30秒\n発動条件：イマジンスカイ実行時\n\nスマッジ効果こうかアップ\n\nLv84\n\n自身の移動速度を上昇させる。\n効果時間：5秒\n発動条件：スマッジ実行時\n\nアクション威力いりょくアップIIIすりー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：420\nグリーンエアロの威力：460\nブルーウォータの威力：500\nイマジンポンポンの威力：800\nイマジンウィングの威力：800\nモーグリストリームの威力：1000\nハンマースタンプの威力：540\nシアンブリザドの威力：750\nイエローストーンの威力：790\nマゼンタサンダーの威力：830\nホワイトホーリーの威力：500\n\nピクト効果こうかアップIIつー\n\nLv86\n\nハンマースタンプを実行するとハンマースタンプがハンマーブラッシュに変化し、ハンマーブラッシュを実行するとハンマーブラッシュがハンマーポリッシュに変化する。\nさらに、イマジンハンマーがチャージアクションに変化する。\n最大チャージ数：2\n\nテンペラ効果こうかアップ\n\nLv88\n\nテンペラグラッサが実行できるようになる。\n発動条件：「テンペラコート」効果中\n\nサブトラクト効果こうかアップ\n\nLv90\n\n自身に「色調反転」が付与される。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：サブトラクティブパレット実行時\n\nピクト効果こうかアップIIIすりー\n\nLv92\n\n自身に「レインボードリップ効果アップ」が付与される。\n効果時間：30秒\n発動条件：色魔法の実行によりインスタレーションの効果を全て消費したとき\n\nアクション威力いりょくアップIVふぉー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：490\nグリーンエアロの威力：530\nブルーウォータの威力：570\nレッドファイラの威力：180\nグリーンエアロラの威力：200\nブルーウォタラの威力：220\nハンマースタンプの威力：560\nシアンブリザドの威力：860\nイエローストーンの威力：900\nマゼンタサンダーの威力：940\nシアンブリザラの威力：360\nイエローストンラの威力：380\nマゼンタサンダラの威力：400\nホワイトホーリーの威力：570\nハンマーブラッシュの威力：580\nハンマーポリッシュの威力：600\nブラックコメットの威力：940\n\nピクト効果こうかアップIVふぉー\n\nLv96\n\nイマジンアニマルの最大チャージ数が3に増加する。\nさらに、イマジンアニマルにより実行できるアクションにピクトクローとピクトファングが追加される。\n\nピクト効果こうかアップVふぁいぶ\n\nLv100\n\n自身に「スタープリズム実行可」が付与される。\n効果時間：20秒\n発動条件：イマジンスカイ実行時"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nキャンバスシンボル\n\n「キャンバスシンボル」は絵素の具現化状況を示します。\nピクトマンサーはキャンバスに絵素を描いて、それを具現化することで様々な効果を発動させて戦います。\nキャンバスには\"アニマルキャンバス\"、\"ウェポンキャンバス\"、\"スケープキャンバス\"の3種類があります。\nアニマルキャンバス\n\nアニマルキャンバスでは、アニマルに関する絵素の具現化状況を確認できます。\n\n「ピクトアニマル」で描いた絵素がアニマルキャンバス上に表示され、これを「イマジンアニマル」で具現化することで絵素に応じた効果が発動し、同時に自身に\"アニマルシンボル\"が付与されます。\nアニマルシンボルである\"ピクトポンポン\"、\"ピクトウィング\"が揃うと、\"モーグリシンボル\"が付与され、強力なアクション「モーグリストリーム」を実行できるようになります。\n\nレベル96でアクション「ピクトクロー」「ピクトファング」を修得することで、\"アニマルキャンバス\"に\"マディーンシンボル\"が表示されるようになります。\n「ピクトアニマル」「イマジンアニマル」を順に実行し、\"ピクトポンポン\"\"ピクトウィング\"\"ピクトクロー\"\"ピクトファング\"の4つのアニマルシンボルが揃うと\"マディーンシンボル\"が付与され、強力なアクション「マディーンレトリビューション」を実行できます。\nウェポンキャンバス／スケープキャンバス\n\nウェポンキャンバスとスケープキャンバスでは、それぞれウェポン、スケープの絵素の具現化状況を確認できます。\n\n《ウェポンキャンバス》\n「ピクトウェポン」を実行するとウェポンキャンバスに絵素が表示され、「イマジンウェポン」が「イマジンハンマー」に置き換わります。\nこれを実行すると、さらに「ハンマースタンプ」が実行できるようになります。\n\n《スケープキャンバス》\n「ピクトスケープ」を実行するとスケープキャンバスに絵素が表示され、\n「イマジンスケープ」が「イマジンスカイ」に置き換わります。\nこれを実行すると、自身とパーティの与ダメージを上昇させることができます。\n\nパレットゲージ\n\n「パレットゲージ」は\"パレットゲージ\"と\"ホワイトペイント\"の蓄積状況を示します。\n特定の色魔法を実行するとパレットゲージとホワイトペイントが蓄積していき、一定のパレットゲージを消費して「サブトラクティブパレット」を実行できます。\n「サブトラクティブパレット」効果中は、色魔法の性質が変化し、より強力な色魔法を実行することが可能です。\nまた、ホワイトペイントを消費することで「ホワイトホーリー」を実行できます。\n\nさらにレベル90で特性「サブトラクト効果アップ」を修得することで、「パレットゲージ」に\"ブラックペイント\"が表示されるようになります。\n「サブトラクティブパレット」を実行して「色調反転」が自身に付与されると、ホワイトペイントが1スタックのみブラックペイントに変化します。これを消費することで「ブラックコメット」を実行できるようになります。\n\nパレットゲージ蓄積条件：ブルーウォータおよびブルーウォタラの命中時\nホワイトペイント付与条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時\nブラックペイント付与条件：ホワイトペイント付与状態かつ色調反転効果中\n\nシンプルモード\n\nキャンバスシンボル\n\nアニマルキャンバス/ウェポンキャンバス/スケープキャンバス\n\nモーグリシンボル付与時\n\nマディーンシンボル付与時\n\nパレットゲージ\n\n通常時\n\n「サブトラクティブパレット」付与時\n\n「サブトラクティブパレット」（ブラックペイント）付与時"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nレッドファイア\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」非効果中\n\n「色魔法2実行可」効果中は、グリーンエアロに変化する。\n「色魔法3実行可」効果中は、ブルーウォータに変化する。\n「サブトラクティブパレット」効果中は、シアンブリザドに変化する。\n「サブトラクティブパレット」かつ「色魔法2実行可」効果中は、イエローストーンに変化する。\n「サブトラクティブパレット」かつ「色魔法3実行可」効果中は、マゼンタサンダーに変化する。\n\nホワイトホーリー\n\n魔法\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：自身のＨＰを回復する。\n回復力：12000\n発動条件：「サブトラクティブパレット」非効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをブラックコメットと共有する。\n最大チャージ数：2\n\n「サブトラクティブパレット」効果中は、「ブラックコメット」に変化する。\n\nピクトアニマル\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「アニマル」の絵素を描く。\nドラフトポンポン効果中：ピクトポンポンに変化する。\nドラフトウィング効果中：ピクトウィングに変化する。\nドラフトクロー効果中：ピクトクローに変化する。\nドラフトファング効果中：ピクトファングに変化する。\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\nイマジンアニマル\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n描いた「アニマル」の絵素を具現化する。\nピクトポンポン効果中：イマジンポンポンに変化する。\nピクトウィング効果中：イマジンウィングに変化する。\nピクトクロー効果中：イマジンクローに変化する。\nピクトファング効果中：イマジンファングに変化する。\n最大チャージ数：2\n\nモーグリストリーム\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n25m\n\n「モーグリ」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象に沈黙を付与する。\n効果時間：2秒\n発動条件：「モーグリシンボル」効果中\n\n「マディーンシンボル」効果中は、「マディーンレトリビューション」に変化する。\n\nスマッジ\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：3秒\n追加効果：自身に「ラフドローイング」を付与する。\nラフドローイング効果：次の1回のピクト系アクションについて、詠唱時間無しで詠唱できる。\n効果時間：10秒\nバインド中は実行不可。\n\nテンペラコート\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身に「テンペラコート」を付与する。\nテンペラコート効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムが5秒短縮される。\n効果中はこのアクションがテンペラグラッサに変化する。\n\nサブトラクティブパレット\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「サブトラクティブパレット」を付与する。\n再使用で解除する。\n効果時間：永続\n\nグリーンエアロ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブルーウォータ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\n発動条件：「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nシアンブリザド\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nイエローストーン\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」かつ「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nマゼンタサンダー\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：9000\n発動条件：「サブトラクティブパレット」かつ「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブラックコメット\n\n魔法\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n発動条件：「サブトラクティブパレット」効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをホワイトホーリーと共有する。\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nピクトポンポン\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ポンポン」の絵素を描き、自身に「ピクトポンポン」を付与する。\n効果時間：永続\n発動条件：「ドラフトポンポン」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトウィング\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ウィング」の絵素を描き、自身に「ピクトウィング」を付与する。\n効果時間：永続\n発動条件：「ドラフトウィング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトクロー\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「クロー」の絵素を描き、自身に「ピクトクロー」を付与する。\n効果時間：永続\n発動条件：「ドラフトクロー」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトファング\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ファング」の絵素を描き、自身に「ピクトファング」を付与する。\n効果時間：永続\n発動条件：「ドラフトファング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンポンポン\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ポンポン」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の与ダメージと回復効果を20％上昇させる。\n効果時間：10秒\n追加効果：自身に「ドラフトウィング」を付与する。\n効果時間：永続\n発動条件：「ピクトポンポン」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンウィング\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ウィング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の魔法のキャストタイムとリキャストタイムを25％短縮させ、さらに移動速度を25％上昇させる。\n効果時間：10秒\n追加効果：自身に「モーグリシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトクロー」を付与する。\n効果時間：永続\n発動条件：「ピクトウィング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンクロー\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「クロー」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象が受けるダメージを10％上昇させ、さらに受ける回復効果を15％減少させる。\n効果時間：10秒\n追加効果：自身に「ドラフトファング」を付与する。\n効果時間：永続\n発動条件：「ピクトクロー」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンファング\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ファング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象に継続ダメージを与える。\n威力：4000\n効果時間：12秒\n追加効果：自身に「マディーンシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトポンポン」を付与する。\n効果時間：永続\n発動条件：「ピクトファング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nマディーンレトリビューション\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n25m\n\n「マディーン」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象をスタンする。\n効果時間：2秒\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nテンペラグラッサ\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n30m\n\n自身に付与した「テンペラコート」の効果を終了させて、自身と周囲のパーティメンバーに「テンペラグラッサ」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\nテンペラグラッサ効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nスタープリズム\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n回復力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーの与ダメージを10％上昇させる。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：15秒\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nウォール・オブ・ファット\n\nInstant\n10秒\n-\n\n0m\n\n8m\n\n「でぶチョコボ」を具現化し、自身の周囲の敵を15mノックバックさせる。\n追加効果：自身の足元に「ウォール・オブ・ファット」を生成する。\n効果時間：15秒\nウォール・オブ・ファット効果：範囲内にいる自身およびパーティメンバーの被ダメージを25％軽減し、受けるＨＰ回復効果を25％上昇させる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとスタープリズムに変化する。"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nMagical Ranged DPS/遠隔魔法DPS\n\n時は第五星暦末期、マハの黒魔法とアムダプールの白魔法が衝突する魔大戦のさなかのこと。\n後に十二賢者のひとりとして称えられることになる流浪の画家「リルム」によって、新たな魔法「絵画魔法」が生み出された。\n杖を筆へと持ち替え、絵の具に見立てた魔力をもって想像したものを描き出し、事象に変換する――その術を極めれば、存在しない獣を、武器を、環境をも具現化することができるという。\n絵画魔法の使い手たるピクトマンサーに求められるのは絵心ではない、魔力を操る才と未来を思い描く想像力なのだ。\n\nジョブ開始クエスト\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nレッドファイア\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に火属性魔法攻撃。\n威力：490\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nグリーンエアロ\n\nLv5\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に風属性魔法攻撃。\n威力：530\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイアがグリーンエアロに変化する。\n\nテンペラコート\n\nLv10\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n自身に一定量のダメージを防ぐバリアを張る。\nこのバリアは対象の最大ＨＰの20％分のダメージを軽減する。\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを60秒短縮する。\n\nブルーウォータ\n\nLv15\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に水属性魔法攻撃。\n威力：570\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロがブルーウォータに変化する。\n\nスマッジ\n\nLv20\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を上昇させる。\n効果時間：5秒\nバインド中は実行不可。\n\nレッドファイラ\n\nLv25\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に火属性範囲魔法攻撃。\n威力：180\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nピクトアニマル\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「アニマル」の絵素を描く。\nこのアクションはホットバーにセットすると異なるアクションに変化する。\n変化するアクションは、ピクトポンポン、ピクトウィング、ピクトクロー、ピクトファングの4種類となり、実行することで順番に変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンアニマル\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n描いた「アニマル」の絵素を具現化する。\nアニマルキャンバスに絵素が描かれると、このアクションがイマジンポンポン、イマジンウィング、イマジンクロー、イマジンファングのいずれかに変化する。\n最大チャージ数：3\n発動条件：ピクトアニマルの絵が完成している\n\nモーグリストリーム\n\nLv30\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n25m\n\n「モーグリ」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は70％減少する。\n発動条件：「モーグリシンボル」効果中\n\nピクトポンポン\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ポンポン」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトポンポンに変化する。\n\nピクトウィング\n\nLv30\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ウィング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトウィングに変化する。\n\nイマジンポンポン\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ポンポン」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトポンポン」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ポンポン」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンポンポンに変化する。\n\nイマジンウィング\n\nLv30\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ウィング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトウィング」のアニマルシンボルを付与する。\n「ピクトポンポン」と「ピクトウィング」のアニマルシンボルが揃うと、「モーグリシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ウィング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンウィングに変化する。\n\nグリーンエアロラ\n\nLv35\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に風属性範囲魔法攻撃。\n威力：200\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとレッドファイラがグリーンエアロラに変化する。\n\nブルーウォタラ\n\nLv45\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に水属性範囲魔法攻撃。\n威力：220\n追加効果：「パレットゲージ」を25上昇させる。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」効果中かつ「サブトラクティブパレット」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとグリーンエアロラがブルーウォタラに変化する。\n\nピクトウェポン\n\nLv50\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ウェポン」の絵素を描く。\nこのアクションはホットバーにセットするとピクトハンマーに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンウェポン\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n描いた「ウェポン」の絵素を具現化する。ウェポンキャンバスに絵素が描かれると、このアクションがイマジンハンマーに変化する。\n最大チャージ数：2\n発動条件：自身が戦闘状態かつピクトウェポンの絵が完成している\n\nハンマースタンプ\n\nLv50\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：560\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\n発動条件：「ハンマーコンボ実行可」効果中\n\nピクトハンマー\n\nLv50\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ハンマー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「ハンマーコンボ実行可」非効果中かつウェポンキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトウェポンがピクトハンマーに変化する。\n\nイマジンハンマー\n\nLv50\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n「ハンマー」の絵素を具現化し、自身に3スタックの「ハンマーコンボ実行可」を付与する。\n効果時間：30秒\n最大チャージ数：2\n発動条件：自身が戦闘状態かつウェポンキャンバスに「ハンマー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンウェポンがイマジンハンマーに変化する。\n\nシアンブリザド\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に氷属性魔法攻撃。\n威力：860\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nシアンブリザラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に氷属性範囲魔法攻撃。\n威力：360\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：30秒\n発動条件：「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nサブトラクティブパレット\n\nLv60\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に3スタックの「サブトラクティブパレット」を付与する。\n追加効果：自身に「色調反転」を付与する。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：「サブトラクティブパレット」非効果中かつ「パレットゲージ」50\n\nイエローストーン\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に土属性魔法攻撃。\n威力：900\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザドがイエローストーンに変化する。\n\nマゼンタサンダー\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n0m\n\n対象に雷属性魔法攻撃。\n威力：940\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストーンがマゼンタサンダーに変化する。\n\nイエローストンラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に土属性範囲魔法攻撃。\n威力：380\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：30秒\n発動条件：「色魔法2実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとシアンブリザラがイエローストンラに変化する。\n\nマゼンタサンダラ\n\nLv60\n\n魔法\n\n2.3秒\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に雷属性範囲魔法攻撃。\n威力：400\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n発動条件：「色魔法3実行可」および「サブトラクティブパレット」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイエローストンラがマゼンタサンダラに変化する。\n\nピクトスケープ\n\nLv70\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「スケープ」の絵素を描く。\nこのアクションはホットバーにセットするとピクトスカイに変化する。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nイマジンスケープ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n描いた「スケープ」の絵素を具現化する。\nスケープキャンバスに絵素が描かれると、このアクションがイマジンスカイに変化する。\n発動条件：自身が戦闘状態かつピクトスケープの絵が完成している\n\nピクトスカイ\n\nLv70\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「スカイ」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：「イマジンスカイ」非効果中かつスケープキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトスケープがピクトスカイに変化する。\n\nイマジンスカイ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n「スカイ」の絵素を具現化して空間アートを展開し、自身と周囲のパーティメンバーの与ダメージを5％上昇させる。\n効果時間：20秒\n追加効果：自身に「サブトラクティブパレット実行可」を付与する。\n効果時間：30秒\n追加効果：自身に5スタックの「インスタレーション」を付与する。\n効果時間：30秒\nインスタレーション効果：空間アートの範囲内にいる場合、自身の色魔法およびスタープリズムのキャストタイムとリキャストタイムを25％短縮させる。\nこの効果が発動するたびにインスタレーションを1スタック消費する。\n追加効果：インスタレーションを5スタック全て消費すると自身に「レインボードリップ効果アップ」を付与する。\n効果時間：30秒\nレインボードリップ効果アップ効果：レインボードリップのリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：20秒\n発動条件：自身が戦闘状態かつスケープキャンバスに「スカイ」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンスケープがイマジンスカイに変化する。\n\nホワイトホーリー\n\nLv80\n\n魔法\nInstant\n\n2.5秒\nMP300\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：570\n2体目以降の対象への威力は65％減少する。\n発動条件：「ホワイトペイント」および「色調反転」非効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nハンマーブラッシュ\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：580\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマースタンプ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマースタンプがハンマーブラッシュに変化する。\n\nハンマーポリッシュ\n\nLv86\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：600\n2体目以降の対象への威力は70％減少する。\nこのアクションは必ずクリティカルヒットかつダイレクトヒットする。\nクリティカルヒットやダイレクトヒットの発動率を上昇させる効果を受けている場合は与ダメージが上昇する。\nコンボ条件：ハンマーブラッシュ\n発動条件：「ハンマーコンボ実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとハンマーブラッシュがハンマーポリッシュに変化する。\n\nテンペラグラッサ\n\nLv88\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n30m\n\n自身に付与した「テンペラコート」を解除する代わりに、自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを付与する。\nこのバリアは対象の最大ＨＰの10％分のダメージを軽減する。\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n自身に付与されたバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムを30秒短縮する。\n\nブラックコメット\n\nLv90\n\n魔法\nInstant\n\n3.3秒\nMP400\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：940\n2体目以降の対象への威力は65％減少する。\n発動条件：「ブラックペイント」および「色調反転」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nレインボードリップ\n\nLv92\n\n魔法\n\n4秒\n\n6秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1000\n2体目以降の対象への威力は85％減少する。\n追加効果：自身に「ホワイトペイント」を付与する。\n最大スタック数：5\n自身に「レインボードリップ効果アップ」が付与されているとリキャストタイムが短縮され、さらに詠唱時間無しで唱えられる。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nピクトクロー\n\nLv96\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「クロー」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトクローに変化する。\n\nピクトファング\n\nLv96\n\n魔法\n\n3秒\n\n4秒\n-\n\n0m\n\n0m\n\n「ファング」の絵素を描く。\n自身が非戦闘状態であれば詠唱時間無しで詠唱することができる。\n発動条件：アニマルキャンバスに絵素が描かれていない\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\nまた、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとピクトアニマルがピクトファングに変化する。\n\nイマジンクロー\n\nLv96\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「クロー」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトクロー」のアニマルシンボルを付与する。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「クロー」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンクローに変化する。\n\nイマジンファング\n\nLv96\n\nアビリティ\nInstant\n40秒\n-\n\n25m\n\n5m\n\n「ファング」の絵素を具現化し、対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：800\n2体目以降の対象への威力は70％減少する。\n追加効果：自身に「ピクトファング」のアニマルシンボルを付与する。\n「ピクトポンポン」「ピクトウィング」「ピクトクロー」「ピクトファング」が揃うと全てのアニマルシンボルが消滅し、「マディーンシンボル」が付与される。\n最大チャージ数：3\n発動条件：アニマルキャンバスに「ファング」の絵素が描かれている\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとイマジンアニマルがイマジンファングに変化する。\n\nマディーンレトリビューション\n\nLv96\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n25m\n\n「マディーン」を具現化し、対象に向かって前方直線範囲無属性魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとモーグリストリームがマディーンレトリビューションに変化する。\n\nスタープリズム\n\nLv100\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：1100\n2体目以降の対象への威力は70％減少する。\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\n回復力：400\n発動条件：「スタープリズム実行可」効果中\n実行時にインスタレーションが付与されていて、かつイマジンスカイの空間アート内にいる場合は、インスタレーションを1スタック消費する。\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nアドル\n\nLv8\n\nアビリティ\nInstant\n90秒\n-\n\n25m\n\n0m\n\n一定時間、対象の与物理ダメージを5％、与魔法ダメージを10％減少させる。\n効果時間：15秒\n\nスリプル\n\nLv10\n\n魔法\n\n2.5秒\n\n2.5秒\nMP800\n\n30m\n\n5m\n\n対象とその周囲の敵に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nアクション威力いりょくアップ\n\nLv54\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：310\nグリーンエアロの威力：350\nブルーウォータの威力：390\nイマジンポンポンの威力：700\nイマジンウィングの威力：700\nモーグリストリームの威力：800\nハンマースタンプの威力：420\n\nパレットゲージ\n\nLv60\n\nパレットゲージが上昇するようになる。\n発動条件：ブルーウォータおよびブルーウォタラの命中時\n\nアクション威力いりょくアップIIつー\n\nLv74\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：380\nグリーンエアロの威力：420\nブルーウォータの威力：460\nレッドファイラの威力：150\nグリーンエアロラの威力：170\nブルーウォタラの威力：190\nハンマースタンプの威力：500\nシアンブリザドの威力：680\nイエローストーンの威力：720\nマゼンタサンダーの威力：760\nシアンブリザラの威力：330\nイエローストンラの威力：350\nマゼンタサンダラの威力：370\n\n絵画魔法かいがまほう効果こうかアップ\n\nLv80\n\n自身に「ホワイトペイント」が付与される。\n発動条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時\n\nピクト効果こうかアップ\n\nLv82\n\n自身に5スタックの「インスタレーション」が付与される。\n効果時間：30秒\n発動条件：イマジンスカイ実行時\n\nスマッジ効果こうかアップ\n\nLv84\n\n自身の移動速度を上昇させる。\n効果時間：5秒\n発動条件：スマッジ実行時\n\nアクション威力いりょくアップIIIすりー\n\nLv84\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：420\nグリーンエアロの威力：460\nブルーウォータの威力：500\nイマジンポンポンの威力：800\nイマジンウィングの威力：800\nモーグリストリームの威力：1000\nハンマースタンプの威力：540\nシアンブリザドの威力：750\nイエローストーンの威力：790\nマゼンタサンダーの威力：830\nホワイトホーリーの威力：500\n\nピクト効果こうかアップIIつー\n\nLv86\n\nハンマースタンプを実行するとハンマースタンプがハンマーブラッシュに変化し、ハンマーブラッシュを実行するとハンマーブラッシュがハンマーポリッシュに変化する。\nさらに、イマジンハンマーがチャージアクションに変化する。\n最大チャージ数：2\n\nテンペラ効果こうかアップ\n\nLv88\n\nテンペラグラッサが実行できるようになる。\n発動条件：「テンペラコート」効果中\n\nサブトラクト効果こうかアップ\n\nLv90\n\n自身に「色調反転」が付与される。\n色調反転効果：ホワイトペイントが1スタックのみブラックペイントに変化する。\n発動条件：サブトラクティブパレット実行時\n\nピクト効果こうかアップIIIすりー\n\nLv92\n\n自身に「レインボードリップ効果アップ」が付与される。\n効果時間：30秒\n発動条件：色魔法の実行によりインスタレーションの効果を全て消費したとき\n\nアクション威力いりょくアップIVふぉー\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nレッドファイアの威力：490\nグリーンエアロの威力：530\nブルーウォータの威力：570\nレッドファイラの威力：180\nグリーンエアロラの威力：200\nブルーウォタラの威力：220\nハンマースタンプの威力：560\nシアンブリザドの威力：860\nイエローストーンの威力：900\nマゼンタサンダーの威力：940\nシアンブリザラの威力：360\nイエローストンラの威力：380\nマゼンタサンダラの威力：400\nホワイトホーリーの威力：570\nハンマーブラッシュの威力：580\nハンマーポリッシュの威力：600\nブラックコメットの威力：940\n\nピクト効果こうかアップIVふぉー\n\nLv96\n\nイマジンアニマルの最大チャージ数が3に増加する。\nさらに、イマジンアニマルにより実行できるアクションにピクトクローとピクトファングが追加される。\n\nピクト効果こうかアップVふぁいぶ\n\nLv100\n\n自身に「スタープリズム実行可」が付与される。\n効果時間：20秒\n発動条件：イマジンスカイ実行時\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nアドル効果こうかアップ\n\nLv98\n\nアドルの効果時間を15秒に延長する。\n\nジョブHUD\n\nキャンバスシンボル\n\n「キャンバスシンボル」は絵素の具現化状況を示します。\nピクトマンサーはキャンバスに絵素を描いて、それを具現化することで様々な効果を発動させて戦います。\nキャンバスには\"アニマルキャンバス\"、\"ウェポンキャンバス\"、\"スケープキャンバス\"の3種類があります。\nアニマルキャンバス\n\nアニマルキャンバスでは、アニマルに関する絵素の具現化状況を確認できます。\n\n「ピクトアニマル」で描いた絵素がアニマルキャンバス上に表示され、これを「イマジンアニマル」で具現化することで絵素に応じた効果が発動し、同時に自身に\"アニマルシンボル\"が付与されます。\nアニマルシンボルである\"ピクトポンポン\"、\"ピクトウィング\"が揃うと、\"モーグリシンボル\"が付与され、強力なアクション「モーグリストリーム」を実行できるようになります。\n\nレベル96でアクション「ピクトクロー」「ピクトファング」を修得することで、\"アニマルキャンバス\"に\"マディーンシンボル\"が表示されるようになります。\n「ピクトアニマル」「イマジンアニマル」を順に実行し、\"ピクトポンポン\"\"ピクトウィング\"\"ピクトクロー\"\"ピクトファング\"の4つのアニマルシンボルが揃うと\"マディーンシンボル\"が付与され、強力なアクション「マディーンレトリビューション」を実行できます。\nウェポンキャンバス／スケープキャンバス\n\nウェポンキャンバスとスケープキャンバスでは、それぞれウェポン、スケープの絵素の具現化状況を確認できます。\n\n《ウェポンキャンバス》\n「ピクトウェポン」を実行するとウェポンキャンバスに絵素が表示され、「イマジンウェポン」が「イマジンハンマー」に置き換わります。\nこれを実行すると、さらに「ハンマースタンプ」が実行できるようになります。\n\n《スケープキャンバス》\n「ピクトスケープ」を実行するとスケープキャンバスに絵素が表示され、\n「イマジンスケープ」が「イマジンスカイ」に置き換わります。\nこれを実行すると、自身とパーティの与ダメージを上昇させることができます。\n\nパレットゲージ\n\n「パレットゲージ」は\"パレットゲージ\"と\"ホワイトペイント\"の蓄積状況を示します。\n特定の色魔法を実行するとパレットゲージとホワイトペイントが蓄積していき、一定のパレットゲージを消費して「サブトラクティブパレット」を実行できます。\n「サブトラクティブパレット」効果中は、色魔法の性質が変化し、より強力な色魔法を実行することが可能です。\nまた、ホワイトペイントを消費することで「ホワイトホーリー」を実行できます。\n\nさらにレベル90で特性「サブトラクト効果アップ」を修得することで、「パレットゲージ」に\"ブラックペイント\"が表示されるようになります。\n「サブトラクティブパレット」を実行して「色調反転」が自身に付与されると、ホワイトペイントが1スタックのみブラックペイントに変化します。これを消費することで「ブラックコメット」を実行できるようになります。\n\nパレットゲージ蓄積条件：ブルーウォータおよびブルーウォタラの命中時\nホワイトペイント付与条件：ブルーウォータ、マゼンタサンダー、ブルーウォタラ、マゼンタサンダラの命中時\nブラックペイント付与条件：ホワイトペイント付与状態かつ色調反転効果中\n\nシンプルモード\n\nキャンバスシンボル\n\nアニマルキャンバス/ウェポンキャンバス/スケープキャンバス\n\nモーグリシンボル付与時\n\nマディーンシンボル付与時\n\nパレットゲージ\n\n通常時\n\n「サブトラクティブパレット」付与時\n\n「サブトラクティブパレット」（ブラックペイント）付与時\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nレッドファイア\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：5000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」非効果中\n\n「色魔法2実行可」効果中は、グリーンエアロに変化する。\n「色魔法3実行可」効果中は、ブルーウォータに変化する。\n「サブトラクティブパレット」効果中は、シアンブリザドに変化する。\n「サブトラクティブパレット」かつ「色魔法2実行可」効果中は、イエローストーンに変化する。\n「サブトラクティブパレット」かつ「色魔法3実行可」効果中は、マゼンタサンダーに変化する。\n\nホワイトホーリー\n\n魔法\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：自身のＨＰを回復する。\n回復力：12000\n発動条件：「サブトラクティブパレット」非効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをブラックコメットと共有する。\n最大チャージ数：2\n\n「サブトラクティブパレット」効果中は、「ブラックコメット」に変化する。\n\nピクトアニマル\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「アニマル」の絵素を描く。\nドラフトポンポン効果中：ピクトポンポンに変化する。\nドラフトウィング効果中：ピクトウィングに変化する。\nドラフトクロー効果中：ピクトクローに変化する。\nドラフトファング効果中：ピクトファングに変化する。\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\nイマジンアニマル\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n描いた「アニマル」の絵素を具現化する。\nピクトポンポン効果中：イマジンポンポンに変化する。\nピクトウィング効果中：イマジンウィングに変化する。\nピクトクロー効果中：イマジンクローに変化する。\nピクトファング効果中：イマジンファングに変化する。\n最大チャージ数：2\n\nモーグリストリーム\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n25m\n\n「モーグリ」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象に沈黙を付与する。\n効果時間：2秒\n発動条件：「モーグリシンボル」効果中\n\n「マディーンシンボル」効果中は、「マディーンレトリビューション」に変化する。\n\nスマッジ\n\nアビリティ\nInstant\n15秒\n-\n\n0m\n\n0m\n\n自身の15m前方に向かって素早く移動する。\n追加効果：自身の移動速度を25％上昇させる。\n効果時間：3秒\n追加効果：自身に「ラフドローイング」を付与する。\nラフドローイング効果：次の1回のピクト系アクションについて、詠唱時間無しで詠唱できる。\n効果時間：10秒\nバインド中は実行不可。\n\nテンペラコート\n\nアビリティ\nInstant\n20秒\n-\n\n0m\n\n0m\n\n自身に「テンペラコート」を付与する。\nテンペラコート効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力12000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、テンペラコートのリキャストタイムが5秒短縮される。\n効果中はこのアクションがテンペラグラッサに変化する。\n\nサブトラクティブパレット\n\nアビリティ\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身に「サブトラクティブパレット」を付与する。\n再使用で解除する。\n効果時間：永続\n\nグリーンエアロ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブルーウォータ\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\n発動条件：「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nシアンブリザド\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：7000\n追加効果：自身に「色魔法2実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nイエローストーン\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：8000\n追加効果：自身に「色魔法3実行可」を付与する。\n効果時間：15秒\n発動条件：「サブトラクティブパレット」かつ「色魔法2実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nマゼンタサンダー\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：9000\n発動条件：「サブトラクティブパレット」かつ「色魔法3実行可」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nブラックコメット\n\n魔法\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\n発動条件：「サブトラクティブパレット」効果中\nこの魔法は固有のリキャストタイマーを持ち、かつリキャストタイマーをホワイトホーリーと共有する。\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nピクトポンポン\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ポンポン」の絵素を描き、自身に「ピクトポンポン」を付与する。\n効果時間：永続\n発動条件：「ドラフトポンポン」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトウィング\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ウィング」の絵素を描き、自身に「ピクトウィング」を付与する。\n効果時間：永続\n発動条件：「ドラフトウィング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトクロー\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「クロー」の絵素を描き、自身に「ピクトクロー」を付与する。\n効果時間：永続\n発動条件：「ドラフトクロー」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nピクトファング\n\n魔法\n1.8秒\n2.8秒\n-\n\n0m\n\n0m\n\n「ファング」の絵素を描き、自身に「ピクトファング」を付与する。\n効果時間：永続\n発動条件：「ドラフトファング」効果中\nこの魔法のキャストタイムとリキャストタイムはステータスの影響を受けない。\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンポンポン\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ポンポン」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の与ダメージと回復効果を20％上昇させる。\n効果時間：10秒\n追加効果：自身に「ドラフトウィング」を付与する。\n効果時間：永続\n発動条件：「ピクトポンポン」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンウィング\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ウィング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：自身の魔法のキャストタイムとリキャストタイムを25％短縮させ、さらに移動速度を25％上昇させる。\n効果時間：10秒\n追加効果：自身に「モーグリシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトクロー」を付与する。\n効果時間：永続\n発動条件：「ピクトウィング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンクロー\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「クロー」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象が受けるダメージを10％上昇させ、さらに受ける回復効果を15％減少させる。\n効果時間：10秒\n追加効果：自身に「ドラフトファング」を付与する。\n効果時間：永続\n発動条件：「ピクトクロー」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nイマジンファング\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n「ファング」の絵素を具現化し、対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n追加効果：対象に継続ダメージを与える。\n威力：4000\n効果時間：12秒\n追加効果：自身に「マディーンシンボル」を付与する。\n効果時間：永続\n追加効果：自身に「ドラフトポンポン」を付与する。\n効果時間：永続\n発動条件：「ピクトファング」効果中\n最大チャージ数：2\n\n※このアクションはホットバーに登録することはできない。\n\nマディーンレトリビューション\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n25m\n\n「マディーン」を具現化し、対象に向かって前方直線範囲魔法攻撃。\n威力：14000\n追加効果：対象をスタンする。\n効果時間：2秒\n発動条件：「マディーンシンボル」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nテンペラグラッサ\n\nアビリティ\nInstant\n2秒\n-\n\n0m\n\n30m\n\n自身に付与した「テンペラコート」の効果を終了させて、自身と周囲のパーティメンバーに「テンペラグラッサ」を付与する。\nこのアクションは遮蔽物を越えて効果を発揮する。\nテンペラグラッサ効果：一定量のダメージを防ぐバリアを張る。\nバリア量：回復力8000相当\n効果時間：10秒\n発動条件：「テンペラコート」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nスタープリズム\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーのＨＰを回復する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n回復力：16000\n追加効果：対象の周囲30m以内にいるパーティメンバーの与ダメージを10％上昇させる。\nこの追加効果は遮蔽物を越えて効果を発揮する。\n効果時間：15秒\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nウォール・オブ・ファット\n\nInstant\n10秒\n-\n\n0m\n\n8m\n\n「でぶチョコボ」を具現化し、自身の周囲の敵を15mノックバックさせる。\n追加効果：自身の足元に「ウォール・オブ・ファット」を生成する。\n効果時間：15秒\nウォール・オブ・ファット効果：範囲内にいる自身およびパーティメンバーの被ダメージを25％軽減し、受けるＨＰ回復効果を25％上昇させる。\n追加効果：自身に「スタープリズム実行可」を付与する。\n効果時間：15秒\n発動条件：「リミットゲージ」最大\n蓄積時間：105秒\nこのアクションを実行するとスタープリズムに変化する。\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nコメット\n\n魔法\n2.4秒\n45秒\n-\n\n30m\n\n10m\n\n指定した地面の周囲に魔法攻撃。\nこのアクションは遮蔽物を越えて効果を発揮する。\n威力：20000\nこのアクションの詠唱中は移動することができず、また詠唱を中断することもできない。\n\nファントムダート\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：4000\n追加効果：対象が受けるダメージを25％増加させる。\n効果時間：5秒\n\nダルウェポン\n\nアビリティ\nInstant\n30秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵の与ダメージと回復効果を33％減少させる。\n効果時間：10秒\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

@@ -23,7 +23,10 @@
   // ---------------- ナイト: オウスゲージ（0〜100）とアイアンウィル ----------------
   // #7 = 通常表示（#8: 数字 #9・数字の台 #10・棒 #11・枠 #12、#13: 翼の付いた盾）
   // #14 = シンプル表示（#15: 小さな盾のアイコン、#17: 数字、#18: 棒）
-  // #3〜#6 と盾の中の #2 の子（翼・大きな紋章）は、光る演出の部品（最初は隠す）
+  // #3〜#6 は光る演出の部品（最初は隠す）
+  // 公式ジョブガイドの HUD の絵（public/jobguide/hud/paladin/）: 盾（#13 の #6 の組）はオウスゲージを覚える前（Lv35 未満）のアイアンウィルの印で、
+  //   オウスゲージの絵では、棒の上に左右の翼（#13 の #3・#4）、後ろに大きな金の紋章（#13 の #5）が出て、盾は出ていない。
+  //   翼と紋章はアイアンウィルの印として出す（アイアンウィルの間だけ出すのは仮）。ULD では拡大率 0 の動きの部品なので、絵から測った位置・大きさで置く
   const PN = { normal: 7, simple: 14, num: 9, bar: 11, shield: 13, sIcon: 15, sNum: 17, sBar: 18, fx: [3, 4, 5, 6] };
   const OATH_W = 168; // 棒（#11）の幅
   const SBAR_W = 160; // シンプル表示の棒（#18）の幅
@@ -31,18 +34,18 @@
     const L = G.layouts.JobHudPLD0;
     const K = U.build(L, G.textures);
     const k = (id) => K.get(id);
-    const P1 = partsOf(L, 1), tex = G.textures.JobHudPLD;
     let simple = false, prev = { oath: 0, iw: false };
 
     for (const id of PN.fx) set(k(id), { opacity: 0 });
-    for (const id of ['13/3', '13/4', '13/5']) set(k(id), { opacity: 0 });
+    set(k(`${PN.shield}/6`), { opacity: 0 });
+    set(k(`${PN.shield}/3`), { opacity: 0, transform: 'scale(1.05)', transformOrigin: '78px 52px', top: '36px', left: '-8px' });
+    set(k(`${PN.shield}/4`), { opacity: 0, transform: 'scale(1.05)', transformOrigin: '0px 52px', top: '36px', left: '109px' });
+    set(k(`${PN.shield}/5`), { opacity: 0, transform: 'none', top: '4px' });
     // 棒の中: #2 端の光（部品）・#3 塗り・#4 増えた分の明るい塗り・#5 減った分の暗い塗り・#6 地
     set(k(`${PN.bar}/4`), { opacity: 0 }); set(k(`${PN.bar}/5`), { opacity: 0 });
     set(k(`${PN.bar}/2/3`), { opacity: 0 });
     k(PN.num).classList.add('g2-num');
     k(`${PN.sNum}/2`)?.classList.add('g2-snum');
-    // 盾の石: アイアンウィルが付いていれば橙の石（パーツ 15）、なければ暗い石（ULD の初期のパーツ 14）
-    const gem = K.img(`${PN.shield}/9`);
     // シンプル表示の棒（Parameter_Gauge）: #4 塗り（橙）・#5・#6 は増減の演出の層（隠す）
     set(k(`${PN.sBar}/5`), { opacity: 0 }); set(k(`${PN.sBar}/6`), { opacity: 0 });
     k(PN.simple).hidden = true;
@@ -70,12 +73,12 @@
       }
     }
     function ironWill(on, instant) {
-      usePart(gem, tex, P1[on ? 15 : 14]);
-      set(k(`${PN.shield}/7`), { opacity: on ? 0.55 : 0 });
+      for (const w of ['13/3', '13/4']) set(k(w), { opacity: on ? 1 : 0 });
+      set(k(`${PN.shield}/5`), { opacity: on ? 0.85 : 0 });
       set(k(`${PN.sIcon}/2`), { opacity: on ? 1 : 0 });
       if (instant || !on) return;
-      anim(k(`${PN.shield}/5`), [{ opacity: 0, transform: 'scale(0.6)' }, { opacity: 0.85, transform: 'scale(1)', offset: 0.3 }, { opacity: 0, transform: 'scale(1.15)' }], { duration: 700 });
-      for (const w of ['13/3', '13/4']) anim(k(w), [{ opacity: 0, transform: 'scale(0.4)' }, { opacity: 1, transform: 'scale(1)', offset: 0.4 }, { opacity: 0, transform: 'scale(1.1)' }], { duration: 650 });
+      anim(k(`${PN.shield}/5`), [{ opacity: 0, transform: 'scale(0.8)' }, { opacity: 0.85, transform: 'none' }], { duration: 600 });
+      for (const w of ['13/3', '13/4']) anim(k(w), [{ opacity: 0, filter: 'brightness(2)' }, { opacity: 1, filter: 'none' }], { duration: 500 });
       anim(k(`${PN.sIcon}/2`), [{ opacity: 0, transform: 'scale(2)' }, { opacity: 1, transform: 'none' }], { duration: 260 });
     }
     function apply(st, instant) {
@@ -95,6 +98,8 @@
   // ---------------- 白魔道士: ヒーリングゲージ（リリー 3 つ・ブラッドリリー・リリーの時間）----------------
   // #3 = 通常表示: #5〜#7 リリーの置き場（下から順に 1〜3 つ目）、#8 ブラッドリリー、#16 つるの枠、
   //   #17〜#26 つるに沿って光る青い筋（10 枚。リリーが増えるまでの時間に合わせて順に出す。仮）、#13・#15 は光の演出
+  //   公式ジョブガイドの HUD の絵（public/jobguide/hud/whitemage/）に合わせ、リリーが 3 つのとき（時間が進まない）は青い筋を出さない。
+  //   リリーのまわりの青い光（部品の #6）と、ブラッドリリーの赤い光（#11）・明るくする加算色（ULD の値 +100）は、絵に無いので出さない
   // #27 = シンプル表示: #30〜#32 リリー、#34〜#36 ブラッドリリー、#38 時間の棒
   const WN = { normal: 3, simple: 27, lilies: [5, 6, 7], wisps: [17, 18, 19, 20, 21, 22, 23, 24, 25, 26], sLilies: [30, 31, 32], sBlood: [34, 35, 36], sBar: 38 };
   const TIMER_W = 160;
@@ -111,13 +116,14 @@
     // ブラッドリリー（#8 の子。部品ではないのでノード番号のまま）: #9 後光（演出）・#10 花（段階でパーツ 8 → 9 → 10）・#11 赤い光
     set(k(9), { opacity: 0 });
     const bloodImg = K.img('10');
+    if (bloodImg) bloodImg.style.filter = 'none';
     for (const w of WN.wisps) set(k(w), { opacity: 0 });
     k(WN.simple).hidden = true;
 
     function lily(i, on, instant) {
       const s = WN.lilies[i];
       set(k(`${s}/10`), { opacity: on ? 1 : 0 });
-      set(k(`${s}/6`), { opacity: on ? 0.35 : 0 });
+      set(k(`${s}/6`), { opacity: 0 });
       set(k(`${WN.sLilies[i]}/2`), { opacity: on ? 1 : 0, transform: 'none' });
       if (instant) return;
       if (on) {
@@ -133,9 +139,8 @@
     function blood(a, b, instant) {
       set(k('10'), { opacity: b > 0 ? 1 : 0 });
       if (b > 0) usePart(bloodImg, tex, P3[7 + b]); // 1 = つぼみ（パーツ 8）、2 = 半開き（9）、3 = 満開（10）
-      set(k('11'), { opacity: b >= 3 ? 0.9 : 0, transform: b >= 3 ? 'scale(1)' : 'scale(0.33)' });
+      set(k('11'), { opacity: 0 });
       WN.sBlood.forEach((s, i) => set(k(`${s}/2`), { opacity: i < b ? 1 : 0, transform: 'none' }));
-      K.el.classList.toggle('b-full', b >= 3);
       if (instant || b <= a) return;
       anim(k(9), [{ opacity: 0.9, transform: 'scale(0.8)' }, { opacity: 0, transform: 'scale(1.6)' }], { duration: 650 });
       anim(k('10'), [{ transform: 'scale(1.35)' }, { transform: 'none' }], { duration: 300 });
@@ -152,7 +157,7 @@
       const n = Math.max(0, Math.min(3, st.lily ?? 0)), b = Math.max(0, Math.min(3, st.blood ?? 0));
       for (let i = 0; i < 3; i++) if (instant || (i < n) !== (i < prev.lily)) lily(i, i < n, instant);
       if (instant || b !== prev.blood) blood(prev.blood, b, instant);
-      const p = n >= 3 ? 1 : Math.min(1, (st.lilyT ?? 0) / (st.lilyMs ?? 20000));
+      const p = n >= 3 ? 0 : Math.min(1, (st.lilyT ?? 0) / (st.lilyMs ?? 20000));
       prev = { lily: n, blood: b, seg: timer(p) };
     }
     function setSimple(v) { simple = !!v; k(WN.normal).hidden = simple; k(WN.simple).hidden = !simple; }
@@ -181,6 +186,9 @@
     let simple = false, prev = { cards: {}, next: null };
     for (const sl of AN.slots) for (const c of [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]) set(k(`${sl}/${c}`), { opacity: 0 });
     for (const id of [20, 21, 22]) set(k(id), { opacity: 0 });
+    // シンプル表示のマイナーアルカナ（#28）: ULD の位置（x 98）では 3 枚目に重なる。公式ジョブガイドの HUD の絵（public/jobguide/hud/astrologian/03・04）のとおり、3 枚目の右に離して置く
+    set(k(28), { left: '120px' }); set(k(32), { left: '125px' }); // #32 はその暗い台
+    set(k(33), { opacity: 0 }); set(k(34), { left: '-26px' }); // 後ろの暗い帯（#33 は 3 枚分・#34 は 4 枚分）
     k(AN.simple).hidden = true;
     function card(i, c, instant) {
       const sl = AN.slots[i], ss = AN.sSlots[i];
@@ -191,7 +199,6 @@
         set(k(`${node}/3`), { opacity: c ? 1 : 0, translate: simple2 ? '0 0' : '0 10px', scale: simple2 ? '1' : '0.86' });
         const cyan = c && ASTRAL_CARDS.has(c);
         set(k(`${node}/5`), { opacity: c ? 1 : 0.7, filter: cyan ? 'hue-rotate(-122deg) saturate(1.3) brightness(1.15)' : 'none' });
-        if (simple2) set(k(`${node}/6`), { filter: cyan ? 'hue-rotate(-122deg) saturate(1.3)' : 'none' });
       }
       if (instant || !c) return;
       // 引いた: カードが表を向いて現れ、きらめきが散る
@@ -229,11 +236,15 @@
   // BLM0 #2 = 通常表示: #13 中央の玉（黒 = なし。パーツ 1 青 = UB、2 赤 = AF に差し替え）、#15〜#17 段階の結晶
   //   （部品 1009: #2 の子 = AF の橙、#7 の子 = UB の水色）、#19〜#21 アンブラルハート（部品 1006: #4 青い針）、
   //   #6〜#8 ポリグロット（部品 1001: #3/#5 紫の宝石）、#29 ポリグロットが増えるまでの紫の弧、#10/#11 残り秒
-  // BLM0 #33 = シンプル表示: #39〜#41 段階、#43〜#45 ハート、#50〜#52 ポリグロット（部品 1008: #3 が点いた印）、#47 残り秒
+  // BLM0 #33 = シンプル表示: 公式ジョブガイドの HUD の絵（public/jobguide/hud/blackmage/09〜15）に合わせた。
+  //   棒の下の左の 3 つ（#43〜#45）が AF / UB の段階（赤 / 青）、右の 3 つ（#39〜#41）がアンブラルハート（白。あるときだけ出す: 仮）、
+  //   棒の上（#36）がパラドックス（点いたらパーツ 2/3 の桃と青の菱形）、棒の右（#50〜#52）がポリグロット（桃）、棒（#53 の #4）がポリグロットが増えるまでの時間。
+  //   左の歯車（#35）はエノキアン（AF / UB の間は明るく）。数字（#46）は絵に無いので出さない。
+  //   菱形（部品 1008）: #3 の組が点いた印（ULD では 2.5 倍・透明の動きの始まりなので等倍にする）、#6 が枠。#2（金の小さな菱形）は絵の空の枠に無いので出さない
   // BLM1 #2 = アストラルソウルの六芒星: #8〜#13 の玉（部品 1002: #4 点いた玉・#2 赤い光）、#3・#4 は 6 つそろったときの炎
   // BLM1 #15 = シンプル表示: #16〜#21（部品 1001: #3 が点いた印）
   const BN = { normal: 2, simple: 33, orb: 13, crystals: [15, 16, 17], hearts: [19, 20, 21], poly: [6, 7, 8], arc: 29, num: 11,
-    sStacks: [39, 40, 41], sHearts: [43, 44, 45], sPoly: [50, 51, 52], sNum: 47,
+    sStacks: [43, 44, 45], sHearts: [39, 40, 41], sPoly: [50, 51, 52], sNum: 47, sParadox: 36, sGear: 35, sBar: 53,
     souls: [8, 9, 10, 11, 12, 13], soulFx: [3, 4, 5, 6], sSouls: [16, 17, 18, 19, 20, 21], lance: 23 };
   function blm(G) {
     const L0 = G.layouts.JobHudBLM0, L1 = G.layouts.JobHudBLM1;
@@ -248,6 +259,16 @@
     for (const q of BN.poly) set(k(`${q}/4`), { opacity: 0 });
     for (const q of BN.soulFx) set(k1(q), { opacity: 0 });
     k(BN.simple).hidden = true; k1(15).hidden = true;
+    // シンプル表示の菱形
+    const C = window.MockUld.colorFilter, P2 = partsOf(L0, 2);
+    const SLOOK = { af: C([80, -80, -80]), ub: C([-110, -40, 130]), poly: C([90, -40, 40]) };
+    for (const q of [...BN.sStacks, ...BN.sHearts, ...BN.sPoly, BN.sParadox]) { set(k(`${q}/2`), { opacity: 0 }); set(k(`${q}/3`), { opacity: 0, transform: 'none' }); }
+    for (const q of BN.sHearts) if (K.img(`${q}/5`)) K.img(`${q}/5`).style.filter = 'none';
+    for (const q of BN.sPoly) if (K.img(`${q}/5`)) K.img(`${q}/5`).style.filter = SLOOK.poly;
+    { const im = K.img(`${BN.sParadox}/5`); if (im && P2[3]) { usePart(im, G.textures[P2[3].texture], P2[3]); im.style.filter = 'none'; } }
+    set(k(46), { opacity: 0 });
+    // アストラルソウルのシンプル表示（部品 1001）: 手前の #2（金の小さな印）は空の枠を茶色くするので出さない（絵の空の枠は暗い。点いた印 #4 が隠れないように）
+    for (const q of BN.sSouls) set(k1(`${q}/2`), { opacity: 0 });
     // ポリグロットの弧: 絵の左上が円の中心。ULD には −90° の回転が入っているが、回すとゲーム内の画面（蜘蛛の巣の右側）より上にずれるので回さない。
     // 右（3 時）から時計回りに下へ伸ばす
     const arcEl = k(`${BN.arc}/3`);
@@ -272,20 +293,23 @@
           set(k(`${c}/6`), { opacity: on && aspect === 'af' ? 1 : 0 }); set(k(`${c}/5`), { opacity: on && aspect === 'af' ? 0.6 : 0 });
           set(k(`${c}/11`), { opacity: on && aspect === 'ub' ? 1 : 0 }); set(k(`${c}/10`), { opacity: on && aspect === 'ub' ? 0.6 : 0 });
         });
-        BN.sStacks.forEach((c, i) => { set(k(`${c}/3`), { opacity: i < stage ? 1 : 0, filter: aspect === 'ub' ? 'hue-rotate(190deg)' : 'none' }); });
+        BN.sStacks.forEach((c, i) => { set(k(`${c}/3`), { opacity: i < stage ? 1 : 0 }); if (K.img(`${c}/5`)) K.img(`${c}/5`).style.filter = aspect === 'ub' ? SLOOK.ub : SLOOK.af; });
+        set(k(`${BN.sGear}/2`), { opacity: aspect ? 1 : 0.5 });
       }
       if (instant || hearts !== prev.hearts) {
         BN.hearts.forEach((h, i) => set(k(`${h}/4`), { opacity: i < hearts ? 1 : 0 })); // ないときは出さない（ゲーム内の画面）
-        BN.sHearts.forEach((h, i) => set(k(`${h}/3`), { opacity: i < hearts ? 1 : 0, filter: 'hue-rotate(190deg)' }));
+        BN.sHearts.forEach((h, i) => set(k(`${h}/3`), { opacity: i < hearts ? 1 : 0 }));
+        set(k(38), { opacity: hearts > 0 ? 1 : 0 });
       }
       if (instant || poly !== prev.poly) {
         BN.poly.forEach((q, i) => { set(k(`${q}/5`), { opacity: i < poly ? 1 : 0.15 }); if (!instant && i === poly - 1 && poly > (prev.poly ?? 0)) anim(k(`${q}/4`), [{ opacity: 1, transform: 'scale(1.4)' }, { opacity: 0, transform: 'none' }], { duration: 500 }); });
-        BN.sPoly.forEach((q, i) => set(k(`${q}/3`), { opacity: i < poly ? 1 : 0, filter: 'hue-rotate(250deg)' }));
+        BN.sPoly.forEach((q, i) => set(k(`${q}/3`), { opacity: i < poly ? 1 : 0 }));
       }
       // ポリグロットの時間（AF / UB の間だけ進む）
       const p = aspect ? Math.min(1, (st.polyT ?? 0) / 30000) : 0;
       if (arcEl) arcEl.style.webkitMask = arcEl.style.mask = `conic-gradient(from 90deg at 0% 0%, #000 ${p * 90}deg, transparent ${p * 90}deg)`;
       if (hand) hand.style.transform = `rotate(${p * 90}deg)`; // 針の色はそのまま（紫になるのは後ろの弧）
+      set(k(`${BN.sBar}/4`), { clipPath: clipW(Math.round(160 * p), 160) });
       const sec = aspect ? String(Math.ceil((30000 - (st.polyT ?? 0)) / 1000)) : '';
       if (sec !== prev.sec) { const n = k(BN.num); if (n) n.textContent = sec; const sn = k(BN.sNum); if (sn) sn.textContent = sec; }
       if (instant || soul !== prev.soul) {
@@ -299,6 +323,7 @@
         for (const im of lanceImgs) usePart(im, tex, P1[px ? 27 : 26]);
         set(k(`${BN.lance}/8`), { opacity: px ? 0.7 : 0 });
         for (const n of [2, 3, 4, 5, 6, 7]) set(k(`${BN.lance}/${n}`), { opacity: px ? 0.8 : 0 });
+        set(k(`${BN.sParadox}/3`), { opacity: px ? 1 : 0 });
         if (!instant && px) anim(k(`${BN.lance}/8`), [{ opacity: 1, filter: 'brightness(2)' }, { opacity: 0.7, filter: 'none' }], { duration: 500 });
       }
       prev = { aspect, stage, hearts, poly, soul, sec, px };
@@ -320,11 +345,16 @@
   //   左の竪琴（#74 の子 #75）: メヌエット = 翼の竪琴（パーツ 2）・バラード = 月の竪琴（0）・パイオン = 一角獣の竪琴（1）。歌がないときは #72（合わせた絵）
   //   詩心: メヌエットは青白い矢じり 3 つ（#60〜#62。部品 1009 の #5 が点いた絵）、パイオンは金の音符 4 つ（#55〜#58。部品 1008 の #6）
   //   コーダ（#7 の S 字の枠）: #18 バラード・#19 パイオン・#20 メヌエット。付いていればパーツリスト 4 の 3〜5（ピンク・橙・緑の宝石）
-  //   ソウルボイス（#30 の塗り #3・#4 を 124px で切る。数字 #24）
+  //   ソウルボイス（#30 の塗り #3・#4 を 124px で切る。数字 #24）。塗りの色は公式ジョブガイドの HUD の絵（public/jobguide/hud/bard/04・05）に合わせて黄緑にする
+  //   シンプル表示（#77）: 公式の絵（06〜09）に合わせた。#101 歌の棒（部品 1003 の #3 を歌の色に。経過時間）・#99 残り秒、
+  //     #92〜#95 パイオンの詩心（緑の菱形 4 つ）・#96〜#98 メヌエットの詩心（水色の菱形 3 つ。部品 1004 / 1005 の #3 が点いた印）、
+  //     #89 ソウルボイスの棒（部品 1006 の #5。#2 の組が 120 の目盛り。#6 の水色の層は出さない）・#88 数字、
+  //     コーダ: #84・#86・#85 が暗い印（バラード・パイオン・メヌエット）、その手前の #81〜#83（部品 1007 の #6）に色付きの印（パーツ 4/3 桃・4/4 橙・4/5 緑）を付いているときだけ出す。#78 は使わない
   const SONG_COLOR = { wm: 'sepia(1) saturate(5) hue-rotate(55deg) brightness(1.05)', mb: 'sepia(1) saturate(4) hue-rotate(235deg) brightness(1.15)', ap: 'sepia(1) saturate(7) hue-rotate(-12deg) brightness(1.15)' };
   const LYRE = { wm: 2, mb: 0, ap: 1 };
   const CODA = { mb: { node: 18, lit: 3, dark: 22 }, ap: { node: 19, lit: 4, dark: 23 }, wm: { node: 20, lit: 5, dark: 24 } };
-  const RN = { normal: 2, simple: 77, fill: 71, staff: 73, num: 4, wmMarks: [60, 61, 62], apMarks: [55, 56, 57, 58], sv: 30, svNum: 24 };
+  const RN = { normal: 2, simple: 77, fill: 71, staff: 73, num: 4, wmMarks: [60, 61, 62], apMarks: [55, 56, 57, 58], sv: 30, svNum: 24,
+    sBar: 101, sNum: 99, sAp: [92, 93, 94, 95], sWm: [96, 97, 98], sSv: 89, sSvNum: 88, sCoda: { mb: [81, 3], ap: [82, 4], wm: [83, 5] } };
   const SONG_W = 160, SV_W = 124;
   function brd(G) {
     const L = G.layouts.JobHudBRD0;
@@ -344,11 +374,24 @@
     usePart(fillImg, tex, P1[6]);
     const num = k(RN.num); if (num) { set(num, { opacity: 1 }); num.classList.add('g2-num'); }
     k(RN.simple).hidden = true;
+    const C = window.MockUld.colorFilter;
+    for (const c of [3, 4]) if (K.img(`${RN.sv}/${c}`)) K.img(`${RN.sv}/${c}`).style.filter = C([60, 120, -150]);
+    // シンプル表示
+    const SBAR = { mb: K.img(`${RN.sBar}/3`)?.style.filter ?? '', ap: C([170, 60, -80], [80, 80, 80]), wm: C([60, 110, -80], [80, 80, 80]) };
+    for (const q of [...RN.sAp, ...RN.sWm]) { set(k(`${q}/2`), { opacity: 0 }); set(k(`${q}/3`), { opacity: 0 }); }
+    set(k(78), { opacity: 0 });
+    for (const [node, part] of Object.values(RN.sCoda)) { usePart(K.img(`${node}/6`), tex, P4[part]); set(k(`${node}/3`), { opacity: 0 }); set(k(node), { opacity: 0 }); }
+    set(k(RN.sSv), { opacity: 1 }); set(k(RN.sSvNum), { opacity: 1 }); set(k(`${RN.sSv}/7`), { opacity: 0 }); set(k(`${RN.sSv}/6`), { opacity: 0 });
+    if (K.img(`${RN.sSv}/5`)) K.img(`${RN.sSv}/5`).style.filter = C([-40, 60, -160]);
+    for (const id of [`${RN.sNum}/2`, `${RN.sSvNum}/2`]) k(id)?.classList.add('g2-snum');
+    k(`${RN.svNum}/2`)?.classList.add('g2-snum'); // ソウルボイスの数字（公式の絵では歌の残り秒と同じくらいの大きさ）
     function apply(st, instant) {
       const song = st.song?.k ?? null, left = song ? Math.max(0, st.song.until - st.t) : 0, el = song ? Math.min(1, 1 - left / 45000) : 0;
       set(k(RN.fill), { clipPath: clipW(Math.round(SONG_W * el), SONG_W), opacity: song ? 1 : 0, filter: song ? `${SONG_COLOR[song]} drop-shadow(0 0 2px rgba(255,255,255,.6))` : 'none' });
       const sec = song ? String(Math.ceil(left / 1000)) : '';
-      if (sec !== prev.sec && num) num.textContent = sec;
+      if (sec !== prev.sec) { if (num) num.textContent = sec; const sn = k(`${RN.sNum}/2`); if (sn) sn.textContent = sec; }
+      set(k(`${RN.sBar}/3`), { clipPath: clipW(Math.round(160 * el), 160) });
+      if (instant || song !== prev.song) { const im = K.img(`${RN.sBar}/3`); if (im) im.style.filter = SBAR[song] ?? SBAR.mb; }
       if (instant || song !== prev.song) {
         if (song) usePart(lyreImg, tex, P1[LYRE[song]]);
         set(k(75), { opacity: song ? 1 : 0 }); set(k(72), { opacity: song ? 0 : 1 });
@@ -358,6 +401,8 @@
       if (instant || rep !== prev.rep || song !== prev.song) {
         RN.wmMarks.forEach((n, i) => { set(k(n), { opacity: song === 'wm' ? 1 : 0 }); set(k(`${n}/5`), { opacity: i < rep ? 1 : 0 }); set(k(`${n}/7`), { opacity: 1 }); });
         RN.apMarks.forEach((n, i) => { set(k(n), { opacity: song === 'ap' ? 1 : 0 }); set(k(`${n}/6`), { opacity: i < rep ? 1 : 0 }); set(k(`${n}/8`), { opacity: 1 }); });
+        RN.sAp.forEach((q, i) => { set(k(q), { opacity: song === 'ap' ? 1 : 0 }); set(k(`${q}/3`), { opacity: i < rep ? 1 : 0 }); });
+        RN.sWm.forEach((q, i) => { set(k(q), { opacity: song === 'wm' ? 1 : 0 }); set(k(`${q}/3`), { opacity: i < rep ? 1 : 0 }); });
       }
       const sv = Math.max(0, Math.min(100, st.sv ?? 0));
       if (instant || sv !== prev.sv) {
@@ -365,6 +410,8 @@
         for (const c of [3, 4]) set(k(`${RN.sv}/${c}`), { clipPath: clipW(w, SV_W) });
         set(k(`${RN.sv}/2`), { opacity: 0 });
         const n2 = k(`${RN.svNum}/2`); if (n2) n2.textContent = String(sv);
+        set(k(`${RN.sSv}/5`), { clipPath: clipW(Math.round(1.6 * sv), 160) });
+        const n3 = k(`${RN.sSvNum}/2`); if (n3) n3.textContent = String(sv);
         if (!instant && sv > (prev.sv ?? 0)) anim(k(`${RN.sv}/3`), [{ filter: 'brightness(1.8)' }, { filter: 'none' }], { duration: 350 });
       }
       const codas = st.codas ?? {};
@@ -375,12 +422,13 @@
           usePart(img, tex, on ? P4[d.lit] : P1[d.dark]);
           if (img) { img.style.left = on ? '3px' : '0'; img.style.top = on ? '3px' : '0'; img.style.position = 'absolute'; }
           set(k(d.node), { opacity: on ? 1 : 0.45 });
+          set(k(RN.sCoda[c][0]), { opacity: on ? 1 : 0 });
           if (!instant && on && !(prev.codas ?? {})[c]) anim(k(d.node), [{ transform: 'scale(1.6)', filter: 'brightness(2)' }, { transform: 'none', filter: 'none' }], { duration: 450 });
         }
       }
       prev = { song, rep, sv, ck, sec, codas: { ...codas } };
     }
-    function setSimple(v) { simple = !!v; }
+    function setSimple(v) { simple = !!v; k(RN.normal).hidden = simple; k(RN.simple).hidden = !simple; }
     apply({ t: 0 }, true);
     return {
       windows: [{ name: 'JobHudBRD0', label: '詩歌ゲージ', el: K.el, w: K.w, h: K.h }],
@@ -476,8 +524,8 @@
         }
         set(k1(85), { opacity: att ? 1 : 0 });
         for (const [el, c] of Object.entries(SMN_SICON)) set(k1(`85/${c - 1}`), { opacity: att && att.el === el ? 1 : 0 });
-        const sn = k1('86/2'); if (sn) sn.textContent = att ? String(an) : '';
-        set(k1(86), { opacity: att ? 1 : 0 });
+        // #86（エギのアイコンの横のスタック数）は、公式ジョブガイドの HUD の絵（public/jobguide/hud/summoner/16・18・20）に無い（スタック数は宝石の下）ので出さない
+        set(k1(86), { opacity: 0 });
       }
       const asec = att ? String(Math.ceil((att.until - t) / 1000)) : '';
       if (asec !== prev.asec) { const n4 = k1('4/2'); if (n4) n4.textContent = asec; set(k1(4), { opacity: att ? 1 : 0 }); }
@@ -485,7 +533,7 @@
       const w = d ? Math.round(SBAR_W * Math.max(0, d.until - t) / 15000) : 0;
       set(k1('92/3'), { clipPath: clipW(w, SBAR_W), filter: d ? SMN_BAR[d.kind] : 'none' });
       const snum = d ? sec : asec;
-      if (snum !== prev.snum) { const n = k1('91/2'); if (n) n.textContent = snum; }
+      if (snum !== prev.snum) { const n = k1('91/2'); if (n) n.textContent = snum; set(k1(91), { opacity: snum ? 1 : 0 }); }
       prev = { flow, grp, on, sec, fk, ag, asec, snum };
     }
     function setSimple(v) { simple = !!v; k(2).hidden = simple; k(11).hidden = !simple; k1(2).hidden = simple; k1(82).hidden = !simple; }
@@ -500,5 +548,6 @@
   }
 
   const JOBS = { PLD: pld, WHM: whm, AST: ast, BLM: blm, BRD: brd, SMN: smn };
-  window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G) };
+  // add: ほかのジョブのゲージ（gauge-tank.js などの役割ごとのファイル）を登録する。lib はそのファイルが使う共通の部品
+  window.MockGauge2 = { create: (G, abbr) => JOBS[abbr](G), add: (o) => Object.assign(JOBS, o), lib: { U, reduce, set, anim, clipW, usePart, partsOf } };
 })();

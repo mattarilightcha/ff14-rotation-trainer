@@ -72,8 +72,28 @@
   const actorTickPhase = (R) => (((R.OPT.seed ?? 1) * 1237) % MP_TICK);
   function mpTicks(s, dt) { s.mpTick += dt; let n = 0; while (s.mpTick >= MP_TICK) { s.mpTick -= MP_TICK; n++; } return n; }
   const naturalMp = (s) => (s.phase === 'combat' ? 200 : 600);
+  // MP の自然回復とルーシッドドリーム（同じ周期で 550。21 秒で 7 回 = 3850。利用者の調べ: GAME-71）。召喚士・学者・賢者・赤魔道士・ピクトマンサーで共通
+  function mpRegen(R, s, dt, max = 10000) { for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(max, s.mp + naturalMp(s) + (R.has('lucid') ? 550 : 0)); }
+  // 発動確率のある効果の乱数は「敵の技の並び」の種から作る（同じ種なら毎回同じ）
+  const seeded = (R, salt) => window.MockPixel?.rng?.(((R.OPT.seed ?? 1) * 104729 + salt) | 0) ?? Math.random;
+  // 公式ジョブガイドの特性・ペットの技（build-mock-data.mjs が D.guide に入れる。英語名で引く）。特性の文は日本語
+  const guideTrait = (R, en) => R.D.guide?.traits?.find((t) => t.en === en)?.desc ?? '';
+  const guidePet = (R, en) => R.D.guide?.pets?.find((p) => p.en === en) ?? null;
+  const numIn = (text, re, d) => Number(re.exec(text ?? '')?.[1] ?? d);
   // 効果時間: 語のあとで最初に出てくる「効果時間：N秒」
   const secAfter = (d, i) => Number(/効果時間：(\d+)秒/.exec(d.slice(i))?.[1] ?? 10);
+  // 説明文の「「ゲージ名」をN上昇させる」の合計（前に「コンボボーナス：」があればコンボ時だけ）。戦士のインナービーストなど
+  function descGain(a, gauge, ok) {
+    let n = 0;
+    for (const m of (a?.desc ?? '').matchAll(new RegExp(`(コンボボーナス：)?「${gauge}」を(\\d+)上昇`, 'g'))) if (!m[1] || ok) n += Number(m[2]);
+    return n;
+  }
+  // 付いているステータスの効果時間を延ばす（説明文「既に付与されている場合は、その効果時間をN秒延長する。最大M秒まで」）。付いていなければ ms で付ける
+  function extendBuff(R, k, ms, maxMs, addMs = ms) {
+    const cur = R.S.st[k];
+    if (cur && cur.until > R.S.t) cur.until = Math.min(R.S.t + maxMs, cur.until + addMs);
+    else R.buff(k, ms);
+  }
   // 相手: 「自身と周囲」「範囲内」→ 全員、「自身の」→ 自分、それ以外（「対象の」）→ HP の低い方
   function supportWho(d, i, party) {
     const head = d.slice(Math.max(0, d.lastIndexOf('。', i) + 1), i + 1);
@@ -102,6 +122,12 @@
       if (/効果：対象の被ダメージ/.test(d.slice(Math.max(0, r.index - 12), r.index + 4))) continue; // 別のステータスの説明（ナイトの堅守など）
       R.mitigate(supportWho(d, r.index, false), Number(r[1]) / 100, secAfter(d, r.index), a.name);
     }
+  }
+
+  // 「受けるＨＰ回復効果をN％上昇」（ランパート・スリル・オブ・バトル・バマジク）: 受ける回復の上乗せを、その技の名前の印にする
+  function healTaken(R, a, who = 'self') {
+    const d = a.desc ?? '', m = /受ける(?:ＨＰ)?回復効果を(\d+)％上昇/.exec(d);
+    if (m) R.mark(who, a.name, secAfter(d, m.index), { healUp: Number(m[1]) / 100 });
   }
 
   // ---------------- 侍 ----------------
@@ -142,9 +168,9 @@
         [ID.NAMIKIRI]: 'namikiri', [ID.K_NAMI]: 'namikiri', [ID.SHOHA]: 'shoha', [ID.MEIKYO]: 'water', [ID.IKISHOTEN]: 'kenki',
       };
       const TRIPLE = new Set([ID.MIDARE, ID.TENDO_SETSU, ID.K_SETSU, ID.TK_SETSU]);
-      // 居合術と奥義波切の詠唱時間: Lv74 の特性「居合術効果アップ」で 1.3 秒（風花・スキルスピードでは短くならない）。
-      // 抽出データの cast は基本値の 1.8 秒。特性の説明文（Trait シート）は未抽出のため仮（GAME-64）
-      const IAI_CAST_MS = 1300;
+      // 居合術と奥義波切の詠唱時間: Lv74 の特性「居合術効果アップ」で 1.3 秒（公式ジョブガイドの特性と表。データ作成時にジョブガイドの値にしてある。
+      // 抽出データの cast は基本値の 1.8 秒）。風花・スキルスピードでは短くならないとする（GAME-64: 風花の説明文はウェポンスキルの詠唱も縮めるとあり、ゲーム内で確かめる）
+      const IAI_CAST_MS = A[ID.MIDARE]?.castMs || 1300;
       const IAI_FIXED = new Set([ID.IAI, ID.HIGAN, ID.TENKA, ID.MIDARE, ID.TENDO_GOKEN, ID.TENDO_SETSU, ID.NAMIKIRI]);
       const STATUS = {
         fugetsu: { name: '風月', tracked: true, cls: 'fu' },
@@ -329,7 +355,7 @@
       const ID = {
         FAST: 9, RIOT: 15, ROYAL: 3539, FOF: 20, GORING: 3538, ATONE: 16460, SUPP: 36918, SEPUL: 36919,
         IMPERATOR: 36921, CONF: 16459, FAITH: 25748, TRUTH: 25749, VALOR: 25750, HONOR: 36922,
-        HOLY: 7384, HCIRCLE: 16458, CLEMENCY: 3541, EXPI: 25747, CIRCLE: 23, INTERVENE: 16461, TOTAL: 7381, PROM: 16457, IRONWILL: 28,
+        HOLY: 7384, HCIRCLE: 16458, CLEMENCY: 3541, EXPI: 25747, CIRCLE: 23, INTERVENE: 16461, TOTAL: 7381, PROM: 16457, IRONWILL: 28, RAMPART: 7531,
       };
       const STATUS = {
         fof: { name: 'ファイト・オア・フライト', tracked: true },
@@ -383,6 +409,7 @@
           }
           if (id === ID.CIRCLE) R.buff('circleDot', (a.pot?.dot?.sec ?? 15) * 1000);
           support(R, a); // ホーリースピリット・コンフィテオルの自分の回復、クレメンシー、ディヴァインヴェール、ホーリーシェルトロンなど
+          if (id === ID.RAMPART) healTaken(R, a); // ランパート「自身が受けるＨＰ回復効果を15％上昇」
           // アイアンウィル「再使用で解除する。効果時間：永続」
           if (id === ID.IRONWILL) { if (has('ironWill')) R.remove('ironWill'); else R.buff('ironWill', 1e9); }
         },
@@ -430,6 +457,8 @@
       const ID = { GLARE3: 25859, GLARE4: 37009, DIA: 16532, ASSIZE: 3571, POM: 136, MISERY: 16535, SOLACE: 16531, RAPTURE: 16534, SWIFT: 7561, HOLY3: 25860, THIN: 7430, TEMPERANCE: 16536, CARESS: 37011, LILYBELL: 25862, RAISE: 125, ASYLUM: 3569, CURE: 120, CURE2: 135, PLENARY: 7433 };
       // インドゥルゲンティアの追加の回復が出る技（説明文「メディカ、ケアルガ、メディガ、ハート・オブ・ラプチャー」）
       const PLENARY_HEALS = new Set([124, 131, 37010, 16534]);
+      // ヒーリングリリーが増える間隔（公式ジョブガイドの特性「Secret of the Lily」の文。作るときに 1 回だけ読む）
+      const LILY_MS = numIn(guideTrait(R, 'Secret of the Lily'), /(\d+)秒が経過するたび/, 20) * 1000;
       const STATUS = {
         pom: { name: '神速魔', tracked: true },
         glare4: { name: 'グレアジャ実行可', sid: 3879 },
@@ -469,7 +498,7 @@
         comboStarters: new Set(),
         procStatus: { 181: 'glare4', 182: 'caressReady', 2: 'freecure' }, // 2 = ケアルラ（ケアルラ効果アップの間光る）
         dot: { key: 'dia' },
-        initState(s) { s.lily = 3; s.blood = 3; s.lilyT = 0; // 7.4 から戦闘開始時にヒーリングリリー 3・ブラッドリリー満タン（利用者の調べ: GAME-70）
+        initState(s) { s.lily = 3; s.blood = 3; s.lilyT = 0; s.lilyMs = LILY_MS; // 7.4 から戦闘開始時にヒーリングリリー 3・ブラッドリリー満タン（利用者の調べ: GAME-70）
           s.stats.lilyOver = 0; s.bell = 0; s.bellNext = 0; },
         // リタージー・オブ・ベルの効果時間中の再使用（残りのスタックで回復して消える）は、リキャストを待たずに使える（説明文「効果時間中に再使用すると」）
         freeUse: (id) => id === ID.LILYBELL && S().bell > 0,
@@ -535,10 +564,11 @@
           if (s.bell > 0 && !has('lilybell')) bellEnd('時間切れ');
           if (s.phase !== 'combat') return;
           s.lilyT += dt;
-          while (s.lilyT >= 20000) {
-            s.lilyT -= 20000;
+          // ヒーリングリリー: 戦闘状態になってから 20 秒ごとに 1 つ（公式ジョブガイドの特性「シークレットリリー」。GAME-62）
+          while (s.lilyT >= LILY_MS) {
+            s.lilyT -= LILY_MS;
             if (s.lily >= 3) { s.stats.lilyOver++; R.addLog('warn', 'ヒーリングリリーがあふれました（3 つのまま）'); R.ev('ミス', { result: 'あふれ', note: 'ヒーリングリリーが 3 つのまま' }); }
-            gauges.ヒーリングリリー.set(s.lily + 1); // 仮（GAME-62）
+            gauges.ヒーリングリリー.set(s.lily + 1);
           }
         },
         highlightOk: () => true,
@@ -559,7 +589,8 @@
           if (s.stats.lilyOver) issues.push({ loss: s.stats.lilyOver * 3, rate: s.stats.lilyOver > 2 ? 'bad' : 'ok', title: `ヒーリングリリーのあふれ ${s.stats.lilyOver} 回`, advice: 'リリーが 3 つになる前に、ハート・オブ・ソラスかラプチャーで使う（ブラッドリリーも溜まる）' });
           metrics.push({ label: 'ヒーリングリリーのあふれ', value: `${s.stats.lilyOver} 回`, rate: Math.max(0, 100 - s.stats.lilyOver * 20) });
           if (!s.stats.lilyOver && s.stats.gcds > 10) goods.push('リリーのあふれなし');
-          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.lilyOver * 20), posAdvice: '', comboAdvice: '光っている技を順に', castAdvice: 'グレアガの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときは迅速魔・グレアジャ・ディア・ハート・オブ・ミゼリ', rangeAdvice: '魔法の射程（25m）の中にいる' };
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.lilyOver * 20), posAdvice: '', comboAdvice: '光っている技を順に', castAdvice: 'グレアガの詠唱中は動かない（詠唱の終わり際は動いても完了する: 滑り撃ち）。動くときは迅速魔・グレアジャ・ディア・ハート・オブ・ミゼリ', rangeAdvice: '魔法の射程（25m）の中にいる',
+            careAdvice: 'タンクの HP が半分を切ったら回復。リリー（ハート・オブ・ソラス）やテトラグラマトンなど詠唱のない回復は、動きながらでも使える', lowAdvice: '早めに回復する（リジェネを切らさない）' };
         },
         howto: '白魔道士: グレアガを撃ち続け、ディアを切らさない。神速魔の間にグレアジャ 3 回。リリーはハート・オブ・ソラス / ラプチャーで使い、3 回でハート・オブ・ミゼリ。タンクの HP も見て回復してください。',
         gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'WHM'),
@@ -1293,7 +1324,7 @@
       };
       // デミの自動攻撃の間隔（1.5 秒: 公式ジョブガイドの光芒・ウィルムウェーブ・火焔のリキャストタイム）。
       // 召喚から最初の攻撃までの時間は未検証のため仮で 1.5 秒（GAME-71）。15 秒で何発当たるかもこの仮に左右される
-      const DEMI_ATK_MS = 1500, DEMI_FIRST_MS = 1500;
+      const DEMI_ATK_MS = A[ID.WYRMWAVE]?.recastMs || 1500, DEMI_FIRST_MS = DEMI_ATK_MS;
       const DEMI_OF = Object.fromEntries(Object.entries(DEMI).map(([k, v]) => [v.summon, k]));
       // エギ: ボタン → 神秘・エーテル（スタック数）・実行可
       const PRIMAL = {
@@ -1445,7 +1476,7 @@
           }
           if (s.phase !== 'combat' && s.phase !== 'countdown') return;
           // MP の自然回復（actor tick）と、ルーシッドドリーム（同じ周期で 550。21 秒で 7 回 = 3850）
-          for (let n = mpTicks(s, dt); n > 0; n--) s.mp = Math.min(MP_MAX, s.mp + naturalMp(s) + (has('lucid') ? 550 : 0));
+          mpRegen(R, s, dt, MP_MAX);
           // デミの自動攻撃（ウィルムウェーブ・火焔・光芒）: デミ自身の 1.5 秒ごと。自分の GCD とは別（利用者の調べ: 公式ジョブガイド）
           const dm = demiOn();
           if (dm && s.phase === 'combat') {
@@ -1464,7 +1495,9 @@
           if (id === ID.SFLASH) return has('sflash');
           if (id === ID.LUX) return has('lux');
           if (PRIMAL[id]) return !d && s.favor[PRIMAL[id].favor];
-          if ([ID.ENK, ID.ENK_P, ID.ENK_S, ID.DEATHFLARE, ID.SUNFLARE, ID.REKINDLE].includes(id)) return !!d;
+          // エンキンドル・アストラルフロウの技は、今のデミ召喚のものだけ（デスフレアを別のボタンに置いていても、ソルバハムートの間は光らない）
+          if ([ID.ENK, ID.ENK_P, ID.ENK_S].includes(id)) return !!d && DEMI[d.kind].enk === id;
+          if ([ID.DEATHFLARE, ID.SUNFLARE, ID.REKINDLE].includes(id)) return !!d && DEMI[d.kind].flow === id;
           if ([ID.CYCLONE, ID.STRIKE, ID.MBUSTER, ID.SLIP].includes(id)) return true;
           if (DEMI_OF[id]) return s.carby && !d;
           return false;
@@ -1509,4 +1542,8 @@
   };
 
   window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
+  // ほかのジョブの決まり（jobs-tank.js などの役割ごとのファイル）が使う共通の部品。ジョブの一覧に出ないよう列挙しない
+  Object.defineProperty(window.MockJobs, 'lib', {
+    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, mpRegen, seeded, secAfter, descGain, extendBuff, supportWho, support, healTaken, guideTrait, guidePet, numIn },
+  });
 })();

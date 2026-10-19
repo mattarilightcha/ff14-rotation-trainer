@@ -1,0 +1,1957 @@
+{
+ "job": "gunbreaker",
+ "lang": "en",
+ "url": "https://na.finalfantasyxiv.com/jobguide/gunbreaker/",
+ "pageTitle": "Job Guide: Gunbreaker | FINAL FANTASY XIV",
+ "header": {
+  "text": "Job Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nTank\n\nThe Hrothgar of northern Ilsabard have passed the art of the gunblade from one generation to the next. The weapon itself combines a sword with a firing mechanism, emitting a range of magical effects by utilizing aetherially imbued cartridges. Originally employed by Queen Gunnhildr's personal guard, they were once known as \"Gunnhildr's Blades\" and differ greatly from the similarly named weapons used in the Garlean Empire.\n\nStarting Job Quest",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/7cd4d1186b81029de28854eec532029ef245779c.png",
+   "https://lds-img.finalfantasyxiv.com/d/ab1c97d8f6007446d9f7c324adc29299e6be8e10.png",
+   "https://lds-img.finalfantasyxiv.com/d/729d76d5161a59cbed8b5f369e8476acf5ea24b2.png",
+   "https://lds-img.finalfantasyxiv.com/d/62855107ef85d3d74b0eb9d14f030368ddb6ff5a.png",
+   "https://lds-img.finalfantasyxiv.com/d/a38cbdd5b185413becb8c56388d1043259dd25b1.png",
+   "https://lds-img.finalfantasyxiv.com/d/b44946a0b3966b9638d4bc04d4b8c5858bfc3ad0.png",
+   "https://lds-img.finalfantasyxiv.com/d/bf2a6455e06637fe409340c4dba7530e55d8bfee.png",
+   "https://lds-img.finalfantasyxiv.com/d/da2f213272cf4d4c2c5df5ccf597dd8e01ddb58b.png",
+   "https://lds-img.finalfantasyxiv.com/d/fdc5cd0d9017c98bc96d4e0f20122e2f83667128.png",
+   "https://lds-img.finalfantasyxiv.com/d/57a492f3dd90592bb2b3255f3e2f342dd6b800f9.png",
+   "https://lds-img.finalfantasyxiv.com/d/43828414469ebc6fd88ef500ab2e941177b833ec.png",
+   "https://lds-img.finalfantasyxiv.com/d/d16438334b399cb5524acb6d77485b6c56a2be4a.png",
+   "https://lds-img.finalfantasyxiv.com/d/46bce3e1c9f5ca00fbc00c7f52fc765c47aba80a.png",
+   "https://lds-img.finalfantasyxiv.com/d/e220754db76f98256dd7258171a61a9de8dd898c.png",
+   "https://lds-img.finalfantasyxiv.com/d/58257f726f8a2f793622a654e5b0b2df36b372ad.png",
+   "https://lds-img.finalfantasyxiv.com/d/7edeee63ceea914fd74fc091aa99a84b290a57b1.png",
+   "https://lds-img.finalfantasyxiv.com/d/905366f09c4875cbe0ba664aa043c8bd22aefc1c.png",
+   "https://lds-img.finalfantasyxiv.com/d/31a707fb47363e30af254750784a60ff55f60ec9.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe183577affbcd066b131c997ca32283dba5c768.png",
+   "https://lds-img.finalfantasyxiv.com/d/137262f0ad98e13fd0ace2dc4f7f786d0bcec9a5.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3fa2bb1c9e838fc01439b7d39a495b444c73c6a.png",
+   "https://lds-img.finalfantasyxiv.com/d/04bbce4afc048a15cdccdd0495e679f90b115963.png",
+   "https://lds-img.finalfantasyxiv.com/d/059baae88deccf4ffdc31f8afd0074ec4589f81f.png",
+   "https://lds-img.finalfantasyxiv.com/d/8e38ca32b4021206901a4761dbef4d0c783b8620.png",
+   "https://lds-img.finalfantasyxiv.com/d/75e8b1b0530a1eb26a7d87aa7a3a50cfb8d3bff7.png",
+   "https://lds-img.finalfantasyxiv.com/d/e8472939441b3136fb9b2bfa52851e500e001279.png",
+   "https://lds-img.finalfantasyxiv.com/d/0c7e1462abaa7984e64644f3cb9e4a066ec16c59.png",
+   "https://lds-img.finalfantasyxiv.com/d/72b126aa8a17d9d94ee177b98af27d512aa6e01f.png",
+   "https://lds-img.finalfantasyxiv.com/d/90de52fbbbc0de9309a2b2aceb1b0146e3b7283a.png",
+   "https://lds-img.finalfantasyxiv.com/d/d35fea54a4ec47a5d8227e13b5dba247a5c8a5a6.png",
+   "https://lds-img.finalfantasyxiv.com/d/493de7202ca9b1e4bed75fdd4e5b1e7a8c61d58a.png",
+   "https://lds-img.finalfantasyxiv.com/d/7d7143520a9ec0306e977c10b4594ad0b5eee50f.png",
+   "https://lds-img.finalfantasyxiv.com/d/9431f382886a5bac654058624ed21082deaae9d9.png",
+   "https://lds-img.finalfantasyxiv.com/d/c6aa9ac9d9d3b144c6c5d955616edbecbb40d19a.png",
+   "https://lds-img.finalfantasyxiv.com/d/212d089b8f857465c135f0aed8a6a201e8cfdc90.png",
+   "https://lds-img.finalfantasyxiv.com/d/df78916692df98ce5e4990edbb531dba1d535e8e.png",
+   "https://lds-img.finalfantasyxiv.com/d/10aad4140dd5bacfad70315a6a6da6bd3c4e59a0.png",
+   "https://lds-img.finalfantasyxiv.com/d/105394eb5da461f87c00f49826e7ba06e4c93577.png",
+   "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+   "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+   "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+   "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+   "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+   "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+   "https://lds-img.finalfantasyxiv.com/d/82c470efaaee03cbc16ebb1d8231caff1c04cb78.png",
+   "https://lds-img.finalfantasyxiv.com/d/61c930f39a60d0b1b6245e3e9ff951b74be89d6b.png",
+   "https://lds-img.finalfantasyxiv.com/d/4833420da28d41108b691562fd6c431c437b0306.png",
+   "https://lds-img.finalfantasyxiv.com/d/07b019971a6a2f2c8a2133dff60543aec88c46f1.png",
+   "https://lds-img.finalfantasyxiv.com/d/e212245a0fb649855339dfa11b548cddcbf7511e.png",
+   "https://lds-img.finalfantasyxiv.com/d/b3e2c224457502ae6abb83fc37870cd1ca429087.png",
+   "https://lds-img.finalfantasyxiv.com/d/40f2a295b25532536720b6986405436c239aa9e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/d8dcaa43ef97b6ffd9cdacfbef4f3917f24c366e.png",
+   "https://lds-img.finalfantasyxiv.com/d/e55f3900a127f20fca1f99ba799713ced000b9f5.png",
+   "https://lds-img.finalfantasyxiv.com/d/609a7eca2e615be394641f09621f4470c3551fcf.png",
+   "https://lds-img.finalfantasyxiv.com/d/cc8843f2a57e615b3572842b26dad8be3f5a34b7.png",
+   "https://lds-img.finalfantasyxiv.com/d/96bb25bd7c335de1977d2e3006f29286eff5f01e.png",
+   "https://lds-img.finalfantasyxiv.com/d/46260fe1573522f050da18e1e5d636daed048083.png",
+   "https://lds-img.finalfantasyxiv.com/d/79391d67428c617c80af0f07cb894d5cabd9b197.png",
+   "https://lds-img.finalfantasyxiv.com/d/e1f39d3fecb447aaac966213ab89479591bbc996.png",
+   "https://lds-img.finalfantasyxiv.com/d/391803a2a95f908e6ce564a68204ec073facce20.png",
+   "https://lds-img.finalfantasyxiv.com/d/f2a4f9c7ffb67a95f31b89995f865f5ceb8b06e7.png",
+   "https://lds-img.finalfantasyxiv.com/d/c883909d21cab4cc8054d19c6cbb8156a3e6ac96.png",
+   "https://lds-img.finalfantasyxiv.com/d/378ade68a55ed6f6c34600bd4ade1db2aea5511a.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+   "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+   "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/H/_0Tvq6vrPP6t_jl5E4HtDBXeV0.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "Job Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "Keen Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7cd4d1186b81029de28854eec532029ef245779c.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.",
+     "descriptionHtml": "Delivers an attack with a potency of 300."
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "No Mercy",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ab1c97d8f6007446d9f7c324adc29299e6be8e10.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 2",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases damage dealt by 20%.\nDuration: 20s\nAdditional Effect: Grants Ready to Break\nDuration: 30s",
+     "descriptionHtml": "Increases damage dealt by 20%.<br/>Duration: 20s<br/>Additional Effect: Grants Ready to Break<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "Brutal Shell",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/729d76d5161a59cbed8b5f369e8476acf5ea24b2.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 4",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nCombo Action: Keen Edge\nCombo Potency: 380\nCombo Bonus: Restores own HP\nCure Potency: 200\nCombo Bonus: Creates a barrier which nullifies damage equaling HP restored\nDuration: 30s",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Combo Action: Keen Edge<br/>Combo Potency: 380<br/>Combo Bonus: Restores own HP<br/>Cure Potency: 200<br/>Combo Bonus: Creates a barrier which nullifies damage equaling HP restored<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "Camouflage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/62855107ef85d3d74b0eb9d14f030368ddb6ff5a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 6",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases parry rate by 50% while reducing damage taken by 10%.\nDuration: 20s",
+     "descriptionHtml": "Increases parry rate by 50% while reducing damage taken by 10%.<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "Demon Slice",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a38cbdd5b185413becb8c56388d1043259dd25b1.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all nearby enemies.<br/>Additional Effect: Increased enmity"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "Royal Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b44946a0b3966b9638d4bc04d4b8c5858bfc3ad0.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "2s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Significantly increases enmity generation.\nEffect ends upon reuse.",
+     "descriptionHtml": "Significantly increases enmity generation.<br/>Effect ends upon reuse."
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "Release Royal Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bf2a6455e06637fe409340c4dba7530e55d8bfee.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 10",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Cancels the effect of Royal Guard.",
+     "descriptionHtml": "Cancels the effect of Royal Guard."
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "Lightning Shot",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/da2f213272cf4d4c2c5df5ccf597dd8e01ddb58b.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Delivers a ranged attack with a potency of 150.\nAdditional Effect: Increased enmity",
+     "descriptionHtml": "Delivers a ranged attack with a potency of 150.<br/>Additional Effect: Increased enmity"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "Danger Zone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fdc5cd0d9017c98bc96d4e0f20122e2f83667128.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 250.",
+     "descriptionHtml": "Delivers an attack with a potency of 250."
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "Solid Barrel",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/57a492f3dd90592bb2b3255f3e2f342dd6b800f9.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 26",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 240.\nCombo Action: Brutal Shell\nCombo Potency: 460\nCombo Bonus: Adds a Cartridge to your Powder Gauge",
+     "descriptionHtml": "Delivers an attack with a potency of 240.<br/>Combo Action: Brutal Shell<br/>Combo Potency: 460<br/>Combo Bonus: Adds a Cartridge to your Powder Gauge"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "Burst Strike",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/43828414469ebc6fd88ef500ab2e941177b833ec.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 420.\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\nEffect of Ready to Blast ends upon execution of any weaponskill.\nCartridge Cost: 1",
+     "descriptionHtml": "Delivers an attack with a potency of 420.<br/>Additional Effect: Grants Ready to Blast<br/>Duration: 10s<br/>Effect of Ready to Blast ends upon execution of any weaponskill.<br/>Cartridge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "Nebula",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d16438334b399cb5524acb6d77485b6c56a2be4a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 38",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 30%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage taken by 30%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "Demon Slaughter",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/46bce3e1c9f5ca00fbc00c7f52fc765c47aba80a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 40",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Demon Slice\nCombo Potency: 160\nCombo Bonus: Adds a Cartridge to your Powder Gauge",
+     "descriptionHtml": "Delivers an attack with a potency of 100 to all nearby enemies.<br/>Additional Effect: Increased enmity<br/>Combo Action: Demon Slice<br/>Combo Potency: 160<br/>Combo Bonus: Adds a Cartridge to your Powder Gauge"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "Aurora",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e220754db76f98256dd7258171a61a9de8dd898c.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 45",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Grants Regen to target.\nCure Potency: 300\nDuration: 18s\nMaximum Charges: 2",
+     "descriptionHtml": "Grants Regen to target.<br/>Cure Potency: 300<br/>Duration: 18s<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "Superbolide",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/58257f726f8a2f793622a654e5b0b2df36b372ad.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 50",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "360s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces HP by 50% of maximum and renders you impervious to most attacks.\nDuration: 10s",
+     "descriptionHtml": "Reduces HP by 50% of maximum and renders you impervious to most attacks.<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "Sonic Break",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7edeee63ceea914fd74fc091aa99a84b290a57b1.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 340.\nAdditional Effect: Damage over time\nPotency: 120\nDuration: 15s\nCan only be executed when Ready to Break.",
+     "descriptionHtml": "Delivers an attack with a potency of 340.<br/>Additional Effect: Damage over time<br/>Potency: 120<br/>Duration: 15s<br/>Can only be executed when Ready to Break."
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "Trajectory",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/905366f09c4875cbe0ba664aa043c8bd22aefc1c.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 56",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.",
+     "descriptionHtml": "Rush to a targeted enemy's location.<br/>Additional Effect: Increased enmity<br/>Maximum Charges: 2<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "Gnashing Fang",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/31a707fb47363e30af254750784a60ff55f60ec9.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 440.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\nEffect of Ready to Rip ends upon execution of any weaponskill.\nCartridge Cost: 1\nMaximum Charges: 2\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack with a potency of 440.<br/>Additional Effect: Grants Ready to Rip<br/>Duration: 10s<br/>Effect of Ready to Rip ends upon execution of any weaponskill.<br/>Cartridge Cost: 1<br/>Maximum Charges: 2<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "Savage Claw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe183577affbcd066b131c997ca32283dba5c768.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 500.\nCombo Action: Gnashing Fang\nCombo Bonus: Grants Ready to Tear\nDuration: 10s\nEffect of Ready to Tear ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Gnashing Fang changes to Savage Claw when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 500.<br/>Combo Action: Gnashing Fang<br/>Combo Bonus: Grants Ready to Tear<br/>Duration: 10s<br/>Effect of Ready to Tear ends upon execution of any weaponskill.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Gnashing Fang changes to Savage Claw when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "Wicked Talon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/137262f0ad98e13fd0ace2dc4f7f786d0bcec9a5.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 60",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 560.\nCombo Action: Savage Claw\nCombo Bonus: Grants Ready to Gouge\nDuration: 10s\nEffect of Ready to Gouge ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Savage Claw changes to Wicked Talon when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 560.<br/>Combo Action: Savage Claw<br/>Combo Bonus: Grants Ready to Gouge<br/>Duration: 10s<br/>Effect of Ready to Gouge ends upon execution of any weaponskill.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Savage Claw changes to Wicked Talon when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "Bow Shock",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3fa2bb1c9e838fc01439b7d39a495b444c73c6a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 62",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 150 to all nearby enemies.\nAdditional Effect: Damage over time\nPotency: 60\nDuration: 15s",
+     "descriptionHtml": "Delivers an attack with a potency of 150 to all nearby enemies.<br/>Additional Effect: Damage over time<br/>Potency: 60<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "Heart of Light",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/04bbce4afc048a15cdccdd0495e679f90b115963.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 64",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "30y",
+     "description": "Reduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s",
+     "descriptionHtml": "Reduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "Heart of Stone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/059baae88deccf4ffdc31f8afd0074ec4589f81f.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 68",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "25s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by a party member or self by 15%.\nDuration: 7s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s",
+     "descriptionHtml": "Reduces damage taken by a party member or self by 15%.<br/>Duration: 7s<br/>Additional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "Continuation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8e38ca32b4021206901a4761dbef4d0c783b8620.png",
+     "skillCellText": "Continuation\nJob Quest",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Allows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.",
+     "descriptionHtml": "Allows the firing of successive rounds with your gunblade.<br/>Gnashing Fang may be followed by Jugular Rip.<br/>Savage Claw may be followed by Abdomen Tear.<br/>Wicked Talon may be followed by Eye Gouge.<br/>Burst Strike may be followed by Hypervelocity.<br/>Fated Circle may be followed by Fated Brand."
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "Jugular Rip",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/75e8b1b0530a1eb26a7d87aa7a3a50cfb8d3bff7.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 220.\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Jugular Rip when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 220.<br/>Can only be executed when Ready to Rip.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Continuation changes to Jugular Rip when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "Abdomen Tear",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e8472939441b3136fb9b2bfa52851e500e001279.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 260.\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Abdomen Tear when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 260.<br/>Can only be executed when Ready to Tear.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Continuation changes to Abdomen Tear when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "Eye Gouge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0c7e1462abaa7984e64644f3cb9e4a066ec16c59.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 70",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 300.\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Eye Gouge when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 300.<br/>Can only be executed when Ready to Gouge.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Continuation changes to Eye Gouge when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "Fated Circle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/72b126aa8a17d9d94ee177b98af27d512aa6e01f.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 72",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nEffect of Ready to Raze ends upon execution of any weaponskill.\nCartridge Cost: 1",
+     "descriptionHtml": "Delivers an attack with a potency of 300 to all nearby enemies.<br/>Additional Effect: Grants Ready to Raze<br/>Duration: 10s<br/>Effect of Ready to Raze ends upon execution of any weaponskill.<br/>Cartridge Cost: 1"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "Bloodfest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/90de52fbbbc0de9309a2b2aceb1b0146e3b7283a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 76",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Draws aetheric energy from target, adding 3 Cartridges to your Powder Gauge, and increasing maximum Cartridges to 6.\nDuration: 30s\nAdditional Effect: Grants Ready to Reign\nDuration: 30s",
+     "descriptionHtml": "Draws aetheric energy from target, adding 3 Cartridges to your Powder Gauge, and increasing maximum Cartridges to 6.<br/>Duration: 30s<br/>Additional Effect: Grants Ready to Reign<br/>Duration: 30s"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "Blasting Zone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d35fea54a4ec47a5d8227e13b5dba247a5c8a5a6.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 800.",
+     "descriptionHtml": "Delivers an attack with a potency of 800."
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "Heart of Corundum",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/493de7202ca9b1e4bed75fdd4e5b1e7a8c61d58a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "25s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Reduces damage taken by target party member or self by 15%.\nDuration: 8s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s\nAdditional Effect: Grants Clarity of Corundum to target\nClarity of Corundum Effect: Reduces damage taken by 15%\nDuration: 4s\nAdditional Effect: Grants Catharsis of Corundum to target\nCatharsis of Corundum Effect: Restores HP when HP falls to 50% or below, or upon effect duration expiration\nCure Potency: 900\nDuration: 20s",
+     "descriptionHtml": "Reduces damage taken by target party member or self by 15%.<br/>Duration: 8s<br/>Additional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target<br/>Duration: 30s<br/>Additional Effect: Grants Clarity of Corundum to target<br/>Clarity of Corundum Effect: Reduces damage taken by 15%<br/>Duration: 4s<br/>Additional Effect: Grants Catharsis of Corundum to target<br/>Catharsis of Corundum Effect: Restores HP when HP falls to 50% or below, or upon effect duration expiration<br/>Cure Potency: 900<br/>Duration: 20s"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "Hypervelocity",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7d7143520a9ec0306e977c10b4594ad0b5eee50f.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 180.\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Hypervelocity when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 180.<br/>Can only be executed when Ready to Blast.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Continuation changes to Hypervelocity when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "Double Down",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9431f382886a5bac654058624ed21082deaae9d9.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 90",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack to all nearby enemies with a potency of 1,000 for the first enemy, and 15% less for all remaining enemies.\nCartridge Cost: 2\nThis weaponskill does not share a recast timer with any other actions.",
+     "descriptionHtml": "Delivers an attack to all nearby enemies with a potency of 1,000 for the first enemy, and 15% less for all remaining enemies.<br/>Cartridge Cost: 2<br/>This weaponskill does not share a recast timer with any other actions."
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "Great Nebula",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c6aa9ac9d9d3b144c6c5d955616edbecbb40d19a.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 40%.\nAdditional Effect: Increases maximum HP by 20% and restores the amount increased.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage taken by 40%.<br/>Additional Effect: Increases maximum HP by 20% and restores the amount increased.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "Fated Brand",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/212d089b8f857465c135f0aed8a6a201e8cfdc90.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Delivers an attack with a potency of 120 to all nearby enemies.\nCan only be executed when Ready to Raze.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Fated Brand when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack with a potency of 120 to all nearby enemies.<br/>Can only be executed when Ready to Raze.<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Continuation changes to Fated Brand when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "Reign of Beasts",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/df78916692df98ce5e4990edbb531dba1d535e8e.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 800 for the first enemy, and 60% less for all remaining enemies.\nCan only be executed when Ready to Reign.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 800 for the first enemy, and 60% less for all remaining enemies.<br/>Can only be executed when Ready to Reign."
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "Noble Blood",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/10aad4140dd5bacfad70315a6a6da6bd3c4e59a0.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 900 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Reign of Beasts\n\n※This action cannot be assigned to a hotbar.\n※Reign of Beasts changes to Noble Blood when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 900 for the first enemy, and 60% less for all remaining enemies.<br/>Combo Action: Reign of Beasts<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Reign of Beasts changes to Noble Blood when requirements for execution are met."
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "Lion Heart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/105394eb5da461f87c00f49826e7ba06e4c93577.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.5s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "5y",
+     "description": "Delivers an attack to target and all enemies nearby it with a potency of 1,000 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Noble Blood\n\n※This action cannot be assigned to a hotbar.\n※Noble Blood changes to Lion Heart when requirements for execution are met.",
+     "descriptionHtml": "Delivers an attack to target and all enemies nearby it with a potency of 1,000 for the first enemy, and 60% less for all remaining enemies.<br/>Combo Action: Noble Blood<br/><br/>※This action cannot be assigned to a hotbar.<br/>※Noble Blood changes to Lion Heart when requirements for execution are met."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "Role Actions",
+   "mode": "pve",
+   "columns": [
+    "Action Name",
+    "Acquired",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/37546679ae5e431c0903b20fa2c91a88c5a8e001.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 8",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "90s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s",
+     "descriptionHtml": "Reduces damage taken by 20%.<br/>Additional Effect: Increases HP recovery via healing actions on self by 15%<br/>Duration: 20s"
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "Low Blow",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/af837b3dd467ee9cdf865a06eb2b1633dd2b492a.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 12",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "25s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Stuns target.\nDuration: 5s",
+     "descriptionHtml": "Stuns target.<br/>Duration: 5s"
+    },
+    {
+     "rowId": "tank_action__03",
+     "name": "Provoke",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2b45fea903bcf1edd9e08110cf95e8bba9a73c0d.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 15",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Gesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.",
+     "descriptionHtml": "Gesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity."
+    },
+    {
+     "rowId": "tank_action__04",
+     "name": "Interject",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8442bcce1ec21a449546af9afb79ae9ea8c226cb.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 18",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "3y",
+     "radius": "0y",
+     "description": "Interrupts the use of a target's action.",
+     "descriptionHtml": "Interrupts the use of a target's action."
+    },
+    {
+     "rowId": "tank_action__05",
+     "name": "Reprisal",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6b83d9368623d5cd20a426d26916021b59a14963.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 22",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "5y",
+     "description": "Reduces damage dealt by nearby enemies by 10%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage dealt by nearby enemies by 10%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "tank_action__06",
+     "name": "Arm's Length",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00ff21ad3e1fb26d7b292a9d912931e7ea64daa4.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      },
+      {
+       "class": "Melee DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/7/9muqitiUXEK0W3qnM33Nb7sATk.png"
+      },
+      {
+       "class": "Physical Ranged DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/t/oWWxUIO2KagIEhDXy0541MRD7M.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 32",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Nullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s",
+     "descriptionHtml": "Nullifies most knockback and draw-in effects.<br/>Duration: 6s<br/>Additional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%<br/>Duration: 15s"
+    },
+    {
+     "rowId": "tank_action__07",
+     "name": "Shirk",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4abd24800cb0999fff8ea79ed1085a7b5f8b14cb.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 48",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "120s",
+     "cost": "-",
+     "range": "25y",
+     "radius": "0y",
+     "description": "Diverts 25% of enmity to target party member.",
+     "descriptionHtml": "Diverts 25% of enmity to target party member."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "Trait",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "Tank Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b6414caac03c831ec90c34e501e444031d44003c.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 1",
+     "description": "Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.",
+     "descriptionHtml": "Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute."
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "Cartridge Charge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/11948a1a61f6f38021f06d5a5d9b3188901fec8e.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 30",
+     "description": "Stores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.\nMaximum Cartridges: 2",
+     "descriptionHtml": "Stores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.<br/>Maximum Cartridges: 2"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "Enhanced Brutal Shell",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1be87971a88bd555a0f8f10870ec95274f69bddd.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 52",
+     "description": "Grants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.\nDuration: 30s",
+     "descriptionHtml": "Grants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "Enhanced No Mercy",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/720c9e99130d321869f43956ed85abd1b11f512b.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 54",
+     "description": "Become Ready to Break after executing No Mercy.\nDuration: 30s",
+     "descriptionHtml": "Become Ready to Break after executing No Mercy.<br/>Duration: 30s"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "Danger Zone Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7a6799e747f18b8a140b49efcae52989529ef940.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 80",
+     "description": "Upgrades Danger Zone to Blasting Zone.",
+     "descriptionHtml": "Upgrades Danger Zone to Blasting Zone."
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "Heart of Stone Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ab4288b724522d84ce41790205657d4232a36988.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 82",
+     "description": "Upgrades Heart of Stone to Heart of Corundum.",
+     "descriptionHtml": "Upgrades Heart of Stone to Heart of Corundum."
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "Enhanced Aurora",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2c9949808bd1a1212daa03f8a78227cfd433d7e8.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Allows the accumulation of charges for consecutive uses of Aurora.\nMaximum Charges: 2",
+     "descriptionHtml": "Allows the accumulation of charges for consecutive uses of Aurora.<br/>Maximum Charges: 2"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "Melee Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bc58b07072e258883e9e584c4e45355d092da661.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 84",
+     "description": "Increases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140.",
+     "descriptionHtml": "Increases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140."
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "Enhanced Continuation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9d916d7b45b51d289bef5373704ca2e4751ded29.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 86",
+     "description": "Become Ready to Blast after executing Burst Strike.\nDuration: 10s\nContinuation changes to Hypervelocity while under the effect of Ready to Blast.",
+     "descriptionHtml": "Become Ready to Blast after executing Burst Strike.<br/>Duration: 10s<br/>Continuation changes to Hypervelocity while under the effect of Ready to Blast."
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "Cartridge Charge II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/53c346a7c9f28f4160c0be6addeed6f4afe3b2ec.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 88",
+     "description": "Increases Powder Gauge capacity to 3 Cartridges. While under the effect of Bloodfest, increases the maximum capacity to 6.\nExecuting Bloodfest stores 3 Cartridges.",
+     "descriptionHtml": "Increases Powder Gauge capacity to 3 Cartridges. While under the effect of Bloodfest, increases the maximum capacity to 6.<br/>Executing Bloodfest stores 3 Cartridges."
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "Nebula Mastery",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b15792e2c2ccc44dd445fe90e3ee303635b6c3be.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 92",
+     "description": "Upgrades Nebula to Great Nebula.",
+     "descriptionHtml": "Upgrades Nebula to Great Nebula."
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "Melee Mastery II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60557edca3b093463f0f0c0c04dc3895855e9f8.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Increases the potency of Keen Edge to 300, Brutal Shell to 240, Solid Barrel to 240, Burst Strike to 420, Gnashing Fang to 440, Savage Claw to 500, Wicked Talon to 560, Jugular Rip to 220, Abdomen Tear to 260, Eye Gouge to 300, Blasting Zone to 800, and Hypervelocity to 180.",
+     "descriptionHtml": "Increases the potency of Keen Edge to 300, Brutal Shell to 240, Solid Barrel to 240, Burst Strike to 420, Gnashing Fang to 440, Savage Claw to 500, Wicked Talon to 560, Jugular Rip to 220, Abdomen Tear to 260, Eye Gouge to 300, Blasting Zone to 800, and Hypervelocity to 180."
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "Enhanced Continuation II",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0388c677531ad523e8c897686069e587b5eaca68.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 96",
+     "description": "Become Ready to Raze after executing Fated Circle.\nDuration: 10s\nContinuation changes to Fated Brand when Ready to Raze.",
+     "descriptionHtml": "Become Ready to Raze after executing Fated Circle.<br/>Duration: 10s<br/>Continuation changes to Fated Brand when Ready to Raze."
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "Enhanced Bloodfest",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4a4fa44bc77a8bc9d1a942936b533ed4cbecb896.png",
+     "acquired": [
+      {
+       "class": "Gunbreaker",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 100",
+     "description": "Grants the effect of Ready to Reign after executing Bloodfest.\nDuration: 30s",
+     "descriptionHtml": "Grants the effect of Ready to Reign after executing Bloodfest.<br/>Duration: 30s"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "Role Traits",
+   "mode": "pve",
+   "columns": [
+    "Traits",
+    "Acquired",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "tank_action__01",
+     "name": "Enhanced Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ad8de6373f0bc939fd654a579d6d06ad123c958b.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 94",
+     "description": "Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.",
+     "descriptionHtml": "Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%."
+    },
+    {
+     "rowId": "tank_action__02",
+     "name": "Enhanced Reprisal",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1a390002a4eabb796458e1a93716060e1ec4d185.png",
+     "acquired": [
+      {
+       "class": "Tank",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png"
+      }
+     ],
+     "level": null,
+     "jobclassText": "Lv. 98",
+     "description": "Extends the duration of Reprisal to 15 seconds.",
+     "descriptionHtml": "Extends the duration of Reprisal to 15 seconds."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "Job Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "Keen Edge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/82c470efaaee03cbc16ebb1d8231caff1c04cb78.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 5,000.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "Brutal Shell",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/61c930f39a60d0b1b6245e3e9ff951b74be89d6b.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 6,000.\nCombo Action: Keen Edge\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 6,000.<br/>Combo Action: Keen Edge<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "Solid Barrel",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4833420da28d41108b691562fd6c431c437b0306.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nCombo Action: Brutal Shell\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Combo Action: Brutal Shell<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "Burst Strike",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/07b019971a6a2f2c8a2133dff60543aec88c46f1.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 8,000.\nCombo Action: Solid Barrel\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\n\n※Continuation changes to Hypervelocity while under the effect of Ready to Blast.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000.<br/>Combo Action: Solid Barrel<br/>Additional Effect: Grants Ready to Blast<br/>Duration: 10s<br/><br/>※Continuation changes to Hypervelocity while under the effect of Ready to Blast.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "Gnashing Fang",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e212245a0fb649855339dfa11b548cddcbf7511e.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 7,000.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\n\n※Continuation changes to Jugular Rip while under the effect of Ready to Rip.",
+     "descriptionHtml": "Delivers an attack with a potency of 7,000.<br/>Additional Effect: Grants Ready to Rip<br/>Duration: 10s<br/><br/>※Continuation changes to Jugular Rip while under the effect of Ready to Rip."
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "Fated Circle",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b3e2c224457502ae6abb83fc37870cd1ca429087.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "6y",
+     "description": "Delivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Grants Nebula\nDuration: 8s\nNebula Effect: Counters all incoming attacks.\nCounter Potency: 4,000\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nThis weaponskill does not share a recast timer with any other actions.\n\n※Continuation changes to Fated Brand while under the effect of Ready to Raze.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all nearby enemies.<br/>Additional Effect: Grants Nebula<br/>Duration: 8s<br/>Nebula Effect: Counters all incoming attacks.<br/>Counter Potency: 4,000<br/>Additional Effect: Grants Ready to Raze<br/>Duration: 10s<br/>This weaponskill does not share a recast timer with any other actions.<br/><br/>※Continuation changes to Fated Brand while under the effect of Ready to Raze."
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "Continuation",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/40f2a295b25532536720b6986405436c239aa9e8.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Allows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.",
+     "descriptionHtml": "Allows the firing of successive rounds with your gunblade.<br/>Gnashing Fang may be followed by Jugular Rip.<br/>Savage Claw may be followed by Abdomen Tear.<br/>Wicked Talon may be followed by Eye Gouge.<br/>Burst Strike may be followed by Hypervelocity.<br/>Fated Circle may be followed by Fated Brand."
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "Rough Divide",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d8dcaa43ef97b6ffd9cdacfbef4f3917f24c366e.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "14s",
+     "cost": "-",
+     "range": "20y",
+     "radius": "0y",
+     "description": "Rushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Grants No Mercy\nNo Mercy Effect: Increases damage dealt and healing potency by 10%, while also increasing movement speed by 25%\nDuration: 7s\nMaximum Charges: 3\nCannot be executed while bound.",
+     "descriptionHtml": "Rushes target and delivers an attack with a potency of 2,000.<br/>Additional Effect: Grants No Mercy<br/>No Mercy Effect: Increases damage dealt and healing potency by 10%, while also increasing movement speed by 25%<br/>Duration: 7s<br/>Maximum Charges: 3<br/>Cannot be executed while bound."
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "Blasting Zone",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e55f3900a127f20fca1f99ba799713ced000b9f5.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "16s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 5,000.\nPotency increases up to 10,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.",
+     "descriptionHtml": "Delivers an attack with a potency of 5,000.<br/>Potency increases up to 10,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less."
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "Heart of Corundum",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/609a7eca2e615be394641f09621f4470c3551fcf.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "20s",
+     "cost": "-",
+     "range": "30y",
+     "radius": "0y",
+     "description": "Grants self or target party member the effect of Heart of Corundum and Catharsis of Corundum.\nHeart of Corundum Effect: Reduces damage taken by 10%\nDuration: 10s\nCatharsis of Corundum Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 12,000\nDuration: 10s",
+     "descriptionHtml": "Grants self or target party member the effect of Heart of Corundum and Catharsis of Corundum.<br/>Heart of Corundum Effect: Reduces damage taken by 10%<br/>Duration: 10s<br/>Catharsis of Corundum Effect: Restores HP when HP falls below 50% or upon effect duration expiration<br/>Cure Potency: 12,000<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvp_action__11",
+     "name": "Savage Claw",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cc8843f2a57e615b3572842b26dad8be3f5a34b7.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 8,000.\nCombo Action: Gnashing Fang\nAdditional Effect: Grants Ready to Tear\nDuration: 10s\n\n※Continuation changes to Abdomen Tear while under the effect of Ready to Tear.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000.<br/>Combo Action: Gnashing Fang<br/>Additional Effect: Grants Ready to Tear<br/>Duration: 10s<br/><br/>※Continuation changes to Abdomen Tear while under the effect of Ready to Tear.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__12",
+     "name": "Wicked Talon",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/96bb25bd7c335de1977d2e3006f29286eff5f01e.png",
+     "type": "Weaponskill",
+     "cast": "Instant",
+     "recast": "2.2s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 9,000.\nCombo Action: Savage Claw\nAdditional Effect: Grants Ready to Gouge\nDuration: 10s\n\n※Continuation changes to Eye Gouge while under the effect of Ready to Gouge.\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 9,000.<br/>Combo Action: Savage Claw<br/>Additional Effect: Grants Ready to Gouge<br/>Duration: 10s<br/><br/>※Continuation changes to Eye Gouge while under the effect of Ready to Gouge.<br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__13",
+     "name": "Hypervelocity",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/46260fe1573522f050da18e1e5d636daed048083.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000.<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 6s<br/>Can only be executed when Ready to Blast.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__14",
+     "name": "Fated Brand",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/79391d67428c617c80af0f07cb894d5cabd9b197.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "6y",
+     "description": "Delivers an attack with a potency of 4,000 to all nearby enemies.\nAdditional Effect: Heavy +75%\nDuration: 3s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed while under the effect of Ready to Raze.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000 to all nearby enemies.<br/>Additional Effect: Heavy +75%<br/>Duration: 3s<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency<br/>Duration: 6s<br/>Can only be executed while under the effect of Ready to Raze.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__15",
+     "name": "Jugular Rip",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e1f39d3fecb447aaac966213ab89479591bbc996.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000.<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency<br/>Duration: 6s<br/>Can only be executed when Ready to Rip.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__16",
+     "name": "Abdomen Tear",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/391803a2a95f908e6ce564a68204ec073facce20.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000.<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency<br/>Duration: 6s<br/>Can only be executed when Ready to Tear.<br/><br/>※This action cannot be assigned to a hotbar."
+    },
+    {
+     "rowId": "pvp_action__17",
+     "name": "Eye Gouge",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f2a4f9c7ffb67a95f31b89995f865f5ceb8b06e7.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 4,000.<br/>Additional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency<br/>Duration: 6s<br/>Can only be executed when Ready to Gouge.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "Limit Break",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "Relentless Rush",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c883909d21cab4cc8054d19c6cbb8156a3e6ac96.png",
+     "cast": "Instant",
+     "recast": "10s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "6y",
+     "description": "Unleashes a flurry of blade strikes on nearby enemies, dealing damage over time with a potency of 4,500 and reducing damage taken by 25% until effect expires.\nDuration: 4s\nActivates Terminal Trigger when effect duration expires.\nAdditional Effect: Afflicts target with Relentless Shrapnel, increasing target's damage taken by 5%\nDuration: 6s\nMaximum Stacks: 5\nCan be executed while moving.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\n\n※Action changes to Terminal Trigger upon execution.",
+     "descriptionHtml": "Unleashes a flurry of blade strikes on nearby enemies, dealing damage over time with a potency of 4,500 and reducing damage taken by 25% until effect expires.<br/>Duration: 4s<br/>Activates Terminal Trigger when effect duration expires.<br/>Additional Effect: Afflicts target with Relentless Shrapnel, increasing target's damage taken by 5%<br/>Duration: 6s<br/>Maximum Stacks: 5<br/>Can be executed while moving.<br/>Can only be executed when the limit gauge is full.<br/>Gauge Charge Time: 60s<br/><br/>※Action changes to Terminal Trigger upon execution."
+    },
+    {
+     "rowId": "pvplimitbreakaction_02",
+     "name": "Terminal Trigger",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/378ade68a55ed6f6c34600bd4ade1db2aea5511a.png",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "6y",
+     "description": "Delivers an attack with a potency of 12,000 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 3s\nCan only be executed while under the effect of Relentless Rush.\nRelentless Rush effect expires upon execution.\n\n※This action cannot be assigned to a hotbar.",
+     "descriptionHtml": "Delivers an attack with a potency of 12,000 to all nearby enemies.<br/>Additional Effect: Stun<br/>Duration: 3s<br/>Can only be executed while under the effect of Relentless Rush.<br/>Relentless Rush effect expires upon execution.<br/><br/>※This action cannot be assigned to a hotbar."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "Common Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "Standard-issue Elixir",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "Ability",
+     "cast": "4.5s",
+     "recast": "5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.",
+     "descriptionHtml": "Restores your HP and MP to maximum.<br/>Casting will be interrupted when damage is taken."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "Recuperate",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Restores own HP.\nCure Potency: 16,000",
+     "descriptionHtml": "Restores own HP.<br/>Cure Potency: 16,000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "Purify",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "4s",
+     "cost": "2000 MP",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.",
+     "descriptionHtml": "Removes Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.<br/>Additional Effect: Grants Resilience<br/>Resilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects<br/>Duration: 2s<br/>Can be used even when under the effect of certain status afflictions."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "Guard",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.",
+     "descriptionHtml": "Reduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.<br/>Duration: 4s<br/>Movement speed is reduced by 33% for the duration of this effect.<br/>Effect ends upon reuse, using another action, or when the effect duration expires."
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "Sprint",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "1.5s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Increases movement speed by 50%.\nEffect ends upon reuse or execution of another action.",
+     "descriptionHtml": "Increases movement speed by 50%.<br/>Effect ends upon reuse or execution of another action."
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvP Role Actions",
+   "mode": "pvp",
+   "columns": [
+    "Action Name",
+    "Type",
+    "Cast",
+    "Recast",
+    "MP Cost",
+    "RangeRadius",
+    "Effect"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "Rampage",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0025644eea0d29c167038c0fa0c4b7784d88c6dc.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "45s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "10y",
+     "description": "Delivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000 to all nearby enemies.<br/>Additional Effect: Increases target's damage taken by 25%<br/>Duration: 10s"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "Rampart",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d947368973397ac9682cbb74a423247410963fc6.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "60s",
+     "cost": "-",
+     "range": "0y",
+     "radius": "0y",
+     "description": "Reduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s",
+     "descriptionHtml": "Reduces damage taken by 50% while increasing HP recovered by healing actions by 25%.<br/>Duration: 15s"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "Full Swing",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/47746513d4aeed38aaa5badcc22cd7d6569869d2.png",
+     "type": "Ability",
+     "cast": "Instant",
+     "recast": "30s",
+     "cost": "-",
+     "range": "5y",
+     "radius": "0y",
+     "description": "Delivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect.",
+     "descriptionHtml": "Delivers an attack with a potency of 8,000.<br/>Additional Effect: 30-yalm knockback<br/>Removes Guard from enemies under its effect."
+    }
+   ]
+  }
+ ],
+ "combo": {
+  "intro": "Performing actions in a certain order increases potency and applies combo bonuses.",
+  "routes": [
+   {
+    "class": "job__combo__root job__combo__gunbreaker_01",
+    "steps": [
+     {
+      "name": "Keen Edge",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/7cd4d1186b81029de28854eec532029ef245779c.png"
+     },
+     {
+      "name": "Brutal Shell",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/729d76d5161a59cbed8b5f369e8476acf5ea24b2.png"
+     },
+     {
+      "name": "Solid Barrel",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/57a492f3dd90592bb2b3255f3e2f342dd6b800f9.png"
+     }
+    ],
+    "effect": "Recovers HP while also granting a damage-nullifying barrier to self and adding a Cartridge to your Powder Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__gunbreaker_02",
+    "steps": [
+     {
+      "name": "Demon Slice",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/a38cbdd5b185413becb8c56388d1043259dd25b1.png"
+     },
+     {
+      "name": "Demon Slaughter",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/46bce3e1c9f5ca00fbc00c7f52fc765c47aba80a.png"
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": "Hits multiple enemies while also adding a Cartridge to your Powder Gauge."
+   },
+   {
+    "class": "job__combo__root job__combo__gunbreaker_03",
+    "steps": [
+     {
+      "name": "Gnashing Fang",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/31a707fb47363e30af254750784a60ff55f60ec9.png"
+     },
+     {
+      "name": "Savage Claw",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/fe183577affbcd066b131c997ca32283dba5c768.png"
+     },
+     {
+      "name": "Wicked Talon",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/137262f0ad98e13fd0ace2dc4f7f786d0bcec9a5.png"
+     }
+    ],
+    "effect": ""
+   },
+   {
+    "class": "job__combo__root job__combo__gunbreaker_04",
+    "steps": [
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     },
+     {
+      "name": "",
+      "icon": null
+     }
+    ],
+    "effect": ""
+   },
+   {
+    "class": "job__combo__root job__combo__gunbreaker_05",
+    "steps": [
+     {
+      "name": "Jugular Rip",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/75e8b1b0530a1eb26a7d87aa7a3a50cfb8d3bff7.png"
+     },
+     {
+      "name": "Abdomen Tear",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/e8472939441b3136fb9b2bfa52851e500e001279.png"
+     },
+     {
+      "name": "Eye Gouge",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/0c7e1462abaa7984e64644f3cb9e4a066ec16c59.png"
+     }
+    ],
+    "effect": ""
+   },
+   {
+    "class": "job__combo__root job__combo__gunbreaker_01",
+    "steps": [
+     {
+      "name": "Reign of Beasts",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/df78916692df98ce5e4990edbb531dba1d535e8e.png"
+     },
+     {
+      "name": "Noble Blood",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/10aad4140dd5bacfad70315a6a6da6bd3c4e59a0.png"
+     },
+     {
+      "name": "Lion Heart",
+      "icon": "https://lds-img.finalfantasyxiv.com/d/105394eb5da461f87c00f49826e7ba06e4c93577.png"
+     }
+    ],
+    "effect": "A high-damage combo that hits multiple enemies. Available after executing Bloodfest."
+   }
+  ],
+  "allText": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nKeen Edge\n\nBrutal Shell\n\nSolid Barrel\n\nRecovers HP while also granting a damage-nullifying barrier to self and adding a Cartridge to your Powder Gauge.\n\nDemon Slice\n\nDemon Slaughter\n\nHits multiple enemies while also adding a Cartridge to your Powder Gauge.\n\nGnashing Fang\n\nSavage Claw\n\nWicked Talon\n\nJugular Rip\n\nAbdomen Tear\n\nEye Gouge\n\nExpends a cartridge to deal high damage. Upon learning the job quest action Continuation, additional actions can be used with this combo.\n\nReign of Beasts\n\nNoble Blood\n\nLion Heart\n\nA high-damage combo that hits multiple enemies. Available after executing Bloodfest."
+ },
+ "hud": {
+  "blocks": [
+   {
+    "title": "Powder Gauge",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/l/KRsqKnc7ujlwQuYYrd8ZM6GxFo.png"
+    ]
+   },
+   {
+    "title": "Simple Mode",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/o/fztNh8k74_dg41itWzSnoWv9HI.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/J/698tVXfHraTAE6SLzp9wdUh7eI.png"
+    ]
+   }
+  ],
+  "allText": "Job Gauge\n\nPowder Gauge\nUpon learning the action Royal Guard, a symbol will appear on the screen indicating when it is in effect. Royal Guard increases enmity gained from using other actions.\n\nUpon learning the trait Cartridge Charge, the symbol which indicates the use of Royal Guard will change to also display the Powder Gauge.\n\nThe Powder Gauge displays the number of cartridges in your gunblade, which are acquired by using combo actions such as Solid Barrel and Demon Slaughter (acquired at level 40). Cartridges can then be used to execute several actions such as Burst Strike (acquired at level 30) and Gnashing Fang (acquired at level 60).\n\nThe maximum number of cartridges increases to four while under the effect of Bloodfest. Upon learning the trait Cartridge Charge II (acquired at level 88), the maximum number of cartridges granted by Bloodfest increases to six.\n\nSimple Mode\n\nRoyal Guard (Active)\n\nBloodfest Effect (5 Cartridges)\n\nThe gauge cannot be displayed in simple mode until learning the trait Cartridge Charge at level 30.",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">Job Gauge<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">Powder Gauge</h3>\n<p class=\"job__hud__text\">Upon learning the action <span class=\"txt_red\">Royal Guard</span>, a symbol will appear on the screen indicating when it is in effect. Royal Guard increases enmity gained from using other actions.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"128\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/l/KRsqKnc7ujlwQuYYrd8ZM6GxFo.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout job__hud__layout--mb32 clearfix\">\n<img class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/-/YXsPIfV3tZYR0SmZ5jBfVq07dk.png\" width=\"290\"/>\n<p class=\"job__hud__text\">Upon learning the trait <span class=\"txt_red\">Cartridge Charge</span>, the symbol which indicates the use of Royal Guard will change to also display the <span class=\"txt_red\">Powder Gauge</span>.<br/><br/>The Powder Gauge displays the number of cartridges in your gunblade, which are acquired by using combo actions such as <span class=\"txt_red\">Solid Barrel</span> and <span class=\"txt_red\">Demon Slaughter</span> (acquired at level 40). Cartridges can then be used to execute several actions such as <span class=\"txt_red\">Burst Strike</span> (acquired at level 30) and <span class=\"txt_red\">Gnashing Fang</span> (acquired at level 60).</p>\n</div>\n<p class=\"job__hud__text\">The maximum number of cartridges increases to four while under the effect of <span class=\"txt_red\">Bloodfest</span>. Upon learning the trait <span class=\"txt_red\">Cartridge Charge II</span> (acquired at level 88), the maximum number of cartridges granted by <span class=\"txt_red\">Bloodfest</span> increases to six.</p>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/5/XLkM5VoT3OPxb71IOPujqoUzzs.png\" width=\"590\"/>\n</th>\n</tr>\n</table>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">Simple Mode</h3>\n<table class=\"job__hud__layout--pve\">\n<tr>\n<th>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/o/fztNh8k74_dg41itWzSnoWv9HI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Royal Guard (Active)</p>\n</th>\n<th>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/J/698tVXfHraTAE6SLzp9wdUh7eI.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">Bloodfest Effect (5 Cartridges)</p>\n</th>\n</tr>\n</table>\n<p class=\"job__hud__text\">The gauge cannot be displayed in simple mode until learning the trait <span class=\"txt_red\">Cartridge Charge</span> at level 30.</p>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/l/KRsqKnc7ujlwQuYYrd8ZM6GxFo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/-/YXsPIfV3tZYR0SmZ5jBfVq07dk.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/5/XLkM5VoT3OPxb71IOPujqoUzzs.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/o/fztNh8k74_dg41itWzSnoWv9HI.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/J/698tVXfHraTAE6SLzp9wdUh7eI.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/gunbreaker/01.png",
+   "public/jobguide/hud/gunbreaker/02.png",
+   "public/jobguide/hud/gunbreaker/03.png",
+   "public/jobguide/hud/gunbreaker/04.png",
+   "public/jobguide/hud/gunbreaker/05.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "Actions & Traits",
+   "anchor": null,
+   "text": "Actions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nKeen Edge\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n\nNo Mercy\n\nLv. 2\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 20%.\nDuration: 20s\nAdditional Effect: Grants Ready to Break\nDuration: 30s\n\nBrutal Shell\n\nLv. 4\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Keen Edge\nCombo Potency: 380\nCombo Bonus: Restores own HP\nCure Potency: 200\nCombo Bonus: Creates a barrier which nullifies damage equaling HP restored\nDuration: 30s\n\nCamouflage\n\nLv. 6\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nIncreases parry rate by 50% while reducing damage taken by 10%.\nDuration: 20s\n\nDemon Slice\n\nLv. 10\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity\n\nRoyal Guard\n\nLv. 10\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nSignificantly increases enmity generation.\nEffect ends upon reuse.\n\nRelease Royal Guard\n\nLv. 10\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nCancels the effect of Royal Guard.\n\nLightning Shot\n\nLv. 15\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 150.\nAdditional Effect: Increased enmity\n\nDanger Zone\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 250.\n\nSolid Barrel\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Brutal Shell\nCombo Potency: 460\nCombo Bonus: Adds a Cartridge to your Powder Gauge\n\nBurst Strike\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 420.\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\nEffect of Ready to Blast ends upon execution of any weaponskill.\nCartridge Cost: 1\n\nNebula\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 30%.\nDuration: 15s\n\nDemon Slaughter\n\nLv. 40\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Demon Slice\nCombo Potency: 160\nCombo Bonus: Adds a Cartridge to your Powder Gauge\n\nAurora\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nGrants Regen to target.\nCure Potency: 300\nDuration: 18s\nMaximum Charges: 2\n\nSuperbolide\n\nLv. 50\n\nAbility\nInstant\n360s\n-\n\n0y\n\n0y\n\nReduces HP by 50% of maximum and renders you impervious to most attacks.\nDuration: 10s\n\nSonic Break\n\nLv. 54\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 340.\nAdditional Effect: Damage over time\nPotency: 120\nDuration: 15s\nCan only be executed when Ready to Break.\n\nTrajectory\n\nLv. 56\n\nAbility\nInstant\n30s\n-\n\n20y\n\n0y\n\nRush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.\n\nGnashing Fang\n\nLv. 60\n\nWeaponskill\nInstant\n\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 440.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\nEffect of Ready to Rip ends upon execution of any weaponskill.\nCartridge Cost: 1\nMaximum Charges: 2\nThis weaponskill does not share a recast timer with any other actions.\n\nSavage Claw\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\nCombo Action: Gnashing Fang\nCombo Bonus: Grants Ready to Tear\nDuration: 10s\nEffect of Ready to Tear ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Gnashing Fang changes to Savage Claw when requirements for execution are met.\n\nWicked Talon\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 560.\nCombo Action: Savage Claw\nCombo Bonus: Grants Ready to Gouge\nDuration: 10s\nEffect of Ready to Gouge ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Savage Claw changes to Wicked Talon when requirements for execution are met.\n\nBow Shock\n\nLv. 62\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 150 to all nearby enemies.\nAdditional Effect: Damage over time\nPotency: 60\nDuration: 15s\n\nHeart of Light\n\nLv. 64\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s\n\nHeart of Stone\n\nLv. 68\n\nAbility\nInstant\n25s\n-\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 15%.\nDuration: 7s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s\n\nContinuation\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nAllows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.\n\nJugular Rip\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 220.\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Jugular Rip when requirements for execution are met.\n\nAbdomen Tear\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 260.\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Abdomen Tear when requirements for execution are met.\n\nEye Gouge\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 300.\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Eye Gouge when requirements for execution are met.\n\nFated Circle\n\nLv. 72\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nEffect of Ready to Raze ends upon execution of any weaponskill.\nCartridge Cost: 1\n\nBloodfest\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n25y\n\n0y\n\nDraws aetheric energy from target, adding 3 Cartridges to your Powder Gauge, and increasing maximum Cartridges to 6.\nDuration: 30s\nAdditional Effect: Grants Ready to Reign\nDuration: 30s\n\nBlasting Zone\n\nLv. 80\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 800.\n\nHeart of Corundum\n\nLv. 82\n\nAbility\nInstant\n25s\n-\n\n30y\n\n0y\n\nReduces damage taken by target party member or self by 15%.\nDuration: 8s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s\nAdditional Effect: Grants Clarity of Corundum to target\nClarity of Corundum Effect: Reduces damage taken by 15%\nDuration: 4s\nAdditional Effect: Grants Catharsis of Corundum to target\nCatharsis of Corundum Effect: Restores HP when HP falls to 50% or below, or upon effect duration expiration\nCure Potency: 900\nDuration: 20s\n\nHypervelocity\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 180.\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Hypervelocity when requirements for execution are met.\n\nDouble Down\n\nLv. 90\n\nWeaponskill\nInstant\n\n60s\n-\n\n0y\n\n5y\n\nDelivers an attack to all nearby enemies with a potency of 1,000 for the first enemy, and 15% less for all remaining enemies.\nCartridge Cost: 2\nThis weaponskill does not share a recast timer with any other actions.\n\nGreat Nebula\n\nLv. 92\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 40%.\nAdditional Effect: Increases maximum HP by 20% and restores the amount increased.\nDuration: 15s\n\nFated Brand\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 120 to all nearby enemies.\nCan only be executed when Ready to Raze.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Fated Brand when requirements for execution are met.\n\nReign of Beasts\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 800 for the first enemy, and 60% less for all remaining enemies.\nCan only be executed when Ready to Reign.\n\nNoble Blood\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 900 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Reign of Beasts\n\n※This action cannot be assigned to a hotbar.\n※Reign of Beasts changes to Noble Blood when requirements for execution are met.\n\nLion Heart\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 1,000 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Noble Blood\n\n※This action cannot be assigned to a hotbar.\n※Noble Blood changes to Lion Heart when requirements for execution are met."
+  },
+  {
+   "heading": "Role Actions",
+   "anchor": "anchor__rollcommonaction",
+   "text": "Role Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampart\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nReduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s\n\nLow Blow\n\nLv. 12\n\nAbility\nInstant\n25s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 5s\n\nProvoke\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nGesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.\n\nInterject\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nInterrupts the use of a target's action.\n\nReprisal\n\nLv. 22\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nReduces damage dealt by nearby enemies by 10%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nShirk\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nDiverts 25% of enmity to target party member."
+  },
+  {
+   "heading": "Trait",
+   "anchor": "anchor__onlytrait",
+   "text": "Trait\n\nTraits\nAcquired\nEffect\n\nTank Mastery\n\nLv. 1\n\nReduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.\n\nCartridge Charge\n\nLv. 30\n\nStores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.\nMaximum Cartridges: 2\n\nEnhanced Brutal Shell\n\nLv. 52\n\nGrants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.\nDuration: 30s\n\nEnhanced No Mercy\n\nLv. 54\n\nBecome Ready to Break after executing No Mercy.\nDuration: 30s\n\nDanger Zone Mastery\n\nLv. 80\n\nUpgrades Danger Zone to Blasting Zone.\n\nHeart of Stone Mastery\n\nLv. 82\n\nUpgrades Heart of Stone to Heart of Corundum.\n\nEnhanced Aurora\n\nLv. 84\n\nAllows the accumulation of charges for consecutive uses of Aurora.\nMaximum Charges: 2\n\nMelee Mastery\n\nLv. 84\n\nIncreases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140.\n\nEnhanced Continuation\n\nLv. 86\n\nBecome Ready to Blast after executing Burst Strike.\nDuration: 10s\nContinuation changes to Hypervelocity while under the effect of Ready to Blast.\n\nCartridge Charge II\n\nLv. 88\n\nIncreases Powder Gauge capacity to 3 Cartridges. While under the effect of Bloodfest, increases the maximum capacity to 6.\nExecuting Bloodfest stores 3 Cartridges.\n\nNebula Mastery\n\nLv. 92\n\nUpgrades Nebula to Great Nebula.\n\nMelee Mastery II\n\nLv. 94\n\nIncreases the potency of Keen Edge to 300, Brutal Shell to 240, Solid Barrel to 240, Burst Strike to 420, Gnashing Fang to 440, Savage Claw to 500, Wicked Talon to 560, Jugular Rip to 220, Abdomen Tear to 260, Eye Gouge to 300, Blasting Zone to 800, and Hypervelocity to 180.\n\nEnhanced Continuation II\n\nLv. 96\n\nBecome Ready to Raze after executing Fated Circle.\nDuration: 10s\nContinuation changes to Fated Brand when Ready to Raze.\n\nEnhanced Bloodfest\n\nLv. 100\n\nGrants the effect of Ready to Reign after executing Bloodfest.\nDuration: 30s"
+  },
+  {
+   "heading": "Role Traits",
+   "anchor": "anchor__rollcommontrait",
+   "text": "Role Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Rampart\n\nLv. 94\n\nAdds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.\n\nEnhanced Reprisal\n\nLv. 98\n\nExtends the duration of Reprisal to 15 seconds."
+  },
+  {
+   "heading": "Combos",
+   "anchor": "anchor__pve_combo",
+   "text": "Combos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nKeen Edge\n\nBrutal Shell\n\nSolid Barrel\n\nRecovers HP while also granting a damage-nullifying barrier to self and adding a Cartridge to your Powder Gauge.\n\nDemon Slice\n\nDemon Slaughter\n\nHits multiple enemies while also adding a Cartridge to your Powder Gauge.\n\nGnashing Fang\n\nSavage Claw\n\nWicked Talon\n\nJugular Rip\n\nAbdomen Tear\n\nEye Gouge\n\nExpends a cartridge to deal high damage. Upon learning the job quest action Continuation, additional actions can be used with this combo.\n\nReign of Beasts\n\nNoble Blood\n\nLion Heart\n\nA high-damage combo that hits multiple enemies. Available after executing Bloodfest."
+  },
+  {
+   "heading": "Job Gauge",
+   "anchor": "anchor__hud",
+   "text": "Job Gauge\n\nPowder Gauge\nUpon learning the action Royal Guard, a symbol will appear on the screen indicating when it is in effect. Royal Guard increases enmity gained from using other actions.\n\nUpon learning the trait Cartridge Charge, the symbol which indicates the use of Royal Guard will change to also display the Powder Gauge.\n\nThe Powder Gauge displays the number of cartridges in your gunblade, which are acquired by using combo actions such as Solid Barrel and Demon Slaughter (acquired at level 40). Cartridges can then be used to execute several actions such as Burst Strike (acquired at level 30) and Gnashing Fang (acquired at level 60).\n\nThe maximum number of cartridges increases to four while under the effect of Bloodfest. Upon learning the trait Cartridge Charge II (acquired at level 88), the maximum number of cartridges granted by Bloodfest increases to six.\n\nSimple Mode\n\nRoyal Guard (Active)\n\nBloodfest Effect (5 Cartridges)\n\nThe gauge cannot be displayed in simple mode until learning the trait Cartridge Charge at level 30."
+  },
+  {
+   "heading": "Actions",
+   "anchor": null,
+   "text": "Actions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nKeen Edge\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nBrutal Shell\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Keen Edge\n\n※This action cannot be assigned to a hotbar.\n\nSolid Barrel\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Brutal Shell\n\n※This action cannot be assigned to a hotbar.\n\nBurst Strike\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nCombo Action: Solid Barrel\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\n\n※Continuation changes to Hypervelocity while under the effect of Ready to Blast.\n※This action cannot be assigned to a hotbar.\n\nGnashing Fang\n\nWeaponskill\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\n\n※Continuation changes to Jugular Rip while under the effect of Ready to Rip.\n\nFated Circle\n\nWeaponskill\nInstant\n20s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Grants Nebula\nDuration: 8s\nNebula Effect: Counters all incoming attacks.\nCounter Potency: 4,000\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nThis weaponskill does not share a recast timer with any other actions.\n\n※Continuation changes to Fated Brand while under the effect of Ready to Raze.\n\nContinuation\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nAllows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.\n\nRough Divide\n\nAbility\nInstant\n14s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Grants No Mercy\nNo Mercy Effect: Increases damage dealt and healing potency by 10%, while also increasing movement speed by 25%\nDuration: 7s\nMaximum Charges: 3\nCannot be executed while bound.\n\nBlasting Zone\n\nAbility\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\nPotency increases up to 10,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\n\nHeart of Corundum\n\nAbility\nInstant\n20s\n-\n\n30y\n\n0y\n\nGrants self or target party member the effect of Heart of Corundum and Catharsis of Corundum.\nHeart of Corundum Effect: Reduces damage taken by 10%\nDuration: 10s\nCatharsis of Corundum Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 12,000\nDuration: 10s\n\nSavage Claw\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nCombo Action: Gnashing Fang\nAdditional Effect: Grants Ready to Tear\nDuration: 10s\n\n※Continuation changes to Abdomen Tear while under the effect of Ready to Tear.\n※This action cannot be assigned to a hotbar.\n\nWicked Talon\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 9,000.\nCombo Action: Savage Claw\nAdditional Effect: Grants Ready to Gouge\nDuration: 10s\n\n※Continuation changes to Eye Gouge while under the effect of Ready to Gouge.\n※This action cannot be assigned to a hotbar.\n\nHypervelocity\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.\n\nFated Brand\n\nAbility\nInstant\n1s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 4,000 to all nearby enemies.\nAdditional Effect: Heavy +75%\nDuration: 3s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed while under the effect of Ready to Raze.\n\n※This action cannot be assigned to a hotbar.\n\nJugular Rip\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.\n\nAbdomen Tear\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.\n\nEye Gouge\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Limit Break",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "Limit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRelentless Rush\n\nInstant\n10s\n-\n\n0y\n\n6y\n\nUnleashes a flurry of blade strikes on nearby enemies, dealing damage over time with a potency of 4,500 and reducing damage taken by 25% until effect expires.\nDuration: 4s\nActivates Terminal Trigger when effect duration expires.\nAdditional Effect: Afflicts target with Relentless Shrapnel, increasing target's damage taken by 5%\nDuration: 6s\nMaximum Stacks: 5\nCan be executed while moving.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\n\n※Action changes to Terminal Trigger upon execution.\n\nTerminal Trigger\n\nInstant\n1s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 12,000 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 3s\nCan only be executed while under the effect of Relentless Rush.\nRelentless Rush effect expires upon execution.\n\n※This action cannot be assigned to a hotbar."
+  },
+  {
+   "heading": "Common Actions",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "Common Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action."
+  },
+  {
+   "heading": "PvP Role Actions",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampage\n\nAbility\nInstant\n45s\n-\n\n0y\n\n10y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s\n\nRampart\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s\n\nFull Swing\n\nAbility\nInstant\n30s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect."
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\nEnglish (US)\n\nEnglish (US)\nEnglish (UK)\nFrançais\nDeutsch\n日本語\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nPaladin\n\nWarrior\n\nDark Knight\nGunbreaker\n\nWhite Mage\n\nScholar\nAstrologian\nSage\n\nMonk\n\nDragoon\n\nNinja\n\nSamurai\nReaper\nViper\nBeastmaster\n\nBard\n\nMachinist\nDancer\n\nBlack Mage\n\nSummoner\n\nRed Mage\nPictomancer\nBlue Mage\n\nGameplay Guide\nCrafting & Gathering Guide\nUI Guide\nPvP Guide\n\nJob Actions\n\nRole Actions\n\nTrait\nRole Traits\nCombos\nJob Gauge\n\nJob Actions\n\nLimit Break\n\nCommon Actions\n\nPvP Role Actions\n\nTop\n\nTank\n\nThe Hrothgar of northern Ilsabard have passed the art of the gunblade from one generation to the next. The weapon itself combines a sword with a firing mechanism, emitting a range of magical effects by utilizing aetherially imbued cartridges. Originally employed by Queen Gunnhildr's personal guard, they were once known as \"Gunnhildr's Blades\" and differ greatly from the similarly named weapons used in the Garlean Empire.\n\nStarting Job Quest\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nActions & Traits\n\nJob Actions\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nKeen Edge\n\nLv. 1\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 300.\n\nNo Mercy\n\nLv. 2\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nIncreases damage dealt by 20%.\nDuration: 20s\nAdditional Effect: Grants Ready to Break\nDuration: 30s\n\nBrutal Shell\n\nLv. 4\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Keen Edge\nCombo Potency: 380\nCombo Bonus: Restores own HP\nCure Potency: 200\nCombo Bonus: Creates a barrier which nullifies damage equaling HP restored\nDuration: 30s\n\nCamouflage\n\nLv. 6\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nIncreases parry rate by 50% while reducing damage taken by 10%.\nDuration: 20s\n\nDemon Slice\n\nLv. 10\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity\n\nRoyal Guard\n\nLv. 10\n\nAbility\nInstant\n2s\n-\n\n0y\n\n0y\n\nSignificantly increases enmity generation.\nEffect ends upon reuse.\n\nRelease Royal Guard\n\nLv. 10\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nCancels the effect of Royal Guard.\n\nLightning Shot\n\nLv. 15\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n20y\n\n0y\n\nDelivers a ranged attack with a potency of 150.\nAdditional Effect: Increased enmity\n\nDanger Zone\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 250.\n\nSolid Barrel\n\nLv. 26\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 240.\nCombo Action: Brutal Shell\nCombo Potency: 460\nCombo Bonus: Adds a Cartridge to your Powder Gauge\n\nBurst Strike\n\nLv. 30\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 420.\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\nEffect of Ready to Blast ends upon execution of any weaponskill.\nCartridge Cost: 1\n\nNebula\n\nLv. 38\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 30%.\nDuration: 15s\n\nDemon Slaughter\n\nLv. 40\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 100 to all nearby enemies.\nAdditional Effect: Increased enmity\nCombo Action: Demon Slice\nCombo Potency: 160\nCombo Bonus: Adds a Cartridge to your Powder Gauge\n\nAurora\n\nLv. 45\n\nAbility\nInstant\n60s\n-\n\n30y\n\n0y\n\nGrants Regen to target.\nCure Potency: 300\nDuration: 18s\nMaximum Charges: 2\n\nSuperbolide\n\nLv. 50\n\nAbility\nInstant\n360s\n-\n\n0y\n\n0y\n\nReduces HP by 50% of maximum and renders you impervious to most attacks.\nDuration: 10s\n\nSonic Break\n\nLv. 54\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 340.\nAdditional Effect: Damage over time\nPotency: 120\nDuration: 15s\nCan only be executed when Ready to Break.\n\nTrajectory\n\nLv. 56\n\nAbility\nInstant\n30s\n-\n\n20y\n\n0y\n\nRush to a targeted enemy's location.\nAdditional Effect: Increased enmity\nMaximum Charges: 2\nCannot be executed while bound.\n\nGnashing Fang\n\nLv. 60\n\nWeaponskill\nInstant\n\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 440.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\nEffect of Ready to Rip ends upon execution of any weaponskill.\nCartridge Cost: 1\nMaximum Charges: 2\nThis weaponskill does not share a recast timer with any other actions.\n\nSavage Claw\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 500.\nCombo Action: Gnashing Fang\nCombo Bonus: Grants Ready to Tear\nDuration: 10s\nEffect of Ready to Tear ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Gnashing Fang changes to Savage Claw when requirements for execution are met.\n\nWicked Talon\n\nLv. 60\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 560.\nCombo Action: Savage Claw\nCombo Bonus: Grants Ready to Gouge\nDuration: 10s\nEffect of Ready to Gouge ends upon execution of any weaponskill.\n\n※This action cannot be assigned to a hotbar.\n※Savage Claw changes to Wicked Talon when requirements for execution are met.\n\nBow Shock\n\nLv. 62\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 150 to all nearby enemies.\nAdditional Effect: Damage over time\nPotency: 60\nDuration: 15s\n\nHeart of Light\n\nLv. 64\n\nAbility\nInstant\n90s\n-\n\n0y\n\n30y\n\nReduces physical damage taken by 5% and magic damage taken by 10% for self and nearby party members.\nDuration: 15s\n\nHeart of Stone\n\nLv. 68\n\nAbility\nInstant\n25s\n-\n\n30y\n\n0y\n\nReduces damage taken by a party member or self by 15%.\nDuration: 7s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s\n\nContinuation\n\nJob Quest\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nAllows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.\n\nJugular Rip\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 220.\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Jugular Rip when requirements for execution are met.\n\nAbdomen Tear\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 260.\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Abdomen Tear when requirements for execution are met.\n\nEye Gouge\n\nLv. 70\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 300.\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Eye Gouge when requirements for execution are met.\n\nFated Circle\n\nLv. 72\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 300 to all nearby enemies.\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nEffect of Ready to Raze ends upon execution of any weaponskill.\nCartridge Cost: 1\n\nBloodfest\n\nLv. 76\n\nAbility\nInstant\n60s\n-\n\n25y\n\n0y\n\nDraws aetheric energy from target, adding 3 Cartridges to your Powder Gauge, and increasing maximum Cartridges to 6.\nDuration: 30s\nAdditional Effect: Grants Ready to Reign\nDuration: 30s\n\nBlasting Zone\n\nLv. 80\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nDelivers an attack with a potency of 800.\n\nHeart of Corundum\n\nLv. 82\n\nAbility\nInstant\n25s\n-\n\n30y\n\n0y\n\nReduces damage taken by target party member or self by 15%.\nDuration: 8s\nAdditional Effect: When targeting a party member while under the effect of Brutal Shell, that effect is also granted to the target\nDuration: 30s\nAdditional Effect: Grants Clarity of Corundum to target\nClarity of Corundum Effect: Reduces damage taken by 15%\nDuration: 4s\nAdditional Effect: Grants Catharsis of Corundum to target\nCatharsis of Corundum Effect: Restores HP when HP falls to 50% or below, or upon effect duration expiration\nCure Potency: 900\nDuration: 20s\n\nHypervelocity\n\nLv. 86\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 180.\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Hypervelocity when requirements for execution are met.\n\nDouble Down\n\nLv. 90\n\nWeaponskill\nInstant\n\n60s\n-\n\n0y\n\n5y\n\nDelivers an attack to all nearby enemies with a potency of 1,000 for the first enemy, and 15% less for all remaining enemies.\nCartridge Cost: 2\nThis weaponskill does not share a recast timer with any other actions.\n\nGreat Nebula\n\nLv. 92\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nReduces damage taken by 40%.\nAdditional Effect: Increases maximum HP by 20% and restores the amount increased.\nDuration: 15s\n\nFated Brand\n\nLv. 96\n\nAbility\nInstant\n1s\n-\n\n0y\n\n5y\n\nDelivers an attack with a potency of 120 to all nearby enemies.\nCan only be executed when Ready to Raze.\n\n※This action cannot be assigned to a hotbar.\n※Continuation changes to Fated Brand when requirements for execution are met.\n\nReign of Beasts\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 800 for the first enemy, and 60% less for all remaining enemies.\nCan only be executed when Ready to Reign.\n\nNoble Blood\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 900 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Reign of Beasts\n\n※This action cannot be assigned to a hotbar.\n※Reign of Beasts changes to Noble Blood when requirements for execution are met.\n\nLion Heart\n\nLv. 100\n\nWeaponskill\nInstant\n\n2.5s\n-\n\n3y\n\n5y\n\nDelivers an attack to target and all enemies nearby it with a potency of 1,000 for the first enemy, and 60% less for all remaining enemies.\nCombo Action: Noble Blood\n\n※This action cannot be assigned to a hotbar.\n※Noble Blood changes to Lion Heart when requirements for execution are met.\n\nRole Actions\n\nRole actions are abilities common to classes and jobs with the same role.\n\nAction Name\nAcquired\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampart\n\nLv. 8\n\nAbility\nInstant\n90s\n-\n\n0y\n\n0y\n\nReduces damage taken by 20%.\nAdditional Effect: Increases HP recovery via healing actions on self by 15%\nDuration: 20s\n\nLow Blow\n\nLv. 12\n\nAbility\nInstant\n25s\n-\n\n3y\n\n0y\n\nStuns target.\nDuration: 5s\n\nProvoke\n\nLv. 15\n\nAbility\nInstant\n30s\n-\n\n25y\n\n0y\n\nGesture threateningly, placing yourself at the top of a target's enmity list while gaining additional enmity.\n\nInterject\n\nLv. 18\n\nAbility\nInstant\n30s\n-\n\n3y\n\n0y\n\nInterrupts the use of a target's action.\n\nReprisal\n\nLv. 22\n\nAbility\nInstant\n60s\n-\n\n0y\n\n5y\n\nReduces damage dealt by nearby enemies by 10%.\nDuration: 15s\n\nArm's Length\n\nLv. 32\n\nAbility\nInstant\n120s\n-\n\n0y\n\n0y\n\nNullifies most knockback and draw-in effects.\nDuration: 6s\nAdditional Effect: When you are struck by a physical attack, the striker will be afflicted with Slow +20%\nDuration: 15s\n\nShirk\n\nLv. 48\n\nAbility\nInstant\n120s\n-\n\n25y\n\n0y\n\nDiverts 25% of enmity to target party member.\n\nTrait\n\nTraits\nAcquired\nEffect\n\nTank Mastery\n\nLv. 1\n\nReduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.\n\nCartridge Charge\n\nLv. 30\n\nStores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.\nMaximum Cartridges: 2\n\nEnhanced Brutal Shell\n\nLv. 52\n\nGrants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.\nDuration: 30s\n\nEnhanced No Mercy\n\nLv. 54\n\nBecome Ready to Break after executing No Mercy.\nDuration: 30s\n\nDanger Zone Mastery\n\nLv. 80\n\nUpgrades Danger Zone to Blasting Zone.\n\nHeart of Stone Mastery\n\nLv. 82\n\nUpgrades Heart of Stone to Heart of Corundum.\n\nEnhanced Aurora\n\nLv. 84\n\nAllows the accumulation of charges for consecutive uses of Aurora.\nMaximum Charges: 2\n\nMelee Mastery\n\nLv. 84\n\nIncreases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140.\n\nEnhanced Continuation\n\nLv. 86\n\nBecome Ready to Blast after executing Burst Strike.\nDuration: 10s\nContinuation changes to Hypervelocity while under the effect of Ready to Blast.\n\nCartridge Charge II\n\nLv. 88\n\nIncreases Powder Gauge capacity to 3 Cartridges. While under the effect of Bloodfest, increases the maximum capacity to 6.\nExecuting Bloodfest stores 3 Cartridges.\n\nNebula Mastery\n\nLv. 92\n\nUpgrades Nebula to Great Nebula.\n\nMelee Mastery II\n\nLv. 94\n\nIncreases the potency of Keen Edge to 300, Brutal Shell to 240, Solid Barrel to 240, Burst Strike to 420, Gnashing Fang to 440, Savage Claw to 500, Wicked Talon to 560, Jugular Rip to 220, Abdomen Tear to 260, Eye Gouge to 300, Blasting Zone to 800, and Hypervelocity to 180.\n\nEnhanced Continuation II\n\nLv. 96\n\nBecome Ready to Raze after executing Fated Circle.\nDuration: 10s\nContinuation changes to Fated Brand when Ready to Raze.\n\nEnhanced Bloodfest\n\nLv. 100\n\nGrants the effect of Ready to Reign after executing Bloodfest.\nDuration: 30s\n\nRole Traits\n\nRole traits are characteristics common to classes and jobs with the same role.\n\nTraits\nAcquired\nEffect\n\nEnhanced Rampart\n\nLv. 94\n\nAdds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.\n\nEnhanced Reprisal\n\nLv. 98\n\nExtends the duration of Reprisal to 15 seconds.\n\nCombos\n\nPerforming actions in a certain order increases potency and applies combo bonuses.\n\nCombo Sequence\nEffect\n\nKeen Edge\n\nBrutal Shell\n\nSolid Barrel\n\nRecovers HP while also granting a damage-nullifying barrier to self and adding a Cartridge to your Powder Gauge.\n\nDemon Slice\n\nDemon Slaughter\n\nHits multiple enemies while also adding a Cartridge to your Powder Gauge.\n\nGnashing Fang\n\nSavage Claw\n\nWicked Talon\n\nJugular Rip\n\nAbdomen Tear\n\nEye Gouge\n\nExpends a cartridge to deal high damage. Upon learning the job quest action Continuation, additional actions can be used with this combo.\n\nReign of Beasts\n\nNoble Blood\n\nLion Heart\n\nA high-damage combo that hits multiple enemies. Available after executing Bloodfest.\n\nJob Gauge\n\nPowder Gauge\nUpon learning the action Royal Guard, a symbol will appear on the screen indicating when it is in effect. Royal Guard increases enmity gained from using other actions.\n\nUpon learning the trait Cartridge Charge, the symbol which indicates the use of Royal Guard will change to also display the Powder Gauge.\n\nThe Powder Gauge displays the number of cartridges in your gunblade, which are acquired by using combo actions such as Solid Barrel and Demon Slaughter (acquired at level 40). Cartridges can then be used to execute several actions such as Burst Strike (acquired at level 30) and Gnashing Fang (acquired at level 60).\n\nThe maximum number of cartridges increases to four while under the effect of Bloodfest. Upon learning the trait Cartridge Charge II (acquired at level 88), the maximum number of cartridges granted by Bloodfest increases to six.\n\nSimple Mode\n\nRoyal Guard (Active)\n\nBloodfest Effect (5 Cartridges)\n\nThe gauge cannot be displayed in simple mode until learning the trait Cartridge Charge at level 30.\n\nAll descriptions are based on action attributes and bonuses attained by level 100.\nFor further details on changes to actions and traits in Patch 7.5, please refer to the patch notes.\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nFor further details on changes to actions, please refer to the patch notes.\n\nActions\nJob Actions\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nKeen Edge\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\n\n※This action cannot be assigned to a hotbar.\n\nBrutal Shell\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 6,000.\nCombo Action: Keen Edge\n\n※This action cannot be assigned to a hotbar.\n\nSolid Barrel\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nCombo Action: Brutal Shell\n\n※This action cannot be assigned to a hotbar.\n\nBurst Strike\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nCombo Action: Solid Barrel\nAdditional Effect: Grants Ready to Blast\nDuration: 10s\n\n※Continuation changes to Hypervelocity while under the effect of Ready to Blast.\n※This action cannot be assigned to a hotbar.\n\nGnashing Fang\n\nWeaponskill\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 7,000.\nAdditional Effect: Grants Ready to Rip\nDuration: 10s\n\n※Continuation changes to Jugular Rip while under the effect of Ready to Rip.\n\nFated Circle\n\nWeaponskill\nInstant\n20s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Grants Nebula\nDuration: 8s\nNebula Effect: Counters all incoming attacks.\nCounter Potency: 4,000\nAdditional Effect: Grants Ready to Raze\nDuration: 10s\nThis weaponskill does not share a recast timer with any other actions.\n\n※Continuation changes to Fated Brand while under the effect of Ready to Raze.\n\nContinuation\n\nAbility\nInstant\n1s\n-\n\n0y\n\n0y\n\nAllows the firing of successive rounds with your gunblade.\nGnashing Fang may be followed by Jugular Rip.\nSavage Claw may be followed by Abdomen Tear.\nWicked Talon may be followed by Eye Gouge.\nBurst Strike may be followed by Hypervelocity.\nFated Circle may be followed by Fated Brand.\n\nRough Divide\n\nAbility\nInstant\n14s\n-\n\n20y\n\n0y\n\nRushes target and delivers an attack with a potency of 2,000.\nAdditional Effect: Grants No Mercy\nNo Mercy Effect: Increases damage dealt and healing potency by 10%, while also increasing movement speed by 25%\nDuration: 7s\nMaximum Charges: 3\nCannot be executed while bound.\n\nBlasting Zone\n\nAbility\nInstant\n16s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 5,000.\nPotency increases up to 10,000 as the target's HP decreases, reaching its maximum value when the target has 50% HP or less.\n\nHeart of Corundum\n\nAbility\nInstant\n20s\n-\n\n30y\n\n0y\n\nGrants self or target party member the effect of Heart of Corundum and Catharsis of Corundum.\nHeart of Corundum Effect: Reduces damage taken by 10%\nDuration: 10s\nCatharsis of Corundum Effect: Restores HP when HP falls below 50% or upon effect duration expiration\nCure Potency: 12,000\nDuration: 10s\n\nSavage Claw\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nCombo Action: Gnashing Fang\nAdditional Effect: Grants Ready to Tear\nDuration: 10s\n\n※Continuation changes to Abdomen Tear while under the effect of Ready to Tear.\n※This action cannot be assigned to a hotbar.\n\nWicked Talon\n\nWeaponskill\nInstant\n\n2.2s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 9,000.\nCombo Action: Savage Claw\nAdditional Effect: Grants Ready to Gouge\nDuration: 10s\n\n※Continuation changes to Eye Gouge while under the effect of Ready to Gouge.\n※This action cannot be assigned to a hotbar.\n\nHypervelocity\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed when Ready to Blast.\n\n※This action cannot be assigned to a hotbar.\n\nFated Brand\n\nAbility\nInstant\n1s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 4,000 to all nearby enemies.\nAdditional Effect: Heavy +75%\nDuration: 3s\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 8,000 potency\nDuration: 6s\nCan only be executed while under the effect of Ready to Raze.\n\n※This action cannot be assigned to a hotbar.\n\nJugular Rip\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Rip.\n\n※This action cannot be assigned to a hotbar.\n\nAbdomen Tear\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Tear.\n\n※This action cannot be assigned to a hotbar.\n\nEye Gouge\n\nAbility\nInstant\n1s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 4,000.\nAdditional Effect: Creates a barrier around self that absorbs damage equivalent to a heal of 6,000 potency\nDuration: 6s\nCan only be executed when Ready to Gouge.\n\n※This action cannot be assigned to a hotbar.\n\nLimit Break\n\nThe limit break gauge can be filled through combating enemies and completing other objectives, dependent on the PvP duty. Your limit break will become available upon filling the gauge.\n\nAction Name\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRelentless Rush\n\nInstant\n10s\n-\n\n0y\n\n6y\n\nUnleashes a flurry of blade strikes on nearby enemies, dealing damage over time with a potency of 4,500 and reducing damage taken by 25% until effect expires.\nDuration: 4s\nActivates Terminal Trigger when effect duration expires.\nAdditional Effect: Afflicts target with Relentless Shrapnel, increasing target's damage taken by 5%\nDuration: 6s\nMaximum Stacks: 5\nCan be executed while moving.\nCan only be executed when the limit gauge is full.\nGauge Charge Time: 60s\n\n※Action changes to Terminal Trigger upon execution.\n\nTerminal Trigger\n\nInstant\n1s\n-\n\n0y\n\n6y\n\nDelivers an attack with a potency of 12,000 to all nearby enemies.\nAdditional Effect: Stun\nDuration: 3s\nCan only be executed while under the effect of Relentless Rush.\nRelentless Rush effect expires upon execution.\n\n※This action cannot be assigned to a hotbar.\n\nCommon Actions\n\nThese actions are shared by all jobs.\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nStandard-issue Elixir\n\nAbility\n4.5s\n5s\n-\n\n0y\n\n0y\n\nRestores your HP and MP to maximum.\nCasting will be interrupted when damage is taken.\n\nRecuperate\n\nAbility\nInstant\n1s\n2000 MP\n\n0y\n\n0y\n\nRestores own HP.\nCure Potency: 16,000\n\nPurify\n\nAbility\nInstant\n4s\n2000 MP\n\n0y\n\n0y\n\nRemoves Stun, Heavy, Bind, Silence, Deep Freeze, and Miracle of Nature.\nAdditional Effect: Grants Resilience\nResilience Effect: Nullifies status afflictions that can be removed by Purify, as well as knockback and draw-in effects\nDuration: 2s\nCan be used even when under the effect of certain status afflictions.\n\nGuard\n\nAbility\nInstant\n30s\n-\n\n0y\n\n0y\n\nReduces damage taken by 99% and grants immunity to Stun, Heavy, Bind, Silence, Deep Freeze, and knockback and draw-in effects.\nDuration: 4s\nMovement speed is reduced by 33% for the duration of this effect.\nEffect ends upon reuse, using another action, or when the effect duration expires.\n\nSprint\n\nAbility\nInstant\n1.5s\n-\n\n0y\n\n0y\n\nIncreases movement speed by 50%.\nEffect ends upon reuse or execution of another action.\n\nPvP Role Actions\n\nOne PvP role action may be selected per role, and they are applicable only in large-scale PvP duties (Frontline and Rival Wings).\n\nAction Name\nType\nCast\nRecast\nMP Cost\nRangeRadius\nEffect\n\nRampage\n\nAbility\nInstant\n45s\n-\n\n0y\n\n10y\n\nDelivers an attack with a potency of 8,000 to all nearby enemies.\nAdditional Effect: Increases target's damage taken by 25%\nDuration: 10s\n\nRampart\n\nAbility\nInstant\n60s\n-\n\n0y\n\n0y\n\nReduces damage taken by 50% while increasing HP recovered by healing actions by 25%.\nDuration: 15s\n\nFull Swing\n\nAbility\nInstant\n30s\n-\n\n5y\n\n0y\n\nDelivers an attack with a potency of 8,000.\nAdditional Effect: 30-yalm knockback\nRemoves Guard from enemies under its effect.\n\nFor further details on changes to actions, please refer to the patch notes.\n\nGame Download\n\nOfficial Information\n\nFacebook\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nBluesky\n\nLicense\nRules & Policies\nPrivacy Notice\nCookies Notice\nDo Not Sell or Share My Personal Information\n\nPrivacy Notice\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMAC is a trademark of Apple Inc., registered in the U.S. and other countries.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\nESRB and the ESRB rating icon are registered trademarks of the Entertainment Software Association.\nAll other trademarks are property of their respective owners.\n\n© SQUARE ENIX\nSquare Enix, Inc., 2150 E. Grand Ave., El \n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}

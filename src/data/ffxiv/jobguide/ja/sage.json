@@ -1,0 +1,1774 @@
+{
+ "job": "sage",
+ "lang": "ja",
+ "url": "https://jp.finalfantasyxiv.com/jobguide/sage/",
+ "pageTitle": "ジョブガイド「賢者」 | ファイナルファンタジーXIV",
+ "header": {
+  "text": "専用アクション\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nHEALER/ヒーラー\n\nシャーレアン魔法大学――それは、知の都を代表する最高学府である。\nその最大の特徴は、膨大な蔵書数を誇る書院でも、数多の賢人たちでもない。複数の学問を横断的に学ぶことで、新たな学問を創出してきた歴史にあるのだ。中でも、エーテル学と魔法学に、医学を統合することで生み出された「賢学」は、ほかに類を見ない学問である。結節点となる賢具を配置して立体的な魔法陣を形成し、体内エーテルに作用して治癒や攻撃を為す。それが、「人の進歩」を目指す賢学の徒――すなわち賢者の術である。\n\nジョブ開始クエスト",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/d/817398ae8dfe613839528291eebfe76e05bd3584.png",
+   "https://lds-img.finalfantasyxiv.com/d/c750ddbd308f469bfe54e263e98f2b1dc42ecfd3.png",
+   "https://lds-img.finalfantasyxiv.com/d/bd80c68721d02a37275edfa07de82a39adbceb1c.png",
+   "https://lds-img.finalfantasyxiv.com/d/7f8253801283aa010e5a6ff40dafda493f1d58a4.png",
+   "https://lds-img.finalfantasyxiv.com/d/3b5dbe0188fba544474a1c3304af88544838e5cc.png",
+   "https://lds-img.finalfantasyxiv.com/d/b2acbee8acf84344ed1cbf15e97a5f88fe0f2e22.png",
+   "https://lds-img.finalfantasyxiv.com/d/9f221a8b7c540f90f808d332e802b3626fef4431.png",
+   "https://lds-img.finalfantasyxiv.com/d/3d9da11ae40aa687171f1bf2a5655b6f0e442d79.png",
+   "https://lds-img.finalfantasyxiv.com/d/0a0085828964c504f045a98b67feaf6c26c2307d.png",
+   "https://lds-img.finalfantasyxiv.com/d/723cccd2fe9542159daffcd22f44ff52d8a2f6a1.png",
+   "https://lds-img.finalfantasyxiv.com/d/3cffb9cb106612236b80ce85e1881e0d7760512f.png",
+   "https://lds-img.finalfantasyxiv.com/d/4f39d0024ea7741facfb247d0056064e831c3765.png",
+   "https://lds-img.finalfantasyxiv.com/d/347d5069652ea0716aa462ba3dd96fc148156b0f.png",
+   "https://lds-img.finalfantasyxiv.com/d/00cd1d056243c5e06b9bbb52a6112ddb35dbcbe9.png",
+   "https://lds-img.finalfantasyxiv.com/d/849a554b53462ae2c240dc06558bf710c0f98e5e.png",
+   "https://lds-img.finalfantasyxiv.com/d/b49859cbf63de26b230527650742576590166760.png",
+   "https://lds-img.finalfantasyxiv.com/d/4ee83614031659334dda42affd3314aebcaf98f4.png",
+   "https://lds-img.finalfantasyxiv.com/d/958000045b75c90c1ce059d11d2f2ed488d72a65.png",
+   "https://lds-img.finalfantasyxiv.com/d/863096a46c76144097ba25d6d9d5fe1f997cda9e.png",
+   "https://lds-img.finalfantasyxiv.com/d/ece8fe6d911ad6497e35a13d82572d2373d2a2a4.png",
+   "https://lds-img.finalfantasyxiv.com/d/fe3b0d2ce97deba2e6b4cfbc39e65e2abd32b31b.png",
+   "https://lds-img.finalfantasyxiv.com/d/bedfcd09b95bf0fa2290753478364965c82a739b.png",
+   "https://lds-img.finalfantasyxiv.com/d/31657e2f5ec2ec375960c927a6ed532883d8d271.png",
+   "https://lds-img.finalfantasyxiv.com/d/0323f174ced3df37c1c6699f4c4dc980e58b9b7b.png",
+   "https://lds-img.finalfantasyxiv.com/d/f1948c2f7f527f0dab918a0224c6021ff4e808b9.png",
+   "https://lds-img.finalfantasyxiv.com/d/407976b29bc9e0d8cb51ddf0ad5312f90d4bee89.png",
+   "https://lds-img.finalfantasyxiv.com/d/de5abe27cae326e6906d5627c6bf02dc4e98cc2b.png",
+   "https://lds-img.finalfantasyxiv.com/d/849030dfa96d3cc4cee84939ef23c0554d9a3821.png",
+   "https://lds-img.finalfantasyxiv.com/d/62887c572b00028c1a9a531420b9e9b545a991b6.png",
+   "https://lds-img.finalfantasyxiv.com/d/fb33abf61a92db08d67e07c031761606961158d7.png",
+   "https://lds-img.finalfantasyxiv.com/d/7a2ab72f418459265a3ab33cb5f73955114ffc72.png",
+   "https://lds-img.finalfantasyxiv.com/d/2671a79b114893a97f5b09bcf484e7871dd99b9e.png",
+   "https://lds-img.finalfantasyxiv.com/d/3061c16b09ce276506076a0a2cdf8e87b410778b.png",
+   "https://lds-img.finalfantasyxiv.com/d/c8c74517022e0d8f5fd8f379225a64f12eff5e0a.png",
+   "https://lds-img.finalfantasyxiv.com/d/c5b8440e4fcf071ca470f8ea71f4d7634c2f8763.png",
+   "https://lds-img.finalfantasyxiv.com/d/db444cd7e3849561b5394b75c2e7eaabbdf394e8.png",
+   "https://lds-img.finalfantasyxiv.com/d/6380ca8ba90f73c92c654a648b26bfab7aa8bd97.png",
+   "https://lds-img.finalfantasyxiv.com/d/9d4fec42b917590f53bfa7ccc1691c083afd7a3c.png",
+   "https://lds-img.finalfantasyxiv.com/d/dc49cdcdfa8ec3a8d32f6e8b405ddda6971e23f0.png",
+   "https://lds-img.finalfantasyxiv.com/d/a3dd5ff88eb7a7cce95536d48fe81665e3feb3ca.png",
+   "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+   "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+   "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+   "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+   "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+   "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+   "https://lds-img.finalfantasyxiv.com/d/b60a74e21fb3694a5183dd1779235abb4f74f206.png",
+   "https://lds-img.finalfantasyxiv.com/d/9de1f71a8289f106201a31e0c7263f6cf8c29982.png",
+   "https://lds-img.finalfantasyxiv.com/d/a6b4ab382bd785eb618a79011b77f1bd41bbb229.png",
+   "https://lds-img.finalfantasyxiv.com/d/b179c19bd11aba27f8619c2ab77a59aa2fa99403.png",
+   "https://lds-img.finalfantasyxiv.com/d/418c952d0a14cb4ecfb8f8bb4a7133594102e907.png",
+   "https://lds-img.finalfantasyxiv.com/d/57e8d9af7caf585ee813c10fa0bac46abea90b7c.png",
+   "https://lds-img.finalfantasyxiv.com/d/41d57c299b7ac96212d214fc5c351d26d395538c.png",
+   "https://lds-img.finalfantasyxiv.com/d/23a3889f4d44ead99c7744ddb4482020a03dde73.png",
+   "https://lds-img.finalfantasyxiv.com/d/d3d0e0f4ded786f0846ea80145721622faef4bee.png",
+   "https://lds-img.finalfantasyxiv.com/d/8cfa4b9e7012759fd371b373d52cca95f8591bf6.png",
+   "https://lds-img.finalfantasyxiv.com/d/b7c802ff27b9c70dfeee638a7c41db4e7ffd642a.png",
+   "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+   "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+   "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+   "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+   "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+   "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+   "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+   "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/d/Fty4-TvOad66izosUiFGucJWeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/Y/WwJ77G_NFUqedj-8r-wDMatrvE.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/rINFQSeZmXn11n0X91_Ev74fwY.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/_/zGQkYIjya8rp6pTw9BRPVXNtLM.png"
+  ]
+ },
+ "sections": [
+  {
+   "anchor": "anchor__onlyaction",
+   "title": "専用アクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pve_action__01",
+     "name": "ドシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/817398ae8dfe613839528291eebfe76e05bd3584.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 1,
+     "jobclassText": "Lv1",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP300",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：300\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：300<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__02",
+     "name": "ディアグノシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c750ddbd308f469bfe54e263e98f2b1dc42ecfd3.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 2,
+     "jobclassText": "Lv2",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：450",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：450"
+    },
+    {
+     "rowId": "pve_action__03",
+     "name": "カルディア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bd80c68721d02a37275edfa07de82a39adbceb1c.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 4,
+     "jobclassText": "Lv4",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果時間：永続\n効果中に特定の攻撃魔法を命中させるとカルディア［被］の対象を回復する。\n回復力：170",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。<br/>効果時間：永続<br/>効果中に特定の攻撃魔法を命中させるとカルディア［被］の対象を回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__04",
+     "name": "プログノシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7f8253801283aa010e5a6ff40dafda493f1d58a4.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "2秒",
+     "recast": "2.5秒",
+     "cost": "MP700",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：300"
+    },
+    {
+     "rowId": "pve_action__05",
+     "name": "エゲイロー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3b5dbe0188fba544474a1c3304af88544838e5cc.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 12,
+     "jobclassText": "Lv12",
+     "type": "魔法",
+     "cast": "8秒",
+     "recast": "2.5秒",
+     "cost": "MP2400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象を衰弱状態で蘇生する。",
+     "descriptionHtml": "対象を衰弱状態で蘇生する。"
+    },
+    {
+     "rowId": "pve_action__06",
+     "name": "ピュシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b2acbee8acf84344ed1cbf15e97a5f88fe0f2e22.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：15秒",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：100<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__07",
+     "name": "フレグマ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9f221a8b7c540f90f808d332e802b3626fef4431.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 26,
+     "jobclassText": "Lv26",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "MP400",
+     "range": "6m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：400\n2体目以降の対象への威力は30％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：400<br/>2体目以降の対象への威力は30％減少する。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>最大チャージ数：2<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。"
+    },
+    {
+     "rowId": "pve_action__08",
+     "name": "エウクラシア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3d9da11ae40aa687171f1bf2a5655b6f0e442d79.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身を強化して特定の魔法を変化させる。\n効果時間：永続\n「ドシスIII」が「エウクラシア・ドシスIII」に変化する。\n「ディスクラシアII」が「エウクラシア・ディスクラシア」に変化する。\n「ディアグノシス」が「エウクラシア・ディアグノシス」に変化する。\n「プログノシス」が「エウクラシア・プログノシスII」に変化する。\n変化した魔法を実行すると効果が解除される。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。",
+     "descriptionHtml": "自身を強化して特定の魔法を変化させる。<br/>効果時間：永続<br/>「ドシスIII」が「エウクラシア・ドシスIII」に変化する。<br/>「ディスクラシアII」が「エウクラシア・ディスクラシア」に変化する。<br/>「ディアグノシス」が「エウクラシア・ディアグノシス」に変化する。<br/>「プログノシス」が「エウクラシア・プログノシスII」に変化する。<br/>変化した魔法を実行すると効果が解除される。<br/>この魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。"
+    },
+    {
+     "rowId": "pve_action__09",
+     "name": "エウクラシア・ディアグノシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0a0085828964c504f045a98b67feaf6c26c2307d.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP800",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nエウクラシア・ディアグノシス効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・プログノシスおよび学者の鼓舞効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス［強］」を付与する。\nエウクラシア・ディアグノシス［強］効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディアグノシスがエウクラシア・ディアグノシスに変化する。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：300<br/>追加効果：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。<br/>エウクラシア・ディアグノシス効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>エウクラシア・プログノシスおよび学者の鼓舞効果とは同時に付与されない。<br/>追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス［強］」を付与する。<br/>エウクラシア・ディアグノシス［強］効果：回復量の180％分のダメージを軽減する。<br/>効果時間：30秒<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとディアグノシスがエウクラシア・ディアグノシスに変化する。"
+    },
+    {
+     "rowId": "pve_action__10",
+     "name": "エウクラシア・プログノシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723cccd2fe9542159daffcd22f44ff52d8a2f6a1.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP800",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：100<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の320％分のダメージを軽減する。<br/>効果時間：30秒<br/>エウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。"
+    },
+    {
+     "rowId": "pve_action__11",
+     "name": "エウクラシア・ドシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3cffb9cb106612236b80ce85e1881e0d7760512f.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 30,
+     "jobclassText": "Lv30",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスがエウクラシア・ドシス変化する。",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：40<br/>効果時間：30秒<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとドシスがエウクラシア・ドシス変化する。"
+    },
+    {
+     "rowId": "pve_action__12",
+     "name": "ソーテリア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4f39d0024ea7741facfb247d0056064e831c3765.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 35,
+     "jobclassText": "Lv35",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に4スタックの「ソーテリア」を付与する。\n効果時間：15秒\nソーテリア効果：自身が「カルディア［被］」を付与した対象に対する、攻撃魔法と同時に発生するＨＰ回復効果の回復力を1.7倍にする。",
+     "descriptionHtml": "自身に4スタックの「ソーテリア」を付与する。<br/>効果時間：15秒<br/>ソーテリア効果：自身が「カルディア［被］」を付与した対象に対する、攻撃魔法と同時に発生するＨＰ回復効果の回復力を1.7倍にする。"
+    },
+    {
+     "rowId": "pve_action__13",
+     "name": "イカロス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/347d5069652ea0716aa462ba3dd96fc148156b0f.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\nバインド中は実行不可。",
+     "descriptionHtml": "敵またはパーティメンバーひとりを対象とする。<br/>対象の目前まで素早く移動する。<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pve_action__14",
+     "name": "ドルオコレ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/00cd1d056243c5e06b9bbb52a6112ddb35dbcbe9.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：600\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：600<br/>追加効果：自身のＭＰを最大ＭＰの7％分回復する。<br/>発動条件：「アダーガル」"
+    },
+    {
+     "rowId": "pve_action__15",
+     "name": "ディスクラシア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/849a554b53462ae2c240dc06558bf710c0f98e5e.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 46,
+     "jobclassText": "Lv46",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：160\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：160<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__16",
+     "name": "ケーラコレ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b49859cbf63de26b230527650742576590166760.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 50,
+     "jobclassText": "Lv50",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：15秒\n「タウロコレ」とは同時に付与されない。\n追加効果：対象のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "descriptionHtml": "一定時間、自身と周囲のパーティメンバーの被ダメージを10％軽減させる。<br/>効果時間：15秒<br/>「タウロコレ」とは同時に付与されない。<br/>追加効果：対象のＨＰを継続回復する。<br/>回復力：100<br/>効果時間：15秒<br/>追加効果：自身のＭＰを最大ＭＰの7％分回復する。<br/>発動条件：「アダーガル」"
+    },
+    {
+     "rowId": "pve_action__17",
+     "name": "イックソコレ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/4ee83614031659334dda42affd3314aebcaf98f4.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 52,
+     "jobclassText": "Lv52",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：400<br/>追加効果：自身のＭＰを最大ＭＰの7％分回復する。<br/>発動条件：「アダーガル」"
+    },
+    {
+     "rowId": "pve_action__18",
+     "name": "ゾーエ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/958000045b75c90c1ce059d11d2f2ed488d72a65.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 56,
+     "jobclassText": "Lv56",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "効果時間中に実行する1回の回復魔法の回復量を1.5倍にする。\n効果時間：30秒",
+     "descriptionHtml": "効果時間中に実行する1回の回復魔法の回復量を1.5倍にする。<br/>効果時間：30秒"
+    },
+    {
+     "rowId": "pve_action__19",
+     "name": "ペプシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/863096a46c76144097ba25d6d9d5fe1f997cda9e.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 58,
+     "jobclassText": "Lv58",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーを対象とする。\n自身が対象に付与した「エウクラシア・ディアグノシス」または「エウクラシア・プログノシス」を解除する代わりに、対象のＨＰを回復する。\nエウクラシア・ディアグノシス効果中の回復力：450\nエウクラシア・プログノシス効果中の回復力：350\n自身が対象にエウクラシア・ディアグノシスまたはエウクラシア・プログノシスを付与していない場合は効果無し。",
+     "descriptionHtml": "自身と周囲のパーティメンバーを対象とする。<br/>自身が対象に付与した「エウクラシア・ディアグノシス」または「エウクラシア・プログノシス」を解除する代わりに、対象のＨＰを回復する。<br/>エウクラシア・ディアグノシス効果中の回復力：450<br/>エウクラシア・プログノシス効果中の回復力：350<br/>自身が対象にエウクラシア・ディアグノシスまたはエウクラシア・プログノシスを付与していない場合は効果無し。"
+    },
+    {
+     "rowId": "pve_action__20",
+     "name": "ピュシスIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ece8fe6d911ad6497e35a13d82572d2373d2a2a4.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：130\n効果時間：15秒\n追加効果：対象が受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを継続回復する。<br/>回復力：130<br/>効果時間：15秒<br/>追加効果：対象が受けるＨＰ回復効果を10％上昇させる。<br/>効果時間：15秒"
+    },
+    {
+     "rowId": "pve_action__21",
+     "name": "タウロコレ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fe3b0d2ce97deba2e6b4cfbc39e65e2abd32b31b.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 62,
+     "jobclassText": "Lv62",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：700\n追加効果：対象の被ダメージを10％軽減させる。\n効果時間：15秒\n「ケーラコレ」とは同時に付与されない。\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象のＨＰを回復する。<br/>回復力：700<br/>追加効果：対象の被ダメージを10％軽減させる。<br/>効果時間：15秒<br/>「ケーラコレ」とは同時に付与されない。<br/>追加効果：自身のＭＰを最大ＭＰの7％分回復する。<br/>発動条件：「アダーガル」"
+    },
+    {
+     "rowId": "pve_action__22",
+     "name": "トキシコン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/bedfcd09b95bf0fa2290753478364965c82a739b.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：300<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「アダースティング」"
+    },
+    {
+     "rowId": "pve_action__23",
+     "name": "ハイマ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/31657e2f5ec2ec375960c927a6ed532883d8d271.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 70,
+     "jobclassText": "Lv70",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象として、回復力300相当のダメージを軽減するバリアを付与し、さらに5スタックの「ハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：150×「ハイマの印」の残スタック数",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象として、回復力300相当のダメージを軽減するバリアを付与し、さらに5スタックの「ハイマの印」を付与する。<br/>効果時間：15秒<br/>バリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。<br/>効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。<br/>回復力：150×「ハイマの印」の残スタック数"
+    },
+    {
+     "rowId": "pve_action__24",
+     "name": "ドシスIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0323f174ced3df37c1c6699f4c4dc980e58b9b7b.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：320\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：320<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__25",
+     "name": "フレグマIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f1948c2f7f527f0dab918a0224c6021ff4e808b9.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "MP400",
+     "range": "6m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：490\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：490<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>最大チャージ数：2<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。"
+    },
+    {
+     "rowId": "pve_action__26",
+     "name": "エウクラシア・ドシスIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/407976b29bc9e0d8cb51ddf0ad5312f90d4bee89.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：60\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIがエウクラシア・ドシスIIに変化する。",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：60<br/>効果時間：30秒<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとドシスIIがエウクラシア・ドシスIIに変化する。"
+    },
+    {
+     "rowId": "pve_action__27",
+     "name": "リゾーマタ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/de5abe27cae326e6906d5627c6bf02dc4e98cc2b.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 74,
+     "jobclassText": "Lv74",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "90秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に「アダーガル」を付与する。",
+     "descriptionHtml": "自身に「アダーガル」を付与する。"
+    },
+    {
+     "rowId": "pve_action__28",
+     "name": "ホーリズム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/849030dfa96d3cc4cee84939ef23c0554d9a3821.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 76,
+     "jobclassText": "Lv76",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n追加効果：自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：20秒",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：300<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の100％分のダメージを軽減する。<br/>効果時間：30秒<br/>追加効果：自身と周囲のパーティメンバーの被ダメージを10％軽減させる。<br/>効果時間：20秒"
+    },
+    {
+     "rowId": "pve_action__29",
+     "name": "パンハイマ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/62887c572b00028c1a9a531420b9e9b545a991b6.png",
+     "skillCellText": "パンハイマ\nジョブクエスト",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 80,
+     "jobclassText": "Lv80",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "自身と周囲のパーティメンバーに、回復力200相当のダメージを軽減するバリアを付与し、さらに5スタックの「パンハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「パンハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「パンハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：100×「パンハイマの印」の残スタック数",
+     "descriptionHtml": "自身と周囲のパーティメンバーに、回復力200相当のダメージを軽減するバリアを付与し、さらに5スタックの「パンハイマの印」を付与する。<br/>効果時間：15秒<br/>バリアがダメージを完全に吸収して消滅すると、「パンハイマの印」を1スタック消費してバリアを付与しなおす。<br/>効果時間が経過して「パンハイマの印」が消滅するときに、対象のＨＰを回復する。<br/>回復力：100×「パンハイマの印」の残スタック数"
+    },
+    {
+     "rowId": "pve_action__30",
+     "name": "ドシスIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/fb33abf61a92db08d67e07c031761606961158d7.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性魔法攻撃。\n威力：380\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "descriptionHtml": "対象に無属性魔法攻撃。<br/>威力：380<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__31",
+     "name": "フレグマIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/7a2ab72f418459265a3ab33cb5f73955114ffc72.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "MP400",
+     "range": "6m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：690<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>最大チャージ数：2<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。"
+    },
+    {
+     "rowId": "pve_action__32",
+     "name": "エウクラシア・ドシスIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2671a79b114893a97f5b09bcf484e7871dd99b9e.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP400",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に無属性の継続ダメージを付与する。\n威力：90\n効果時間：30秒\n「エウクラシア・ディスクラシア」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIIがエウクラシア・ドシスIIIに変化する。",
+     "descriptionHtml": "対象に無属性の継続ダメージを付与する。<br/>威力：90<br/>効果時間：30秒<br/>「エウクラシア・ディスクラシア」とは同時に付与されない。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとドシスIIIがエウクラシア・ドシスIIIに変化する。"
+    },
+    {
+     "rowId": "pve_action__33",
+     "name": "ディスクラシアIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3061c16b09ce276506076a0a2cdf8e87b410778b.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性範囲魔法攻撃。\n威力：170\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170",
+     "descriptionHtml": "自身の周囲の敵に無属性範囲魔法攻撃。<br/>威力：170<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170"
+    },
+    {
+     "rowId": "pve_action__34",
+     "name": "エウクラシア・ディスクラシア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c8c74517022e0d8f5fd8f379225a64f12eff5e0a.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP400",
+     "range": "0m",
+     "radius": "5m",
+     "description": "自身の周囲の敵に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n「エウクラシア・ドシスIII」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディスクラシアIIがエウクラシア・ディスクラシアに変化する。",
+     "descriptionHtml": "自身の周囲の敵に無属性の継続ダメージを付与する。<br/>威力：40<br/>効果時間：30秒<br/>「エウクラシア・ドシスIII」とは同時に付与されない。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとディスクラシアIIがエウクラシア・ディスクラシアに変化する。"
+    },
+    {
+     "rowId": "pve_action__35",
+     "name": "トキシコンIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c5b8440e4fcf071ca470f8ea71f4d7634c2f8763.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：380\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：380<br/>2体目以降の対象への威力は50％減少する。<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>発動条件：「アダースティング」"
+    },
+    {
+     "rowId": "pve_action__36",
+     "name": "クラーシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/db444cd7e3849561b5394b75c2e7eaabbdf394e8.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 86,
+     "jobclassText": "Lv86",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n対象が受けるＨＰ回復効果を20％上昇させる。\n効果時間：10秒",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>対象が受けるＨＰ回復効果を20％上昇させる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pve_action__37",
+     "name": "プネウマ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6380ca8ba90f73c92c654a648b26bfab7aa8bd97.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 90,
+     "jobclassText": "Lv90",
+     "type": "魔法",
+     "cast": "1.5秒",
+     "recast": "120秒",
+     "cost": "MP700",
+     "range": "25m",
+     "radius": "25m",
+     "description": "対象に向かって前方直線範囲無属性魔法攻撃。\n威力：380\n2体目以降の対象への威力は40％減少する。\n追加効果：自身と周囲20m以内のパーティメンバーのＨＰを回復する。\n回復力：600\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。",
+     "descriptionHtml": "対象に向かって前方直線範囲無属性魔法攻撃。<br/>威力：380<br/>2体目以降の対象への威力は40％減少する。<br/>追加効果：自身と周囲20m以内のパーティメンバーのＨＰを回復する。<br/>回復力：600<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：170<br/>この魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。"
+    },
+    {
+     "rowId": "pve_action__38",
+     "name": "プシュケー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9d4fec42b917590f53bfa7ccc1691c083afd7a3c.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 92,
+     "jobclassText": "Lv92",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。",
+     "descriptionHtml": "対象とその周囲の敵に無属性範囲魔法攻撃。<br/>威力：690<br/>2体目以降の対象への威力は50％減少する。"
+    },
+    {
+     "rowId": "pve_action__39",
+     "name": "エウクラシア・プログノシスIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/dc49cdcdfa8ec3a8d32f6e8b405ddda6971e23f0.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "MP800",
+     "range": "0m",
+     "radius": "20m",
+     "description": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の360％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスIIに変化する。",
+     "descriptionHtml": "自身と周囲のパーティメンバーのＨＰを回復する。<br/>回復力：100<br/>追加効果：対象に一定量のダメージを防ぐバリアを張る。<br/>このバリアは回復量の360％分のダメージを軽減する。<br/>効果時間：30秒<br/>エウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。<br/>発動条件：「エウクラシア」効果中<br/><br/>※このアクションはホットバーに登録することはできない。<br/><br/>発動条件を満たすとプログノシスがエウクラシア・プログノシスIIに変化する。"
+    },
+    {
+     "rowId": "pve_action__40",
+     "name": "フィロソフィア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a3dd5ff88eb7a7cce95536d48fe81665e3feb3ca.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 100,
+     "jobclassText": "Lv100",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "180秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "30m",
+     "description": "一定時間、自身の回復魔法の回復量を20％増加させる。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに「エウダイモニア」を付与する。\n効果時間：20秒\n効果中に魔法を命中させるとエウダイモニアの対象を回復する。\n回復力：150",
+     "descriptionHtml": "一定時間、自身の回復魔法の回復量を20％増加させる。<br/>効果時間：20秒<br/>追加効果：自身と周囲のパーティメンバーに「エウダイモニア」を付与する。<br/>効果時間：20秒<br/>効果中に魔法を命中させるとエウダイモニアの対象を回復する。<br/>回復力：150"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommonaction",
+   "title": "ロールアクション",
+   "mode": "pve",
+   "columns": [
+    "アクション名",
+    "修得",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "リポーズ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9bd731d47094c2c11b5cd9fb0d1d277bf9c6c89d.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 8,
+     "jobclassText": "Lv8",
+     "type": "魔法",
+     "cast": "2.5秒",
+     "recast": "2.5秒",
+     "cost": "MP600",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。",
+     "descriptionHtml": "対象に睡眠を付与する。<br/>効果時間：30秒<br/>実行後にオートアタックを停止する。"
+    },
+    {
+     "rowId": "healer_action__02",
+     "name": "エスナ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2a6603bc786d73eb3829141482b3d5be5d484199.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 10,
+     "jobclassText": "Lv10",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.5秒",
+     "cost": "MP400",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象にかかった一部の弱体効果を1つ解除する。",
+     "descriptionHtml": "対象にかかった一部の弱体効果を1つ解除する。"
+    },
+    {
+     "rowId": "healer_action__03",
+     "name": "ルーシッドドリーム",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3629c6854aa559656623925e2489b60c2fa91e18.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 14,
+     "jobclassText": "Lv14",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "60秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒",
+     "descriptionHtml": "自身のＭＰを継続回復する。<br/>効果量：55<br/>効果時間：21秒"
+    },
+    {
+     "rowId": "healer_action__04",
+     "name": "迅速魔じんそくま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/27d401b3cfbf90c846ffeaa9f661afb4bd77ce98.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 18,
+     "jobclassText": "Lv18",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "40秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒",
+     "descriptionHtml": "一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "healer_action__05",
+     "name": "堅実魔けんじつま",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/477d1e7f7115db19c344c0f5cadfcfa2ac0cdcc0.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 44,
+     "jobclassText": "Lv44",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒",
+     "descriptionHtml": "一定時間、魔法詠唱を詠唱妨害されずに行うことができる。<br/>さらに、一部を除くすべてのノックバックと引き寄せを無効化する。<br/>効果時間：6秒"
+    },
+    {
+     "rowId": "healer_action__06",
+     "name": "救出きゅうしゅつ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23f8a26b9a0107b6076f5f2e715e14d9be0edc25.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      }
+     ],
+     "level": 48,
+     "jobclassText": "Lv48",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "120秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "パーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態",
+     "descriptionHtml": "パーティメンバーひとりを対象とする。<br/>対象を自身の近くに引き寄せる。<br/>対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。<br/>発動条件：自身が戦闘状態"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__onlytrait",
+   "title": "特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "trait_action__01",
+     "name": "アクションダメージ・回復量かいふくりょうアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/688b9e979396925fa8a996968547e39f057ff539.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 20,
+     "jobclassText": "Lv20",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。"
+    },
+    {
+     "rowId": "trait_action__02",
+     "name": "アクションダメージ・回復量かいふくりょうアップIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/f0493aff0cf655167be05890774732eebed2b598.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 40,
+     "jobclassText": "Lv40",
+     "description": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。",
+     "descriptionHtml": "自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。"
+    },
+    {
+     "rowId": "trait_action__03",
+     "name": "アダーガル",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b86570a9f72fc265e443871ea6a405826d42060c.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 45,
+     "jobclassText": "Lv45",
+     "description": "自身に「アダーガル」が付与される。\n最大スタック数：3\nアダーガルは20秒経過するたびに付与される。\nまた、アダーガルは自身が戦闘不能状態でも付与される。",
+     "descriptionHtml": "自身に「アダーガル」が付与される。<br/>最大スタック数：3<br/>アダーガルは20秒経過するたびに付与される。<br/>また、アダーガルは自身が戦闘不能状態でも付与される。"
+    },
+    {
+     "rowId": "trait_action__04",
+     "name": "賢学けんがくの誓ちかい",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/3ce64c88b1b8e70aee12747d90c599b922447938.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 54,
+     "jobclassText": "Lv54",
+     "description": "特定のアクションの威力を上昇させる。\n\nドシスの威力：250\nフレグマの威力：330\nエウクラシア・ドシスの威力：35",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ドシスの威力：250<br/>フレグマの威力：330<br/>エウクラシア・ドシスの威力：35"
+    },
+    {
+     "rowId": "trait_action__05",
+     "name": "ピュシスマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/6cf73d5fbe9a086a0860149db46f88f454bb3f13.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 60,
+     "jobclassText": "Lv60",
+     "description": "ピュシスがピュシスIIに変化する。",
+     "descriptionHtml": "ピュシスがピュシスIIに変化する。"
+    },
+    {
+     "rowId": "trait_action__06",
+     "name": "賢学けんがくの誓ちかいIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e7e779832d0197ed60a0214abbab1ca702de2875.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 64,
+     "jobclassText": "Lv64",
+     "description": "特定のアクションの威力を上昇させる。\n\nドシスの威力：300\nフレグマの威力：400\nエウクラシア・ドシスの威力：40",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ドシスの威力：300<br/>フレグマの威力：400<br/>エウクラシア・ドシスの威力：40"
+    },
+    {
+     "rowId": "trait_action__07",
+     "name": "アダースティング",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/cfb87ef1a74d592d9dcfe7cb33621fb314a1ed01.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 66,
+     "jobclassText": "Lv66",
+     "description": "自身に「アダースティング」が付与される。\n最大スタック数：3\n発動条件：「エウクラシア・ディアグノシス」および自身に付与した「エウクラシア・プログノシス」がダメージを完全に吸収して消滅したとき。",
+     "descriptionHtml": "自身に「アダースティング」が付与される。<br/>最大スタック数：3<br/>発動条件：「エウクラシア・ディアグノシス」および自身に付与した「エウクラシア・プログノシス」がダメージを完全に吸収して消滅したとき。"
+    },
+    {
+     "rowId": "trait_action__08",
+     "name": "攻撃魔法こうげきまほうマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9c6143925ffafcc5c89f778468efc6007e462af3.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 72,
+     "jobclassText": "Lv72",
+     "description": "ドシスがドシスIIに変化する。\nフレグマがフレグマIIに変化する。\nエウクラシア・ドシスがエウクラシア・ドシスIIに変化する。\nさらに、トキシコンの威力を300に上昇させる。",
+     "descriptionHtml": "ドシスがドシスIIに変化する。<br/>フレグマがフレグマIIに変化する。<br/>エウクラシア・ドシスがエウクラシア・ドシスIIに変化する。<br/>さらに、トキシコンの威力を300に上昇させる。"
+    },
+    {
+     "rowId": "trait_action__09",
+     "name": "ケーラコレ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/e6fa10aa0dbee5933fac656f6ef6dafc1e1e690c.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 78,
+     "jobclassText": "Lv78",
+     "description": "ケーラコレに、「対象のＨＰを継続回復する効果」が付与される。",
+     "descriptionHtml": "ケーラコレに、「対象のＨＰを継続回復する効果」が付与される。"
+    },
+    {
+     "rowId": "trait_action__10",
+     "name": "攻撃魔法こうげきまほうマスタリーIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/564a3b60ed5448982dad4d6ccc9cabd37c75c67e.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 82,
+     "jobclassText": "Lv82",
+     "description": "ドシスIIがドシスIIIに変化する。\nフレグマIIがフレグマIIIに変化する。\nエウクラシア・ドシスIIがエウクラシア・ドシスIIIに変化する。\nディスクラシアがディスクラシアIIに変化する。\nトキシコンがトキシコンIIに変化する。",
+     "descriptionHtml": "ドシスIIがドシスIIIに変化する。<br/>フレグマIIがフレグマIIIに変化する。<br/>エウクラシア・ドシスIIがエウクラシア・ドシスIIIに変化する。<br/>ディスクラシアがディスクラシアIIに変化する。<br/>トキシコンがトキシコンIIに変化する。"
+    },
+    {
+     "rowId": "trait_action__11",
+     "name": "回復かいふくアクション効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/889c5ea6067c8a9f387840a91f54c110ca6f023e.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 85,
+     "jobclassText": "Lv85",
+     "description": "特定のアクションの回復力とバリア効果量を上昇させる。\n\nディアグノシスの回復力：450\nカルディアの回復力：170\nエウクラシア・ディアグノシスのバリア効果量：回復量の180％分\nエウクラシア・プログノシスのバリア効果量：回復量の320％分",
+     "descriptionHtml": "特定のアクションの回復力とバリア効果量を上昇させる。<br/><br/>ディアグノシスの回復力：450<br/>カルディアの回復力：170<br/>エウクラシア・ディアグノシスのバリア効果量：回復量の180％分<br/>エウクラシア・プログノシスのバリア効果量：回復量の320％分"
+    },
+    {
+     "rowId": "trait_action__12",
+     "name": "ゾーエ効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/ff0ef626ed580de0d061fda117ba39273ae14e55.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 88,
+     "jobclassText": "Lv88",
+     "description": "ゾーエのリキャストタイムを90秒に短縮する。",
+     "descriptionHtml": "ゾーエのリキャストタイムを90秒に短縮する。"
+    },
+    {
+     "rowId": "trait_action__13",
+     "name": "ソーテリア効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b675e0b4d7c78365b31a0743e6ec49caef50c5e1.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "ソーテリアのリキャストタイムを60秒に短縮する。",
+     "descriptionHtml": "ソーテリアのリキャストタイムを60秒に短縮する。"
+    },
+    {
+     "rowId": "trait_action__14",
+     "name": "アクション威力いりょくアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/faebcc03aa187f6f45319b41b7336431d1722fc4.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "特定のアクションの威力を上昇させる。\n\nドシスIIIの威力：380\nエウクラシア・ドシスIIIの威力：90\nトキシコンIIの威力：380\nプネウマの威力：380",
+     "descriptionHtml": "特定のアクションの威力を上昇させる。<br/><br/>ドシスIIIの威力：380<br/>エウクラシア・ドシスIIIの威力：90<br/>トキシコンIIの威力：380<br/>プネウマの威力：380"
+    },
+    {
+     "rowId": "trait_action__15",
+     "name": "エウクラシア・プログノシスマスタリー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d94311ab094fe93f3afe0bacc9aca872e10b9bee.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 96,
+     "jobclassText": "Lv96",
+     "description": "エウクラシア・プログノシスがエウクラシア・プログノシスIIに変化する。",
+     "descriptionHtml": "エウクラシア・プログノシスがエウクラシア・プログノシスIIに変化する。"
+    },
+    {
+     "rowId": "trait_action__16",
+     "name": "ピュシスIIつー効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/c339975b009ee133dd2c288662a6306145a24201.png",
+     "acquired": [
+      {
+       "class": "賢者",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png"
+      }
+     ],
+     "level": 98,
+     "jobclassText": "Lv98",
+     "description": "ピュシスIIの「対象が受けるＨＰ回復効果を10％上昇させる効果」の効果時間を15秒に延長する。",
+     "descriptionHtml": "ピュシスIIの「対象が受けるＨＰ回復効果を10％上昇させる効果」の効果時間を15秒に延長する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__rollcommontrait",
+   "title": "ロール特性",
+   "mode": "pve",
+   "columns": [
+    "特性名",
+    "修得",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "healer_action__01",
+     "name": "迅速魔じんそくま効果こうかアップ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/0948538a89b748ec2d1f2c6c8ad2afe383a740d3.png",
+     "acquired": [
+      {
+       "class": "HEALER/ヒーラー",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png"
+      },
+      {
+       "class": "Magical Ranged DPS/遠隔魔法DPS",
+       "icon": "https://lds-img.finalfantasyxiv.com/promo/h/X/8Dnf8Wy9IyxIt21y6lrE5atKt0.png"
+      }
+     ],
+     "level": 94,
+     "jobclassText": "Lv94",
+     "description": "迅速魔のリキャストタイムを40秒に短縮する。",
+     "descriptionHtml": "迅速魔のリキャストタイムを40秒に短縮する。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_onlyaction",
+   "title": "専用アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvp_action__01",
+     "name": "ドシスIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b60a74e21fb3694a5183dd1779235abb4f74f206.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に魔法攻撃。\n威力：6000\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：4000",
+     "descriptionHtml": "対象に魔法攻撃。<br/>威力：6000<br/>追加効果：カルディア［被］の効果対象のＨＰを回復する。<br/>回復力：4000"
+    },
+    {
+     "rowId": "pvp_action__02",
+     "name": "フレグマIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/9de1f71a8289f106201a31e0c7263f6cf8c29982.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "5m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n追加効果：メインターゲット以外の対象をメインターゲットの近くに引き寄せる。\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：10000<br/>追加効果：対象にバインドを付与する。<br/>効果時間：2秒<br/>追加効果：メインターゲット以外の対象をメインターゲットの近くに引き寄せる。<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__03",
+     "name": "プネウマ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a6b4ab382bd785eb618a79011b77f1bd41bbb229.png",
+     "type": "魔法",
+     "cast": "1.44秒",
+     "recast": "28秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "25m",
+     "description": "対象に向かって前方直線範囲魔法攻撃。\n威力：12000\n追加効果：自身と周囲20m以内のパーティメンバーに、一定量のダメージを防ぐバリアである「ハイマ」と、3スタックの「ハイマの印」を付与する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\nバリア量：回復力4000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：4000×「ハイマの印」の残スタック数\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "対象に向かって前方直線範囲魔法攻撃。<br/>威力：12000<br/>追加効果：自身と周囲20m以内のパーティメンバーに、一定量のダメージを防ぐバリアである「ハイマ」と、3スタックの「ハイマの印」を付与する。<br/>この追加効果は遮蔽物を越えて効果を発揮する。<br/>バリア量：回復力4000相当<br/>効果時間：10秒<br/>バリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。<br/>効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。<br/>回復力：4000×「ハイマの印」の残スタック数<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__04",
+     "name": "エウクラシア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b179c19bd11aba27f8619c2ab77a59aa2fa99403.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "12秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身を強化して「ドシスIII」を「エウクラシア・ドシスIII」に変化させる。\n効果時間：10秒\n「エウクラシア・ドシスIII」を実行すると効果が解除される。\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。",
+     "descriptionHtml": "自身を強化して「ドシスIII」を「エウクラシア・ドシスIII」に変化させる。<br/>効果時間：10秒<br/>「エウクラシア・ドシスIII」を実行すると効果が解除される。<br/>最大チャージ数：2<br/>この魔法は固有のリキャストタイマーを持つ。"
+    },
+    {
+     "rowId": "pvp_action__05",
+     "name": "イカロス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/418c952d0a14cb4ecfb8f8bb4a7133594102e907.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。",
+     "descriptionHtml": "対象の目前まで素早く移動する。<br/>最大チャージ数：2<br/>バインド中は実行不可。"
+    },
+    {
+     "rowId": "pvp_action__06",
+     "name": "トキシコン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/57e8d9af7caf585ee813c10fa0bac46abea90b7c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "15秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n最大チャージ数：2",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：2000<br/>追加効果：対象の被ダメージを10％上昇させる。<br/>効果時間：7秒<br/>最大チャージ数：2"
+    },
+    {
+     "rowId": "pvp_action__07",
+     "name": "カルディア",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/41d57c299b7ac96212d214fc5c351d26d395538c.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "0m",
+     "description": "自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果中に「ドシスIII」および「エウクラシア・ドシスIII」を実行すると、カルディア［被］を付与した対象に追加効果を発生させる。\n効果時間：永続",
+     "descriptionHtml": "自身またはパーティメンバーひとりを対象とする。<br/>自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。<br/>効果中に「ドシスIII」および「エウクラシア・ドシスIII」を実行すると、カルディア［被］を付与した対象に追加効果を発生させる。<br/>効果時間：永続"
+    },
+    {
+     "rowId": "pvp_action__08",
+     "name": "エウクラシア・ドシスIIIすりー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/23a3889f4d44ead99c7744ddb4482020a03dde73.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "0m",
+     "description": "対象に継続ダメージを付与する。\n威力：3000\n効果時間：12秒\n追加効果：カルディア［被］の効果対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nバリア量：回復力8000相当\n効果時間：12秒\nバリアがダメージを完全に吸収して消滅すると、賢者自身に「アダースティング」を付与する。\n効果時間：15秒\n効果中はトキシコンがトキシコンIIに変化する。\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象に継続ダメージを付与する。<br/>威力：3000<br/>効果時間：12秒<br/>追加効果：カルディア［被］の効果対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。<br/>バリア量：回復力8000相当<br/>効果時間：12秒<br/>バリアがダメージを完全に吸収して消滅すると、賢者自身に「アダースティング」を付与する。<br/>効果時間：15秒<br/>効果中はトキシコンがトキシコンIIに変化する。<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__09",
+     "name": "プシュケー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/d3d0e0f4ded786f0846ea80145721622faef4bee.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\nメインターゲット以外への威力は、メインターゲットからの距離が3m以上離れると8000に減少する。\nコンボ条件：フレグマIII\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：12000<br/>メインターゲット以外への威力は、メインターゲットからの距離が3m以上離れると8000に減少する。<br/>コンボ条件：フレグマIII<br/><br/>※このアクションはホットバーに登録することはできない。"
+    },
+    {
+     "rowId": "pvp_action__10",
+     "name": "トキシコンIIつー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/8cfa4b9e7012759fd371b373d52cca95f8591bf6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "5m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n発動条件：「アダースティング」効果中\n\n※このアクションはホットバーに登録することはできない。",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：8000<br/>2体目以降の対象への威力は4000に減少する。<br/>追加効果：対象の被ダメージを10％上昇させる。<br/>効果時間：7秒<br/>発動条件：「アダースティング」効果中<br/><br/>※このアクションはホットバーに登録することはできない。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_limitbreak",
+   "title": "リミットブレイク",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvplimitbreakaction_01",
+     "name": "メソテース",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/b7c802ff27b9c70dfeee638a7c41db4e7ffd642a.png",
+     "cast": "Instant",
+     "recast": "10秒",
+     "cost": "-",
+     "range": "30m",
+     "radius": "5m",
+     "description": "指定した地面を中心にシールドを生成する。\n効果時間：15秒\n効果時間中、範囲内に入ったパーティメンバーには「メソテース」を、敵には「リュペー」を継続的に付与する。\nメソテース効果：「リュペー」が付与されていない敵からのダメージを無効化する。\n効果時間：5秒\nリュペー効果：継続ダメージを付与する。\n威力：9000\n効果時間：5秒\n効果時間中に一度だけ、別の地点にシールドを生成しなおすことができる。\n再生成時の効果時間は、再生成する直前の残り効果時間を引き継ぐ。\n発動条件：「リミットゲージ」最大\n蓄積時間：120秒",
+     "descriptionHtml": "指定した地面を中心にシールドを生成する。<br/>効果時間：15秒<br/>効果時間中、範囲内に入ったパーティメンバーには「メソテース」を、敵には「リュペー」を継続的に付与する。<br/>メソテース効果：「リュペー」が付与されていない敵からのダメージを無効化する。<br/>効果時間：5秒<br/>リュペー効果：継続ダメージを付与する。<br/>威力：9000<br/>効果時間：5秒<br/>効果時間中に一度だけ、別の地点にシールドを生成しなおすことができる。<br/>再生成時の効果時間は、再生成する直前の残り効果時間を引き継ぐ。<br/>発動条件：「リミットゲージ」最大<br/>蓄積時間：120秒"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_commononlyaction",
+   "title": "共通アクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvpcommmononlyaction_01",
+     "name": "軍用ぐんようエリクサー",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/a57f3dd330cf3f55962ccddc7df6858f45718607.png",
+     "type": "アビリティ",
+     "cast": "4.5秒",
+     "recast": "5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。",
+     "descriptionHtml": "自身のＨＰとＭＰを全回復する。<br/>詠唱中に敵から攻撃を受けると、詠唱が中断される。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_02",
+     "name": "快気かいき",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2085fa5a3247d8f7648b9eea2874ffb62eaf21c6.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身のＨＰを回復する。\n回復力：16000",
+     "descriptionHtml": "自身のＨＰを回復する。<br/>回復力：16000"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_03",
+     "name": "浄化じょうか",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/2fdba29de282257b52e21e33abe5f4fef43519cd.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "4秒",
+     "cost": "MP2000",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。",
+     "descriptionHtml": "自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。<br/>追加効果：自身に「活性」を付与する。<br/>効果時間：2秒<br/>活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>このアクションは一部を除く状態異常を受けていても実行することができる。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_04",
+     "name": "防御ぼうぎょ",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/21e24c5bf00677220efb8c1a1e6001537ee26d23.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。",
+     "descriptionHtml": "自身が受けるダメージを99％軽減させる。<br/>さらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。<br/>効果時間：4秒<br/>効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。<br/>防御中も移動することはできるが、移動速度が33％低下する。"
+    },
+    {
+     "rowId": "pvpcommmononlyaction_05",
+     "name": "スプリント",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/1b49a585ab241c7b5b8bb4d6f47ccec6b96fdaee.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "1.5秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "0m",
+     "description": "自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。",
+     "descriptionHtml": "自身の移動速度を50％上昇させる。<br/>効果時間：永続<br/>効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+    }
+   ]
+  },
+  {
+   "anchor": "anchor__pvp_roleaction",
+   "title": "PvPロールアクション",
+   "mode": "pvp",
+   "columns": [
+    "アクション名",
+    "種類",
+    "キャストタイム",
+    "リキャストタイム",
+    "消費MP",
+    "距離範囲",
+    "効果"
+   ],
+   "rows": [
+    {
+     "rowId": "pvproleaction_01",
+     "name": "ヒール",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/723d97c52696b74e2493aa2c20ad3161f99a5823.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "2.4秒",
+     "cost": "MP2000",
+     "range": "30m",
+     "radius": "0m",
+     "description": "対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。",
+     "descriptionHtml": "対象のＨＰを回復する。<br/>回復力：16000<br/>自身を対象とした場合は、回復力が8000に減少する。"
+    },
+    {
+     "rowId": "pvproleaction_02",
+     "name": "ストンラスキン",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/246e8261f9049a61874125090da6803554fa02ce.png",
+     "type": "魔法",
+     "cast": "Instant",
+     "recast": "30秒",
+     "cost": "-",
+     "range": "0m",
+     "radius": "15m",
+     "description": "自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒",
+     "descriptionHtml": "自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。<br/>このアクションは遮蔽物を越えて効果を発揮する。<br/>バリア量：回復力12000相当<br/>効果時間：10秒"
+    },
+    {
+     "rowId": "pvproleaction_03",
+     "name": "ディアブロシス",
+     "icon": "https://lds-img.finalfantasyxiv.com/d/808a5e2b506ca895c3d5c4187f18ce4ac813a566.png",
+     "type": "アビリティ",
+     "cast": "Instant",
+     "recast": "45秒",
+     "cost": "-",
+     "range": "25m",
+     "radius": "10m",
+     "description": "対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒",
+     "descriptionHtml": "対象とその周囲の敵に範囲魔法攻撃。<br/>威力：9000<br/>追加効果：対象が受ける回復効果を33％減少させる。<br/>効果時間：10秒"
+    }
+   ]
+  }
+ ],
+ "hud": {
+  "blocks": [
+   {
+    "title": "エウクラシアシンボル",
+    "images": []
+   },
+   {
+    "title": "アダーゲージ",
+    "images": []
+   },
+   {
+    "title": "シンプルモード",
+    "images": [
+     "https://lds-img.finalfantasyxiv.com/promo/h/O/-2KIQ-gbsrO0JGJsOX8eC062Qo.png",
+     "https://lds-img.finalfantasyxiv.com/promo/h/8/8bh_auJPB8txbwwwN-8FnTHreg.png"
+    ]
+   }
+  ],
+  "allText": "ジョブHUD\n\nエウクラシアシンボル\n\nアクション「エウクラシア」を修得すると、「エウクラシアシンボル」が表示されるようになります。エウクラシアを実行すると「ドシス」、「ディアグノシス」、「プログノシス」が強化され、アクションの効果内容が変化します。\n\nアダーゲージ\n\n特性「アダーガル」を修得すると、自身に付与される\"アダーガル\"の付与数を示す「アダーゲージ」が表示されるようになります。\nアダーガルは一定時間が経過するたびに付与され、アダーガルを消費することで「ドルオコレ」やレベル50で修得する「ケーラコレ」を実行できます。\n\n特性「アダースティング」を修得すると、“アダーゲージ”に「アダースティング」が表示されるようになります。\nアダースティングは「エウクラシア・ディアグノシス」を実行することで対象に付与されるバリアステータスがダメージを吸収して消滅するか、「エウクラシア・プログノシス」を実行することで自身に付与されるバリアステータスがダメージを吸収して消滅することで付与されます。\nアダースティングを消費することで「トキシコン」やレベル82で修得する「トキシコンII」を実行できます。\n\nシンプルモード\n\nエウクラシアシンボル\n\nアダーゲージ\n\n「アダーガル」「アダースティング」スタック時",
+  "allHtml": "<h2 class=\"job__title\" id=\"anchor__hud\">ジョブHUD<span class=\"js__jobguide_new_or_update hide\" data-new=\"0\" data-updated=\"0\">\n<img alt=\"\" class=\"ic_new js__jobguide_new\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png\" width=\"64\"/>\n<img alt=\"\" class=\"ic_update js__jobguide_update\" height=\"24\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png\" width=\"90\"/>\n</span>\n</h2>\n<h3 class=\"job__hud__title\">エウクラシアシンボル</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/I/cwDLGuV2OTu9fWFWOsR_peQPrA.png\" width=\"290\"/>\n<p class=\"job__hud__text\">アクション<span class=\"txt_red\">「エウクラシア」</span>を修得すると、<span class=\"txt_red\">「エウクラシアシンボル」</span>が表示されるようになります。エウクラシアを実行すると<span class=\"txt_red\">「ドシス」</span>、<span class=\"txt_red\">「ディアグノシス」</span>、<span class=\"txt_red\">「プログノシス」</span>が強化され、アクションの効果内容が変化します。</p>\n</div>\n<h3 class=\"job__hud__title\">アダーゲージ</h3>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/m/fJs27-b_PnSTdVzTLh7qS0zvfA.png\" width=\"290\"/>\n<p class=\"job__hud__text\">特性<span class=\"txt_red\">「アダーガル」</span>を修得すると、自身に付与される<span class=\"txt_red\">\"アダーガル\"</span>の付与数を示す<span class=\"txt_red\">「アダーゲージ」</span>が表示されるようになります。<br/>アダーガルは一定時間が経過するたびに付与され、アダーガルを消費することで<span class=\"txt_red\">「ドルオコレ」</span>やレベル50で修得する<span class=\"txt_red\">「ケーラコレ」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--mb32 clearfix\">\n<img alt=\"\" class=\"job__hud__image\" height=\"200\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/7/Dj5guxNBiGuHgfgp0kX69Oxkng.png\" width=\"290\"/>\n<p class=\"job__hud__text\">特性<span class=\"txt_red\">「アダースティング」</span>を修得すると、“アダーゲージ”に<span class=\"txt_red\">「アダースティング」</span>が表示されるようになります。<br/>アダースティングは<span class=\"txt_red\">「エウクラシア・ディアグノシス」</span>を実行することで対象に付与されるバリアステータスがダメージを吸収して消滅するか、<span class=\"txt_red\">「エウクラシア・プログノシス」</span>を実行することで自身に付与されるバリアステータスがダメージを吸収して消滅することで付与されます。<br/>アダースティングを消費することで<span class=\"txt_red\">「トキシコン」</span>やレベル82で修得する<span class=\"txt_red\">「トキシコンII」</span>を実行できます。</p>\n</div>\n<div class=\"job__hud__layout--pve__simple\">\n<h3 class=\"job__hud__title\">シンプルモード</h3>\n<table class=\"job__hud__layout--pve sage\">\n<tr>\n<th>\n<p class=\"job__hud__layout--pve__simple__title\">エウクラシアシンボル</p>\n</th>\n<th>\n<p class=\"job__hud__layout--pve__simple__title\">アダーゲージ</p>\n</th>\n</tr>\n<tr>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/O/-2KIQ-gbsrO0JGJsOX8eC062Qo.png\" width=\"290\"/>\n</td>\n<td>\n<img height=\"100\" src=\"https://lds-img.finalfantasyxiv.com/promo/h/8/8bh_auJPB8txbwwwN-8FnTHreg.png\" width=\"290\"/>\n<p class=\"job__hud__layout--pve__simple__caption\">「アダーガル」「アダースティング」スタック時</p>\n</td>\n</tr>\n</table>\n</div>",
+  "images": [
+   "https://lds-img.finalfantasyxiv.com/promo/h/6/SmMAPbi5GjCBMUT1XG9w0WZYeo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/e/eNWFv1eRmj7IKcqk9ossQ9PFwQ.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/I/cwDLGuV2OTu9fWFWOsR_peQPrA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/m/fJs27-b_PnSTdVzTLh7qS0zvfA.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/7/Dj5guxNBiGuHgfgp0kX69Oxkng.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/O/-2KIQ-gbsrO0JGJsOX8eC062Qo.png",
+   "https://lds-img.finalfantasyxiv.com/promo/h/8/8bh_auJPB8txbwwwN-8FnTHreg.png"
+  ],
+  "imageFiles": [
+   "public/jobguide/hud/sage/01.png",
+   "public/jobguide/hud/sage/02.png",
+   "public/jobguide/hud/sage/03.png",
+   "public/jobguide/hud/sage/04.png",
+   "public/jobguide/hud/sage/05.png"
+  ]
+ },
+ "contentBlocks": [
+  {
+   "heading": "アクション・特性",
+   "anchor": null,
+   "text": "アクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nドシス\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：300\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nディアグノシス\n\nLv2\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：450\n\nカルディア\n\nLv4\n\nアビリティ\nInstant\n5秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果時間：永続\n効果中に特定の攻撃魔法を命中させるとカルディア［被］の対象を回復する。\n回復力：170\n\nプログノシス\n\nLv10\n\n魔法\n\n2秒\n\n2.5秒\nMP700\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n\nエゲイロー\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nピュシス\n\nLv20\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n\nフレグマ\n\nLv26\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：400\n2体目以降の対象への威力は30％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア\n\nLv30\n\n魔法\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身を強化して特定の魔法を変化させる。\n効果時間：永続\n「ドシスIII」が「エウクラシア・ドシスIII」に変化する。\n「ディスクラシアII」が「エウクラシア・ディスクラシア」に変化する。\n「ディアグノシス」が「エウクラシア・ディアグノシス」に変化する。\n「プログノシス」が「エウクラシア・プログノシスII」に変化する。\n変化した魔法を実行すると効果が解除される。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nエウクラシア・ディアグノシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nエウクラシア・ディアグノシス効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・プログノシスおよび学者の鼓舞効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス［強］」を付与する。\nエウクラシア・ディアグノシス［強］効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディアグノシスがエウクラシア・ディアグノシスに変化する。\n\nエウクラシア・プログノシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。\n\nエウクラシア・ドシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスがエウクラシア・ドシス変化する。\n\nソーテリア\n\nLv35\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に4スタックの「ソーテリア」を付与する。\n効果時間：15秒\nソーテリア効果：自身が「カルディア［被］」を付与した対象に対する、攻撃魔法と同時に発生するＨＰ回復効果の回復力を1.7倍にする。\n\nイカロス\n\nLv40\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\nバインド中は実行不可。\n\nドルオコレ\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：600\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nディスクラシア\n\nLv46\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：160\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nケーラコレ\n\nLv50\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：15秒\n「タウロコレ」とは同時に付与されない。\n追加効果：対象のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nイックソコレ\n\nLv52\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nゾーエ\n\nLv56\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の回復魔法の回復量を1.5倍にする。\n効果時間：30秒\n\nペプシス\n\nLv58\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーを対象とする。\n自身が対象に付与した「エウクラシア・ディアグノシス」または「エウクラシア・プログノシス」を解除する代わりに、対象のＨＰを回復する。\nエウクラシア・ディアグノシス効果中の回復力：450\nエウクラシア・プログノシス効果中の回復力：350\n自身が対象にエウクラシア・ディアグノシスまたはエウクラシア・プログノシスを付与していない場合は効果無し。\n\nピュシスIIつー\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：130\n効果時間：15秒\n追加効果：対象が受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒\n\nタウロコレ\n\nLv62\n\nアビリティ\nInstant\n45秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：700\n追加効果：対象の被ダメージを10％軽減させる。\n効果時間：15秒\n「ケーラコレ」とは同時に付与されない。\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nトキシコン\n\nLv66\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」\n\nハイマ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象として、回復力300相当のダメージを軽減するバリアを付与し、さらに5スタックの「ハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：150×「ハイマの印」の残スタック数\n\nドシスIIつー\n\nLv72\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：320\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nフレグマIIつー\n\nLv72\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：490\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア・ドシスIIつー\n\nLv72\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：60\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIがエウクラシア・ドシスIIに変化する。\n\nリゾーマタ\n\nLv74\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身に「アダーガル」を付与する。\n\nホーリズム\n\nLv76\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n追加効果：自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：20秒\n\nパンハイマ\n\nジョブクエスト\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーに、回復力200相当のダメージを軽減するバリアを付与し、さらに5スタックの「パンハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「パンハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「パンハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：100×「パンハイマの印」の残スタック数\n\nドシスIIIすりー\n\nLv82\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：380\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nフレグマIIIすりー\n\nLv82\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア・ドシスIIIすりー\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：90\n効果時間：30秒\n「エウクラシア・ディスクラシア」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIIがエウクラシア・ドシスIIIに変化する。\n\nディスクラシアIIつー\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：170\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nエウクラシア・ディスクラシア\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n「エウクラシア・ドシスIII」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディスクラシアIIがエウクラシア・ディスクラシアに変化する。\n\nトキシコンIIつー\n\nLv82\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：380\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」\n\nクラーシス\n\nLv86\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象が受けるＨＰ回復効果を20％上昇させる。\n効果時間：10秒\n\nプネウマ\n\nLv90\n\n魔法\n\n1.5秒\n\n120秒\nMP700\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：380\n2体目以降の対象への威力は40％減少する。\n追加効果：自身と周囲20m以内のパーティメンバーのＨＰを回復する。\n回復力：600\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nプシュケー\n\nLv92\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。\n\nエウクラシア・プログノシスIIつー\n\nLv96\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の360％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスIIに変化する。\n\nフィロソフィア\n\nLv100\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n30m\n\n一定時間、自身の回復魔法の回復量を20％増加させる。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに「エウダイモニア」を付与する。\n効果時間：20秒\n効果中に魔法を命中させるとエウダイモニアの対象を回復する。\n回復力：150"
+  },
+  {
+   "heading": "ロールアクション",
+   "anchor": "anchor__rollcommonaction",
+   "text": "ロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポーズ\n\nLv8\n\n魔法\n\n2.5秒\n\n2.5秒\nMP600\n\n30m\n\n0m\n\n対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nエスナ\n\nLv10\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象にかかった一部の弱体効果を1つ解除する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n救出きゅうしゅつ\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\nパーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態"
+  },
+  {
+   "heading": "特性",
+   "anchor": "anchor__onlytrait",
+   "text": "特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nアダーガル\n\nLv45\n\n自身に「アダーガル」が付与される。\n最大スタック数：3\nアダーガルは20秒経過するたびに付与される。\nまた、アダーガルは自身が戦闘不能状態でも付与される。\n\n賢学けんがくの誓ちかい\n\nLv54\n\n特定のアクションの威力を上昇させる。\n\nドシスの威力：250\nフレグマの威力：330\nエウクラシア・ドシスの威力：35\n\nピュシスマスタリー\n\nLv60\n\nピュシスがピュシスIIに変化する。\n\n賢学けんがくの誓ちかいIIつー\n\nLv64\n\n特定のアクションの威力を上昇させる。\n\nドシスの威力：300\nフレグマの威力：400\nエウクラシア・ドシスの威力：40\n\nアダースティング\n\nLv66\n\n自身に「アダースティング」が付与される。\n最大スタック数：3\n発動条件：「エウクラシア・ディアグノシス」および自身に付与した「エウクラシア・プログノシス」がダメージを完全に吸収して消滅したとき。\n\n攻撃魔法こうげきまほうマスタリー\n\nLv72\n\nドシスがドシスIIに変化する。\nフレグマがフレグマIIに変化する。\nエウクラシア・ドシスがエウクラシア・ドシスIIに変化する。\nさらに、トキシコンの威力を300に上昇させる。\n\nケーラコレ効果こうかアップ\n\nLv78\n\nケーラコレに、「対象のＨＰを継続回復する効果」が付与される。\n\n攻撃魔法こうげきまほうマスタリーIIつー\n\nLv82\n\nドシスIIがドシスIIIに変化する。\nフレグマIIがフレグマIIIに変化する。\nエウクラシア・ドシスIIがエウクラシア・ドシスIIIに変化する。\nディスクラシアがディスクラシアIIに変化する。\nトキシコンがトキシコンIIに変化する。\n\n回復かいふくアクション効果こうかアップ\n\nLv85\n\n特定のアクションの回復力とバリア効果量を上昇させる。\n\nディアグノシスの回復力：450\nカルディアの回復力：170\nエウクラシア・ディアグノシスのバリア効果量：回復量の180％分\nエウクラシア・プログノシスのバリア効果量：回復量の320％分\n\nゾーエ効果こうかアップ\n\nLv88\n\nゾーエのリキャストタイムを90秒に短縮する。\n\nソーテリア効果こうかアップ\n\nLv94\n\nソーテリアのリキャストタイムを60秒に短縮する。\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nドシスIIIの威力：380\nエウクラシア・ドシスIIIの威力：90\nトキシコンIIの威力：380\nプネウマの威力：380\n\nエウクラシア・プログノシスマスタリー\n\nLv96\n\nエウクラシア・プログノシスがエウクラシア・プログノシスIIに変化する。\n\nピュシスIIつー効果こうかアップ\n\nLv98\n\nピュシスIIの「対象が受けるＨＰ回復効果を10％上昇させる効果」の効果時間を15秒に延長する。"
+  },
+  {
+   "heading": "ロール特性",
+   "anchor": "anchor__rollcommontrait",
+   "text": "ロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。"
+  },
+  {
+   "heading": "ジョブHUD",
+   "anchor": "anchor__hud",
+   "text": "ジョブHUD\n\nエウクラシアシンボル\n\nアクション「エウクラシア」を修得すると、「エウクラシアシンボル」が表示されるようになります。エウクラシアを実行すると「ドシス」、「ディアグノシス」、「プログノシス」が強化され、アクションの効果内容が変化します。\n\nアダーゲージ\n\n特性「アダーガル」を修得すると、自身に付与される\"アダーガル\"の付与数を示す「アダーゲージ」が表示されるようになります。\nアダーガルは一定時間が経過するたびに付与され、アダーガルを消費することで「ドルオコレ」やレベル50で修得する「ケーラコレ」を実行できます。\n\n特性「アダースティング」を修得すると、“アダーゲージ”に「アダースティング」が表示されるようになります。\nアダースティングは「エウクラシア・ディアグノシス」を実行することで対象に付与されるバリアステータスがダメージを吸収して消滅するか、「エウクラシア・プログノシス」を実行することで自身に付与されるバリアステータスがダメージを吸収して消滅することで付与されます。\nアダースティングを消費することで「トキシコン」やレベル82で修得する「トキシコンII」を実行できます。\n\nシンプルモード\n\nエウクラシアシンボル\n\nアダーゲージ\n\n「アダーガル」「アダースティング」スタック時"
+  },
+  {
+   "heading": "アクション",
+   "anchor": null,
+   "text": "アクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nドシスIIIすりー\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：4000\n\nフレグマIIIすりー\n\n魔法\nInstant\n15秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n追加効果：メインターゲット以外の対象をメインターゲットの近くに引き寄せる。\nこの魔法は固有のリキャストタイマーを持つ。\n\nプネウマ\n\n魔法\n\n1.44秒\n28秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：12000\n追加効果：自身と周囲20m以内のパーティメンバーに、一定量のダメージを防ぐバリアである「ハイマ」と、3スタックの「ハイマの印」を付与する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\nバリア量：回復力4000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：4000×「ハイマの印」の残スタック数\nこの魔法は固有のリキャストタイマーを持つ。\n\nエウクラシア\n\n魔法\nInstant\n12秒\n-\n\n0m\n\n0m\n\n自身を強化して「ドシスIII」を「エウクラシア・ドシスIII」に変化させる。\n効果時間：10秒\n「エウクラシア・ドシスIII」を実行すると効果が解除される。\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。\n\nイカロス\n\nアビリティ\nInstant\n10秒\n-\n\n25m\n\n0m\n\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\nトキシコン\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n最大チャージ数：2\n\nカルディア\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果中に「ドシスIII」および「エウクラシア・ドシスIII」を実行すると、カルディア［被］を付与した対象に追加効果を発生させる。\n効果時間：永続\n\nエウクラシア・ドシスIIIすりー\n\n魔法\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に継続ダメージを付与する。\n威力：3000\n効果時間：12秒\n追加効果：カルディア［被］の効果対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nバリア量：回復力8000相当\n効果時間：12秒\nバリアがダメージを完全に吸収して消滅すると、賢者自身に「アダースティング」を付与する。\n効果時間：15秒\n効果中はトキシコンがトキシコンIIに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nプシュケー\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\nメインターゲット以外への威力は、メインターゲットからの距離が3m以上離れると8000に減少する。\nコンボ条件：フレグマIII\n\n※このアクションはホットバーに登録することはできない。\n\nトキシコンIIつー\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n発動条件：「アダースティング」効果中\n\n※このアクションはホットバーに登録することはできない。"
+  },
+  {
+   "heading": "リミットブレイク",
+   "anchor": "anchor__pvp_limitbreak",
+   "text": "リミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nメソテース\n\nInstant\n10秒\n-\n\n30m\n\n5m\n\n指定した地面を中心にシールドを生成する。\n効果時間：15秒\n効果時間中、範囲内に入ったパーティメンバーには「メソテース」を、敵には「リュペー」を継続的に付与する。\nメソテース効果：「リュペー」が付与されていない敵からのダメージを無効化する。\n効果時間：5秒\nリュペー効果：継続ダメージを付与する。\n威力：9000\n効果時間：5秒\n効果時間中に一度だけ、別の地点にシールドを生成しなおすことができる。\n再生成時の効果時間は、再生成する直前の残り効果時間を引き継ぐ。\n発動条件：「リミットゲージ」最大\n蓄積時間：120秒"
+  },
+  {
+   "heading": "共通アクション",
+   "anchor": "anchor__pvp_commononlyaction",
+   "text": "共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。"
+  },
+  {
+   "heading": "PvPロールアクション",
+   "anchor": "anchor__pvp_roleaction",
+   "text": "PvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヒール\n\n魔法\nInstant\n\n2.4秒\nMP2000\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。\n\nストンラスキン\n\n魔法\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒\n\nディアブロシス\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒"
+  }
+ ],
+ "pageText": "Google Tag Manager (noscript)\n\nEnd Google Tag Manager (noscript)\n\n日本語\n\n日本語\nEnglish (UK)\nEnglish (US)\nFrançais\nDeutsch\n\nvar ffxiv_pr_cross_menu = {\nuri_js: '/cross_menu/uri.js'\n};\n\nナイト（剣術士）\n\n戦士（斧術士）\n\n暗黒騎士\nガンブレイカー\n\n白魔道士（幻術士）\n\n学者\n占星術師\n賢者\n\nモンク（格闘士）\n\n竜騎士（槍術士）\n\n忍者（双剣士）\n\n侍\nリーパー\nヴァイパー\n魔獣使い\n\n吟遊詩人（弓術士）\n\n機工士\n踊り子\n\n黒魔道士（呪術士）\n\n召喚士（巴術士）\n\n赤魔道士\nピクトマンサー\n青魔道士\n\nゲームプレイガイド\nクラフター・ギャザラーガイド\nUIガイド\nPvPガイド\n\n専用アクション\n\nロールアクション\n\n特性\nロール特性\nジョブHUD\n\n専用アクション\n\nリミットブレイク\n\n共通アクション\n\nPvPロールアクション\n\nガイドトップ\n\nHEALER/ヒーラー\n\nシャーレアン魔法大学――それは、知の都を代表する最高学府である。\nその最大の特徴は、膨大な蔵書数を誇る書院でも、数多の賢人たちでもない。複数の学問を横断的に学ぶことで、新たな学問を創出してきた歴史にあるのだ。中でも、エーテル学と魔法学に、医学を統合することで生み出された「賢学」は、ほかに類を見ない学問である。結節点となる賢具を配置して立体的な魔法陣を形成し、体内エーテルに作用して治癒や攻撃を為す。それが、「人の進歩」を目指す賢学の徒――すなわち賢者の術である。\n\nジョブ開始クエスト\n\nLast Update: -document.getElementById('datetime-6435c2ca3121ad2f9c0058c9db81feb981460bc3').innerHTML = ldst_strftime(1791878400, 'YMD');\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nアクション・特性\n\n専用アクション\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nドシス\n\nLv1\n\n魔法\n\n1.5秒\n\n2.5秒\nMP300\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：300\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nディアグノシス\n\nLv2\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：450\n\nカルディア\n\nLv4\n\nアビリティ\nInstant\n5秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果時間：永続\n効果中に特定の攻撃魔法を命中させるとカルディア［被］の対象を回復する。\n回復力：170\n\nプログノシス\n\nLv10\n\n魔法\n\n2秒\n\n2.5秒\nMP700\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n\nエゲイロー\n\nLv12\n\n魔法\n\n8秒\n\n2.5秒\nMP2400\n\n30m\n\n0m\n\n対象を衰弱状態で蘇生する。\n\nピュシス\n\nLv20\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n\nフレグマ\n\nLv26\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：400\n2体目以降の対象への威力は30％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア\n\nLv30\n\n魔法\nInstant\n1秒\n-\n\n0m\n\n0m\n\n自身を強化して特定の魔法を変化させる。\n効果時間：永続\n「ドシスIII」が「エウクラシア・ドシスIII」に変化する。\n「ディスクラシアII」が「エウクラシア・ディスクラシア」に変化する。\n「ディアグノシス」が「エウクラシア・ディアグノシス」に変化する。\n「プログノシス」が「エウクラシア・プログノシスII」に変化する。\n変化した魔法を実行すると効果が解除される。\nこの魔法は固有のリキャストタイマーを持ち、実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する。\n\nエウクラシア・ディアグノシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nエウクラシア・ディアグノシス効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・プログノシスおよび学者の鼓舞効果とは同時に付与されない。\n追加効果（クリティカル時）：対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス［強］」を付与する。\nエウクラシア・ディアグノシス［強］効果：回復量の180％分のダメージを軽減する。\n効果時間：30秒\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディアグノシスがエウクラシア・ディアグノシスに変化する。\n\nエウクラシア・プログノシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。\n\nエウクラシア・ドシス\n\nLv30\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスがエウクラシア・ドシス変化する。\n\nソーテリア\n\nLv35\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身に4スタックの「ソーテリア」を付与する。\n効果時間：15秒\nソーテリア効果：自身が「カルディア［被］」を付与した対象に対する、攻撃魔法と同時に発生するＨＰ回復効果の回復力を1.7倍にする。\n\nイカロス\n\nLv40\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n0m\n\n敵またはパーティメンバーひとりを対象とする。\n対象の目前まで素早く移動する。\nバインド中は実行不可。\n\nドルオコレ\n\nLv45\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：600\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nディスクラシア\n\nLv46\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：160\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nケーラコレ\n\nLv50\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n30m\n\n一定時間、自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：15秒\n「タウロコレ」とは同時に付与されない。\n追加効果：対象のＨＰを継続回復する。\n回復力：100\n効果時間：15秒\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nイックソコレ\n\nLv52\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：400\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nゾーエ\n\nLv56\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n効果時間中に実行する1回の回復魔法の回復量を1.5倍にする。\n効果時間：30秒\n\nペプシス\n\nLv58\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーを対象とする。\n自身が対象に付与した「エウクラシア・ディアグノシス」または「エウクラシア・プログノシス」を解除する代わりに、対象のＨＰを回復する。\nエウクラシア・ディアグノシス効果中の回復力：450\nエウクラシア・プログノシス効果中の回復力：350\n自身が対象にエウクラシア・ディアグノシスまたはエウクラシア・プログノシスを付与していない場合は効果無し。\n\nピュシスIIつー\n\nLv60\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーのＨＰを継続回復する。\n回復力：130\n効果時間：15秒\n追加効果：対象が受けるＨＰ回復効果を10％上昇させる。\n効果時間：15秒\n\nタウロコレ\n\nLv62\n\nアビリティ\nInstant\n45秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象のＨＰを回復する。\n回復力：700\n追加効果：対象の被ダメージを10％軽減させる。\n効果時間：15秒\n「ケーラコレ」とは同時に付与されない。\n追加効果：自身のＭＰを最大ＭＰの7％分回復する。\n発動条件：「アダーガル」\n\nトキシコン\n\nLv66\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：300\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」\n\nハイマ\n\nLv70\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象として、回復力300相当のダメージを軽減するバリアを付与し、さらに5スタックの「ハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：150×「ハイマの印」の残スタック数\n\nドシスIIつー\n\nLv72\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：320\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nフレグマIIつー\n\nLv72\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：490\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア・ドシスIIつー\n\nLv72\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：60\n効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIがエウクラシア・ドシスIIに変化する。\n\nリゾーマタ\n\nLv74\n\nアビリティ\nInstant\n90秒\n-\n\n0m\n\n0m\n\n自身に「アダーガル」を付与する。\n\nホーリズム\n\nLv76\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：300\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の100％分のダメージを軽減する。\n効果時間：30秒\n追加効果：自身と周囲のパーティメンバーの被ダメージを10％軽減させる。\n効果時間：20秒\n\nパンハイマ\n\nジョブクエスト\n\nLv80\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n30m\n\n自身と周囲のパーティメンバーに、回復力200相当のダメージを軽減するバリアを付与し、さらに5スタックの「パンハイマの印」を付与する。\n効果時間：15秒\nバリアがダメージを完全に吸収して消滅すると、「パンハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「パンハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：100×「パンハイマの印」の残スタック数\n\nドシスIIIすりー\n\nLv82\n\n魔法\n\n1.5秒\n\n2.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性魔法攻撃。\n威力：380\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nフレグマIIIすりー\n\nLv82\n\n魔法\nInstant\n\n40秒\nMP400\n\n6m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nエウクラシア・ドシスIIIすりー\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n25m\n\n0m\n\n対象に無属性の継続ダメージを付与する。\n威力：90\n効果時間：30秒\n「エウクラシア・ディスクラシア」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとドシスIIIがエウクラシア・ドシスIIIに変化する。\n\nディスクラシアIIつー\n\nLv82\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性範囲魔法攻撃。\n威力：170\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n\nエウクラシア・ディスクラシア\n\nLv82\n\n魔法\nInstant\n\n1.5秒\nMP400\n\n0m\n\n5m\n\n自身の周囲の敵に無属性の継続ダメージを付与する。\n威力：40\n効果時間：30秒\n「エウクラシア・ドシスIII」とは同時に付与されない。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとディスクラシアIIがエウクラシア・ディスクラシアに変化する。\n\nトキシコンIIつー\n\nLv82\n\n魔法\nInstant\n\n2.5秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：380\n2体目以降の対象への威力は50％減少する。\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「アダースティング」\n\nクラーシス\n\nLv86\n\nアビリティ\nInstant\n60秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n対象が受けるＨＰ回復効果を20％上昇させる。\n効果時間：10秒\n\nプネウマ\n\nLv90\n\n魔法\n\n1.5秒\n\n120秒\nMP700\n\n25m\n\n25m\n\n対象に向かって前方直線範囲無属性魔法攻撃。\n威力：380\n2体目以降の対象への威力は40％減少する。\n追加効果：自身と周囲20m以内のパーティメンバーのＨＰを回復する。\n回復力：600\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\nこの魔法は固有のリキャストタイマーを持ち、装備やステータスなどによって変化しない。\n\nプシュケー\n\nLv92\n\nアビリティ\nInstant\n60秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に無属性範囲魔法攻撃。\n威力：690\n2体目以降の対象への威力は50％減少する。\n\nエウクラシア・プログノシスIIつー\n\nLv96\n\n魔法\nInstant\n\n1.5秒\nMP800\n\n0m\n\n20m\n\n自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の360％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n\n発動条件を満たすとプログノシスがエウクラシア・プログノシスIIに変化する。\n\nフィロソフィア\n\nLv100\n\nアビリティ\nInstant\n180秒\n-\n\n0m\n\n30m\n\n一定時間、自身の回復魔法の回復量を20％増加させる。\n効果時間：20秒\n追加効果：自身と周囲のパーティメンバーに「エウダイモニア」を付与する。\n効果時間：20秒\n効果中に魔法を命中させるとエウダイモニアの対象を回復する。\n回復力：150\n\nロールアクション\n\nロールアクションは、クラス・ジョブ別に修得する各ロールに適したアクションです。\n\nアクション名\n修得\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nリポーズ\n\nLv8\n\n魔法\n\n2.5秒\n\n2.5秒\nMP600\n\n30m\n\n0m\n\n対象に睡眠を付与する。\n効果時間：30秒\n実行後にオートアタックを停止する。\n\nエスナ\n\nLv10\n\n魔法\nInstant\n\n2.5秒\nMP400\n\n30m\n\n0m\n\n対象にかかった一部の弱体効果を1つ解除する。\n\nルーシッドドリーム\n\nLv14\n\nアビリティ\nInstant\n60秒\n-\n\n0m\n\n0m\n\n自身のＭＰを継続回復する。\n効果量：55\n効果時間：21秒\n\n迅速魔じんそくま\n\nLv18\n\nアビリティ\nInstant\n40秒\n-\n\n0m\n\n0m\n\n一定時間、次の1回の魔法詠唱について、詠唱時間無しで詠唱することができる。\n効果時間：10秒\n\n堅実魔けんじつま\n\nLv44\n\nアビリティ\nInstant\n120秒\n-\n\n0m\n\n0m\n\n一定時間、魔法詠唱を詠唱妨害されずに行うことができる。\nさらに、一部を除くすべてのノックバックと引き寄せを無効化する。\n効果時間：6秒\n\n救出きゅうしゅつ\n\nLv48\n\nアビリティ\nInstant\n120秒\n-\n\n30m\n\n0m\n\nパーティメンバーひとりを対象とする。\n対象を自身の近くに引き寄せる。\n対象が一部の状態異常を受けている、もしくは非戦闘中の場合は効果無し。\n発動条件：自身が戦闘状態\n\n特性\n\n特性名\n修得\n効果\n\nアクションダメージ・回復量かいふくりょうアップ\n\nLv20\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.1倍にする。\n\nアクションダメージ・回復量かいふくりょうアップIIつー\n\nLv40\n\n自身のオートアタックを除くアクションによる、ダメージと回復量をベース値の1.3倍にする。\n\nアダーガル\n\nLv45\n\n自身に「アダーガル」が付与される。\n最大スタック数：3\nアダーガルは20秒経過するたびに付与される。\nまた、アダーガルは自身が戦闘不能状態でも付与される。\n\n賢学けんがくの誓ちかい\n\nLv54\n\n特定のアクションの威力を上昇させる。\n\nドシスの威力：250\nフレグマの威力：330\nエウクラシア・ドシスの威力：35\n\nピュシスマスタリー\n\nLv60\n\nピュシスがピュシスIIに変化する。\n\n賢学けんがくの誓ちかいIIつー\n\nLv64\n\n特定のアクションの威力を上昇させる。\n\nドシスの威力：300\nフレグマの威力：400\nエウクラシア・ドシスの威力：40\n\nアダースティング\n\nLv66\n\n自身に「アダースティング」が付与される。\n最大スタック数：3\n発動条件：「エウクラシア・ディアグノシス」および自身に付与した「エウクラシア・プログノシス」がダメージを完全に吸収して消滅したとき。\n\n攻撃魔法こうげきまほうマスタリー\n\nLv72\n\nドシスがドシスIIに変化する。\nフレグマがフレグマIIに変化する。\nエウクラシア・ドシスがエウクラシア・ドシスIIに変化する。\nさらに、トキシコンの威力を300に上昇させる。\n\nケーラコレ効果こうかアップ\n\nLv78\n\nケーラコレに、「対象のＨＰを継続回復する効果」が付与される。\n\n攻撃魔法こうげきまほうマスタリーIIつー\n\nLv82\n\nドシスIIがドシスIIIに変化する。\nフレグマIIがフレグマIIIに変化する。\nエウクラシア・ドシスIIがエウクラシア・ドシスIIIに変化する。\nディスクラシアがディスクラシアIIに変化する。\nトキシコンがトキシコンIIに変化する。\n\n回復かいふくアクション効果こうかアップ\n\nLv85\n\n特定のアクションの回復力とバリア効果量を上昇させる。\n\nディアグノシスの回復力：450\nカルディアの回復力：170\nエウクラシア・ディアグノシスのバリア効果量：回復量の180％分\nエウクラシア・プログノシスのバリア効果量：回復量の320％分\n\nゾーエ効果こうかアップ\n\nLv88\n\nゾーエのリキャストタイムを90秒に短縮する。\n\nソーテリア効果こうかアップ\n\nLv94\n\nソーテリアのリキャストタイムを60秒に短縮する。\n\nアクション威力いりょくアップ\n\nLv94\n\n特定のアクションの威力を上昇させる。\n\nドシスIIIの威力：380\nエウクラシア・ドシスIIIの威力：90\nトキシコンIIの威力：380\nプネウマの威力：380\n\nエウクラシア・プログノシスマスタリー\n\nLv96\n\nエウクラシア・プログノシスがエウクラシア・プログノシスIIに変化する。\n\nピュシスIIつー効果こうかアップ\n\nLv98\n\nピュシスIIの「対象が受けるＨＰ回復効果を10％上昇させる効果」の効果時間を15秒に延長する。\n\nロール特性\n\nロール特性は、クラス・ジョブ別に修得する各ロールに適した特性です。\n\n特性名\n修得\n効果\n\n迅速魔じんそくま効果こうかアップ\n\nLv94\n\n迅速魔のリキャストタイムを40秒に短縮する。\n\nジョブHUD\n\nエウクラシアシンボル\n\nアクション「エウクラシア」を修得すると、「エウクラシアシンボル」が表示されるようになります。エウクラシアを実行すると「ドシス」、「ディアグノシス」、「プログノシス」が強化され、アクションの効果内容が変化します。\n\nアダーゲージ\n\n特性「アダーガル」を修得すると、自身に付与される\"アダーガル\"の付与数を示す「アダーゲージ」が表示されるようになります。\nアダーガルは一定時間が経過するたびに付与され、アダーガルを消費することで「ドルオコレ」やレベル50で修得する「ケーラコレ」を実行できます。\n\n特性「アダースティング」を修得すると、“アダーゲージ”に「アダースティング」が表示されるようになります。\nアダースティングは「エウクラシア・ディアグノシス」を実行することで対象に付与されるバリアステータスがダメージを吸収して消滅するか、「エウクラシア・プログノシス」を実行することで自身に付与されるバリアステータスがダメージを吸収して消滅することで付与されます。\nアダースティングを消費することで「トキシコン」やレベル82で修得する「トキシコンII」を実行できます。\n\nシンプルモード\n\nエウクラシアシンボル\n\nアダーゲージ\n\n「アダーガル」「アダースティング」スタック時\n\n各アクションや特性の内容は、Lv100時点で表示される内容を掲載しています。\nPatch 7.5での「変更内容」は、パッチノートをご確認ください。\n\nLast Update: -document.getElementById('datetime-ffff55aa5c5d027ea58dd39392199135b7cbbcc2').innerHTML = ldst_strftime(1785225600, 'YMD');\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\nアクション\n専用アクション\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nドシスIIIすりー\n\n魔法\n\n1.44秒\n\n2.4秒\n-\n\n25m\n\n0m\n\n対象に魔法攻撃。\n威力：6000\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：4000\n\nフレグマIIIすりー\n\n魔法\nInstant\n15秒\n-\n\n5m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：10000\n追加効果：対象にバインドを付与する。\n効果時間：2秒\n追加効果：メインターゲット以外の対象をメインターゲットの近くに引き寄せる。\nこの魔法は固有のリキャストタイマーを持つ。\n\nプネウマ\n\n魔法\n\n1.44秒\n28秒\n-\n\n25m\n\n25m\n\n対象に向かって前方直線範囲魔法攻撃。\n威力：12000\n追加効果：自身と周囲20m以内のパーティメンバーに、一定量のダメージを防ぐバリアである「ハイマ」と、3スタックの「ハイマの印」を付与する。\nこの追加効果は遮蔽物を越えて効果を発揮する。\nバリア量：回復力4000相当\n効果時間：10秒\nバリアがダメージを完全に吸収して消滅すると、「ハイマの印」を1スタック消費してバリアを付与しなおす。\n効果時間が経過して「ハイマの印」が消滅するときに、対象のＨＰを回復する。\n回復力：4000×「ハイマの印」の残スタック数\nこの魔法は固有のリキャストタイマーを持つ。\n\nエウクラシア\n\n魔法\nInstant\n12秒\n-\n\n0m\n\n0m\n\n自身を強化して「ドシスIII」を「エウクラシア・ドシスIII」に変化させる。\n効果時間：10秒\n「エウクラシア・ドシスIII」を実行すると効果が解除される。\n最大チャージ数：2\nこの魔法は固有のリキャストタイマーを持つ。\n\nイカロス\n\nアビリティ\nInstant\n10秒\n-\n\n25m\n\n0m\n\n対象の目前まで素早く移動する。\n最大チャージ数：2\nバインド中は実行不可。\n\nトキシコン\n\nアビリティ\nInstant\n15秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：2000\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n最大チャージ数：2\n\nカルディア\n\nアビリティ\nInstant\n1秒\n-\n\n30m\n\n0m\n\n自身またはパーティメンバーひとりを対象とする。\n自身に「カルディア」を付与し、対象には「カルディア［被］」を付与する。\n効果中に「ドシスIII」および「エウクラシア・ドシスIII」を実行すると、カルディア［被］を付与した対象に追加効果を発生させる。\n効果時間：永続\n\nエウクラシア・ドシスIIIすりー\n\n魔法\nInstant\n1.5秒\n-\n\n25m\n\n0m\n\n対象に継続ダメージを付与する。\n威力：3000\n効果時間：12秒\n追加効果：カルディア［被］の効果対象に一定量のダメージを防ぐバリアである「エウクラシア・ディアグノシス」を付与する。\nバリア量：回復力8000相当\n効果時間：12秒\nバリアがダメージを完全に吸収して消滅すると、賢者自身に「アダースティング」を付与する。\n効果時間：15秒\n効果中はトキシコンがトキシコンIIに変化する。\n\n※このアクションはホットバーに登録することはできない。\n\nプシュケー\n\n魔法\nInstant\n\n2.4秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：12000\nメインターゲット以外への威力は、メインターゲットからの距離が3m以上離れると8000に減少する。\nコンボ条件：フレグマIII\n\n※このアクションはホットバーに登録することはできない。\n\nトキシコンIIつー\n\nアビリティ\nInstant\n1秒\n-\n\n25m\n\n5m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：8000\n2体目以降の対象への威力は4000に減少する。\n追加効果：対象の被ダメージを10％上昇させる。\n効果時間：7秒\n発動条件：「アダースティング」効果中\n\n※このアクションはホットバーに登録することはできない。\n\nリミットブレイク\n\nPvPバトル中は、戦闘状態の経過やその他コンテンツごとの様々な要因により、リミットゲージが蓄積されていきます。 リミットゲージが最大まで溜まると、「リミットブレイク」を使用することができます。\n\nアクション名\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nメソテース\n\nInstant\n10秒\n-\n\n30m\n\n5m\n\n指定した地面を中心にシールドを生成する。\n効果時間：15秒\n効果時間中、範囲内に入ったパーティメンバーには「メソテース」を、敵には「リュペー」を継続的に付与する。\nメソテース効果：「リュペー」が付与されていない敵からのダメージを無効化する。\n効果時間：5秒\nリュペー効果：継続ダメージを付与する。\n威力：9000\n効果時間：5秒\n効果時間中に一度だけ、別の地点にシールドを生成しなおすことができる。\n再生成時の効果時間は、再生成する直前の残り効果時間を引き継ぐ。\n発動条件：「リミットゲージ」最大\n蓄積時間：120秒\n\n共通アクション\n\n全ジョブ共通で使用できるアクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\n軍用ぐんようエリクサー\n\nアビリティ\n4.5秒\n5秒\n-\n\n0m\n\n0m\n\n自身のＨＰとＭＰを全回復する。\n詠唱中に敵から攻撃を受けると、詠唱が中断される。\n\n快気かいき\n\nアビリティ\nInstant\n1秒\nMP2000\n\n0m\n\n0m\n\n自身のＨＰを回復する。\n回復力：16000\n\n浄化じょうか\n\nアビリティ\nInstant\n4秒\nMP2000\n\n0m\n\n0m\n\n自身に付与されたスタン、ヘヴィ、バインド、沈黙、氷結、ミラクル・オブ・ネイチャーの効果をすべて解除する。\n追加効果：自身に「活性」を付与する。\n効果時間：2秒\n活性効果：浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\nこのアクションは一部を除く状態異常を受けていても実行することができる。\n\n防御ぼうぎょ\n\nアビリティ\nInstant\n30秒\n-\n\n0m\n\n0m\n\n自身が受けるダメージを99％軽減させる。\nさらに、浄化で解除可能な状態異常とノックバック、引き寄せの効果を無効化する。\n効果時間：4秒\n効果時間中に再使用または他のアクションを実行するか、効果時間が経過すると防御が解除される。\n防御中も移動することはできるが、移動速度が33％低下する。\n\nスプリント\n\nアビリティ\nInstant\n1.5秒\n-\n\n0m\n\n0m\n\n自身の移動速度を50％上昇させる。\n効果時間：永続\n効果時間中に再使用やその他のアクションを実行すると、スプリントが解除される。\n\nPvPロールアクション\n\nPvPロールアクションは、ロールごとにいずれか1つのみ選択できる大規模PvP（フロントライン・ライバルウィングズ）専用アクションです。\n\nアクション名\n種類\nキャスト\nタイム\nリキャスト\nタイム\n消費MP\n距離範囲\n効果\n\nヒール\n\n魔法\nInstant\n\n2.4秒\nMP2000\n\n30m\n\n0m\n\n対象のＨＰを回復する。\n回復力：16000\n自身を対象とした場合は、回復力が8000に減少する。\n\nストンラスキン\n\n魔法\nInstant\n30秒\n-\n\n0m\n\n15m\n\n自身と周囲のパーティメンバーに、一定量のダメージを防ぐバリアを張る。\nこのアクションは遮蔽物を越えて効果を発揮する。\nバリア量：回復力12000相当\n効果時間：10秒\n\nディアブロシス\n\nアビリティ\nInstant\n45秒\n-\n\n25m\n\n10m\n\n対象とその周囲の敵に範囲魔法攻撃。\n威力：9000\n追加効果：対象が受ける回復効果を33％減少させる。\n効果時間：10秒\n\nPatch7.5、7.55のPvP全般のアップデート内容は、各パッチノートをご確認ください。\n\n関連商品\ne-STOREで購入\nゲームダウンロード\n\nOfficial Information\n\nX / News\n\nYouTube\n\nInstagram\n\nTwitch\n\nLINE\n\nBluesky\n\nレーティング制度について\n著作権について\nプライバシーポリシー\nサポートセンター\n\nライセンス\nルール＆ポリシー\n利用者情報の外部送信について\n\n©2026 Sony Interactive Entertainment LLC.\"PlayStation Family Mark\", \"PlayStation\", \"PS5 logo\", \"PS5\", \"PS4 logo\" and \"PS4\" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.\nMicrosoft, the XBOX Sphere mark, the Series X|S logo and XBOX Series X|S are trademarks of the Microsoft group of companies.\nNintendo Switch is a trademark of Nintendo.\nWindows is either a registered trademark or trademark of Microsoft Corporation in the United States and/or other countries.\nMac is a trademark of Apple Inc.\n©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.\n\n© SQUARE ENIX\n\nLOGO ILLUSTRATION:© YOSHITAKA AMANO",
+ "fetchedAt": "2026-10-18T12:17Z"
+}
