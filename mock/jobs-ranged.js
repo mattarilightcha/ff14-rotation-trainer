@@ -9,7 +9,7 @@
   // 説明文から:
   //   ヒート: ヒートスプリットショット +5、ヒートスラッグショット・ヒートクリーンショット（コンボ時）+5、スキャッターガン +10
   //   バッテリー: ヒートクリーンショット（コンボ時）+10、エアアンカー・回転のこぎり・エクスカベーター +20
-  //   ハイパーチャージ（ヒート 50。ハイパーチャージ実行可なら消費なし）: オーバーヒート 5 スタック（10 秒）。
+  //   ハイパーチャージ（ヒート 50。ハイパーチャージ実行可を先に使ってヒートは減らさないのは仮: GAME-82）: オーバーヒート 5 スタック（10 秒）。
   //     オーバーヒート中は単体のウェポンスキルの威力 +20、ブレイズショット・オートボウガン（GCD 1.5 秒）が使える（1 回でスタック 1 つ）。
   //     ブレイズショットはダブルチェック・チェックメイトのリキャストを 15 秒縮める
   //   ワイルドファイア: 10 秒の間に当てたウェポンスキルの数（最大 6）× 240 を、時間切れかデトネーターで与える
@@ -49,11 +49,13 @@
       const OH_UP = numIn(A[ID.HYPERCHARGE]?.desc, /威力を(\d+)上昇/, 20);
       const OH_SINGLE = new Set([ID.SPLIT, ID.SLUG, ID.CLEAN, ID.DRILL, ID.AIR_ANCHOR, ID.BLAZING]); // オーバーヒートで威力が上がる単体のウェポンスキル
       const WF_PER = numIn(A[ID.WILDFIRE]?.desc, /1回ごとの威力：(\d+)/, 240), WF_MAX = numIn(A[ID.WILDFIRE]?.desc, /最大(\d+)回分/, 6);
-      const QUEEN_MS = numIn(A[ID.QUEEN]?.desc, /稼働時間：(\d+)秒/, 12) * 1000, Q_STEP = 1500;
+      // クイーンの攻撃の間隔は、公式ジョブガイドの表のリキャスト（アームパンチ 1.5 秒・ローラーダッシュ 3 秒。召喚士のデミと同じ決め方: GAME-71 / 82）
+      const QUEEN_MS = numIn(A[ID.QUEEN]?.desc, /稼働時間：(\d+)秒/, 12) * 1000, Q_STEP = 1500, DASH_STEP = 3000;
       // クイーンの技の威力の幅（説明文「威力：120～240」）
       const qPot = (id, k) => { const d = R.D.petActions?.[id]?.desc ?? A[id]?.desc ?? ''; const lo = numIn(d, /威力：(\d+)～/, 0), hi = numIn(d, /～(\d+)/, lo); return Math.round(lo + (hi - lo) * k); };
       const QUEEN_ACT = { [ID.Q_PILE]: 'クイーン・パイルバンカー', [ID.Q_PUNCH]: 'クイーン・アームパンチ', [ID.Q_DASH]: 'クイーン・ローラーダッシュ', [ID.Q_COLLIDER]: 'クイーン・コレダー' };
       const BIG = new Set([ID.DRILL, ID.AIR_ANCHOR, ID.CHAINSAW, ID.EXCAVATOR]); // 整備を乗せたい技
+      // ヒート・バッテリーの上限 100 は仮（GAME-82。説明文・特性に上限の数がない）
       function gain(key, n, overKey) {
         const s = S(), v = s[key] + n;
         if (v > 100 && s.phase === 'combat') s.stats[overKey] += v - 100;
@@ -163,7 +165,7 @@
             while (q && s.t >= q.next) {
               if (q.ending === 'collider') { queenHit(ID.Q_COLLIDER); s.queen = null; R.pet(null, 0); break; } // 帰還
               if (q.ending === 'pile' || s.t >= q.until) { queenHit(ID.Q_PILE); q.ending = 'collider'; q.next = s.t + Q_STEP; continue; }
-              queenHit(q.first ? ID.Q_DASH : ID.Q_PUNCH); q.first = false; q.next += Q_STEP;
+              queenHit(q.first ? ID.Q_DASH : ID.Q_PUNCH); q.next += q.first ? DASH_STEP : Q_STEP; q.first = false;
               if (q.next > q.until) { q.next = q.until; }
             }
           }
@@ -255,7 +257,7 @@
         fSymmetry: { name: '対称投擲：フラリッシュ' }, fFlow: { name: '非対称投擲：フラリッシュ' },
         threefold: { name: '扇の舞い【急】実行可' }, fourfold: { name: '扇の舞い【終】実行可' }, finishingReady: { name: 'フィニシングムーブ実行可' },
         standardStep: { name: 'スタンダードステップ' }, technicalStep: { name: 'テクニカルステップ' },
-        standardFinish: { name: 'スタンダードフィニッシュ', tracked: true }, technicalFinish: { name: 'テクニカルフィニッシュ' },
+        standardFinish: { name: 'スタンダードフィニッシュ', tracked: true, refreshOk: true }, technicalFinish: { name: 'テクニカルフィニッシュ' },
         esprit: { name: 'エスプリ' },
         lastDance: { name: 'ラストダンス実行可' }, tillana: { name: 'ティラナ実行可' }, dawn: { name: '暁の舞い実行可' },
         devilment: { name: '攻めのタンゴ' }, starfall: { name: '流星の舞い実行可' },
@@ -292,6 +294,7 @@
         if (v > max && s.phase === 'combat') s.stats[overKey] += v - max;
         s[key] = Math.min(max, v);
       }
+      // エスプリの上限 100 は仮（GAME-83。説明文・特性に上限の数がない）
       const gauges = {
         幻扇: { get: () => S().feathers, set: (v) => { S().feathers = Math.max(0, Math.min(FEATHER_MAX, v)); }, max: FEATHER_MAX },
         エスプリ: { get: () => S().esprit, set: (v) => { S().esprit = Math.max(0, Math.min(100, v)); }, max: 100 },
@@ -389,7 +392,7 @@
           if (id === ID.TECHNICAL_STEP) { R.buff('technicalStep', 15000); startDance('technical'); }
           if (id === ID.STANDARD_FINISH) {
             const n = Math.min(2, s.dance?.done ?? 0), pct = SF_TABLE[n]?.pct ?? 0;
-            if (n > 0) { s.sfPct = pct; R.buff('standardFinish', 60000); R.buff('esprit', Math.max(60000, (s.st.esprit?.until ?? 0) - s.t)); s.partnerEsprit = { until: s.t + 60000 }; R.buff('lastDance', 30000); }
+            if (n > 0) { s.sfPct = pct; R.buff('standardFinish', 60000); R.buff('esprit', Math.max(60000, (s.st.esprit?.until ?? 0) - s.t)); s.partnerEsprit = has('closed') ? { until: s.t + 60000 } : null; R.buff('lastDance', 30000); }
             s.stats.finishes.push(`スタンダード ${n}/2`);
             R.remove('standardStep'); s.dance = null; Au()?.surge();
           }
@@ -400,7 +403,7 @@
             R.remove('technicalStep'); s.dance = null; Au()?.surge();
           }
           if (id === ID.FINISHING_MOVE) {
-            R.remove('finishingReady'); s.sfPct = FM_PCT; R.buff('standardFinish', 60000); R.buff('esprit', Math.max(60000, (s.st.esprit?.until ?? 0) - s.t)); s.partnerEsprit = { until: s.t + 60000 }; R.buff('lastDance', 30000);
+            R.remove('finishingReady'); s.sfPct = FM_PCT; R.buff('standardFinish', 60000); R.buff('esprit', Math.max(60000, (s.st.esprit?.until ?? 0) - s.t)); s.partnerEsprit = has('closed') ? { until: s.t + 60000 } : null; R.buff('lastDance', 30000);
           }
           if (id === ID.TILLANA) { R.remove('tillana'); const g = descGain(a, 'エスプリ', ok); if (g) gain('esprit', g, 100, 'espritOver'); }
           if (id === ID.SABER) { s.esprit -= 50; s.stats.sabers++; }
@@ -410,7 +413,8 @@
           if (id === ID.FLOURISH) { for (const k of ['fSymmetry', 'fFlow', 'threefold', 'fourfold', 'finishingReady']) R.buff(k, 30000); Au()?.surge(); }
           if (id === ID.DEVILMENT) { R.buff('devilment', 20000); R.buff('starfall', 20000); Au()?.surge(); }
           if (id === ID.CLOSED) { if (has('closed')) R.remove('closed'); else R.buff('closed', 1e9); }
-          if (id === ID.WALTZ) R.heal('party', 300 * HEAL_K);
+          // 癒やしのワルツ: 「クローズドポジション［被］」を付与したパーティメンバーからも同様の範囲回復（説明文。練習場では 2 人とも範囲の中とみなす）
+          if (id === ID.WALTZ) { R.heal('party', 300 * HEAL_K); if (has('closed')) R.heal('party', 300 * HEAL_K); }
           if (id === ID.SAMBA) { R.mitigate('party', 0.15, 15, '守りのサンバ'); R.buff('samba', 15000); }
           if (id === ID.IMPROV) { s.improv = { at: s.t, until: s.t + 15000 }; R.buff('improv', 15000, 0); R.hot('party', 100 * HEAL_K, 15, 'インプロビゼーション'); }
           if (id === ID.IMPROV_FINISH && s.improv) {

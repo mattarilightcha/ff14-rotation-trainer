@@ -28283,6 +28283,9 @@ window.MOCK_DATA = {
    "replaceGroups": {
     "141": [
      25797
+    ],
+    "142": [
+     25797
     ]
    },
    "splitDetected": []
@@ -63609,55 +63612,6 @@ window.MOCK_DATA = {
       24284
      ]
     },
-    "24292": {
-     "id": 24292,
-     "name": "エウクラシア・プログノシス",
-     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。",
-     "icon": "../public/fankit/battle-pve/21_SGE/Eukrasian_Prognosis.png",
-     "iconFramed": true,
-     "isGcd": true,
-     "castMs": 0,
-     "recastMs": 1500,
-     "fromGuide": [
-      "MP 0→800"
-     ],
-     "cooldownGroup": 58,
-     "maxCharges": 0,
-     "comboFrom": [],
-     "preservesCombo": false,
-     "level": 30,
-     "forJob": true,
-     "isRole": false,
-     "category": 2,
-     "proc": null,
-     "procStatus": null,
-     "shape": 2,
-     "hostile": false,
-     "toSelf": true,
-     "toParty": false,
-     "mp": 800,
-     "range": 0,
-     "crit": false,
-     "magic": true,
-     "aspect": null,
-     "effectRange": 20,
-     "ground": false,
-     "positional": null,
-     "dash": false,
-     "backstep": 0,
-     "forward": 0,
-     "toAlly": false,
-     "toZone": null,
-     "pot": null,
-     "eff": {
-      "requires": "エウクラシア",
-      "heal": 100,
-      "party": true
-     },
-     "replaces": [
-      24286
-     ]
-    },
     "24294": {
      "id": 24294,
      "name": "ソーテリア",
@@ -64802,6 +64756,10 @@ window.MOCK_DATA = {
     }
    },
    "petActions": {
+    "24292": {
+     "name": "エウクラシア・プログノシス",
+     "desc": "自身と周囲のパーティメンバーのＨＰを回復する。\n回復力：100\n追加効果：対象に一定量のダメージを防ぐバリアを張る。\nこのバリアは回復量の320％分のダメージを軽減する。\n効果時間：30秒\nエウクラシア・ディアグノシスおよび学者の鼓舞効果とは同時に付与されない。\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとプログノシスがエウクラシア・プログノシスに変化する。"
+    },
     "24293": {
      "name": "エウクラシア・ドシス",
      "desc": "対象に無属性の継続ダメージを付与する。\n威力：40　効果時間：30秒\n追加効果：カルディア［被］の効果対象のＨＰを回復する。\n回復力：170\n発動条件：「エウクラシア」効果中\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすとドシスがエウクラシア・ドシス変化する。"
@@ -68439,9 +68397,6 @@ window.MOCK_DATA = {
      24291
     ],
     "24286": [
-     24292
-    ],
-    "24292": [
      37034
     ],
     "24312": [
@@ -68898,128 +68853,6 @@ window.MOCK_DATA = {
       ]
      },
      "replaces": []
-    },
-    "3543": {
-     "id": 3543,
-     "name": "闘魂旋風脚",
-     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が闘魂旋風脚に変化する。",
-     "icon": "../public/fankit/battle-pve/05_MNK/Tornado_Kick.png",
-     "iconFramed": true,
-     "isGcd": true,
-     "castMs": 0,
-     "recastMs": 2000,
-     "fromGuide": [
-      "リキャスト 2.5→2"
-     ],
-     "cooldownGroup": 58,
-     "maxCharges": 0,
-     "comboFrom": [],
-     "preservesCombo": true,
-     "level": 60,
-     "forJob": true,
-     "isRole": false,
-     "category": 3,
-     "proc": null,
-     "procStatus": null,
-     "shape": 2,
-     "hostile": true,
-     "toSelf": false,
-     "toParty": false,
-     "mp": 0,
-     "range": -1,
-     "crit": false,
-     "magic": false,
-     "aspect": null,
-     "effectRange": 5,
-     "ground": false,
-     "positional": null,
-     "dash": false,
-     "backstep": 0,
-     "forward": 0,
-     "toAlly": false,
-     "toZone": null,
-     "pot": {
-      "base": 1200
-     },
-     "eff": {
-      "grant": [
-       {
-        "status": "零の型",
-        "sec": 30,
-        "stacks": null,
-        "combo": false
-       }
-      ],
-      "cost": {
-       "gauge": "陰の闘気",
-       "n": 1
-      }
-     },
-     "replaces": [
-      25764
-     ]
-    },
-    "3545": {
-     "id": 3545,
-     "name": "蒼気砲",
-     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が蒼気砲に変化する。",
-     "icon": "../public/fankit/battle-pve/05_MNK/Elixir_Field.png",
-     "iconFramed": true,
-     "isGcd": true,
-     "castMs": 0,
-     "recastMs": 2000,
-     "fromGuide": [
-      "リキャスト 2.5→2"
-     ],
-     "cooldownGroup": 58,
-     "maxCharges": 0,
-     "comboFrom": [],
-     "preservesCombo": true,
-     "level": 60,
-     "forJob": true,
-     "isRole": false,
-     "category": 3,
-     "proc": null,
-     "procStatus": null,
-     "shape": 2,
-     "hostile": false,
-     "toSelf": true,
-     "toParty": false,
-     "mp": 0,
-     "range": 0,
-     "crit": false,
-     "magic": false,
-     "aspect": null,
-     "effectRange": 5,
-     "ground": false,
-     "positional": null,
-     "dash": false,
-     "backstep": 0,
-     "forward": 0,
-     "toAlly": false,
-     "toZone": null,
-     "pot": {
-      "base": 800
-     },
-     "eff": {
-      "grant": [
-       {
-        "status": "陰の闘気",
-        "sec": null,
-        "stacks": null,
-        "combo": false
-       },
-       {
-        "status": "零の型",
-        "sec": 30,
-        "stacks": null,
-        "combo": false
-       }
-      ]
-     },
-     "replaces": [
-      25764
-     ]
     },
     "3547": {
      "id": 3547,
@@ -70237,68 +70070,6 @@ window.MOCK_DATA = {
       25764
      ]
     },
-    "25882": {
-     "id": 25882,
-     "name": "爆裂脚",
-     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が爆裂脚に変化する。",
-     "icon": "../public/fankit/battle-pve/05_MNK/Flint_Strike.png",
-     "iconFramed": true,
-     "isGcd": true,
-     "castMs": 0,
-     "recastMs": 2000,
-     "fromGuide": [
-      "リキャスト 2.5→2"
-     ],
-     "cooldownGroup": 58,
-     "maxCharges": 0,
-     "comboFrom": [],
-     "preservesCombo": false,
-     "level": 60,
-     "forJob": true,
-     "isRole": false,
-     "category": 3,
-     "proc": null,
-     "procStatus": null,
-     "shape": 2,
-     "hostile": false,
-     "toSelf": true,
-     "toParty": false,
-     "mp": 0,
-     "range": 0,
-     "crit": false,
-     "magic": false,
-     "aspect": null,
-     "effectRange": 5,
-     "ground": false,
-     "positional": null,
-     "dash": false,
-     "backstep": 0,
-     "forward": 0,
-     "toAlly": false,
-     "toZone": null,
-     "pot": {
-      "base": 800
-     },
-     "eff": {
-      "grant": [
-       {
-        "status": "陽の闘気",
-        "sec": null,
-        "stacks": null,
-        "combo": false
-       },
-       {
-        "status": "零の型",
-        "sec": 30,
-        "stacks": null,
-        "combo": false
-       }
-      ]
-     },
-     "replaces": [
-      25764
-     ]
-    },
     "36942": {
      "id": 36942,
      "name": "陰陽闘気",
@@ -70801,7 +70572,20 @@ window.MOCK_DATA = {
      "replaces": []
     }
    },
-   "petActions": {},
+   "petActions": {
+    "3543": {
+     "name": "闘魂旋風脚",
+     "desc": "対象とその周囲の敵に範囲物理攻撃。　威力：1200\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：「陰の闘気」と「陽の闘気」効果中かつ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が闘魂旋風脚に変化する。"
+    },
+    "3545": {
+     "name": "蒼気砲",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陰の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に同じ「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が蒼気砲に変化する。"
+    },
+    "25882": {
+     "name": "爆裂脚",
+     "desc": "自身の周囲の敵に範囲物理攻撃。　威力：800\n2体目以降の対象への威力は35％減少する。\n追加効果：自身に「陽の闘気」を付与する。\n追加効果：自身に「零の型」を付与する。　効果時間：30秒\n零の型効果：発動条件に「型」を持つウェポンスキルを、「型」が付いていなくても実行することができるようになる。\nその場合には追加効果も発動させることができる。\n発動条件：自身に異なる「チャクラ」が3つ付与されている\n\n※このアクションはホットバーに登録することはできない。\n　発動条件を満たすと必殺技が爆裂脚に変化する。"
+    }
+   },
    "statuses": {
     "2959": {
      "id": 2959,
@@ -75688,13 +75472,10 @@ window.MOCK_DATA = {
    ],
    "replaceGroups": {
     "25764": [
-     3543,
-     3545,
-     25765,
-     25768,
      25769,
-     25882,
-     36948
+     36948,
+     25765,
+     25768
     ]
    },
    "splitDetected": []
@@ -92724,6 +92505,9 @@ window.MOCK_DATA = {
     ],
     "24401": [
      24403
+    ],
+    "24402": [
+     24403
     ]
    },
    "splitDetected": []
@@ -99435,28 +99219,36 @@ window.MOCK_DATA = {
    "replaceGroups": {
     "34606": [
      34608,
+     34627,
      34610,
-     34611,
-     34627
+     34612
     ],
     "34607": [
      34609,
-     34612,
-     34613,
-     34628
+     34628,
+     34611,
+     34613
     ],
     "34614": [
      34616,
-     34618
+     34618,
+     34627
     ],
     "34615": [
      34617,
-     34619
+     34619,
+     34628
     ],
     "34621": [
      34629
     ],
     "34622": [
+     34630
+    ],
+    "34624": [
+     34629
+    ],
+    "34625": [
      34630
     ],
     "34626": [
@@ -100605,7 +100397,7 @@ window.MOCK_DATA = {
      "isGcd": false,
      "castMs": 0,
      "recastMs": 15000,
-     "cooldownGroup": 4,
+     "cooldownGroup": 3,
      "maxCharges": 0,
      "comboFrom": [],
      "preservesCombo": true,

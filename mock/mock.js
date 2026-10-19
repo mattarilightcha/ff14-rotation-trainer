@@ -61,10 +61,10 @@
     // 設置型の技（白魔道士のアサイラム・リタージー・オブ・ベル）
     zone: (kind, o) => Arena.placeZone(kind, { ...o, at: placeAt ?? undefined }), zoneHeal: (kind, frac, style) => Arena.zoneHeal(kind, frac, style), zoneEnd: (kind) => Arena.endZone(kind),
     zoneSet: (kind, o) => Arena.zoneSet(kind, o), zoneHitsBoss: (kind) => Arena.zoneHitsBoss(kind),
-    // バリアの残り（暗黒騎士のブラックナイト: 全部吸収されたらダークアーツ）。'self' / 'npc'
-    shieldLeft: (who) => Arena.shieldLeft?.(who) ?? 0,
+    // バリアの残り（暗黒騎士のブラックナイト: 全部吸収されたらダークアーツ）。'self' / 'npc'。name でそのバリアだけ
+    shieldLeft: (who, name) => Arena.shieldLeft?.(who, name) ?? 0,
     // バリアの中身 { frac, left, name }（学者の展開戦術）と、味方に付けた効果を消す（深謀遠慮の策が発動したとき）
-    shieldOf: (who) => Arena.shieldOf?.(who) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name), unshield: (who) => Arena.unshield?.(who),
+    shieldOf: (who, name) => Arena.shieldOf?.(who, name) ?? null, unmark: (who, name) => Arena.unmark?.(aimWho(who), name), unshield: (who, name) => Arena.unshield?.(who, name),
     unmitigate: (who, name) => Arena.unmitigate?.(who, name),
     // 味方に効果を付ける（カードなど。パーティリストに出る）。o.healUp: 受ける回復の上乗せ
     mark: (who, name, sec, o) => Arena.mark(aimWho(who), name, sec, o),
@@ -321,7 +321,8 @@
     const iv = S.tl.buffs[k];
     if (iv) { const last = iv[iv.length - 1]; if (!last || last.to != null) iv.push({ from: Math.max(0, S.t), to: null }); }
     const cur = S.st[k];
-    if (cur && cur.until > S.t && STATUS[k].tracked) {
+    // STATUS の refreshOk: 早めに付け直すのが正しい回しの効果（踊り子のスタンダードフィニッシュは 60 秒で、30 秒ごとに付け直す）は警告しない
+    if (cur && cur.until > S.t && STATUS[k].tracked && !STATUS[k].refreshOk) {
       const left = cur.until - S.t;
       if (left > 10000) addLog('warn', `${STATUS[k].name}を早めに更新（残り ${(left / 1000).toFixed(1)} 秒を無駄に）`);
     }
@@ -773,7 +774,7 @@
   Arena.on('boom', () => Au?.boom(0.8)); // 敵の範囲攻撃の発動
   Arena.on('hotTick', () => Au?.heal('hot')); // 継続回復（リジェネなど）の 1 回ごとの小さなきらめき
   // 自分がダメージを受けた（リタージー・オブ・ベルが鳴る）・全体攻撃
-  Arena.on('hurt', () => { if (S && live()) J.onHurt?.(); });
+  Arena.on('hurt', (frac, name) => { if (S && live()) J.onHurt?.(name); });
   Arena.on('raid', (name) => {
     if (!S || S.phase !== 'combat') return;
     addLog('warn', `${name}: 全員が攻撃を受けた（よけられない）`);
@@ -1369,8 +1370,14 @@
       (STATUS[k].target ? target : self).push({ key: k, meta: STATUS[k], left: (v.until - S.t) / 1000, stacks: v.stacks });
     }
     // 回復役の効果（リジェネ・バリア・軽減）: かかっている人の行に出す
-    const party = (which) => (Arena.partyStatus?.(which) ?? []).map((x) => ({ key: `${x.kind}:${x.name}`, meta: { name: x.name, cls: x.kind === 'hot' ? 'fu' : 'mk' }, left: x.left }));
-    const mine = party('self');
+    // 同じ名前の効果（バマジクの軽減と受ける回復の上乗せなど）は 1 つにまとめる
+    const party = (which) => {
+      const seen = new Set();
+      return (Arena.partyStatus?.(which) ?? []).filter((x) => !seen.has(x.name) && seen.add(x.name)).map((x) => ({ key: `${x.kind}:${x.name}`, meta: { name: x.name, cls: x.kind === 'hot' ? 'fu' : 'mk' }, left: x.left }));
+    };
+    // 自分の行: 自分のステータスと同じ名前の効果（ランパートなど）は、ステータスの方だけ出す
+    const selfNames = new Set(self.map((x) => x.meta.name));
+    const mine = party('self').filter((x) => !selfNames.has(x.meta.name));
     syncStatuses($('selfStatus'), [...self, ...mine]);
     const tk = Arena.target();
     syncStatuses($('targetStatus'), tk === 'boss' ? target : tk === 'player' ? [...self, ...mine] : tk === 'tank' ? party('npc') : []);

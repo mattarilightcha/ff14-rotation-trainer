@@ -183,7 +183,7 @@
     hots = []; zones = []; target = 'boss';
     Object.assign(pet, { base: PET_BASE[opts.job] ?? null, temp: null, until: 0, born: -9, act: -1 });
     pet.kind = pet.base; if (pet.kind) { const q = petGoal(); pet.x = q.x; pet.y = q.y; pet.z = q.z; }
-    for (const e of [player, tank]) { e.shield = 0; e.shieldUntil = 0; e.mits = []; e.marks = []; }
+    for (const e of [player, tank]) { e.shields = []; e.mits = []; e.marks = []; }
     placeTank(true);
     if (!bossHasTank()) boss.face = Math.PI / 2;
     tankName.querySelector('.nm').textContent = npcHealer() ? 'ヒーラー' : 'タンク';
@@ -534,14 +534,14 @@
     emit('hit', tg.name);
     void simT;
   }
-  // 自分が攻撃を受ける（範囲攻撃・全体攻撃・敵の通常攻撃）。'hurt' を出す（リタージー・オブ・ベルが鳴る）
+  // 自分が攻撃を受ける（範囲攻撃・全体攻撃・敵の通常攻撃）。'hurt' を出す（リタージー・オブ・ベルが鳴る）。name は攻撃の名前（敵の通常攻撃は '通常攻撃'）
   function hurtPlayer(frac, name, text, floor = 0, anim = true) {
     if (player.down > 0) return;
     frac = soak(player, frac);
     player.hp = Math.max(floor, player.hp - frac); player.hurt = 1;
     if (anim) act(player, 'hurt', 0.45);
     if (text) flyText(text, 'hurt', player, 0.2);
-    emit('hurt', frac);
+    emit('hurt', frac, name);
     if (player.hp <= 0) { player.hp = 0; player.down = 3000; flyText('戦闘不能', 'hurt', player, 0.6); emit('down', name); }
   }
   // 相方が攻撃を受ける（全体攻撃）。回復役の練習では、相方のタンクが倒れることがある
@@ -575,20 +575,31 @@
     e.mits = (e.mits ?? []).filter((m) => m.until > clock);
     for (const m of e.mits) frac *= 1 - m.pct;
     for (const z of zones) if (z.mit > 0 && !z.dying && Math.hypot(e.x - z.x, e.y - z.y) <= z.r) frac *= 1 - z.mit; // 野戦治療の陣の中
-    if (e.shield > 0 && e.shieldUntil > clock) {
-      const used = Math.min(e.shield, frac);
-      e.shield -= used; frac -= used;
-      if (used > 0.001) flyText('バリア', 'buff', e, 0.35);
+    // バリアは付けた順に吸収する（順番は仮: GAME-86）
+    let used = 0;
+    for (const b of shieldsOf(e)) {
+      const u = Math.min(b.frac, frac);
+      b.frac -= u; frac -= u; used += u;
+      if (frac <= 0) break;
     }
+    if (used > 0.001) flyText('バリア', 'buff', e, 0.35);
     return frac;
+  }
+  // 残っているバリア（名前ごとに 1 つ。鼓舞とセラフィックヴェールのように名前の違うバリアは重ねて持つ）
+  function shieldsOf(e) {
+    e.shields = (e.shields ?? []).filter((b) => b.frac > 0.0005 && b.until > clock);
+    return e.shields;
   }
   // 相手: 'party' 全員 / 'self' 自分 / 'npc' 相方（マクロの <2> など）/ それ以外 HP の低い方
   function partyOf(who) { return who === 'party' ? [player, ...(hasNpc() ? [tank] : [])] : who === 'self' ? [player] : who === 'npc' ? (hasNpc() ? [tank] : [player]) : [lowest()]; }
   // name: ステータスの名前（パーティリストのアイコン表示に使う）
+  // 同じ名前のバリアのかけ直しは、量は多い方・時間は新しい方
   function shieldOn(who, frac, sec, name = 'バリア') {
     for (const e of partyOf(who)) {
       if (!e || (e === tank && tank.down > 0)) continue;
-      e.shield = Math.max(e.shield > 0 && e.shieldUntil > clock ? e.shield : 0, frac); e.shieldUntil = clock + sec; e.shieldName = name;
+      const old = shieldsOf(e).find((b) => b.name === name);
+      e.shields = e.shields.filter((b) => b !== old);
+      e.shields.push({ name, frac: Math.max(old?.frac ?? 0, frac), until: clock + sec });
       fx.push({ type: 'ring', at: e, col: ['#f4fbff', '#8fd0ff'], t: 0, dur: 600, r0: 0.4, r1: 1.8, thick: true });
       flyText('バリア', 'buff', e, 0.2);
     }
@@ -627,7 +638,7 @@
     const out = [];
     for (const m of e.marks ?? []) if (m.until > clock) out.push({ name: m.name, left: m.until - clock, kind: 'buff' });
     for (const h of hots) if (h.e === e && h.until > clock) out.push({ name: h.name, left: h.until - clock, kind: 'hot' });
-    if (e.shield > 0.001 && e.shieldUntil > clock) out.push({ name: e.shieldName ?? 'バリア', left: e.shieldUntil - clock, kind: 'shield' });
+    for (const b of shieldsOf(e)) out.push({ name: b.name, left: b.until - clock, kind: 'shield' });
     for (const m of e.mits ?? []) if (m.until > clock) out.push({ name: m.name, left: m.until - clock, kind: 'mit' });
     return out;
   }
@@ -1508,11 +1519,15 @@
     // 付けた被ダメージ軽減を名前で外す（戦士のシェイクオフ: ダムネーションなどを解除する）
     unmitigate: (who, name) => { for (const e of partyOf(who)) if (e) e.mits = (e.mits ?? []).filter((m) => m.name !== name); },
     // 設置型の技の状態を変える（アーサリースターの巨星化など）・範囲の中に敵がいるか
-    // バリアの残り（最大 HP に対する割合）。'self' / 'npc'
-    shieldLeft: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? e.shield : 0; },
-    // バリアの中身（学者の展開戦術: 鼓舞を広げる）。frac 量・left 残り秒・name 名前
-    shieldOf: (who) => { const e = who === 'npc' ? tank : player; return e.shield > 0 && e.shieldUntil > clock ? { frac: e.shield, left: e.shieldUntil - clock, name: e.shieldName } : null; },
-    unshield: (who) => { const e = who === 'npc' ? tank : player; e.shield = 0; }, // バリアを消す（賢者のペプシス）
+    // バリアの残り（最大 HP に対する割合）。'self' / 'npc'。name を渡すとそのバリアだけ、渡さなければ合計
+    shieldLeft: (who, name) => shieldsOf(who === 'npc' ? tank : player).filter((b) => name == null || b.name === name).reduce((t, b) => t + b.frac, 0),
+    // バリアの中身（学者の展開戦術: 鼓舞を広げる）。frac 量・left 残り秒・name 名前。name を渡さなければ最後に付けたもの
+    shieldOf: (who, name) => {
+      const b = shieldsOf(who === 'npc' ? tank : player).filter((q) => name == null || q.name === name).at(-1);
+      return b ? { frac: b.frac, left: b.until - clock, name: b.name } : null;
+    },
+    // バリアを消す（賢者のペプシス・ピクトマンサーのテンペラグラッサ）。name を渡さなければ全部
+    unshield: (who, name) => { const e = who === 'npc' ? tank : player; e.shields = name == null ? [] : shieldsOf(e).filter((b) => b.name !== name); },
     zoneSet: (kind, o) => { const z = zones.find((q) => q.kind === kind && !q.dying); if (z) { if (o.giant && !z.giant) { z.giantAt = clock; fx.push({ type: 'flash', at: { x: z.x, y: z.y, z: 1.6 }, col: COLORS.giant, t: 0, dur: 600, power: 1.6 }); } Object.assign(z, o); } return !!z; },
     inZone: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(player.x - z.x, player.y - z.y) <= z.r; },
     zoneHitsBoss: (kind) => { const z = zones.find((q) => q.kind === kind && !q.dying); return !!z && Math.hypot(boss.x - z.x, boss.y - z.y) <= z.r + POL.hitbox; },

@@ -3,7 +3,7 @@
 // 値は説明文（抽出データの description と、build-mock-data.mjs が読み取った eff / pot）から。説明文にない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, descGain, extendBuff, support, actorTickPhase, mpTicks, naturalMp } = window.MockJobs.lib;
+  const { tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, descGain, extendBuff, support, healTaken, actorTickPhase, mpTicks, naturalMp } = window.MockJobs.lib;
 
   // タンクのスタンス（ディフェンダーなど）: 説明文「再使用で解除する。効果時間：永続」
   const toggleStance = (R, k) => { if (R.has(k)) R.remove(k); else R.buff(k, 1e9); };
@@ -16,7 +16,8 @@
   //   原初の解放: 原初の解放 3・原初の覚悟（15 秒）・プライマルレンド実行可（30 秒）。効果中にフェルクリーヴ / デシメートを当てると原初の鼓動（最大 3、30 秒）。
   //     3 つで原初の激震実行可になり、原初の解放が原初の激震に変わる。プライマルレンドでルイネーター実行可（20 秒）
   //   ウォークライ: 原初の混沌（30 秒）。混沌中かつインナービースト 50 以上で、フェルクリーヴがインナーカオス・デシメートがカオティックサイクロンに。
-  //     インナーカオス / カオティックサイクロンはウォークライのリキャストを 5 秒縮める
+  //     インナーカオス / カオティックサイクロン（説明文）と、フェルクリーヴ / デシメート（特性 Enhanced Infuriate「…命中時」）は、
+  //     ウォークライのリキャストを 5 秒縮める
   //   原初の血気 / 原初の猛り: 被ダメージ 10%（8 秒）・原初の血潮 10%（4 秒）・原初の血煙（バリア 回復力 400・20 秒）。効果中、ウェポンスキルが当たるたびに回復力 400
   //   ダムネーション: 被ダメージ 40%（15 秒）。物理攻撃を受けると反撃（威力 55）。ダメージを受けるか時間切れで ダムネーション［被］（継続回復 回復力 300・15 秒）
   //   シェイクオフ: バリア（最大 HP の 15%）。スリル・オブ・バトル・ダムネーション・原初の血気を解除し、1 つにつき +2%
@@ -107,6 +108,8 @@
           if ((id === ID.EYE || id === ID.TEMPEST) && ok) surging(30000);
           beast(descGain(a, 'インナービースト', ok));
           if (id === ID.CHAOS || id === ID.CYCLONE) { gauges.インナービースト.set(s.beast - 50); R.cdShift(ID.INFURIATE, 5000); } // 仮（GAME-72）・説明文
+          // 特性 Enhanced Infuriate「ウォークライのリキャストタイムを5秒短縮する。発動条件：…フェルクリーヴおよびデシメートの命中時」
+          if (IR_SPENDERS.has(id)) R.cdShift(ID.INFURIATE, 5000);
           if (irUse) {
             // 原初の解放のスタックを使い、原初の鼓動を 1 つ足す。3 つで原初の激震実行可（説明文）
             const st = s.st.ir; if (st.stacks > 1) st.stacks -= 1; else R.remove('ir');
@@ -131,16 +134,17 @@
             R.buff('nascent', 8000);
             R.mitigate(who, 0.1, 8, '原初の猛り［被］'); R.mitigate(who, 0.1, 4, '原初の血潮'); R.shield(who, barrier * HEAL_K, 20, '原初の血煙');
           }
-          if (id === ID.THRILL) { R.heal('self', 0.2); R.buff('thrill', 10000); } // 最大 HP の 20% を回復（最大 HP の上昇は練習では入れない）
+          if (id === ID.THRILL) { R.heal('self', 0.2); healTaken(R, a); R.buff('thrill', 10000); } // 最大 HP の 20% を回復・受ける回復 +20%（最大 HP の上昇は練習では入れない）
           if (id === ID.HOLMGANG) { R.mitigate('self', 1, 10, 'ホルムギャング'); R.buff('holmgang', 10000); } // 仮（GAME-72）
           if (id === ID.DAMNATION) { R.mitigate('self', 0.4, 15, 'ダムネーション'); R.buff('damnation', 15000); s.damn = { hot: false }; }
-          if (id === ID.RAMPART) { support(R, a); R.buff('rampart', 20000); }
+          if (id === ID.RAMPART) { support(R, a); healTaken(R, a); R.buff('rampart', 20000); }
           if (id === ID.EQUI) support(R, a);
           if (id === ID.SHAKE) {
             // 解除したステータス 1 つにつき、バリアを最大 HP の 2% ずつ上乗せ（説明文）
             const n = ['thrill', 'damnation', 'blood'].filter((k) => has(k)).length;
             for (const k of ['thrill', 'damnation', 'blood']) R.remove(k);
             for (const name of ['ダムネーション', '原初の血気']) R.unmitigate('self', name); // 練習場に付けた軽減も外す（原初の血潮は別のステータスなので残る）
+            R.unmark('self', 'スリル・オブ・バトル'); // 受ける回復の上乗せも外す
             // ダムネーション［被］が付くのは「ダメージを受けるか、ダメージを受けることなく効果時間が経過」したときだけ（説明文）。解除では付けない
             s.damn = null;
             support(R, a);
@@ -163,11 +167,12 @@
         },
         // ダムネーションの威力 55 は反撃の分なので、使ったときには攻撃しない
         noHit: (id) => id === ID.DAMNATION,
-        // 自分がダメージを受けたとき: ダムネーションの反撃（威力 55）と、最初の 1 回でダムネーション［被］（継続回復 回復力 300・15 秒）
-        onHurt() {
+        // 自分がダメージを受けたとき: ダムネーションの反撃（威力 55）と、最初の 1 回でダムネーション［被］（継続回復 回復力 300・15 秒）。
+        // 反撃は「物理攻撃を受けた場合」（説明文）なので、物理とみなす敵の通常攻撃のときだけ（GAME-72）。［被］はどのダメージでも付く
+        onHurt(name) {
           const s = S();
           if (!has('damnation')) return;
-          R.hit(A[ID.DAMNATION]?.pot?.base ?? 55, 'ダムネーション');
+          if (name === '通常攻撃') R.hit(A[ID.DAMNATION]?.pot?.base ?? 55, 'ダムネーション');
           if (s.damn && !s.damn.hot) { s.damn.hot = true; R.hot('self', 300 * HEAL_K, 15, 'ダムネーション［被］'); }
         },
         highlightOk: (id, st) => st !== 'chaos' || S().beast >= 50,
@@ -336,7 +341,7 @@
           if (id === ID.DARK_MIND) { R.mitigate('self', 0.1, 10, 'ダークマインド'); R.buff('darkMind', 10000); } // 被物理 10%（仮 GAME-73）
           if (id === ID.MISSIONARY) R.mitigate('party', 0.1, 15, 'ダークミッショナリー'); // 被魔法 10%（仮 GAME-73）
           if (id === ID.OBLATION) { const who = R.who ?? 'self'; R.mitigate(who, 0.1, 10, 'オブレーション'); if (who === 'self') R.buff('oblation', 10000); }
-          if (id === ID.RAMPART) { support(R, a); R.buff('rampart', 20000); }
+          if (id === ID.RAMPART) { support(R, a); healTaken(R, a); R.buff('rampart', 20000); }
           if (id === ID.LIVING_DEAD) R.mitigate('self', 1, 10, 'リビングデッド'); // 仮（GAME-73）
           if (id === ID.VIGIL) { R.mitigate('self', 0.4, 15, 'シャドウヴィジル'); R.buff('vigil', 15000); s.vigil = true; }
           if (id === ID.GRIT) toggleStance(R, 'grit');
@@ -363,7 +368,8 @@
           const s = S();
           // ブラックナイトのバリアを全部吸収した → ダークアーツ（説明文）
           if (s.tbn) {
-            if (R.shieldLeft(s.tbn.who) <= 0.0005 && s.t < s.tbn.until) {
+            if (R.shieldLeft(s.tbn.who, 'ブラックナイト') <= 0.0005 && s.t < s.tbn.until) {
+              if (s.tbn.who === 'self') R.remove('tbn');
               R.buff('darkArts', 1e9); s.stats.tbnBroken++; s.tbn = null;
               R.addLog('ok', 'ブラックナイトのバリアが吸収されて消えました → ダークアーツ');
             } else if (s.t >= s.tbn.until) s.tbn = null;
@@ -470,7 +476,7 @@
       const S = () => R.S;
       const has = R.has;
       const READIES = ['rip', 'tear', 'gouge', 'hyper', 'brand'];
-      const SOIL_BASE = 3; // 仮（GAME-74）
+      const SOIL_BASE = 3; // 特性 Cartridge Charge II「「ソイル」の最大スタック数が3に増加し、ブラッドソイルの効果中は最大スタック数が6に増加する」
       const soilMax = () => (S().soilBig && S().soilBig > S().t ? 6 : SOIL_BASE);
       function soil(n) {
         const s = S(), mx = soilMax(), v = s.soil + n;
@@ -537,13 +543,15 @@
             if (who === 'self') { R.buff('corundum', 8000); R.buff('catharsis', 20000); }
           }
           if (id === ID.AURORA) support(R, a);
-          if (id === ID.RAMPART) { support(R, a); R.buff('rampart', 20000); }
+          if (id === ID.RAMPART) { support(R, a); healTaken(R, a); R.buff('rampart', 20000); }
           if (id === ID.GUARD) toggleStance(R, 'guard');
         },
         tick() {
           const s = S();
           // ブラッドソイルの 30 秒が過ぎたら、3 を超えた分は消える（仮）
           if (s.soilBig && s.t >= s.soilBig) { s.soilBig = 0; if (s.soil > SOIL_BASE) { R.addLog('warn', `ソイルが ${s.soil - SOIL_BASE} 消えました（ブラッドソイルの時間切れ）`); s.stats.soilOver += s.soil - SOIL_BASE; s.soil = SOIL_BASE; } }
+          // ブルータルシェルのバリアが吸収されて消えたら、ステータスも消す
+          if (has('brutal') && R.shieldLeft('self', 'ブルータルシェル') <= 0.0005) R.remove('brutal');
           // カタルシス・オブ・コランダム: HP 50% 以下か時間切れで回復力 900
           if (s.corundum && (R.hpOf(s.corundum.who) <= 0.5 || s.t >= s.corundum.until)) { R.heal(s.corundum.who, 900 * HEAL_K); R.remove('catharsis'); s.corundum = null; }
           // 継続ダメージ（3 秒ごと）

@@ -31,7 +31,8 @@
   //   エーテルフロー: MP を最大 MP の 20% 回復し、エーテルフロー 3（最大スタック）。戦闘中だけ
   //   エナジードレイン・生命活性法・野戦治療の陣・不撓不屈の策・深謀遠慮の策: エーテルフローを 1 使い、フェイエーテル +10
   //     （フェイエーテルは、戦闘中にフェアリーかセラフィムがいるとき、エーテルフローを使う技で増える）
-  //   鼓舞激励の策 / マニフェステーション / 意気軒昂の策: 回復と、回復量の 180% のバリア（鼓舞・30 秒）。クリティカルなら激励（同じく 180%）も付く
+  //   鼓舞激励の策 / マニフェステーション / 意気軒昂の策: 回復と、回復量の 180% のバリア（鼓舞・30 秒）。
+  //     クリティカルなら激励（同じく 180%）も付く（説明文に「激励」があるのは鼓舞激励の策とマニフェステーションだけ。意気軒昂の策には付かない）
   //   秘策: 次の鼓舞激励の策・意気軒昂の策・不撓不屈の策・深謀遠慮の策 1 回は、MP もエーテルフローも使わず、必ずクリティカル
   //   応急戦術: 次の鼓舞・激励を伴う回復魔法 1 回は、バリアの分を回復にする
   //   展開戦術: 対象に付けた鼓舞を周囲に広げる（残りの時間のまま）。付けていなければ効果なし
@@ -118,9 +119,10 @@
         R.addLog('sys', `フェイユニオンが終わりました（${why}）`);
         s.union = null;
       }
-      // 鼓舞（クリティカルなら激励も）。応急戦術のときはバリアの分も回復にする
+      // 鼓舞（クリティカルなら激励も。説明文に「激励」がある技だけ）。応急戦術のときはバリアの分も回復にする
       function galvanize(a, who, crit) {
-        const heal = (a.eff?.heal ?? 0) * HEAL_K * healUp(a), shield = heal * (barrierPct(a) / 100) * (crit ? 2 : 1);
+        const catalyze = crit && /「激励」/.test(a.desc ?? '');
+        const heal = (a.eff?.heal ?? 0) * HEAL_K * healUp(a), shield = heal * (barrierPct(a) / 100) * (catalyze ? 2 : 1);
         if (has('emergency')) {
           R.remove('emergency');
           R.heal(who, heal + shield);
@@ -129,7 +131,7 @@
         }
         R.heal(who, heal);
         R.shield(who, shield, 30, '鼓舞');
-        if (crit) R.addLog('ok', `${a.name}: クリティカル（激励も付与）`);
+        if (catalyze) R.addLog('ok', `${a.name}: クリティカル（激励も付与）`);
       }
       const J = {
         ids: ID, STATUS,
@@ -157,6 +159,8 @@
           if (isSpell(a) && mpCost(a) > s.mp) return `MP が足りません（必要 ${mpCost(a)} / 現在 ${Math.floor(s.mp)}）`;
           if ([ID.FLOW, ID.DISSIPATION, ID.SERAPHISM].includes(id) && s.phase !== 'combat') return '戦闘中だけ使えます';
           if ([ID.WHISPER, ID.ILLUM, ID.SERAPHISM].includes(id) && !petHere()) return 'フェアリーもセラフィムもいません';
+          // エーテルパクト「フェアリーは他の行動をすることができない」: フェイユニオンの間はフェアリーの技を使えない（使うと終わるのかは未確認: 仮 GAME-75）
+          if ([ID.WHISPER, ID.ILLUM, ID.BLESSING].includes(id) && s.union) return 'フェイユニオン中は、フェアリーはほかの行動ができません（エーテルパクトを再使用で解除）';
           if ([ID.BLESSING, ID.SERAPH, ID.DISSIPATION].includes(id) && !fairyHere()) return seraphOn() ? 'セラフィムの召喚中です（フェアリーがいません）' : 'フェアリーがいません';
           if (id === ID.PACT && !s.union) {
             if (!fairyHere()) return 'フェアリーがいません';
@@ -203,8 +207,8 @@
           }
           if (id === ID.DEPLOY) {
             // 展開戦術: 対象の鼓舞を周囲に広げる（残りの時間のまま）
-            const w = R.who ?? 'self', sh = R.shieldOf?.(w);
-            if (sh && sh.name === '鼓舞' && sh.frac > 0) { R.shield('party', sh.frac, sh.left, '鼓舞'); R.addLog('ok', `展開戦術: 鼓舞を広げた（残り ${sh.left.toFixed(0)} 秒）`); }
+            const w = R.who ?? 'self', sh = R.shieldOf?.(w, '鼓舞');
+            if (sh && sh.frac > 0) { R.shield('party', sh.frac, sh.left, '鼓舞'); R.addLog('ok', `展開戦術: 鼓舞を広げた（残り ${sh.left.toFixed(0)} 秒）`); }
             else R.addLog('warn', '展開戦術: 対象に鼓舞が付いていません（効果なし）');
           }
           if (id === ID.EMERG) { R.buff('emergency', 15000); if (has('seraphism')) R.cdShift(ID.EMERG, a.recastMs - 1000); } // セラフィズム中はリキャスト 1 秒
@@ -413,9 +417,7 @@
             delete s[key][w];
             continue;
           }
-          const sh = R.shieldOf(w);
-          if (!sh && m.stacks > 0) { m.stacks -= 1; R.shield(w, m.frac, (m.until - s.t) / 1000, m.name); }
-          else if (sh && sh.name !== m.name) { /* ほかのバリアに置き換わった: 印はそのまま */ }
+          if (!R.shieldOf(w, m.name) && m.stacks > 0) { m.stacks -= 1; R.shield(w, m.frac, (m.until - s.t) / 1000, m.name); }
         }
       }
       const J = {
@@ -473,11 +475,14 @@
           if (id === ID.DIAG || id === ID.PROG || id === ID.PNEUMA || id === ID.DRUO || id === ID.IXO) support(R, a, { healUp: healUp(a, true) });
           if (shieldName[id]) {
             const up = healUp(a, true), heal = (a.eff?.heal ?? 0) * HEAL_K * up, w = id === ID.EDIAG ? (R.who ?? 'low') : 'party';
-            R.heal(w, heal);
-            R.shield(w, heal * (barrierPct(a) / 100), 30, shieldName[id]);
             // アダースティングの元: エウクラシア・ディアグノシス（相手）と、自分に付けたエウクラシア・プログノシス
             const who = id === ID.EDIAG ? R.who ?? (R.hpOf('npc') > 0 && R.hpOf('npc') <= R.hpOf('self') ? 'npc' : 'self') : 'self';
-            s.stingWatch = s.stingWatch.filter((q) => q.who !== who);
+            // エウクラシア・ディアグノシスとプログノシスは「同時に付与されない」（説明文）: 前のものを外して付け直す（後から付けた方にする: 仮 GAME-86）
+            const other = id === ID.EDIAG ? shieldName[ID.EPROG] : shieldName[ID.EDIAG];
+            for (const t of id === ID.EDIAG ? [who] : ['self', 'npc']) R.unshield(t, other);
+            s.stingWatch = id === ID.EDIAG ? s.stingWatch.filter((q) => q.who !== who) : [];
+            R.heal(w, heal);
+            R.shield(w, heal * (barrierPct(a) / 100), 30, shieldName[id]);
             s.stingWatch.push({ who, name: shieldName[id], until: s.t + 30000 });
           }
           if (id === ID.KERA) { R.mitigate('party', mitPct(a) / 100, 15, 'ケーラコレ'); R.hot('party', a.eff.hot.potency * HEAL_K, a.eff.hot.sec, 'ケーラコレ［回］'); }
@@ -494,12 +499,11 @@
             // ペプシス: 自分のエウクラシアのバリアを消して回復
             let n = 0;
             for (const w of ['self', 'npc']) {
-              const sh = R.shieldOf(w);
-              if (!sh) continue;
-              const pot = sh.name === 'エウクラシア・ディアグノシス' ? 450 : sh.name === 'エウクラシア・プログノシス' ? 350 : 0;
-              if (!pot) continue;
-              R.unshield(w); R.heal(w, pot * HEAL_K); n++;
-              s.stingWatch = s.stingWatch.filter((q) => q.who !== w);
+              for (const [name, pot] of [[shieldName[ID.EDIAG], 450], [shieldName[ID.EPROG], 350]]) {
+                if (!R.shieldOf(w, name)) continue;
+                R.unshield(w, name); R.heal(w, pot * HEAL_K); n++;
+                s.stingWatch = s.stingWatch.filter((q) => q.who !== w);
+              }
             }
             if (!n) R.addLog('warn', 'ペプシス: エウクラシアのバリアが付いていません（効果なし）');
           }
@@ -518,11 +522,11 @@
           dotsTick(R);
           // カルディアの印（戦闘開始時に付ける: 前提）
           if (!s.kardiaShown && s.kardia) { s.kardiaShown = true; R.mark(s.kardia, 'カルディア［被］', 9999); R.buff('kardia', 1e9); }
-          // アダースティング: エウクラシアのバリアが全部吸収されて消えた（特性「アダースティング」）。時間切れ・ほかのバリアへの置き換えは数えない
+          // アダースティング: エウクラシアのバリアが全部吸収されて消えた（特性「アダースティング」）。時間切れ（最後に見た残りが 0.5 秒未満）は数えない
           s.stingWatch = s.stingWatch.filter((q) => {
-            const sh = R.shieldOf(q.who);
-            if (s.t >= q.until || (sh && sh.name !== q.name)) return false;
-            if (sh) return true;
+            const sh = R.shieldOf(q.who, q.name);
+            if (sh) { q.left = sh.left; return true; }
+            if (s.t >= q.until || (q.left ?? 99) < 0.5) return false;
             s.stats.stingGot++;
             if (s.sting >= 3) s.stats.stingOver++;
             s.sting = Math.min(3, s.sting + 1);

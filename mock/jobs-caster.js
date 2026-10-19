@@ -3,8 +3,8 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpRegen, seeded, secAfter, guideTrait, HEAL_K } = window.MockJobs.lib;
-  const MP_MAX = 10000;
+  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpRegen, seeded, secAfter, guideTrait, healTaken, HEAL_K } = window.MockJobs.lib;
+  const MP_MAX = 10000; // 仮（GAME-84。説明文・特性に上限の数がない。ほかのジョブと同じ）
   const isSpell = (a) => a?.category === 2;
 
   // ---------------- 赤魔道士 ----------------
@@ -58,6 +58,8 @@
         .map((id) => [id, numIn(A[id]?.desc, /「ブラックマナ」(\d+)と/, A[id]?.eff?.cost?.n ?? 20)]));
       const STACK_GAIN = new Set([ID.E_RIPOSTE, ID.E_ZWERCH, ID.E_REDOUBLEMENT, ID.E_MOULINET, ID.E_MOULINET2, ID.E_MOULINET3]); // マナスタックが付く
       const ACCEL_SET = new Set([ID.VT3, ID.VA3, ID.IMPACT]); // アクセラレーションで詠唱なしになる魔法
+      // この魔法でアクセラレーションを使うか（消費の順は 連続魔 → アクセラレーション → 迅速魔: 仮 GAME-84）。威力（インパクト +50）と消費をそろえる
+      const accelUse = (a) => ACCEL_SET.has(a.id) && has('accel') && !has('dualcast');
       const MANA_RANGE = new Set([ID.E_RIPOSTE, ID.E_ZWERCH, ID.E_REDOUBLEMENT]); // マナフィケーションで射程 25m
       const MELEE = new Set([ID.RIPOSTE, ID.E_RIPOSTE, ID.ZWERCH, ID.E_ZWERCH, ID.REDOUBLEMENT, ID.E_REDOUBLEMENT, ID.MOULINET, ID.E_MOULINET, ID.E_MOULINET2, ID.E_MOULINET3, ID.REPRISE, ID.E_REPRISE]);
       const DUAL_MS = numIn(guideTrait(R, 'Dualcast'), /効果時間：(\d+)秒/, 15) * 1000;
@@ -78,7 +80,7 @@
           if (s.white < s.black && w) { s.stats.imbalanceLost += w - Math.floor(w / 2); w = Math.floor(w / 2); }
           if (s.black < s.white && b) { s.stats.imbalanceLost += b - Math.floor(b / 2); b = Math.floor(b / 2); }
         }
-        const nw = s.white + w, nb = s.black + b;
+        const nw = s.white + w, nb = s.black + b; // マナの上限 100 は仮（GAME-84）
         if (s.phase === 'combat') s.stats.manaOver += Math.max(0, nw - 100) + Math.max(0, nb - 100);
         s.white = Math.min(100, nw); s.black = Math.min(100, nb);
       }
@@ -150,8 +152,8 @@
         },
         // エンボルデン: 与魔法ダメージ +10%（エン〜の技は「無属性魔法攻撃」）
         potMult: (a) => (a.magic && has('embolden') ? 1 + EMB_UP / 100 : 1),
-        // インパクト: アクセラレーション時威力（説明文の「〜時威力」。倍率をかけるためにここで返す）
-        potOverride: (a) => (a.id === ID.IMPACT && has('accel') ? a.pot?.cond?.[0]?.potency ?? null : null),
+        // インパクト: アクセラレーション時威力（説明文の「〜時威力」。倍率をかけるためにここで返す）。連続魔が先に使われるときは付かない
+        potOverride: (a) => (a.id === ID.IMPACT && accelUse(a) ? a.pot?.cond?.[0]?.potency ?? null : null),
         effects(id, ok) {
           const a = A[id], s = S();
           // 連続魔・アクセラレーション・迅速魔（GCD だけ。アビリティでは消えない）
@@ -159,7 +161,7 @@
           if (a.isGcd) {
             if (isSpell(a) && a.castMs > 0) {
               if (has('dualcast')) { R.remove('dualcast'); s.stats.dualcasts++; }
-              else if (ACCEL_SET.has(id) && has('accel')) { R.remove('accel'); accelUsed = true; }
+              else if (accelUse(a)) { R.remove('accel'); accelUsed = true; }
               else if (has('swift')) R.remove('swift');
               else { R.buff('dualcast', DUAL_MS); s.stats.hardcasts++; }
             } else if (has('dualcast')) {
@@ -196,7 +198,8 @@
           if (id === ID.SWIFT) R.buff('swift', 10000);
           if (id === ID.LUCID) R.buff('lucid', 21000);
           if (id === ID.SURECAST) R.buff('surecast', 6000);
-          if (id === ID.MAGICK_BARRIER) { R.mitigate('party', 0.1, 10, 'バマジク'); R.buff('barrier', 10000); }
+          // バマジク: 被魔法ダメージ 10% 軽減（練習場の攻撃は魔法・物理を分けないので、全部に掛ける: 仮 GAME-84）と、受ける回復 +5%
+          if (id === ID.MAGICK_BARRIER) { R.mitigate('party', 0.1, 10, 'バマジク'); healTaken(R, a, 'party'); R.buff('barrier', 10000); }
           if (id === ID.VERCURE) support(R, a);
           if (id === ID.VERRAISE && R.npcDown()) R.raise();
           if (isSpell(a) && (a.mp ?? 0) > 0) s.mp = Math.max(0, s.mp - a.mp);
@@ -258,7 +261,7 @@
   // 説明文から:
   //   色魔法: レッドファイア → グリーンエアロ → ブルーウォータ（範囲はファイラ → エアロラ → ウォタラ）。色魔法2実行可・色魔法3実行可（30 秒。単体と範囲で共通）で次へ。
   //     ブルーウォータ / ウォタラでパレットゲージ +25 とホワイトペイント +1（最大 5）。サブトラクティブパレットの間は使えない
-  //   サブトラクティブパレット（パレット 50。サブトラクティブパレット実行可なら使わない）: 3 スタック＋色調反転。
+  //   サブトラクティブパレット（パレット 50。サブトラクティブパレット実行可を先に使ってパレットを減らさないのは仮: GAME-85）: 3 スタック＋色調反転。
   //     シアンブリザド → イエローストーン → マゼンタサンダー（範囲も。詠唱 2.3 秒・リキャスト 3.3 秒）を 1 スタックずつ。色魔法2 / 3 実行可は普通の色魔法と同じ。マゼンタでホワイトペイント +1
   //   ホワイトホーリー: ホワイトペイント 1（色調反転の間は使えない）。ブラックコメット: 色調反転の間、ペイント 1 つ（ブラックペイント）
   //   モチーフ（詠唱 3 秒・GCD 4 秒。戦闘外は詠唱なし）: キャンバスが空のときに描く。ピクトアニマルはポンポン → ウィング → クロー → ファングの順
@@ -311,7 +314,8 @@
       const BASE_COLORS = new Set([ID.FIRE, ID.AERO, ID.WATER, ID.FIRE2, ID.AERO2, ID.WATER2]), SUB_COLORS = new Set([ID.CYAN, ID.YELLOW, ID.MAGENTA, ID.CYAN2, ID.YELLOW2, ID.MAGENTA2]);
       const HAMMERS = new Set([ID.STAMP, ID.BRUSH, ID.POLISH]);
       // インスタレーションで速くなる魔法（説明文「インスタレーションを1スタック消費する」）
-      const HYPER_SET = new Set(Object.values(A).filter((a) => /インスタレーションを1スタック消費/.test(a.desc ?? '')).map((a) => a.id));
+      // インスタレーションを使う魔法（説明文「実行時にインスタレーションが付与されていて、…インスタレーションを1スタック消費する」。イマジンスカイ自身の説明は除く）
+      const HYPER_SET = new Set(Object.values(A).filter((a) => /実行時にインスタレーションが付与されていて/.test(a.desc ?? '')).map((a) => a.id));
       const HYPER_K = 1 - numIn(A[ID.STARRY_MUSE]?.desc, /リキャストタイムを(\d+)％短縮/, 25) / 100;
       const PALETTE_UP = numIn(A[ID.WATER]?.desc, /「パレットゲージ」を(\d+)上昇/, 25);
       const PAINT_MAX = numIn(A[ID.WATER]?.desc, /最大スタック数：(\d+)/, 5);
@@ -414,6 +418,7 @@
           if (STEP2.has(id)) { R.remove('aether2'); R.buff('aether3', 30000); }
           if (STEP3.has(id)) {
             R.remove('aether3'); addPaint(1);
+            // パレットゲージの上限 100 は仮（GAME-85）
             if (id === ID.WATER || id === ID.WATER2) { const v = s.palette + PALETTE_UP; if (v > 100 && s.phase === 'combat') s.stats.paletteOver += v - 100; s.palette = Math.min(100, v); }
           }
           if (id === ID.HOLY) s.paint = Math.max(0, s.paint - 1);
@@ -447,10 +452,10 @@
           // スタープリズム: 対象の周囲 30m のパーティメンバーを回復（回復力 400）
           if (id === ID.STAR_PRISM) { R.remove('starstruck'); if (a.eff?.heal) R.heal('party', a.eff.heal * HEAL_K); }
           if (id === ID.RAINBOW) { addPaint(1); if (has('rainbow')) R.remove('rainbow'); }
-          if (id === ID.TEMPERA) { R.shieldSelf(0.2, 10, 'テンペラコート'); R.buff('tempera', 10000); s.coat = { until: s.t + 10000, cut: 60000 }; }
+          if (id === ID.TEMPERA) { R.shieldSelf(0.2, 10, 'テンペラコート'); R.buff('tempera', 10000); s.coat = { until: s.t + 10000, cut: 60000, name: 'テンペラコート' }; }
           if (id === ID.GRASSA) {
-            R.remove('tempera'); R.unshield?.('self');
-            R.shield('party', 0.1, 10, 'テンペラグラッサ'); R.buff('grassa', 10000); s.coat = { until: s.t + 10000, cut: 30000 };
+            R.remove('tempera'); R.unshield?.('self', 'テンペラコート');
+            R.shield('party', 0.1, 10, 'テンペラグラッサ'); R.buff('grassa', 10000); s.coat = { until: s.t + 10000, cut: 30000, name: 'テンペラグラッサ' };
           }
           if (id === ID.SMUDGE) R.buff('smudge', 5000);
           if (id === ID.SWIFT) R.buff('swift', 10000);
@@ -464,7 +469,7 @@
           // テンペラコート / グラッサ: 自分のバリアを吸収しきったらコートのリキャストを縮める
           if (s.coat) {
             if (s.t >= s.coat.until) s.coat = null;
-            else if (R.shieldLeft('self') <= 0.0005) { R.cdShift(ID.TEMPERA, s.coat.cut); R.addLog('ok', `バリアを吸収しきりました（テンペラコートのリキャスト −${s.coat.cut / 1000} 秒）`); s.coat = null; R.remove('tempera'); }
+            else if (R.shieldLeft('self', s.coat.name) <= 0.0005) { R.cdShift(ID.TEMPERA, s.coat.cut); R.addLog('ok', `バリアを吸収しきりました（テンペラコートのリキャスト −${s.coat.cut / 1000} 秒）`); s.coat = null; R.remove('tempera'); }
           }
           // 残したインスタレーション（時間切れで消えたスタック）
           if (s.hyperPrev && !has('hyper') && s.t >= s.hyperPrev.until - 30 && s.phase === 'combat') s.stats.hyperLeft += s.hyperPrev.stacks ?? 0;

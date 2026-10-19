@@ -86,7 +86,7 @@
         comboStarters: new Set(),
         procStatus: { 158: 'earthReady', 159: 'windReady', 160: 'fireReady' },
         initState(s) {
-          s.chakra = 5; s.beast = []; s.lunar = false; s.solar = false; s.roeHot = false; s.rng = seeded(R, 7);
+          s.chakra = 5; s.beast = []; s.lunar = false; s.solar = false; s.roeHot = false; s.roeHotUntil = 0; s.rng = seeded(R, 7);
           s.stats.chakraOver = 0; s.stats.blitz = 0; s.stats.phantom = 0; s.stats.furyLost = 0; s.stats.formLost = 0; s.stats.tfc = 0;
         },
         gaugeCols: [['闘気', (s) => s.chakra], ['チャクラ', (s) => s.beast.map((b) => BEAST_JA[b]).join('')], ['陰陽', (s) => (s.lunar ? '陰' : '') + (s.solar ? '陽' : '')], ['型', () => (formNow() ? FORM_JA[formNow()] : R.has('formless') ? '零' : '')]],
@@ -143,10 +143,11 @@
             } else setForm(fa.next);
             if (formless) R.remove('formless');
           }
-          // 闘気: ウェポンスキルのクリティカル（クリティカルの代わりに発動率の乱数。六合星導脚は付かない）と、桃園結義の間はウェポンスキルが当たるたび
-          if (a.isGcd && a.pot?.base && id !== ID.SSS) {
-            const crit = s.critOpo || s.rng() < CRIT_RATE;
-            if (crit && s.rng() < WS_CRIT_RATE) addChakra(1);
+          // 闘気: ウェポンスキルのクリティカル（クリティカルの代わりに発動率の乱数）と、桃園結義の間はウェポンスキルが当たるたび。
+          // 六合星導脚は「実行時に「闘気」の効果が切れる」「クリティカルヒットしても「闘気」が付与されない」（説明文）: 先に闘気を 0 にし、桃園結義の分だけ足す
+          if (id === ID.SSS) s.chakra = 0;
+          if (a.isGcd && a.pot?.base) {
+            if (id !== ID.SSS && (s.critOpo || s.rng() < CRIT_RATE) && s.rng() < WS_CRIT_RATE) addChakra(1);
             if (has('bhChakra')) addChakra(1);
           }
           s.critOpo = false;
@@ -163,7 +164,6 @@
           if (id === ID.FORMSHIFT) { setForm(null); R.buff('formless', 30000); }
           if (id === ID.STEELED || id === ID.INSPIRITED) addChakra(s.phase === 'combat' ? 1 : 5);
           if (id === ID.TFC || id === ID.ENLIGHTEN) { s.chakra -= 5; s.stats.tfc++; }
-          if (id === ID.SSS) s.chakra = 0;
           if (id === ID.PB) R.buff('pb', 20000, 3);
           if (id === ID.ROF) { R.buff('rof', 20000); R.buff('fireReady', 20000); }
           if (id === ID.FIRE) { R.remove('fireReady'); setForm(null); R.buff('formless', 30000); }
@@ -171,7 +171,8 @@
           if (id === ID.ROW) { R.buff('row', 15000); R.buff('windReady', 15000); }
           if (id === ID.WIND) R.remove('windReady');
           if (id === ID.ROE) { R.mitigate('self', 0.2, 10, '金剛の極意'); R.buff('roe', 10000); R.buff('earthReady', 30000); s.roeHot = false; }
-          if (id === ID.EARTH) { R.remove('earthReady'); R.heal('party', numIn(a.desc, s.roeHot ? /金剛の決意効果中回復力：(\d+)/ : /回復力：(\d+)/, 300) * HEAL_K); }
+          // 金剛周天「金剛の決意効果中回復力：500」: 金剛の決意（継続回復 15 秒）が付いている間だけ
+          if (id === ID.EARTH) { R.remove('earthReady'); R.heal('party', numIn(a.desc, s.t < s.roeHotUntil ? /金剛の決意効果中回復力：(\d+)/ : /回復力：(\d+)/, 300) * HEAL_K); }
           if (id === ID.MANTRA) R.mark('party', 'マントラ', 15, { healUp: 0.1 });
           if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
@@ -180,7 +181,7 @@
         // 金剛の極意の間にダメージを受けると金剛の決意（継続回復 回復力 100・15 秒）
         onHurt() {
           const s = S();
-          if (has('roe') && !s.roeHot) { s.roeHot = true; R.hot('self', 100 * HEAL_K, 15, '金剛の決意'); }
+          if (has('roe') && !s.roeHot) { s.roeHot = true; s.roeHotUntil = s.t + 15000; R.hot('self', 100 * HEAL_K, 15, '金剛の決意'); }
         },
         tick() {},
         highlightOk: () => true,
@@ -216,7 +217,7 @@
           if (!s.stats.chakraOver && s.stats.gcds > 10) goods.push('闘気のあふれなし');
           return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.chakraOver * 5 - s.stats.furyLost * 5), posAdvice: '破砕拳は背面、虎襲崩拳は側面。足元の色を見て先に回り込む。間に合わないときはトゥルーノース', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたら抜重歩法', comboAdvice: '型の順（壱 → 弐 → 参）に。光っている技（功力のある方）を使う' };
         },
-        howto: 'モンク: 壱の型（双竜脚 / 猿舞連撃）→ 弐の型（双掌打 / 竜頷正拳撃）→ 参の型（破砕拳 = 背面 / 虎襲崩拳 = 側面）を回す。功力のある技が光る。踏鳴の間は型を無視して 3 回でチャクラ 3 つ → 必殺技。闘気 5 で陰陽闘気斬。紅蓮の極意と桃園結義は 120 秒・60 秒ごと。',
+        howto: 'モンク: 壱の型（双竜脚 / 猿舞連撃）→ 弐の型（双掌打 / 竜頷正拳撃）→ 参の型（破砕拳 = 背面 / 虎襲崩拳 = 側面）を回す。功力のある技が光る。踏鳴の間は型を無視して 3 回でチャクラ 3 つ → 必殺技。闘気 5 で陰陽闘気斬。紅蓮の極意と桃園結義は 60 秒・120 秒ごと。',
         gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'MNK'),
         gaugeDefault: { JobHudMNK0: { x: 64, y: 64, anchor: 4, scale: 1 }, JobHudMNK1: { x: 78, y: 64, anchor: 4, scale: 1 } },
       };
@@ -232,7 +233,7 @@
   //   天地人: 6 秒、天・地・人のボタンが忍術に変わり、押すたびに別の忍術（最大 3 種類）。忍術以外は使えない。天理人道実行可（30 秒）
   //   雷遁: 月影雷獣実行可（最大 3・30 秒。ウェポンスキルの近接攻撃で消える）→ 月影雷獣爪 / 牙
   //   風纏: 強甲破点突（コンボ）で 2（最大 5）。旋風刃の威力 +100（1 つ使う）
-  //   忍気（最大 100）: 大蝦蟇・六道輪廻・分身の術が 50 使う。毒盛の術 +40（秘技実行可 → 是生滅法・蝦蟇仙）・命水 +50（忍隠を使う。次の六道輪廻 / 是生滅法の威力が上がる）
+  //   忍気（最大 100 は仮: GAME-78。説明文・特性に上限の数がない）: 大蝦蟇・六道輪廻・分身の術が 50 使う。毒盛の術 +40（秘技実行可 → 是生滅法・蝦蟇仙）・命水 +50（忍隠を使う。次の六道輪廻 / 是生滅法の威力が上がる）
   //   風遁・水遁で忍隠（20 秒。かくれていなくても百雷銃・命水を 1 回使える）。毒盛の術: 被ダメージ +5%（20 秒）、百雷銃: 自分からの被ダメージ +10%（15 秒）
   //   分身の術（5 スタック・30 秒）: ウェポンスキルのたびに分身が追撃（威力 160、範囲は 80）し、忍気 +5。残影鎌鼬実行可（45 秒）
   // 公式ジョブガイドの特性から: GCD 2.12 秒（攻撃速度アップ込みの表の値）
@@ -275,10 +276,11 @@
       const MUDRA = { [ID.TEN]: 'ten', [ID.CHI]: 'chi', [ID.JIN]: 'jin' };
       const MUDRA_JA = { ten: '天', chi: '地', jin: '人' };
       const JUTSU = new Set([ID.FUMA, ID.KATON, ID.RAITON, ID.HYOTON, ID.HUTON, ID.DOTON, ID.SUITON, ID.GOKA, ID.HYOSHO]);
-      // 2 つ目・3 つ目の忍術は最後の印で決まる（jutsuFor の逆）。天地人で使った印を、出た忍術から求めるのに使う
+      // 2 つ目・3 つ目の忍術は最後の印で決まる（jutsuFor の逆）。天地人で使った印を、出た忍術から決めるのに使う
       const LAST_MUDRA = { [ID.KATON]: 'ten', [ID.HUTON]: 'ten', [ID.RAITON]: 'chi', [ID.DOTON]: 'chi', [ID.HYOTON]: 'jin', [ID.SUITON]: 'jin' };
       const MELEE_WS = new Set([ID.SPIN, ID.GUST, ID.AEOLIAN, ID.ARMOR, ID.BLOSSOM, ID.HAKKE]); // 月影雷獣実行可が消える近接のウェポンスキル
-      const AOE_WS = new Set([ID.BLOSSOM, ID.HAKKE]); // 分身の追撃が範囲（威力 80）になる
+      // 分身の追撃が範囲（威力 80）になる。残影鎌鼬（抽出データでウェポンスキル・範囲）で追撃が出るかは未確認（仮 GAME-78）
+      const AOE_WS = new Set([ID.BLOSSOM, ID.HAKKE, ID.KAMAITACHI]);
       const KASSATSU_UP = 1 + numIn(A[ID.KASSATSU]?.desc, /威力を(\d+)％上昇/, 30) / 100;
       const KAZE_ADD = numIn(A[ID.AEOLIAN]?.desc, /全ての威力が(\d+)上昇/, 100);
       const gauges = { 忍気: { get: () => S().ninki, set: (v) => setNinki(v), max: 100 } };
@@ -306,7 +308,7 @@
       const J = {
         ids: ID, STATUS,
         charges: descCharges(A), // 印・トゥルーノース・縮地「最大チャージ数：2」
-        prepull: new Set([ID.TEN, ID.CHI, ID.JIN, ID.NINJUTSU, ID.HIDE, ID.TN, ID.SHUKUCHI]),
+        prepull: new Set([ID.TEN, ID.CHI, ID.JIN, ID.NINJUTSU, ...JUTSU, ID.HIDE, ID.TN, ID.SHUKUCHI]), // 忍術のボタンは変化後の忍術（水遁など）で判定される
         comboStarters: new Set([ID.SPIN, ID.BLOSSOM]),
         procStatus: { 58: 'raiju', 163: 'shadowWalker', 164: 'higi', 165: 'tenriReady' },
         ownDots: true, // 土遁の範囲は自分で持つ
@@ -342,7 +344,6 @@
           if (MUDRA[id] && tcjOn() && s.tcj.used.includes(MUDRA[id])) return `天地人: ${MUDRA_JA[MUDRA[id]]}の印は使いました`;
           if (id === ID.NINJUTSU && !s.mudras.length) return '印を結んでいません';
           if (id === ID.TCJ && has('kassatsu')) return '活殺自在の効果中は使えません';
-          if (id === ID.TCJ && s.phase !== 'combat') return '戦闘中だけ使えます';
           if (id === ID.HIDE && s.phase === 'combat') return '戦闘中は使えません';
           if (id === ID.KUNAI && !has('hidden') && !has('shadowWalker')) return '「かくれる」か「忍隠」の効果中ではありません';
           if (id === ID.MEISUI && (!has('shadowWalker') || s.phase !== 'combat')) return '「忍隠」の効果中ではありません（戦闘中だけ使えます）';
@@ -361,10 +362,13 @@
         potMult: (a) => (JUTSU.has(a.id) && has('kassatsu') ? KASSATSU_UP : 1),
         potAdd: (a, ok) => (a.id === ID.AEOLIAN && S().kaze > 0 ? KAZE_ADD : 0),
         dmgMult: () => (has('mug') ? 1.05 : 1) * (has('kunai') ? 1.1 : 1),
-        // 失敗した忍術（うさぎ）は攻撃しない。分身の術も自分は攻撃しない（説明文の威力 160 は分身の追撃）
-        noHit: (id) => id === ID.NINJUTSU || id === ID.BUNSHIN,
+        // 失敗した忍術（うさぎ）は攻撃しない。分身の術も自分は攻撃しない（説明文の威力 160 は分身の追撃）。
+        // 土遁の術は範囲を置くだけ（「範囲内に入った対象に…ダメージ」: 3 秒ごとに tick で。暗黒騎士のソルトアースと同じ）
+        noHit: (id) => id === ID.NINJUTSU || id === ID.BUNSHIN || id === ID.DOTON,
         effects(id, ok) {
           const a = A[id], s = S();
+          // かくれる「スプリント以外のアクションを実行するか再使用で解除する」（印も含む）
+          if (id !== ID.HIDE && id !== ID.KUNAI && has('hidden')) R.remove('hidden');
           // 印
           if (MUDRA[id] && !tcjOn()) {
             s.mudras.push(MUDRA[id]); R.buff('mudra', 6000);
@@ -422,7 +426,6 @@
           if (id === ID.KUNAI) { R.buff('kunai', 15000); if (has('hidden')) R.remove('hidden'); else R.remove('shadowWalker'); }
           if (id === ID.MEISUI) { R.remove('shadowWalker'); R.buff('meisui', 30000); }
           if (id === ID.HIDE) { R.buff('hidden', 1e9); R.cdShift(ID.TEN, 1e9); }
-          if (id !== ID.HIDE && id !== ID.KUNAI && has('hidden')) R.remove('hidden'); // ほかのアクションで解除
           if (id === ID.SHADE) R.shieldSelf(0.2, 20, '残影');
           if (id === ID.SECONDWIND) R.heal('self', 800 * HEAL_K);
           if (id === ID.BLOODBATH) R.buff('bloodbath', 20000);
@@ -471,7 +474,7 @@
           metrics.push({ label: '風纏', value: `${s.stats.kazeUsed} 回使った（あふれ ${s.stats.kazeOver}）`, rate: null });
           metrics.push({ label: '分身の追撃', value: `${s.stats.bunshinHits} 回`, rate: null });
           if (!s.stats.rabbit && s.stats.jutsu > 2) goods.push('忍術の失敗なし');
-          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.rabbit * 15 - Math.min(50, s.stats.ninkiOver / 2)), posAdvice: '旋風刃は背面、強甲破点突は側面。風纏が 3 以下のうちは強甲破点突で足す', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたら月影雷獣爪（急接近）や投刃', comboAdvice: '双刃旋 → 風断ち → 旋風刃 / 強甲破点突の順に。印と忍術はコンボを切らない' };
+          return { issues, metrics, goods, overPct: Math.max(0, 100 - s.stats.rabbit * 15 - Math.min(50, s.stats.ninkiOver / 2)), posAdvice: '旋風刃は背面、強甲破点突は側面。風纏が 1 以下なら強甲破点突で足す', castAdvice: '', rangeAdvice: '敵が動いたらすぐ追いかける。離れたら月影雷獣爪（急接近）や投刃', comboAdvice: '双刃旋 → 風断ち → 旋風刃 / 強甲破点突の順に。印と忍術はコンボを切らない' };
         },
         howto: '忍者: 双刃旋 → 風断ち → 旋風刃（背面）/ 強甲破点突（側面。風纏 +2）。印を結んで忍術（天地 = 雷遁、地天 = 火遁、天地人 = 水遁）。雷遁のあとは月影雷獣牙。忍気 50 で六道輪廻、毒盛の術のあとは是生滅法。天地人は 3 つの忍術を続けて。',
         gaugeUI: (D) => window.MockGauge2.create(D.gauge, 'NIN'),
@@ -732,6 +735,7 @@
         if (over > 0 && s.phase === 'combat') s.stats[overKey] += over;
         s[key] = Math.max(0, Math.min(100, v));
       }
+      // ソウル・シュラウドの上限 100 は仮（GAME-80。説明文・特性に上限の数がない）
       const gauges = {
         ソウルゲージ: { get: () => S().soul, set: (v) => { S().soul = Math.max(0, Math.min(100, v)); }, max: 100 },
         シュラウドゲージ: { get: () => S().shroud, set: (v) => { S().shroud = Math.max(0, Math.min(100, v)); }, max: 100 },
@@ -871,7 +875,7 @@
           if (s.lemure > 0 && !enshrouded()) { s.lemure = 0; s.void = 0; } // レムールの時間切れ
           // 守護のクレストを吸収しきった → 活性のクレスト（継続回復）
           if (s.crest) {
-            if (R.shieldLeft('self') <= 0.0005 && s.t < s.crest.until) { R.hot('party', 50 * HEAL_K, 15, '活性のクレスト'); R.remove('crest'); s.crest = null; R.addLog('ok', '守護のクレストが吸収されて消えました → 活性のクレスト'); }
+            if (R.shieldLeft('self', '守護のクレスト') <= 0.0005 && s.t < s.crest.until) { R.hot('party', 50 * HEAL_K, 15, '活性のクレスト'); R.remove('crest'); s.crest = null; R.addLog('ok', '守護のクレストが吸収されて消えました → 活性のクレスト'); }
             else if (s.t >= s.crest.until) s.crest = null;
           }
         },
@@ -1002,6 +1006,7 @@
       const DREAD = { [ID.VICEWINDER]: [ID.HUNTERS_COIL, ID.SWIFTSKINS_COIL], [ID.VICEPIT]: [ID.HUNTERS_DEN, ID.SWIFTSKINS_DEN] };
       const COILS = new Set([ID.HUNTERS_COIL, ID.SWIFTSKINS_COIL, ID.HUNTERS_DEN, ID.SWIFTSKINS_DEN]);
       const COMBO_MS = 30000;
+      // 霊力ゲージの上限 100 は仮（GAME-81。説明文・特性に上限の数がない）
       const gauges = {
         霊力ゲージ: { get: () => S().offering, set: (v) => { S().offering = Math.max(0, Math.min(100, v)); }, max: 100 },
         飛蛇の魂: { get: () => S().coil, set: (v) => { S().coil = Math.max(0, Math.min(COIL_MAX, v)); }, max: COIL_MAX },

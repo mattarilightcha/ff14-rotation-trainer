@@ -124,6 +124,12 @@
     }
   }
 
+  // 「受けるＨＰ回復効果をN％上昇」（ランパート・スリル・オブ・バトル・バマジク）: 受ける回復の上乗せを、その技の名前の印にする
+  function healTaken(R, a, who = 'self') {
+    const d = a.desc ?? '', m = /受ける(?:ＨＰ)?回復効果を(\d+)％上昇/.exec(d);
+    if (m) R.mark(who, a.name, secAfter(d, m.index), { healUp: Number(m[1]) / 100 });
+  }
+
   // ---------------- 侍 ----------------
   const SAM = {
     abbr: 'SAM',
@@ -349,7 +355,7 @@
       const ID = {
         FAST: 9, RIOT: 15, ROYAL: 3539, FOF: 20, GORING: 3538, ATONE: 16460, SUPP: 36918, SEPUL: 36919,
         IMPERATOR: 36921, CONF: 16459, FAITH: 25748, TRUTH: 25749, VALOR: 25750, HONOR: 36922,
-        HOLY: 7384, HCIRCLE: 16458, CLEMENCY: 3541, EXPI: 25747, CIRCLE: 23, INTERVENE: 16461, TOTAL: 7381, PROM: 16457, IRONWILL: 28,
+        HOLY: 7384, HCIRCLE: 16458, CLEMENCY: 3541, EXPI: 25747, CIRCLE: 23, INTERVENE: 16461, TOTAL: 7381, PROM: 16457, IRONWILL: 28, RAMPART: 7531,
       };
       const STATUS = {
         fof: { name: 'ファイト・オア・フライト', tracked: true },
@@ -403,6 +409,7 @@
           }
           if (id === ID.CIRCLE) R.buff('circleDot', (a.pot?.dot?.sec ?? 15) * 1000);
           support(R, a); // ホーリースピリット・コンフィテオルの自分の回復、クレメンシー、ディヴァインヴェール、ホーリーシェルトロンなど
+          if (id === ID.RAMPART) healTaken(R, a); // ランパート「自身が受けるＨＰ回復効果を15％上昇」
           // アイアンウィル「再使用で解除する。効果時間：永続」
           if (id === ID.IRONWILL) { if (has('ironWill')) R.remove('ironWill'); else R.buff('ironWill', 1e9); }
         },
@@ -1537,6 +1544,6 @@
   window.MockJobs = { SAM, PLD, WHM, AST, BLM, BRD, SMN };
   // ほかのジョブの決まり（jobs-tank.js などの役割ごとのファイル）が使う共通の部品。ジョブの一覧に出ないよう列挙しない
   Object.defineProperty(window.MockJobs, 'lib', {
-    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, mpRegen, seeded, secAfter, descGain, extendBuff, supportWho, support, guideTrait, guidePet, numIn },
+    value: { byName, tooltipEffects, tooltipBlocked, tooltipResolve, HEAL_K, descCharges, MP_TICK, actorTickPhase, mpTicks, naturalMp, mpRegen, seeded, secAfter, descGain, extendBuff, supportWho, support, healTaken, guideTrait, guidePet, numIn },
   });
 })();

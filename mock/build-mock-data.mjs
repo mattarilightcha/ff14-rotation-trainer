@@ -242,7 +242,29 @@ function buildJob(JOB, LEVEL) {
   for (const a of actions) {
     for (const base of replacesOf(a)) {
       if (!jobIds.has(base) || a.level > LEVEL) continue;
-      (replaceGroups[base] ??= []).push(a.id);
+      // 対象レベルで上位版に置き換わった技は上位版にする（モンクの闘魂旋風脚 → 夢幻闘舞、賢者のエウクラシア・プログノシス → II）
+      const t = resolve(a.id);
+      if (t !== base && !(replaceGroups[base] ??= []).includes(t)) replaceGroups[base].push(t);
+    }
+  }
+  // 説明文に変化元が 2 つ以上あるもの（「ヘルズイングレスまたはヘルズイーグレスがリターンに変化する」「ファイアとブリザドがパラドックスに変化する」）は、
+  // 抽出データの変化元が 1 つでも説明文の変化元を足す（変化元がほかの技の変化先のもの = 途中の段の名前は、元のボタンと同じなので足さない）
+  for (const id of job.actionIds) {
+    const a = byId.get(id);
+    if (!a || !a.replacesAction?.length || a.level > LEVEL || resolve(a.id) !== a.id) continue;
+    const m = /発動条件を満たすと(.+?)が(.+?)に変化する/.exec(a.description?.ja ?? '');
+    if (!m || m[2] !== a.name.ja || jobByName.has(m[1])) continue;
+    for (const base of m[1].split(/または|と|、/).map((n) => jobByName.get(n.trim())).filter(Boolean)) {
+      if (!jobIds.has(base) || replacesOf(byId.get(base)).length) continue;
+      if (!(replaceGroups[base] ??= []).includes(a.id)) replaceGroups[base].push(a.id);
+    }
+  }
+  // ヴァイパー: 参の牙の変化元は説明文のとおり、弐の牙【猛襲】の出る咬創のボタンが側撃・背撃、弐の牙【疾速】の出る穿裂のボタンが側裂・背裂
+  // （「発動条件を満たすと弐の牙【疾速】が参の牙【側裂】に変化する」など。抽出データの変化元は側撃・側裂が咬創、背撃・背裂が穿裂: GAME-81）
+  if (JOB === 'VPR') {
+    for (const [id, base] of [[34610, 34606], [34612, 34606], [34611, 34607], [34613, 34607]]) {
+      for (const ts of Object.values(replaceGroups)) { const i = ts.indexOf(id); if (i >= 0) ts.splice(i, 1); }
+      if (byId.get(id)?.level <= LEVEL) (replaceGroups[base] ??= []).push(id);
     }
   }
   if (JOB === 'SAM') for (const a of actions) if (a.id === 25782) (replaceGroups[25781] ??= []).push(a.id); // 奥義波切「このアクションを実行すると「返し波切」に変化する」
@@ -303,6 +325,15 @@ function buildJob(JOB, LEVEL) {
     return o;
   }
   const iconOf = (a) => fankitOf(a) ?? (a.iconPath ? `../public${a.iconPath}` : null);
+  // 説明文「リキャストタイマーを「オーバードライブ・クイーン」と共有する」なのに、抽出データの cooldownGroup が違うもの（機工士のクイーン）は同じグループにする
+  const sharedCd = new Map();
+  for (const id of job.actionIds) {
+    const a = byId.get(id), m = /リキャストタイマーを「([^」]+)」と共有する/.exec(a?.description?.ja ?? '');
+    const b = m && jobByName.has(m[1]) ? byId.get(jobByName.get(m[1])) : null;
+    if (!a || !b || a.cooldownGroup === b.cooldownGroup || a.cooldownGroup === 58 || b.cooldownGroup === 58) continue;
+    const g = Math.min(a.cooldownGroup, b.cooldownGroup);
+    sharedCd.set(a.id, g); sharedCd.set(b.id, g);
+  }
 
   const pick = (a, t = timing(a)) => ({
     id: a.id,
@@ -314,7 +345,7 @@ function buildJob(JOB, LEVEL) {
     castMs: t.castMs,
     recastMs: t.recastMs,
     fromGuide: t.guide.length ? t.guide : undefined, // ジョブガイドの値にした項目
-    cooldownGroup: a.cooldownGroup,
+    cooldownGroup: sharedCd.get(a.id) ?? a.cooldownGroup,
     maxCharges: a.maxCharges,
     comboFrom: a.comboFrom ? [a.comboFrom, upgrade[a.comboFrom]].filter(Boolean) : [],
     preservesCombo: a.preservesCombo,
