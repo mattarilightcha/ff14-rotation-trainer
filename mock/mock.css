@@ -32,6 +32,14 @@
   --font-mincho: "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
   --font-title: "Cinzel", "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
   --font-fly: "Cinzel", "Shippori Mincho B1", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+  /* モックの操作画面（上のボタン・開始画面・設定・HUD の調整）の色。FF14 の HUD の再現とは別に、平らで落ち着いた見た目にそろえる */
+  --ui-bg: #15171c;
+  --ui-raise: rgba(255, 255, 255, .06);
+  --ui-line: rgba(255, 255, 255, .07);
+  --ui-text: #ebe7df;
+  --ui-muted: #8f8c85;
+  --ui-accent: #e2c27d;
+  --ui-accent-soft: rgba(226, 194, 125, .14);
   font-family: var(--font-ui);
   font-feature-settings: "palt" 1; /* 約物を詰める */
 }
@@ -281,27 +289,36 @@ button { font: inherit; }
 .hud-label { position: absolute; left: -1.9em; top: 0; font-size: 0.9em; color: var(--dim); }
 
 /* ---------------- 操作パネル・設定 ---------------- */
-.controls { position: absolute; left: 16px; top: 12px; display: flex; gap: 4px; z-index: 4; }
-.controls button, .start-buttons button {
-  background: linear-gradient(#41464f, #24272e); color: var(--text); border: 1px solid #000; border-radius: 5px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 1px 2px rgba(0,0,0,.5); padding: 5px 12px; font-size: 12px; cursor: pointer; text-align: left;
-}
-.controls button { padding: 4px 9px; font-size: 11.5px; }
-.controls button:hover, .start-buttons button:hover { filter: brightness(1.2); }
-.controls button.on { color: var(--gold-hi); box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 0 1px rgba(232,199,122,.6); }
+.controls { position: absolute; left: 16px; top: 12px; display: flex; gap: 6px; z-index: 4; }
+.controls button { padding: 5px 11px; border: 0; border-radius: 8px; background: rgba(21, 23, 28, .78); color: var(--ui-text); font-size: 11.5px; cursor: pointer;
+  box-shadow: 0 0 0 1px var(--ui-line), 0 2px 8px rgba(0, 0, 0, .35); transition: background .15s, color .15s; }
+.controls button:hover { background: rgba(38, 41, 48, .9); }
+.controls button.on { color: var(--ui-accent); box-shadow: 0 0 0 1px rgba(226, 194, 125, .45), 0 2px 8px rgba(0, 0, 0, .35); }
+.controls kbd { color: var(--ui-muted); }
 kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit; }
 .game-badge { position: absolute; left: 50%; top: 124px; transform: translateX(-50%); font-size: 11px; color: var(--gold-hi); background: rgba(0,0,0,.55); border: 1px solid rgba(232,199,122,.4); border-radius: 999px; padding: 2px 12px; pointer-events: none; }
 
 /* 開始画面 */
-.start { left: 50%; top: 50%; transform: translate(-50%, -58%); width: 520px; max-height: 86%; overflow-y: auto; padding: 18px 22px 14px; background: linear-gradient(rgba(16,18,26,.92), rgba(10,11,16,.95)); z-index: 5; border-color: #000; box-shadow: inset 0 0 0 1px rgba(232,199,122,.28), 0 10px 40px rgba(0,0,0,.7); }
-.start-title { font-family: var(--font-title); font-size: 24px; font-weight: 800; letter-spacing: .08em; display: flex; align-items: center; gap: 10px; color: var(--gold-hi); text-shadow: 0 2px 6px #000; }
-.start-title .job-icon { width: 32px; height: 32px; }
-.start-title span { font-size: 12px; color: var(--dim); font-weight: 400; letter-spacing: .05em; margin-left: auto; }
-.start-buttons { display: flex; gap: 10px; margin: 16px 0 8px; }
-.start-buttons button { flex: 1; text-align: center; padding: 10px 12px; font-size: 14px; }
-.start-buttons button.primary { background: linear-gradient(#8a6a2c, #4f3a14); color: #fff6de; border-color: #1a1206; box-shadow: inset 0 1px 0 rgba(255,240,200,.35), 0 0 16px rgba(232,199,122,.25); }
-.start .note { font-size: 11.5px; color: var(--dim); line-height: 1.6; margin: 6px 0; }
-.howto { margin: 8px 0 0; padding-left: 18px; font-size: 12px; color: #cfc8b8; line-height: 1.7; }
+.start { left: 50%; top: 50%; transform: translate(-50%, -54%); width: 560px; max-height: 88%; overflow-y: auto; padding: 26px 28px 18px; z-index: 5;
+  background: rgba(21, 23, 28, .96); color: var(--ui-text); border: 0; border-radius: 16px; backdrop-filter: none; box-shadow: 0 0 0 1px var(--ui-line), 0 24px 64px rgba(0, 0, 0, .6); scrollbar-width: thin; }
+.start-title { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 700; letter-spacing: .06em; }
+.start-title .job-icon { width: 30px; height: 30px; }
+.start-title span { margin-left: auto; font-size: 11px; font-weight: 400; letter-spacing: .08em; color: var(--ui-muted); }
+.start-buttons { display: flex; gap: 10px; margin: 20px 0 6px; }
+.start-buttons button { flex: 1; padding: 11px 12px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 10px; background: none; color: var(--ui-text); font-size: 13.5px; cursor: pointer; transition: background .15s, filter .15s; }
+.start-buttons button:hover { background: var(--ui-raise); }
+.start-buttons button.primary { background: var(--ui-accent); border-color: var(--ui-accent); color: #1c1608; font-weight: 700; }
+.start-buttons button.primary:hover { filter: brightness(1.08); }
+.start-buttons kbd { color: var(--ui-muted); }
+.start-more { margin-top: 8px; border-top: 1px solid var(--ui-line); }
+.start-more > summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 12px 0 4px; cursor: pointer; font-size: 12px; letter-spacing: .08em; color: var(--ui-muted); }
+.start-more > summary::-webkit-details-marker { display: none; }
+.start-more > summary::before { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; }
+.start-more[open] > summary::before { transform: rotate(45deg); }
+.start-more > summary:hover { color: var(--ui-text); }
+.start .note { font-size: 11.5px; color: var(--ui-muted); line-height: 1.7; margin: 8px 0 4px; }
+.howto { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--ui-muted); line-height: 1.75; }
+.howto li + li { margin-top: 4px; }
 
 /* ---------------- 結果（全画面・すっきり。result.js）---------------- */
 .result { position: absolute; inset: 0; z-index: 30; display: flex; flex-direction: column; gap: 12px; padding: 20px 28px 12px; background: #0d0f14; color: #ece8df; font-size: 15px; }
@@ -311,11 +328,11 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .rs-title h2 { margin: 0; font-family: var(--font-title); font-weight: 800; font-size: 28px; line-height: 1.1; letter-spacing: .14em; color: #f1d58f; }
 .rs-sub { font-size: 13px; color: #9aa0ab; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rs-btns { display: flex; gap: 8px; flex: none; }
-.rs-btn { font: inherit; font-size: 14px; padding: 8px 18px; border-radius: 6px; border: 1px solid #2c313c; background: #1b1f28; color: #ece8df; cursor: pointer; }
-.rs-btn:hover { background: #262c38; }
-.rs-btn.primary { background: #8a6a2c; border-color: #a8843c; color: #fff7e2; }
-.rs-btn.primary:hover { background: #9c7a34; }
-.rs-btn kbd { color: #f3e2b8; opacity: .75; }
+.rs-btn { font: inherit; font-size: 14px; padding: 8px 18px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, .14); background: none; color: var(--ui-text); cursor: pointer; transition: background .15s, filter .15s; }
+.rs-btn:hover { background: var(--ui-raise); }
+.rs-btn.primary { background: var(--ui-accent); border-color: var(--ui-accent); color: #1c1608; font-weight: 700; }
+.rs-btn.primary:hover { background: var(--ui-accent); filter: brightness(1.08); }
+.rs-btn kbd { color: inherit; opacity: .6; }
 .rs-top { display: grid; grid-template-columns: 590px 1fr; gap: 14px; }
 .rs-score { display: grid; grid-template-columns: 150px 1fr; gap: 12px; background: #151821; border: 1px solid #232733; border-radius: 10px; padding: 14px; }
 .rs-scorebox { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
@@ -437,77 +454,89 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .gauges { position: absolute; inset: 0; pointer-events: none; }
 
 /* ---------------- 開始画面の簡単な設定 ---------------- */
-.start-opts { display: grid; gap: 6px; margin: 10px 0 4px; padding: 8px 10px; border-radius: 5px; background: rgba(255,255,255,.04); box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
-.so-row { display: flex; align-items: center; gap: 10px; font-size: 12px; }
-.so-label { width: 118px; color: var(--dim); }
+.start-opts { display: grid; gap: 2px; margin: 14px 0 4px; }
+.so-row { display: flex; align-items: center; gap: 12px; min-height: 38px; font-size: 12.5px; border-bottom: 1px solid var(--ui-line); }
+.so-row:last-child { border-bottom: 0; }
+.so-label { width: 104px; flex: none; color: var(--ui-muted); }
+.so-row.wide { flex-direction: column; align-items: stretch; gap: 8px; padding: 10px 0; }
+.so-row.wide .so-label { width: auto; }
+.so-row .cfg-choice.job-choice button { font-size: 12px; }
 
-/* ---------------- 設定画面（FF14 のキャラクターコンフィグ風。settings.js）---------------- */
-.cfg-back { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; background: rgba(0, 0, 0, .45); }
-.cfg-win { width: 860px; height: min(600px, 92%); display: flex; flex-direction: column; border-radius: 6px; overflow: hidden;
-  background: linear-gradient(rgba(22, 24, 30, .97), rgba(14, 15, 20, .97)); border: 1px solid #000;
-  box-shadow: inset 0 0 0 1px rgba(232, 199, 122, .28), 0 14px 50px rgba(0, 0, 0, .8); font-size: 13px; }
-.cfg-titlebar { display: flex; align-items: center; height: 34px; padding: 0 8px 0 14px; flex: none;
-  background: linear-gradient(#3a3322, #211d14); border-bottom: 1px solid #000; box-shadow: inset 0 1px 0 rgba(255, 236, 190, .18), 0 1px 0 rgba(232, 199, 122, .2); }
-.cfg-title { font-family: var(--font-title); font-size: 15px; font-weight: 800; letter-spacing: .12em; color: var(--gold-hi); text-shadow: 0 1px 2px #000; }
-.cfg-x { margin-left: auto; width: 26px; height: 26px; border: 1px solid #000; border-radius: 4px; background: linear-gradient(#4a4a50, #26262b); color: var(--text); font-size: 16px; line-height: 1; cursor: pointer; }
-.cfg-x:hover { filter: brightness(1.3); }
-.cfg-body { flex: 1; display: flex; min-height: 0; }
-.cfg-nav { width: 170px; flex: none; padding: 10px 0; display: flex; flex-direction: column; gap: 2px; background: rgba(0, 0, 0, .28); border-right: 1px solid rgba(255, 255, 255, .06); }
-.cfg-tab { text-align: left; padding: 8px 16px; border: 0; background: none; color: var(--dim); cursor: pointer; font-size: 13px; position: relative; }
-.cfg-tab:hover { color: var(--text); background: rgba(255, 255, 255, .04); }
-.cfg-tab.on { color: var(--gold-hi); background: linear-gradient(90deg, rgba(232, 199, 122, .2), rgba(232, 199, 122, 0)); }
-.cfg-tab.on::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; border-radius: 2px; background: var(--gold); box-shadow: 0 0 6px var(--gold); }
-.cfg-pane { flex: 1; overflow-y: auto; padding: 12px 20px 18px; }
-.cfg-pane-title { margin: 0 0 6px; font-family: var(--font-title); font-weight: 800; font-size: 18px; color: var(--gold); letter-spacing: .08em; }
-.cfg-section { margin-top: 12px; }
-.cfg-head { font-size: 12.5px; font-weight: 700; color: #e9dcc0; padding-bottom: 4px; margin-bottom: 4px; border-bottom: 1px solid rgba(232, 199, 122, .3); letter-spacing: .06em; }
-.cfg-note { font-size: 11.5px; color: var(--dim); line-height: 1.6; margin: 2px 0 6px; }
-.cfg-row { display: flex; align-items: center; gap: 14px; padding: 6px 4px; border-bottom: 1px solid rgba(255, 255, 255, .04); }
-.cfg-row:hover { background: rgba(255, 255, 255, .025); }
-.cfg-label { width: 250px; flex: none; display: flex; flex-direction: column; gap: 2px; }
-.cfg-label small { font-size: 10.5px; color: var(--dim); line-height: 1.45; }
-.cfg-ctl { flex: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
-.cfg-value { color: var(--text); font-size: 12px; }
-.cfg-x2 { color: var(--dim); }
-.cfg-btn { padding: 4px 12px; border: 1px solid #000; border-radius: 4px; background: linear-gradient(#41464f, #24272e); color: var(--text); cursor: pointer; font-size: 12px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 1px 2px rgba(0, 0, 0, .5); }
-.cfg-btn:hover { filter: brightness(1.2); }
-.cfg-btn.primary { background: linear-gradient(#8a6a2c, #4f3a14); color: #fff6de; border-color: #1a1206; padding: 5px 22px; }
-.cfg-choice { display: inline-flex; border: 1px solid #000; border-radius: 4px; overflow: hidden; box-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
-.cfg-choice button { padding: 4px 12px; border: 0; border-right: 1px solid #000; background: linear-gradient(#34383f, #1f2227); color: var(--dim); cursor: pointer; font-size: 12px; }
-.cfg-choice button:last-child { border-right: 0; }
-.cfg-choice button { white-space: nowrap; }
-.cfg-choice.job-choice { flex-wrap: wrap; }
-.cfg-choice button:hover { color: var(--text); }
-.cfg-choice button.on { background: linear-gradient(#7a5f28, #45320f); color: #fff3d6; box-shadow: inset 0 1px 0 rgba(255, 240, 200, .3); }
-.cfg-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 2px 10px 2px 3px; border: 1px solid #000; border-radius: 999px; background: #1a1c21; color: var(--dim); cursor: pointer; font-size: 12px; }
-.cfg-toggle i { width: 30px; height: 16px; border-radius: 999px; background: #3a3d44; position: relative; box-shadow: inset 0 1px 2px #000; transition: background .15s; }
-.cfg-toggle i::after { content: ""; position: absolute; left: 2px; top: 2px; width: 12px; height: 12px; border-radius: 50%; background: #9a9ca3; transition: transform .15s, background .15s; }
-.cfg-toggle.on { color: #fff3d6; }
-.cfg-toggle.on i { background: linear-gradient(#9a7a34, #6a5018); }
-.cfg-toggle.on i::after { transform: translateX(14px); background: #fff3d6; }
-.cfg-select, .cfg-number { background: #111317; color: var(--text); border: 1px solid #000; border-radius: 3px; padding: 3px 6px; font: inherit; font-size: 12px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .08); }
-.cfg-range { display: flex; align-items: center; gap: 8px; }
-.cfg-range input { width: 200px; accent-color: #c9a24e; }
-.cfg-range output { width: 44px; font-variant-numeric: tabular-nums; color: var(--text); font-size: 12px; }
-.cfg-key { display: inline-block; min-width: 28px; padding: 2px 7px; text-align: center; border-radius: 4px; font: 700 12px/1.4 inherit; color: #fff; margin: 0;
-  background: linear-gradient(#4a4e57, #2a2d33); border: 1px solid #000; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 2px 0 #111; }
-.cfg-drop { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 18px; margin: 6px 0 10px; border: 2px dashed rgba(232, 199, 122, .45); border-radius: 6px;
-  background: rgba(232, 199, 122, .05); cursor: pointer; text-align: center; }
-.cfg-drop b { color: var(--gold-hi); font-size: 14px; }
-.cfg-drop span { color: var(--dim); font-size: 12px; }
+/* ---------------- 設定画面（settings.js）: 落ち着いた暗い面に、金を 1 色だけ差す ---------------- */
+.cfg-back { position: absolute; inset: 0; z-index: 20; display: grid; place-items: center; background: rgba(4, 5, 8, .55); }
+.cfg-win { position: relative; width: 820px; height: min(560px, 90%); display: flex; border-radius: 14px; overflow: hidden;
+  background: var(--ui-bg); color: var(--ui-text); font-size: 13px; box-shadow: 0 0 0 1px var(--ui-line), 0 24px 64px rgba(0, 0, 0, .65); }
+.cfg-side { width: 184px; flex: none; display: flex; flex-direction: column; padding-bottom: 18px; background: rgba(255, 255, 255, .02); border-right: 1px solid var(--ui-line); }
+.cfg-title { display: flex; align-items: center; height: 64px; padding: 0 24px; flex: none; font-size: 12px; font-weight: 600; letter-spacing: .24em; color: var(--ui-muted); }
+.cfg-nav { display: flex; flex-direction: column; gap: 2px; padding: 0 12px; }
+.cfg-tab { text-align: left; padding: 8px 12px; border: 0; border-radius: 8px; background: none; color: var(--ui-muted); cursor: pointer; font-size: 13px; transition: color .15s, background .15s; }
+.cfg-tab:hover { color: var(--ui-text); background: var(--ui-raise); }
+.cfg-tab.on { color: var(--ui-accent); background: var(--ui-accent-soft); font-weight: 600; }
+.cfg-side-note { margin-top: auto; padding: 0 20px 0 24px; font-size: 10.5px; line-height: 1.6; color: var(--ui-muted); }
+.cfg-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.cfg-top { display: flex; align-items: center; height: 64px; padding: 0 14px 0 32px; flex: none; }
+.cfg-heading { font-size: 16px; font-weight: 700; letter-spacing: .1em; }
+.cfg-x { margin-left: auto; width: 34px; height: 34px; border: 0; border-radius: 8px; background: none; color: var(--ui-muted); font-size: 20px; line-height: 1; cursor: pointer; }
+.cfg-x:hover { color: var(--ui-text); background: var(--ui-raise); }
+.cfg-pane { flex: 1; overflow-y: auto; padding: 0 40px 30px 32px; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, .15) transparent; }
+.cfg-section + .cfg-section { margin-top: 24px; }
+.cfg-head { font-size: 11.5px; font-weight: 600; letter-spacing: .14em; color: var(--ui-muted); margin-bottom: 2px; }
+.cfg-note { font-size: 11.5px; line-height: 1.6; color: var(--ui-muted); margin: 2px 0 8px; }
+.cfg-row { display: flex; align-items: center; gap: 20px; min-height: 48px; padding: 8px 0; border-bottom: 1px solid var(--ui-line); }
+.cfg-row:last-child { border-bottom: 0; }
+.cfg-row.wide { flex-direction: column; align-items: stretch; gap: 10px; padding: 12px 0; }
+.cfg-label { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.cfg-label small { font-size: 11px; line-height: 1.5; color: var(--ui-muted); }
+.cfg-ctl { flex: none; max-width: 64%; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px; }
+.cfg-row.wide .cfg-ctl { max-width: none; justify-content: flex-start; }
+.cfg-value { color: var(--ui-muted); font-size: 12.5px; text-align: right; }
+.cfg-x2 { color: var(--ui-muted); }
+.cfg-btn { padding: 6px 14px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 8px; background: none; color: var(--ui-text); cursor: pointer; font-size: 12.5px; white-space: nowrap; transition: background .15s, border-color .15s; }
+.cfg-btn:hover { background: var(--ui-raise); border-color: rgba(255, 255, 255, .26); }
+.cfg-btn.primary { background: var(--ui-accent); border-color: var(--ui-accent); color: #1c1608; font-weight: 600; }
+.cfg-btn.primary:hover { filter: brightness(1.08); }
+.cfg-choice { display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px; border-radius: 10px; background: rgba(255, 255, 255, .05); }
+.cfg-choice button { padding: 5px 12px; border: 0; border-radius: 7px; background: none; color: var(--ui-muted); cursor: pointer; font-size: 12.5px; white-space: nowrap; transition: color .15s, background .15s; }
+.cfg-choice button:hover { color: var(--ui-text); }
+.cfg-choice button.on { background: var(--ui-accent-soft); color: var(--ui-accent); font-weight: 600; box-shadow: inset 0 0 0 1px rgba(226, 194, 125, .32); }
+.cfg-choice.job-choice { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); width: 100%; }
+.cfg-choice.job-choice button { padding: 6px 2px; }
+.cfg-toggle { display: inline-flex; align-items: center; gap: 10px; padding: 0; border: 0; background: none; color: var(--ui-muted); cursor: pointer; font-size: 12.5px; }
+.cfg-toggle span { order: -1; }
+.cfg-toggle i { width: 36px; height: 20px; flex: none; border-radius: 999px; background: rgba(255, 255, 255, .16); position: relative; transition: background .2s; }
+.cfg-toggle i::after { content: ""; position: absolute; left: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #d9d6cf; transition: transform .2s, background .2s; }
+.cfg-toggle.on { color: var(--ui-text); }
+.cfg-toggle.on i { background: var(--ui-accent); }
+.cfg-toggle.on i::after { transform: translateX(16px); background: #1c1608; }
+.cfg-select, .cfg-number { background: rgba(255, 255, 255, .05); color: var(--ui-text); border: 1px solid rgba(255, 255, 255, .1); border-radius: 8px; padding: 5px 8px; font: inherit; font-size: 12.5px; }
+.cfg-select:focus, .cfg-number:focus { outline: none; border-color: rgba(226, 194, 125, .6); }
+.cfg-range { display: flex; align-items: center; gap: 10px; }
+.cfg-range input { width: 180px; accent-color: var(--ui-accent); }
+.cfg-range output { width: 42px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ui-muted); font-size: 12px; }
+.cfg-key { display: inline-block; min-width: 26px; padding: 2px 8px; text-align: center; border-radius: 6px; font: 600 11.5px/1.5 inherit; color: var(--ui-text); background: rgba(255, 255, 255, .07); box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .45); }
+/* たたんだ「詳しい設定」 */
+.cfg-more { margin-top: 26px; border-top: 1px solid var(--ui-line); }
+.cfg-more + .cfg-more { margin-top: 0; }
+.cfg-more > summary { list-style: none; display: flex; align-items: center; gap: 10px; padding: 14px 0 6px; cursor: pointer; font-size: 12px; letter-spacing: .08em; color: var(--ui-muted); }
+.cfg-more > summary::-webkit-details-marker { display: none; }
+.cfg-more > summary::before { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; }
+.cfg-more[open] > summary::before { transform: rotate(45deg); }
+.cfg-more > summary:hover { color: var(--ui-text); }
+.cfg-more > .cfg-section { margin-top: 18px; }
+/* 設定ファイル */
+.cfg-drop { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 24px 16px; margin: 4px 0 14px; border: 1.5px dashed rgba(255, 255, 255, .18); border-radius: 12px;
+  background: rgba(255, 255, 255, .02); cursor: pointer; text-align: center; transition: border-color .15s, background .15s; }
+.cfg-drop:hover, .cfg-drop.over { border-color: var(--ui-accent); background: var(--ui-accent-soft); }
+.cfg-drop b { font-size: 13.5px; font-weight: 600; color: var(--ui-text); }
+.cfg-drop span { font-size: 11.5px; color: var(--ui-muted); }
 .cfg-drop input { display: none; }
-.cfg-drop.over { background: rgba(232, 199, 122, .16); border-color: var(--gold); }
-.cfg-files { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.cfg-file { display: flex; flex-direction: column; gap: 2px; padding: 7px 10px; border-radius: 5px; background: rgba(255, 255, 255, .035); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
-.cfg-file b { font-size: 13px; }
-.cfg-file .what { font-size: 11px; color: var(--dim); }
-.cfg-file .state { font-size: 11.5px; color: #cfc8b8; }
-.cfg-file.on { box-shadow: inset 0 0 0 1px rgba(143, 227, 143, .45); }
+.cfg-files { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.cfg-file { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 10px; background: rgba(255, 255, 255, .03); }
+.cfg-file b { font-size: 12.5px; font-weight: 600; }
+.cfg-file .what, .cfg-file .state { font-size: 11px; color: var(--ui-muted); }
+.cfg-file.on { box-shadow: inset 0 0 0 1px rgba(143, 227, 143, .35); }
 .cfg-file.on .state { color: var(--ok); }
-.cfg-log { white-space: pre-wrap; font: 11.5px/1.5 inherit; color: var(--text); background: rgba(0, 0, 0, .3); padding: 6px 8px; border-radius: 4px; }
-.cfg-foot { display: flex; align-items: center; gap: 12px; padding: 8px 14px; flex: none; border-top: 1px solid rgba(255, 255, 255, .07); background: rgba(0, 0, 0, .25); }
-.cfg-foot-note { flex: 1; font-size: 11px; color: var(--dim); }
+.cfg-log { white-space: pre-wrap; font: 11.5px/1.6 inherit; color: var(--ui-text); background: rgba(255, 255, 255, .03); padding: 8px 10px; border-radius: 8px; }
 
 /* ---------------- パラメーターバー（HP・MP。FF14 風: 名前と数値を上に、細い艶のあるバー）---------------- */
 .param { position: absolute; left: 50%; top: 520px; width: 260px; transform: translateX(-50%); display: grid; gap: 6px; pointer-events: none; }
@@ -564,27 +593,28 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 #stage.hud-edit [data-hud-key].hud-sel { outline: 2px solid #ffd678; box-shadow: 0 0 0 4px rgba(255, 214, 120, .18); }
 #stage.hud-edit [data-hud-key].hud-off { opacity: .35; }
 #stage.hud-edit [data-hud-key] * { pointer-events: none !important; }
-.hud-panel { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); z-index: 30; display: flex; flex-direction: column; gap: 6px; padding: 8px 12px; width: max-content; max-width: 760px; font-size: 13px; }
+.hud-panel { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); z-index: 30; display: flex; flex-direction: column; gap: 8px; padding: 12px 16px; width: max-content; max-width: 760px; font-size: 12.5px;
+  background: rgba(21, 23, 28, .96); color: var(--ui-text); border: 0; border-radius: 12px; backdrop-filter: none; box-shadow: 0 0 0 1px var(--ui-line), 0 12px 32px rgba(0, 0, 0, .5); }
 .hud-panel.bottom { top: auto; bottom: 56px; }
 .hud-panel .hp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
-.hud-panel button { padding: 3px 10px; border: 1px solid #000; border-radius: 4px; background: linear-gradient(#41464f, #24272e); color: var(--text); font: inherit; font-size: 12px; cursor: pointer; box-shadow: inset 0 1px 0 rgba(255,255,255,.14); }
-.hud-panel button:hover:not(:disabled) { filter: brightness(1.2); }
+.hud-panel button { padding: 4px 11px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 8px; background: none; color: var(--ui-text); font: inherit; font-size: 12px; cursor: pointer; transition: background .15s; }
+.hud-panel button:hover:not(:disabled) { background: var(--ui-raise); }
 .hud-panel button:disabled { opacity: .45; cursor: default; }
-.hud-panel button.primary { background: linear-gradient(#8a6a2c, #4f3a14); color: #fff6de; border-color: #1a1206; padding: 3px 18px; }
-.hud-panel select { font: inherit; font-size: 12px; background: #1b1e25; color: #fff; border: 1px solid #555; border-radius: 4px; padding: 2px 4px; }
-.hud-panel .hp-slots { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; color: var(--dim); }
+.hud-panel button.primary { background: var(--ui-accent); border-color: var(--ui-accent); color: #1c1608; font-weight: 700; padding: 4px 18px; }
+.hud-panel button.primary:hover:not(:disabled) { background: var(--ui-accent); filter: brightness(1.08); }
+.hud-panel select { font: inherit; font-size: 12px; background: rgba(255, 255, 255, .05); color: var(--ui-text); border: 1px solid rgba(255, 255, 255, .1); border-radius: 8px; padding: 3px 6px; }
+.hud-panel .hp-slots { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; color: var(--ui-muted); }
 .hud-panel .hp-slots button { min-width: 26px; padding: 2px 0; text-align: center; }
-.hud-panel .hp-slots button.on { color: #1a1408; background: #ffd678; border-color: #8a6a2c; font-weight: 700; }
+.hud-panel .hp-slots button.on { color: var(--ui-accent); background: var(--ui-accent-soft); border-color: rgba(226, 194, 125, .45); font-weight: 700; }
 .hud-panel .hp-flip { margin-left: auto; }
 .hud-panel [hidden] { display: none !important; }
 /* 方眼（HUD の調整で「方眼」を選んだとき）。戦闘画面の上、HUD の部品の下に描く */
 .hud-grid { position: absolute; inset: 0; pointer-events: none; display: none; background-image: linear-gradient(to right, rgba(255, 214, 120, .13) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 214, 120, .13) 1px, transparent 1px); background-size: var(--hud-grid, 8px) var(--hud-grid, 8px); }
 #stage.hud-grid-on .hud-grid { display: block; }
-.hud-panel b { color: var(--gold); }
+.hud-panel b { color: var(--ui-text); font-weight: 700; letter-spacing: .06em; }
 .hud-panel .hp-pick { min-width: 190px; font-weight: 700; }
 #stage.hud-edit [data-hud-key].hud-sel::after, #stage.hud-edit [data-hud-key]:hover::after { content: attr(data-hud-label); position: absolute; left: 0; top: 0; transform: translateY(-100%); padding: 1px 6px; font-size: 11px; font-weight: 700; color: #1a1408; background: #ffd678; border-radius: 3px 3px 0 0; white-space: nowrap; z-index: 5; pointer-events: none; }
 .hud-panel label { display: inline-flex; align-items: center; gap: 6px; }
-.hud-panel input[type=range] { width: 140px; }
+.hud-panel input[type=range] { width: 140px; accent-color: var(--ui-accent); }
 .hud-panel .hp-pct { width: 3em; font-variant-numeric: tabular-nums; }
-.hud-panel .hp-note { flex-basis: 100%; margin: 0; font-size: 11px; color: var(--dim); }
-.controls button.on { background: linear-gradient(#6a5a2a, #3e3418); border-color: #ffd678; }
+.hud-panel .hp-note { flex-basis: 100%; margin: 0; font-size: 11px; color: var(--ui-muted); }

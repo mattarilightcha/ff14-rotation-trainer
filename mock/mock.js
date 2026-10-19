@@ -941,7 +941,7 @@
       grade, score, endLabel: killed ? `${fmt(endT)} で撃破` : `${fmt(endT)} まで`,
       big, issues, goods, metrics, uses: [...uses.values()].sort((x, y) => y.n - x.n || y.dmg - x.dmg), misses, tl,
       events: S.events, summary, gaugeCols: J.gaugeCols.map(([h]) => h), fileName: `ff14-rotation-${D.job.abbr}-${stamp}.csv`,
-      note: `採点の重みは仮です（GCD 40% / バフ・DoT 15% / ${ROLE === 'healer' ? 'タンクの守り' : '方向指定'} 15% / コンボ 10% / 回避 10% / あふれ 10%）。ダメージは説明文の威力 × 与ダメージ上昇 × 係数で、クリティカルなどは入れていません。移動速度・射程・方向指定の角度・回復量の換算などは仮の値です（設定 → 練習）。`,
+      note: `採点の重みは仮です（GCD 40% / バフ・DoT 15% / ${ROLE === 'healer' ? 'タンクの守り' : '方向指定'} 15% / コンボ 10% / 回避 10% / あふれ 10%）。ダメージは説明文の威力 × 与ダメージ上昇 × 係数で、クリティカルなどは入れていません。移動速度・射程・方向指定の角度・回復量の換算などは仮の値です（設定 → 練習 → 詳しい設定）。`,
     };
   }
 
@@ -1124,7 +1124,7 @@
       const lab = document.createElement('span');
       lab.className = 'hud-label';
       lab.textContent = `${bar.slice(2)}${barSource[bar] === 'shared' ? '共' : ''}`;
-      lab.title = `ホットバー ${bar.slice(2)}（${barSource[bar] === 'shared' ? '共有' : 'ジョブ専用'}。設定 → ホットバー・HUD で切り替え）`;
+      lab.title = `ホットバー ${bar.slice(2)}（${barSource[bar] === 'shared' ? '共有' : 'ジョブ専用'}。設定 → 表示 → 詳しい設定で切り替え）`;
       box.appendChild(lab);
       barCells(bar).forEach((cell, i) => {
         const el = makeSlot(cell, '');
@@ -1289,7 +1289,7 @@
   hudPanel.className = 'win hud-panel'; hudPanel.hidden = true;
   hudPanel.innerHTML = `<div class="hp-row"><b>HUD の調整</b>
       <span class="hp-slots" role="radiogroup" aria-label="レイアウト">レイアウト${HUD_SLOTS.map((n) => `<button type="button" role="radio" data-slot="${n}" title="レイアウト ${n}">${n}</button>`).join('')}</span>
-      <select class="hp-pick" title="部品を名前で選ぶ（重なっていてクリックしにくいとき）"></select>
+      <select class="hp-pick" title="重なっていてクリックしにくい部品は、名前で選ぶ"></select>
       <button type="button" class="hp-flip" title="この窓を画面の上 / 下へ"></button></div>
     <div class="hp-row">
       <label>大きさ <input type="range" min="30" max="250" step="5" class="hp-size"> <span class="hp-pct"></span></label>
@@ -1297,8 +1297,8 @@
       <label><input type="checkbox" class="hp-show"> 表示</label>
       <label title="動かすとき、部品の左上を方眼に合わせる">方眼 <select class="hp-grid"><option value="0">なし</option><option value="4">4px</option><option value="8">8px</option><option value="16">16px</option></select></label></div>
     <div class="hp-row">
-      <button type="button" class="hp-undo" title="Ctrl+Z">元に戻す</button><button type="button" class="hp-reset">この部品を戻す</button><button type="button" class="hp-all">このレイアウトを全部戻す</button><button type="button" class="hp-done primary">完了</button></div>
-    <p class="hp-note">ドラッグで移動、ホイールで大きさ、矢印キーで 1px（Shift で 10px）。Ctrl+Z で元に戻す、Esc で完了。隠した部品は調整中だけ半透明で出ます。</p>`;
+      <button type="button" class="hp-undo" title="Ctrl+Z">元に戻す</button><button type="button" class="hp-reset">この部品を戻す</button><button type="button" class="hp-all" title="このレイアウトの調整を全部消す">全部戻す</button><button type="button" class="hp-done primary">完了</button></div>
+    <p class="hp-note">ドラッグで移動・ホイールで大きさ・矢印キーで 1px（Shift で 10px）・Ctrl+Z で戻す・Esc で完了</p>`;
   stage.appendChild(hudPanel);
   const hpq = (c) => hudPanel.querySelector(c);
   const hudBarOf = (key) => (mode === 'hud' && /^hb\d+$/.test(key ?? '') ? D.hud?.hotbars?.[key] ?? null : null);
@@ -1311,7 +1311,7 @@
     const o = (hudSel && hudOv(hudSel)) ?? {};
     const pick = hpq('.hp-pick'), items = hudItems().concat(gaugeBoxes.map(({ w }) => ({ key: w.name, label: w.label })));
     const seen = new Set();
-    pick.innerHTML = '<option value="">部品を選ぶ（クリックでも選べます）</option>' + items.filter((i) => !seen.has(i.key) && seen.add(i.key)).map((i) => `<option value="${i.key}">${i.label}${hudOv(i.key)?.hidden ? '（非表示）' : ''}</option>`).join('');
+    pick.innerHTML = '<option value="">部品を選ぶ</option>' + items.filter((i) => !seen.has(i.key) && seen.add(i.key)).map((i) => `<option value="${i.key}">${i.label}${hudOv(i.key)?.hidden ? '（非表示）' : ''}</option>`).join('');
     pick.value = hudSel ?? '';
     for (const b of hudPanel.querySelectorAll('[data-slot]')) { const on = Number(b.dataset.slot) === hudSlot(); b.classList.toggle('on', on); b.setAttribute('aria-checked', String(on)); }
     for (const c of ['.hp-size', '.hp-show', '.hp-reset']) hpq(c).disabled = !it;
@@ -2123,7 +2123,7 @@
   // ---------------- 設定画面 ----------------
   const UI = window.MockSettings.create($('settingsHost'), {
     title: '設定',
-    footNote: '設定はこのブラウザに保存されます。練習の内容は次の開始から反映されます。',
+    footNote: 'このブラウザに保存されます',
     onOpen: () => { hideTip(); if (live()) addLog('sys', '一時停止（設定を閉じると再開）'); },
     onClose: () => { save(); },
   });
@@ -2142,80 +2142,91 @@
   // 相方の設定（近接はタンクの出し入れ、回復役は相方のタンクの腕前、タンクは固定の相方）
   function npcRows(row, k, full) {
     if (ROLE === 'melee') {
-      row('タンク', k.toggle(OPT.tank, (v) => { OPT.tank = v; applyPractice(); UI.refresh(); }, ['いる', 'いない']), 'いると敵はタンクの方を向く。いないと敵があなたを追いかけ、正面を向けてきます');
+      row('タンク', k.toggle(OPT.tank, (v) => { OPT.tank = v; applyPractice(); UI.refresh(); }, ['いる', 'いない']), 'いないと敵があなたを向きます');
     } else if (ROLE === 'tank') {
-      row('相方', k.text(`ヒーラー（${NPC.name}）`), 'あなたが敵を引きつけます。敵の通常攻撃はあなたに来て、相方がときどき回復します');
+      row('相方', k.text(`ヒーラー（${NPC.name}）`));
     } else {
-      row('相方', k.text(`タンク（${NPC.name}）`), 'タンクが敵を引きつけます。敵の通常攻撃でタンクの HP が減るので、回復してください');
+      row('相方', k.text(`タンク（${NPC.name}）`));
     }
-    if (full && ROLE !== 'tank') row('タンクの腕前', k.choice([['good', '上手'], ['normal', 'ふつう'], ['bad', '下手']], OPT.tankSkill, (v) => { OPT.tankSkill = v; applyPractice(); }), '上手: 敵の向きをほとんど変えず、範囲攻撃もすぐよける。ふつう: ときどき向きや位置を変える。下手: よく向きを変え、よけるのも遅い（方向指定の取り直しの練習）');
+    if (full && ROLE !== 'tank') row('タンクの腕前', k.choice([['good', '上手'], ['normal', 'ふつう'], ['bad', '下手']], OPT.tankSkill, (v) => { OPT.tankSkill = v; applyPractice(); }), '下手ほど敵の向きがよく変わる');
   }
 
+  // ---- 設定の中身: よく使うものだけを上に並べ、説明はひとことにする。細かい設定・読むだけの値は「詳しい設定」にたたむ ----
   UI.tab('practice', '練習', (pane, k) => {
-    const sj = k.section(pane, 'ジョブ', '切り替えるとページを読み直します（練習の設定・読み込んだ設定ファイルはそのまま）。');
-    k.row(sj, 'ジョブ', jobChoice(k), `${D.job.name}: ${J.howto}`);
-    const s0 = k.section(pane, 'ステージ', '練習用に作った場所です（ゲームの特定の場所ではありません）。形と広さが変わると、動ける範囲と敵の範囲攻撃の切れ目も変わります。');
-    const stages = Arena.stages();
-    k.row(s0, 'ステージ', k.choice(stages.map((st) => [st.id, st.name]), OPT.stage, (v) => { OPT.stage = v; applyPractice(); UI.refresh(); }), stages.find((st) => st.id === OPT.stage)?.note ?? '');
-    const mkDef = stages.find((st) => st.id === OPT.stage)?.markers ?? false;
-    k.row(s0, 'フィールドマーカー', k.toggle(OPT.markers ?? mkDef, (v) => { OPT.markers = v; applyPractice(); }), '床に A〜D・1〜4 の印を置きます（A が北）。カメラを回したときの目印になります');
-    const s1 = k.section(pane, '練習の内容');
+    const s1 = k.section(pane, null);
+    k.row(s1, 'ジョブ', jobChoice(k), '切り替えるとページを読み直します', true);
     k.row(s1, '時間', k.choice([[60000, '60 秒'], [120000, '120 秒'], [180000, '180 秒'], [300000, '300 秒']], OPT.durationMs, (v) => { OPT.durationMs = v; applyPractice(); }));
-    k.row(s1, '敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }), '予兆（橙色の範囲）が満ちたら発動。範囲の中にいると被弾');
+    k.row(s1, '敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }));
     npcRows((label, ctl, note) => k.row(s1, label, ctl, note), k, true);
     const hpIn = k.number(OPT.hp, 1000, 99999999, (v) => { OPT.hp = v; applyPractice(); }, 110);
-    k.row(s1, '敵の体力', [k.choice([['inf', '無限（木人）'], ['set', '決める'], ['last', '前回の与ダメージ']], OPT.hpMode, (v) => { OPT.hpMode = v; applyPractice(); }), hpIn],
-      `0 になると撃破して終わり、結果に撃破時間が出ます。「前回の与ダメージ」は前回 ${OPT.lastDamage ? OPT.lastDamage.toLocaleString('ja-JP') : '（まだなし）'} を体力にします（同じ回しでぴったり倒せる量）`);
-    k.row(s1, 'ダメージの係数', k.number(OPT.dmgScale, 1, 1000, (v) => { OPT.dmgScale = v; applyPractice(); }, 70), 'ダメージ = 説明文の威力 × 与ダメージ上昇（風月など）× この値。1 なら威力そのまま。クリティカル・ダイレクトヒットは入れません');
-    k.row(s1, '方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }), '敵の足元に背面（緑）・側面（黄）を色分けし、次に使う方向指定の技の向きを濃くします');
-    k.row(s1, '敵の技の予告', k.toggle(OPT.hints, (v) => { OPT.hints = v; save(); }), '技の名前とよけ方を、ターゲット窓の敵の詠唱バーの下に出します（ゲームにはない補助）');
+    hpIn.hidden = OPT.hpMode !== 'set';
+    k.row(s1, '敵の体力', [k.choice([['inf', '無限'], ['set', '決める'], ['last', '前回の与ダメージ']], OPT.hpMode, (v) => { OPT.hpMode = v; applyPractice(); UI.refresh(); }), hpIn],
+      OPT.hpMode === 'last' ? `前回 ${OPT.lastDamage ? OPT.lastDamage.toLocaleString('ja-JP') : '（まだなし）'}` : '');
+    k.row(s1, '方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }));
+    k.row(s1, '敵の技の予告', k.toggle(OPT.hints, (v) => { OPT.hints = v; save(); }));
+    const s2 = k.section(pane, 'ステージ');
+    const stages = Arena.stages();
+    k.row(s2, '場所', k.choice(stages.map((st) => [st.id, st.name]), OPT.stage, (v) => { OPT.stage = v; applyPractice(); UI.refresh(); }), stages.find((st) => st.id === OPT.stage)?.note ?? '');
+    const mkDef = stages.find((st) => st.id === OPT.stage)?.markers ?? false;
+    k.row(s2, 'フィールドマーカー', k.toggle(OPT.markers ?? mkDef, (v) => { OPT.markers = v; applyPractice(); }));
+    const more = k.more(pane);
+    const m1 = k.section(more, null);
+    k.row(m1, 'ダメージの係数', k.number(OPT.dmgScale, 1, 1000, (v) => { OPT.dmgScale = v; applyPractice(); }, 70), '1 なら説明文の威力そのまま');
     const seedIn = k.number(OPT.seed, 1, 99999, (v) => { OPT.seed = v; applyPractice(); });
-    k.row(s1, '技の並び（種）', [seedIn, k.button('ランダム', () => { OPT.seed = 1 + Math.floor(Math.random() * 99999); seedIn.value = OPT.seed; applyPractice(); })], '同じ種なら毎回同じ順番・同じ時間に技が来ます');
-    const s2 = k.section(pane, '判定に使う仮の値', 'ゲームデータにない値です。実機で確かめて直します（docs/SPEC.md §10 GAME-04・05・50〜55）。');
-    k.row(s2, '滑り撃ちの猶予', k.choice([['measured', '実測'], ['safe', '安全側']], OPT.slide ?? 'measured', (v) => { OPT.slide = v; save(); }), '実測: 詠唱 1.39 秒以上は残り 0.66 秒、それより短い詠唱は 0.54 秒から動いても完了します（Lodestone の検証）。残り 0.44 秒で失敗した例もあるため、安全側は 0.5 秒です');
-    k.row(s2, '応答の遅れ', k.choice([[0, '0ms'], [50, '50ms'], [100, '100ms'], [150, '150ms']], OPT.latency ?? 50, (v) => { OPT.latency = Number(v); save(); }), '詠唱のない技の硬直は「0.6 秒＋応答の遅れ（サーバーまでの往復と処理）」です。大きいほどアビリティを挟みにくくなります');
+    k.row(m1, '技の並び（種）', [seedIn, k.button('ランダム', () => { OPT.seed = 1 + Math.floor(Math.random() * 99999); seedIn.value = OPT.seed; applyPractice(); })], '同じ種なら毎回同じ並び');
+    k.row(m1, '滑り撃ちの猶予', k.choice([['measured', '実測'], ['safe', '安全側']], OPT.slide ?? 'measured', (v) => { OPT.slide = v; save(); }), '安全側は残り 0.5 秒');
+    k.row(m1, '応答の遅れ', k.choice([[0, '0ms'], [50, '50ms'], [100, '100ms'], [150, '150ms']], OPT.latency ?? 50, (v) => { OPT.latency = Number(v); save(); }), '大きいほどアビリティを挟みにくい');
+    const m2 = k.section(more, '判定に使う値（仮）', 'ゲームデータにない値です（docs/SPEC.md §10）');
     const P = Arena.POL;
-    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程（射程 -1 の技）', `敵の当たり判定の外側から ${P.melee} m`], ['敵の当たり判定の半径', `${P.hitbox} m`], ['方向指定の角度', `背面 = 真後ろから ±${180 - P.rearDeg}°、正面 = ±${P.frontDeg}°、その間が側面`], ['詠唱の終わりの猶予（滑り撃ち）', `${slideText()}からは動いても中断しない。効果もこの時点で決まる`], ['先行入力', `そのアクションのリキャストの残りが ${POLICY.queueMs / 1000} 秒以下なら受け付け、使えるようになった瞬間に出す。入れておけるのは 1 つで、先に押したものが優先`], ['硬直', `詠唱のない技 ${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 4%（ケアル 20%・ケアルラ 32%。DESIGN-06）'], ['敵の通常攻撃', `2.8 秒ごと。${ROLE === 'tank' ? 'あなた' : 'タンク'}の HP を ${ROLE === 'tank' ? 4 : 6}% 減らす`]] : [])]) k.row(s2, label, k.text(v));
+    for (const [label, v] of [['移動速度', `${P.run} m/秒`], ['近接の射程', `当たり判定の外側から ${P.melee} m`], ['敵の当たり判定', `半径 ${P.hitbox} m`], ['方向指定の角度', `背面 ±${180 - P.rearDeg}°・正面 ±${P.frontDeg}°`], ['滑り撃ち', `${slideText()}から`], ['先行入力', `リキャストの残り ${POLICY.queueMs / 1000} 秒から 1 つ`], ['硬直', `${POLICY.animLockMs / 1000} 秒＋応答の遅れ・詠唱のあと ${POLICY.castLockAfterMs / 1000} 秒`], ...(ROLE !== 'melee' ? [['回復量の換算', '回復力 100 = 最大 HP の 4%'], ['敵の通常攻撃', `2.8 秒ごとに HP −${ROLE === 'tank' ? 4 : 6}%`]] : [])]) k.row(m2, label, k.text(v));
   });
 
   UI.tab('control', '操作', (pane, k) => {
-    const s1 = k.section(pane, '移動（KEYBIND.DAT）', '「前」は画面の奥（カメラの向き）です。カメラを回すと、移動の向きもそれに合わせて変わります（ゲームの「レガシー」に近い動き）。移動した方向を向き、攻撃すると敵の方を向きます。');
-    for (const [label, dir] of [['前へ', 'up'], ['後ろへ', 'down'], ['左へ', 'left'], ['右へ', 'right']]) k.row(s1, label, MOVE[dir].length ? MOVE[dir].map((c) => k.keycap(keyName(c))) : k.text('割り当てなし'));
-    k.row(s1, 'ジャンプ', (D.move?.jump ?? []).length ? D.move.jump.map((c) => k.keycap(keyName(c))) : k.text('割り当てなし'), '開始前の Space は「開始」になります');
-    k.row(s1, '矢印キーでも移動', k.toggle(OPT.arrows, (v) => { OPT.arrows = v; save(); }), 'ホットバーとカメラ操作に割り当てたキーが優先です');
-    const sc = k.section(pane, 'カメラ（3D のとき）', 'PC 版 FF14 と同じく、マウスのドラッグで回し、ホイールで近づける・離します。キーは KEYBIND.DAT のカメラ操作のとおりです。');
-    k.row(sc, 'マウス', k.text('左ドラッグ・右ドラッグで回す / 左右のボタンを同時に押すと前進 / ホイールで近づける・離す'));
-    const CAM_JA = [['left', '左に回す'], ['right', '右に回す'], ['up', '上に傾ける'], ['down', '下に傾ける'], ['zoomIn', '近づける'], ['zoomOut', '離す'], ['reset', '自分の後ろへ戻す']];
+    const s1 = k.section(pane, null);
+    k.row(s1, '矢印キーでも移動', k.toggle(OPT.arrows, (v) => { OPT.arrows = v; save(); }));
+    k.row(s1, 'カメラを回す速さ', k.range(0.3, 2.5, 0.1, OPT.camSpeed, (v) => { OPT.camSpeed = v; save(); }, (v) => `${Math.round(v * 100)}%`));
+    k.row(s1, 'カメラの反転', [k.toggle(OPT.camInvX, (v) => { OPT.camInvX = v; save(); }, ['左右', '左右']), k.toggle(OPT.camInvY, (v) => { OPT.camInvY = v; save(); }, ['上下', '上下'])]);
+    k.row(s1, 'カメラを戻す', k.button('北を上に', () => Arena.camera.reset('north')));
+    k.row(s1, 'スティックの遊び', k.range(0.05, 0.9, 0.05, OPT.deadzone, (v) => { OPT.deadzone = v; save(); }, (v) => `${Math.round(v * 100)}%`));
+    k.row(s1, 'ゲームモード', k.button(GM?.isActive() ? '解除する' : '入る', async () => { if (GM.isActive()) await GM.exit(); else await enterGame(); UI.refresh(); }),
+      GM?.canLock ? '全画面で、Ctrl などのキーもゲーム側で受け取る' : GM?.canFull ? '全画面のみ（キーの横取りは Chrome / Edge）' : 'このブラウザは全画面に対応していません');
+    // アクションの変化（設定ファイルから自動で判定するので、ふだんはたたんでおく）
+    const rp = k.more(pane, 'アクションの変化');
+    const r1 = k.section(rp, null, `ゲームの「アクションの変化」に合わせます${D.splitDetected?.length ? '（設定ファイルから「別ボタン」を検出）' : ''}`);
+    for (const base of Object.keys(GROUPS)) {
+      const names = GROUPS[base].map((t) => A[t]?.name).filter(Boolean).join('・');
+      k.row(r1, A[base].name, k.toggle(!split[base], (v) => { split[base] = !v; rebuild(); save(); }, ['変化する', '別ボタン']), names);
+    }
+    // キーの一覧（読むだけ）
+    const kl = k.more(pane, 'キーの一覧');
     const combo = (b) => [b.ctrl && 'Ctrl', b.shift && 'Shift', b.alt && 'Alt', keyName(b.code)].filter(Boolean).join('+');
-    for (const [act, label] of CAM_JA) { const bs = camBinds()[act] ?? []; if (bs.length) k.row(sc, label, bs.map((b) => k.keycap(combo(b)))); }
-    k.row(sc, 'パッド', k.text('右スティックで回す'));
-    k.row(sc, '回す速さ', k.range(0.3, 2.5, 0.1, OPT.camSpeed, (v) => { OPT.camSpeed = v; save(); }, (v) => `${Math.round(v * 100)}%`));
-    k.row(sc, '反転', [k.toggle(OPT.camInvX, (v) => { OPT.camInvX = v; save(); }, ['左右を反転', '左右そのまま']), k.toggle(OPT.camInvY, (v) => { OPT.camInvY = v; save(); }, ['上下を反転', '上下そのまま'])]);
-    const s2 = k.section(pane, 'ゲームパッド');
-    k.row(s2, 'スティックの遊び', k.range(0.05, 0.9, 0.05, OPT.deadzone, (v) => { OPT.deadzone = v; save(); }, (v) => `${Math.round(v * 100)}%`), `左スティックで移動。初期値は FFXIV.cfg の DeadArea（${DISP.deadArea ?? '不明'}）`);
-    k.row(s2, 'ジャンプ', k.keycap(PAD_MARK[padJump] ?? '△'), 'FFXIV.cfg の PadButton の割り当てから');
-    k.row(s2, 'クロスホットバー', k.text('L2 / R2 を押しながら十字キー・ボタン。R1 でセット切り替え（仮）'));
-    const s3 = k.section(pane, 'ホットバーのキー', 'KEYBIND.DAT のとおりです。Ctrl を使うキーはブラウザのショートカットと重なるため、ゲームモードで使ってください。');
-    k.row(s3, '開始 / リセット', [k.keycap('Space'), k.keycap('Esc')]);
+    const keys = (codes) => (codes?.length ? codes.map((c) => k.keycap(keyName(c))) : k.text('なし'));
+    const k1 = k.section(kl, '移動');
+    for (const [label, dir] of [['前へ', 'up'], ['後ろへ', 'down'], ['左へ', 'left'], ['右へ', 'right']]) k.row(k1, label, keys(MOVE[dir]));
+    k.row(k1, 'ジャンプ', keys(D.move?.jump));
+    k.row(k1, '開始 / リセット', [k.keycap('Space'), k.keycap('Esc')]);
+    const k2 = k.section(kl, 'カメラ');
+    k.row(k2, 'マウス', k.text('ドラッグで回す・ホイールで近づける'));
+    for (const [act, label] of [['left', '左に回す'], ['right', '右に回す'], ['up', '上に傾ける'], ['down', '下に傾ける'], ['zoomIn', '近づける'], ['zoomOut', '離す'], ['reset', '後ろへ戻す']]) {
+      const bs = camBinds()[act] ?? [];
+      if (bs.length) k.row(k2, label, bs.map((b) => k.keycap(combo(b))));
+    }
+    const k3 = k.section(kl, 'ゲームパッド');
+    k.row(k3, '移動 / カメラ', k.text('左スティック / 右スティック'));
+    k.row(k3, 'ジャンプ', k.keycap(PAD_MARK[padJump] ?? '△'));
+    k.row(k3, 'クロスホットバー', k.text('L2 / R2 ＋ 十字キー・ボタン'));
   });
 
-  UI.tab('hud', 'ホットバー・HUD', (pane, k) => {
-    const s1 = k.section(pane, '表示');
-    k.row(s1, 'ホットバーの表示', k.choice([['hud', 'HUD 再現'], ['keyboard', '一覧'], ['pad', 'クロスホットバー']], mode, (v) => { VIEW.mode = v; setMode(v); save(); }), 'HUD 再現は ADDON.DAT の配置どおり');
-    k.row(s1, 'ジョブゲージ', k.choice([[false, '通常'], [true, 'シンプル']], OPT.gaugeSimple, (v) => { OPT.gaugeSimple = v; Gauge.setSimple(v); save(); }), 'どちらもゲームの UI 定義（ULD）から組み立てています');
-    const s2 = k.section(pane, 'ホットバーの中身（ジョブ専用 / 共有）', 'HOTBAR.DAT にはバーごとの「共有」設定の場所がまだ分からないため、中身から推定しています（CFG-08）。');
-    for (const bar of Object.keys(D.bars)) {
-      const info = D.bars[bar];
-      const label = bar.startsWith('xhb') ? `クロスホットバー ${bar.slice(3)}` : `ホットバー ${bar.slice(2)}`;
-      if (info.job && info.shared) k.row(s2, label, k.choice([['job', 'ジョブ専用'], ['shared', '共有']], barSource[bar], (v) => { barSource[bar] = v; rebuild(); }));
-      else k.row(s2, label, k.text(info.job ? 'ジョブ専用のみ' : '共有のみ'));
-    }
-    const s4 = k.section(pane, 'HUD の部品（ADDON.DAT）', `HUD レイアウトで動かせる部品（ゲームの HUD シートの 112 種）のうち、この設定ファイルで見つかったもの ${Object.keys(hudEls()).length} 個を、識別値で特定して置いています。ステータス情報とターゲット情報は、ゲームで分割表示にしているかどうかが設定ファイルから分からないため、ここで選んでください。`);
-    k.row(s4, 'ステータス情報（自分のバフ）', k.choice([['split', '分割（強化・弱体…）'], ['all', 'まとめる']], VIEW.statusMode ?? 'split', (v) => { VIEW.statusMode = v; save(); placeHudParts(); }), '分割なら「ステータス情報（強化）」の位置、まとめるなら「ステータス情報」の位置');
-    k.row(s4, 'ターゲット情報', k.choice([['split', '分割（HP・キャストバー・ステータス）'], ['all', 'まとめる']], VIEW.targetMode ?? 'split', (v) => { VIEW.targetMode = v; save(); placeHudParts(); }));
-    k.row(s4, 'HUD の調整', k.button('調整する', () => { UI.close(); setHudEditing(true); }), '画面の上の「HUD 調整」と同じ。部品をドラッグで移動、ホイールで大きさ、矢印キーで微調整。表示の切り替え・ホットバーの形（12×1〜1×12）も変えられます。ADDON.DAT の配置の上に重ねて保存します');
-    k.row(s4, 'HUD のレイアウト', k.choice(HUD_SLOTS.map((n) => [n, String(n)]), hudSlot(), (v) => { VIEW.hudSlot = v; rebuild(); save(); }), 'ゲームの HUD レイアウトと同じく 4 つまで。調整はいま選んでいるレイアウトに保存されます');
-    k.row(s4, '書き出し・読み込み', [
+  UI.tab('view', '表示', (pane, k) => {
+    const s1 = k.section(pane, null);
+    k.row(s1, 'ホットバー', k.choice([['hud', 'HUD 再現'], ['keyboard', '一覧'], ['pad', 'クロスホットバー']], mode, (v) => { VIEW.mode = v; setMode(v); save(); }));
+    k.row(s1, 'ジョブゲージ', k.choice([[false, '通常'], [true, 'シンプル']], OPT.gaugeSimple, (v) => { OPT.gaugeSimple = v; Gauge.setSimple(v); save(); }));
+    k.row(s1, '画質', k.choice([['high', '高'], ['mid', '標準'], ['low', '軽い']], VIEW.quality ?? 'high', (v) => { VIEW.quality = v; Arena.setView('3d', v); save(); }), Arena.error3d() ? '3D で表示できないため 2D です' : '');
+    k.row(s1, 'HUD の大きさ', k.range(0.5, 2, 0.05, VIEW.hudScale, (v) => { VIEW.hudScale = v; save(); fit(); rebuild(); }, (v) => `${Math.round(v * 100)}%`));
+    const s2 = k.section(pane, 'HUD の配置');
+    k.row(s2, '位置と大きさ', k.button('調整する', () => { UI.close(); setHudEditing(true); }), 'ドラッグで移動・ホイールで大きさ');
+    k.row(s2, 'レイアウト', k.choice(HUD_SLOTS.map((n) => [n, String(n)]), hudSlot(), (v) => { VIEW.hudSlot = v; rebuild(); save(); }));
+    k.row(s2, '書き出し・読み込み', [
       k.button('書き出す', async () => {
         const text = exportHudLayouts();
         try { await navigator.clipboard.writeText(text); addLog('sys', 'HUD のレイアウトをクリップボードにコピーしました'); UI.close(); } catch { window.prompt('この文字をコピーしてください', text); }
@@ -2225,25 +2236,31 @@
         if (!text) return;
         try { importHudLayouts(text); addLog('sys', 'HUD のレイアウトを読み込みました'); UI.close(); } catch (err) { window.alert(`読み込めませんでした: ${err.message}`); }
       }),
-    ], 'レイアウト 1〜4 をまとめて文字にします。ほかのパソコンやブラウザで「読み込む」に貼り付けると同じ配置になります');
-    k.row(s4, '枠を表示', k.toggle(!!VIEW.showHudFrames, (v) => { VIEW.showHudFrames = v; save(); placeHudParts(); }), '設定を閉じると、表示中の HUD の部品の枠と名前が画面に出ます（使っている部品は金色）');
-    const s3 = k.section(pane, 'HUD の大きさ');
-    k.row(s3, 'ゲームの HUD の大きさ', k.select([[1, '100%'], [1.5, '150%'], [2, '200%'], [3, '300%']], VIEW.uiScale, (v) => { VIEW.uiScale = Number(v); save(); fit(); rebuild(); }), 'FFXIV.cfg の UiHighScale から（対応は推定）');
-    k.row(s3, '微調整', k.range(0.5, 2, 0.05, VIEW.hudScale, (v) => { VIEW.hudScale = v; save(); fit(); rebuild(); }, (v) => `${Math.round(v * 100)}%`));
-  });
-
-  UI.tab('replace', 'アクションの変化', (pane, k) => {
-    const s1 = k.section(pane, 'アクションの変化（ゲームの設定に合わせる）', `ゲームの「キャラクターコンフィグ → ホットバー設定 → アクションの変化」に合わせます。ホットバーに変化先が直接置かれていれば「変化させない」と自動で判定します（今回の設定ファイル: ${D.splitDetected?.length ? '該当あり' : '該当なし'}）。設定ファイル上の保存場所は未解読（CFG-11）。`);
-    for (const base of Object.keys(GROUPS)) {
-      const names = GROUPS[base].map((t) => A[t]?.name).filter(Boolean).join('・');
-      k.row(s1, A[base].name, k.toggle(!split[base], (v) => { split[base] = !v; rebuild(); save(); }, ['変化する', '別ボタン']), `変化先: ${names}`);
+    ], 'ほかのブラウザで同じ配置にする');
+    const more = k.more(pane);
+    const m1 = k.section(more, null);
+    k.row(m1, 'ステータス情報', k.choice([['split', '分割'], ['all', 'まとめる']], VIEW.statusMode ?? 'split', (v) => { VIEW.statusMode = v; save(); placeHudParts(); }), 'ゲームの「分割表示」に合わせる');
+    k.row(m1, 'ターゲット情報', k.choice([['split', '分割'], ['all', 'まとめる']], VIEW.targetMode ?? 'split', (v) => { VIEW.targetMode = v; save(); placeHudParts(); }));
+    k.row(m1, '部品の枠を表示', k.toggle(!!VIEW.showHudFrames, (v) => { VIEW.showHudFrames = v; save(); placeHudParts(); }));
+    k.row(m1, 'ゲームの HUD の大きさ', k.select([[1, '100%'], [1.5, '150%'], [2, '200%'], [3, '300%']], VIEW.uiScale, (v) => { VIEW.uiScale = Number(v); save(); fit(); rebuild(); }), 'FFXIV.cfg の値');
+    const w = k.number(VIEW.gameW, 640, 7680, (v) => { VIEW.gameW = v; save(); fit(); rebuild(); }, 80);
+    const h = k.number(VIEW.gameH, 360, 4320, (v) => { VIEW.gameH = v; save(); fit(); rebuild(); }, 80);
+    k.row(m1, 'ゲームの解像度', [w, k.text('×', 'cfg-x2'), h, k.button('この PC に合わせる', () => {
+      VIEW.gameW = Math.round(screen.width * devicePixelRatio); VIEW.gameH = Math.round(screen.height * devicePixelRatio);
+      save(); fit(); rebuild(); UI.refresh();
+    })], 'FFXIV.cfg の値');
+    // ホットバーの中身: ジョブ専用と共有の両方があるバーだけ選べる（設定ファイルに保存場所がないため推定: CFG-08）
+    const both = Object.keys(D.bars).filter((bar) => D.bars[bar].job && D.bars[bar].shared);
+    if (both.length) {
+      const m2 = k.section(more, 'ホットバーの中身');
+      for (const bar of both) k.row(m2, bar.startsWith('xhb') ? `クロスホットバー ${bar.slice(3)}` : `ホットバー ${bar.slice(2)}`, k.choice([['job', 'ジョブ専用'], ['shared', '共有']], barSource[bar], (v) => { barSource[bar] = v; rebuild(); }));
     }
   });
 
   UI.tab('files', '設定ファイル', (pane, k) => {
-    const s1 = k.section(pane, '読み込み', 'ファイルはこのブラウザの中だけで読み取り、どこにも送信しません。場所: ドキュメント\\My Games\\FINAL FANTASY XIV - A Realm Reborn\\FFXIV_CHR…（FFXIV.cfg は 1 つ上のフォルダ）');
+    const s1 = k.section(pane, null);
     const drop = k.el('label', 'cfg-drop');
-    drop.innerHTML = '<b>ここにファイルをドロップ</b><span>またはクリックして選ぶ（複数可）</span>';
+    drop.innerHTML = '<b>ファイルをドロップ</b><span>またはクリックして選ぶ。ブラウザの中だけで読み取り、送信しません</span>';
     const input = k.el('input');
     input.type = 'file'; input.multiple = true; input.accept = '.dat,.DAT,.cfg';
     input.addEventListener('change', () => importFiles([...input.files]));
@@ -2252,14 +2269,12 @@
     drop.addEventListener('dragleave', () => drop.classList.remove('over'));
     drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); importFiles([...e.dataTransfer.files]); });
     s1.appendChild(drop);
-    const files = [
-      ['HOTBAR.DAT', 'ホットバーの中身'], ['KEYBIND.DAT', 'キー（ホットバー・移動）'], ['ADDON.DAT', 'HUD の配置（ホットバー・ジョブゲージ）'], ['MACRO.DAT', 'マクロ（/ac の行のアクションだけ）'], ['MACROSYS.DAT', '共有マクロ（1 つ上のフォルダ）'], ['FFXIV.cfg', '解像度・HUD の大きさ・パッド'],
-    ];
+    const files = [['HOTBAR.DAT', 'ホットバー'], ['KEYBIND.DAT', 'キー'], ['ADDON.DAT', 'HUD の配置'], ['MACRO.DAT', 'マクロ'], ['MACROSYS.DAT', '共有マクロ'], ['FFXIV.cfg', '解像度・パッド']];
     const cards = k.el('div', 'cfg-files');
     for (const [name, what] of files) {
       const got = IMPORTED?.files?.[name];
       const c = k.el('div', `cfg-file${got ? ' on' : ''}`);
-      c.append(k.el('b', null, name), k.el('span', 'what', what), k.el('span', 'state', got ? `読み込み済み: ${got}` : 'サンプル（あなたの設定ファイル）を使用中'));
+      c.append(k.el('b', null, name), k.el('span', 'what', what), k.el('span', 'state', got ? `読み込み済み: ${got}` : 'サンプル'));
       cards.appendChild(c);
     }
     s1.appendChild(cards);
@@ -2268,58 +2283,36 @@
       IMPORTED = null; IMPORT_LOG = ''; Object.assign(VIEW, SAMPLE_VIEW);
       Object.assign(MOVE, { up: [...(D.move?.fore ?? [])], down: [...(D.move?.back ?? [])], left: [...(D.move?.left ?? [])], right: [...(D.move?.right ?? [])] });
       applyData(); save(); fit(); setMode(mode); UI.refresh();
-    }), '読み込んだ内容を消して、同梱のサンプルに戻します');
-    const s2 = k.section(pane, '読まないもの');
-    k.row(s2, 'UISAVE.DAT など', k.text('他のプレイヤーの名前などが入るため読み込みません'));
-  });
-
-  UI.tab('screen', '画面', (pane, k) => {
-    const s0 = k.section(pane, '練習場の表示', Arena.error3d() ? `この環境では 3D で表示できません（${Arena.error3d()}）。予備の真上の 2D で表示しています。` : '床と明かりを立体で描き、人物はドット絵の板で立たせます（カメラを回せます）。');
-    k.row(s0, '画質', k.choice([['high', '高'], ['mid', '標準'], ['low', '軽い']], VIEW.quality ?? 'high', (v) => { VIEW.quality = v; Arena.setView('3d', v); save(); }), '高: 光のにじみ・ピントのぼかし・周辺減光あり。標準: ぼかしなし・解像度を少し下げる。軽い: 後処理なし');
-    k.row(s0, 'カメラ', k.button('北が上に戻す', () => Arena.camera.reset('north')), 'カメラの向き・角度・距離を初期に戻します');
-    const s1 = k.section(pane, 'ゲームの画面', '舞台（1280 幅）をゲームの縦横比で作り、HUD の大きさをゲームの解像度に合わせて縮めます。');
-    const w = k.number(VIEW.gameW, 640, 7680, (v) => { VIEW.gameW = v; save(); fit(); rebuild(); }, 80);
-    const h = k.number(VIEW.gameH, 360, 4320, (v) => { VIEW.gameH = v; save(); fit(); rebuild(); }, 80);
-    k.row(s1, 'ゲームの解像度', [w, k.text('×', 'cfg-x2'), h], 'FFXIV.cfg から（全画面系なら FullScreenWidth / Height）');
-    k.row(s1, 'この PC の画面に合わせる', k.button('合わせる', () => {
-      VIEW.gameW = Math.round(screen.width * devicePixelRatio); VIEW.gameH = Math.round(screen.height * devicePixelRatio);
-      save(); fit(); rebuild(); UI.refresh();
     }));
-    const s = Math.min(innerWidth / STAGE.w, innerHeight / STAGE.h);
-    k.row(s1, '今の表示', k.text(`PC の画面 ${screen.width}×${screen.height}（拡大率 ${devicePixelRatio}）/ ブラウザ ${innerWidth}×${innerHeight} / 表示倍率 ${(s * 100).toFixed(0)}%`));
+    k.section(pane, null, '場所: ドキュメント\\My Games\\FINAL FANTASY XIV - A Realm Reborn\\FFXIV_CHR…（FFXIV.cfg は 1 つ上）。UISAVE.DAT など、ほかのプレイヤーの名前が入るファイルは読みません。');
   });
 
   UI.tab('sound', '音', (pane, k) => {
-    const s1 = k.section(pane, '効果音', 'FF14 の効果音は使わず、ブラウザでその場で合成しています。');
+    const s1 = k.section(pane, null);
     k.row(s1, '効果音', k.toggle(Au?.isEnabled() ?? false, (v) => { Au?.setEnabled(v); syncSound(); if (v) Au?.buff(); }));
     k.row(s1, '音量', k.range(0, 1, 0.05, Au?.getVolume() ?? 0.45, (v) => { Au?.setVolume(v); }, (v) => `${Math.round(v * 100)}%`));
-    k.row(s1, '試しに鳴らす（侍）', [
+    const more = k.more(pane, '試しに鳴らす');
+    const m1 = k.section(more, null, 'ゲームの効果音は使わず、ブラウザで合成しています');
+    k.row(m1, '侍', [
       k.button('斬撃', () => { Au?.slash(1); Au?.hit(1); }), k.button('雪', () => { Au?.slash(1.15); Au?.finisher('setsu'); Au?.hit(1.15); }),
       k.button('月', () => { Au?.slash(1.15); Au?.finisher('getsu'); Au?.hit(1.15); }), k.button('花', () => { Au?.slash(1.15); Au?.finisher('ka'); Au?.hit(1.15); }),
       k.button('居合術', () => { Au?.cast(1300); setTimeout(() => Au?.iai(3), 1300); }), k.button('剣気', () => { Au?.kenki(); Au?.slash(1.25); Au?.hit(1.25); }),
       k.button('明鏡止水', () => Au?.water()), k.button('意気衝天', () => Au?.surge()),
     ]);
     // ジャンル別の共通の音（全ジョブ）
-    k.row(s1, '試しに鳴らす（物理）', [
+    k.row(m1, '物理', [
       k.button('斬撃', () => Au?.phys('slash')), k.button('打撃', () => Au?.phys('blunt')), k.button('射撃', () => Au?.phys('pierce')), k.button('範囲', () => Au?.phys('slash', 1, { aoe: true })),
     ]);
-    k.row(s1, '試しに鳴らす（魔法）', [['火', 'fire'], ['氷', 'ice'], ['雷', 'thunder'], ['風', 'wind'], ['土', 'earth'], ['水', 'water'], ['聖', 'holy'], ['星', 'astral'], ['エーテル', 'aether'], ['闇', 'dark']]
+    k.row(m1, '魔法', [['火', 'fire'], ['氷', 'ice'], ['雷', 'thunder'], ['風', 'wind'], ['土', 'earth'], ['水', 'water'], ['聖', 'holy'], ['星', 'astral'], ['エーテル', 'aether'], ['闇', 'dark']]
       .map(([t, el]) => k.button(t, () => { Au?.castMagic(900, el); setTimeout(() => Au?.spell(el), 900); })));
-    k.row(s1, '試しに鳴らす（回復・強化）', [
+    k.row(m1, '回復・強化', [
       k.button('回復', () => Au?.heal('single')), k.button('範囲回復', () => Au?.heal('aoe')), k.button('継続回復', () => Au?.heal('hot')), k.button('バリア', () => Au?.heal('shield')), k.button('蘇生', () => Au?.heal('raise')),
       k.button('強化', () => Au?.boost('self')), k.button('全体強化', () => Au?.boost('party')), k.button('歌', () => Au?.boost('song')), k.button('召喚', () => Au?.boost('summon')),
     ]);
-    k.row(s1, '試しに鳴らす（ほか）', [
+    k.row(m1, 'ほか', [
       k.button('予兆', () => Au?.warn()), k.button('範囲攻撃', () => Au?.boom(1)), k.button('被弾', () => Au?.hurt()),
       k.button('開始', () => Au?.go()), k.button('撃破', () => Au?.kill()), k.button('使えない', () => Au?.error()),
     ]);
-  });
-
-  UI.tab('game', 'ゲームモード', (pane, k) => {
-    const s1 = k.section(pane, 'ゲームモード', GAME_NOTE);
-    k.row(s1, '状態', k.text(GM?.isActive() ? (GM.isLocked() ? '入（キーボードロック中）' : '入（全画面のみ）') : '切'));
-    k.row(s1, '切り替え', k.button(GM?.isActive() ? '解除する' : 'ゲームモードにする', async () => { if (GM.isActive()) await GM.exit(); else await enterGame(); UI.refresh(); }));
-    k.row(s1, '開始前の確認', k.text('練習中にタブを閉じる・再読み込みしようとすると確認が出ます'));
   });
 
   // 開始画面の簡単な設定と説明
@@ -2327,8 +2320,8 @@
     const k = window.MockSettings.kit;
     const box = $('startOpts');
     box.innerHTML = '';
-    const row = (label, ctl) => { const r = k.el('div', 'so-row'); r.append(k.el('span', 'so-label', label), ctl); box.appendChild(r); };
-    row('ジョブ', jobChoice(k));
+    const row = (label, ctl, wide = false) => { const r = k.el('div', `so-row${wide ? ' wide' : ''}`); r.append(k.el('span', 'so-label', label), ctl); box.appendChild(r); };
+    row('ジョブ', jobChoice(k), true);
     row('敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }));
     npcRows((label, ctl) => row(label, ctl), k, false);
     if (ROLE === 'melee') row('方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }));
