@@ -293,7 +293,7 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 .game-badge { position: absolute; left: 50%; top: 124px; transform: translateX(-50%); font-size: 11px; color: var(--gold-hi); background: rgba(0,0,0,.55); border: 1px solid rgba(232,199,122,.4); border-radius: 999px; padding: 2px 12px; pointer-events: none; }
 
 /* 開始画面 */
-.start { left: 50%; top: 50%; transform: translate(-50%, -58%); width: 520px; padding: 18px 22px 14px; background: linear-gradient(rgba(16,18,26,.92), rgba(10,11,16,.95)); z-index: 5; border-color: #000; box-shadow: inset 0 0 0 1px rgba(232,199,122,.28), 0 10px 40px rgba(0,0,0,.7); }
+.start { left: 50%; top: 50%; transform: translate(-50%, -58%); width: 520px; max-height: 86%; overflow-y: auto; padding: 18px 22px 14px; background: linear-gradient(rgba(16,18,26,.92), rgba(10,11,16,.95)); z-index: 5; border-color: #000; box-shadow: inset 0 0 0 1px rgba(232,199,122,.28), 0 10px 40px rgba(0,0,0,.7); }
 .start-title { font-family: var(--font-title); font-size: 24px; font-weight: 800; letter-spacing: .08em; display: flex; align-items: center; gap: 10px; color: var(--gold-hi); text-shadow: 0 2px 6px #000; }
 .start-title .job-icon { width: 32px; height: 32px; }
 .start-title span { font-size: 12px; color: var(--dim); font-weight: 400; letter-spacing: .05em; margin-left: auto; }
@@ -564,9 +564,24 @@ kbd { font-size: 10px; color: var(--dim); margin-left: 6px; font-family: inherit
 #stage.hud-edit [data-hud-key].hud-sel { outline: 2px solid #ffd678; box-shadow: 0 0 0 4px rgba(255, 214, 120, .18); }
 #stage.hud-edit [data-hud-key].hud-off { opacity: .35; }
 #stage.hud-edit [data-hud-key] * { pointer-events: none !important; }
-.hud-panel { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); z-index: 30; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 8px 12px; max-width: 640px; font-size: 13px; }
+.hud-panel { position: absolute; left: 50%; top: 56px; transform: translateX(-50%); z-index: 30; display: flex; flex-direction: column; gap: 6px; padding: 8px 12px; width: max-content; max-width: 760px; font-size: 13px; }
+.hud-panel.bottom { top: auto; bottom: 56px; }
+.hud-panel .hp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.hud-panel button { padding: 3px 10px; border: 1px solid #000; border-radius: 4px; background: linear-gradient(#41464f, #24272e); color: var(--text); font: inherit; font-size: 12px; cursor: pointer; box-shadow: inset 0 1px 0 rgba(255,255,255,.14); }
+.hud-panel button:hover:not(:disabled) { filter: brightness(1.2); }
+.hud-panel button:disabled { opacity: .45; cursor: default; }
+.hud-panel button.primary { background: linear-gradient(#8a6a2c, #4f3a14); color: #fff6de; border-color: #1a1206; padding: 3px 18px; }
+.hud-panel select { font: inherit; font-size: 12px; background: #1b1e25; color: #fff; border: 1px solid #555; border-radius: 4px; padding: 2px 4px; }
+.hud-panel .hp-slots { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; color: var(--dim); }
+.hud-panel .hp-slots button { min-width: 26px; padding: 2px 0; text-align: center; }
+.hud-panel .hp-slots button.on { color: #1a1408; background: #ffd678; border-color: #8a6a2c; font-weight: 700; }
+.hud-panel .hp-flip { margin-left: auto; }
+.hud-panel [hidden] { display: none !important; }
+/* 方眼（HUD の調整で「方眼」を選んだとき）。戦闘画面の上、HUD の部品の下に描く */
+.hud-grid { position: absolute; inset: 0; pointer-events: none; display: none; background-image: linear-gradient(to right, rgba(255, 214, 120, .13) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 214, 120, .13) 1px, transparent 1px); background-size: var(--hud-grid, 8px) var(--hud-grid, 8px); }
+#stage.hud-grid-on .hud-grid { display: block; }
 .hud-panel b { color: var(--gold); }
-.hud-panel .hp-pick { min-width: 190px; font: inherit; font-weight: 700; background: #1b1e25; color: #fff; border: 1px solid #555; border-radius: 4px; padding: 2px 4px; }
+.hud-panel .hp-pick { min-width: 190px; font-weight: 700; }
 #stage.hud-edit [data-hud-key].hud-sel::after, #stage.hud-edit [data-hud-key]:hover::after { content: attr(data-hud-label); position: absolute; left: 0; top: 0; transform: translateY(-100%); padding: 1px 6px; font-size: 11px; font-weight: 700; color: #1a1408; background: #ffd678; border-radius: 3px 3px 0 0; white-space: nowrap; z-index: 5; pointer-events: none; }
 .hud-panel label { display: inline-flex; align-items: center; gap: 6px; }
 .hud-panel input[type=range] { width: 140px; }

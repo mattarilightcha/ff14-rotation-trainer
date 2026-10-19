@@ -1105,7 +1105,11 @@
     const W = STAGE.w, H = STAGE.h, k = hudK();
     for (const [bar, h] of Object.entries(D.hud.hotbars)) {
       if (!h.visible || !D.bars[bar]) continue;
-      const bw = h.w * h.scale * k, bh = h.h * h.scale * k;
+      // 形（HUD の調整で 6×2 などにしたとき）: ボタンの間隔はそのままで並べ直し、ADDON.DAT の基準点（anchor）の位置は変えない
+      const sh = /^(\d+)x(\d+)$/.exec(hudOv(bar)?.shape ?? '');
+      const cols = sh ? Number(sh[1]) : h.cols, rows = sh ? Number(sh[2]) : h.rows;
+      const pitch = Math.min(h.w / h.cols, h.h / h.rows);
+      const bw = (sh ? pitch * cols : h.w) * h.scale * k, bh = (sh ? pitch * rows : h.h) * h.scale * k;
       const [ax, ay] = ANCHOR(h.anchor);
       const box = document.createElement('div');
       box.className = 'hud-bar';
@@ -1113,9 +1117,9 @@
       box.style.left = `${(h.x / 100) * W - (bw * ax) / 2}px`;
       box.style.top = `${(h.y / 100) * H - (bh * ay) / 2}px`;
       box.style.width = `${bw}px`; box.style.height = `${bh}px`;
-      const size = Math.min(bw / h.cols, bh / h.rows) * 0.9;
+      const size = Math.min(bw / cols, bh / rows) * 0.9;
       box.style.setProperty('--slot', `${size}px`);
-      box.style.gridTemplateColumns = `repeat(${h.cols}, ${size}px)`;
+      box.style.gridTemplateColumns = `repeat(${cols}, ${size}px)`;
       box.style.fontSize = `${Math.max(7, size * 0.24)}px`;
       const lab = document.createElement('span');
       lab.className = 'hud-label';
@@ -1216,16 +1220,23 @@
     applyHudEdits();
   }
 
-  // ---- HUD の調整（位置・大きさ・表示。ゲーム内の HUD レイアウトの代わりに、シミュレータの中で直せる）----
-  // VIEW.hudEdit[key] = { dx, dy（舞台の px でずらす）, s（大きさの倍率）, hidden }。ADDON.DAT の配置（またはモックの既定の置き場所）に重ねて掛ける
-  // key: ホットバー hb1〜hb10・ジョブゲージの名前（JobHudBLM0 など）・HUD の部品（castBar・partyList など）・判定ログ log・未配置のバー unplaced
+  // ---- HUD の調整（位置・大きさ・表示・ホットバーの形。ゲーム内の HUD レイアウトの代わりに、シミュレータの中で直せる）----
+  // 調整はレイアウト 1〜4 に分けて持つ（ゲームの HUD レイアウトと同じく 4 つ）。ADDON.DAT の配置（またはモックの既定の置き場所）に重ねて掛ける。
+  // VIEW.hudLayouts[n][key] = { dx, dy（舞台の px でずらす）, s（大きさの倍率）, hidden, shape（ホットバーの形 '6x2' など）}
+  // key: ホットバー hb1〜hb10・ジョブゲージの名前（JobHudBLM0 など）・HUD の部品（castBar・partyList など）・判定ログ log・未配置のバー unplaced・経過時間 timer
+  // 調整中は練習を一時停止し、ふだんは隠れている部品（キャストバー・敵の詠唱・ターゲット情報）も見本を出して動かせるようにする
   let hudEditing = false, hudSel = null;
-  const hudOv = (key) => VIEW.hudEdit?.[key] ?? null;
+  const HUD_SLOTS = [1, 2, 3, 4];
+  const hudSlot = () => (HUD_SLOTS.includes(VIEW.hudSlot) ? VIEW.hudSlot : 1);
+  const hudLayout = () => ((VIEW.hudLayouts ??= {})[hudSlot()] ??= {});
+  const hudOv = (key) => hudLayout()[key] ?? null;
+  // ホットバーの形（ゲームと同じ 6 種。12 個のボタンを何列・何行に並べるか）
+  const BAR_SHAPES = ['12x1', '6x2', '4x3', '3x4', '2x6', '1x12'];
   const HUD_LABEL = { statusEnh: 'ステータス（強化）', statusAll: 'ステータス', castBar: 'キャストバー', parameterBar: 'HP・MP', targetHp: 'ターゲット情報', targetBar: 'ターゲット情報', targetCast: 'ターゲットのキャストバー', targetStatus: 'ターゲットのステータス', partyList: 'パーティリスト' };
   function hudItems() {
     const items = [...document.querySelectorAll('#hud .hud-bar')].map((el) => ({ key: el.dataset.hudKey, label: el.dataset.hudLabel, el }));
     for (const { el, kind } of HUD_PLACES()) if (el && kind) items.push({ key: kind, label: HUD_LABEL[kind] ?? kind, el });
-    items.push({ key: 'log', label: '判定ログ', el: document.querySelector('.win.log') }, { key: 'unplaced', label: '未配置・変化先のバー', el: $('hotbars') });
+    items.push({ key: 'log', label: '判定ログ', el: document.querySelector('.win.log') }, { key: 'unplaced', label: '未配置・変化先のバー', el: $('hotbars') }, { key: 'timer', label: '経過時間', el: $('timer') });
     return items.filter((i) => i.el);
   }
   // ゲージ以外（ゲージは placeGauges で位置と大きさに入れる）: translate と scale で重ねる。zoom の掛かった部品は、ずらす量を zoom で割る
@@ -1244,22 +1255,57 @@
     syncHudPanel();
   }
   const setOv = (key, patch) => {
-    VIEW.hudEdit = { ...(VIEW.hudEdit ?? {}) };
-    const o = { ...(VIEW.hudEdit[key] ?? {}), ...patch };
-    if (!o.dx && !o.dy && (o.s ?? 1) === 1 && !o.hidden) delete VIEW.hudEdit[key]; else VIEW.hudEdit[key] = o;
+    const L = hudLayout(), o = { ...(L[key] ?? {}), ...patch };
+    if (!o.shape) delete o.shape;
+    if (!o.dx && !o.dy && (o.s ?? 1) === 1 && !o.hidden && !o.shape) delete L[key]; else L[key] = o;
   };
-  // 調整の窓（選んだ部品の大きさ・表示・戻す）
+  // 元に戻す: 変える前のレイアウトを積んでおく（50 回まで）。ホイール・矢印キー・つまみのように続けて変えるものは、0.6 秒以内なら 1 回にまとめる
+  const hudUndo = [];
+  let hudLastMark = { tag: null, t: 0 };
+  function hudRemember(tag = null) {
+    const now = performance.now();
+    if (tag && hudLastMark.tag === tag && now - hudLastMark.t < 600) { hudLastMark.t = now; return; }
+    hudLastMark = { tag, t: now };
+    hudUndo.push(JSON.stringify(hudLayout()));
+    if (hudUndo.length > 50) hudUndo.shift();
+  }
+  const barShapes = () => JSON.stringify(Object.entries(hudLayout()).map(([k, o]) => [k, o.shape ?? '']));
+  function hudUndoLast() {
+    const prev = hudUndo.pop();
+    if (prev == null) return;
+    const before = barShapes();
+    VIEW.hudLayouts[hudSlot()] = JSON.parse(prev);
+    hudLastMark = { tag: null, t: 0 };
+    if (barShapes() !== before) rebuild(); else applyHudEdits();
+    save();
+  }
+  // 方眼（グリッド）: 動かすときに部品の左上を合わせる。調整中だけ線を出す
+  const hudGridEl = document.createElement('div');
+  hudGridEl.className = 'hud-grid';
+  $('overlay').after(hudGridEl);
+  const hudGrid = () => Number(VIEW.hudGrid) || 0;
+  // 調整の窓（レイアウトの切り替え・選んだ部品の大きさ・形・表示・戻す）
   const hudPanel = document.createElement('div');
   hudPanel.className = 'win hud-panel'; hudPanel.hidden = true;
-  hudPanel.innerHTML = `<b>HUD の調整</b><select class="hp-pick" title="部品を名前で選ぶ（重なっていてクリックしにくいとき）"></select>
-    <label>大きさ <input type="range" min="30" max="250" step="5" class="hp-size"> <span class="hp-pct"></span></label>
-    <label><input type="checkbox" class="hp-show"> 表示</label>
-    <button type="button" class="hp-reset">この部品を戻す</button><button type="button" class="hp-all">全部戻す</button><button type="button" class="hp-done primary">完了</button>
-    <p class="hp-note">ドラッグで移動、ホイールで大きさ。隠した部品は調整中だけ半透明で出ます。</p>`;
+  hudPanel.innerHTML = `<div class="hp-row"><b>HUD の調整</b>
+      <span class="hp-slots" role="radiogroup" aria-label="レイアウト">レイアウト${HUD_SLOTS.map((n) => `<button type="button" role="radio" data-slot="${n}" title="レイアウト ${n}">${n}</button>`).join('')}</span>
+      <select class="hp-pick" title="部品を名前で選ぶ（重なっていてクリックしにくいとき）"></select>
+      <button type="button" class="hp-flip" title="この窓を画面の上 / 下へ"></button></div>
+    <div class="hp-row">
+      <label>大きさ <input type="range" min="30" max="250" step="5" class="hp-size"> <span class="hp-pct"></span></label>
+      <label class="hp-shape-l" title="ホットバーのボタンの並び（列×行）">形 <select class="hp-shape">${BAR_SHAPES.map((v) => `<option value="${v}">${v.replace('x', '×')}</option>`).join('')}</select></label>
+      <label><input type="checkbox" class="hp-show"> 表示</label>
+      <label title="動かすとき、部品の左上を方眼に合わせる">方眼 <select class="hp-grid"><option value="0">なし</option><option value="4">4px</option><option value="8">8px</option><option value="16">16px</option></select></label></div>
+    <div class="hp-row">
+      <button type="button" class="hp-undo" title="Ctrl+Z">元に戻す</button><button type="button" class="hp-reset">この部品を戻す</button><button type="button" class="hp-all">このレイアウトを全部戻す</button><button type="button" class="hp-done primary">完了</button></div>
+    <p class="hp-note">ドラッグで移動、ホイールで大きさ、矢印キーで 1px（Shift で 10px）。Ctrl+Z で元に戻す、Esc で完了。隠した部品は調整中だけ半透明で出ます。</p>`;
   stage.appendChild(hudPanel);
   const hpq = (c) => hudPanel.querySelector(c);
+  const hudBarOf = (key) => (mode === 'hud' && /^hb\d+$/.test(key ?? '') ? D.hud?.hotbars?.[key] ?? null : null);
   function syncHudPanel() {
     hudPanel.hidden = !hudEditing;
+    stage.classList.toggle('hud-grid-on', hudEditing && hudGrid() > 0);
+    stage.style.setProperty('--hud-grid', `${hudGrid() || 8}px`);
     if (!hudEditing) return;
     const it = hudItems().find((i) => i.key === hudSel) ?? (hudSel ? { key: hudSel, label: document.querySelector(`[data-hud-key="${hudSel}"]`)?.dataset.hudLabel } : null);
     const o = (hudSel && hudOv(hudSel)) ?? {};
@@ -1267,24 +1313,77 @@
     const seen = new Set();
     pick.innerHTML = '<option value="">部品を選ぶ（クリックでも選べます）</option>' + items.filter((i) => !seen.has(i.key) && seen.add(i.key)).map((i) => `<option value="${i.key}">${i.label}${hudOv(i.key)?.hidden ? '（非表示）' : ''}</option>`).join('');
     pick.value = hudSel ?? '';
+    for (const b of hudPanel.querySelectorAll('[data-slot]')) { const on = Number(b.dataset.slot) === hudSlot(); b.classList.toggle('on', on); b.setAttribute('aria-checked', String(on)); }
     for (const c of ['.hp-size', '.hp-show', '.hp-reset']) hpq(c).disabled = !it;
     hpq('.hp-size').value = String(Math.round((o.s ?? 1) * 100));
     hpq('.hp-pct').textContent = `${Math.round((o.s ?? 1) * 100)}%`;
     hpq('.hp-show').checked = !o.hidden;
+    const bar = hudBarOf(hudSel);
+    hpq('.hp-shape-l').hidden = !bar;
+    if (bar) hpq('.hp-shape').value = o.shape ?? `${bar.cols}x${bar.rows}`;
+    hpq('.hp-grid').value = String(hudGrid());
+    hpq('.hp-undo').disabled = !hudUndo.length;
+    hudPanel.classList.toggle('bottom', !!VIEW.hudPanelBottom);
+    hpq('.hp-flip').textContent = VIEW.hudPanelBottom ? '▲ 上へ' : '▼ 下へ';
   }
-  hpq('.hp-pick').addEventListener('change', (e) => { hudSel = e.target.value || null; applyHudEdits(); });
-  hpq('.hp-size').addEventListener('input', (e) => { if (hudSel) { setOv(hudSel, { s: Number(e.target.value) / 100 }); applyHudEdits(); } });
-  hpq('.hp-show').addEventListener('change', (e) => { if (hudSel) { setOv(hudSel, { hidden: !e.target.checked }); applyHudEdits(); save(); } });
-  hpq('.hp-reset').addEventListener('click', () => { if (hudSel) { setOv(hudSel, { dx: 0, dy: 0, s: 1, hidden: false }); applyHudEdits(); save(); } });
-  hpq('.hp-all').addEventListener('click', () => { VIEW.hudEdit = {}; applyHudEdits(); save(); });
-  hpq('.hp-done').addEventListener('click', () => setHudEditing(false));
+  // 選ぶ欄で選んだら、矢印キーが部品を動かすように欄から外す
+  hpq('.hp-pick').addEventListener('change', (e) => { hudSel = e.target.value || null; e.target.blur(); applyHudEdits(); });
+  hpq('.hp-slots').addEventListener('click', (e) => {
+    const n = Number(e.target.closest('[data-slot]')?.dataset.slot);
+    if (!n || n === hudSlot()) return;
+    VIEW.hudSlot = n; hudUndo.length = 0;
+    addLog('sys', `HUD のレイアウト ${n} にしました`);
+    rebuild(); save();
+  });
+  hpq('.hp-size').addEventListener('input', (e) => { if (hudSel) { hudRemember(`size:${hudSel}`); setOv(hudSel, { s: Number(e.target.value) / 100 }); applyHudEdits(); } });
   hpq('.hp-size').addEventListener('change', () => save());
+  hpq('.hp-shape').addEventListener('change', (e) => {
+    const bar = hudBarOf(hudSel);
+    if (!bar) return;
+    hudRemember();
+    setOv(hudSel, { shape: e.target.value === `${bar.cols}x${bar.rows}` ? null : e.target.value });
+    rebuild(); save();
+  });
+  hpq('.hp-show').addEventListener('change', (e) => { if (hudSel) { hudRemember(); setOv(hudSel, { hidden: !e.target.checked }); applyHudEdits(); save(); } });
+  hpq('.hp-grid').addEventListener('change', (e) => { VIEW.hudGrid = Number(e.target.value); e.target.blur(); applyHudEdits(); save(); });
+  hpq('.hp-undo').addEventListener('click', () => hudUndoLast());
+  hpq('.hp-reset').addEventListener('click', () => {
+    if (!hudSel) return;
+    const hadShape = !!hudOv(hudSel)?.shape;
+    hudRemember();
+    setOv(hudSel, { dx: 0, dy: 0, s: 1, hidden: false, shape: null });
+    if (hadShape) rebuild(); else applyHudEdits();
+    save();
+  });
+  hpq('.hp-all').addEventListener('click', () => {
+    const hadShape = Object.values(hudLayout()).some((o) => o.shape);
+    hudRemember();
+    VIEW.hudLayouts[hudSlot()] = {};
+    if (hadShape) rebuild(); else applyHudEdits();
+    save();
+  });
+  hpq('.hp-flip').addEventListener('click', () => { VIEW.hudPanelBottom = !VIEW.hudPanelBottom; syncHudPanel(); save(); });
+  hpq('.hp-done').addEventListener('click', () => setHudEditing(false));
   function setHudEditing(on) {
-    hudEditing = !!on; hudSel = null;
+    hudEditing = !!on; hudSel = null; hudDrag = null;
+    hudUndo.length = 0; hudLastMark = { tag: null, t: 0 };
     stage.classList.toggle('hud-edit', hudEditing);
     $('btnHud')?.classList.toggle('on', hudEditing);
     applyHudEdits(); save();
-    if (hudEditing) addLog('sys', 'HUD の調整: 部品をドラッグで移動、ホイールで大きさ。完了で終わる');
+    if (hudEditing) addLog('sys', `HUD の調整（レイアウト ${hudSlot()}）: 部品をドラッグで移動、ホイールで大きさ、矢印キーで微調整。練習は一時停止中。完了か Esc で終わる`);
+  }
+  // 調整中のキー: 矢印で選んだ部品を 1px（Shift で 10px）、Ctrl+Z で元に戻す、Esc で完了。ほかのキーは練習に渡さない
+  function hudKey(e) {
+    if (e.code === 'Escape') { e.preventDefault(); setHudEditing(false); return; }
+    if ((e.ctrlKey || e.metaKey) && e.code === 'KeyZ') { e.preventDefault(); hudUndoLast(); return; }
+    const d = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[e.code];
+    if (d && hudSel) {
+      const n = e.shiftKey ? 10 : 1, o = hudOv(hudSel) ?? {};
+      hudRemember(`key:${hudSel}`);
+      setOv(hudSel, { dx: (o.dx ?? 0) + d[0] * n, dy: (o.dy ?? 0) + d[1] * n });
+      applyHudEdits(); save();
+    }
+    if (!/^F\d+$/.test(e.code)) e.preventDefault();
   }
   // 調整中は、部品を押しても技などは出さず、選んで動かす（捕捉の段階で横取りする）
   let hudDrag = null;
@@ -1294,19 +1393,27 @@
     const under = document.elementsFromPoint(e.clientX, e.clientY).map((x) => x.closest?.('[data-hud-key]')).filter(Boolean);
     const el = under.find((x) => x.dataset.hudKey === hudSel) ?? under[0] ?? null;
     e.preventDefault(); e.stopPropagation();
+    if (hudPanel.contains(document.activeElement)) document.activeElement.blur(); // 調整窓の欄から外す（矢印キーが部品を動かすように）
     if (!el) { hudSel = null; applyHudEdits(); return; }
     hudSel = el.dataset.hudKey;
-    const o = hudOv(hudSel) ?? {};
-    hudDrag = { key: hudSel, x: e.clientX, y: e.clientY, dx: o.dx ?? 0, dy: o.dy ?? 0 };
+    const o = hudOv(hudSel) ?? {}, k = stageScale(), sr = stage.getBoundingClientRect(), r = el.getBoundingClientRect();
+    // bx / by: ずらす前の部品の左上（舞台の px）。方眼に合わせるのに使う
+    hudDrag = { key: hudSel, x: e.clientX, y: e.clientY, dx: o.dx ?? 0, dy: o.dy ?? 0, bx: (r.left - sr.left) / k - (o.dx ?? 0), by: (r.top - sr.top) / k - (o.dy ?? 0), moved: false };
     applyHudEdits();
   }, true);
   window.addEventListener('pointermove', (e) => {
     if (!hudDrag) return;
-    const k = stageScale();
-    setOv(hudDrag.key, { dx: Math.round(hudDrag.dx + (e.clientX - hudDrag.x) / k), dy: Math.round(hudDrag.dy + (e.clientY - hudDrag.y) / k) });
+    const k = stageScale(), g = hudGrid();
+    let dx = hudDrag.dx + (e.clientX - hudDrag.x) / k, dy = hudDrag.dy + (e.clientY - hudDrag.y) / k;
+    if (g) { dx = Math.round((hudDrag.bx + dx) / g) * g - hudDrag.bx; dy = Math.round((hudDrag.by + dy) / g) * g - hudDrag.by; }
+    else { dx = Math.round(dx); dy = Math.round(dy); }
+    const o = hudOv(hudDrag.key) ?? {};
+    if (dx === (o.dx ?? 0) && dy === (o.dy ?? 0)) return;
+    if (!hudDrag.moved) { hudRemember(); hudDrag.moved = true; } // 押しただけ（選んだだけ）のときは積まない
+    setOv(hudDrag.key, { dx, dy });
     applyHudEdits();
   });
-  window.addEventListener('pointerup', () => { if (hudDrag) { hudDrag = null; save(); } });
+  window.addEventListener('pointerup', () => { if (hudDrag) { if (hudDrag.moved) save(); hudDrag = null; } });
   stage.addEventListener('wheel', (e) => {
     if (!hudEditing) return;
     const el = e.target.closest('[data-hud-key]');
@@ -1314,10 +1421,38 @@
     e.preventDefault(); e.stopPropagation();
     hudSel = el.dataset.hudKey;
     const s0 = hudOv(hudSel)?.s ?? 1;
+    hudRemember(`wheel:${hudSel}`);
     setOv(hudSel, { s: Math.max(0.3, Math.min(2.5, Math.round(s0 * (e.deltaY < 0 ? 1.05 : 1 / 1.05) * 100) / 100)) });
     applyHudEdits(); save();
   }, { capture: true, passive: false });
   for (const t of ['click', 'contextmenu']) stage.addEventListener(t, (e) => { if (hudEditing && e.target.closest('[data-hud-key]')) { e.preventDefault(); e.stopPropagation(); } }, true);
+  // HUD のレイアウトの書き出し・読み込み（ほかのパソコンやブラウザへ持っていく）。中身は VIEW.hudLayouts（部品ごとのずらす量・大きさ・表示・形）
+  function exportHudLayouts() {
+    return JSON.stringify({ kind: 'ff14rt-hud', ver: 1, slot: hudSlot(), layouts: VIEW.hudLayouts ?? {} });
+  }
+  // 貼り付けられた文字は、知っている形の値だけ取り出す（ほかの値は捨てる）
+  function importHudLayouts(text) {
+    const v = JSON.parse(text);
+    if (v?.kind !== 'ff14rt-hud' || typeof v.layouts !== 'object' || !v.layouts) throw new Error('HUD のレイアウトの書き出しではありません');
+    const num = (x, lo, hi) => (typeof x === 'number' && Number.isFinite(x) ? Math.max(lo, Math.min(hi, x)) : undefined);
+    const layouts = {};
+    for (const n of HUD_SLOTS) {
+      const src = v.layouts[n];
+      if (!src || typeof src !== 'object') continue;
+      const L = {};
+      for (const [key, o] of Object.entries(src)) {
+        if (!/^[\w-]{1,40}$/.test(key) || !o || typeof o !== 'object') continue;
+        const e = { dx: num(o.dx, -4000, 4000), dy: num(o.dy, -4000, 4000), s: num(o.s, 0.3, 2.5), hidden: o.hidden === true || undefined, shape: BAR_SHAPES.includes(o.shape) ? o.shape : undefined };
+        for (const k2 of Object.keys(e)) if (e[k2] === undefined) delete e[k2];
+        if (Object.keys(e).length) L[key] = e;
+      }
+      layouts[n] = L;
+    }
+    VIEW.hudLayouts = layouts;
+    if (HUD_SLOTS.includes(v.slot)) VIEW.hudSlot = v.slot;
+    hudUndo.length = 0;
+    rebuild(); save();
+  }
 
   // ---- ステータス（要素を作り置きし、残り秒だけ書き換える。毎秒作り直すと点滅して見えるため）----
   // 置き場所ごとに要素を持つ: 自分のステータス・ターゲット・パーティリストの自分の行・相方の行
@@ -1419,7 +1554,7 @@
       cd.hidden = !cdText;
       if (cdText) { cd.textContent = cdText; cd.className = ''; void cd.offsetWidth; cd.className = `countdown${S.phase === 'combat' ? ' go' : ''}`; }
     }
-    $('startOverlay').hidden = S.phase !== 'idle' || UI.isOpen();
+    $('startOverlay').hidden = S.phase !== 'idle' || UI.isOpen() || hudEditing;
     $('pauseBadge').hidden = !(active && paused() && !UI.isOpen());
 
     const far = active ? Arena.edgeDistance() : 0;
@@ -1472,12 +1607,16 @@
       $('castFill').style.width = `${Math.min(100, p * 100)}%`;
       $('castTime').textContent = ((S.cast.end - S.t) / 1000).toFixed(2);
       cb.classList.toggle('slide', S.cast.end - S.t <= slideOf(S.cast));
+    } else if (hudEditing) {
+      // HUD の調整中は、詠唱していなくても見本を出して動かせるようにする
+      cb.hidden = false; cb.classList.remove('slide');
+      $('castName').textContent = 'キャストバー（見本）'; $('castFill').style.width = '60%'; $('castTime').textContent = '1.50';
     } else cb.hidden = true;
 
     // ターゲット情報: 選んでいる相手（敵・相方・自分）の名前と HP。ターゲットがなければ出さない
     const tk = Arena.target();
     const tw = document.querySelector('.win.target');
-    tw.classList.toggle('none', !tk);
+    tw.classList.toggle('none', !tk && !hudEditing);
     tw.classList.toggle('ally', tk === 'player' || tk === 'tank');
     if (tk === 'boss') {
       const hpFrac = S.hpMax > 0 ? S.hp / S.hpMax : 1;
@@ -1494,8 +1633,9 @@
     $('ptTank').classList.toggle('targeted', tk === 'tank');
     // 敵の詠唱（敵をターゲットしているときだけ。ゲームと同じ）
     const bc = S.phase === 'combat' && tk === 'boss' ? Arena.bossCast(S.t) : null;
-    $('bossCast').hidden = !bc;
+    $('bossCast').hidden = !bc && !hudEditing;
     if (bc) { $('bossCastName').textContent = bc.name; $('bossCastFill').style.width = `${bc.p * 100}%`; }
+    else if (hudEditing) { $('bossCastName').textContent = '敵の詠唱（見本）'; $('bossCastFill').style.width = '50%'; } // HUD の調整中の見本
     const mech = S.mech && S.t < S.mech.until && OPT.hints ? S.mech : null;
     $('mechAlert').hidden = !mech;
     if (mech) { $('mechName').textContent = mech.name; $('mechHint').textContent = mech.hint ?? ''; }
@@ -1648,6 +1788,11 @@
     GM?.guardKey(e);
     if (UI.isOpen()) { if (e.code === 'Escape') { e.preventDefault(); UI.close(); } return; }
     const tag = e.target?.tagName;
+    // HUD の調整中: 調整窓のチェックやボタンを押した直後でも、矢印キー・Ctrl+Z・Esc は調整に使う（選ぶ欄・つまみの上では、その欄の操作を優先。Esc はいつでも完了）
+    if (hudEditing) {
+      const typing = tag === 'SELECT' || tag === 'TEXTAREA' || (tag === 'INPUT' && e.target.type !== 'checkbox');
+      if (!typing || e.code === 'Escape') { hudKey(e); return; }
+    }
     if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
     const kid = keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey });
     // ターゲットのキー（KEYBIND.DAT の TARGET_P1〜P8・TARGET_NEXT など）
@@ -1673,7 +1818,7 @@
     }
     if (D.move?.jump?.includes(e.code) && live()) { e.preventDefault(); if (!e.repeat && !paused()) { Arena.jump(); Au?.whoosh(); } return; }
     if (e.code === 'Space') { e.preventDefault(); if (!e.repeat && !live()) start(); return; }
-    if (e.code === 'Escape') { if (hudEditing) { setHudEditing(false); return; } if (aiming) { cancelAim('置くのをやめました'); return; } reset(); return; }
+    if (e.code === 'Escape') { if (aiming) { cancelAim('置くのをやめました'); return; } reset(); return; }
     const hit = keymap.get(keyId({ code: e.code, shift: e.shiftKey, ctrl: e.ctrlKey, alt: e.altKey }));
     if (hit) {
       e.preventDefault();
@@ -1905,6 +2050,7 @@
     try {
       const v = JSON.parse(localStorage.getItem(STORE) ?? 'null') ?? JSON.parse(localStorage.getItem('ff14rt:mock:v2') ?? 'null');
       if (v?.VIEW) Object.assign(VIEW, v.VIEW);
+      if (VIEW.hudEdit) { VIEW.hudLayouts ??= { 1: VIEW.hudEdit }; delete VIEW.hudEdit; } // 前の版の HUD の調整はレイアウト 1 に
       if (v?.OPT) Object.assign(OPT, v.OPT);
       OPT.job = JOB; // URL の ?job= で開いたときも、今のジョブを覚える
       if (v?.split) Object.assign(split, v.split);
@@ -2067,7 +2213,19 @@
     const s4 = k.section(pane, 'HUD の部品（ADDON.DAT）', `HUD レイアウトで動かせる部品（ゲームの HUD シートの 112 種）のうち、この設定ファイルで見つかったもの ${Object.keys(hudEls()).length} 個を、識別値で特定して置いています。ステータス情報とターゲット情報は、ゲームで分割表示にしているかどうかが設定ファイルから分からないため、ここで選んでください。`);
     k.row(s4, 'ステータス情報（自分のバフ）', k.choice([['split', '分割（強化・弱体…）'], ['all', 'まとめる']], VIEW.statusMode ?? 'split', (v) => { VIEW.statusMode = v; save(); placeHudParts(); }), '分割なら「ステータス情報（強化）」の位置、まとめるなら「ステータス情報」の位置');
     k.row(s4, 'ターゲット情報', k.choice([['split', '分割（HP・キャストバー・ステータス）'], ['all', 'まとめる']], VIEW.targetMode ?? 'split', (v) => { VIEW.targetMode = v; save(); placeHudParts(); }));
-    k.row(s4, 'HUD の調整', k.button('調整する', () => { UI.close(); setHudEditing(true); }), '画面の上の「HUD 調整」と同じ。部品をドラッグで移動、ホイールで大きさ、表示の切り替え。ADDON.DAT の配置の上に重ねて保存します');
+    k.row(s4, 'HUD の調整', k.button('調整する', () => { UI.close(); setHudEditing(true); }), '画面の上の「HUD 調整」と同じ。部品をドラッグで移動、ホイールで大きさ、矢印キーで微調整。表示の切り替え・ホットバーの形（12×1〜1×12）も変えられます。ADDON.DAT の配置の上に重ねて保存します');
+    k.row(s4, 'HUD のレイアウト', k.choice(HUD_SLOTS.map((n) => [n, String(n)]), hudSlot(), (v) => { VIEW.hudSlot = v; rebuild(); save(); }), 'ゲームの HUD レイアウトと同じく 4 つまで。調整はいま選んでいるレイアウトに保存されます');
+    k.row(s4, '書き出し・読み込み', [
+      k.button('書き出す', async () => {
+        const text = exportHudLayouts();
+        try { await navigator.clipboard.writeText(text); addLog('sys', 'HUD のレイアウトをクリップボードにコピーしました'); UI.close(); } catch { window.prompt('この文字をコピーしてください', text); }
+      }),
+      k.button('読み込む', () => {
+        const text = window.prompt('書き出した文字を貼り付けてください（いまの 4 つのレイアウトを置き換えます）');
+        if (!text) return;
+        try { importHudLayouts(text); addLog('sys', 'HUD のレイアウトを読み込みました'); UI.close(); } catch (err) { window.alert(`読み込めませんでした: ${err.message}`); }
+      }),
+    ], 'レイアウト 1〜4 をまとめて文字にします。ほかのパソコンやブラウザで「読み込む」に貼り付けると同じ配置になります');
     k.row(s4, '枠を表示', k.toggle(!!VIEW.showHudFrames, (v) => { VIEW.showHudFrames = v; save(); placeHudParts(); }), '設定を閉じると、表示中の HUD の部品の枠と名前が画面に出ます（使っている部品は金色）');
     const s3 = k.section(pane, 'HUD の大きさ');
     k.row(s3, 'ゲームの HUD の大きさ', k.select([[1, '100%'], [1.5, '150%'], [2, '200%'], [3, '300%']], VIEW.uiScale, (v) => { VIEW.uiScale = Number(v); save(); fit(); rebuild(); }), 'FFXIV.cfg の UiHighScale から（対応は推定）');
@@ -2174,6 +2332,7 @@
     row('敵の範囲攻撃', k.choice([['off', 'なし'], ['easy', '少なめ'], ['normal', 'ふつう'], ['hard', '多め']], OPT.mech, (v) => { OPT.mech = v; applyPractice(); }));
     npcRows((label, ctl) => row(label, ctl), k, false);
     if (ROLE === 'melee') row('方向指定のガイド', k.toggle(OPT.guide, (v) => { OPT.guide = v; save(); }));
+    row('HUD の配置', k.button('調整する', () => setHudEditing(true)));
     const howto = [
       `移動は ${keyLabel(MOVE.up)}${keyLabel(MOVE.left)}${keyLabel(MOVE.down)}${keyLabel(MOVE.right)}（読み込んだ KEYBIND.DAT）・パッドは左スティック。攻撃は射程内で（近接は敵の輪の外側から ${Arena.POL.melee}m・仮）。`,
       'カメラはマウスのドラッグで回し、ホイールで近づけます。左右のボタンを同時に押すと前へ進みます。キーボードは KEYBIND.DAT のカメラ操作、パッドは右スティックです。',
@@ -2202,9 +2361,9 @@
   // 舞台の 1px が画面の何 px か（zoom の値。canvas を高画質で描くのに使う）
   const stageScale = () => stage.getBoundingClientRect().width / STAGE.w;
   window.addEventListener('resize', fit);
-  // 一時停止: 設定を開いている間と、タブが隠れている間
+  // 一時停止: 設定を開いている間・HUD の調整中・タブが隠れている間
   let hiddenPause = false;
-  const paused = () => UI.isOpen() || hiddenPause;
+  const paused = () => UI.isOpen() || hudEditing || hiddenPause;
   document.addEventListener('visibilitychange', () => {
     hiddenPause = document.hidden;
     if (document.hidden && live()) addLog('sys', 'タブが隠れたので一時停止しました');
