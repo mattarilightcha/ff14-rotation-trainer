@@ -3,7 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpRegen, seeded, secAfter, HEAL_K } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipEffects, descCharges, numIn, support, actorTickPhase, mpRegen, seeded, secAfter, guideTrait, HEAL_K } = window.MockJobs.lib;
   const MP_MAX = 10000;
   const isSpell = (a) => a?.category === 2;
 
@@ -60,7 +60,7 @@
       const ACCEL_SET = new Set([ID.VT3, ID.VA3, ID.IMPACT]); // アクセラレーションで詠唱なしになる魔法
       const MANA_RANGE = new Set([ID.E_RIPOSTE, ID.E_ZWERCH, ID.E_REDOUBLEMENT]); // マナフィケーションで射程 25m
       const MELEE = new Set([ID.RIPOSTE, ID.E_RIPOSTE, ID.ZWERCH, ID.E_ZWERCH, ID.REDOUBLEMENT, ID.E_REDOUBLEMENT, ID.MOULINET, ID.E_MOULINET, ID.E_MOULINET2, ID.E_MOULINET3, ID.REPRISE, ID.E_REPRISE]);
-      const DUAL_MS = numIn(R.D.guide?.traits?.find((t) => t.en === 'Dualcast')?.desc, /効果時間：(\d+)秒/, 15) * 1000;
+      const DUAL_MS = numIn(guideTrait(R, 'Dualcast'), /効果時間：(\d+)秒/, 15) * 1000;
       const EMB_UP = numIn(A[ID.EMBOLDEN]?.desc, /与魔法ダメージを(\d+)％上昇/, 10);
       const IMBALANCE = 30; // 仮（GAME-84）
       const chance = (id) => numIn(A[id]?.desc, /発動確率(\d+)％/, 50) / 100;
@@ -352,8 +352,11 @@
         comboFree: () => false,
         resolve(id) {
           const s = S();
+          // 色魔法のボタンは、色魔法2 / 3 実行可と、サブトラクティブパレットの有無の両方がそろったときだけ変わる
+          // （説明文「発動条件：「色魔法2実行可」効果中かつ「サブトラクティブパレット」非効果中」「発動条件を満たすとレッドファイアがグリーンエアロに変化する」）
           if (id === ID.FIRE || id === ID.FIRE2 || id === ID.CYAN || id === ID.CYAN2) {
             const row = { [ID.FIRE]: [ID.FIRE, ID.AERO, ID.WATER], [ID.FIRE2]: [ID.FIRE2, ID.AERO2, ID.WATER2], [ID.CYAN]: [ID.CYAN, ID.YELLOW, ID.MAGENTA], [ID.CYAN2]: [ID.CYAN2, ID.YELLOW2, ID.MAGENTA2] }[id];
+            if (SUB_COLORS.has(id) !== has('subtractive')) return row[0];
             return has('aether3') ? row[2] : has('aether2') ? row[1] : row[0];
           }
           if (id === ID.CREATURE_MOTIF) return MOTIF_OF[CREATURES[s.nextCreature]];
@@ -473,7 +476,8 @@
         highlightOk: (id) => (id === ID.COMET ? S().paint > 0 : true),
         glow(id) {
           const s = S();
-          if (STEP2.has(id) || STEP3.has(id)) return true; // 色魔法の続き（ボタンが変わったもの）
+          // 色魔法の続き（使えるときだけ: 普通の色魔法はサブトラクティブパレットの外、シアン系はその間）
+          if (STEP2.has(id) || STEP3.has(id)) return has(STEP2.has(id) ? 'aether2' : 'aether3') && SUB_COLORS.has(id) === has('subtractive');
           if (id === ID.MOG) return has('moogle');
           if (id === ID.MADEEN) return has('madeen');
           if (id === ID.HOLY) return s.paint >= PAINT_MAX && !has('monochrome');

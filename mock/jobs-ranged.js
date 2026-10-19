@@ -3,7 +3,7 @@
 // 公式ジョブガイドのダンプ（特性・ジョブ HUD の説明）から。どちらにもない決まりは「仮」と書き、docs/SPEC.md §10 に載せる。
 (function () {
   'use strict';
-  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, numIn, HEAL_K, seeded } = window.MockJobs.lib;
+  const { tooltipBlocked, tooltipResolve, tooltipEffects, descCharges, descGain, numIn, guideTrait, HEAL_K, seeded } = window.MockJobs.lib;
 
   // ---------------- 機工士 ----------------
   // 説明文から:
@@ -87,8 +87,8 @@
         gaugeCols: [['ヒート', (s) => s.heat], ['バッテリー', (s) => s.battery], ['オーバーヒート', (s) => (R.has('overheated') ? s.st.overheated.stacks ?? '' : '')]],
         tracked: [],
         speed: () => 1,
-        // ブレイズショット・オートボウガンは 1.5 秒（説明文「実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する」）
-        gcdMs: (a) => (a.id === ID.BLAZING || a.id === ID.AUTO_CROSSBOW ? a.recastMs : null),
+        // ブレイズショット・オートボウガンの GCD 1.5 秒は、表のリキャスト（a.recastMs）がそのまま使われる
+        // （説明文「実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する」。gcdMs は不要）
         comboFree: () => false,
         resolve: (id) => tooltipResolve(R, J, id),
         blocked(id) {
@@ -273,7 +273,7 @@
       const BASIC = new Set([ID.CASCADE, ID.FOUNTAIN, ID.WINDMILL, ID.BLADESHOWER]), PROCS = new Set([ID.REV_CASCADE, ID.FOUNTAINFALL, ID.RISING, ID.BLOODSHOWER]);
       const SYM = new Set([ID.REV_CASCADE, ID.RISING]), FLOW = new Set([ID.FOUNTAINFALL, ID.BLOODSHOWER]);
       const DANCE_OK = new Set([...STEPS, ID.STANDARD_FINISH, ID.TECHNICAL_FINISH, ID.EN_AVANT, ID.WALTZ, ID.SAMBA]);
-      const FEATHER_MAX = numIn(R.D.guide?.traits?.find((t) => t.en === 'Fourfold Fantasy')?.desc, /最大スタック数：(\d+)/, 4);
+      const FEATHER_MAX = numIn(guideTrait(R, 'Fourfold Fantasy'), /最大スタック数：(\d+)/, 4);
       const chance = (id) => numIn(A[id]?.desc, /発動確率(\d+)％/, 50) / 100;
       // フィニッシュの威力と効果量（説明文「成功回数がN回のとき：威力X および効果量Y％」）
       function finishTable(id) {

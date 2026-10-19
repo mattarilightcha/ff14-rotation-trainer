@@ -275,6 +275,8 @@
       const MUDRA = { [ID.TEN]: 'ten', [ID.CHI]: 'chi', [ID.JIN]: 'jin' };
       const MUDRA_JA = { ten: '天', chi: '地', jin: '人' };
       const JUTSU = new Set([ID.FUMA, ID.KATON, ID.RAITON, ID.HYOTON, ID.HUTON, ID.DOTON, ID.SUITON, ID.GOKA, ID.HYOSHO]);
+      // 2 つ目・3 つ目の忍術は最後の印で決まる（jutsuFor の逆）。天地人で使った印を、出た忍術から求めるのに使う
+      const LAST_MUDRA = { [ID.KATON]: 'ten', [ID.HUTON]: 'ten', [ID.RAITON]: 'chi', [ID.DOTON]: 'chi', [ID.HYOTON]: 'jin', [ID.SUITON]: 'jin' };
       const MELEE_WS = new Set([ID.SPIN, ID.GUST, ID.AEOLIAN, ID.ARMOR, ID.BLOSSOM, ID.HAKKE]); // 月影雷獣実行可が消える近接のウェポンスキル
       const AOE_WS = new Set([ID.BLOSSOM, ID.HAKKE]); // 分身の追撃が範囲（威力 80）になる
       const KASSATSU_UP = 1 + numIn(A[ID.KASSATSU]?.desc, /威力を(\d+)％上昇/, 30) / 100;
@@ -375,7 +377,13 @@
           // 忍術
           if (JUTSU.has(id)) {
             s.stats.jutsu++;
-            if (tcjOn()) { s.tcj.used.push(MUDRA[s.pressBase] ?? 'ten'); if (s.tcj.used.length >= 3) endTcj(); }
+            if (tcjOn()) {
+              // 1 つ目（風魔手裏剣）はどの印からでも出るので押した印のボタンで、2 つ目からは出た忍術で決める
+              // （「変化させない」設定で別に置いた忍術のボタンを押したときも、正しい印が使用済みになるように）
+              const m = LAST_MUDRA[id] ?? MUDRA[s.pressBase] ?? ['ten', 'chi', 'jin'].find((x) => !s.tcj.used.includes(x));
+              s.tcj.used.push(m);
+              if (s.tcj.used.length >= 3) endTcj();
+            }
             else { s.mudras = []; R.remove('mudra'); }
             if (has('kassatsu') && !tcjOn()) R.remove('kassatsu');
             if (id === ID.RAITON) { const r = s.st.raiju; R.buff('raiju', 30000, Math.min(3, (r && r.until > s.t ? r.stacks ?? 1 : 0) + 1)); }
@@ -745,8 +753,8 @@
         gaugeCols: [['ソウル', (s) => s.soul], ['シュラウド', (s) => s.shroud], ['レムール', (s) => (R.has('enshroud') ? `${s.lemure}/${s.void}` : '')]],
         tracked: [['デスデザイン', 'deathsDesign', '#c86aff', '切れる前にシャドウ・オブ・デスで延長する（最大 60 秒）']],
         speed: () => 1,
-        // ヴォイドリーパー・クロスリーパー・グリムリーパーは 1.5 秒（説明文「実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する」）
-        gcdMs: (a) => (REAPING.has(a.id) ? a.recastMs : null),
+        // ヴォイドリーパー・クロスリーパー・グリムリーパーの GCD 1.5 秒は、表のリキャスト（a.recastMs）がそのまま使われる
+        // （説明文「実行すると他のウェポンスキルと魔法にこのアクションと同じリキャストタイムが発生する」。gcdMs は不要）
         comboFree: () => false,
         resolve(id) {
           const s = S();

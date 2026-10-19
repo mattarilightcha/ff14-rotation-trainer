@@ -289,10 +289,11 @@
     return null;
   }
 
-  // 射程（抽出データ: range -1 は近接＝仮の値 POL.melee、正の値は m。自分中心の範囲技（円形で射程 0）は射程なし。対象中心の円形の範囲技は射程まで）
+  // 射程（抽出データ: range -1 は近接＝仮の値 POL.melee、正の値は m）。自分中心の範囲技は抽出データで敵に使う技ではない（hostile でない）ので射程なし。
+  // 敵に使う円形の範囲技（castType 2）はどれも対象中心なので、単体の技と同じく射程まで（射程 -1 なら近接 / オートアタックの射程）。
   // 射程 -1 はオートアタックの射程: 近接は当たり判定の外側から数 m、遠隔（吟遊詩人など）は 25m。
   // J.meleeAuto: 遠隔の役割でも近接で使う技（赤魔道士のリポストなど。マナフィケーションの間は 25m に延びる技もある）
-  const rangeOf = (a) => (!a.hostile || (a.shape === 2 && !(a.range > 0)) ? null : a.range === -1 ? (ROLE === 'ranged' && !J.meleeAuto?.(a) ? 25 : Arena.POL.melee) : a.range > 0 ? a.range : null);
+  const rangeOf = (a) => (!a.hostile ? null : a.range === -1 ? (ROLE === 'ranged' && !J.meleeAuto?.(a) ? 25 : Arena.POL.melee) : a.range > 0 ? a.range : null);
   // 位置の条件（戦闘不能・射程）。kind は集計用。
   // 移動中に詠唱のある技を押すと、詠唱は始まり、すぐに中断される（実機でエラーの文言が見つからず、中断されるという記述があるため: GAME-55 仮）
   function placeBlock(a, who) {
@@ -305,11 +306,13 @@
     return null;
   }
   // 当たるか: 自分中心の範囲の攻撃は範囲（effectRange）に敵の当たり判定が入っているか、単体は射程内か。
-  // 味方に使った技（who が 'self' / 'npc'。ホルムギャング・イカロスなど敵にも味方にも使える技）は敵の射程を見ない（placeBlock と同じ）。
-  // 自分中心の範囲でも攻撃しない技（メディカ・エンボルデンなどの回復・バフ）は敵がいなくても効く
+  // 自分中心の範囲でも攻撃しない技（メディカ・エンボルデンなどの回復・バフ）は敵がいなくても効く。
+  // 使ったときには攻撃しない技（J.noHit: 足元に範囲を置くソルトアースなど）も空振りにしない（範囲は敵がいなくても置ける）。
+  // 自分中心の範囲技は抽出データでは自分に使う技（toSelf）なので、who（'self'）より先に見る。
+  // 敵にも味方にも使える技（ホルムギャング・イカロスなど）を味方に使ったとき（who が 'self' / 'npc'）は、敵の射程を見ない（placeBlock と同じ）
   function reaches(a, who = actWho) {
-    if (who === 'self' || who === 'npc') return true;
-    if (!a.hostile && a.shape === 2 && a.effectRange > 0) return !(a.pot?.base > 0) || Arena.edgeDistance() <= a.effectRange;
+    if (!a.hostile && a.shape === 2 && a.effectRange > 0) return !(a.pot?.base > 0) || !!J.noHit?.(a.id) || Arena.edgeDistance() <= a.effectRange;
+    if (a.hostile && (who === 'self' || who === 'npc')) return true;
     const r = rangeOf(a);
     return r == null || Arena.edgeDistance() <= r + 0.001;
   }
@@ -703,7 +706,8 @@
         if (mv) S.tl.move.push({ from: S.t, to: null });
         else { const m = S.tl.move[S.tl.move.length - 1]; if (m && m.to == null) m.to = S.t; }
       }
-      if (!Arena.isDown() && Arena.edgeDistance() > (ROLE === 'melee' ? Arena.POL.melee : 25)) S.stats.outRangeMs += dt;
+      // 射程外にいた時間: 近接・タンクは近接の射程（ウェポンスキルの射程）、それ以外は魔法・遠隔の射程 25m
+      if (!Arena.isDown() && Arena.edgeDistance() > (ROLE === 'melee' || ROLE === 'tank' ? Arena.POL.melee : 25)) S.stats.outRangeMs += dt;
     }
     // 継続ダメージ（3 秒ごと。間隔は仮 GAME-56。付けたときのバフで計算）
     if (S.dot && S.t >= S.dot.next && S.dot.next <= S.dot.until && S.phase === 'combat') {
@@ -1572,7 +1576,7 @@
     const kind = a.category === 2 ? '魔法' : a.isGcd ? 'ウェポンスキル' : 'アビリティ';
     const sec = (ms) => (ms ? `${(ms / 1000).toFixed(2)}秒` : '即時');
     const rg = rangeOf(a);
-    const area = a.shape === 2 && a.effectRange ? `${a.range > 0 && a.hostile ? '対象' : '自分'}の周囲 ${a.effectRange}m` : a.shape === 3 ? `前方扇 ${a.effectRange}m` : a.shape === 4 ? `直線 ${a.effectRange}m` : '';
+    const area = a.shape === 2 && a.effectRange ? `${a.hostile || a.range > 0 ? '対象' : '自分'}の周囲 ${a.effectRange}m` : a.shape === 3 ? `前方扇 ${a.effectRange}m` : a.shape === 4 ? `直線 ${a.effectRange}m` : '';
     tip.innerHTML = `<div class="tt-head"><img alt=""><div><b></b><div class="kind"></div></div></div><div class="meta"></div><div class="body"></div><div class="hl-note"></div>`;
     tip.querySelector('img').src = a.icon;
     tip.querySelector('b').textContent = a.name;

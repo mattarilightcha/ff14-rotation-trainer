@@ -141,6 +141,8 @@
             const n = ['thrill', 'damnation', 'blood'].filter((k) => has(k)).length;
             for (const k of ['thrill', 'damnation', 'blood']) R.remove(k);
             for (const name of ['ダムネーション', '原初の血気']) R.unmitigate('self', name); // 練習場に付けた軽減も外す（原初の血潮は別のステータスなので残る）
+            // ダムネーション［被］が付くのは「ダメージを受けるか、ダメージを受けることなく効果時間が経過」したときだけ（説明文）。解除では付けない
+            s.damn = null;
             support(R, a);
             if (n) R.shield('party', (15 + 2 * n) / 100, 30, 'シェイクオフ');
           }

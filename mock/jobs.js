@@ -1488,7 +1488,9 @@
           if (id === ID.SFLASH) return has('sflash');
           if (id === ID.LUX) return has('lux');
           if (PRIMAL[id]) return !d && s.favor[PRIMAL[id].favor];
-          if ([ID.ENK, ID.ENK_P, ID.ENK_S, ID.DEATHFLARE, ID.SUNFLARE, ID.REKINDLE].includes(id)) return !!d;
+          // エンキンドル・アストラルフロウの技は、今のデミ召喚のものだけ（デスフレアを別のボタンに置いていても、ソルバハムートの間は光らない）
+          if ([ID.ENK, ID.ENK_P, ID.ENK_S].includes(id)) return !!d && DEMI[d.kind].enk === id;
+          if ([ID.DEATHFLARE, ID.SUNFLARE, ID.REKINDLE].includes(id)) return !!d && DEMI[d.kind].flow === id;
           if ([ID.CYCLONE, ID.STRIKE, ID.MBUSTER, ID.SLIP].includes(id)) return true;
           if (DEMI_OF[id]) return s.carby && !d;
           return false;
